@@ -123,6 +123,11 @@ V=9⇒Goto 9
 0→O
 For 1→U To 10
   For 1→W To 16
+    If 1<Mat Z[12,6
+    Then 
+      Getkey→θ
+      θ=29⇒Return
+    IfEnd
     Mat A[U,W→M
     Int (10Frac M→O
     Int (10Frac .01M→B

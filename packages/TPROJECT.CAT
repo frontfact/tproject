@@ -2278,7 +2278,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5627
+Capacity:5658
 File Name:TNT13
 Group Name:
 Password:
@@ -2400,6 +2400,10 @@ V=9\=>\Goto9
 0\->O
 \For 1\->U \To 10
 \For 1\->W \To 16
+\If 1<\Mat Z[12,6
+\Then \Getkey\->\theta
+\theta=29\=>\Return
+\IfEnd
 \Mat A[U,W\->M
 \Int (10\Frac M\->O
 \Int (10\Frac .01M\->B
