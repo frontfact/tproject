@@ -1,0 +1,90 @@
+Lbl 0·
+Cls·
+F-Line 1,1,127,1·
+F-Line 127,1,127,63·
+F-Line 127,63,1,63·
+F-Line 1,63,1,1·
+F-Line 40,1,40,63·
+Text 40,65,"~FFC shop~"·
+Orange F-Line 90,59,124,59·
+Orange F-Line 125,58,125,40·
+Orange F-Line 124,39,90,39·
+Orange F-Line 89,40,89,58·
+Orange F-Line 89,49,89,84·
+3‡O·
+7‡L·
+1‡U·
+For 1‡Q To 8·
+List 1[Q‡C·
+6Q-3‡K·
+Prog "TNT8"·
+Next·
+Text 51,7,"-rien-"·
+Text 57,7,"[EXIT]"·
+Green Text 3,42,"$"·
+Green Text 3,49,Mat Z[10,4·
+Lbl V·
+Green Text 7,91," Acheter"·
+Green Text 13,91," Sortir"·
+Green Text 19,91," Objets "·
+1‡A·
+Do·
+Green F-Line 91,6A+61,93,6A+61·
+Do·
+Getkey‡–·
+LpWhile Not –·
+Green Text 6A+1,91," "·
+–=28îDsz A·
+–=37îIsz A·
+Not Aî3‡A·
+A=4î1‡A·
+LpWhile –¬31·
+If A=2·
+Then If 2=Mat Z[12,6·
+Then ClrText·
+Orange "Ou puis-je trouver"·
+Orange "Enzo ?"·
+"Oh... il va souvent  au resto du Sud-Ouest"»
+3‡Mat Z[12,6·
+IfEnd·
+Return·
+IfEnd·
+If A=3·
+Then 0‡Ð·
+Prog "TNT9"·
+Goto 0·
+IfEnd·
+Lbl C·
+Green Text 7,91,"c'est   "·
+Green Text 13,91,"       "·
+Green Text 19,91,"skulls. "·
+Do·
+Green Text 6U-3,4,"[       ]"·
+Green Text 13,91,"   "·
+U¬9îGreen Text 13,91,List 2[U·
+Do·
+Getkey‡–·
+–=47îGoto V·
+LpWhile Not –·
+Green Text 6U-3,4,"         "·
+–=28îDsz U·
+–=37îIsz U·
+U=0î9‡U·
+U>9î1‡U·
+LpWhile –¬31·
+U=9îGoto V·
+List 1[U‡O·
+If List 2[U]>Mat Z[10,4·
+Then Green Text 7,91,"il vous "·
+Green Text 13,91,"manque "·
+Green Text 19,91,"   $    "·
+Green Text 19,91,List 2[U]-Mat Z[10,4·
+For 1‡X To 200·
+Next·
+Goto C·
+IfEnd·
+Prog "TNT7"·
+Not XîMat Z[10,4]-List 2[U‡Mat Z[10,4·
+Green Text 3,49,"    "·
+Green Text 3,49,Mat Z[10,4·
+Goto C

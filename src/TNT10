@@ -1,0 +1,112 @@
+Lbl 0·
+Cls·
+Green F-Line 1,1,127,1·
+Green F-Line 127,1,127,63·
+Green F-Line 127,63,1,63·
+Green F-Line 1,63,1,1·
+F-Line 126,2,126,62·
+F-Line 126,62,2,62·
+F-Line 2,62,2,2·
+Green F-Line 126,51,2,51·
+Green F-Line 2,51,2,62·
+Green F-Line 1,52,127,52·
+Text 5,5,"sculls:"·
+Text 5,34,Mat Z[10,4·
+Green F-Line 59,62,59,51·
+Green F-Line 58,62,58,51·
+Orange Text 5,63,"Z"·
+Green F-Line 69,62,69,51·
+Green F-Line 70,62,70,51·
+Text 5,73,"sante:   /"·
+Text 5,97,Mat Z[1,1·
+Text 5,113,Mat Z[1,2·
+Orange Text 15,9,"attaques"·
+Orange Text 21,9,"stats"·
+Orange Text 27,9,"objets"·
+Orange Text 33,9,"options"·
+Orange Text 39,9,"retour"·
+Orange Text 51,9,"quitter"·
+Orange Text 57,11,"lejeu"·
+Green F-Line 48,1,48,52·
+Green F-Line 49,1,49,52·
+1‡A·
+Text 6A+9,4,"[         ]"·
+Lbl Q·
+Do·
+Getkey‡–·
+LpWhile –¬28 And –¬37 And –¬31 And –¬47·
+–=47îReturn·
+Text 6A+9,4,"           "·
+–=28îDsz A·
+–=37îIsz A·
+Not Aî7‡A·
+A=8î1‡A·
+Text 6A+9,4,"[         ]"·
+–¬31îGoto Q·
+A=5îReturn·
+If A=7·
+Then ClrText·
+"TOMBERRY attend..."·
+Stop·
+IfEnd·
+If A=2·
+Then Text 15,55,"statistiques"·
+Text 21,51,"ATTAK:   DEFNS:"·
+Text 21,75,Mat Z[4,2·
+Text 21,111,Mat Z[5,2·
+Text 27,53,"FORCE:  /"·
+Text 33,51,"MAGIE:  /"·
+For 2‡T To 3·
+For 1‡U To 2·
+Text 15+6T,64+12U,Mat Z[T,U·
+Next·
+Next·
+Text 39,51,"NIVEAU"·
+Text 39,79,Mat Z[11,2·
+Text 45,51,"EXPERIENCE:"·
+Text 45,95,Mat Z[11,6·
+Text 51,51,"VICTOIRES:"·
+Text 51,90,Mat Z[12,3·
+Text 57,51,"SCORE:"·
+Int (11Mat Z[12,6]+5Mat Z[12,3]+0.5Mat Z[10,4]+1.5Mat Z[1,2]+15Mat Z[2,2]+15Mat Z[3,2]+9Mat Z[4,2]+9Mat Z[5,2‡C·
+For 1‡D To C Step 63·
+Text 57,74,D·
+Next·
+Do·
+LpWhile Not Getkey·
+For 15‡C To 57 Step 6·
+Text C,51,"                 "·
+Next·
+IfEnd·
+If A=1·
+Then Text 15,55,"attaks"·
+1‡O·
+51‡L·
+For 1‡B To 5·
+Mat Z[B,4‡C·
+15+6B‡K·
+Prog "TNT8"·
+Next·
+Text 15,93,"pouvoirs"·
+2‡O·
+88‡L·
+For 1‡B To 5·
+Mat Z[B,3‡C·
+15+6B‡K·
+Prog "TNT8"·
+Next·
+Green Text 51,55,"PRESS [EXIT]"·
+Do·
+LpWhile Not Getkey·
+Text 15,50,"                   "·
+For 21‡B To 51 Step 6·
+Green Text B,51,"                   "·
+Next·
+Goto Q·
+IfEnd·
+If A=3·
+Then 0‡Ð·
+Prog "TNT9"·
+Goto 0·
+IfEnd·
+Goto Q

@@ -1,0 +1,789 @@
+Prog "TNT12"·
+Goto 1·
+Lbl D·
+1>Mat Z[6,3î1‡Mat Z[6,3·
+P=1îMat Z[6,1]-Int (2Ran#+1¡3Q+2¡3Q(Mat Z[4,1]¤Mat Z[6,3‡Mat Z[6,1·
+P=2îQ+Mat Z[1,1‡Mat Z[1,1·
+Mat Z[1,1]>Mat Z[1,2îMat Z[1,2‡Mat Z[1,1·
+I¬Mat Z[1,1îOrange Text 5,60,Mat Z[1,1]-I·
+J¬Mat Z[6,1îOrange Text 5,110,Mat Z[6,1]-J·
+P=3îQ+Mat Z[4,1‡Mat Z[4,1·
+P=4îQ+Mat Z[5,1‡Mat Z[5,1·
+For 2‡T To 3·
+Mat Z[T,1]>Mat Z[T,2îMat Z[T,2‡Mat Z[T,1·
+Next·
+P=8îQ+Mat Z[6,2‡Mat Z[6,2·
+P=9îQ+Mat Z[6,3‡Mat Z[6,3·
+1>Mat Z[6,2î1‡Mat Z[6,2·
+1>Mat Z[6,3î1‡Mat Z[6,3·
+If I¬Mat Z[1,1] Or J¬Mat Z[6,1·
+Then For 1‡P To 150·
+Next·
+Mat Z[1,1]<1î8š‡X·
+X=8šîProg "TNT6"·
+Mat Z[6,1]<1îGoto 2·
+IfEnd·
+0‡P~Q·
+Lbl 1·
+Cls·
+RclPict 1·
+Orange Text 3,6,"   "·
+Orange Text 3,6,Mat Z[1,1·
+Green Text 25,3,"-stats- "·
+Green Text 31,3,"fo   /  "·
+Green Text 37,3,"ma      "·
+Green Text 37,23,"/"·
+Green Text 43,3,"at   /  "·
+Green Text 49,3,"de   /  "·
+For 2‡T To 5·
+For 1‡U To 2·
+Green Text 6T+19,13U+1,Mat Z[T,U·
+If Not Int ((4Mat Z[6,4])Ran#·
+Then Prog "TNT6"·
+S=8îReturn·
+IfEnd·
+Next·
+Next·
+Mat Z[1,1‡I·
+Mat Z[6,1‡J·
+Text 57,3,"[EXE]‡menu action            "·
+StoPict 1·
+Do·
+If Not Int ((5Mat Z[6,4])Ran#·
+Then Prog "TNT6"·
+S=8îReturn·
+Green Text 43,14,Mat Z[4,1·
+Green Text 49,14,Mat Z[5,1·
+StoPict 1·
+IfEnd·
+Getkey·
+LpWhile Not Ans·
+Lbl I·
+Green Text 25,3," attak  "·
+Green Text 31,3," pouvoir"·
+Green Text 37,3," objet  "·
+Green Text 43,3," aprend"·
+Green Text 49,3," fuite  "·
+1‡Ğ·
+Text 57,3,"[EXE]‡choisir une action     "·
+StoPict 1·
+Do·
+Green F-Line 3,6Ğ+43,5,6Ğ+43·
+Do·
+If Not Int ((5Mat Z[6,4])Ran#·
+Then Prog "TNT6"·
+S=8îReturn·
+IfEnd·
+Getkey‡–·
+–=47îGoto 1·
+LpWhile Not –·
+Green Text 6Ğ+19,3," "·
+–=28îDsz Ğ·
+–=37îIsz Ğ·
+Not Ğî5‡Ğ·
+Ğ=6î1‡Ğ·
+1·
+–=31 And (Ğ=1 Or Ğ=2 Or (Ğ=4 And Mat Z[11,3] And Mat Z[11,4]) Or Ğ=3 Or (Ğ=5 And Not Mat Z[8,4î0·
+LpWhile Ans·
+If Ğ=5·
+Then If Not Int 2Ran#·
+Then Text 57,3,"Z prend la fuite...     "·
+For 1‡X To 200·
+Next·
+Return·
+Else Text 57,3,"Le monstre ratrappe Z ƒ "·
+For 1‡X To 200·
+Next·
+0‡P~Q·
+Goto D·
+IfEnd·
+IfEnd·
+If Ğ=3·
+Then StoPict 1·
+Mat Z[1,1‡I·
+Mat Z[6,1‡J·
+Prog "TNT9"·
+Cls·
+RclPict 1·
+PlotOn 0,0·
+Goto D·
+IfEnd·
+If Ğ=1·
+Then Orange Text 19,3,"force:   "·
+1‡O·
+7‡L·
+For 1‡E To 5·
+If Not Int ((3Mat Z[6,4])Ran#·
+Then Prog "TNT6"·
+S=8îReturn·
+IfEnd·
+6E+19‡K·
+Mat Z[E,4‡C·
+Prog "TNT8"·
+Next·
+1‡Ğ·
+Text 57,3,"[EXE]‡Choisir une attak     "·
+Do·
+Green F-Line 3,6Ğ+43,5,6Ğ+43·
+Mat Z[Ğ,4‡V·
+V<4î1·
+V=4î2·
+V=5î3·
+V=6î5·
+V=7î6·
+V=8î9·
+Ans‡O·
+If Not V·
+Then Orange Text 19,28,""·
+Else Orange Text 19,28,O·
+IfEnd·
+StoPict 1·
+Do·
+If Not Int ((5Mat Z[6,4])Ran#·
+Then Prog "TNT6"·
+S=8îReturn·
+IfEnd·
+Getkey‡–·
+–=31 And (Not V Or O>Mat Z[2,1î0‡–·
+LpWhile Not –·
+Green Text 6Ğ+19,3," "·
+–=28îDsz Ğ·
+–=37îIsz Ğ·
+Ğ=6î1‡Ğ·
+Not Ğî5‡Ğ·
+If –=47·
+Then Orange Text 19,3,"         "·
+Goto I·
+IfEnd·
+LpWhile –¬31·
+Mat Z[2,1]-O‡Mat Z[2,1·
+If V=8·
+Then For 11‡A To 26 Step 6·
+Green Text A,50,"     "·
+Next·
+4‡W·
+š‡C·
+š‡N·
+41‡R·
+Prog "TNT5"·
+For 1‡A To 12·
+Orange F-Line 108,37,Int 20Ran#+98,Int 20Ran#+27·
+Next·
+1‡P·
+32‡Q·
+IfEnd·
+If V=6·
+Then For 11‡A To 26 Step 6·
+Green Text A,50,"     "·
+Next·
+2‡W·
+š‡C·
+š‡N·
+41‡R·
+Prog "TNT5"·
+IfEnd·
+If V=1·
+Then 1‡P·
+6‡Q·
+IfEnd·
+If V=2·
+Then 4‡P·
+1‡Q·
+IfEnd·
+If V=3·
+Then 9‡P·
+1‡Q·
+IfEnd·
+If V=4·
+Then 1‡P·
+10‡Q·
+IfEnd·
+If V=5·
+Then 1‡P·
+15‡Q·
+IfEnd·
+If V=7·
+Then 1‡P·
+26‡Q·
+IfEnd·
+If V¬2 And V¬8·
+Then For 12‡C To 42 Step 6·
+Text C,40,"        "·
+C<31îGreen Text C-1,50,"       "·
+Next·
+IfEnd·
+If V=1 Or V=5·
+Then 2‡W·
+75‡R·
+š‡N·
+Prog "TNT5"·
+If V=5·
+Then For 1‡X To 99·
+Next·
+Cls·
+RclPict 1·
+Plot 0,0·
+For 1‡W To 70·
+Next·
+For 12‡C To 42 Step 6·
+Text C,40,"        "·
+C<31îGreen Text C-1,50,"       "·
+Next·
+2‡W·
+š‡N·
+75‡R·
+Prog "TNT5"·
+IfEnd·
+IfEnd·
+If V=4·
+Then 1‡W·
+š‡N·
+75‡R·
+Prog "TNT5"·
+For 1‡X To 70·
+Next·
+For 11‡W To 26 Step 6·
+Green Text W,82,"     "·
+Next·
+3‡W·
+š‡C·
+š‡N·
+Prog "TNT5"·
+IfEnd·
+If V=6·
+Then 85‡R·
+2‡W·
+š‡N·
+0‡C·
+Prog "TNT5"·
+1‡P·
+24‡Q·
+Int (Mat Z[1,1]-6-6Ran#‡Mat Z[1,1·
+IfEnd·
+If V=7·
+Then 2‡W·
+š‡N·
+75‡R·
+Prog "TNT5"·
+For 1‡B To 3·
+For 23‡A To 33 Step 6·
+Green Text A,82,"       "·
+Next·
+Isz W·
+W=4î2‡W·
+š‡C·
+š‡N·
+Prog "TNT5"·
+Next·
+IfEnd·
+If V=2·
+Then Text 51,38,"defense +1            "·
+For 11‡A To 26 Step 6·
+Green Text A,50,"     "·
+Next·
+3‡W·
+š‡C·
+š‡N·
+41‡R·
+Prog "TNT5"·
+IfEnd·
+If V=3·
+Then Text 51,38,"ennemi def -1        "·
+1‡W·
+š‡N·
+65‡R·
+Prog "TNT5"·
+IfEnd·
+Mat Z[1,1‡J·
+Mat Z[6,1‡J·
+Goto D·
+IfEnd·
+If Ğ=2·
+Then Orange Text 19,3,"magie:   "·
+7‡L·
+2‡O·
+For 1‡E To 5·
+If Not Int ((3Mat Z[6,4])Ran#·
+Then Prog "TNT6"·
+S=8îReturn·
+IfEnd·
+6E+19‡K·
+Mat Z[E,3‡C·
+Prog "TNT8"·
+Next·
+1‡Ğ·
+Text 57,3,"[EXE]‡Choisir un pouvoir    "·
+0‡O·
+Do·
+Green F-Line 3,6Ğ+43,5,6Ğ+43·
+O‡B·
+Mat Z[Ğ,3‡V·
+V<6î1·
+V=4î2·
+V>5î4·
+V>7î5·
+V>10î6·
+V=13î7·
+V=14î8·
+V=15î9·
+V=16î10·
+V=17î12·
+Ans‡O·
+B>9îO®9îOrange Text 19,28,"  "·
+If Not V·
+Then Orange Text 19,28,""·
+Else Orange Text 19,28,O·
+IfEnd·
+StoPict 1·
+Do·
+If Not Int ((5Mat Z[6,4])Ran#·
+Then Prog "TNT6"·
+S=8îReturn·
+IfEnd·
+Getkey‡–·
+–=31 And (Not V Or O>Mat Z[3,1î0‡–·
+LpWhile Not –·
+Green Text 6Ğ+19,3," "·
+–=28îDsz Ğ·
+–=37îIsz Ğ·
+Not Ğî5‡Ğ·
+Ğ=6î1‡Ğ·
+If –=47·
+Then Orange Text 19,3,"         "·
+Goto I·
+IfEnd·
+LpWhile –¬31·
+Mat Z[3,1]-O‡Mat Z[3,1·
+If V=6·
+Then Text 51,38,"att+1 / def+1         "·
+Orange Circle 49,37,10·
+For 0‡A To 9·
+Orange F-Line 49,37,Int 50Ran#+24,Int 50Ran#+12·
+Next·
+1+Mat Z[4,1‡Mat Z[4,1·
+4‡P·
+1‡Q·
+IfEnd·
+If V=5·
+Then If M¬7·
+Then For 3‡B To 40 Step 6·
+Text B,71,"              "·
+Next·
+Text 43,71,"              "·
+IfEnd·
+Text 11,86,"vitesse"·
+Text 20,80,"vie:   /"·
+Text 30,90,"att:"·
+Text 37,90,"def:"·
+Text 11,117,22-Mat Z[6,4·
+Text 20,94,Mat Z[6,1·
+Text 20,110,Mat Z[7,4·
+For 2‡A To 3·
+Text 16+7A,105,Mat Z[6,A·
+Next·
+For 5.8‡A To 0 Step .2·
+Text 4,99,Int A·
+Next·
+Cls·
+RclPict 1·
+Plot 0,0·
+0‡P~Q·
+IfEnd·
+If V=7·
+Then Graph Y<64·
+Graph Y>64·
+1‡P·
+16‡Q·
+IfEnd·
+If V=4·
+Then Orange F-Line 67,55,67,61·
+For 1‡W To 80·
+Next·
+Orange F-Line 107,61,100,45·
+Orange F-Line 104,53,108,38·
+Orange F-Line 106,45,101,30·
+1‡P·
+10‡Q·
+IfEnd·
+If V=3·
+Then For 1‡W To 40 Step 2·
+F-Line W+65,38-W¤2,W+65,38+W¤2·
+Next·
+1‡P·
+7‡Q·
+IfEnd·
+If V=12·
+Then For 1‡W To 40 Step 2·
+W<12îGreen F-Line W+65,38-.5W,W+65,38+.5W·
+W>11îW<24îF-Line W+65,38-.5W,W+65,38+.5W·
+W>23îOrange F-Line W+65,38-.5W,W+65,38+.5W·
+Next·
+For 1‡A To 3·
+Cls·
+Plot 0,0·
+RclPict 1·
+Plot 0,0·
+Next·
+1‡P·
+20‡Q·
+IfEnd·
+If V=1 Or V=2·
+Then V=1îText 51,38,"Z defense +1          "·
+V=2îText 51,38,"Z attaque +1          "·
+Circle 49,37,10·
+5-V‡P·
+1‡Q·
+IfEnd·
+If V=8·
+Then For 1‡A To 3·
+Cls·
+RclPict 1·
+Plot 0,0·
+Next·
+Text 51,38,"ennemi att -1        "·
+For 1‡A To 7·
+Orange Text Int 20Ran#+20,Int 20Ran#+96,"#"·
+Next·
+1‡P·
+14‡Q·
+Mat Z[6,2]-1‡Mat Z[6,2·
+IfEnd·
+If V=14·
+Then Orange F-Line 67,53,104,36·
+For 1‡X To 70·
+Next·
+Cls·
+RclPict 1·
+Orange F-Line 67,53,104,34·
+For 1‡X To 80·
+Next·
+Cls·
+RclPict 1·
+Orange Text 25,104,":"·
+For 1‡X To 80·
+Next·
+Text 51,38,"Z absorbe enn vie !   "·
+For 103‡A To 47 Step 2·
+Orange F-Line A,36+3Ran#,A-1,36+3Ran#·
+Next·
+Int (20+10Ran#+Mat Z[1,1‡Mat Z[1,1·
+1‡P·
+22‡Q·
+IfEnd·
+If V=10·
+Then Orange Circle 76,37,11·
+For 1‡A To 35·
+Orange F-Line 76,37,Int 75Ran#+50,Int 50Ran#+14·
+Next·
+Int (Mat Z[1,1]-9-6Ran#‡Mat Z[1,1·
+1‡P·
+24‡Q·
+IfEnd·
+If V=9·
+Then For 1‡A To 5·
+Orange F-Line 67,53,Int 10Ran#+100,Int 25Ran#+20·
+For 1‡X To 50·
+Next·
+Cls·
+RclPict 1·
+Next·
+Text 51,38,"ennemi def -1        "·
+For 0‡A To 5·
+Orange F-Line 11Ran#+99,25Ran#+20,11Ran#+99,25Ran#+20·
+Next·
+Mat Z[6,3]-1‡Mat Z[6,3·
+1‡P·
+14‡Q·
+IfEnd·
+If V=11·
+Then Text 51,38,"Z regenere...        "·
+Green Circle 49,37,10·
+For 0‡A To 9·
+Green F-Line 49,37,40Ran#+29,40Ran#+17·
+Next·
+2‡P·
+Int (60+20Ran#‡Q·
+IfEnd·
+If V=15·
+Then For 95‡A To 125 Step 3·
+28Ran#·
+Orange F-Line A-6,17,A-3,17+Ans·
+Orange F-Line A-3,17+Ans,A,17·
+Next·
+1‡P·
+34‡Q·
+IfEnd·
+If V=16 Or V=13·
+Then If V=16·
+Then Orange Circle 67,53,4·
+For 54‡A To 61·
+Orange PlotOn 67,A·
+Next·
+Else Orange F-Line 67,54,66,61·
+Orange F-Line 67,54,68,61·
+IfEnd·
+For 1‡A To 99·
+Next·
+0‡O·
+If V=16·
+Then For 61‡P To 34 Step 3·
+Isz O·
+For 91+O‡Q To 109+O Step 4·
+PlotOn Q,P·
+Next·
+Next·
+IfEnd·
+Orange F-Line 107,61,101,45·
+Orange F-Line 109,61,101,45·
+For 1‡A To 99·
+Next·
+Orange F-Line 104,53,109,38·
+Orange F-Line 106,53,109,38·
+For 1‡A To 99·
+Next·
+Orange F-Line 106,45,102,30·
+Orange F-Line 108,45,102,30·
+For 1‡A To 99·
+Next·
+1‡P·
+40‡Q·
+V=13î28‡Q·
+IfEnd·
+If V=17·
+Then For 43‡A To 125 Step 3·
+40Ran#·
+Orange F-Line A-6,17,A-3,23+Ans·
+Orange F-Line A-3,23+Ans,A,17·
+Next·
+Mat Z[1,1]-20-Int 9Ran#‡Mat Z[1,1·
+1‡P·
+50‡Q·
+IfEnd·
+Goto D·
+IfEnd·
+If Ğ=4·
+Then 51‡K·
+81‡L·
+Mat Z[11,3‡O·
+Mat Z[11,4‡C·
+Text 51,38,"apprendre        ?    "·
+Prog "TNT8"·
+Text 57,3,"                             "·
+0‡L·
+For 1‡K To 5·
+C=Mat Z[K,5-Oî1‡L·
+Next·
+If L·
+Then Text 57,3,"tu connais deja cela.       "·
+For 1‡P To 200·
+Next·
+0‡P~Q·
+Goto D·
+IfEnd·
+Text 57,3,"[EXE]‡oui       [EXIT]‡retour"·
+Do·
+Getkey‡–·
+LpWhile –¬31 And –¬47·
+If –=47·
+Then 0‡P~Q·
+Goto D·
+IfEnd·
+Text 51,106,"  "·
+0‡L·
+For 1‡K To 5·
+Not Mat Z[K,5-OîK‡L·
+LîBreak·
+Next·
+If L·
+Then C‡Mat Z[L,5-O·
+57‡K·
+55‡L·
+Text 57,3,"tu as appris                  "·
+Prog "TNT8"·
+For 1‡P To 200·
+Next·
+0‡P~Q·
+0‡Mat Z[11,3·
+Goto D·
+Else Text 57,3,"  ...tu n'as plus de place..."·
+For 1‡X To 200·
+Next·
+Green Text 51,81,"       "·
+Text 51,38,"supprimer quoi ?     "·
+Text 57,3,"[EXE]‡choisir   [EXIT]‡quitter"·
+For 25‡W To 49 Step 6·
+Green Text W,3,"        "·
+Next·
+7‡L·
+C‡W·
+For 1‡Q To 5·
+Mat Z[Q,5-O‡C·
+19+6Q‡K·
+Prog "TNT8"·
+Next·
+1‡Q·
+Do·
+Green Text 19+6Q,3,""·
+Do·
+Getkey‡–·
+If –=47·
+Then 0‡P~Q·
+0‡Mat Z[11,3·
+Goto D·
+IfEnd·
+LpWhile Not –·
+Green Text 19+6Q,3," "·
+–=28îDsz Q·
+–=37îIsz Q·
+Not Qî5‡Q·
+Q=6î1‡Q·
+LpWhile –¬31·
+Green Text 19+6Q,3,""·
+51‡K·
+73‡L·
+Mat Z[Q,5-O‡C·
+Text 51,38,"Z oublie            "·
+Prog "TNT8"·
+Mat Z[11,4‡C·
+C‡Mat Z[Q,5-O·
+57‡K·
+64‡L·
+Text 57,3," et il apprend                "·
+Prog "TNT8"·
+For 1‡X To 200·
+Next·
+0‡P~Q·
+0‡Mat Z[11,3·
+Goto D·
+IfEnd·
+IfEnd·
+Goto D·
+Lbl 2·
+Cls·
+Int (175-5M)Ran#‡Q·
+Int (180-5M)Ran#‡R·
+0‡S~T·
+For 1‡A To 2·
+0‡B·
+A=1îQ‡X·
+A=2îR‡X·
+X>69îX<95î15‡B·
+X<70î7‡B·
+X<60îDsz B·
+X<55îDsz B·
+X<50îDsz B·
+X<38îDsz B·
+X<26îDsz B·
+X<14îDsz B·
+A=1îB‡S·
+A=2îB‡T·
+Next·
+If Mat Z[8,4·
+Then If 29=Mat Z[12,6·
+Then 13‡S·
+0‡T·
+IfEnd·
+If 10.5=Mat Z[12,6·
+Then 2‡S·
+4‡T·
+IfEnd·
+IfEnd·
+Cls·
+Text 1,1,"-------FIN DU COMBAT-------"·
+Text 58,1,"--------------------------"·
+Int 3Ran#+2‡W·
+3-Int 2Ran#‡K·
+For 1‡X To 2·
+W+Mat Z[1,X‡Mat Z[1,X·
+1+Mat Z[K,X‡Mat Z[K,X·
+Next·
+1+Mat Z[12,3‡Mat Z[12,3·
+Mat Z[12,3‡A·
+Mat Z[11,2‡–·
+1·
+A>1î2·
+A>5î3·
+A>9î4·
+A>14î5·
+A>19î6·
+A>25î7·
+Ans‡Mat Z[11,2·
+Orange Text 10,1,"Experience:"·
+Mat Z[11,6‡E·
+Int 100Ran#+2Mat Z[7,4]+40Mat Z[6,2]+40Mat Z[6,3]+200-20Mat Z[6,4‡A·
+Orange Text 16,1,E·
+Orange Text 16,22,"+"·
+Orange Text 16,27,A·
+Orange Text 22,22,"="·
+Orange Text 22,27,E+A·
+E+A‡Mat Z[11,6·
+0‡A·
+Green Text 10,80,"RRecompense:"·
+Not Mat Z[8,4îInt (25+8M+9Ran#+0.4Mat Z[11,2‡A·
+23=Mat Z[12,6î5000‡A·
+A+Mat Z[10,4‡Mat Z[10,4·
+Green Text 16,105,"$"·
+If A<99·
+Then For 0‡B To A Step 3·
+Green Text 16,91,B·
+Next·
+Green Text 16,91,"   "·
+IfEnd·
+91‡B·
+A=5000î85‡B·
+Green Text 16,B,A·
+Text 35,1,"Objets trouves:"·
+If Not S And Not T·
+Then Text 43,10,"aucun"·
+Else 43‡K·
+10‡L·
+3‡O·
+S‡C·
+Prog "TNT8"·
+49‡K·
+10‡L·
+T‡C·
+Prog "TNT8"·
+š‡N·
+S‡O·
+Prog "TNT7"·
+T‡O·
+Prog "TNT7"·
+IfEnd·
+If –<Mat Z[11,2·
+Then 5-Int 2Ran#‡K·
+If Int 2Ran#·
+Then Mat Z[4,2]<Mat Z[5,2î4‡K·
+Mat Z[5,2]<Mat Z[4,2î5‡K·
+IfEnd·
+1+Mat Z[K,2‡Mat Z[K,2·
+For 1‡Y To 2·
+Int (18+3–+Mat Z[1,Y‡Mat Z[1,Y·
+Next·
+For 2‡X To 3·
+For 1‡Y To 2·
+Int (7+X+Mat Z[X,Y‡Mat Z[X,Y·
+Next·
+Next·
+IfEnd·
+For 4‡X To 5·
+Mat Z[X,2‡Mat Z[X,1·
+Next·
+For 2‡X To 5·
+For 1‡Y To 2·
+99<Mat Z[X,Yî99‡Mat Z[X,Y·
+Next·
+Next·
+Orange Text 35,83,"niveau:"·
+Orange Text 35,114,Mat Z[11,2·
+Orange Text 41,80,"att"·
+Orange Text 47,80,"def"·
+Orange Text 53,80,"vie    /"·
+For 4‡T To 5·
+Orange Text 17+6T,94,Mat Z[T,1·
+Next·
+Orange Text 53,94,Mat Z[1,1·
+Orange Text 53,112,Mat Z[1,2»
+ClrList·
+ClrText·
+Return

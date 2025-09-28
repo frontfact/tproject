@@ -1,0 +1,48 @@
+If O=2∑
+Then Not CÓGreen Text K,L,"       "∑
+C=1ÓGreen Text K,L,"acier   "∑
+C=2ÓGreen Text K,L,"force  "∑
+C=3ÓGreen Text K,L,"onde   "∑
+C=4ÓGreen Text K,L,"eclair "∑
+C=5ÓGreen Text K,L,"vision "∑
+C=6ÓGreen Text K,L,"boost  "∑
+C=7ÓGreen Text K,L,"vague  "∑
+C=8ÓGreen Text K,L,"morsur "∑
+C=10ÓGreen Text K,L,"soleil "∑
+C=9ÓGreen Text K,L,"griffe "∑
+C=12ÓGreen Text K,L,"onde+  "∑
+C=13ÓGreen Text K,L,"foudre "∑
+C=11ÓGreen Text K,L,"vital  "∑
+C=14ÓGreen Text K,L,"vampyr "∑
+C=15ÓGreen Text K,L,"flamme "∑
+C=16ÓGreen Text K,L,"orage  "∑
+C=17ÓGreen Text K,L,"enfers "∑
+IfEnd∑
+If O=1∑
+Then Not CÓGreen Text K,L,"       "∑
+C=1ÓGreen Text K,L,"coup   "∑
+C=2ÓGreen Text K,L,"garde  "∑
+C=3ÓGreen Text K,L,"feinte "∑
+C=4ÓGreen Text K,L,"tranch "∑
+C=5ÓGreen Text K,L,"double "∑
+C=6ÓGreen Text K,L,"charge "∑
+C=7ÓGreen Text K,L,"furie  "∑
+C=8ÓGreen Text K,L,"Xmeta   "∑
+IfEnd∑
+If O=3∑
+Then Not CÓText K,L,"     "∑
+C=1ÓText K,L,"soin"∑
+C=2ÓText K,L,"soin +"∑
+C=3ÓText K,L,"adrena"∑
+C=4ÓText K,L,"chlore"∑
+C=7ÓText K,L,"groseye"∑
+C=8ÓText K,L,"[tarte]"∑
+C=14ÓText K,L,"fusil"∑
+C=15ÓText K,L,"balles"∑
+C=16ÓText K,L,"LUNE"∑
+C=5ÓText K,L,"protec"∑
+C=6ÓText K,L,"power+"∑
+C=11ÓText K,L,"ANGEL"∑
+C=12ÓText K,L,"MAGMA"∑
+C=13ÓText K,L,"PHOENIX"∑
+IfEnd

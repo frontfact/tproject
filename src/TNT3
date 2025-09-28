@@ -1,0 +1,108 @@
+Lbl I·
+Prog "TNT13"·
+Lbl 1·
+0‡N~O·
+Green PlotOn I,J·
+I‡Mat Z[12,4·
+J‡Mat Z[12,5·
+Int (65-J)¤5‡H·
+Int (I-50)¤5+1‡G·
+Frac Mat A[H,G‡Ó¦·
+If Int 10Ó¦=2·
+Then V‡Mat Z[11,1·
+Green Text 31,10,"       "·
+Orange Text 23,2,"         "·
+PlotOff I,J·
+StoPict 1·
+Prog "TNT11"·
+Cls·
+RclPict 1·
+IfEnd·
+V=3 And ((H=5 And G=2 And Not Mat Z[10,1]) Or (G=16 And H=2 And Mat Z[12,2îProg "TNT15"·
+If Int 10Ó¦=1 Or Int 10Ó¦=3·
+Then If Int 10Ó¦=3 Or (100Frac 10Ó¦=Mat Z[12,6·
+Then Green Text 31,10,"      "·
+Orange Text 23,2,"         "·
+PlotOff I,J·
+StoPict 1·
+Green PlotOn I,J·
+Else š‡Ó§·
+IfEnd·
+V‡Mat Z[11,1·
+Prog "TNT4"·
+If Z=37·
+Then Prog "TNT15"·
+Return·
+IfEnd·
+If Ñ§·
+Then Mat Z[11,1‡V·
+Ñ§‡I·
+Ñ¨‡J·
+Goto S·
+IfEnd·
+IfEnd·
+If Ó¦·
+Then Green Text 31,10,Mat Z[10,4·
+5š‡W·
+Prog "TNT1"·
+Mat Z[9,3‡–·
+Mat Z[11,1‡V·
+If Ó§¬š·
+Then PlotOff I,J·
+–=27îI-5‡I·
+–=38îI+5‡I·
+–=37îJ+5‡J·
+–=28îJ-5‡J·
+IfEnd·
+0‡Ó¦·
+Ó§¬šîGoto 1·
+0‡Ó§·
+IfEnd·
+Do·
+Getkey‡–·
+LpWhile Not –·
+–‡Mat Z[9,3·
+Mat Z[12,1îProg "TNT15"·
+Ans=sin 9îGoto S·
+If –=48·
+Then Green Text 31,10,"       "·
+Orange Text 23,2,"         "·
+PlotOff I,J·
+StoPict 1·
+V‡Mat Z[11,1·
+Prog "TNT10"·
+Mat Z[11,1‡V·
+Cls·
+RclPict 1·
+Green PlotOn I,J·
+Green Text 31,10,Mat Z[10,4·
+5š‡W·
+Prog "TNT1"·
+Goto 1·
+IfEnd·
+–=29îProg "TNT15"·
+–=29îGoto W·
+–=27 Or –=37îMat A[H,G·
+–=28 And H>1îMat A[H-1,G·
+–=38 And G>1îMat A[H,G-1·
+Ans‡N·
+Int (10Frac N‡O·
+–=27îG<16îInt (10Frac Mat A[H,G+1‡O·
+–=37îH<10îInt (10Frac Mat A[H+1,G‡O·
+–=27 Or –=38îInt (10Frac .01N‡N·
+–=37 Or –=28îInt (10Frac .1N‡N·
+N=2 Or O>3 Or (H=1 And –=28) Or (G=1 And –=38)îGoto 1·
+PlotOff I,J·
+–=27îI+5‡I·
+–=28îJ+5‡J·
+–=37îJ-5‡J·
+–=38îI-5‡I·
+Goto 1·
+Lbl W·
+Mat Z[9,1‡A·
+Mat Z[9,2‡B·
+Int 5Ran#+6‡Mat Z[10,3·
+Return·
+Lbl S·
+sin 3‡X·
+Goto I

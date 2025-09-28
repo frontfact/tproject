@@ -1,0 +1,190 @@
+Mat Z[11,1‡V·
+Mat Z[9,1‡A·
+Mat Z[9,2‡B·
+Prog "TNT3"·
+Lbl 9·
+Mat Z[9,1‡A·
+Mat Z[9,2‡B·
+Mat Z[9,4‡–·
+–=27îDsz A·
+–=38îIsz A·
+–=28îDsz B·
+–=37îIsz B·
+Prog "TNT1"·
+If Z=38·
+Then Prog "TNT15"·
+B+2‡B·
+IfEnd·
+Lbl 8·
+Cls·
+RclPict 1·
+PlotOn A,B·
+Lbl S·
+0‡P·
+If 1>Mat Z[10,3·
+Then A‡Mat Z[9,1·
+B‡Mat Z[9,2·
+For 0‡W To 340 Step 25·
+Orange F-Line A,B,A+12cos W,B+9sin W·
+Next·
+Prog "TNT14"·
+0‡Mat Z[9,4·
+Mat Z[9,1‡A·
+Mat Z[9,2‡B·
+Int 6Ran#+7‡Mat Z[10,3·
+Goto 9·
+Else Mat Z[10,3]-1‡Mat Z[10,3·
+IfEnd·
+PlotOn A,B·
+(A=71 And B=18) Or (A=124 And B=11) Or (A=65 And B=44) Or (A=86 And B=34)î12<Mat Z[12,6îGoto H·
+Do·
+Getkey‡–·
+LpWhile Not –·
+–‡Mat Z[9,4·
+PlotOff A,B·
+If A=60 And B=42 And Not Mat Z[10,2·
+Then Prog "TNT15"·
+Goto 9·
+IfEnd·
+If –=48 Or Not Int 30Ran#·
+Then A‡Mat Z[9,1·
+B‡Mat Z[9,2·
+If –=48·
+Then Prog "TNT10"·
+Else 0‡Mat Z[9,4·
+ClrText·
+Locate 1,1,"~ MARCHAND AMBULANT ~"·
+Locate 1,3,"1‡Voir les prix"·
+Locate 1,4,"2‡Non merci"·
+Do·
+Getkey·
+LpWhile Ans¬72 And Ans¬62·
+ClrText·
+0‡Ð·
+If Ans=72·
+Then ã¥š·
+Prog "TNT15"·
+Prog "TNT11"·
+IfEnd·
+IfEnd·
+Mat Z[9,1‡A·
+Mat Z[9,2‡B·
+Goto 8·
+IfEnd·
+–=27îIsz A·
+–=38îDsz A·
+–=37îDsz B·
+–=28îIsz B·
+A>126î38‡A·
+A<38î126‡A·
+0‡V·
+PxlTest 64-B,A·
+If Ans·
+Then A¯65 And A®66 And B¯19 And B®20î1‡V·
+A¯71 And A®72 And B¯23 And B®24î2‡V·
+A¯105 And A®106 And B¯41 And B®42î3‡V·
+A¯48 And A®49 And B¯37 And B®38î4‡V·
+A¯44 And A®45 And B¯13 And B®14î5‡V·
+A¯68 And A®69 And B¯10 And B®11î6‡V·
+A¯78 And A®79 And B¯40 And B®41î7‡V·
+A¯88 And A®89 And B¯23 And B®26î9‡V·
+A¯106 And A®107 And B¯6 And B®7î10‡V·
+If V·
+Then 0‡Ñ§·
+0‡Ñ¨·
+A‡Mat Z[9,1·
+B‡Mat Z[9,2·
+Prog "TNT3"·
+0‡V·
+Goto 9·
+IfEnd·
+Mat Z[9,4‡–·
+–=27îDsz A·
+–=28îDsz B·
+–=37îIsz B·
+–=38îIsz A·
+Goto 8·
+IfEnd·
+Goto S·
+Lbl H·
+A‡Mat Z[9,1·
+B‡Mat Z[9,2·
+If A=71 And B=18·
+Then Text 1,4,"      "·
+Text 7,4,"    "·
+Text 19,4,"    "·
+IfEnd·
+If A=124 And B=11·
+Then Green Text 13,4,"        "·
+Text 37,4,"        "·
+IfEnd·
+A=65îB=44îText 31,4,"       "·
+If A=86 And B=34·
+Then Text 25,4,"        "·
+Text 43,4,"        "·
+IfEnd·
+1‡W·
+Lbl V·
+Orange F-Line 1,62-W,2,62-W·
+Do·
+Getkey‡–·
+LpWhile Not –·
+–=47îGoto 8·
+PxlTest W,4·
+If –¬31 Or Not Ans·
+Then Orange Text W,1," "·
+6‡V·
+–=28î6‡V·
+W‡Ð·
+Do·
+W+V‡W·
+W=5î43‡W·
+W=49î1‡W·
+W=ÐîGoto 8·
+PxlTest W,4·
+LpWhile Not Ans·
+Goto V·
+IfEnd·
+0‡P~Q·
+If W=1 Or W=7 Or W=19·
+Then 71‡W·
+1‡P·
+18‡V·
+IfEnd·
+If W=31·
+Then 1‡Q·
+65‡W·
+44‡V·
+IfEnd·
+If W=13 Or W=37·
+Then 1‡Q·
+124‡W·
+11‡V·
+IfEnd·
+If W=25 Or W=43·
+Then 2‡P·
+85‡W·
+34‡V·
+IfEnd·
+1‡Ð:1‡–·
+W<Aî1‡–·
+V<Bî1‡Ð·
+If Abs (W-A)>Abs (V-B·
+Then (V-B)¤(W-A‡Z·
+W<AîZ‡Z·
+For A‡U To W Step –·
+B+Z‡B·
+Orange PlotOn U,B·
+Next·
+Else (W-A)¤(V-B‡Z·
+V<BîZ‡Z·
+For B‡U To V Step Ð·
+A+Z‡A·
+Orange PlotOn A,U·
+Next·
+IfEnd·
+W+P‡A·
+V+Q‡B·
+For 1‡W To 150·
+Next·
+Goto 8

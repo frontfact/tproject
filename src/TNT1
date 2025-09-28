@@ -1,0 +1,88 @@
+If W=5ö∑
+Then 4+30(Mat Z[1,1]§Mat Z[1,2áD∑
+For 38áW To 40∑
+Orange F-Line 5,W,D,W∑
+Next∑
+Return∑
+IfEnd∑
+Cls∑
+F-Line 36,55,127,55∑
+F-Line 36,2,36,63∑
+F-Line 37,2,37,63∑
+F-Line 37,63,127,63∑
+F-Line 127,63,127,2∑
+F-Line 127,2,37,2∑
+Green Text 3,38,"ùCarte de Gaiaù"∑
+Orange Text 3,100,"[ƒeŸu]"∑
+Mat Z[12,6áZ∑
+Text 1,4,"BotƒRa"∑
+Z>9ÓText 7,4,"Tara"∑
+If Z>12∑
+Then Green Text 13,4,"Atlantis"∑
+Green PlotOn 4,51∑
+IfEnd∑
+Z>18ÓText 19,4,"Elos"∑
+Z>25ÓText 25,4,"HeleŸia"∑
+Z>28ÓText 31,4,"WiŸhill"∑
+Z>30ÓText 37,4,"Plyƒout"∑
+If Z>41∑
+Then Text 43,4,"Sanctua"∑
+PlotOn 4,21∑
+IfEnd∑
+F-Line 1,15,37,15∑
+F-Line 1,14,37,14∑
+Orange F-Line 6,6,5,7∑
+Orange PlotOn 6,8∑
+Orange Text 52,13,"HELI"∑
+Orange Text 58,13,"PORT"∑
+{48,63,72,75,89,90,90,108,118,117,104,98,97,100,93,83,87,82,78,75,72,53,54,48,47,43,48}áList 1∑
+{46,46,50,50,48,44,43,47,45,41,39,34,27,11,5,11,29,37,37,42,42,37,25,25,32,35,46}áList 2∑
+S-Gph2 DrawOff∑
+S-Gph3 DrawOff∑
+S-Gph1 DrawOn,xyLine,List 1,List 2,1,Dot∑
+DrawStat∑
+{65,70,72,75,76,73,60,62,65}áList 1∑
+{23,27,27,20,13,8,9,17,23}áList 2∑
+DrawStat∑
+{37,46,48,44,48,52,52,36,36,127,127,121,115,110,105,103,105,110,112,116,117,127}áList 1∑
+{17,20,18,13,11,9,7,8,2,2,18,10,8,9,12,6,4,4,6,5,4,8}áList 2∑
+DrawStat∑
+For 0áW To 1∑
+F-Line 109+W,26,111+W,29∑
+F-Line 105,32-W,107,31-W∑
+F-Line 108,24-W,106,26-W∑
+F-Line 103,27+W,105,28+W∑
+Next∑
+Green Text 20,84,"++":Text 22,82,"++":Green Text 24,80,"++"∑
+PlotOn 82,37∑
+Green Text 42,89,"@5C@5C"∑
+Green Text 47,87,"@5C@5C"∑
+Green Text 33,49,"@5C"∑
+Green Text 19,106,"@5C@5C"∑
+F-Line 65,15,69,13∑
+F-Line 69,13,71,16∑
+F-Line 71,16,75,17∑
+F-Line 59,42,56,43∑
+F-Line 56,43,52,41∑
+F-Line 52,41,48,38∑
+F-Line 48,38,46,34∑
+F-Line 92,30,93,36∑
+F-Line 93,36,97,38∑
+F-Line 97,38,101,36∑
+Orange Text 41,64,"."∑
+Z>9ÓOrange Text 50,67,"."∑
+Z>12ÓOrange Text 54,105,"."∑
+Z>18ÓOrange Text 37,70,"."∑
+Z>25ÓOrange Text 19,104,"."∑
+Z>28ÓOrange Text 23,47,"."∑
+Z>30ÓZ<38ÓOrange Text 47,43,"."∑
+Z>41ÓOrange Text 37,87,"."∑
+Orange Text 45,70,"Ü"∑
+PlotOff 70,18∑
+Orange Text 29,85,"Ü"∑
+PlotOff 87,34∑
+Orange Text 19,64,"Ü"∑
+PlotOff 65,43∑
+Orange Text 52,123,"Ü"∑
+PlotOff 124,10∑
+StoPict 1

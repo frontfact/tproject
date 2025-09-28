@@ -1,0 +1,218 @@
+Identity 1‡Mat A·
+0‡Mat Z[8,4·
+0‡S·
+W=43 Or W=44 Or W=32 Or W=33 Or W=28.5 Or W=8 Or W=10.5 Or W=23 Or W=29 Or W=99îW‡S·
+Sî1‡Mat Z[8,4·
+For 4‡X To 5·
+Mat Z[X,2‡Mat Z[X,1·
+Next·
+0‡Mat Z[11,3·
+0‡Mat Z[11,4·
+Do·
+1+Int ((2.5+0.8Mat Z[11,2])Ran#·
+LpWhile Ans>7·
+S=43 Or S=32î4·
+S=99î1·
+S=28.5î2·
+S=23î3·
+S=10.5î5·
+S=44 Or S=33 Or S=8î6·
+S=29î7·
+55=Mat Z[12,6î6·
+Ans‡M·
+S-Gph3 DrawOff,xyLine,List 1,List 3,1,Dot·
+S-Gph2 DrawOff,xyLine,List 3,List 4,1,Dot·
+S=99îS-Gph2 DrawOn,xyLine,List 3,List 4,1,Square·
+S-Gph1 DrawOff,xyLine,List 1,List 2,1,Dot·
+8‡Dim List 1·
+List 1‡List 3·
+{17,17,25,31,45,45,47,48,51,52,52,49,47,47,45,45,31,31,26,25,22,17,22,31,31,27,24,17,17,17,24,27,32,31,33,36,39,41,42,41,37,35,36,37,40,42,42,40,38,36,35,34}‡List 2·
+M=1î{25,25,50,50,40,40,32,26,26,17,17}‡List 4·
+M=2î{23,23,41,42,41,23,23,17,23,23,19,17,19,23,23,17,23,23,22,19,18,17}‡List 4·
+M=3î{25,25,26,26,27,27,35,28,28,42,39,38,37,34,29,26,31,34,27,26,21,15,21,26,25,22,15,22,25,27,22,15,22,27,26,23,21,15}‡List 4·
+M=4î{63,48,46,43,37,32,30,32,31,33,32,33,29,31,29,29,30,32,34,32,32,36,35,33,33,36,38,41,39,41,43,43,41,43,44,48,48,48,48,63}‡List 4·
+M=5î{41,41,43,42,29,30,32,29,28,28,27,27,20,20,25,25,17,17,21,24,27,23}‡List 4·
+M=6î{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,43,42,40,35,35,35,39,41,40,31,24,19,17,17,18,22,22}‡List 4·
+55=Mat Z[12,6îReturn·
+Cls·
+F-Line 1,1,127,1·
+F-Line 127,1,127,63·
+F-Line 127,63,1,63·
+F-Line 1,63,1,1·
+F-Line 1,9,36,9·
+F-Line 36,9,36,63·
+F-Line 1,55,36,55·
+Orange Text 3,6,Mat Z[1,1·
+Orange Text 3,18,"/"·
+Orange Text 3,22,Mat Z[1,2·
+F-Line 37,15,127,15·
+Green F-Line 36,16,127,16·
+Green F-Line 126,16,126,62·
+F-Line 126,62,37,62·
+F-Line 37,62,37,16·
+Orange Text 11,3,"NIVEAU"·
+Orange Text 11,30,Mat Z[11,2·
+If Int 3Ran#·
+Then Green Graph Y=16+3Ran#·
+Green Text 45,1,"         "·
+Else Orange Graph Y=16+Ran#·
+Orange F-Line 38,16,125,16·
+Orange Text 45,1,"         "·
+IfEnd·
+1‡W·
+š‡N·
+41‡R·
+0‡C·
+Prog "TNT5"·
+Text 51,38,"Z combat un ..."·
+Mat Z[11,2‡N·
+If M=1·
+Then 1¡2N+2‡A~D·
+18+10N+8NRan#‡P·
+10‡V·
+IfEnd·
+If M=2·
+Then 20+11N+8NRan#‡P·
+1¡3N+2‡A·
+3¡4N+2‡D·
+12‡V·
+IfEnd·
+If M=3·
+Then 16+12N+6NRan#‡P·
+N+1‡A·
+2¡3N+1‡D·
+9‡V·
+IfEnd·
+If M=4·
+Then 20+14N+7NRan#‡P·
+4¡5N+2‡A~D·
+12‡V·
+IfEnd·
+If M=5·
+Then 25+20N+8NRan#‡P·
+N+2‡A~D·
+14‡V·
+IfEnd·
+If M=6·
+Then 20+16N+8NRan#‡P·
+N+1‡A·
+3¡4N+1‡D·
+8‡V·
+IfEnd·
+If M=7·
+Then 15N+13NRan#+40‡P·
+N+2‡A·
+2¡3N+2‡D·
+8‡V·
+IfEnd·
+If S=32·
+Then 500‡P·
+14‡A·
+8‡D·
+8‡V·
+IfEnd·
+If S=43·
+Then 700‡P·
+20‡A·
+13‡D·
+8‡V·
+IfEnd·
+If S=44·
+Then 800‡P·
+20‡A·
+13‡D·
+8‡V·
+IfEnd·
+If S=33·
+Then 600‡P·
+15‡A·
+9‡D·
+8‡V·
+IfEnd·
+If S=28.5·
+Then 250‡P·
+7‡A·
+5‡D·
+8‡V·
+IfEnd·
+If S=99·
+Then 800‡P·
+15‡A·
+12‡D·
+7‡V·
+IfEnd·
+If S=10.5·
+Then 120‡P·
+4‡A~D·
+11‡V·
+IfEnd·
+If S=23·
+Then 400‡P·
+7‡A·
+6‡D·
+7‡V·
+IfEnd·
+If S=29·
+Then 650‡P·
+10‡A·
+9‡D·
+7‡V·
+IfEnd·
+If S=8·
+Then 99‡P·
+9‡A~D·
+11‡V·
+IfEnd·
+Int (P+16Ran#-8‡P·
+Getkey=65î1‡P·
+P‡Mat Z[6,1·
+P‡Mat Z[7,4·
+Int A+Int 2Ran#‡Mat Z[6,2·
+Int D+Int 2Ran#‡Mat Z[6,3·
+Int (V+2Ran#-(N¤3·
+Ans‡Mat Z[6,4·
+N-1‡A·
+8·
+N<6î4·
+N<2î1·
+S=10.5î6·
+S=8î8·
+Ans‡Mat Z[7,1·
+For 2‡B To 3·
+A+Int 4Ran#·
+S=8î7·
+SîAns+1·
+Not Ansî1·
+Ans>8î8·
+Ans‡Mat Z[7,B·
+Next·
+For 1‡B To 3·
+N=1îInt 4Ran#+1·
+N=2îInt 5Ran#+3·
+N=3îInt 4Ran#+6·
+N=4îInt 5Ran#+6·
+N=5îInt 6Ran#+8·
+N=6îInt 6Ran#+10·
+N=7îInt 8Ran#+10·
+S=8î14·
+SîAns+1·
+Ans>17î17·
+Ans‡Mat Z[8,B·
+Next·
+115‡R·
+M¬7îProg "TNT5"·
+If S=43 Or S=44 Or S=32 Or S=33 Or S=8 Or S=10.5 Or S=99 Or S=28.5·
+Then S=44 Or S=33 Or S=8îText 51,75,"Enzo   "·
+S=32 Or S=43îText 51,75,"RRedox  "·
+S=10.5îText 51,75,"Minautor"·
+S=28.5îText 51,75,"Un vegetal"·
+S=99îText 51,75,"le Gardien"·
+Else M=1îText 51,90,"lapranak"·
+M=2îText 51,90,"srilane"·
+M=3îText 51,89,"mandivor"·
+M=4îText 51,90,"arakn'"·
+M=5îText 51,90,"orinaphe"·
+M=6îText 51,88,"goa geant"·
+M=7îText 51,90,"spectre"·
+IfEnd·
+StoPict 1
