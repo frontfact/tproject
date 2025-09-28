@@ -1,0 +1,3512 @@
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1350
+File Name:TPROJECT
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+'TNTSOFT
+'V 1.2
+\Identity 1\->\Mat A
+0\->\R b0
+\Lbl S
+\Cls
+\S-WindMan
+\ViewWindow 1,127,0,1,63,0
+\Deg
+\CoordOff
+\GridOff
+\AxesOff
+\LabelOff
+\Norm
+\BG-None
+\FuncOff
+0\->A~Z
+\F-Line 8,35,20,40
+\F-Line 20,40,40,43
+\F-Line 40,43,60,45
+\F-Line 60,45,80,45
+\F-Line 20,42,21,20
+\F-Line 26,36,27,27
+\F-Line 26,36,34,24
+\F-Line 34,24,31,46
+\F-Line 36,35,39,37
+\F-Line 39,37,44,38
+\F-Line 39,37,40,24
+\F-Line 45,35,50,38
+\F-Line 50,38,57,39
+\F-Line 50,35,47,34
+\F-Line 47,34,46,32
+\F-Line 46,32,47,29
+\F-Line 47,29,49,25
+\F-Line 49,25,49,23
+\F-Line 49,23,46,20
+\F-Line 46,20,40,17
+\F-Line 52,32,54,34
+\F-Line 54,34,56,33
+\F-Line 56,33,57,29
+\F-Line 57,29,55,28
+\F-Line 55,28,53,28
+\F-Line 53,28,52,31
+\F-Line 68,40,63,39
+\F-Line 63,39,60,36
+\F-Line 60,36,59,34
+\F-Line 59,34,61,22
+\F-Line 59,27,63,29
+\F-Line 66,34,69,36
+\F-Line 69,36,75,37
+\F-Line 69,36,70,24
+\Orange \F-Line 93,38,103,38
+\Orange \F-Line 93,30,103,30
+\Text 28,93,"The"
+\Orange \F-Line 80,28,115,28
+\Orange \F-Line 80,20,115,20
+\Text 38,80,"T\(-)Project"
+\Text 52,21,"NOUVELLE PARTIE"
+\Text 58,21,"CONTINUER"
+\Lbl 1
+\Text 52+6D,17,"\(-)"
+\Do
+\Getkey\->\theta
+\LpWhile \theta\<>28\ And \theta\<>37\ And \theta\<>31\ And \theta\<>33
+\Text 6D+52,17," "
+\If \theta\<>31
+\Then \Isz D
+D>1\=>0\->D
+\Goto1
+\IfEnd
+\Cls
+\ClrText
+\If D
+\Then \Locate 1,1,"CHARGEMENT..."
+\Mat Y*(1\ab/c\sqrt(\Mat Y[10,3\->\Mat Z
+0\->C
+\For 1\->A \To 12
+\For 1\->B \To 6
+\Int (\Mat Z[A,B]\<>\Mat Z[A,B\=>\Isz C
+\Next 
+\Next 
+\ClrText
+\If C
+\Then \Identity 1\->\Mat Y
+\GotoS
+\IfEnd
+0\->\R a1
+0\->\R a2
+\Prog "TNT2"
+\IfEnd
+\Identity 1\->\Mat Z
+[[40,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][66,21,28,.,.,.][0,1,.,.,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
+0\->A~Z
+\Cls
+0\->\r
+70\->\R a1
+55\->\R a2
+\ClrText
+"Il est recom\ande de  parcourir la notice  avant de jouer."\Disp\ClrText
+\Green "R\Rappel :"
+\Orange "Z parle en \orange."\Disp"Son interlocuteur,   en bleu."\Disp\ClrText
+"TNTSOFT vous souhaiteun agreable voyage"
+\For 0\->X \To 400
+\Next 
+\Prog "TNT2"
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1499
+File Name:TNT1
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=5\Pi
+\Then 4+30(\Mat Z[1,1]/\Mat Z[1,2\->D
+\For 38\->W \To 40
+\Orange \F-Line 5,W,D,W
+\Next 
+\Return
+\IfEnd
+\Cls
+\F-Line 36,55,127,55
+\F-Line 36,2,36,63
+\F-Line 37,2,37,63
+\F-Line 37,63,127,63
+\F-Line 127,63,127,2
+\F-Line 127,2,37,2
+\Green \Text 3,38,"\(-)Carte de Gaia\(-)"
+\Orange \Text 3,100,"[\millie\Cntu]"
+\Mat Z[12,6\->Z
+\Text 1,4,"Bot\milli\Ra"
+Z>9\=>\Text 7,4,"Tara"
+\If Z>12
+\Then \Green \Text 13,4,"Atlantis"
+\Green \PlotOn 4,51
+\IfEnd
+Z>18\=>\Text 19,4,"Elos"
+Z>25\=>\Text 25,4,"Hele\Cntia"
+Z>28\=>\Text 31,4,"Wi\Cnthill"
+Z>30\=>\Text 37,4,"Ply\milliout"
+\If Z>41
+\Then \Text 43,4,"Sanctua"
+\PlotOn 4,21
+\IfEnd
+\F-Line 1,15,37,15
+\F-Line 1,14,37,14
+\Orange \F-Line 6,6,5,7
+\Orange \PlotOn 6,8
+\Orange \Text 52,13,"HELI"
+\Orange \Text 58,13,"PORT"
+{48,63,72,75,89,90,90,108,118,117,104,98,97,100,93,83,87,82,78,75,72,53,54,48,47,43,48}\->\List 1
+{46,46,50,50,48,44,43,47,45,41,39,34,27,11,5,11,29,37,37,42,42,37,25,25,32,35,46}\->\List 2
+\S-Gph2 \DrawOff
+\S-Gph3 \DrawOff
+\S-Gph1 \DrawOn,\xyLine,\List 1,\List 2,1,\Dot
+\DrawStat
+{65,70,72,75,76,73,60,62,65}\->\List 1
+{23,27,27,20,13,8,9,17,23}\->\List 2
+\DrawStat
+{37,46,48,44,48,52,52,36,36,127,127,121,115,110,105,103,105,110,112,116,117,127}\->\List 1
+{17,20,18,13,11,9,7,8,2,2,18,10,8,9,12,6,4,4,6,5,4,8}\->\List 2
+\DrawStat
+\For 0\->W \To 1
+\F-Line 109+W,26,111+W,29
+\F-Line 105,32-W,107,31-W
+\F-Line 108,24-W,106,26-W
+\F-Line 103,27+W,105,28+W
+\Next 
+\Green \Text 20,84,"++":\Text 22,82,"++":\Green \Text 24,80,"++"
+\PlotOn 82,37
+\Green \Text 42,89,"\@5C\@5C"
+\Green \Text 47,87,"\@5C\@5C"
+\Green \Text 33,49,"\@5C"
+\Green \Text 19,106,"\@5C\@5C"
+\F-Line 65,15,69,13
+\F-Line 69,13,71,16
+\F-Line 71,16,75,17
+\F-Line 59,42,56,43
+\F-Line 56,43,52,41
+\F-Line 52,41,48,38
+\F-Line 48,38,46,34
+\F-Line 92,30,93,36
+\F-Line 93,36,97,38
+\F-Line 97,38,101,36
+\Orange \Text 41,64,"."
+Z>9\=>\Orange \Text 50,67,"."
+Z>12\=>\Orange \Text 54,105,"."
+Z>18\=>\Orange \Text 37,70,"."
+Z>25\=>\Orange \Text 19,104,"."
+Z>28\=>\Orange \Text 23,47,"."
+Z>30\=>Z<38\=>\Orange \Text 47,43,"."
+Z>41\=>\Orange \Text 37,87,"."
+\Orange \Text 45,70,"\Deg>"
+\PlotOff 70,18
+\Orange \Text 29,85,"\Deg>"
+\PlotOff 87,34
+\Orange \Text 19,64,"\Deg>"
+\PlotOff 65,43
+\Orange \Text 52,123,"\Deg>"
+\PlotOff 124,10
+\StoPict 1
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1811
+File Name:TNT2
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Mat Z[11,1\->V
+\Mat Z[9,1\->A
+\Mat Z[9,2\->B
+\Prog "TNT3"
+\Lbl 9
+\Mat Z[9,1\->A
+\Mat Z[9,2\->B
+\Mat Z[9,4\->\theta
+\theta=27\=>\Dsz A
+\theta=38\=>\Isz A
+\theta=28\=>\Dsz B
+\theta=37\=>\Isz B
+\Prog "TNT1"
+\If Z=38
+\Then \Prog "TNT15"
+B+2\->B
+\IfEnd
+\Lbl 8
+\Cls
+\RclPict 1
+\PlotOn A,B
+\Lbl S
+0\->P
+\If 1>\Mat Z[10,3
+\Then A\->\Mat Z[9,1
+B\->\Mat Z[9,2
+\For 0\->W \To 340 \Step 25
+\Orange \F-Line A,B,A+12\cos W,B+9\sin W
+\Next 
+\Prog "TNT14"
+0\->\Mat Z[9,4
+\Mat Z[9,1\->A
+\Mat Z[9,2\->B
+\Int 6\Ran#+7\->\Mat Z[10,3
+\Goto9
+\Else \Mat Z[10,3]-1\->\Mat Z[10,3
+\IfEnd
+\PlotOn A,B
+(A=71\ And B=18)\ Or (A=124\ And B=11)\ Or (A=65\ And B=44)\ Or (A=86\ And B=34)\=>12<\Mat Z[12,6\=>\GotoH
+\Do
+\Getkey\->\theta
+\LpWhile \Not \theta
+\theta\->\Mat Z[9,4
+\PlotOff A,B
+\If A=60\ And B=42\ And \Not \Mat Z[10,2
+\Then \Prog "TNT15"
+\Goto9
+\IfEnd
+\If \theta=48\ Or \Not \Int 30\Ran#
+\Then A\->\Mat Z[9,1
+B\->\Mat Z[9,2
+\If \theta=48
+\Then \Prog "TNT10"
+\Else 0\->\Mat Z[9,4
+\ClrText
+\Locate 1,1,"~ MARCHAND AMBULANT ~"
+\Locate 1,3,"1\->Voir les prix"
+\Locate 1,4,"2\->Non merci"
+\Do
+\Getkey
+\LpWhile \Ans\<>72\ And \Ans\<>62
+\ClrText
+0\->\r
+\If \Ans=72
+\Then \curt\Pi
+\Prog "TNT15"
+\Prog "TNT11"
+\IfEnd
+\IfEnd
+\Mat Z[9,1\->A
+\Mat Z[9,2\->B
+\Goto8
+\IfEnd
+\theta=27\=>\Isz A
+\theta=38\=>\Dsz A
+\theta=37\=>\Dsz B
+\theta=28\=>\Isz B
+A>126\=>38\->A
+A<38\=>126\->A
+0\->V
+\PxlTest 64-B,A
+\If \Ans
+\Then A\>=65\ And A\<=66\ And B\>=19\ And B\<=20\=>1\->V
+A\>=71\ And A\<=72\ And B\>=23\ And B\<=24\=>2\->V
+A\>=105\ And A\<=106\ And B\>=41\ And B\<=42\=>3\->V
+A\>=48\ And A\<=49\ And B\>=37\ And B\<=38\=>4\->V
+A\>=44\ And A\<=45\ And B\>=13\ And B\<=14\=>5\->V
+A\>=68\ And A\<=69\ And B\>=10\ And B\<=11\=>6\->V
+A\>=78\ And A\<=79\ And B\>=40\ And B\<=41\=>7\->V
+A\>=88\ And A\<=89\ And B\>=23\ And B\<=26\=>9\->V
+A\>=106\ And A\<=107\ And B\>=6\ And B\<=7\=>10\->V
+\If V
+\Then 0\->\R a1
+0\->\R a2
+A\->\Mat Z[9,1
+B\->\Mat Z[9,2
+\Prog "TNT3"
+0\->V
+\Goto9
+\IfEnd
+\Mat Z[9,4\->\theta
+\theta=27\=>\Dsz A
+\theta=28\=>\Dsz B
+\theta=37\=>\Isz B
+\theta=38\=>\Isz A
+\Goto8
+\IfEnd
+\GotoS
+\Lbl H
+A\->\Mat Z[9,1
+B\->\Mat Z[9,2
+\If A=71\ And B=18
+\Then \Text 1,4,"      "
+\Text 7,4,"    "
+\Text 19,4,"    "
+\IfEnd
+\If A=124\ And B=11
+\Then \Green \Text 13,4,"        "
+\Text 37,4,"        "
+\IfEnd
+A=65\=>B=44\=>\Text 31,4,"       "
+\If A=86\ And B=34
+\Then \Text 25,4,"        "
+\Text 43,4,"        "
+\IfEnd
+1\->W
+\Lbl V
+\Orange \F-Line 1,62-W,2,62-W
+\Do
+\Getkey\->\theta
+\LpWhile \Not \theta
+\theta=47\=>\Goto8
+\PxlTest W,4
+\If \theta\<>31\ Or \Not \Ans
+\Then \Orange \Text W,1," "
+6\->V
+\theta=28\=>\(-)6\->V
+W\->\r
+\Do
+W+V\->W
+W=\(-)5\=>43\->W
+W=49\=>1\->W
+W=\r\=>\Goto8
+\PxlTest W,4
+\LpWhile \Not \Ans
+\GotoV
+\IfEnd
+0\->P~Q
+\If W=1\ Or W=7\ Or W=19
+\Then 71\->W
+\(-)1\->P
+18\->V
+\IfEnd
+\If W=31
+\Then \(-)1\->Q
+65\->W
+44\->V
+\IfEnd
+\If W=13\ Or W=37
+\Then \(-)1\->Q
+124\->W
+11\->V
+\IfEnd
+\If W=25\ Or W=43
+\Then 2\->P
+85\->W
+34\->V
+\IfEnd
+1\->\r:1\->\theta
+W<A\=>\(-)1\->\theta
+V<B\=>\(-)1\->\r
+\If \Abs (W-A)>\Abs (V-B
+\Then (V-B)/(W-A\->Z
+W<A\=>\(-)Z\->Z
+\For A\->U \To W \Step \theta
+B+Z\->B
+\Orange \PlotOn U,B
+\Next 
+\Else (W-A)/(V-B\->Z
+V<B\=>\(-)Z\->Z
+\For B\->U \To V \Step \r
+A+Z\->A
+\Orange \PlotOn A,U
+\Next 
+\IfEnd
+W+P\->A
+V+Q\->B
+\For 1\->W \To 150
+\Next 
+\Goto8
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1117
+File Name:TNT3
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Lbl I
+\Prog "TNT13"
+\Lbl 1
+0\->N~O
+\Green \PlotOn I,J
+I\->\Mat Z[12,4
+J\->\Mat Z[12,5
+\Int (65-J)/5\->H
+\Int (I-50)/5+1\->G
+\Frac \Mat A[H,G\->\R b0
+\If \Int 10\R b0=2
+\Then V\->\Mat Z[11,1
+\Green \Text 31,10,"       "
+\Orange \Text 23,2,"         "
+\PlotOff I,J
+\StoPict 1
+\Prog "TNT11"
+\Cls
+\RclPict 1
+\IfEnd
+V=3\ And ((H=5\ And G=2\ And \Not \Mat Z[10,1])\ Or (G=16\ And H=2\ And \Mat Z[12,2\=>\Prog "TNT15"
+\If \Int 10\R b0=1\ Or \Int 10\R b0=3
+\Then \If \Int 10\R b0=3\ Or (100\Frac 10\R b0=\Mat Z[12,6
+\Then \Green \Text 31,10,"      "
+\Orange \Text 23,2,"         "
+\PlotOff I,J
+\StoPict 1
+\Green \PlotOn I,J
+\Else \Pi\->\R b1
+\IfEnd
+V\->\Mat Z[11,1
+\Prog "TNT4"
+\If Z=37
+\Then \Prog "TNT15"
+\Return
+\IfEnd
+\If \R a1
+\Then \Mat Z[11,1\->V
+\R a1\->I
+\R a2\->J
+\GotoS
+\IfEnd
+\IfEnd
+\If \R b0
+\Then \Green \Text 31,10,\Mat Z[10,4
+5\Pi\->W
+\Prog "TNT1"
+\Mat Z[9,3\->\theta
+\Mat Z[11,1\->V
+\If \R b1\<>\Pi
+\Then \PlotOff I,J
+\theta=27\=>I-5\->I
+\theta=38\=>I+5\->I
+\theta=37\=>J+5\->J
+\theta=28\=>J-5\->J
+\IfEnd
+0\->\R b0
+\R b1\<>\Pi\=>\Goto1
+0\->\R b1
+\IfEnd
+\Do
+\Getkey\->\theta
+\LpWhile \Not \theta
+\theta\->\Mat Z[9,3
+\Mat Z[12,1\=>\Prog "TNT15"
+\Ans=\sin 9\=>\GotoS
+\If \theta=48
+\Then \Green \Text 31,10,"       "
+\Orange \Text 23,2,"         "
+\PlotOff I,J
+\StoPict 1
+V\->\Mat Z[11,1
+\Prog "TNT10"
+\Mat Z[11,1\->V
+\Cls
+\RclPict 1
+\Green \PlotOn I,J
+\Green \Text 31,10,\Mat Z[10,4
+5\Pi\->W
+\Prog "TNT1"
+\Goto1
+\IfEnd
+\theta=29\=>\Prog "TNT15"
+\theta=29\=>\GotoW
+\theta=27\ Or \theta=37\=>\Mat A[H,G
+\theta=28\ And H>1\=>\Mat A[H-1,G
+\theta=38\ And G>1\=>\Mat A[H,G-1
+\Ans\->N
+\Int (10\Frac N\->O
+\theta=27\=>G<16\=>\Int (10\Frac \Mat A[H,G+1\->O
+\theta=37\=>H<10\=>\Int (10\Frac \Mat A[H+1,G\->O
+\theta=27\ Or \theta=38\=>\Int (10\Frac .01N\->N
+\theta=37\ Or \theta=28\=>\Int (10\Frac .1N\->N
+N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
+\PlotOff I,J
+\theta=27\=>I+5\->I
+\theta=28\=>J+5\->J
+\theta=37\=>J-5\->J
+\theta=38\=>I-5\->I
+\Goto1
+\Lbl W
+\Mat Z[9,1\->A
+\Mat Z[9,2\->B
+\Int 5\Ran#+6\->\Mat Z[10,3
+\Return
+\Lbl S
+\sin 3\->X
+\GotoI
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:9525
+File Name:TNT4
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+0\->\R a1
+0\->\R a2
+\R b0=.142\=>\Prog "TNT15"
+\If \Int 10\R b0=1
+\Then \If \Frac 10\R b0
+\Then \ClrText
+100\Frac 10\R b0\->W
+\Mat Z[12,6\->Z
+\If W\<>Z
+\Then \Text 54,60,"HUM ?"
+\For 0\->W \To 50
+\Next 
+\Text 54,60,"      "
+\Return
+\IfEnd
+\If W=1
+\Then \Orange "ZZZZ...    zzzz...     ZZZZ...    ?!"
+"            "
+"Il se reveille."
+"Laissez moi seul"
+"avec lui."\Disp\ClrText
+"Bonjour Z,"
+"Je suis R\Redox."
+\Orange "...? Ou suis\(-)je ?"\Disp"Chez moi.Je t'ai"
+"soigne apres t'avoir trouve blesse."\Disp\ClrText
+"Malgre ton amnesie,  nous avons besoin de toi."\Disp\ClrText
+"Nous avons retrouve  la trace d'Enzo, un  ennemi potentiel de  la FFC\Deg>."\Disp\ClrText
+"Bute\(-)le et reviens"
+"me voir."\Disp\ClrText
+"Achete\(-)toi soin,"
+"adrena et chl\ore :"
+"Tu devras combattre."\Disp20.109\->\Mat A[2,5
+\Isz Z
+230\->\Mat Z[10,4
+\IfEnd
+\If W=3
+\Then "     ~ RESTO ~"
+\Orange "Ou est Enzo ?"
+"He la !"
+"Ce renseignement ne  sera pas gratuit:"
+"Il t'en coutera..."
+"disons deux gemmes"\Disp32.107\->\Mat A[H,G
+\Int 8\Ran#+13\->\Mat Z[12,1
+\Isz Z
+\IfEnd
+\If W=6
+\Then \Orange "Il y a quelqu'un ?"
+"NON"
+\Orange "Je m'aut\orise donc a prendre cette gemme."\Disp\Isz Z
+\IfEnd
+\If W=7
+\Then "Merci beaucoup."
+"Enzo est rentre chez lui,juste en face."\Disp\Isz Z
+\IfEnd
+\If W=8
+\Then \Orange "Enzo,tu es m\ort !    Prepare toi au combat      "
+"Enzo:      "
+"Incarnation GOA."
+\For 0\->X \To 99
+\Next 
+\Prog "TNT14"
+\For 0\->X \To 300
+\Next 
+\ClrText
+"Mais c'est toi, Z ?!"
+\Orange "Il parait, oui."
+"Je sais que c'est"
+"R\Redox qui t'envoie."\Disp\ClrText
+"Ne lui fais pas"
+"confiance...."
+"R\Reste avec moi."\Disp\ClrText
+\Green "Quel est ton choix ?"
+" "
+\Orange "1.Suivre Enzo"
+\Orange "2.R\Retour a R\Redox"
+\Do
+\Getkey\->\theta
+\LpWhile \theta\<>72\ And \theta\<>62
+\ClrText
+\If \theta=72
+\Then 2\->\Mat Z[11,5
+70\->\R a1
+15\->\R a2
+"Tu as fait le bon"
+"choix,R\Redox t'aurait tue."
+\Else 70\->\R a1
+50\->\R a2
+1\->\Mat Z[11,5
+\Green "\->retour chez R\Redox..."
+\For 0\->X \To 300
+\Next 
+"Bien,petit,tu meritesma confiance."
+\IfEnd
+"prend ces skulls et  soigne toi."\Disp\ClrText
+"Ensuite,va a TARA,un ami t'y attend."\Disp60+\Mat Z[10,4\->\Mat Z[10,4
+10\->Z
+\IfEnd
+\If W=10
+\Then "Va voir le sage au   bout du labyrinthe,tuverras,il est un peu etrange..."\Disp10.5\->Z
+\IfEnd
+\If W=10.5
+\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!          "
+I\->\R a1
+J\->\R a2
+\Prog "TNT14"
+11\->Z
+\IfEnd
+\If W=11
+\Then \Orange "Bonjour Sage.Je suis Z.Je..."
+"Je sais."\Disp\ClrText
+"Cela fait"
+"bien longtemps que jen'avais vu quelqu'un."\Disp\ClrText
+"Al\ors ecoute bien :  cette chose toutes"
+"choses dev\ore."\Disp\ClrText
+"Elle ronge le fer,"
+"M\ord l'acier."\Disp\ClrText
+"Met a m\ort les rois, detruit les villes   et rabat les hautes  montagnes..."\Disp\Pi\->T:7\->E:5\->M:8\->P:3\->S
+\Orange "C'EST LE..."?\->R
+\ClrText
+\If R=TEMPS
+\Then "Tu me plais."
+"Je t'offre une"
+"groseye et une Lune. les deux autres sont a ATLANTIS."\Disp7\->O
+\Prog "TNT7"
+16\->O
+\Prog "TNT7"
+13\->Z
+\Else "Je te laisse un peu  de temps pour y"
+"reflechir."\Disp\Return
+\IfEnd
+\IfEnd
+\If W=13
+\Then "Troll:si tu me bats  au bras de fer, ma   Lune est a toi. Mais si tu perds... Je te mange. D'acc\ord ?"
+\Locate 1,7,"[EXE]\->OK [EXIT]\->Fuite"
+\Do
+\Getkey
+\LpWhile \Not \Ans
+\Ans\<>31\=>\Return
+\ClrText
+\Locate 1,1,"!DEFI AU BRAS DE FER!"
+\Locate 1,2,"Appuyer n'imp\orte ou"
+\Locate 1,3,"fait monter le nombre"
+\Locate 11,4,"--"
+\Locate 4,5,"Press  50  a key"
+\Locate 11,6,"--"
+\Locate 2,7,"10\->Perdu \slash 90\->Gagne"
+\Do
+\LpWhile \Not \Getkey
+\Locate 4,5,"     "
+\Locate 15,5,"     "
+\For 50\->X \To 10 \Step \(-)1
+\Getkey
+\If \Ans\<>Y\ And \Ans
+\Then \Ans\->Y
+X+2.3\->X
+\IfEnd
+\Locate 11,5,\Int X
+X>89\=>\Break
+\Next 
+\ClrText
+X<11\=>"Fin..."
+X<11\=>\Stop
+"Troll : Hmmf.        Voila ta Lune."\Disp16\->O
+\Prog "TNT7"
+\Isz Z
+\IfEnd
+\If W=14
+\Then "Vieille:Au voleur !"
+"Mes bijoux,"
+"Mon argent !!!"
+"Une recompense a qui les retrouvera !"\Disp22.117\->\Mat A[3,8
+\Isz Z
+\IfEnd
+\If W=15
+\Then "Il se passe des trucslouches au sud..."\Disp\Isz Z
+\IfEnd
+\If W=16
+\Then "J'heberge quelqu'un. Vous voulez le voir ?"\Disp\ClrText
+"Voleur : Ne me faitespas de mal !"
+"Voila les bijoux de  la vieille et son"
+"argent..."
+"Oubliez-moi !"\Disp80+\Mat Z[10,4\->\Mat Z[10,4
+\Isz Z
+\IfEnd
+\If W=17
+\Then \Orange "J'ai retrouve vos"
+\Orange "bijoux."
+"Et mon argent ?"
+\Orange "Il s'est enfui avec  (He\(-)He\(-)He)."\Disp\ClrText
+"Bon...voici une"
+"Lune pour te"
+"remercier."\Disp0\->\Mat Z[6,6
+11\->O
+\Prog "TNT7"
+\ClrText
+\Green "Les trois Lunes se"
+\Green "fondent en une"
+\Green "pour f\ormer le prismeANGEL !!!"\Disp\Isz Z
+\IfEnd
+\If W=18\ And ((1=\Mat Z[11,5]\ And G=5)\ Or (G=6\ And 2=\Mat Z[11,5
+\Then "Tu l'as ? Parfait !"
+"Il existe 3 prismes. Chacun possede des"
+"pouvoirs terribles etune inscription de"
+"sagesse."\Disp\ClrText
+"C'est l'inscription"
+"qui m'interesse,tu"
+"peux garder le prisme"
+\Orange "(mais que me"
+\Orange "cache\(-)t\(-)il ?)"
+"R\Rendez vous a ELOS,  pres du magasin."\Disp\Isz Z
+\IfEnd
+\If W=19
+\Then \Green "...Enzo et R\Redox te"
+\Green "regardent,un sourire aux levres..."\Disp\ClrText
+"Nous t'avons menti   pour que tu nous"
+"aides a trouver le"
+"prisme ANGEL."\Disp\ClrText
+"Nous n'avons plus    besoin de toi,"
+"trouve-toi un boulot a Elos, vis heureux, et adieu."\Disp\ClrText
+\Green "Les deux complices tetournent le dos et...s\ortent en ville."\Disp\ClrText
+\Green "FIN."
+\For 0\->X \To 500
+\Next 
+\Orange "Hep-hep-hep..."
+\Orange "C'est que le debut dujeu,la."
+\Orange "Ces deux cons vont   pas s'en tirer"
+\Orange "comme ca..."\Disp\Isz Z
+\IfEnd
+\If W=20
+\Then "Salut Z.Je m'apelle  Jessie et je veux"
+"t'aider:le prisme"
+"MAGMA est a ELOS."\Disp\ClrText
+"Si tu le trouves,tu  pourras te venger de R\Redox et d'Enzo..."\Disp22.125\->\Mat A[3,13
+\Isz Z
+\IfEnd
+\If W=21
+\Then "Je suis pret a vous  ceder le prisme MAGMApour 5000\@24"\Disp12.124\->\Mat A[2,6
+\Isz Z
+\IfEnd
+\If W=22
+\Then "Maire d'ELOS"
+"Chasseur de prime? J'ai un job pour toi."\Disp\ClrText
+"Tue le m\andiv\or qui  terr\orise ma ville   et gagne 4000\@24."\Disp\Orange "...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
+\Isz Z
+\IfEnd
+\If W=23
+\Then I\->\R a1
+J\->\R a2
+\Orange "Le m\andiv\or !"
+\Prog "TNT14"
+\Orange "Plutot c\oriace..."\Disp24\->Z
+\IfEnd
+\If W=24\ And 4999<\Mat Z[10,4
+\Then "Dur de m'en separer, mais j'ai vraiement"
+"besoin d'argent en cemoment.Le voici."\Disp\Green "Z obtient MAGMA !"\Disp\Mat Z[10,4]-5000\->\Mat Z[10,4
+1\->\Mat Z[2,6
+\Isz Z
+\IfEnd
+\If W=25
+\Then "Jessie:tu sais,Z...  Enzo et R\Redox..."
+\Orange "Eh bien ?"\Disp"Je crois que ton...  accident faisait"
+"parti de leur plan."\Disp\ClrText
+\Orange "..."\Disp\Orange "Ou sont-ils ?"\Disp"Partis. A HELENIA."\Disp\Isz Z
+\IfEnd
+\If W=26
+\Then "Z ?!"
+"Je suis Wills.Jessie m'a prevenu de ton   arrivee."\Disp\Orange "Ou est R\Redox ?"\Disp\ClrText
+"Dans la f\oret,il"
+"cherche le prisme    PHOENIX."\Disp\ClrText
+"Va voir l'Ancien a   l'Est,il pourra"
+"t'aider."\Disp22.128\->\Mat A[3,6
+\Isz Z
+\IfEnd
+\If W=27
+\Then H=3\=>"M"\DispH=4\=>G=12\=>"o"\DispH=5\=>"r"\DispH=4\=>G=10\=>"k"\Disp\If H=2
+\Then "Quel est mon nom ?"
+\Pi\->M:3\->O:8\->R:9\->K
+\Orange "FACILE, C'EST..."?\->Q
+\If Q\<>MORK
+\Then "Ben voyons..."\Disp\Else "Exact."
+"Ecoute bien."\Disp\ClrText
+"Les prismes ont troisfonctions."\Disp\ClrText
+"\=>Invocation en combat\=>les 3 reunis f\ormentl'ARME SUPREME"
+"\=>Inscriptions de"
+"sagesse:j'ign\ore leurrole."\Disp\ClrText
+"R\Reviens me voir"
+"si tu as les"
+"3 prismes et"
+"3 groseyes."\Disp\Isz Z
+\IfEnd
+\IfEnd
+\IfEnd
+\If W=28
+\Then "Va livrer ce colis   a WINHILL."
+"R\Redox et Enzo t'y"
+"attendent,"
+"ils disent avoir"
+"trouve le prisme"
+"PHOENIX."\Disp\ClrText
+"Mais la guerre"
+"vegetale fait rage aHELENIA...  la F\oret ne te laissera pas   s\ortir et..."
+\Orange "NON. Je passerai."\Disp28.5\->Z
+\IfEnd
+\If W=29
+\Then "Enzo \@26 R\Redox :"
+"\Donne nous le colis, il est indispensable au Projet T."\Disp\ClrText
+\Orange "Le Projet T ?"
+\Orange "Mais de quoi s'agit\(-) \(-)il ?!"\Disp\ClrText
+"Nous t'offrons la"
+"verite en echange du colis..."\Disp\Orange "...Bien.Le voila."\Disp\ClrText
+".............."
+"Le prisme PHOENIX !  Enfin ! La troisieme inscription..."\Disp\ClrText
+\Orange "Le...Le prisme !"
+\Orange "Il explose !!!"
+I\->\R a1
+J\->\R a2
+\Prog "TNT14"
+\Orange "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
+\Orange "Inscriptions ?"\Disp\Isz Z
+\IfEnd
+\If W=30
+\Then "Maire: On dit qu'a lasource du fleuve se  trouve un tres\or..."\Disp\Isz Z
+0\->\Mat Z[10,2
+\IfEnd
+\If W=31
+\Then "Z ! content de te"
+"revoir..."
+\Orange "Dis moi Wills,tu me  connaissait avant queje perde la memoire ?"\Disp\ClrText
+"Oui,nous etions"
+"freres d'arme..."
+"On etait toujours    ensemble en mission."\Disp\ClrText
+"Ton attaque preferee etait Xmeta, tu t'en souviens ?     "
+\Orange "...       "
+"Je te l'apprend."\Disp\ClrText
+\For 1\->X \To 5
+\If 4>\Mat Z[X,4
+\Then 8\->\Mat Z[X,4
+6\->X
+\IfEnd
+\Next 
+"Voila,"
+"Tu peux choisir Xmetadans ATTAK pendant uncombat \!mark"\Disp\ClrText
+"Maintenant allons"
+"retrouver Jessie a "
+"PLYMOUT:elle saura   comment contrecarrer les plans de R\Redox."\Disp\Isz Z
+\IfEnd
+\If W=32
+\Then \Orange "R\Redox et Enzo !      Ils ne m'ont pas vu  entrer..."\Disp\Orange "Mais que font-ils ?!"\Disp\ClrText
+"\EE\@25 )\@26)\->\ab/c\theta\xrt]=]\Pi...         Et voila !"\Disp"Dans quelques minutesTomberry ressurgira. NOUS AVONS ACCOMPLI  NOTRE MISSION !"\Disp\ClrText
+"Mais ? Qui est la ?  Z !!! Tu n'aurais"
+"jamais du nous suivre          "
+"R\Redox : "
+"INCARNATION ARAKN !"
+\For 0\->X \To 99
+\Next 
+I\->\R a1
+J\->\R a2
+\Prog "TNT14"
+33\->W
+"Enzo : Je vais t'"
+"aneantir, miserable  insecte !!!  "
+" "
+"INCARNATION GOA !"
+\For 0\->X \To 99
+\Next 
+\Prog "TNT14"
+"...Nous mourrons......mais.....Tomberry.........est libre"\Disp\ClrText
+\Orange "(je suis venge)"\Disp\Orange "(...)"\Disp\Orange "(mais trop tard...)"\Disp\ClrText
+\Orange "Je doit rejoindre"
+\Orange "Wills et Jessie."\Disp34\->Z
+\IfEnd
+\If W=34
+\Then "Chuttt ! Ils"
+"t'attendent derriere."\Disp\Isz Z
+28\->\Mat Z[9,3
+23\->\Mat A[8,12
+\IfEnd
+\If W=35
+\Then \Orange "Jessie ! Il n'y a pasde temps a perdre !  R\Redox et Enzo disent avoir reveille..."
+"TOMBERRY ?!!!"\Disp\ClrText
+"Al\ors ils avaient lestrois inscriptions desagesse..."\Disp"Nous devons trouver  un moyen de detruire ce demon !"\Disp\ClrText
+"Mais pour l'instant  il faut fuir la villeau plus vite ! DANS  QUELQUES SECONDES    ELLE SERA ANEANTIE !"\Disp17\->\Mat Z[12,1
+\Isz Z
+\IfEnd
+\If W=36
+\Then 0\->\Mat Z[12,1
+\Orange \Text 52,2,"J'AI UN BATEAU DE PECHE ICI:"
+\Orange \Text 58,2,"MONTEZ,VITE !!! \->EXE"\Disp\Isz Z
+\IfEnd
+\If W=41
+\Then "Wills: Tu n'est pas  avec Jessie ?"
+\Orange "Non,je ne l'ai pas  vu."\Disp\ClrText
+"Elle n'est pas enc\orerevenu.Je vais partira sa recherche."\Disp\ClrText
+\Orange "Tu as eu des infos   sur Tomberry ?"\Disp\ClrText
+"Eh bien,j'ai appris  qu'il etait capable  de detruire Gaia..."
+\Orange "Ca,je le savais."
+"...Et il se trouve ence moment a SANCTUA."\Disp\ClrText
+\Orange "SANCTUA ?"\Disp"Son repaire sacre."\Disp\Orange "Bien.J'y vais."\Disp\ClrText
+"J'espere que tu sais ce que tu fais."\Disp\Orange "Moi aussi."\Disp\Isz Z
+\IfEnd
+Z\->\Mat Z[12,6
+\IfEnd
+\IfEnd
+\Lbl A
+\If \Int (10\R b0)=3
+\Then \ClrText
+\If 36=\Mat Z[12,6
+\Then "Fuyez, fuyez vite !"\Disp\Return
+\IfEnd
+\Orange " "
+\For 1\->W \To 3
+\Green " "
+\Next 
+\Locate 1,1,"~~~~~~ AUBERGE ~~~~~~"
+\Locate 1,2,"Bonjour etranger,"
+\Locate 1,3,"Que desires-tu ?"
+\Locate 3,5,"1.Sauvegarder"
+\Locate 3,6,"2.Me reposer (25\@24)"
+\Locate 3,7,"3.S\ortir"
+\Do
+\Getkey\->\theta
+\LpWhile \theta\<>72\ And \theta\<>62\ And \theta\<>52
+\theta=52\=>\Return
+\If \theta=62
+\Then \If 25>\Mat Z[10,4
+\Then \ClrText
+\Green "Tu comptes me payer"
+\Green "avec quoi ?"\Disp\GotoA
+\IfEnd
+\Mat Z[10,4]-25\->\Mat Z[10,4
+\ClrText
+\Locate 2,1," ----- "
+\Locate 2,2,"\@7CZZZZZ\@7C"
+\Locate 2,3," -v--- "
+\Locate 4,4,"o"
+\Locate 1,5,"\Deg>\Deg>\Deg>"
+\Locate 10,3,"Vie :   \slash"
+\Locate 8,5,"Magie :   \slash"
+\Locate 8,4,"F\orce :   \slash"
+\Locate 8,6,"Attak :   \slash"
+\Locate 8,7,"Defns :   \slash"
+\For 1\->X \To 5
+\For 1\->Y \To 2
+\Mat Z[X,2\->\Mat Z[X,1
+\Locate 4Y+11,X+2,\Mat Z[X,1
+\Next 
+\Next 
+0\->X
+\For 0\->V \To 8
+\Isz X
+X=2\=>0\->X
+\For 3\->W \To 7
+\Not X\=>\Locate W,2,"Z"
+X\=>\Locate W,2,"\@7FD1"
+\For 1\->Y \To 30
+\Next 
+\Next 
+\Next 
+\IfEnd
+\If \theta=72
+\Then \ClrText
+\Locate 5,1," SAUVEGARDER "
+\Locate 1,3,"Confirmer ?"
+\Locate 1,7,"[1]\->Oui       [2]\->Non"
+\Do
+\Getkey
+\LpWhile \Not \Ans
+\Ans=62\=>\GotoA
+\Int (9999\Ran#*9999\Ran#\->\Mat Z[10,3
+\Mat Z*\Mat Z[10,3\->\Mat Y
+\ClrText
+\Locate 7,4,"\aster Level \aster"
+\Locate 7,5,"\aster Saved \aster"
+\For 0\->W \To 300
+\Next 
+\IfEnd
+\IfEnd
+\Return
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:2325
+File Name:TNT5
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If N=\Pi
+\Then \If C\<>\Pi
+\Then \S-Gph1 \DrawOn
+\S-Gph2 \DrawOff
+R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9,R+6,R+5,R+6,R+7,R+6,R+5,R+6,R+5,R+6,R+10,R+11,R+12,R+15,R+13,R+12,R+11,R+6,R+8,R+6,R+8,R+5,R+5,R+4,R+4,R+8,R+8,R+13,R+16,R+13,R+8,R+10,R+11,R+14,R+16,R+12,R+9}\->\List 1
+\PlotOn R+5,50
+\DrawStat
+\IfEnd
+\If W=1
+\Then \Green \F-Line R+15,36,R+26,53
+\Green \F-Line R+16,35,R+26,53
+\Green \F-Line R+16,40,R+19,37
+\IfEnd
+\If W=2
+\Then \Green \F-Line R+14,37,R+34,39
+\Green \F-Line R+14,36,R+29,38
+\Green \F-Line R+18,34,R+17,39
+\IfEnd
+\If W=3
+\Then \Green \F-Line R+14,37,R+33,34
+\Green \F-Line R+14,36,R+29,34
+\Green \F-Line R+18,38,R+17,34
+\IfEnd
+\If W=4
+\Then \Green \F-Line R+18,39,R+18,35
+\For 60\->A \To 110 \Step 3
+\Green \F-Line A-3,38,A,37
+\Green \F-Line A-3,36,A,37
+\Next 
+\IfEnd
+\Return
+\IfEnd
+\S-Gph1 \DrawOff
+\S-Gph2 \DrawOn
+\If M=1
+\Then \If C\<>\Pi
+\Then R-12\<>\List 3[8\=>{125,R+5,R+5,R-15,R-20,R-12,R-7,R-12,R-17,R-13,125}\->\List 3
+\DrawStat
+\F-Line R-16,44,R-13,48
+\F-Line R-13,48,R-12,44
+\F-Line R-12,44,R-16,44
+\Else \Orange \F-Line 105,35,60,35
+\Orange \F-Line 105,30,60,30
+\Orange \F-Line 60,35,50,38
+\Orange \F-Line 50,38,55,32
+\Orange \F-Line 55,32,50,27
+\Orange \F-Line 50,27,60,30
+\IfEnd
+\IfEnd
+\If M=2
+\Then \If C\<>\Pi
+\Then R-16\<>\List 3[8\=>{R-5,R-3,R-9,R-10,R-11,R-17,R-14,R-16,R-14,R-12,R-11,R-12,R-11,R-12,R-9,R-8,R-9,R-5,R-5,R-6,R-5,R-5}\->\List 3
+\DrawStat
+\Else \For 105\->C \To 50 \Step \(-)7-\Int 2\Ran#
+\Orange \F-Line C,33,C-5,36
+\Orange \F-Line C-4,33,C-9,30
+\Next 
+\IfEnd
+\IfEnd
+\If M=3
+\Then \If C\<>\Pi
+\Then R-21\<>\List 3[8\=>{R+9,R+1,R+4,R-8,R-4,R-9,R-18,R-21,R-22,R-24,R-17,R-16,R-17,R-17,R-16,R-18,R-16,R-16,R-8,R-8,R-9,R-15,R-9,R-8,R-6,R-5,R-8,R-5,R-6,R-5,R-2,R-1,R-2,R-5,R-2,R,R,R+6}\->\List 3
+\DrawStat
+\PlotOn R-21,38
+\F-Line R-21,37,R-20,37
+\Else 3\->D
+\For 88\->C \To 40 \Step \(-)D
+\Isz D
+\Orange \F-Line 90,42,C,35
+\Orange \F-Line C,35,90,27
+\Next 
+\IfEnd
+\IfEnd
+\If M=4
+\Then \If C\<>\Pi
+\Then R\<>\List 3[8\=>{108,R-6,R+1,R+3,R+3,R,R+2,R,R-1,R-3,R-6,R-3,R,R-2,R-5,R-11,R-14,R-16,R-15,R-16,R-14,R-12,R-13,R-13,R-12,R-9,R-9,R-11,R-12,R-11,R-13,R-15,R-14,R-15,R-15,R-11,R-8,R-7,R-8,108}\->\List 3
+\Text 16,R-11,"."
+\DrawStat
+\Else 0\->D
+\For 100\->C \To 50 \Step \(-)6
+\Orange \F-Line C,38,C-7,38
+\Orange \F-Line C,38+D,C-7,40+D
+\Orange \F-Line C,38-D,C-7,36-D
+\Orange \F-Line C-7,40+D,C-7,36-D
+D+2\->D
+\Next 
+\IfEnd
+\IfEnd
+\If M=5
+\Then \If C\<>\Pi
+\Then R-21\<>\List 3[8\=>{125,R,R-11,R-12,R-18,R-21,R-23,R-21,R-18,R-20,R-20,R-19,R-20,R-15,R-10,R-9,R-12,R-7,R-6,R-4,125,R-4}\->\List 3
+\DrawStat
+\F-Line R-17,24,R-16,26
+\Else \For 92\->A \To 67 \Step \(-)1
+\Orange \PlotOn A,\Int (\(-).84A+109.28)
+\Next 
+\For 1\->B \To 15
+\Orange \PlotChg 66+3\Ran#,52+3\Ran#
+\Next 
+\For 60\->A \To 20 \Step \(-)4+2\Ran#
+\Orange \F-Line 67,53,45+2\Ran#,A
+\Next 
+\IfEnd
+\IfEnd
+\If M=6
+\Then \If C\<>\Pi
+\Then R-7\<>\List 3[8\=>{125,R+7,R+4,R,R-3,R-6,R-6,R-7,R-2,R-2,R-3,R-5,R-8,R-9,R-14,R-17,R-17,R-18,R-16,R-18,R-21,R-21,R-19,R-21,R-19,R-14,R-14,R-16,R-17,R-16,R-12,R-11,R-9,R-13,R-13,R-10,R-7,R+2,R+5,R+9,125}\->\List 3
+\DrawStat
+\Else 0\->G~H
+\For 100\->C \To 55 \Step \(-)5
+\Int 5\Ran#-2\->G
+C=55\=>0\->G
+\Orange \F-Line C,40+H,C-5,40+G
+\Orange \F-Line C,41+H,C-5,41+G
+G\->H
+\Next 
+\Orange \F-Line 50,42,48,42
+\Orange \F-Line 50,39,48,39
+\IfEnd
+\IfEnd
+\If W=7
+\Then \For 1\->W \To 20
+\Orange \F-Line 52,42,24\Ran#+40,24\Ran#+30
+\Next 
+\IfEnd
+0\->C
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:3348
+File Name:TNT6
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+X=8\Pi\=>\GotoL
+0\->N
+\StoPict 1
+\Mat Z[1,1\->I
+\Mat Z[6,1\->J
+\Int 2\Ran#
+3>\Mat Z[6,3\=>\Not \Int (\Mat Z[6,3]\Ran#\=>5\Pi\->X
+\If \Ans
+\Then \Mat Z[7,\Int 3\Ran#+1\->A
+X=5\Pi\=>2\->A
+\If A\<>8
+\Then 1\->\Mat Z[11,3
+A\->\Mat Z[11,4
+\IfEnd
+\If A\<>2\ And A\<>8
+\Then \If M\<>7
+\Then \For 3\->Q \To 40 \Step 6
+\Text Q,71,"              "
+\Next 
+\Text 43,71,"             "
+\IfEnd
+\If A=3
+\Then 90\->R
+\Else 72\->R
+\IfEnd
+A=6\=>62\->R
+A=7\=>7\->W
+\Text 51,38,"attak\->               "
+A=1\=>\Text 51,64,"coup"
+A=3\=>\Text 51,64,"feinte"
+A=4\=>\Text 51,64,"tranch"
+A=5\=>\Text 51,64,"double"
+A=6\=>\Text 51,64,"charge"
+A=7\=>\Text 51,64,"furie"
+0\->C
+\If M\<>7
+\Then \Prog "TNT5"
+\If A=5
+\Then \For 1\->X \To 99
+\Next 
+\Cls
+\RclPict 1
+72\->R
+0\->C
+\For 3\->Q \To 40 \Step 6
+\Text Q,71,"              "
+\Next 
+\Text 43,71,"              "
+\Prog "TNT5"
+6\->P
+15\->Q
+\IfEnd
+\IfEnd
+\IfEnd
+\If A=1
+\Then 6\->P
+6\->Q
+\IfEnd
+\If A=2
+\Then \Text 51,38,"attak\->garde          "
+\For 85\->A \To 88
+\Orange \F-Line A,23,A,55
+\Next 
+9\->P
+1\->Q
+\IfEnd
+\If A=3
+\Then 4\->P
+\(-)1\->Q
+\IfEnd
+\If A=4
+\Then 6\->P
+10\->Q
+\IfEnd
+\If A=7
+\Then 6\->P
+26\->Q
+\IfEnd
+\If A=8
+\Then \Text 51,38,"attak\->Xmeta           "
+115\->R
+\Pi\->C
+M\<>7\=>\Prog "TNT5"
+6\->P
+30\->Q
+\IfEnd
+\If A=6
+\Then \Int (\Mat Z[6,1]-6-6\Ran#\->\Mat Z[6,1
+6\->P
+24\->Q
+\IfEnd
+\Else \Mat Z[8,\Int 3\Ran#+1\->A
+2\->\Mat Z[11,3
+A\->\Mat Z[11,4
+\Text 51,38,"pouvoir\->             "
+\If A=1\ Or A=2
+\Then A=1\=>\Text 51,73,"acier"
+A=2\=>\Text 51,73,"f\orce"
+\Circle 110,37,10
+10-A\->P
+1\->Q
+\IfEnd
+\If A=4
+\Then \Text 51,73,"eclair"
+\Orange \F-Line 105,50,105,61
+\For 1\->X \To 99
+\Next 
+\Orange \F-Line 50,61,54,45
+\Orange \F-Line 52,50,47,41
+\Orange \F-Line 49,44,53,34
+6\->P
+10\->Q
+\IfEnd
+\If A=12
+\Then \Text 51,73,"onde+"
+\For 1\->A \To 40 \Step 2
+A<13\=>\Green \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
+A>12\=>A<25\=>\F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
+A>24\=>\Orange \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
+\Next 
+\For 1\->A \To 50
+\Next 
+\For 4\->P \To 6
+\Cls
+\Plot 0,0
+\RclPict 1
+\Plot 0,0
+\Next 
+6\->P
+20\->Q
+\IfEnd
+\If A=3
+\Then \Text 51,73,"onde"
+\For 1\->A \To 40 \Step 2
+\F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
+\Next 
+6\->P
+7\->Q
+\IfEnd
+\If A=14
+\Then \Orange \F-Line 90,40,43,36
+\For 1\->X \To 80
+\Next 
+\Cls
+\RclPict 1
+\Orange \F-Line 90,40,49,40
+\For 1\->X \To 80
+\Next 
+\Cls
+\RclPict 1
+\Orange \Text 22,45,":"
+\Text 51,38,"pouvoir\->vampyr      "
+\For 1\->X \To 50
+\Next 
+\For 47\->A \To 99 \Step 2
+\Orange \F-Line A,39+3\Ran#,A+1,39+3\Ran#
+\Next 
+\Int (16+10\Ran#+\Mat Z[6,1\->\Mat Z[6,1
+6\->P
+22\->Q
+\IfEnd
+\If A=5
+\Then \Text 51,73,"vision"
+\For 60\->A \To 99 \Step 2
+\Green \PlotOn A,40
+\Next 
+\IfEnd
+\If A=6
+\Then \Text 51,73,"boost"
+\Orange \Circle 110,37,10
+\For 9\->A \To 19
+\Orange \F-Line 110,37,\Int 34\Ran#+93,\Int 38\Ran#+18
+\Next 
+1+\Mat Z[6,2\->\Mat Z[6,2
+1+\Mat Z[6,3\->\Mat Z[6,3
+\IfEnd
+\If A=7
+\Then \Text 51,73,"vague"
+\Graph Y<64
+\Graph Y>64
+6\->P
+16\->Q
+\IfEnd
+\If A=8
+\Then \For 1\->A \To 3
+\Cls
+\RclPict 1
+\Text 51,38,"pouvoir\->m\orsure     "
+\Next 
+\For 1\->A \To 6
+\Orange \Text \Int 20\Ran#+10,\Int 20\Ran#+40,"#"
+\Next 
+\Mat Z[4,1]-1\->\Mat Z[4,1
+6\->P
+14\->Q
+\IfEnd
+\If A=10
+\Then \Text 51,73,"soleil"
+\Orange \Circle 76,37,11
+\For 1\->A \To 25
+\Orange \F-Line 76,37,\Int 87\Ran#+38,\Int 48\Ran#+13
+\Next 
+6\->P
+24\->Q
+\Int (\Mat Z[6,1]-9-6\Ran#\->\Mat Z[6,1
+\IfEnd
+\If A=9
+\Then \For 1\->A \To 5
+\Orange \F-Line 95,40,15\Ran#+40,30\Ran#+25
+\For 1\->X \To 50
+\Next 
+\Cls
+\RclPict 1
+\Next 
+\Text 51,38,"pouvoir\->griffe       "
+\For 0\->A \To 5
+\Orange \F-Line 15\Ran#+40,30\Ran#+25,15\Ran#+40,30\Ran#+25
+\Next 
+6\->P
+14\->Q
+\Mat Z[5,1]-1\->\Mat Z[5,1
+\IfEnd
+\If A=11
+\Then \Text 51,73,"vital"
+\Green \Circle 110,37,10
+\For 0\->A \To 9
+\Green \F-Line 110,37,34\Ran#+93,40\Ran#+17
+\Next 
+7\->P
+\Int (40+9\Ran#\->Q
+\IfEnd
+\If A=15
+\Then \Text 51,73,"flamme"
+\For 46\->W \To 70 \Step 3
+27\Ran#
+\Orange \F-Line W-6,17,W-3,17+\Ans
+\Orange \F-Line W-3,17+\Ans,W,17
+\Next 
+6\->P
+34\->Q
+\IfEnd
+\If A=13\ Or A=16
+\Then A=13\=>\Text 51,73,"foudre"
+A=16\=>\Text 51,73,"\orage"
+\If A=16
+\Then 0\->W
+\For 61\->A \To 37 \Step \(-)3
+\Dsz W
+\For 50+W\->P \To 68+W \Step 4
+\PlotOn P,A
+\Next 
+\Next 
+\For 1\->X \To 99
+\Next 
+\IfEnd
+\Orange \F-Line 51,61,54,45
+\Orange \F-Line 49,61,54,45
+\For 1\->X \To 60
+\Next 
+\Orange \F-Line 51,50,43,38
+\Orange \F-Line 54,50,43,38
+\For 1\->X \To 60
+\Next 
+\Orange \F-Line 48,44,53,26
+\Orange \F-Line 50,44,53,26
+6\->P
+41\->Q
+A=13\=>29\->Q
+\IfEnd
+\If A=17
+\Then \Text 51,73,"enfers"
+\For 43\->A \To 125 \Step 3
+40\Ran#
+\Orange \F-Line A-6,17,A-3,23+\Ans
+\Orange \F-Line A-3,23+\Ans,A,17
+\Next 
+\Int (\Mat Z[6,1]-20-\Int 9\Ran#\->\Mat Z[6,1
+6\->P
+50\->Q
+\IfEnd
+\IfEnd
+P=3\=>Q+\Mat Z[4,1\->\Mat Z[4,1
+P=4\=>Q+\Mat Z[5,1\->\Mat Z[5,1
+\For 4\->X \To 5
+1>\Mat Z[X,1\=>1\->\Mat Z[X,1
+\Next 
+P=6\=>\Mat Z[1,1]-\Int (2\Ran#+1\ab/c3Q+2\ab/c3Q(\Mat Z[6,2]/\Mat Z[5,1\->\Mat Z[1,1
+P>6\=>P<10\=>Q+\Mat Z[6,P-6\->\Mat Z[6,P-6
+\Mat Z[6,1]>\Mat Z[7,4\=>\Mat Z[7,4\->\Mat Z[6,1
+110\->C
+1=\Mat Z[11,3]\=>6=\Mat Z[11,4\=>80\->C
+S=8\=>1+\Int 3\Ran#\->\Mat Z[1,1
+I\<>\Mat Z[1,1\=>\Orange \Text 5,60,\Mat Z[1,1]-I
+J\<>\Mat Z[6,1\=>\Orange \Text 5,C,\Mat Z[6,1]-J
+\If I\<>\Mat Z[1,1]\ Or J\<>\Mat Z[6,1
+\Then \For 0\->A \To 99
+\Next 
+\IfEnd
+\Lbl L
+1>\Mat Z[1,1\=>0\->\Mat Z[1,1
+\If \Not \Mat Z[1,1
+\Then \Orange \Text 3,6,"0  "
+\For 0\->A \To 600
+\Next 
+\Cls
+\Text 30,41,"GAME OVER..."
+\Stop
+\IfEnd
+0\->W
+0\->P~Q
+\Cls
+\RclPict 1
+\Orange \Text 3,6,"   "
+\Orange \Text 3,6,\Mat Z[1,1
+0\->P~Q
+1>\Mat Z[6,1\=>1\->\Mat Z[6,1
+\Mat Z[1,1\->I
+\Mat Z[6,1\->J
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:87
+File Name:TNT7
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If O
+\Then 5\->Q
+O\->P
+P>10\=>\Isz Q
+Q=6\=>P-10\->P
+0\->X
+\If O=14\ And \Mat Z[P,Q
+\Then 2\->X
+\Else 1+\Mat Z[P,Q\->\Mat Z[P,Q
+\IfEnd
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:921
+File Name:TNT8
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If O=2
+\Then \Not C\=>\Green \Text K,L,"       "
+C=1\=>\Green \Text K,L,"acier   "
+C=2\=>\Green \Text K,L,"f\orce  "
+C=3\=>\Green \Text K,L,"onde   "
+C=4\=>\Green \Text K,L,"eclair "
+C=5\=>\Green \Text K,L,"vision "
+C=6\=>\Green \Text K,L,"boost  "
+C=7\=>\Green \Text K,L,"vague  "
+C=8\=>\Green \Text K,L,"m\orsur "
+C=10\=>\Green \Text K,L,"soleil "
+C=9\=>\Green \Text K,L,"griffe "
+C=12\=>\Green \Text K,L,"onde+  "
+C=13\=>\Green \Text K,L,"foudre "
+C=11\=>\Green \Text K,L,"vital  "
+C=14\=>\Green \Text K,L,"vampyr "
+C=15\=>\Green \Text K,L,"flamme "
+C=16\=>\Green \Text K,L,"\orage  "
+C=17\=>\Green \Text K,L,"enfers "
+\IfEnd
+\If O=1
+\Then \Not C\=>\Green \Text K,L,"       "
+C=1\=>\Green \Text K,L,"coup   "
+C=2\=>\Green \Text K,L,"garde  "
+C=3\=>\Green \Text K,L,"feinte "
+C=4\=>\Green \Text K,L,"tranch "
+C=5\=>\Green \Text K,L,"double "
+C=6\=>\Green \Text K,L,"charge "
+C=7\=>\Green \Text K,L,"furie  "
+C=8\=>\Green \Text K,L,"Xmeta   "
+\IfEnd
+\If O=3
+\Then \Not C\=>\Text K,L,"     "
+C=1\=>\Text K,L,"soin"
+C=2\=>\Text K,L,"soin +"
+C=3\=>\Text K,L,"adrena"
+C=4\=>\Text K,L,"chl\ore"
+C=7\=>\Text K,L,"groseye"
+C=8\=>\Text K,L,"[tarte]"
+C=14\=>\Text K,L,"fusil"
+C=15\=>\Text K,L,"balles"
+C=16\=>\Text K,L,"LUNE"
+C=5\=>\Text K,L,"protec"
+C=6\=>\Text K,L,"power+"
+C=11\=>\Text K,L,"ANGEL"
+C=12\=>\Text K,L,"MAGMA"
+C=13\=>\Text K,L,"PHOENIX"
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:2756
+File Name:TNT9
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+0\->P~Q
+\Cls
+\F-Line 1,1,127,1
+\F-Line 127,1,127,63
+\F-Line 127,63,1,63
+\F-Line 1,63,1,1
+\F-Line 36,1,36,63
+\F-Line 37,1,37,63
+\Green \Text 4,7,"OBJETS"
+\F-Line 1,53,37,53
+\Orange \Text 14,3,"[EXE]"
+\Orange \Text 20,5,"prendre"
+\Orange \Text 28,3,"[DEL]"
+\Orange \Text 34,3," jeter"
+\F-Line 1,23,36,23
+\Green \Text 44,3,"\@24"
+\Green \Text 44,10,\Mat Z[10,4
+\Green \Text 50,3,"Epee"
+\Green \Text 56,3,"Livre"
+3\->O
+0\->C
+\For 5\->B \To 6
+\For 1\->A \To 10
+\Isz C
+\If \Mat Z[A,B
+\Then 6A-3\->K
+44B-176\->L
+\Prog "TNT8"
+\Mat Z[A,B]>1\=>\Text K,L+31,\Mat Z[A,B
+\IfEnd
+\Next 
+\Next 
+3\->A
+39\->B
+\Lbl 1
+\F-Line B+1,\(-)A+62,B+2,\(-)A+62
+\Do
+\Getkey\->\theta
+\LpWhile \theta\<>38\ And \theta\<>27\ And \theta\<>28\ And \theta\<>37\ And \theta\<>47\ And \theta\<>31\ And \theta\<>44
+\theta=47\=>\Return
+\Text A,B," "
+\theta=28\=>A-6\->A
+\theta=37\=>A+6\->A
+\theta=38\=>39\->B
+\theta=27\=>83\->B
+A=\(-)3\=>57\->A
+A=63\=>3\->A
+\theta\<>31\=>\theta\<>44\=>\Goto1
+\Int (.17A+.5\->G
+\Int (.02B+4.89\->H
+\Mat Z[G,H\->D
+G\->C
+H=6\=>G+10\->C
+((C=14\ Or C=7\ Or C=11\ Or C=12\ Or C=13)\ And \Not \r)\ Or C=9\ Or C=8\ Or C=15\ Or \Not D\=>\Goto1
+\If \theta=44
+\Then 0\->\Mat Z[G,H
+\Text 6G-3,44H-181,"           "
+\Goto1
+\IfEnd
+C<8\=>\Mat Z[G,H]-1\->\Mat Z[G,H
+C=1\ Or C=2\=>80C+\Mat Z[1,1\->\Mat Z[1,1
+C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
+\If C=5\ Or C=6
+\Then \For 1\->X \To 2
+1+\Mat Z[10-C,X\->\Mat Z[10-C,X
+\Next 
+\IfEnd
+\For 1\->X \To 3
+\Mat Z[X,1]>\Mat Z[X,2\=>\Mat Z[X,2\->\Mat Z[X,1
+\Next 
+\If C=7
+\Then \Cls
+\RclPict 1
+\For 29\->A \To 11 \Step \(-)6
+\Green \Text A,55,"     "
+\Next 
+320\->A
+27\->C
+\For 57\->B \To 106
+\PlotOn B,16+\Abs (C\cos A
+A+10\->A
+C-.15\->C
+\Next 
+\For 20\->C \To 180 \Step 20
+\Orange \F-Line 107+10\cos (C-20,16+7\sin (C-20,107+10\cos C,16+7\sin C
+\Next 
+107\->A
+\For \(-)1\->C \To 1 \Step 2
+\For 4\->B \To 10 \Step 3
+\Orange \F-Line A+CB\ab/c2,16,A+C(B+5,25
+\Orange \F-Line A+C(B-5,25,A+C(B-2,40
+\Next 
+\Orange \F-Line A,42,A+7C,42
+\Orange \F-Line A+7C,42,A+15C,38
+\Orange \F-Line A+15C,38,A+17C,45
+\Orange \F-Line A+17C,45,A+14C,55
+\Orange \F-Line A+14C,55,A,58
+\Next 
+\Int (\Mat Z[6,1]-130-41\Ran#\->\Mat Z[6,1
+\For 1\->X \To 400
+\Next 
+\IfEnd
+\If C=14\ And \Mat Z[5,6
+\Then \Mat Z[5,6]-1\->\Mat Z[5,6
+M\<>7\=>\Mat Z[6,1]-16-\Int 7\Ran#\->\Mat Z[6,1
+\IfEnd
+\If C>10\ And C<14\ And \Mat Z[3,1]>19
+\Then \Cls
+\RclPict 1
+\For 12\->P \To 42 \Step 6
+\Text P,40,"        "
+P<31\=>\Green \Text P-1,50,"       "
+\Next 
+\S-Gph1 \DrawOff
+\S-Gph2 \DrawOff
+\S-Gph3 \DrawOn
+\If C=11
+\Then \Text 51,38," \->ennemi plus lent !"
+\F-Line 55,56,65,38
+\F-Line 65,38,55,20
+\F-Line 55,20,45,38
+\F-Line 45,38,55,56
+\Orange \F-Line 55,48,55,28
+\For 0\->W \To 200
+\Next 
+\Orange \F-Line 48,38,62,38
+\For 0\->W \To 200
+\Next 
+\Orange \F-Line 51,43,59,33
+\For 0\->W \To 200
+\Next 
+\Orange \F-Line 51,33,59,43
+\For 0\->W \To 300
+\Next 
+\Green \F-Line 45,38,88,58
+\Green \F-Line 55,56,88,58
+\Green \F-Line 65,38,88,58
+\Green \F-Line 55,20,88,58
+1\->G
+\For 88\->W \To 110
+\Isz G
+G=2\=>0\->G
+\If G
+\Then \Orange \PlotOn W,58
+\Else \Green \PlotOn W,58
+\IfEnd
+\Next 
+\Orange \Circle 110,58,4
+\For 0\->W \To 7
+\Int 24\Ran#\->G
+\Int 15\Ran#+24\->A
+\Orange \F-Line 110,58,99+G,A
+\Text 64-A,97+G,"\aster"
+\Next 
+3+\Mat Z[6,4\->\Mat Z[6,4
+\IfEnd
+\If C=12
+\Then \Text 51,38," \->ennemi plus faible !"
+{42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}\->\List 1
+{16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}\->\List 3
+\DrawStat
+\Green \PlotOn 68,49
+\Orange \Text 11,61,"@"
+\Orange \Circle 72,43,3
+\For 0\->W \To 6
+\Int 26\Ran#+96\->G
+\Int 30\Ran#+16\->H
+\Orange \F-Line 72,43,G,H
+\Orange \Text 64-H,G-2,"#"
+\Next 
+\For 2\->X \To 3
+\Mat Z[6,X]-2\->\Mat Z[6,X
+\Next 
+\IfEnd
+\If C=13
+\Then \Text 51,38," \->Z abs\orbe la vie ! "
+{59,45,39,59,62,57,53,54,55,56,61,65,70,68,69,75,72,68,65,64,65,59}\->\List 1
+{55,50,40,46,44,37,36,34,32,30,33,34,44,47,49,48,53,55,60,54,47,55}\->\List 3
+\DrawStat
+\Green \F-Line 46,43,50,49
+\Green \F-Line 52,45,55,49
+\Orange \F-Line 68,52,69,52
+\Orange \Circle 57,45,19
+\For 76\->W \To 105
+18\Ran#-9
+\Orange \PlotOn W,45+\Ans
+\Green \PlotOn W,45-\Ans
+\Next 
+\For 0\->W \To 1
+\Orange \F-Line 112+W+3\Ran#,62,102+W+3\Ran#,45
+\Orange \F-Line 106+W+3\Ran#,53,111+W+3\Ran#,43
+\Orange \F-Line 104+W+3\Ran#,47,113+W+3\Ran#,25
+\Orange \F-Line 109+W+3\Ran#,34,102+W+3\Ran#,26
+\Orange \F-Line 112+W+3\Ran#,28,106+W+3\Ran#,17
+\Next 
+\Int (\Mat Z[1,1]+2\Mat Z[3,1\->\Mat Z[1,1
+\IfEnd
+\Mat Z[6,1]-\Int (9\Ran#+2\Mat Z[3,1]+((C-11)/3)\Mat Z[3,1\->\Mat Z[6,1
+0\->\Mat Z[3,1
+\For 1\->X \To 400
+\Next 
+\IfEnd
+\S-Gph3 \DrawOff
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1441
+File Name:TNT10
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Lbl 0
+\Cls
+\Green \F-Line 1,1,127,1
+\Green \F-Line 127,1,127,63
+\Green \F-Line 127,63,1,63
+\Green \F-Line 1,63,1,1
+\F-Line 126,2,126,62
+\F-Line 126,62,2,62
+\F-Line 2,62,2,2
+\Green \F-Line 126,51,2,51
+\Green \F-Line 2,51,2,62
+\Green \F-Line 1,52,127,52
+\Text 5,5,"sculls:"
+\Text 5,34,\Mat Z[10,4
+\Green \F-Line 59,62,59,51
+\Green \F-Line 58,62,58,51
+\Orange \Text 5,63,"Z"
+\Green \F-Line 69,62,69,51
+\Green \F-Line 70,62,70,51
+\Text 5,73,"sante:   \slash"
+\Text 5,97,\Mat Z[1,1
+\Text 5,113,\Mat Z[1,2
+\Orange \Text 15,9,"attaques"
+\Orange \Text 21,9,"stats"
+\Orange \Text 27,9,"objets"
+\Orange \Text 33,9,"options"
+\Orange \Text 39,9,"retour"
+\Orange \Text 51,9,"quitter"
+\Orange \Text 57,11,"lejeu"
+\Green \F-Line 48,1,48,52
+\Green \F-Line 49,1,49,52
+1\->A
+\Text 6A+9,4,"[         ]"
+\Lbl Q
+\Do
+\Getkey\->\theta
+\LpWhile \theta\<>28\ And \theta\<>37\ And \theta\<>31\ And \theta\<>47
+\theta=47\=>\Return
+\Text 6A+9,4,"           "
+\theta=28\=>\Dsz A
+\theta=37\=>\Isz A
+\Not A\=>7\->A
+A=8\=>1\->A
+\Text 6A+9,4,"[         ]"
+\theta\<>31\=>\GotoQ
+A=5\=>\Return
+\If A=7
+\Then \ClrText
+"TOMBERRY attend..."
+\Stop
+\IfEnd
+\If A=2
+\Then \Text 15,55,"statistiques"
+\Text 21,51,"ATTAK:   DEFNS:"
+\Text 21,75,\Mat Z[4,2
+\Text 21,111,\Mat Z[5,2
+\Text 27,53,"FORCE:  \slash"
+\Text 33,51,"MAGIE:  \slash"
+\For 2\->T \To 3
+\For 1\->U \To 2
+\Text 15+6T,64+12U,\Mat Z[T,U
+\Next 
+\Next 
+\Text 39,51,"NIVEAU"
+\Text 39,79,\Mat Z[11,2
+\Text 45,51,"EXPERIENCE:"
+\Text 45,95,\Mat Z[11,6
+\Text 51,51,"VICTOIRES:"
+\Text 51,90,\Mat Z[12,3
+\Text 57,51,"SCORE:"
+\Int (11\Mat Z[12,6]+5\Mat Z[12,3]+0.5\Mat Z[10,4]+1.5\Mat Z[1,2]+15\Mat Z[2,2]+15\Mat Z[3,2]+9\Mat Z[4,2]+9\Mat Z[5,2\->C
+\For 1\->D \To C \Step 63
+\Text 57,74,D
+\Next 
+\Do
+\LpWhile \Not \Getkey
+\For 15\->C \To 57 \Step 6
+\Text C,51,"                 "
+\Next 
+\IfEnd
+\If A=1
+\Then \Text 15,55,"attaks"
+1\->O
+51\->L
+\For 1\->B \To 5
+\Mat Z[B,4\->C
+15+6B\->K
+\Prog "TNT8"
+\Next 
+\Text 15,93,"pouvoirs"
+2\->O
+88\->L
+\For 1\->B \To 5
+\Mat Z[B,3\->C
+15+6B\->K
+\Prog "TNT8"
+\Next 
+\Green \Text 51,55,"PRESS [EXIT]"
+\Do
+\LpWhile \Not \Getkey
+\Text 15,50,"                   "
+\For 21\->B \To 51 \Step 6
+\Green \Text B,51,"                   "
+\Next 
+\GotoQ
+\IfEnd
+\If A=3
+\Then 0\->\r
+\Prog "TNT9"
+\Goto0
+\IfEnd
+\GotoQ
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1027
+File Name:TNT11
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Lbl 0
+\Cls
+\F-Line 1,1,127,1
+\F-Line 127,1,127,63
+\F-Line 127,63,1,63
+\F-Line 1,63,1,1
+\F-Line 40,1,40,63
+\Text 40,65,"~FFC shop~"
+\Orange \F-Line 90,59,124,59
+\Orange \F-Line 125,58,125,40
+\Orange \F-Line 124,39,90,39
+\Orange \F-Line 89,40,89,58
+\Orange \F-Line 89,49,89,84
+3\->O
+7\->L
+1\->U
+\For 1\->Q \To 8
+\List 1[Q\->C
+6Q-3\->K
+\Prog "TNT8"
+\Next 
+\Text 51,7,"-rien-"
+\Text 57,7,"[EXIT]"
+\Green \Text 3,42,"\@24"
+\Green \Text 3,49,\Mat Z[10,4
+\Lbl V
+\Green \Text 7,91," Acheter"
+\Green \Text 13,91," S\ortir"
+\Green \Text 19,91," Objets "
+1\->A
+\Do
+\Green \F-Line 91,\(-)6A+61,93,\(-)6A+61
+\Do
+\Getkey\->\theta
+\LpWhile \Not \theta
+\Green \Text 6A+1,91," "
+\theta=28\=>\Dsz A
+\theta=37\=>\Isz A
+\Not A\=>3\->A
+A=4\=>1\->A
+\LpWhile \theta\<>31
+\If A=2
+\Then \If 2=\Mat Z[12,6
+\Then \ClrText
+\Orange "Ou puis-je trouver"
+\Orange "Enzo ?"
+"Oh... il va souvent  au resto du Sud-Ouest"\Disp3\->\Mat Z[12,6
+\IfEnd
+\Return
+\IfEnd
+\If A=3
+\Then 0\->\r
+\Prog "TNT9"
+\Goto0
+\IfEnd
+\Lbl C
+\Green \Text 7,91,"c'est   "
+\Green \Text 13,91,"       "
+\Green \Text 19,91,"skulls. "
+\Do
+\Green \Text 6U-3,4,"[       ]"
+\Green \Text 13,91,"   "
+U\<>9\=>\Green \Text 13,91,\List 2[U
+\Do
+\Getkey\->\theta
+\theta=47\=>\GotoV
+\LpWhile \Not \theta
+\Green \Text 6U-3,4,"         "
+\theta=28\=>\Dsz U
+\theta=37\=>\Isz U
+U=0\=>9\->U
+U>9\=>1\->U
+\LpWhile \theta\<>31
+U=9\=>\GotoV
+\List 1[U\->O
+\If \List 2[U]>\Mat Z[10,4
+\Then \Green \Text 7,91,"il vous "
+\Green \Text 13,91,"manque "
+\Green \Text 19,91,"   \@24    "
+\Green \Text 19,91,\List 2[U]-\Mat Z[10,4
+\For 1\->X \To 200
+\Next 
+\GotoC
+\IfEnd
+\Prog "TNT7"
+\Not X\=>\Mat Z[10,4]-\List 2[U\->\Mat Z[10,4
+\Green \Text 3,49,"    "
+\Green \Text 3,49,\Mat Z[10,4
+\GotoC
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:2828
+File Name:TNT12
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Identity 1\->\Mat A
+0\->\Mat Z[8,4
+0\->S
+W=43\ Or W=44\ Or W=32\ Or W=33\ Or W=28.5\ Or W=8\ Or W=10.5\ Or W=23\ Or W=29\ Or W=99\=>W\->S
+S\=>1\->\Mat Z[8,4
+\For 4\->X \To 5
+\Mat Z[X,2\->\Mat Z[X,1
+\Next 
+0\->\Mat Z[11,3
+0\->\Mat Z[11,4
+\Do
+1+\Int ((2.5+0.8\Mat Z[11,2])\Ran#
+\LpWhile \Ans>7
+S=43\ Or S=32\=>4
+S=99\=>1
+S=28.5\=>2
+S=23\=>3
+S=10.5\=>5
+S=44\ Or S=33\ Or S=8\=>6
+S=29\=>7
+55=\Mat Z[12,6\=>6
+\Ans\->M
+\S-Gph3 \DrawOff,\xyLine,\List 1,\List 3,1,\Dot
+\S-Gph2 \DrawOff,\xyLine,\List 3,\List 4,1,\Dot
+S=99\=>\S-Gph2 \DrawOn,\xyLine,\List 3,\List 4,1,\Square
+\S-Gph1 \DrawOff,\xyLine,\List 1,\List 2,1,\Dot
+8\->\Dim \List 1
+\List 1\->\List 3
+{17,17,25,31,45,45,47,48,51,52,52,49,47,47,45,45,31,31,26,25,22,17,22,31,31,27,24,17,17,17,24,27,32,31,33,36,39,41,42,41,37,35,36,37,40,42,42,40,38,36,35,34}\->\List 2
+M=1\=>{25,25,50,50,40,40,32,26,26,17,17}\->\List 4
+M=2\=>{23,23,41,42,41,23,23,17,23,23,19,17,19,23,23,17,23,23,22,19,18,17}\->\List 4
+M=3\=>{25,25,26,26,27,27,35,28,28,42,39,38,37,34,29,26,31,34,27,26,21,15,21,26,25,22,15,22,25,27,22,15,22,27,26,23,21,15}\->\List 4
+M=4\=>{63,48,46,43,37,32,30,32,31,33,32,33,29,31,29,29,30,32,34,32,32,36,35,33,33,36,38,41,39,41,43,43,41,43,44,48,48,48,48,63}\->\List 4
+M=5\=>{41,41,43,42,29,30,32,29,28,28,27,27,20,20,25,25,17,17,21,24,27,23}\->\List 4
+M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,43,42,40,35,35,35,39,41,40,31,24,19,17,17,18,22,22}\->\List 4
+55=\Mat Z[12,6\=>\Return
+\Cls
+\F-Line 1,1,127,1
+\F-Line 127,1,127,63
+\F-Line 127,63,1,63
+\F-Line 1,63,1,1
+\F-Line 1,9,36,9
+\F-Line 36,9,36,63
+\F-Line 1,55,36,55
+\Orange \Text 3,6,\Mat Z[1,1
+\Orange \Text 3,18,"\slash"
+\Orange \Text 3,22,\Mat Z[1,2
+\F-Line 37,15,127,15
+\Green \F-Line 36,16,127,16
+\Green \F-Line 126,16,126,62
+\F-Line 126,62,37,62
+\F-Line 37,62,37,16
+\Orange \Text 11,3,"NIVEAU"
+\Orange \Text 11,30,\Mat Z[11,2
+\If \Int 3\Ran#
+\Then \Green \Graph Y=16+3\Ran#
+\Green \Text 45,1,"         "
+\Else \Orange \Graph Y=16+\Ran#
+\Orange \F-Line 38,16,125,16
+\Orange \Text 45,1,"         "
+\IfEnd
+1\->W
+\Pi\->N
+41\->R
+0\->C
+\Prog "TNT5"
+\Text 51,38,"Z combat un ..."
+\Mat Z[11,2\->N
+\If M=1
+\Then 1\ab/c2N+2\->A~D
+18+10N+8N\Ran#\->P
+10\->V
+\IfEnd
+\If M=2
+\Then 20+11N+8N\Ran#\->P
+1\ab/c3N+2\->A
+3\ab/c4N+2\->D
+12\->V
+\IfEnd
+\If M=3
+\Then 16+12N+6N\Ran#\->P
+N+1\->A
+2\ab/c3N+1\->D
+9\->V
+\IfEnd
+\If M=4
+\Then 20+14N+7N\Ran#\->P
+4\ab/c5N+2\->A~D
+12\->V
+\IfEnd
+\If M=5
+\Then 25+20N+8N\Ran#\->P
+N+2\->A~D
+14\->V
+\IfEnd
+\If M=6
+\Then 20+16N+8N\Ran#\->P
+N+1\->A
+3\ab/c4N+1\->D
+8\->V
+\IfEnd
+\If M=7
+\Then 15N+13N\Ran#+40\->P
+N+2\->A
+2\ab/c3N+2\->D
+8\->V
+\IfEnd
+\If S=32
+\Then 500\->P
+14\->A
+8\->D
+8\->V
+\IfEnd
+\If S=43
+\Then 700\->P
+20\->A
+13\->D
+8\->V
+\IfEnd
+\If S=44
+\Then 800\->P
+20\->A
+13\->D
+8\->V
+\IfEnd
+\If S=33
+\Then 600\->P
+15\->A
+9\->D
+8\->V
+\IfEnd
+\If S=28.5
+\Then 250\->P
+7\->A
+5\->D
+8\->V
+\IfEnd
+\If S=99
+\Then 800\->P
+15\->A
+12\->D
+7\->V
+\IfEnd
+\If S=10.5
+\Then 120\->P
+4\->A~D
+11\->V
+\IfEnd
+\If S=23
+\Then 400\->P
+7\->A
+6\->D
+7\->V
+\IfEnd
+\If S=29
+\Then 650\->P
+10\->A
+9\->D
+7\->V
+\IfEnd
+\If S=8
+\Then 99\->P
+9\->A~D
+11\->V
+\IfEnd
+\Int (P+16\Ran#-8\->P
+\Getkey=65\=>1\->P
+P\->\Mat Z[6,1
+P\->\Mat Z[7,4
+\Int A+\Int 2\Ran#\->\Mat Z[6,2
+\Int D+\Int 2\Ran#\->\Mat Z[6,3
+\Int (V+2\Ran#-(N/3
+\Ans\->\Mat Z[6,4
+N-1\->A
+8
+N<6\=>4
+N<2\=>1
+S=10.5\=>6
+S=8\=>8
+\Ans\->\Mat Z[7,1
+\For 2\->B \To 3
+A+\Int 4\Ran#
+S=8\=>7
+S\=>\Ans+1
+\Not \Ans\=>1
+\Ans>8\=>8
+\Ans\->\Mat Z[7,B
+\Next 
+\For 1\->B \To 3
+N=1\=>\Int 4\Ran#+1
+N=2\=>\Int 5\Ran#+3
+N=3\=>\Int 4\Ran#+6
+N=4\=>\Int 5\Ran#+6
+N=5\=>\Int 6\Ran#+8
+N=6\=>\Int 6\Ran#+10
+N=7\=>\Int 8\Ran#+10
+S=8\=>14
+S\=>\Ans+1
+\Ans>17\=>17
+\Ans\->\Mat Z[8,B
+\Next 
+115\->R
+M\<>7\=>\Prog "TNT5"
+\If S=43\ Or S=44\ Or S=32\ Or S=33\ Or S=8\ Or S=10.5\ Or S=99\ Or S=28.5
+\Then S=44\ Or S=33\ Or S=8\=>\Text 51,75,"Enzo   "
+S=32\ Or S=43\=>\Text 51,75,"R\Redox  "
+S=10.5\=>\Text 51,75,"Minaut\or"
+S=28.5\=>\Text 51,75,"Un vegetal"
+S=99\=>\Text 51,75,"le Gardien"
+\Else M=1\=>\Text 51,90,"lapranak"
+M=2\=>\Text 51,90,"srilane"
+M=3\=>\Text 51,89,"m\andiv\or"
+M=4\=>\Text 51,90,"arakn'"
+M=5\=>\Text 51,90,"\orinaphe"
+M=6\=>\Text 51,88,"goa geant"
+M=7\=>\Text 51,90,"spectre"
+\IfEnd
+\StoPict 1
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:5627
+File Name:TNT13
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\ClrList
+X=\sin 3\=>\GotoS
+V\->\Mat Z[11,1
+0\->O
+\Lbl S
+\Cls
+\BG-None
+\Green \F-Line 1,13,127,13
+\Green \F-Line 47,14,47,63
+\Green \F-Line 1,63,127,63
+\Green \F-Line 1,63,1,13
+\Green \F-Line 127,14,127,63
+V=1\=>\Orange \Text 5,3,"BOTMA"
+V=2\=>\Orange \Text 5,3,"ELOS"
+V=3\=>\Orange \Text 5,3,"HELENIA"
+V=4\=>\Orange \Text 5,3,"WINHILL"
+V=5\=>\Orange \Text 5,3,"PLYMOUT"
+V=6\=>\Orange \Text 5,3,"TARA"
+V=9\=>\Orange \Text 5,3,"SANCTUA"
+V=10\=>\Orange \Text 5,3,"ATLANTIS"
+\For 0\->W \To 7
+\Green \F-Line 3+W,51,3+W,44
+\Next 
+\Orange \PlotOn 7,45
+\For 1\->W \To 2
+\Orange \F-Line 7+W,45+2W,7+W,45
+\Next 
+\Orange \F-Line 10,45,10,50
+\Orange \F-Line 11,45,11,49
+\For 0\->W \To 2
+\Orange \F-Line 11,47-W,11+(2W+1),47-W
+\Next 
+\Orange \F-Line 7,45,29,45
+\Text 13,13,"\TeraN\Tera"
+\Green \F-Line 4,37,4,41
+\Green \F-Line 4,41,35,41
+\Green \F-Line 35,41,35,37
+\Green \F-Line 35,37,4,37
+\Green \Text 31,3,"\@24"
+\Green \Text 31,10,\Mat Z[10,4
+\Green \Text 38,3,"[MENU]"
+\Green \Text 45,3,"[F6]\->MONDE"
+\Orange \Text 55,42,"(CHARGEMENT)"
+\Identity 1\->\Mat A
+\If V=4
+\Then [[.,2,3,.,20.4,.8,20.8,.4,30,2,22,32,.,.9,20.9,23][30,22.129,22.2,.,20.4,.8,20.8,.4,20,2,23,.,.,.9,.,20][20,2,23,.,22.4,2.8,22.8,2.4,20,23,.,.,.,.,3,23][.,3,.,.,2,2,2.130,2,.,2,.,.4,.4,20.4,20,20][22,20,.4,.4,20.4,.8,20.8,.4,22,32,.,.4,.4,20.4,22,22][2.3,22,2.4,2.4,22.4,.8,20.8,20.4,2,23,.,.,.,.,2.9,20.9][.8,.8,.8,.8,.8,.8,20.8,20.4,23,.,2,.,.4,30,22,.4][2.8,2.8,2.8,2.8,2.8,2.8,22.8,.4,2,20,23,.4,.5,33,22,.5][2.4,2.4,.4,.4,.4,.4,.4,20.4,32,.,3,.4,20.5,22.131,.5,.5][2,32,2,2,2,2,2,2,2,22,22,.4,.4,.5,.5,.4]]\->\Mat A
+55\->I
+45\->J
+\IfEnd
+\If V=3
+\Then [[.4,.4,.4,.,.,30,22,20.4,32,12,.,.4,.4,.4,.4,2.4][.4,.4,.,.,.4,3,2.4,.4,20.4,32,2,.,.4,.4,20.4,23.127][.4,.4,.,.4,20.4,22.126,23,.4,.4,22.4,32.127,2,.,.4,.4,20][.4,2.4,.,.,.,.4,.,.,30,22.127,22.4,32.127,.,.4,.,22][30,22.127,.4,.,.4,.4,.4,.4,.,20.4,32.127,.,.,.4,20,23][.,.4,2.4,2,.,.,.,.,.,.4,.4,.,.4,2.4,.,20][.,30,22.2,32,.,.4,.4,2.4,2.4,.4,.4,.,20.4,23,.4,20][.,20.4,23.3,23,.,.4,20.4,23,23,.4,.4,.,.4,.,.,23][.,.,.,.,.,.,.,.,.,.,.,3,.,.,20.4,22][.4,.4,.4,.4,.4,.4,.4,.4,.4,.4,20.4,22,.4,.4,.4,.4]]\->\Mat A
+60\->I
+20\->J
+\Mat Z[12,6]\->X
+X>27\=>22.128\->\Mat A[3,6
+\IfEnd
+\If V=1
+\Then [[.,.,.,.,2,.,2,.,.,32,22,.,.4,.4,30,22][.,.7,.7,20.7,20.101,30,22,2,30,22,23.106,.,.,.,.,20][.,.7,.7,20.7,32,20,23,32,.,3,3,.,.7,.7,.,20][.,2,.,.,3,3,30,22,20,22,22,.,.7,.7,.,22][30,22,.7,20.7,22.2,22.3,2,3,30,22,.,.7,.7,2.7,30,20][.,.,.7,.7,.7,20.7,23,22,20,23,.7,.7,20.7,32.141,20,22][.,.4,.7,.7,.7,.,3,.,.,.,.7,.7,.7,.4,.4,.4][3,.,.,.4,.7,20,22,.4,.4,2,.,.,.,.,3,.4][22,.4,.,.,.,2,.4,.4,20.4,32,.,.,2.4,20.4,22.141,.4][32.103,2,2,2,32,22.108,.4,.4,.4,.4,2,32,22,2.4,.4,.4]]\->\Mat A
+75\->I
+45\->J
+\Mat Z[12,6\->X
+3<X\=>.107+\Int \Mat A[10,1\->\Mat A[10,1
+\If 17<X
+\Then \If 1=\Mat Z[11,5
+\Then .118+\Int \Mat A[2,5\->\Mat A[2,5]
+\Else .118+\Int \Mat A[10,6\->\Mat A[10,6
+\IfEnd
+\IfEnd
+\IfEnd
+\If V=2
+\Then [[11,22.4,21,11,12,12,12,11,11,.,.,.4,11,13,11,21][21,12,23,20,23,12.121,21,.4,.4,.,2,2.5,22.5,22,2.5,20][.,12,12,.,13,32,20,.4,.5,.,2,30,22.12,22.4,32,20][30,22.2,31,20,12,22,22,.5,.5,.,20.4,.,22.5,23,2,20][30,22.3,22.119,.,.4,.4,.4,.5,.,.,20,20,.4,21,23,20][.,.,2,2.122,3,.,2,2,2,2.4,2,2,.,.,20,20][2.4,20,12,2,22,22.4,12,23,21,21.5,12,23,.,2,22,20][20,3,.,2,30,12,22,21,32,20,21,.,2,2,2,22][2,22,20,31,2,20,23,.,.,30,22,20,3,22,32,20][32,12,22,2,22,2,2,2,2.4,2,2,2,2,2,2,22]]\->\Mat A
+50\->I
+40\->J
+\Mat Z[12,6\->X
+X>20\=>22.125\->\Mat A[3,13
+X>21\=>12.124\->\Mat A[2,6
+\IfEnd
+\If V=5
+\Then [[.8,.8,.8,.8,22.8,21,.5,.5,.5,.5,.5,.,3,32,22,23][.8,.8,.8,20.8,2,23,.5,.5,.5,.,2,22,22,23,.,22][.8,.8,.8,.5,.5,.,.,.,3,32,22,32,.,.,32,22][.8,.8,.8,.5,.5,.5,.,22.4,22,32,.,.4,.4,30,22,22][.8,.8,2.8,.4,.4,.4,30,22,23,.,.,.,.,2,30,22][.8,22.8,32.136,.,.,.,.,.,.,3,.,.4,30,22,32,22][22.8,12,23,.,.4,.4,.,.4,20.4,22,3,3,.,20,23.2,23.3][12,32,.,.,.4,2,3,2,20.4,20,22,22,3,2,.,20][.5,.5,.5,.5,20.4,20,23,23,20.4,20,20,20,22,32,3,23][.5,.5,.5,.5,22.4,32,2,22.132,2.4,2,2,2,32,22.135,22,22]]\->\Mat A
+125\->I
+25\->J
+33<\Mat Z[12,6\=>23.134\->\Mat A[8,12
+\IfEnd
+\If V=6
+\Then [[33,32,33.110,32,23,32,23,33,32,33,32,32,32,33,23,23][32,23,23,33,32,33,22,23,22,32,32,32,23,23,32,23][32.3,22,23,23,33,22,22,32,32,23,33,22,23,22,32,23][33,32,23,32,32,23,33,23,23,23,23,23,33,32,23,23][23,33,32,22,33,23,23,23,23,23,32,32,33,23,23,23][23,22,32,22,33,22,23,23,22,32,32,23,33,23,23,22][32,32,32,23,23,33,22,32,23,33,22,23,33,23,32,23][33,33,23,23,22,23,33,32,22,23,33,22,33,33,22,23][32,33,33,33,32,22,23,32,33,22,23,33,33,23,33.1105,22][32,22,32,32,32,22,32,32,32,32,22,32,32,22,32,22.111]]\->\Mat A
+55\->I
+50\->J
+\IfEnd
+\If V=10
+\Then [[.6,2.6,2.6,.6,2.6,2.6,2.6,2.6,2.6,.6,.6,2.6,2.6,.6,.6,.6][20.6,32,20,22.6,.,2,2,2,20,2.6,22.6,3,22.115,2.6,2.6,.6][20.6,2,0,2,2,32,2,22.114,2,2,2,30,3,22,20,.6][.6,20.6,20,.6,20.6,.,23,2.6,22.6,3,20,2,2,30,22,.6][.6,20.6,20,2.6,20.6,20,20,23.2,23.3,20,20,.6,20.6,20,.6,.6][.6,20.6,20,23.113,20.6,22,.,2,2,20,22,2.6,20.6,20,.6,.6][.6,20.6,2,20,.6,20.6,30,02,22,2,20,23.116,22.6,20,2.6,.6][.6,.6,22.6,20,2.6,22.6,.,2,22,20.6,2,3,3,2,23,.6][.6,20.6,2,2,2,2,22,.6,.6,.6,20.6,22,22,20.6,22,.6][.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6]]\->\Mat A
+90\->I
+35\->J
+\Mat Z[12,6]>14\=>.117+\Int \Mat A[3,8\->\Mat A[3,8
+\IfEnd
+\If V=9
+\Then {10,16}\->\Dim \Mat A
+50\->I
+40\->J
+\IfEnd
+\curt\Pi
+\Prog "TNT15"
+\If \R a1
+\Then \R a1\->I
+\R a2\->J
+\IfEnd
+0\->\R a1
+0\->\R a2
+I\->\Mat Z[12,4
+J\->\Mat Z[12,5
+V=9\=>\Goto9
+0\->O
+\For 1\->U \To 10
+\For 1\->W \To 16
+\Mat A[U,W\->M
+\Int (10\Frac M\->O
+\Int (10\Frac .01M\->B
+\Int (10\Frac .1M\->C
+5(U-1\->\theta
+5(W-1\->E
+\If O
+\Then O=3\=>\Orange \Text \theta+1,E+48,"\@7FD2":O=2\=>\Orange \Text \theta+3,E+49,"\Deg>":O=5\=>\Orange \Text \theta+1,E+49,"o":O=6\=>\Text \theta+1,E+48,"@":O=4\=>\Text \theta+2,E+49,"\@5C":O=7\=>\Orange \Text \theta+2,E+47,"#":O=8\=>\Text \theta+1,E+48,"~":O=9\=>\Orange \Text \theta+1,E+48,"*"
+\IfEnd
+\If B\>=2
+\Then \Green \F-Line E+52,63-\theta,E+52,58-\theta
+B=3\=>\PlotOff E+52,60-\theta
+\IfEnd
+\If C\>=2
+\Then \Green \F-Line E+47,58-\theta,E+52,58-\theta
+C=3\=>\PlotOff E+50,58-\theta
+\IfEnd
+\Next 
+\Next 
+V=5\=>\Text 21,58,"\theta"
+\Lbl 9
+\Orange \Text 55,42,"             "
+\StoPict 1
+5\Pi\->W
+\Prog "TNT1"
+\If V=3\ And 41=\Mat Z[12,6
+\Then \ClrText
+\Orange "L'onde de choc s'est ressentie jusqu'ici, la population est"
+\Orange "paniquee..."\Disp\IfEnd
+\If V=9
+\Then 87\->A
+32\->B
+1\->D
+\For 1\->C \To 2
+C=2\=>\(-)1\->D
+C=2\=>86\->A
+\F-Line A-6D,B+9,A-6D,B+7
+\F-Line A-5D,B+11,A-5D,B+5
+\PlotOn A-5D,B+1
+\F-Line A-4D,B+12,A-4D,B+9
+\F-Line A-4D,B+6,A-4D,B+3
+\PlotOn A-4D,B
+\F-Line A-3D,B+12,A-3D,B+8
+\F-Line A-3D,B+6,A-3D,B+4
+\F-Line A-3D,B+1,A-3D,B
+\F-Line A-2D,B+12,A-2D,B+11
+\F-Line A-2D,B+9,A-2D,B+5
+\F-Line A-2D,B+2,A-2D,B
+\PlotOn A-D,B+12
+\F-Line A-D,B+8,A-D,B+7
+\F-Line A-D,B+5,A-D,B+4
+\PlotOn A-D,B
+\Next 
+\If 50>\Mat Z[12,6
+\Then \For 4\->A \To 6
+\For 7\->B \To 9
+.142\->\Mat A[A,B
+\Next 
+\Next 
+"TOMBERRY :"
+"JE T'ATTENDAIS."\Disp\IfEnd
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:7967
+File Name:TNT14
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Prog "TNT12"
+\Goto1
+\Lbl D
+1>\Mat Z[6,3\=>1\->\Mat Z[6,3
+P=1\=>\Mat Z[6,1]-\Int (2\Ran#+1\ab/c3Q+2\ab/c3Q(\Mat Z[4,1]/\Mat Z[6,3\->\Mat Z[6,1
+P=2\=>Q+\Mat Z[1,1\->\Mat Z[1,1
+\Mat Z[1,1]>\Mat Z[1,2\=>\Mat Z[1,2\->\Mat Z[1,1
+I\<>\Mat Z[1,1\=>\Orange \Text 5,60,\Mat Z[1,1]-I
+J\<>\Mat Z[6,1\=>\Orange \Text 5,110,\Mat Z[6,1]-J
+P=3\=>Q+\Mat Z[4,1\->\Mat Z[4,1
+P=4\=>Q+\Mat Z[5,1\->\Mat Z[5,1
+\For 2\->T \To 3
+\Mat Z[T,1]>\Mat Z[T,2\=>\Mat Z[T,2\->\Mat Z[T,1
+\Next 
+P=8\=>Q+\Mat Z[6,2\->\Mat Z[6,2
+P=9\=>Q+\Mat Z[6,3\->\Mat Z[6,3
+1>\Mat Z[6,2\=>1\->\Mat Z[6,2
+1>\Mat Z[6,3\=>1\->\Mat Z[6,3
+\If I\<>\Mat Z[1,1]\ Or J\<>\Mat Z[6,1
+\Then \For 1\->P \To 150
+\Next 
+\Mat Z[1,1]<1\=>8\Pi\->X
+X=8\Pi\=>\Prog "TNT6"
+\Mat Z[6,1]<1\=>\Goto2
+\IfEnd
+0\->P~Q
+\Lbl 1
+\Cls
+\RclPict 1
+\Orange \Text 3,6,"   "
+\Orange \Text 3,6,\Mat Z[1,1
+\Green \Text 25,3,"-stats- "
+\Green \Text 31,3,"fo   \slash  "
+\Green \Text 37,3,"ma      "
+\Green \Text 37,23,"\slash"
+\Green \Text 43,3,"at   \slash  "
+\Green \Text 49,3,"de   \slash  "
+\For 2\->T \To 5
+\For 1\->U \To 2
+\Green \Text 6T+19,13U+1,\Mat Z[T,U
+\If \Not \Int ((4\Mat Z[6,4])\Ran#
+\Then \Prog "TNT6"
+S=8\=>\Return
+\IfEnd
+\Next 
+\Next 
+\Mat Z[1,1\->I
+\Mat Z[6,1\->J
+\Text 57,3,"[EXE]\->menu action            "
+\StoPict 1
+\Do
+\If \Not \Int ((5\Mat Z[6,4])\Ran#
+\Then \Prog "TNT6"
+S=8\=>\Return
+\Green \Text 43,14,\Mat Z[4,1
+\Green \Text 49,14,\Mat Z[5,1
+\StoPict 1
+\IfEnd
+\Getkey
+\LpWhile \Not \Ans
+\Lbl I
+\Green \Text 25,3," attak  "
+\Green \Text 31,3," pouvoir"
+\Green \Text 37,3," objet  "
+\Green \Text 43,3," aprend"
+\Green \Text 49,3," fuite  "
+1\->\r
+\Text 57,3,"[EXE]\->choisir une action     "
+\StoPict 1
+\Do
+\Green \F-Line 3,\(-)6\r+43,5,\(-)6\r+43
+\Do
+\If \Not \Int ((5\Mat Z[6,4])\Ran#
+\Then \Prog "TNT6"
+S=8\=>\Return
+\IfEnd
+\Getkey\->\theta
+\theta=47\=>\Goto1
+\LpWhile \Not \theta
+\Green \Text 6\r+19,3," "
+\theta=28\=>\Dsz \r
+\theta=37\=>\Isz \r
+\Not \r\=>5\->\r
+\r=6\=>1\->\r
+1
+\theta=31\ And (\r=1\ Or \r=2\ Or (\r=4\ And \Mat Z[11,3]\ And \Mat Z[11,4])\ Or \r=3\ Or (\r=5\ And \Not \Mat Z[8,4\=>0
+\LpWhile \Ans
+\If \r=5
+\Then \If \Not \Int 2\Ran#
+\Then \Text 57,3,"Z prend la fuite...     "
+\For 1\->X \To 200
+\Next 
+\Return
+\Else \Text 57,3,"Le monstre ratrappe Z ! "
+\For 1\->X \To 200
+\Next 
+0\->P~Q
+\GotoD
+\IfEnd
+\IfEnd
+\If \r=3
+\Then \StoPict 1
+\Mat Z[1,1\->I
+\Mat Z[6,1\->J
+\Prog "TNT9"
+\Cls
+\RclPict 1
+\PlotOn 0,0
+\GotoD
+\IfEnd
+\If \r=1
+\Then \Orange \Text 19,3,"f\orce:   "
+1\->O
+7\->L
+\For 1\->E \To 5
+\If \Not \Int ((3\Mat Z[6,4])\Ran#
+\Then \Prog "TNT6"
+S=8\=>\Return
+\IfEnd
+6E+19\->K
+\Mat Z[E,4\->C
+\Prog "TNT8"
+\Next 
+1\->\r
+\Text 57,3,"[EXE]\->Choisir une attak     "
+\Do
+\Green \F-Line 3,\(-)6\r+43,5,\(-)6\r+43
+\Mat Z[\r,4\->V
+V<4\=>1
+V=4\=>2
+V=5\=>3
+V=6\=>5
+V=7\=>6
+V=8\=>9
+\Ans\->O
+\If \Not V
+\Then \Orange \Text 19,28,"\(-)"
+\Else \Orange \Text 19,28,O
+\IfEnd
+\StoPict 1
+\Do
+\If \Not \Int ((5\Mat Z[6,4])\Ran#
+\Then \Prog "TNT6"
+S=8\=>\Return
+\IfEnd
+\Getkey\->\theta
+\theta=31\ And (\Not V\ Or O>\Mat Z[2,1\=>0\->\theta
+\LpWhile \Not \theta
+\Green \Text 6\r+19,3," "
+\theta=28\=>\Dsz \r
+\theta=37\=>\Isz \r
+\r=6\=>1\->\r
+\Not \r\=>5\->\r
+\If \theta=47
+\Then \Orange \Text 19,3,"         "
+\GotoI
+\IfEnd
+\LpWhile \theta\<>31
+\Mat Z[2,1]-O\->\Mat Z[2,1
+\If V=8
+\Then \For 11\->A \To 26 \Step 6
+\Green \Text A,50,"     "
+\Next 
+4\->W
+\Pi\->C
+\Pi\->N
+41\->R
+\Prog "TNT5"
+\For 1\->A \To 12
+\Orange \F-Line 108,37,\Int 20\Ran#+98,\Int 20\Ran#+27
+\Next 
+1\->P
+32\->Q
+\IfEnd
+\If V=6
+\Then \For 11\->A \To 26 \Step 6
+\Green \Text A,50,"     "
+\Next 
+2\->W
+\Pi\->C
+\Pi\->N
+41\->R
+\Prog "TNT5"
+\IfEnd
+\If V=1
+\Then 1\->P
+6\->Q
+\IfEnd
+\If V=2
+\Then 4\->P
+1\->Q
+\IfEnd
+\If V=3
+\Then 9\->P
+\(-)1\->Q
+\IfEnd
+\If V=4
+\Then 1\->P
+10\->Q
+\IfEnd
+\If V=5
+\Then 1\->P
+15\->Q
+\IfEnd
+\If V=7
+\Then 1\->P
+26\->Q
+\IfEnd
+\If V\<>2\ And V\<>8
+\Then \For 12\->C \To 42 \Step 6
+\Text C,40,"        "
+C<31\=>\Green \Text C-1,50,"       "
+\Next 
+\IfEnd
+\If V=1\ Or V=5
+\Then 2\->W
+75\->R
+\Pi\->N
+\Prog "TNT5"
+\If V=5
+\Then \For 1\->X \To 99
+\Next 
+\Cls
+\RclPict 1
+\Plot 0,0
+\For 1\->W \To 70
+\Next 
+\For 12\->C \To 42 \Step 6
+\Text C,40,"        "
+C<31\=>\Green \Text C-1,50,"       "
+\Next 
+2\->W
+\Pi\->N
+75\->R
+\Prog "TNT5"
+\IfEnd
+\IfEnd
+\If V=4
+\Then 1\->W
+\Pi\->N
+75\->R
+\Prog "TNT5"
+\For 1\->X \To 70
+\Next 
+\For 11\->W \To 26 \Step 6
+\Green \Text W,82,"     "
+\Next 
+3\->W
+\Pi\->C
+\Pi\->N
+\Prog "TNT5"
+\IfEnd
+\If V=6
+\Then 85\->R
+2\->W
+\Pi\->N
+0\->C
+\Prog "TNT5"
+1\->P
+24\->Q
+\Int (\Mat Z[1,1]-6-6\Ran#\->\Mat Z[1,1
+\IfEnd
+\If V=7
+\Then 2\->W
+\Pi\->N
+75\->R
+\Prog "TNT5"
+\For 1\->B \To 3
+\For 23\->A \To 33 \Step 6
+\Green \Text A,82,"       "
+\Next 
+\Isz W
+W=4\=>2\->W
+\Pi\->C
+\Pi\->N
+\Prog "TNT5"
+\Next 
+\IfEnd
+\If V=2
+\Then \Text 51,38,"defense +1            "
+\For 11\->A \To 26 \Step 6
+\Green \Text A,50,"     "
+\Next 
+3\->W
+\Pi\->C
+\Pi\->N
+41\->R
+\Prog "TNT5"
+\IfEnd
+\If V=3
+\Then \Text 51,38,"ennemi def -1        "
+1\->W
+\Pi\->N
+65\->R
+\Prog "TNT5"
+\IfEnd
+\Mat Z[1,1\->J
+\Mat Z[6,1\->J
+\GotoD
+\IfEnd
+\If \r=2
+\Then \Orange \Text 19,3,"magie:   "
+7\->L
+2\->O
+\For 1\->E \To 5
+\If \Not \Int ((3\Mat Z[6,4])\Ran#
+\Then \Prog "TNT6"
+S=8\=>\Return
+\IfEnd
+6E+19\->K
+\Mat Z[E,3\->C
+\Prog "TNT8"
+\Next 
+1\->\r
+\Text 57,3,"[EXE]\->Choisir un pouvoir    "
+0\->O
+\Do
+\Green \F-Line 3,\(-)6\r+43,5,\(-)6\r+43
+O\->B
+\Mat Z[\r,3\->V
+V<6\=>1
+V=4\=>2
+V>5\=>4
+V>7\=>5
+V>10\=>6
+V=13\=>7
+V=14\=>8
+V=15\=>9
+V=16\=>10
+V=17\=>12
+\Ans\->O
+B>9\=>O\<=9\=>\Orange \Text 19,28,"  "
+\If \Not V
+\Then \Orange \Text 19,28,"\(-)"
+\Else \Orange \Text 19,28,O
+\IfEnd
+\StoPict 1
+\Do
+\If \Not \Int ((5\Mat Z[6,4])\Ran#
+\Then \Prog "TNT6"
+S=8\=>\Return
+\IfEnd
+\Getkey\->\theta
+\theta=31\ And (\Not V\ Or O>\Mat Z[3,1\=>0\->\theta
+\LpWhile \Not \theta
+\Green \Text 6\r+19,3," "
+\theta=28\=>\Dsz \r
+\theta=37\=>\Isz \r
+\Not \r\=>5\->\r
+\r=6\=>1\->\r
+\If \theta=47
+\Then \Orange \Text 19,3,"         "
+\GotoI
+\IfEnd
+\LpWhile \theta\<>31
+\Mat Z[3,1]-O\->\Mat Z[3,1
+\If V=6
+\Then \Text 51,38,"att+1 \slash def+1         "
+\Orange \Circle 49,37,10
+\For 0\->A \To 9
+\Orange \F-Line 49,37,\Int 50\Ran#+24,\Int 50\Ran#+12
+\Next 
+1+\Mat Z[4,1\->\Mat Z[4,1
+4\->P
+1\->Q
+\IfEnd
+\If V=5
+\Then \If M\<>7
+\Then \For 3\->B \To 40 \Step 6
+\Text B,71,"              "
+\Next 
+\Text 43,71,"              "
+\IfEnd
+\Text 11,86,"vitesse"
+\Text 20,80,"vie:   \slash"
+\Text 30,90,"att:"
+\Text 37,90,"def:"
+\Text 11,117,22-\Mat Z[6,4
+\Text 20,94,\Mat Z[6,1
+\Text 20,110,\Mat Z[7,4
+\For 2\->A \To 3
+\Text 16+7A,105,\Mat Z[6,A
+\Next 
+\For 5.8\->A \To 0 \Step \(-).2
+\Text 4,99,\Int A
+\Next 
+\Cls
+\RclPict 1
+\Plot 0,0
+0\->P~Q
+\IfEnd
+\If V=7
+\Then \Graph Y<64
+\Graph Y>64
+1\->P
+16\->Q
+\IfEnd
+\If V=4
+\Then \Orange \F-Line 67,55,67,61
+\For 1\->W \To 80
+\Next 
+\Orange \F-Line 107,61,100,45
+\Orange \F-Line 104,53,108,38
+\Orange \F-Line 106,45,101,30
+1\->P
+10\->Q
+\IfEnd
+\If V=3
+\Then \For 1\->W \To 40 \Step 2
+\F-Line W+65,38-W/2,W+65,38+W/2
+\Next 
+1\->P
+7\->Q
+\IfEnd
+\If V=12
+\Then \For 1\->W \To 40 \Step 2
+W<12\=>\Green \F-Line W+65,38-.5W,W+65,38+.5W
+W>11\=>W<24\=>\F-Line W+65,38-.5W,W+65,38+.5W
+W>23\=>\Orange \F-Line W+65,38-.5W,W+65,38+.5W
+\Next 
+\For 1\->A \To 3
+\Cls
+\Plot 0,0
+\RclPict 1
+\Plot 0,0
+\Next 
+1\->P
+20\->Q
+\IfEnd
+\If V=1\ Or V=2
+\Then V=1\=>\Text 51,38,"Z defense +1          "
+V=2\=>\Text 51,38,"Z attaque +1          "
+\Circle 49,37,10
+5-V\->P
+1\->Q
+\IfEnd
+\If V=8
+\Then \For 1\->A \To 3
+\Cls
+\RclPict 1
+\Plot 0,0
+\Next 
+\Text 51,38,"ennemi att -1        "
+\For 1\->A \To 7
+\Orange \Text \Int 20\Ran#+20,\Int 20\Ran#+96,"#"
+\Next 
+1\->P
+14\->Q
+\Mat Z[6,2]-1\->\Mat Z[6,2
+\IfEnd
+\If V=14
+\Then \Orange \F-Line 67,53,104,36
+\For 1\->X \To 70
+\Next 
+\Cls
+\RclPict 1
+\Orange \F-Line 67,53,104,34
+\For 1\->X \To 80
+\Next 
+\Cls
+\RclPict 1
+\Orange \Text 25,104,":"
+\For 1\->X \To 80
+\Next 
+\Text 51,38,"Z abs\orbe enn vie \!mark   "
+\For 103\->A \To 47 \Step \(-)2
+\Orange \F-Line A,36+3\Ran#,A-1,36+3\Ran#
+\Next 
+\Int (20+10\Ran#+\Mat Z[1,1\->\Mat Z[1,1
+1\->P
+22\->Q
+\IfEnd
+\If V=10
+\Then \Orange \Circle 76,37,11
+\For 1\->A \To 35
+\Orange \F-Line 76,37,\Int 75\Ran#+50,\Int 50\Ran#+14
+\Next 
+\Int (\Mat Z[1,1]-9-6\Ran#\->\Mat Z[1,1
+1\->P
+24\->Q
+\IfEnd
+\If V=9
+\Then \For 1\->A \To 5
+\Orange \F-Line 67,53,\Int 10\Ran#+100,\Int 25\Ran#+20
+\For 1\->X \To 50
+\Next 
+\Cls
+\RclPict 1
+\Next 
+\Text 51,38,"ennemi def -1        "
+\For 0\->A \To 5
+\Orange \F-Line 11\Ran#+99,25\Ran#+20,11\Ran#+99,25\Ran#+20
+\Next 
+\Mat Z[6,3]-1\->\Mat Z[6,3
+1\->P
+14\->Q
+\IfEnd
+\If V=11
+\Then \Text 51,38,"Z regenere...        "
+\Green \Circle 49,37,10
+\For 0\->A \To 9
+\Green \F-Line 49,37,40\Ran#+29,40\Ran#+17
+\Next 
+2\->P
+\Int (60+20\Ran#\->Q
+\IfEnd
+\If V=15
+\Then \For 95\->A \To 125 \Step 3
+28\Ran#
+\Orange \F-Line A-6,17,A-3,17+\Ans
+\Orange \F-Line A-3,17+\Ans,A,17
+\Next 
+1\->P
+34\->Q
+\IfEnd
+\If V=16\ Or V=13
+\Then \If V=16
+\Then \Orange \Circle 67,53,4
+\For 54\->A \To 61
+\Orange \PlotOn 67,A
+\Next 
+\Else \Orange \F-Line 67,54,66,61
+\Orange \F-Line 67,54,68,61
+\IfEnd
+\For 1\->A \To 99
+\Next 
+0\->O
+\If V=16
+\Then \For 61\->P \To 34 \Step \(-)3
+\Isz O
+\For 91+O\->Q \To 109+O \Step 4
+\PlotOn Q,P
+\Next 
+\Next 
+\IfEnd
+\Orange \F-Line 107,61,101,45
+\Orange \F-Line 109,61,101,45
+\For 1\->A \To 99
+\Next 
+\Orange \F-Line 104,53,109,38
+\Orange \F-Line 106,53,109,38
+\For 1\->A \To 99
+\Next 
+\Orange \F-Line 106,45,102,30
+\Orange \F-Line 108,45,102,30
+\For 1\->A \To 99
+\Next 
+1\->P
+40\->Q
+V=13\=>28\->Q
+\IfEnd
+\If V=17
+\Then \For 43\->A \To 125 \Step 3
+40\Ran#
+\Orange \F-Line A-6,17,A-3,23+\Ans
+\Orange \F-Line A-3,23+\Ans,A,17
+\Next 
+\Mat Z[1,1]-20-\Int 9\Ran#\->\Mat Z[1,1
+1\->P
+50\->Q
+\IfEnd
+\GotoD
+\IfEnd
+\If \r=4
+\Then 51\->K
+81\->L
+\Mat Z[11,3\->O
+\Mat Z[11,4\->C
+\Text 51,38,"apprendre        ?    "
+\Prog "TNT8"
+\Text 57,3,"                             "
+0\->L
+\For 1\->K \To 5
+C=\Mat Z[K,5-O\=>1\->L
+\Next 
+\If L
+\Then \Text 57,3,"tu connais deja cela.       "
+\For 1\->P \To 200
+\Next 
+0\->P~Q
+\GotoD
+\IfEnd
+\Text 57,3,"[EXE]\->oui       [EXIT]\->retour"
+\Do
+\Getkey\->\theta
+\LpWhile \theta\<>31\ And \theta\<>47
+\If \theta=47
+\Then 0\->P~Q
+\GotoD
+\IfEnd
+\Text 51,106,"  "
+0\->L
+\For 1\->K \To 5
+\Not \Mat Z[K,5-O\=>K\->L
+L\=>\Break
+\Next 
+\If L
+\Then C\->\Mat Z[L,5-O
+57\->K
+55\->L
+\Text 57,3,"tu as appris                  "
+\Prog "TNT8"
+\For 1\->P \To 200
+\Next 
+0\->P~Q
+0\->\Mat Z[11,3
+\GotoD
+\Else \Text 57,3,"  ...tu n'as plus de place..."
+\For 1\->X \To 200
+\Next 
+\Green \Text 51,81,"       "
+\Text 51,38,"supprimer quoi ?     "
+\Text 57,3,"[EXE]\->choisir   [EXIT]\->quitter"
+\For 25\->W \To 49 \Step 6
+\Green \Text W,3,"        "
+\Next 
+7\->L
+C\->W
+\For 1\->Q \To 5
+\Mat Z[Q,5-O\->C
+19+6Q\->K
+\Prog "TNT8"
+\Next 
+1\->Q
+\Do
+\Green \Text 19+6Q,3,"\(-)"
+\Do
+\Getkey\->\theta
+\If \theta=47
+\Then 0\->P~Q
+0\->\Mat Z[11,3
+\GotoD
+\IfEnd
+\LpWhile \Not \theta
+\Green \Text 19+6Q,3," "
+\theta=28\=>\Dsz Q
+\theta=37\=>\Isz Q
+\Not Q\=>5\->Q
+Q=6\=>1\->Q
+\LpWhile \theta\<>31
+\Green \Text 19+6Q,3,"\(-)"
+51\->K
+73\->L
+\Mat Z[Q,5-O\->C
+\Text 51,38,"Z oublie            "
+\Prog "TNT8"
+\Mat Z[11,4\->C
+C\->\Mat Z[Q,5-O
+57\->K
+64\->L
+\Text 57,3," et il apprend                "
+\Prog "TNT8"
+\For 1\->X \To 200
+\Next 
+0\->P~Q
+0\->\Mat Z[11,3
+\GotoD
+\IfEnd
+\IfEnd
+\GotoD
+\Lbl 2
+\Cls
+\Int (175-5M)\Ran#\->Q
+\Int (180-5M)\Ran#\->R
+0\->S~T
+\For 1\->A \To 2
+0\->B
+A=1\=>Q\->X
+A=2\=>R\->X
+X>69\=>X<95\=>15\->B
+X<70\=>7\->B
+X<60\=>\Dsz B
+X<55\=>\Dsz B
+X<50\=>\Dsz B
+X<38\=>\Dsz B
+X<26\=>\Dsz B
+X<14\=>\Dsz B
+A=1\=>B\->S
+A=2\=>B\->T
+\Next 
+\If \Mat Z[8,4
+\Then \If 29=\Mat Z[12,6
+\Then 13\->S
+0\->T
+\IfEnd
+\If 10.5=\Mat Z[12,6
+\Then 2\->S
+4\->T
+\IfEnd
+\IfEnd
+\Cls
+\Text 1,1,"-------FIN DU COMBAT-------"
+\Text 58,1,"--------------------------"
+\Int 3\Ran#+2\->W
+3-\Int 2\Ran#\->K
+\For 1\->X \To 2
+W+\Mat Z[1,X\->\Mat Z[1,X
+1+\Mat Z[K,X\->\Mat Z[K,X
+\Next 
+1+\Mat Z[12,3\->\Mat Z[12,3
+\Mat Z[12,3\->A
+\Mat Z[11,2\->\theta
+1
+A>1\=>2
+A>5\=>3
+A>9\=>4
+A>14\=>5
+A>19\=>6
+A>25\=>7
+\Ans\->\Mat Z[11,2
+\Orange \Text 10,1,"\Experience:"
+\Mat Z[11,6\->E
+\Int 100\Ran#+2\Mat Z[7,4]+40\Mat Z[6,2]+40\Mat Z[6,3]+200-20\Mat Z[6,4\->A
+\Orange \Text 16,1,E
+\Orange \Text 16,22,"+"
+\Orange \Text 16,27,A
+\Orange \Text 22,22,"="
+\Orange \Text 22,27,E+A
+E+A\->\Mat Z[11,6
+0\->A
+\Green \Text 10,80,"R\Recompense:"
+\Not \Mat Z[8,4\=>\Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
+23=\Mat Z[12,6\=>5000\->A
+A+\Mat Z[10,4\->\Mat Z[10,4
+\Green \Text 16,105,"\@24"
+\If A<99
+\Then \For 0\->B \To A \Step 3
+\Green \Text 16,91,B
+\Next 
+\Green \Text 16,91,"   "
+\IfEnd
+91\->B
+A=5000\=>85\->B
+\Green \Text 16,B,A
+\Text 35,1,"Objets trouves:"
+\If \Not S\ And \Not T
+\Then \Text 43,10,"aucun"
+\Else 43\->K
+10\->L
+3\->O
+S\->C
+\Prog "TNT8"
+49\->K
+10\->L
+T\->C
+\Prog "TNT8"
+\Pi\->N
+S\->O
+\Prog "TNT7"
+T\->O
+\Prog "TNT7"
+\IfEnd
+\If \theta<\Mat Z[11,2
+\Then 5-\Int 2\Ran#\->K
+\If \Int 2\Ran#
+\Then \Mat Z[4,2]<\Mat Z[5,2\=>4\->K
+\Mat Z[5,2]<\Mat Z[4,2\=>5\->K
+\IfEnd
+1+\Mat Z[K,2\->\Mat Z[K,2
+\For 1\->Y \To 2
+\Int (18+3\theta+\Mat Z[1,Y\->\Mat Z[1,Y
+\Next 
+\For 2\->X \To 3
+\For 1\->Y \To 2
+\Int (7+X+\Mat Z[X,Y\->\Mat Z[X,Y
+\Next 
+\Next 
+\IfEnd
+\For 4\->X \To 5
+\Mat Z[X,2\->\Mat Z[X,1
+\Next 
+\For 2\->X \To 5
+\For 1\->Y \To 2
+99<\Mat Z[X,Y\=>99\->\Mat Z[X,Y
+\Next 
+\Next 
+\Orange \Text 35,83,"niveau:"
+\Orange \Text 35,114,\Mat Z[11,2
+\Orange \Text 41,80,"att"
+\Orange \Text 47,80,"def"
+\Orange \Text 53,80,"vie    \slash"
+\For 4\->T \To 5
+\Orange \Text 17+6T,94,\Mat Z[T,1
+\Next 
+\Orange \Text 53,94,\Mat Z[1,1
+\Orange \Text 53,112,\Mat Z[1,2\Disp\ClrList
+\ClrText
+\Return
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:3869
+File Name:TNT15
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\R b0=.142\=>\GotoF
+\If \Ans=\curt\Pi
+\Then {1,2,3,4,5,6,14,15}\->\List 1
+{\Int 8\Ran#+16,\Int 8\Ran#+21,\Int 10\Ran#+40,\Int 10\Ran#+45,\Int 51\Ran#+90,\Int 51\Ran#+99,\Int 41\Ran#+160,\Int 3\Ran#+3}\->\List 2
+0
+\Return
+\IfEnd
+\ClrText
+\Mat Z[12,6\->W
+\If \theta=29
+\Then \If W=28.5\ Or W=36\ Or W=37
+\Then \GotoO
+\Else \Return
+\IfEnd
+\IfEnd
+\If \Mat Z[12,1
+\Then \Mat Z[12,1]-1\->\Mat Z[12,1
+\Mat Z[12,1\=>\Return
+\If 36=W
+\Then "Trop tard !...       TOMBERRY....NON !!!!!             "
+\sin 5\->X
+.\->\Mat Z[1,1
+\GotoT
+\IfEnd
+\If 23=W
+\Then .123\->\R b0
+\Prog "TNT4"
+\Mat Z[11,1\->V
+\R a1\->\Mat Z[12,4
+\R a2\->\Mat Z[12,5
+\sin 9
+\Return
+\IfEnd
+\If 4=\Mat Z[12,6
+\Then \ClrText
+\Orange "Une gemme !"
+\Orange "Enc\ore une a trouver."\Disp6\->\Mat Z[12,6
+\IfEnd
+\IfEnd
+\Lbl O
+\If W=28.5
+\Then "STOP.Aucun humain n' est aut\orise a s\ortirpour l'inst..."
+\Orange "Je suis presse."
+\Prog "TNT14"
+29\->\theta
+\theta\->\Mat Z[12,6
+\IfEnd
+\If W=36
+\Then "Les p\ortes de la"
+"ville sont mobiliseespour l'evacuation !  Passons par le p\ort !"\Disp0\->\theta
+\IfEnd
+\If W=37
+\Then \PlotOff I,J
+\For 21\->A \To 11 \Step \(-)5
+\Text A,A+37,"\theta"
+\For 0\->X \To 99
+\Next 
+\Text A,A+37,"~"
+\Next 
+38\->\Mat Z[12,6
+0\->\Mat Z[9,3
+\For 0\->X \To 199
+\Next 
+\sin 5\->X
+\GotoT
+\IfEnd
+\If Z=38
+\Then 14\->B
+\For 47\->A \To 73
+\Isz B
+\PlotOn A,B
+\For 0\->X \To 60
+\Next 
+\PlotOff A,B
+\Next 
+41\->\Mat Z[12,6
+1\->\Mat Z[12,2
+"On debarque ici."\Disp"Tu comprends qui est Tomberry maintenant ?Il nous faut trouver un moyen de l'"
+"arreter,sinon..."\Disp\ClrText
+"C'est la fin de Gaia."\Disp\Orange "Je prend les choses  en main."\Disp\ClrText
+\Orange "Jessie,donne l'alerteet fait evacuer les  villes voisines."\Disp\ClrText
+\Orange "Wills,essaie d'avoir plus d'inf\ormations  sur Tomberry du cote de la FFC."\Disp\ClrText
+\Orange "Je vais voir un"
+\Orange "vieil ami a HELENIA. On se retrouve a...  BOTMA."\Disp\ClrText
+"A tes \ordres,Z."
+"Prend ca :"
+"-5 soin+"
+"-5 adrena"
+"-5 chl\ore"
+"Et... bonne chance."\Disp\For 2\->O \To 4
+\For 1\->W \To 5
+\Prog "TNT7"
+\Next 
+\Next 
+9\->\Mat Z[10,3
+\IfEnd
+\If V=3\ And H=5\ And G=2\ And \Not \Mat Z[10,1
+\Then "Mais nous avons le"
+"soleil...  qui fait  pousser not'groseye"\Disp\Green "Z obtient 1 groseye."\Disp7\->O
+\Prog "TNT7"
+1\->\Mat Z[10,1
+\IfEnd
+\If A=60\ And B=42\ And \Not \Mat Z[10,2
+\Then \Orange "Le tres\or..."\Disp\Orange "Ca semble trop facilepour etre vrai."\Disp"Voix : En effet..."
+99\->W
+A\->\Mat Z[9,1
+B\->\Mat Z[9,2
+\Prog "TNT14"
+"Tu m'as vaincu,"
+"le tres\or est a toi."\Disp\Green "Z obtient :"
+\Green "-3 soin+"
+\Green "-3 groseyes"
+\Green "-300 skulls"\Disp\For 2\->O \To 7 \Step 5
+3+\Mat Z[O,5\->\Mat Z[O,5
+\Next 
+300+\Mat Z[10,4\->\Mat Z[10,4
+1\->\Mat Z[10,2
+\Mat Z[9,1\->A
+\Mat Z[9,2\->B
+\IfEnd
+\If G=16\ And H=2\ And V=3\ And \Mat Z[12,2
+\Then \If 1=\Mat Z[12,2
+\Then "Z ! Je craignais de  ne jamais te revoir."\Disp\ClrText
+\Orange "Le temps presse, j'aibesoin de cette arme qui peut sauver GAIA."\Disp\ClrText
+"L'Arme Ultime..."\Disp\If 3>\Mat Z[7,5
+\Then "Il me faut 3 groseyesFais vite."\Disp\Else "Tu as les 3 prismes  et les 3 groseyes ?  Laisse moi un peu de temps."\Disp0.5\->\Mat Z[12,2
+\Mat Z[7,5]-3\->\Mat Z[7,5
+\IfEnd
+\Else 0\->\Mat Z[12,2]
+"La Tarte aux groseyesest prete."\Disp\Orange "COMMENT ?!!!"\Disp"Oh, je ne te l'avais pas dit ?"\Disp\ClrText
+"L'Arme Ultime est uneTarte aux groseyes,  faite des PRISMES et de 3 GROSEYES."\Disp\Orange "(une tarte...)"\Disp\ClrText
+"Utilise-la contre    Tomberry.Compris ?"\Disp\Orange "Bien sur."\Disp\ClrText
+\Orange "Je te laisse,Sage.   Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
+"C'est ca. Adieu."\Disp1\->\Mat Z[8,5
+\IfEnd
+\Lbl T
+\If X=\sin 5
+\Then \StoPict 1
+\BG-Pict 1
+\For 1\->W \To 9
+\Plot 0,0
+\Cls
+\Next 
+\Plot 0,0
+\BG-None
+\For 1\->W \To 32
+\Text \Int 33\Ran#+7,\Int 53\Ran#+53,"  \aster "
+\Green \Text \Int 33\Ran#+7,\Int 53\Ran#+53,"    "
+\Orange \Text \Int 33\Ran#+7,\Int 53\Ran#+53," \aster  "
+\Next 
+\If \Not \Mat Z[1,1
+\Then \Cls
+\Text 30,41,"GAME OVER..."
+\Stop
+\IfEnd
+\IfEnd
+\Return
+\Lbl F
+\ClrText
+"TU ME DEFIES, ETRANGEMORTEL ?"\Disp\Orange "Je viens mettre fin aton regne."\Disp"AH AH AH..."\Disp\ClrText
+"TU DEVRAS D'ABORD"
+"VAINCRE MES DISCIPLES"\Disp\ClrText
+\Orange "R\Redox ? Enzo ?"
+\Orange "Je les croyais m\orts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!         "
+43\->W
+\Prog "TNT14"
+44\->W
+\Prog "TNT14"
+9\->V
+0\->\R b0
+55\->\Mat Z[12,6
+\Prog "TNT13"
+\ClrText
+"IMPRESSIONANT...     MAIS QUE PEUX-TU"
+"CONTRE MOI ?"\Disp\If \Not \Mat Z[8,5
+\Then "SANS L'ARME SUPREME  TU N'ES RIEN !"
+\For 0\->X \To 99
+\Next 
+0\->\Mat Z[1,1
+\For 31\->A \To 19 \Step \(-)6
+\Text A,81,"   "
+\Next 
+\sin 5\->X
+\GotoT
+\Else \Orange "Je peux...  CA."\Disp\Green "Z envoie :"
+\Green "Tarte aux groseyes !"
+\IfEnd
+\For 0\->X \To 99
+\Next 
+87\->A
+38\->B
+5\->C
+\StoPict 1
+\BG-Pict 1
+\For 0\->D \To 9
+\Cls
+\Plot 0,0
+\Next 
+\BG-None
+\For 1\->D \To 1800 \Step 50
+\Orange \F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
+\Isz C
+\Next 
+3\->C
+\For 1800\->D \To 1 \Step \(-)40
+\Green \F-Line A+C\sin D,B+C\cos D,A+C\sin (D-40),B+C\cos (D-40
+\Orange \F-Line A,B,A+60\Ran#-30,B+60\Ran#-30
+C+.6\->C
+\Next 
+\Cls
+\Plot 0,0
+\For 0\->X \To 1500
+\Next 
+\ClrText
+"Z ?...      Z ?!   "\Disp\Orange "Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
+"Jessie:Ton dernier"
+"combat a bien failli t'etre fatal..."\Disp\Orange "Et...et Tomberry ?"\Disp"Detruit. A jamais."
+\For 0\->X \To 600
+\Next 
+\Lbl R
+\Prog "TNT12"
+117\->R
+0\->N
+\Prog "TNT5"
+\StoPict 1
+117\->R
+\ViewWindow 127,\(-)1,0,63,1,0
+\RclPict 1
+\Prog "TNT5"
+\Text 30,51,"THE END"
+\Stop
+%End
