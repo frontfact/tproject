@@ -1944,7 +1944,7 @@ A=5\=>\Return
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1027
+Capacity:1035
 File Name:TNT11
 Group Name:
 Password:
@@ -1991,6 +1991,7 @@ Option4:
 \Green \Text 6A+1,91," "
 \theta=28\=>\Dsz A
 \theta=37\=>\Isz A
+\theta=47\=>\Return
 \Not A\=>3\->A
 A=4\=>1\->A
 \LpWhile \theta\<>31
