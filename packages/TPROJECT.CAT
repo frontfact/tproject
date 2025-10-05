@@ -1600,7 +1600,7 @@ C=13\=>\Text K,L,"PHOENIX"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2756
+Capacity:2660
 File Name:TNT9
 Group Name:
 Password:
@@ -1621,13 +1621,11 @@ Option4:
 \F-Line 1,53,37,53
 \Orange \Text 14,3,"[EXE]"
 \Orange \Text 20,5,"prendre"
-\Orange \Text 28,3,"[DEL]"
-\Orange \Text 34,3," jeter"
+\Orange \Text 28,3,"[EXIT]"
+\Orange \Text 34,3,"quitter"
 \F-Line 1,23,36,23
 \Green \Text 44,3,"\@24"
 \Green \Text 44,10,\Mat Z[10,4
-\Green \Text 50,3,"Epee"
-\Green \Text 56,3,"Livre"
 3\->O
 0\->C
 \For 5\->B \To 6
@@ -1647,7 +1645,7 @@ Option4:
 \F-Line B+1,\(-)A+62,B+2,\(-)A+62
 \Do
 \Getkey\->\theta
-\LpWhile \theta\<>38\ And \theta\<>27\ And \theta\<>28\ And \theta\<>37\ And \theta\<>47\ And \theta\<>31\ And \theta\<>44
+\LpWhile \theta\<>38\ And \theta\<>27\ And \theta\<>28\ And \theta\<>37\ And \theta\<>47\ And \theta\<>31
 \theta=47\=>\Return
 \Text A,B," "
 \theta=28\=>A-6\->A
@@ -1656,18 +1654,13 @@ Option4:
 \theta=27\=>83\->B
 A=\(-)3\=>57\->A
 A=63\=>3\->A
-\theta\<>31\=>\theta\<>44\=>\Goto1
+\theta\<>31\=>\Goto1
 \Int (.17A+.5\->G
 \Int (.02B+4.89\->H
 \Mat Z[G,H\->D
 G\->C
 H=6\=>G+10\->C
 ((C=14\ Or C=7\ Or C=11\ Or C=12\ Or C=13)\ And \Not \r)\ Or C=9\ Or C=8\ Or C=15\ Or \Not D\=>\Goto1
-\If \theta=44
-\Then 0\->\Mat Z[G,H
-\Text 6G-3,44H-181,"           "
-\Goto1
-\IfEnd
 C<8\=>\Mat Z[G,H]-1\->\Mat Z[G,H
 C=1\ Or C=2\=>80C+\Mat Z[1,1\->\Mat Z[1,1
 C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
