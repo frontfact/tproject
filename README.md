@@ -13,21 +13,24 @@ First released on 15th december 2001.
 - [x] Fix typo "scull" in user menu
 - [x] Dynamic step to display score
 - [x] User menu : remove 'options', 'retour', 'quitter le jeu'
-- [ ] ~~Suggest to load a game if a save exists~~ impossible
+- [x] ~~Suggest to load a game if a save exists~~ → impossible
 - [ ] Fix dialogs typos
-- [ ] ~~Facilitate the arm wrestling against the troll~~ not necessary (on graph65)
+- [x] ~~Facilitate the arm wrestling against the troll~~ → not necessary (on graph65)
 - [x] Enable F6 key (go to world) during city loading
 - [x] Objects : do not display 'Epee' and 'Livre'
 - [x] Objects : remove menu entry [jeter]
 - [x] Shop : Enable [exit] key to exit shop
 - [ ] Objects : allow you to take several objects in a row, except during fight
-- [ ] Check if we can dedicate pict-2 to store last visited city
-- [x] ~~Check if 'vision' power exists~~ it does
+- [ ] Check if we can use pict-2 to store last visited city. probably requires 4096 bytes saving elsewhere
+- [x] ~~Check if 'vision' power exists~~ → it does
+- [x] ~~Extract shop init from TNT15~~ → TNT16
+- [x] ~~Extract hostel from TNT4~~ → TNT17
+- [ ] Display 'hum?' only if progress < W ?
 - [ ] Port to graph35+
 - [ ] Port to graph100+
 - [ ] Notice in markdown/pdf
 	- [ ] screenshots of attaks/powers
 	- [ ] 'hum?' in points of interest
 	- [x] sequence diagram for TNT2 (main loop)
-	- [ ] sequence diagram for TNT3 (city loop)
+	- [x] sequence diagram for TNT3 (city loop)
 	- [ ] sequence diagram for TNT14 (fight loop)
