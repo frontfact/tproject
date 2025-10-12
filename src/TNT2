@@ -70,8 +70,7 @@ Then
     0→r
     If Ans=72
     Then 
-      ∛π
-      Prog "TNT15"
+      Prog "TNT16"
       Prog "TNT11"
     IfEnd
   IfEnd

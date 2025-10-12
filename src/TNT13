@@ -108,8 +108,7 @@ Then
   50→I
   40→J
 IfEnd
-∛π
-Prog "TNT15"
+Prog "TNT16"
 If a₁
 Then 
   a₁→I

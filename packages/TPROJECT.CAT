@@ -223,7 +223,7 @@ Z>41\=>\Orange \Text 37,87,"."
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1811
+Capacity:1808
 File Name:TNT2
 Group Name:
 Password:
@@ -296,8 +296,7 @@ B\->\Mat Z[9,2
 \ClrText
 0\->\r
 \If \Ans=72
-\Then \curt\Pi
-\Prog "TNT15"
+\Then \Prog "TNT16"
 \Prog "TNT11"
 \IfEnd
 \IfEnd
@@ -2265,7 +2264,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5658
+Capacity:5655
 File Name:TNT13
 Group Name:
 Password:
@@ -2373,8 +2372,7 @@ X>21\=>12.124\->\Mat A[2,6
 50\->I
 40\->J
 \IfEnd
-\curt\Pi
-\Prog "TNT15"
+\Prog "TNT16"
 \If \R a1
 \Then \R a1\->I
 \R a2\->J
@@ -3260,7 +3258,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3869
+Capacity:3761
 File Name:TNT15
 Group Name:
 Password:
@@ -3270,12 +3268,6 @@ Option3:
 Option4:
 %Data Record
 \R b0=.142\=>\GotoF
-\If \Ans=\curt\Pi
-\Then {1,2,3,4,5,6,14,15}\->\List 1
-{\Int 8\Ran#+16,\Int 8\Ran#+21,\Int 10\Ran#+40,\Int 10\Ran#+45,\Int 51\Ran#+90,\Int 51\Ran#+99,\Int 41\Ran#+160,\Int 3\Ran#+3}\->\List 2
-0
-\Return
-\IfEnd
 \ClrText
 \Mat Z[12,6\->W
 \If \theta=29
@@ -3500,4 +3492,20 @@ C+.6\->C
 \Prog "TNT5"
 \Text 30,51,"THE END"
 \Stop
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:93
+File Name:TNT16
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+{1,2,3,4,5,6,14,15}\->\List 1
+{\Int 8\Ran#+16,\Int 8\Ran#+21,\Int 10\Ran#+40,\Int 10\Ran#+45,\Int 51\Ran#+90,\Int 51\Ran#+99,\Int 41\Ran#+160,\Int 3\Ran#+3}\->\List 2
 %End
