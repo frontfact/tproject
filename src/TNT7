@@ -1,11 +1,14 @@
-If O·
-Then 5‡Q·
-O‡P·
-P>10îIsz Q·
-Q=6îP-10‡P·
-0‡X·
-If O=14 And Mat Z[P,Q·
-Then 2‡X·
-Else 1+Mat Z[P,Q‡Mat Z[P,Q·
-IfEnd·
+If O
+Then 
+  5â†’Q
+  Oâ†’P
+  P>10â‡’Isz Q
+  Q=6â‡’P-10â†’P
+  0â†’X
+  If O=14 And Mat Z[P,Q
+  Then 
+    2â†’X
+  Else 
+    1+Mat Z[P,Qâ†’Mat Z[P,Q
+  IfEnd
 IfEnd

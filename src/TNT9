@@ -1,203 +1,214 @@
-0‡P~Q·
-Cls·
-F-Line 1,1,127,1·
-F-Line 127,1,127,63·
-F-Line 127,63,1,63·
-F-Line 1,63,1,1·
-F-Line 36,1,36,63·
-F-Line 37,1,37,63·
-Green Text 4,7,"OBJETS"·
-F-Line 1,53,37,53·
-Orange Text 14,3,"[EXE]"·
-Orange Text 20,5,"prendre"·
-Orange Text 28,3,"[DEL]"·
-Orange Text 34,3," jeter"·
-F-Line 1,23,36,23·
-Green Text 44,3,"$"·
-Green Text 44,10,Mat Z[10,4·
-Green Text 50,3,"Epee"·
-Green Text 56,3,"Livre"·
-3‡O·
-0‡C·
-For 5‡B To 6·
-For 1‡A To 10·
-Isz C·
-If Mat Z[A,B·
-Then 6A-3‡K·
-44B-176‡L·
-Prog "TNT8"·
-Mat Z[A,B]>1îText K,L+31,Mat Z[A,B·
-IfEnd·
-Next·
-Next·
-3‡A·
-39‡B·
-Lbl 1·
-F-Line B+1,A+62,B+2,A+62·
-Do·
-Getkey‡–·
-LpWhile –¬38 And –¬27 And –¬28 And –¬37 And –¬47 And –¬31 And –¬44·
-–=47îReturn·
-Text A,B," "·
-–=28îA-6‡A·
-–=37îA+6‡A·
-–=38î39‡B·
-–=27î83‡B·
-A=3î57‡A·
-A=63î3‡A·
-–¬31î–¬44îGoto 1·
-Int (.17A+.5‡G·
-Int (.02B+4.89‡H·
-Mat Z[G,H‡D·
-G‡C·
-H=6îG+10‡C·
-((C=14 Or C=7 Or C=11 Or C=12 Or C=13) And Not Ğ) Or C=9 Or C=8 Or C=15 Or Not DîGoto 1·
-If –=44·
-Then 0‡Mat Z[G,H·
-Text 6G-3,44H-181,"           "·
-Goto 1·
-IfEnd·
-C<8îMat Z[G,H]-1‡Mat Z[G,H·
-C=1 Or C=2î80C+Mat Z[1,1‡Mat Z[1,1·
-C=3 Or C=4î40+Mat Z[C-1,1‡Mat Z[C-1,1·
-If C=5 Or C=6·
-Then For 1‡X To 2·
-1+Mat Z[10-C,X‡Mat Z[10-C,X·
-Next·
-IfEnd·
-For 1‡X To 3·
-Mat Z[X,1]>Mat Z[X,2îMat Z[X,2‡Mat Z[X,1·
-Next·
-If C=7·
-Then Cls·
-RclPict 1·
-For 29‡A To 11 Step 6·
-Green Text A,55,"     "·
-Next·
-320‡A·
-27‡C·
-For 57‡B To 106·
-PlotOn B,16+Abs (Ccos A·
-A+10‡A·
-C-.15‡C·
-Next·
-For 20‡C To 180 Step 20·
-Orange F-Line 107+10cos (C-20,16+7sin (C-20,107+10cos C,16+7sin C·
-Next·
-107‡A·
-For 1‡C To 1 Step 2·
-For 4‡B To 10 Step 3·
-Orange F-Line A+CB¡2,16,A+C(B+5,25·
-Orange F-Line A+C(B-5,25,A+C(B-2,40·
-Next·
-Orange F-Line A,42,A+7C,42·
-Orange F-Line A+7C,42,A+15C,38·
-Orange F-Line A+15C,38,A+17C,45·
-Orange F-Line A+17C,45,A+14C,55·
-Orange F-Line A+14C,55,A,58·
-Next·
-Int (Mat Z[6,1]-130-41Ran#‡Mat Z[6,1·
-For 1‡X To 400·
-Next·
-IfEnd·
-If C=14 And Mat Z[5,6·
-Then Mat Z[5,6]-1‡Mat Z[5,6·
-M¬7îMat Z[6,1]-16-Int 7Ran#‡Mat Z[6,1·
-IfEnd·
-If C>10 And C<14 And Mat Z[3,1]>19·
-Then Cls·
-RclPict 1·
-For 12‡P To 42 Step 6·
-Text P,40,"        "·
-P<31îGreen Text P-1,50,"       "·
-Next·
-S-Gph1 DrawOff·
-S-Gph2 DrawOff·
-S-Gph3 DrawOn·
-If C=11·
-Then Text 51,38," ‡ennemi plus lent ƒ"·
-F-Line 55,56,65,38·
-F-Line 65,38,55,20·
-F-Line 55,20,45,38·
-F-Line 45,38,55,56·
-Orange F-Line 55,48,55,28·
-For 0‡W To 200·
-Next·
-Orange F-Line 48,38,62,38·
-For 0‡W To 200·
-Next·
-Orange F-Line 51,43,59,33·
-For 0‡W To 200·
-Next·
-Orange F-Line 51,33,59,43·
-For 0‡W To 300·
-Next·
-Green F-Line 45,38,88,58·
-Green F-Line 55,56,88,58·
-Green F-Line 65,38,88,58·
-Green F-Line 55,20,88,58·
-1‡G·
-For 88‡W To 110·
-Isz G·
-G=2î0‡G·
-If G·
-Then Orange PlotOn W,58·
-Else Green PlotOn W,58·
-IfEnd·
-Next·
-Orange Circle 110,58,4·
-For 0‡W To 7·
-Int 24Ran#‡G·
-Int 15Ran#+24‡A·
-Orange F-Line 110,58,99+G,A·
-Text 64-A,97+G,"*"·
-Next·
-3+Mat Z[6,4‡Mat Z[6,4·
-IfEnd·
-If C=12·
-Then Text 51,38," ‡ennemi plus faible ƒ"·
-{42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}‡List 1·
-{16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}‡List 3·
-DrawStat·
-Green PlotOn 68,49·
-Orange Text 11,61,"@"·
-Orange Circle 72,43,3·
-For 0‡W To 6·
-Int 26Ran#+96‡G·
-Int 30Ran#+16‡H·
-Orange F-Line 72,43,G,H·
-Orange Text 64-H,G-2,"#"·
-Next·
-For 2‡X To 3·
-Mat Z[6,X]-2‡Mat Z[6,X·
-Next·
-IfEnd·
-If C=13·
-Then Text 51,38," ‡Z absorbe la vie ƒ "·
-{59,45,39,59,62,57,53,54,55,56,61,65,70,68,69,75,72,68,65,64,65,59}‡List 1·
-{55,50,40,46,44,37,36,34,32,30,33,34,44,47,49,48,53,55,60,54,47,55}‡List 3·
-DrawStat·
-Green F-Line 46,43,50,49·
-Green F-Line 52,45,55,49·
-Orange F-Line 68,52,69,52·
-Orange Circle 57,45,19·
-For 76‡W To 105·
-18Ran#-9·
-Orange PlotOn W,45+Ans·
-Green PlotOn W,45-Ans·
-Next·
-For 0‡W To 1·
-Orange F-Line 112+W+3Ran#,62,102+W+3Ran#,45·
-Orange F-Line 106+W+3Ran#,53,111+W+3Ran#,43·
-Orange F-Line 104+W+3Ran#,47,113+W+3Ran#,25·
-Orange F-Line 109+W+3Ran#,34,102+W+3Ran#,26·
-Orange F-Line 112+W+3Ran#,28,106+W+3Ran#,17·
-Next·
-Int (Mat Z[1,1]+2Mat Z[3,1‡Mat Z[1,1·
-IfEnd·
-Mat Z[6,1]-Int (9Ran#+2Mat Z[3,1]+((C-11)¤3)Mat Z[3,1‡Mat Z[6,1·
-0‡Mat Z[3,1·
-For 1‡X To 400·
-Next·
-IfEnd·
+0â†’P~Q
+Cls
+F-Line 1,1,127,1
+F-Line 127,1,127,63
+F-Line 127,63,1,63
+F-Line 1,63,1,1
+F-Line 36,1,36,63
+F-Line 37,1,37,63
+Green Text 4,7,"OBJETS"
+F-Line 1,53,37,53
+Orange Text 14,3,"[EXE]"
+Orange Text 20,5,"prendre"
+Orange Text 28,3,"[DEL]"
+Orange Text 34,3," jeter"
+F-Line 1,23,36,23
+Green Text 44,3,"$"
+Green Text 44,10,Mat Z[10,4
+Green Text 50,3,"Epee"
+Green Text 56,3,"Livre"
+3â†’O
+0â†’C
+For 5â†’B To 6
+  For 1â†’A To 10
+    Isz C
+    If Mat Z[A,B
+    Then 
+      6A-3â†’K
+      44B-176â†’L
+      Prog "TNT8"
+      Mat Z[A,B]>1â‡’Text K,L+31,Mat Z[A,B
+    IfEnd
+  Next 
+Next 
+3â†’A
+39â†’B
+Lbl 1
+F-Line B+1,-A+62,B+2,-A+62
+Do
+  Getkeyâ†’Î¸
+LpWhile Î¸â‰ 38 And Î¸â‰ 27 And Î¸â‰ 28 And Î¸â‰ 37 And Î¸â‰ 47 And Î¸â‰ 31 And Î¸â‰ 44
+Î¸=47â‡’Return
+Text A,B," "
+Î¸=28â‡’A-6â†’A
+Î¸=37â‡’A+6â†’A
+Î¸=38â‡’39â†’B
+Î¸=27â‡’83â†’B
+A=-3â‡’57â†’A
+A=63â‡’3â†’A
+Î¸â‰ 31â‡’Î¸â‰ 44â‡’Goto 1
+Int (.17A+.5â†’G
+Int (.02B+4.89â†’H
+Mat Z[G,Hâ†’D
+Gâ†’C
+H=6â‡’G+10â†’C
+((C=14 Or C=7 Or C=11 Or C=12 Or C=13) And Not r) Or C=9 Or C=8 Or C=15 Or Not Dâ‡’Goto 1
+If Î¸=44
+Then 
+  0â†’Mat Z[G,H
+  Text 6G-3,44H-181,"           "
+  Goto 1
+IfEnd
+C<8â‡’Mat Z[G,H]-1â†’Mat Z[G,H
+C=1 Or C=2â‡’80C+Mat Z[1,1â†’Mat Z[1,1
+C=3 Or C=4â‡’40+Mat Z[C-1,1â†’Mat Z[C-1,1
+If C=5 Or C=6
+Then 
+  For 1â†’X To 2
+    1+Mat Z[10-C,Xâ†’Mat Z[10-C,X
+  Next 
+IfEnd
+For 1â†’X To 3
+  Mat Z[X,1]>Mat Z[X,2â‡’Mat Z[X,2â†’Mat Z[X,1
+Next 
+If C=7
+Then 
+  Cls
+  RclPict 1
+  For 29â†’A To 11 Step -6
+    Green Text A,55,"     "
+  Next 
+  320â†’A
+  27â†’C
+  For 57â†’B To 106
+    PlotOn B,16+Abs (Ccos A
+    A+10â†’A
+    C-.15â†’C
+  Next 
+  For 20â†’C To 180 Step 20
+    Orange F-Line 107+10cos (C-20,16+7sin (C-20,107+10cos C,16+7sin C
+  Next 
+  107â†’A
+  For -1â†’C To 1 Step 2
+    For 4â†’B To 10 Step 3
+      Orange F-Line A+CBâŒŸ2,16,A+C(B+5,25
+      Orange F-Line A+C(B-5,25,A+C(B-2,40
+    Next 
+    Orange F-Line A,42,A+7C,42
+    Orange F-Line A+7C,42,A+15C,38
+    Orange F-Line A+15C,38,A+17C,45
+    Orange F-Line A+17C,45,A+14C,55
+    Orange F-Line A+14C,55,A,58
+  Next 
+  Int (Mat Z[6,1]-130-41Ran#â†’Mat Z[6,1
+  For 1â†’X To 400
+  Next 
+IfEnd
+If C=14 And Mat Z[5,6
+Then 
+  Mat Z[5,6]-1â†’Mat Z[5,6
+  Mâ‰ 7â‡’Mat Z[6,1]-16-Int 7Ran#â†’Mat Z[6,1
+IfEnd
+If C>10 And C<14 And Mat Z[3,1]>19
+Then 
+  Cls
+  RclPict 1
+  For 12â†’P To 42 Step 6
+    Text P,40,"        "
+    P<31â‡’Green Text P-1,50,"       "
+  Next 
+  S-Gph1 DrawOff
+  S-Gph2 DrawOff
+  S-Gph3 DrawOn
+  If C=11
+  Then 
+    Text 51,38," â†’ennemi plus lent !"
+    F-Line 55,56,65,38
+    F-Line 65,38,55,20
+    F-Line 55,20,45,38
+    F-Line 45,38,55,56
+    Orange F-Line 55,48,55,28
+    For 0â†’W To 200
+    Next 
+    Orange F-Line 48,38,62,38
+    For 0â†’W To 200
+    Next 
+    Orange F-Line 51,43,59,33
+    For 0â†’W To 200
+    Next 
+    Orange F-Line 51,33,59,43
+    For 0â†’W To 300
+    Next 
+    Green F-Line 45,38,88,58
+    Green F-Line 55,56,88,58
+    Green F-Line 65,38,88,58
+    Green F-Line 55,20,88,58
+    1â†’G
+    For 88â†’W To 110
+      Isz G
+      G=2â‡’0â†’G
+      If G
+      Then 
+        Orange PlotOn W,58
+      Else 
+        Green PlotOn W,58
+      IfEnd
+    Next 
+    Orange Circle 110,58,4
+    For 0â†’W To 7
+      Int 24Ran#â†’G
+      Int 15Ran#+24â†’A
+      Orange F-Line 110,58,99+G,A
+      Text 64-A,97+G,"*"
+    Next 
+    3+Mat Z[6,4â†’Mat Z[6,4
+  IfEnd
+  If C=12
+  Then 
+    Text 51,38," â†’ennemi plus faible !"
+    {42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}â†’List 1
+    {16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}â†’List 3
+    DrawStat
+    Green PlotOn 68,49
+    Orange Text 11,61,"@"
+    Orange Circle 72,43,3
+    For 0â†’W To 6
+      Int 26Ran#+96â†’G
+      Int 30Ran#+16â†’H
+      Orange F-Line 72,43,G,H
+      Orange Text 64-H,G-2,"#"
+    Next 
+    For 2â†’X To 3
+      Mat Z[6,X]-2â†’Mat Z[6,X
+    Next 
+  IfEnd
+  If C=13
+  Then 
+    Text 51,38," â†’Z absorbe la vie ! "
+    {59,45,39,59,62,57,53,54,55,56,61,65,70,68,69,75,72,68,65,64,65,59}â†’List 1
+    {55,50,40,46,44,37,36,34,32,30,33,34,44,47,49,48,53,55,60,54,47,55}â†’List 3
+    DrawStat
+    Green F-Line 46,43,50,49
+    Green F-Line 52,45,55,49
+    Orange F-Line 68,52,69,52
+    Orange Circle 57,45,19
+    For 76â†’W To 105
+      18Ran#-9
+      Orange PlotOn W,45+Ans
+      Green PlotOn W,45-Ans
+    Next 
+    For 0â†’W To 1
+      Orange F-Line 112+W+3Ran#,62,102+W+3Ran#,45
+      Orange F-Line 106+W+3Ran#,53,111+W+3Ran#,43
+      Orange F-Line 104+W+3Ran#,47,113+W+3Ran#,25
+      Orange F-Line 109+W+3Ran#,34,102+W+3Ran#,26
+      Orange F-Line 112+W+3Ran#,28,106+W+3Ran#,17
+    Next 
+    Int (Mat Z[1,1]+2Mat Z[3,1â†’Mat Z[1,1
+  IfEnd
+  Mat Z[6,1]-Int (9Ran#+2Mat Z[3,1]+((C-11)/3)Mat Z[3,1â†’Mat Z[6,1
+  0â†’Mat Z[3,1
+  For 1â†’X To 400
+  Next 
+IfEnd
 S-Gph3 DrawOff

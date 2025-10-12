@@ -1,48 +1,51 @@
-If O=2·
-Then Not CîGreen Text K,L,"       "·
-C=1îGreen Text K,L,"acier   "·
-C=2îGreen Text K,L,"force  "·
-C=3îGreen Text K,L,"onde   "·
-C=4îGreen Text K,L,"eclair "·
-C=5îGreen Text K,L,"vision "·
-C=6îGreen Text K,L,"boost  "·
-C=7îGreen Text K,L,"vague  "·
-C=8îGreen Text K,L,"morsur "·
-C=10îGreen Text K,L,"soleil "·
-C=9îGreen Text K,L,"griffe "·
-C=12îGreen Text K,L,"onde+  "·
-C=13îGreen Text K,L,"foudre "·
-C=11îGreen Text K,L,"vital  "·
-C=14îGreen Text K,L,"vampyr "·
-C=15îGreen Text K,L,"flamme "·
-C=16îGreen Text K,L,"orage  "·
-C=17îGreen Text K,L,"enfers "·
-IfEnd·
-If O=1·
-Then Not CîGreen Text K,L,"       "·
-C=1îGreen Text K,L,"coup   "·
-C=2îGreen Text K,L,"garde  "·
-C=3îGreen Text K,L,"feinte "·
-C=4îGreen Text K,L,"tranch "·
-C=5îGreen Text K,L,"double "·
-C=6îGreen Text K,L,"charge "·
-C=7îGreen Text K,L,"furie  "·
-C=8îGreen Text K,L,"Xmeta   "·
-IfEnd·
-If O=3·
-Then Not CîText K,L,"     "·
-C=1îText K,L,"soin"·
-C=2îText K,L,"soin +"·
-C=3îText K,L,"adrena"·
-C=4îText K,L,"chlore"·
-C=7îText K,L,"groseye"·
-C=8îText K,L,"[tarte]"·
-C=14îText K,L,"fusil"·
-C=15îText K,L,"balles"·
-C=16îText K,L,"LUNE"·
-C=5îText K,L,"protec"·
-C=6îText K,L,"power+"·
-C=11îText K,L,"ANGEL"·
-C=12îText K,L,"MAGMA"·
-C=13îText K,L,"PHOENIX"·
+If O=2
+Then 
+  Not Câ‡’Green Text K,L,"       "
+  C=1â‡’Green Text K,L,"acier   "
+  C=2â‡’Green Text K,L,"force  "
+  C=3â‡’Green Text K,L,"onde   "
+  C=4â‡’Green Text K,L,"eclair "
+  C=5â‡’Green Text K,L,"vision "
+  C=6â‡’Green Text K,L,"boost  "
+  C=7â‡’Green Text K,L,"vague  "
+  C=8â‡’Green Text K,L,"morsur "
+  C=10â‡’Green Text K,L,"soleil "
+  C=9â‡’Green Text K,L,"griffe "
+  C=12â‡’Green Text K,L,"onde+  "
+  C=13â‡’Green Text K,L,"foudre "
+  C=11â‡’Green Text K,L,"vital  "
+  C=14â‡’Green Text K,L,"vampyr "
+  C=15â‡’Green Text K,L,"flamme "
+  C=16â‡’Green Text K,L,"orage  "
+  C=17â‡’Green Text K,L,"enfers "
+IfEnd
+If O=1
+Then 
+  Not Câ‡’Green Text K,L,"       "
+  C=1â‡’Green Text K,L,"coup   "
+  C=2â‡’Green Text K,L,"garde  "
+  C=3â‡’Green Text K,L,"feinte "
+  C=4â‡’Green Text K,L,"tranch "
+  C=5â‡’Green Text K,L,"double "
+  C=6â‡’Green Text K,L,"charge "
+  C=7â‡’Green Text K,L,"furie  "
+  C=8â‡’Green Text K,L,"Xmeta   "
+IfEnd
+If O=3
+Then 
+  Not Câ‡’Text K,L,"     "
+  C=1â‡’Text K,L,"soin"
+  C=2â‡’Text K,L,"soin +"
+  C=3â‡’Text K,L,"adrena"
+  C=4â‡’Text K,L,"chlore"
+  C=7â‡’Text K,L,"groseye"
+  C=8â‡’Text K,L,"[tarte]"
+  C=14â‡’Text K,L,"fusil"
+  C=15â‡’Text K,L,"balles"
+  C=16â‡’Text K,L,"LUNE"
+  C=5â‡’Text K,L,"protec"
+  C=6â‡’Text K,L,"power+"
+  C=11â‡’Text K,L,"ANGEL"
+  C=12â‡’Text K,L,"MAGMA"
+  C=13â‡’Text K,L,"PHOENIX"
 IfEnd

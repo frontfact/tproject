@@ -1,0 +1,138 @@
+@24;$;1
+@7C;|;1
+@5C;¥;1
+@26;&;1
+@25;%;1
+@7FD1;z;2
+@7FD2;p;2
+EE;ᴇ;1
+slash;/;1
+Tera;T;1
+->;→;1
+=>;⇒;1
+<>;≠;1
+>=;≥;1
+<=;≤;1
+(-);-;1
+r;r;1
+or;or;2
+aster;*;1
+an;an;2
+Re;e;1
+Ra;a;1
+E;E;1
+milli;m;1
+Cnt;n;1
+!mark;!;1
+curt;∛;1
+xrt;⎷;1
+File1;File1;2
+File2;File2;2
+File3;File3;2
+File4;File4;2
+File5;File5;2
+File6;File6;2
+R a0;a₀;2
+R a1;a₁;2
+R a2;a₂;2
+ab/c;⌟;1
+Abs ;Abs ;1
+ And ; And ;2
+Ans;Ans;1
+AxesOn;AxesOn;2
+AxesOff;AxesOff;2
+R b0;b₀;2
+R b1;b₁;2
+R b2;b₂;2
+BG-None;BG-None;2
+BG-Pict ;BG-Pict ;2
+Break;Break;2
+Circle;Circle;2
+ClrList;ClrList;2
+ClrText;ClrText;2
+ClrGraph;ClrGraph;2
+Horizontal ;Horizontal ;2
+Vertical ;Vertical ;2
+PxlOn ;PxlOn ;2
+PxlOff ;PxlOff ;2
+PxlChg ;PxlChg ;2
+Fill(;Fill(;2
+Seq(;Seq(;2
+Cls;Cls;1
+CoordOn;CoordOn;2
+CoordOff;CoordOff;2
+cos ;cos ;1
+Deg;Deg;1
+Deg>;°;1
+Dim ;Dim ;2
+Disp;◢;1
+Do;Do;2
+Dot;Dot;2
+Cross;Cross;2
+DrawOn;DrawOn;2
+DrawOff;DrawOff;2
+DrawStat;DrawStat;1
+Dsz ;Dsz ;1
+Else ;Else ;2
+F-Line ;F-Line ;2
+For ;For ;2
+Frac ;Frac ;1
+FuncOn;FuncOn;2
+FuncOff;FuncOff;2
+Getkey;Getkey;2
+Goto;Goto ;1
+Graph Y=;Graph Y=;1
+Graph Y<;Graph Y<;1
+Graph Y>;Graph Y>;1
+Green ;Green ;2
+Blue ;Blue ;2
+GridOn;GridOn;2
+GridOff;GridOff;2
+Identity ;Identity ;2
+If ;If ;2
+IfEnd;IfEnd;2
+Int ;Int ;1
+Isz ;Isz ;1
+LabelOn;LabelOn;2
+LabelOff;LabelOff;2
+Lbl ;Lbl ;1
+List ;List ;2
+Locate ;Locate ;2
+LpWhile ;LpWhile ;2
+While ;While ;2
+Mat ;Mat ;2
+Next;Next;2
+Norm;Norm;1
+Not ;Not ;2
+ Or ; Or ;2
+Orange ;Orange ;2
+%;%;1
+Pi;π;1
+Plot ;Plot ;1
+PlotChg ;PlotChg ;2
+PlotOff ;PlotOff ;2
+PlotOn ;PlotOn ;2
+Prog ;Prog ;1
+PxlTest ;PxlTest ;2
+Ran#;Ran#;1
+RclPict ;RclPict ;2
+Return;Return;2
+S-Gph1 ;S-Gph1 ;2
+S-Gph2 ;S-Gph2 ;2
+S-Gph3 ;S-Gph3 ;2
+S-WindAuto;S-WindAuto;2
+S-WindMan;S-WindMan;2
+sin ;sin ;1
+sqrt;√;1
+Square;Square;2
+# Step is 2 but missing leading space consume 1
+Step ;Step ;1
+Stop;Stop;2
+StoPict ;StoPict ;2
+Text ;Text ;2
+Then ;Then ;2
+theta;θ;1
+# To is 2 but missing leading space consume 1
+To ;To ;1
+ViewWindow ;ViewWindow ;1
+xyLine;xyLine;2
