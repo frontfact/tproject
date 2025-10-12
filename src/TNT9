@@ -10,13 +10,11 @@ Green Text 4,7,"OBJETS"
 F-Line 1,53,37,53
 Orange Text 14,3,"[EXE]"
 Orange Text 20,5,"prendre"
-Orange Text 28,3,"[DEL]"
-Orange Text 34,3," jeter"
+Orange Text 28,3,"[EXIT]"
+Orange Text 34,3,"quitter"
 F-Line 1,23,36,23
 Green Text 44,3,"$"
 Green Text 44,10,Mat Z[10,4
-Green Text 50,3,"Epee"
-Green Text 56,3,"Livre"
 3→O
 0→C
 For 5→B To 6
@@ -37,7 +35,7 @@ Lbl 1
 F-Line B+1,-A+62,B+2,-A+62
 Do
   Getkey→θ
-LpWhile θ≠38 And θ≠27 And θ≠28 And θ≠37 And θ≠47 And θ≠31 And θ≠44
+LpWhile θ≠38 And θ≠27 And θ≠28 And θ≠37 And θ≠47 And θ≠31
 θ=47⇒Return
 Text A,B," "
 θ=28⇒A-6→A
@@ -46,19 +44,13 @@ Text A,B," "
 θ=27⇒83→B
 A=-3⇒57→A
 A=63⇒3→A
-θ≠31⇒θ≠44⇒Goto 1
+θ≠31⇒Goto 1
 Int (.17A+.5→G
 Int (.02B+4.89→H
 Mat Z[G,H→D
 G→C
 H=6⇒G+10→C
 ((C=14 Or C=7 Or C=11 Or C=12 Or C=13) And Not r) Or C=9 Or C=8 Or C=15 Or Not D⇒Goto 1
-If θ=44
-Then 
-  0→Mat Z[G,H
-  Text 6G-3,44H-181,"           "
-  Goto 1
-IfEnd
 C<8⇒Mat Z[G,H]-1→Mat Z[G,H
 C=1 Or C=2⇒80C+Mat Z[1,1→Mat Z[1,1
 C=3 Or C=4⇒40+Mat Z[C-1,1→Mat Z[C-1,1
