@@ -426,7 +426,7 @@ V+Q\->B
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1117
+Capacity:1134
 File Name:TNT3
 Group Name:
 Password:
@@ -445,7 +445,8 @@ J\->\Mat Z[12,5
 \Int (65-J)/5\->H
 \Int (I-50)/5+1\->G
 \Frac \Mat A[H,G\->\R b0
-\If \Int 10\R b0=2
+\Int (10\R b0\->\R b2
+\If \R b2=2
 \Then V\->\Mat Z[11,1
 \Green \Text 31,10,"       "
 \Orange \Text 23,2,"         "
@@ -456,8 +457,8 @@ J\->\Mat Z[12,5
 \RclPict 1
 \IfEnd
 V=3\ And ((H=5\ And G=2\ And \Not \Mat Z[10,1])\ Or (G=16\ And H=2\ And \Mat Z[12,2\=>\Prog "TNT15"
-\If \Int 10\R b0=1\ Or \Int 10\R b0=3
-\Then \If \Int 10\R b0=3\ Or (100\Frac 10\R b0=\Mat Z[12,6
+\If \R b2=1\ Or \R b2=3
+\Then \If \R b2=3\ Or (100\Frac 10\R b0=\Mat Z[12,6
 \Then \Green \Text 31,10,"      "
 \Orange \Text 23,2,"         "
 \PlotOff I,J
@@ -466,7 +467,8 @@ V=3\ And ((H=5\ And G=2\ And \Not \Mat Z[10,1])\ Or (G=16\ And H=2\ And \Mat Z[1
 \Else \Pi\->\R b1
 \IfEnd
 V\->\Mat Z[11,1
-\Prog "TNT4"
+\R b2=1\=>\Prog "TNT4"
+\R b2=3\=>\Prog "TNT17"
 \If Z=37
 \Then \Prog "TNT15"
 \Return
@@ -548,7 +550,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:9525
+Capacity:8626
 File Name:TNT4
 Group Name:
 Password:
@@ -560,8 +562,7 @@ Option4:
 0\->\R a1
 0\->\R a2
 \R b0=.142\=>\Prog "TNT15"
-\If \Int 10\R b0=1
-\Then \If \Frac 10\R b0
+\If \Frac 10\R b0
 \Then \ClrText
 100\Frac 10\R b0\->W
 \Mat Z[12,6\->Z
@@ -959,10 +960,22 @@ J\->\R a2
 \IfEnd
 Z\->\Mat Z[12,6
 \IfEnd
-\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:870
+File Name:TNT17
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
 \Lbl A
-\If \Int (10\R b0)=3
-\Then \ClrText
+\ClrText
 \If 36=\Mat Z[12,6
 \Then "Fuyez, fuyez vite !"\Disp\Return
 \IfEnd
@@ -1033,8 +1046,7 @@ X\=>\Locate W,2,"\@7FD1"
 \For 0\->W \To 300
 \Next 
 \IfEnd
-\IfEnd
-\Return
+\GotoA
 %End
 %Header Record
 Format:TXT

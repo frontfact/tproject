@@ -1,0 +1,79 @@
+Lbl A
+ClrText
+If 36=Mat Z[12,6
+Then 
+  "Fuyez, fuyez vite !"◢
+  Return
+IfEnd
+Orange " "
+For 1→W To 3
+  Green " "
+Next 
+Locate 1,1,"~~~~~~ AUBERGE ~~~~~~"
+Locate 1,2,"Bonjour etranger,"
+Locate 1,3,"Que desires-tu ?"
+Locate 3,5,"1.Sauvegarder"
+Locate 3,6,"2.Me reposer (25$)"
+Locate 3,7,"3.Sortir"
+Do
+  Getkey→θ
+LpWhile θ≠72 And θ≠62 And θ≠52
+θ=52⇒Return
+If θ=62
+Then 
+  If 25>Mat Z[10,4
+  Then 
+    ClrText
+    Green "Tu comptes me payer"
+    Green "avec quoi ?"◢
+    Goto A
+  IfEnd
+  Mat Z[10,4]-25→Mat Z[10,4
+  ClrText
+  Locate 2,1," ----- "
+  Locate 2,2,"|ZZZZZ|"
+  Locate 2,3," -v--- "
+  Locate 4,4,"o"
+  Locate 1,5,"°°°"
+  Locate 10,3,"Vie :   /"
+  Locate 8,5,"Magie :   /"
+  Locate 8,4,"Force :   /"
+  Locate 8,6,"Attak :   /"
+  Locate 8,7,"Defns :   /"
+  For 1→X To 5
+    For 1→Y To 2
+      Mat Z[X,2→Mat Z[X,1
+      Locate 4Y+11,X+2,Mat Z[X,1
+    Next 
+  Next 
+  0→X
+  For 0→V To 8
+    Isz X
+    X=2⇒0→X
+    For 3→W To 7
+      Not X⇒Locate W,2,"Z"
+      X⇒Locate W,2,"z"
+      For 1→Y To 30
+      Next 
+    Next 
+  Next 
+IfEnd
+If θ=72
+Then 
+  ClrText
+  Locate 5,1," SAUVEGARDER "
+  Locate 1,3,"Confirmer ?"
+  Locate 1,7,"[1]→Oui       [2]→Non"
+  Do
+    Getkey
+  LpWhile Not Ans
+  Ans=62⇒Goto A
+  Int (9999Ran#*9999Ran#→Mat Z[10,3
+  Mat Z*Mat Z[10,3→Mat Y
+  ClrText
+  Locate 7,4,"* Level *"
+  Locate 7,5,"* Saved *"
+  For 0→W To 300
+  Next 
+IfEnd
+Goto A

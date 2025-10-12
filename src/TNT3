@@ -8,7 +8,8 @@ J→Mat Z[12,5
 Int (65-J)/5→H
 Int (I-50)/5+1→G
 Frac Mat A[H,G→b₀
-If Int 10b₀=2
+Int (10b₀→b₂
+If b₂=2
 Then 
   V→Mat Z[11,1
   Green Text 31,10,"       "
@@ -20,9 +21,9 @@ Then
   RclPict 1
 IfEnd
 V=3 And ((H=5 And G=2 And Not Mat Z[10,1]) Or (G=16 And H=2 And Mat Z[12,2⇒Prog "TNT15"
-If Int 10b₀=1 Or Int 10b₀=3
+If b₂=1 Or b₂=3
 Then 
-  If Int 10b₀=3 Or (100Frac 10b₀=Mat Z[12,6
+  If b₂=3 Or (100Frac 10b₀=Mat Z[12,6
   Then 
     Green Text 31,10,"      "
     Orange Text 23,2,"         "
@@ -33,7 +34,8 @@ Then
     π→b₁
   IfEnd
   V→Mat Z[11,1
-  Prog "TNT4"
+  b₂=1⇒Prog "TNT4"
+  b₂=3⇒Prog "TNT17"
   If Z=37
   Then 
     Prog "TNT15"
