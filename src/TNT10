@@ -23,10 +23,8 @@ Text 5,113,Mat Z[1,2
 Orange Text 15,9,"attaques"
 Orange Text 21,9,"stats"
 Orange Text 27,9,"objets"
-Orange Text 33,9,"options"
-Orange Text 39,9,"retour"
-Orange Text 51,9,"quitter"
-Orange Text 57,11,"lejeu"
+Text 51,4,"[EXIT]"
+Text 57,8,"Return"
 Green F-Line 48,1,48,52
 Green F-Line 49,1,49,52
 1→A
@@ -39,17 +37,11 @@ LpWhile θ≠28 And θ≠37 And θ≠31 And θ≠47
 Text 6A+9,4,"           "
 θ=28⇒Dsz A
 θ=37⇒Isz A
-Not A⇒7→A
-A=8⇒1→A
+Not A⇒3→A
+A=4⇒1→A
 Text 6A+9,4,"[         ]"
 θ≠31⇒Goto Q
 A=5⇒Return
-If A=7
-Then 
-  ClrText
-  "TOMBERRY attend..."
-  Stop
-IfEnd
 If A=2
 Then 
   Text 15,55,"statistiques"

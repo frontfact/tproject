@@ -1817,7 +1817,7 @@ G=2\=>0\->G
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1449
+Capacity:1369
 File Name:TNT10
 Group Name:
 Password:
@@ -1851,10 +1851,8 @@ Option4:
 \Orange \Text 15,9,"attaques"
 \Orange \Text 21,9,"stats"
 \Orange \Text 27,9,"objets"
-\Orange \Text 33,9,"options"
-\Orange \Text 39,9,"retour"
-\Orange \Text 51,9,"quitter"
-\Orange \Text 57,11,"lejeu"
+\Text 51,4,"[EXIT]"
+\Text 57,8,"Return"
 \Green \F-Line 48,1,48,52
 \Green \F-Line 49,1,49,52
 1\->A
@@ -1867,16 +1865,11 @@ Option4:
 \Text 6A+9,4,"           "
 \theta=28\=>\Dsz A
 \theta=37\=>\Isz A
-\Not A\=>7\->A
-A=8\=>1\->A
+\Not A\=>3\->A
+A=4\=>1\->A
 \Text 6A+9,4,"[         ]"
 \theta\<>31\=>\GotoQ
 A=5\=>\Return
-\If A=7
-\Then \ClrText
-"TOMBERRY attend..."
-\Stop
-\IfEnd
 \If A=2
 \Then \Text 15,55,"statistiques"
 \Text 21,51,"ATTAK:   DEFNS:"
