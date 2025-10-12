@@ -36,6 +36,7 @@ Do
   Green Text 6A+1,91," "
   θ=28⇒Dsz A
   θ=37⇒Isz A
+  θ=47⇒Return
   Not A⇒3→A
   A=4⇒1→A
 LpWhile θ≠31
