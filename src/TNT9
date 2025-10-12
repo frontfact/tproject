@@ -16,10 +16,9 @@ F-Line 1,23,36,23
 Green Text 44,3,"$"
 Green Text 44,10,Mat Z[10,4
 3→O
-0→C
 For 5→B To 6
-  For 1→A To 10
-    Isz C
+  For 1→A To 8
+    A+10(B-5)→C
     If Mat Z[A,B
     Then 
       6A-3→K
@@ -42,8 +41,8 @@ Text A,B," "
 θ=37⇒A+6→A
 θ=38⇒39→B
 θ=27⇒83→B
-A=-3⇒57→A
-A=63⇒3→A
+A=-3⇒45→A
+A=51⇒3→A
 θ≠31⇒Goto 1
 Int (.17A+.5→G
 Int (.02B+4.89→H

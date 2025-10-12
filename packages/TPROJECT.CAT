@@ -1600,7 +1600,7 @@ C=13\=>\Text K,L,"PHOENIX"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2660
+Capacity:2664
 File Name:TNT9
 Group Name:
 Password:
@@ -1627,10 +1627,9 @@ Option4:
 \Green \Text 44,3,"\@24"
 \Green \Text 44,10,\Mat Z[10,4
 3\->O
-0\->C
 \For 5\->B \To 6
-\For 1\->A \To 10
-\Isz C
+\For 1\->A \To 8
+A+10(B-5)\->C
 \If \Mat Z[A,B
 \Then 6A-3\->K
 44B-176\->L
@@ -1652,8 +1651,8 @@ Option4:
 \theta=37\=>A+6\->A
 \theta=38\=>39\->B
 \theta=27\=>83\->B
-A=\(-)3\=>57\->A
-A=63\=>3\->A
+A=\(-)3\=>45\->A
+A=51\=>3\->A
 \theta\<>31\=>\Goto1
 \Int (.17A+.5\->G
 \Int (.02B+4.89\->H
