@@ -26,8 +26,8 @@ For 5→B To 6
       Prog "TNT8"
       Mat Z[A,B]>1⇒Text K,L+31,Mat Z[A,B
     IfEnd
-  Next 
-Next 
+  Next
+Next
 3→A
 39→B
 Lbl 1
@@ -57,43 +57,43 @@ If C=5 Or C=6
 Then 
   For 1→X To 2
     1+Mat Z[10-C,X→Mat Z[10-C,X
-  Next 
+  Next
 IfEnd
 For 1→X To 3
   Mat Z[X,1]>Mat Z[X,2⇒Mat Z[X,2→Mat Z[X,1
-Next 
+Next
 If C=7
 Then 
   Cls
   RclPict 1
   For 29→A To 11 Step -6
     Green Text A,55,"     "
-  Next 
+  Next
   320→A
   27→C
   For 57→B To 106
     PlotOn B,16+Abs (Ccos A
     A+10→A
     C-.15→C
-  Next 
+  Next
   For 20→C To 180 Step 20
     Orange F-Line 107+10cos (C-20,16+7sin (C-20,107+10cos C,16+7sin C
-  Next 
+  Next
   107→A
   For -1→C To 1 Step 2
     For 4→B To 10 Step 3
       Orange F-Line A+CB⌟2,16,A+C(B+5,25
       Orange F-Line A+C(B-5,25,A+C(B-2,40
-    Next 
+    Next
     Orange F-Line A,42,A+7C,42
     Orange F-Line A+7C,42,A+15C,38
     Orange F-Line A+15C,38,A+17C,45
     Orange F-Line A+17C,45,A+14C,55
     Orange F-Line A+14C,55,A,58
-  Next 
+  Next
   Int (Mat Z[6,1]-130-41Ran#→Mat Z[6,1
   For 1→X To 400
-  Next 
+  Next
 IfEnd
 If C=14 And Mat Z[5,6
 Then 
@@ -107,7 +107,7 @@ Then
   For 12→P To 42 Step 6
     Text P,40,"        "
     P<31⇒Green Text P-1,50,"       "
-  Next 
+  Next
   S-Gph1 DrawOff
   S-Gph2 DrawOff
   S-Gph3 DrawOn
@@ -120,16 +120,16 @@ Then
     F-Line 45,38,55,56
     Orange F-Line 55,48,55,28
     For 0→W To 200
-    Next 
+    Next
     Orange F-Line 48,38,62,38
     For 0→W To 200
-    Next 
+    Next
     Orange F-Line 51,43,59,33
     For 0→W To 200
-    Next 
+    Next
     Orange F-Line 51,33,59,43
     For 0→W To 300
-    Next 
+    Next
     Green F-Line 45,38,88,58
     Green F-Line 55,56,88,58
     Green F-Line 65,38,88,58
@@ -144,14 +144,14 @@ Then
       Else 
         Green PlotOn W,58
       IfEnd
-    Next 
+    Next
     Orange Circle 110,58,4
     For 0→W To 7
       Int 24Ran#→G
       Int 15Ran#+24→A
       Orange F-Line 110,58,99+G,A
       Text 64-A,97+G,"*"
-    Next 
+    Next
     3+Mat Z[6,4→Mat Z[6,4
   IfEnd
   If C=12
@@ -168,10 +168,10 @@ Then
       Int 30Ran#+16→H
       Orange F-Line 72,43,G,H
       Orange Text 64-H,G-2,"#"
-    Next 
+    Next
     For 2→X To 3
       Mat Z[6,X]-2→Mat Z[6,X
-    Next 
+    Next
   IfEnd
   If C=13
   Then 
@@ -187,19 +187,19 @@ Then
       18Ran#-9
       Orange PlotOn W,45+Ans
       Green PlotOn W,45-Ans
-    Next 
+    Next
     For 0→W To 1
       Orange F-Line 112+W+3Ran#,62,102+W+3Ran#,45
       Orange F-Line 106+W+3Ran#,53,111+W+3Ran#,43
       Orange F-Line 104+W+3Ran#,47,113+W+3Ran#,25
       Orange F-Line 109+W+3Ran#,34,102+W+3Ran#,26
       Orange F-Line 112+W+3Ran#,28,106+W+3Ran#,17
-    Next 
+    Next
     Int (Mat Z[1,1]+2Mat Z[3,1→Mat Z[1,1
   IfEnd
   Mat Z[6,1]-Int (9Ran#+2Mat Z[3,1]+((C-11)/3)Mat Z[3,1→Mat Z[6,1
   0→Mat Z[3,1
   For 1→X To 400
-  Next 
+  Next
 IfEnd
 S-Gph3 DrawOff

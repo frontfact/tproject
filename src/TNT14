@@ -11,7 +11,7 @@ P=3⇒Q+Mat Z[4,1→Mat Z[4,1
 P=4⇒Q+Mat Z[5,1→Mat Z[5,1
 For 2→T To 3
   Mat Z[T,1]>Mat Z[T,2⇒Mat Z[T,2→Mat Z[T,1
-Next 
+Next
 P=8⇒Q+Mat Z[6,2→Mat Z[6,2
 P=9⇒Q+Mat Z[6,3→Mat Z[6,3
 1>Mat Z[6,2⇒1→Mat Z[6,2
@@ -19,7 +19,7 @@ P=9⇒Q+Mat Z[6,3→Mat Z[6,3
 If I≠Mat Z[1,1] Or J≠Mat Z[6,1
 Then 
   For 1→P To 150
-  Next 
+  Next
   Mat Z[1,1]<1⇒8π→X
   X=8π⇒Prog "TNT6"
   Mat Z[6,1]<1⇒Goto 2
@@ -44,8 +44,8 @@ For 2→T To 5
       Prog "TNT6"
       S=8⇒Return
     IfEnd
-  Next 
-Next 
+  Next
+Next
 Mat Z[1,1→I
 Mat Z[6,1→J
 Text 57,3,"[EXE]→menu action            "
@@ -95,12 +95,12 @@ Then
   Then 
     Text 57,3,"Z prend la fuite...     "
     For 1→X To 200
-    Next 
+    Next
     Return
   Else 
     Text 57,3,"Le monstre ratrappe Z ! "
     For 1→X To 200
-    Next 
+    Next
     0→P~Q
     Goto D
   IfEnd
@@ -130,7 +130,7 @@ Then
     6E+19→K
     Mat Z[E,4→C
     Prog "TNT8"
-  Next 
+  Next
   1→r
   Text 57,3,"[EXE]→Choisir une attak     "
   Do
@@ -175,7 +175,7 @@ Then
   Then 
     For 11→A To 26 Step 6
       Green Text A,50,"     "
-    Next 
+    Next
     4→W
     π→C
     π→N
@@ -183,7 +183,7 @@ Then
     Prog "TNT5"
     For 1→A To 12
       Orange F-Line 108,37,Int 20Ran#+98,Int 20Ran#+27
-    Next 
+    Next
     1→P
     32→Q
   IfEnd
@@ -191,7 +191,7 @@ Then
   Then 
     For 11→A To 26 Step 6
       Green Text A,50,"     "
-    Next 
+    Next
     2→W
     π→C
     π→N
@@ -233,7 +233,7 @@ Then
     For 12→C To 42 Step 6
       Text C,40,"        "
       C<31⇒Green Text C-1,50,"       "
-    Next 
+    Next
   IfEnd
   If V=1 Or V=5
   Then 
@@ -244,16 +244,16 @@ Then
     If V=5
     Then 
       For 1→X To 99
-      Next 
+      Next
       Cls
       RclPict 1
       Plot 0,0
       For 1→W To 70
-      Next 
+      Next
       For 12→C To 42 Step 6
         Text C,40,"        "
         C<31⇒Green Text C-1,50,"       "
-      Next 
+      Next
       2→W
       π→N
       75→R
@@ -267,10 +267,10 @@ Then
     75→R
     Prog "TNT5"
     For 1→X To 70
-    Next 
+    Next
     For 11→W To 26 Step 6
       Green Text W,82,"     "
-    Next 
+    Next
     3→W
     π→C
     π→N
@@ -296,20 +296,20 @@ Then
     For 1→B To 3
       For 23→A To 33 Step 6
         Green Text A,82,"       "
-      Next 
+      Next
       Isz W
       W=4⇒2→W
       π→C
       π→N
       Prog "TNT5"
-    Next 
+    Next
   IfEnd
   If V=2
   Then 
     Text 51,38,"defense +1            "
     For 11→A To 26 Step 6
       Green Text A,50,"     "
-    Next 
+    Next
     3→W
     π→C
     π→N
@@ -342,7 +342,7 @@ Then
     6E+19→K
     Mat Z[E,3→C
     Prog "TNT8"
-  Next 
+  Next
   1→r
   Text 57,3,"[EXE]→Choisir un pouvoir    "
   0→O
@@ -396,7 +396,7 @@ Then
     Orange Circle 49,37,10
     For 0→A To 9
       Orange F-Line 49,37,Int 50Ran#+24,Int 50Ran#+12
-    Next 
+    Next
     1+Mat Z[4,1→Mat Z[4,1
     4→P
     1→Q
@@ -407,7 +407,7 @@ Then
     Then 
       For 3→B To 40 Step 6
         Text B,71,"              "
-      Next 
+      Next
       Text 43,71,"              "
     IfEnd
     Text 11,86,"vitesse"
@@ -419,10 +419,10 @@ Then
     Text 20,110,Mat Z[7,4
     For 2→A To 3
       Text 16+7A,105,Mat Z[6,A
-    Next 
+    Next
     For 5.8→A To 0 Step -.2
       Text 4,99,Int A
-    Next 
+    Next
     Cls
     RclPict 1
     Plot 0,0
@@ -439,7 +439,7 @@ Then
   Then 
     Orange F-Line 67,55,67,61
     For 1→W To 80
-    Next 
+    Next
     Orange F-Line 107,61,100,45
     Orange F-Line 104,53,108,38
     Orange F-Line 106,45,101,30
@@ -450,7 +450,7 @@ Then
   Then 
     For 1→W To 40 Step 2
       F-Line W+65,38-W/2,W+65,38+W/2
-    Next 
+    Next
     1→P
     7→Q
   IfEnd
@@ -460,13 +460,13 @@ Then
       W<12⇒Green F-Line W+65,38-.5W,W+65,38+.5W
       W>11⇒W<24⇒F-Line W+65,38-.5W,W+65,38+.5W
       W>23⇒Orange F-Line W+65,38-.5W,W+65,38+.5W
-    Next 
+    Next
     For 1→A To 3
       Cls
       Plot 0,0
       RclPict 1
       Plot 0,0
-    Next 
+    Next
     1→P
     20→Q
   IfEnd
@@ -484,11 +484,11 @@ Then
       Cls
       RclPict 1
       Plot 0,0
-    Next 
+    Next
     Text 51,38,"ennemi att -1        "
     For 1→A To 7
       Orange Text Int 20Ran#+20,Int 20Ran#+96,"#"
-    Next 
+    Next
     1→P
     14→Q
     Mat Z[6,2]-1→Mat Z[6,2
@@ -497,21 +497,21 @@ Then
   Then 
     Orange F-Line 67,53,104,36
     For 1→X To 70
-    Next 
+    Next
     Cls
     RclPict 1
     Orange F-Line 67,53,104,34
     For 1→X To 80
-    Next 
+    Next
     Cls
     RclPict 1
     Orange Text 25,104,":"
     For 1→X To 80
-    Next 
+    Next
     Text 51,38,"Z absorbe enn vie !   "
     For 103→A To 47 Step -2
       Orange F-Line A,36+3Ran#,A-1,36+3Ran#
-    Next 
+    Next
     Int (20+10Ran#+Mat Z[1,1→Mat Z[1,1
     1→P
     22→Q
@@ -521,7 +521,7 @@ Then
     Orange Circle 76,37,11
     For 1→A To 35
       Orange F-Line 76,37,Int 75Ran#+50,Int 50Ran#+14
-    Next 
+    Next
     Int (Mat Z[1,1]-9-6Ran#→Mat Z[1,1
     1→P
     24→Q
@@ -531,14 +531,14 @@ Then
     For 1→A To 5
       Orange F-Line 67,53,Int 10Ran#+100,Int 25Ran#+20
       For 1→X To 50
-      Next 
+      Next
       Cls
       RclPict 1
-    Next 
+    Next
     Text 51,38,"ennemi def -1        "
     For 0→A To 5
       Orange F-Line 11Ran#+99,25Ran#+20,11Ran#+99,25Ran#+20
-    Next 
+    Next
     Mat Z[6,3]-1→Mat Z[6,3
     1→P
     14→Q
@@ -549,7 +549,7 @@ Then
     Green Circle 49,37,10
     For 0→A To 9
       Green F-Line 49,37,40Ran#+29,40Ran#+17
-    Next 
+    Next
     2→P
     Int (60+20Ran#→Q
   IfEnd
@@ -559,7 +559,7 @@ Then
       28Ran#
       Orange F-Line A-6,17,A-3,17+Ans
       Orange F-Line A-3,17+Ans,A,17
-    Next 
+    Next
     1→P
     34→Q
   IfEnd
@@ -570,13 +570,13 @@ Then
       Orange Circle 67,53,4
       For 54→A To 61
         Orange PlotOn 67,A
-      Next 
+      Next
     Else 
       Orange F-Line 67,54,66,61
       Orange F-Line 67,54,68,61
     IfEnd
     For 1→A To 99
-    Next 
+    Next
     0→O
     If V=16
     Then 
@@ -584,21 +584,21 @@ Then
         Isz O
         For 91+O→Q To 109+O Step 4
           PlotOn Q,P
-        Next 
-      Next 
+        Next
+      Next
     IfEnd
     Orange F-Line 107,61,101,45
     Orange F-Line 109,61,101,45
     For 1→A To 99
-    Next 
+    Next
     Orange F-Line 104,53,109,38
     Orange F-Line 106,53,109,38
     For 1→A To 99
-    Next 
+    Next
     Orange F-Line 106,45,102,30
     Orange F-Line 108,45,102,30
     For 1→A To 99
-    Next 
+    Next
     1→P
     40→Q
     V=13⇒28→Q
@@ -609,7 +609,7 @@ Then
       40Ran#
       Orange F-Line A-6,17,A-3,23+Ans
       Orange F-Line A-3,23+Ans,A,17
-    Next 
+    Next
     Mat Z[1,1]-20-Int 9Ran#→Mat Z[1,1
     1→P
     50→Q
@@ -628,12 +628,12 @@ Then
   0→L
   For 1→K To 5
     C=Mat Z[K,5-O⇒1→L
-  Next 
+  Next
   If L
   Then 
     Text 57,3,"tu connais deja cela.       "
     For 1→P To 200
-    Next 
+    Next
     0→P~Q
     Goto D
   IfEnd
@@ -651,7 +651,7 @@ Then
   For 1→K To 5
     Not Mat Z[K,5-O⇒K→L
     L⇒Break
-  Next 
+  Next
   If L
   Then 
     C→Mat Z[L,5-O
@@ -660,27 +660,27 @@ Then
     Text 57,3,"tu as appris                  "
     Prog "TNT8"
     For 1→P To 200
-    Next 
+    Next
     0→P~Q
     0→Mat Z[11,3
     Goto D
   Else 
     Text 57,3,"  ...tu n'as plus de place..."
     For 1→X To 200
-    Next 
+    Next
     Green Text 51,81,"       "
     Text 51,38,"supprimer quoi ?     "
     Text 57,3,"[EXE]→choisir   [EXIT]→quitter"
     For 25→W To 49 Step 6
       Green Text W,3,"        "
-    Next 
+    Next
     7→L
     C→W
     For 1→Q To 5
       Mat Z[Q,5-O→C
       19+6Q→K
       Prog "TNT8"
-    Next 
+    Next
     1→Q
     Do
       Green Text 19+6Q,3,"-"
@@ -712,7 +712,7 @@ Then
     Text 57,3," et il apprend                "
     Prog "TNT8"
     For 1→X To 200
-    Next 
+    Next
     0→P~Q
     0→Mat Z[11,3
     Goto D
@@ -738,7 +738,7 @@ For 1→A To 2
   X<14⇒Dsz B
   A=1⇒B→S
   A=2⇒B→T
-Next 
+Next
 If Mat Z[8,4
 Then 
   If 29=Mat Z[12,6
@@ -760,7 +760,7 @@ Int 3Ran#+2→W
 For 1→X To 2
   W+Mat Z[1,X→Mat Z[1,X
   1+Mat Z[K,X→Mat Z[K,X
-Next 
+Next
 1+Mat Z[12,3→Mat Z[12,3
 Mat Z[12,3→A
 Mat Z[11,2→θ
@@ -791,7 +791,7 @@ If A<99
 Then 
   For 0→B To A Step 3
     Green Text 16,91,B
-  Next 
+  Next
   Green Text 16,91,"   "
 IfEnd
 91→B
@@ -828,21 +828,21 @@ Then
   1+Mat Z[K,2→Mat Z[K,2
   For 1→Y To 2
     Int (18+3θ+Mat Z[1,Y→Mat Z[1,Y
-  Next 
+  Next
   For 2→X To 3
     For 1→Y To 2
       Int (7+X+Mat Z[X,Y→Mat Z[X,Y
-    Next 
-  Next 
+    Next
+  Next
 IfEnd
 For 4→X To 5
   Mat Z[X,2→Mat Z[X,1
-Next 
+Next
 For 2→X To 5
   For 1→Y To 2
     99<Mat Z[X,Y⇒99→Mat Z[X,Y
-  Next 
-Next 
+  Next
+Next
 Orange Text 35,83,"niveau:"
 Orange Text 35,114,Mat Z[11,2
 Orange Text 41,80,"att"
@@ -850,7 +850,7 @@ Orange Text 47,80,"def"
 Orange Text 53,80,"vie    /"
 For 4→T To 5
   Orange Text 17+6T,94,Mat Z[T,1
-Next 
+Next
 Orange Text 53,94,Mat Z[1,1
 Orange Text 53,112,Mat Z[1,2◢
 ClrList

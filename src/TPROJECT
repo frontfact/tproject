@@ -79,8 +79,8 @@ Then
   For 1→A To 12
     For 1→B To 6
       Int (Mat Z[A,B]≠Mat Z[A,B⇒Isz C
-    Next 
-  Next 
+    Next
+  Next
   ClrText
   If C
   Then 
@@ -107,5 +107,5 @@ Orange "Z parle en orange."◢
 ClrText
 "TNTSOFT vous souhaiteun agreable voyage"
 For 0→X To 400
-Next 
+Next
 Prog "TNT2"

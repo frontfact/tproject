@@ -1,0 +1,25 @@
+# using https://sequencediagram.org/
+title The T-Project : city
+
+participant "TNT2\nmain loop" as TNT2
+participant "TNT3\nCity entry point" as TNT3
+participant "TNT13\nDraw city" as TNT13
+participant "TNT4\nCity dialogs" as TNT4
+participant "TNT11\nShop" as TNT11
+participant "TNT17\nHostel" as TNT17
+participant "TNT10\nUser menu" as TNT10
+
+activate TNT3
+note over TNT3:Lbl I
+TNT3->TNT13:load+draw current city
+TNT13-->TNT13:StoPict 1
+note over TNT3:Lbl 1
+activate TNT3
+note over TNT3:Convert city coordinates I, J\nto matrix coordinates G, H\n\nFrac Mat A[H,G]→b₀
+TNT3->TNT4:b₀=0.1 → dialogs
+TNT3->TNT11:b₀=0.2 → shop
+TNT3->TNT17:b₀=0.3 → hostel
+TNT3-->TNT3:Getkey→θ
+TNT3->TNT10:θ=48 [menu]
+TNT3->TNT2:θ=29 [f6] → Goto W (world)
+note over TNT3:move according to θ\n\nGoto 1

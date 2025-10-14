@@ -20,16 +20,16 @@ V=9⇒Orange Text 5,3,"SANCTUA"
 V=10⇒Orange Text 5,3,"ATLANTIS"
 For 0→W To 7
   Green F-Line 3+W,51,3+W,44
-Next 
+Next
 Orange PlotOn 7,45
 For 1→W To 2
   Orange F-Line 7+W,45+2W,7+W,45
-Next 
+Next
 Orange F-Line 10,45,10,50
 Orange F-Line 11,45,11,49
 For 0→W To 2
   Orange F-Line 11,47-W,11+(2W+1),47-W
-Next 
+Next
 Orange F-Line 7,45,29,45
 Text 13,13,"TNT"
 Green F-Line 4,37,4,41
@@ -147,8 +147,8 @@ For 1→U To 10
       Green F-Line E+47,58-θ,E+52,58-θ
       C=3⇒PlotOff E+50,58-θ
     IfEnd
-  Next 
-Next 
+  Next
+Next
 V=5⇒Text 21,58,"θ"
 Lbl 9
 Orange Text 55,42,"             "
@@ -185,14 +185,14 @@ Then
     F-Line A-D,B+8,A-D,B+7
     F-Line A-D,B+5,A-D,B+4
     PlotOn A-D,B
-  Next 
+  Next
   If 50>Mat Z[12,6
   Then 
     For 4→A To 6
       For 7→B To 9
         .142→Mat A[A,B
-      Next 
-    Next 
+      Next
+    Next
     "TOMBERRY :"
     "JE T'ATTENDAIS."◢
   IfEnd

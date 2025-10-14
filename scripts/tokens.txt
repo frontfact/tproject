@@ -15,10 +15,10 @@ Tera;T;1
 <=;≤;1
 (-);-;1
 r;r;1
-or;or;2
+or;or;1
 aster;*;1
-an;an;2
-Re;e;1
+a;a;1
+Re;e;2
 Ra;a;1
 E;E;1
 milli;m;1
@@ -47,7 +47,7 @@ R b2;b₂;2
 BG-None;BG-None;2
 BG-Pict ;BG-Pict ;2
 Break;Break;2
-Circle;Circle;2
+Circle ;Circle ;2
 ClrList;ClrList;2
 ClrText;ClrText;2
 ClrGraph;ClrGraph;2
@@ -71,7 +71,7 @@ Dot;Dot;2
 Cross;Cross;2
 DrawOn;DrawOn;2
 DrawOff;DrawOff;2
-DrawStat;DrawStat;1
+DrawStat;DrawStat;2
 Dsz ;Dsz ;1
 Else ;Else ;2
 F-Line ;F-Line ;2
@@ -101,12 +101,11 @@ Locate ;Locate ;2
 LpWhile ;LpWhile ;2
 While ;While ;2
 Mat ;Mat ;2
-Next;Next;2
+Next ;Next;2
 Norm;Norm;1
 Not ;Not ;2
  Or ; Or ;2
 Orange ;Orange ;2
-%;%;1
 Pi;π;1
 Plot ;Plot ;1
 PlotChg ;PlotChg ;2
@@ -125,14 +124,14 @@ S-WindMan;S-WindMan;2
 sin ;sin ;1
 sqrt;√;1
 Square;Square;2
-# Step is 2 but missing leading space consume 1
+# Step is actually 2 bytes long, but cat encoding error
 Step ;Step ;1
 Stop;Stop;2
 StoPict ;StoPict ;2
 Text ;Text ;2
 Then ;Then ;2
 theta;θ;1
-# To is 2 but missing leading space consume 1
+# To is actually 2 bytes long, but cat encoding error
 To ;To ;1
 ViewWindow ;ViewWindow ;1
 xyLine;xyLine;2

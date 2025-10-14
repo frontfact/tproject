@@ -10,7 +10,7 @@ Then
   Then 
     Text 54,60,"HUM ?"
     For 0→W To 50
-    Next 
+    Next
     Text 54,60,"      "
     Return
   IfEnd
@@ -73,10 +73,10 @@ Then
     "Enzo:      "
     "Incarnation GOA."
     For 0→X To 99
-    Next 
+    Next
     Prog "TNT14"
     For 0→X To 300
-    Next 
+    Next
     ClrText
     "Mais c'est toi, Z ?!"
     Orange "Il parait, oui."
@@ -108,7 +108,7 @@ Then
       1→Mat Z[11,5
       Green "→retour chez Redox..."
       For 0→X To 300
-      Next 
+      Next
       "Bien,petit,tu meritesma confiance."
     IfEnd
     "prend ces skulls et  soigne toi."◢
@@ -193,7 +193,7 @@ Then
       IfEnd
       Locate 11,5,Int X
       X>89⇒Break
-    Next 
+    Next
     ClrText
     X<11⇒"Fin..."
     X<11⇒Stop
@@ -277,7 +277,7 @@ Then
     ClrText
     Green "FIN."
     For 0→X To 500
-    Next 
+    Next
     Orange "Hep-hep-hep..."
     Orange "C'est que le debut dujeu,la."
     Orange "Ces deux cons vont   pas s'en tirer"
@@ -451,7 +451,7 @@ Then
           8→Mat Z[X,4
           6→X
         IfEnd
-      Next 
+      Next
       "Voila,"
       "Tu peux choisir Xmetadans ATTAK pendant uncombat !"◢
       ClrText
@@ -473,7 +473,7 @@ Then
       "Redox : "
       "INCARNATION ARAKN !"
       For 0→X To 99
-      Next 
+      Next
       I→a₁
       J→a₂
       Prog "TNT14"
@@ -483,7 +483,7 @@ Then
       " "
       "INCARNATION GOA !"
       For 0→X To 99
-      Next 
+      Next
       Prog "TNT14"
       "...Nous mourrons......mais.....Tomberry.........est libre"◢
       ClrText

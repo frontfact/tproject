@@ -5,7 +5,7 @@ W=43 Or W=44 Or W=32 Or W=33 Or W=28.5 Or W=8 Or W=10.5 Or W=23 Or W=29 Or W=99�
 S⇒1→Mat Z[8,4
 For 4→X To 5
   Mat Z[X,2→Mat Z[X,1
-Next 
+Next
 0→Mat Z[11,3
 0→Mat Z[11,4
 Do
@@ -204,7 +204,7 @@ For 2→B To 3
   Not Ans⇒1
   Ans>8⇒8
   Ans→Mat Z[7,B
-Next 
+Next
 For 1→B To 3
   N=1⇒Int 4Ran#+1
   N=2⇒Int 5Ran#+3
@@ -217,7 +217,7 @@ For 1→B To 3
   S⇒Ans+1
   Ans>17⇒17
   Ans→Mat Z[8,B
-Next 
+Next
 115→R
 M≠7⇒Prog "TNT5"
 If S=43 Or S=44 Or S=32 Or S=33 Or S=8 Or S=10.5 Or S=99 Or S=28.5

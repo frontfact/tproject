@@ -60,13 +60,13 @@ Then
   For 21→A To 11 Step -5
     Text A,A+37,"θ"
     For 0→X To 99
-    Next 
+    Next
     Text A,A+37,"~"
-  Next 
+  Next
   38→Mat Z[12,6
   0→Mat Z[9,3
   For 0→X To 199
-  Next 
+  Next
   sin 5→X
   Goto T
 IfEnd
@@ -77,9 +77,9 @@ Then
     Isz B
     PlotOn A,B
     For 0→X To 60
-    Next 
+    Next
     PlotOff A,B
-  Next 
+  Next
   41→Mat Z[12,6
   1→Mat Z[12,2
   "On debarque ici."◢
@@ -105,8 +105,8 @@ Then
   For 2→O To 4
     For 1→W To 5
       Prog "TNT7"
-    Next 
-  Next 
+    Next
+  Next
   9→Mat Z[10,3
 IfEnd
 If V=3 And H=5 And G=2 And Not Mat Z[10,1
@@ -135,7 +135,7 @@ Then
   Green "-300 skulls"◢
   For 2→O To 7 Step 5
     3+Mat Z[O,5→Mat Z[O,5
-  Next 
+  Next
   300+Mat Z[10,4→Mat Z[10,4
   1→Mat Z[10,2
   Mat Z[9,1→A
@@ -182,14 +182,14 @@ Then
     For 1→W To 9
       Plot 0,0
       Cls
-    Next 
+    Next
     Plot 0,0
     BG-None
     For 1→W To 32
       Text Int 33Ran#+7,Int 53Ran#+53,"  * "
       Green Text Int 33Ran#+7,Int 53Ran#+53,"    "
       Orange Text Int 33Ran#+7,Int 53Ran#+53," *  "
-    Next 
+    Next
     If Not Mat Z[1,1
     Then 
       Cls
@@ -225,11 +225,11 @@ Then
   Then 
     "SANS L'ARME SUPREME  TU N'ES RIEN !"
     For 0→X To 99
-    Next 
+    Next
     0→Mat Z[1,1
     For 31→A To 19 Step -6
       Text A,81,"   "
-    Next 
+    Next
     sin 5→X
     Goto T
   Else 
@@ -238,7 +238,7 @@ Then
     Green "Tarte aux groseyes !"
   IfEnd
   For 0→X To 99
-  Next 
+  Next
   87→A
   38→B
   5→C
@@ -247,22 +247,22 @@ Then
   For 0→D To 9
     Cls
     Plot 0,0
-  Next 
+  Next
   BG-None
   For 1→D To 1800 Step 50
     Orange F-Line A+Csin D,B+Ccos D,A+(C-10)sin D,B+(C-10)cos D
     Isz C
-  Next 
+  Next
   3→C
   For 1800→D To 1 Step -40
     Green F-Line A+Csin D,B+Ccos D,A+Csin (D-40),B+Ccos (D-40
     Orange F-Line A,B,A+60Ran#-30,B+60Ran#-30
     C+.6→C
-  Next 
+  Next
   Cls
   Plot 0,0
   For 0→X To 1500
-  Next 
+  Next
   ClrText
   "Z ?...      Z ?!   "◢
   Orange "Que ? Oh, ma tete..."◢
@@ -273,7 +273,7 @@ Then
   Orange "Et...et Tomberry ?"◢
   "Detruit. A jamais."
   For 0→X To 600
-  Next 
+  Next
   Lbl R
   Prog "TNT12"
   117→R

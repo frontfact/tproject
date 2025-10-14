@@ -8,7 +8,7 @@ IfEnd
 Orange " "
 For 1→W To 3
   Green " "
-Next 
+Next
 Locate 1,1,"~~~~~~ AUBERGE ~~~~~~"
 Locate 1,2,"Bonjour etranger,"
 Locate 1,3,"Que desires-tu ?"
@@ -44,8 +44,8 @@ Then
     For 1→Y To 2
       Mat Z[X,2→Mat Z[X,1
       Locate 4Y+11,X+2,Mat Z[X,1
-    Next 
-  Next 
+    Next
+  Next
   0→X
   For 0→V To 8
     Isz X
@@ -54,9 +54,9 @@ Then
       Not X⇒Locate W,2,"Z"
       X⇒Locate W,2,"z"
       For 1→Y To 30
-      Next 
-    Next 
-  Next 
+      Next
+    Next
+  Next
 IfEnd
 If θ=72
 Then 
@@ -74,6 +74,6 @@ Then
   Locate 7,4,"* Level *"
   Locate 7,5,"* Saved *"
   For 0→W To 300
-  Next 
+  Next
 IfEnd
 Goto A

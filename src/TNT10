@@ -53,8 +53,8 @@ Then
   For 2→T To 3
     For 1→U To 2
       Text 15+6T,64+12U,Mat Z[T,U
-    Next 
-  Next 
+    Next
+  Next
   Text 39,51,"NIVEAU"
   Text 39,79,Mat Z[11,2
   Text 45,51,"EXPERIENCE:"
@@ -66,12 +66,12 @@ Then
   Int (C/10→T
   For 1→D To C Step T
     Text 57,74,D
-  Next 
+  Next
   Do
   LpWhile Not Getkey
   For 15→C To 57 Step 6
     Text C,51,"                 "
-  Next 
+  Next
 IfEnd
 If A=1
 Then 
@@ -82,7 +82,7 @@ Then
     Mat Z[B,4→C
     15+6B→K
     Prog "TNT8"
-  Next 
+  Next
   Text 15,93,"pouvoirs"
   2→O
   88→L
@@ -90,14 +90,14 @@ Then
     Mat Z[B,3→C
     15+6B→K
     Prog "TNT8"
-  Next 
+  Next
   Green Text 51,55,"PRESS [EXIT]"
   Do
   LpWhile Not Getkey
   Text 15,50,"                   "
   For 21→B To 51 Step 6
     Green Text B,51,"                   "
-  Next 
+  Next
   Goto Q
 IfEnd
 If A=3

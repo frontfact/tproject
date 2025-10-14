@@ -1,0 +1,42 @@
+# using https://sequencediagram.org/
+title The T-Project : Main loop overview
+
+participant "TNTPROJECT\nentry point" as TNTPROJECT
+participant "TNT2\nGame loop" as TNT2
+participant "TNT3\nCity load" as TNT3
+participant "TNT1\nDraw World" as TNT1
+
+participant "TNT14\nFight" as TNT14
+
+participant "TNT13\nDraw city" as TNT13
+
+participant "TNT10\nUser menu" as TNT10
+
+participant "TNT16\nShop prices init" as TNT16
+participant "TNT11\nShop" as TNT11
+
+participant "TNT15\nscript dialogs" as TNT15
+
+TNTPROJECT->TNT2:<new game>\n   or\n<load game>
+activate TNT2
+TNT2-->TNT3:At game startup, load city.\nSee later sequence
+TNT3-->TNT2:back to world (F6)
+note over TNT2:Lbl 9
+TNT2->TNT1:Draw world map
+space
+activate TNT2
+note over TNT2:Lbl 8 | Lbl S\nWorld main loop
+TNT2->TNT14: If move counter down to zero → fight
+TNT2->TNT2: If heliport\n→ Lbl H
+expandable− Special code for treasure
+TNT2->TNT15: A=60 And B=42 And Not Mat Z[10,2 : script
+end
+TNT2->TNT10: Getkey θ=48 → user menu
+expandable− Not Int 30Ran# → Street vendor
+TNT2->TNT16:initialize shop prices
+TNT2->TNT11:display shop
+end
+expandable− Entering a city
+TNT2->TNT3:Tests if user enters a city
+TNT3->TNT13:Draw city
+end

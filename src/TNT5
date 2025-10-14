@@ -32,7 +32,7 @@ Then
     For 60→A To 110 Step 3
       Green F-Line A-3,38,A,37
       Green F-Line A-3,36,A,37
-    Next 
+    Next
   IfEnd
   Return
 IfEnd
@@ -66,7 +66,7 @@ Then
     For 105→C To 50 Step -7-Int 2Ran#
       Orange F-Line C,33,C-5,36
       Orange F-Line C-4,33,C-9,30
-    Next 
+    Next
   IfEnd
 IfEnd
 If M=3
@@ -83,7 +83,7 @@ Then
       Isz D
       Orange F-Line 90,42,C,35
       Orange F-Line C,35,90,27
-    Next 
+    Next
   IfEnd
 IfEnd
 If M=4
@@ -101,7 +101,7 @@ Then
       Orange F-Line C,38-D,C-7,36-D
       Orange F-Line C-7,40+D,C-7,36-D
       D+2→D
-    Next 
+    Next
   IfEnd
 IfEnd
 If M=5
@@ -114,13 +114,13 @@ Then
   Else 
     For 92→A To 67 Step -1
       Orange PlotOn A,Int (-.84A+109.28)
-    Next 
+    Next
     For 1→B To 15
       Orange PlotChg 66+3Ran#,52+3Ran#
-    Next 
+    Next
     For 60→A To 20 Step -4+2Ran#
       Orange F-Line 67,53,45+2Ran#,A
-    Next 
+    Next
   IfEnd
 IfEnd
 If M=6
@@ -137,7 +137,7 @@ Then
       Orange F-Line C,40+H,C-5,40+G
       Orange F-Line C,41+H,C-5,41+G
       G→H
-    Next 
+    Next
     Orange F-Line 50,42,48,42
     Orange F-Line 50,39,48,39
   IfEnd
@@ -146,6 +146,6 @@ If W=7
 Then 
   For 1→W To 20
     Orange F-Line 52,42,24Ran#+40,24Ran#+30
-  Next 
+  Next
 IfEnd
 0→C
