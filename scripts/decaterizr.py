@@ -322,7 +322,7 @@ def main():
     else:
         cat = CatFile('nonexisting.cat')
         cat.forge_token_programs()
-    if False:
+    if True:
         cat.sort_programs()
         tproject = cat.find('TPROJECT')
         if tproject is not None:

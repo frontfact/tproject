@@ -20,7 +20,7 @@ First released on 15th december 2001.
 - [x] Objects : do not display 'Epee' and 'Livre'
 - [x] Objects : remove menu entry [jeter]
 - [x] Shop : Enable [exit] key to exit shop
-- [ ] Objects : allow to take several objects in a row, except during fight : TNT
+- [x] Objects : allow to take several objects in a row, except during fight : Not r, TNT9
 - [ ] Check if we can use pict-2 to store last visited city. probably requires 4096 bytes saving elsewhere
 - [x] ~~Check if 'vision' power exists~~ → it does
 - [x] ~~Extract shop init from TNT15~~ → TNT16

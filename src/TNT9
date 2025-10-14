@@ -28,29 +28,29 @@ For 5→B To 6
     IfEnd
   Next
 Next
-3→A
-39→B
+3→U
+39→V
 Lbl 1
-F-Line B+1,-A+62,B+2,-A+62
+F-Line V+1,-U+62,V+2,-U+62
 Do
   Getkey→θ
 LpWhile θ≠38 And θ≠27 And θ≠28 And θ≠37 And θ≠47 And θ≠31
 θ=47⇒Return
-Text A,B," "
-θ=28⇒A-6→A
-θ=37⇒A+6→A
-θ=38⇒39→B
-θ=27⇒83→B
-A=-3⇒45→A
-A=51⇒3→A
+Text U,V," "
+θ=28⇒U-6→U
+θ=37⇒U+6→U
+θ=38⇒39→V
+θ=27⇒83→V
+U=-3⇒45→U
+U=51⇒3→U
 θ≠31⇒Goto 1
-Int (.17A+.5→G
-Int (.02B+4.89→H
+Int (.17U+.5→G
+Int (.02V+4.89→H
 Mat Z[G,H→D
 G→C
 H=6⇒G+10→C
 ((C=14 Or C=7 Or C=11 Or C=12 Or C=13) And Not r) Or C=9 Or C=8 Or C=15 Or Not D⇒Goto 1
-C<8⇒Mat Z[G,H]-1→Mat Z[G,H
+C<8⇒D-1→Mat Z[G,H
 C=1 Or C=2⇒80C+Mat Z[1,1→Mat Z[1,1
 C=3 Or C=4⇒40+Mat Z[C-1,1→Mat Z[C-1,1
 If C=5 Or C=6
@@ -203,3 +203,14 @@ Then
   Next
 IfEnd
 S-Gph3 DrawOff
+If Not r
+Then 
+  Mat Z[G,H→D
+  6G-3→K
+  44H-176→L
+  D=0⇒0→C
+  D=0⇒Prog "TNT8"
+  Text K,L+31,"  "
+  D≥2⇒Text K,L+31,D
+  Goto 1
+IfEnd

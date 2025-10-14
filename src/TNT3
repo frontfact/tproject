@@ -1,5 +1,6 @@
 Lbl I
 Prog "TNT13"
+θ=29⇒Return
 Lbl 1
 0→N~O
 Green PlotOn I,J

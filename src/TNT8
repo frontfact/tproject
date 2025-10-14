@@ -33,7 +33,7 @@ Then
 IfEnd
 If O=3
 Then 
-  Not C⇒Text K,L,"     "
+  Not C⇒Text K,L,"       "
   C=1⇒Text K,L,"soin"
   C=2⇒Text K,L,"soin +"
   C=3⇒Text K,L,"adrena"

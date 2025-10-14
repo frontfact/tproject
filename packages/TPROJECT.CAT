@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1351
+Capacity:1352
 File Name:TPROJECT
 Group Name:
 Password:
@@ -426,7 +426,7 @@ V+Q\->B
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1134
+Capacity:1142
 File Name:TNT3
 Group Name:
 Password:
@@ -437,6 +437,7 @@ Option4:
 %Data Record
 \Lbl I
 \Prog "TNT13"
+\theta=29\=>\Return
 \Lbl 1
 0\->N~O
 \Green \PlotOn I,J
@@ -550,7 +551,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:8629
+Capacity:8630
 File Name:TNT4
 Group Name:
 Password:
@@ -1462,7 +1463,7 @@ Q=6\=>P-10\->P
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:921
+Capacity:923
 File Name:TNT8
 Group Name:
 Password:
@@ -1503,7 +1504,7 @@ C=7\=>\Green \Text K,L,"furie  "
 C=8\=>\Green \Text K,L,"Xmeta   "
 \IfEnd
 \If O=3
-\Then \Not C\=>\Text K,L,"     "
+\Then \Not C\=>\Text K,L,"       "
 C=1\=>\Text K,L,"soin"
 C=2\=>\Text K,L,"soin +"
 C=3\=>\Text K,L,"adrena"
@@ -1524,7 +1525,7 @@ C=13\=>\Text K,L,"PHOENIX"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2664
+Capacity:2747
 File Name:TNT9
 Group Name:
 Password:
@@ -1562,29 +1563,29 @@ A+10(B-5)\->C
 \IfEnd
 \Next 
 \Next 
-3\->A
-39\->B
+3\->U
+39\->V
 \Lbl 1
-\F-Line B+1,\(-)A+62,B+2,\(-)A+62
+\F-Line V+1,\(-)U+62,V+2,\(-)U+62
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>38\ And \theta\<>27\ And \theta\<>28\ And \theta\<>37\ And \theta\<>47\ And \theta\<>31
 \theta=47\=>\Return
-\Text A,B," "
-\theta=28\=>A-6\->A
-\theta=37\=>A+6\->A
-\theta=38\=>39\->B
-\theta=27\=>83\->B
-A=\(-)3\=>45\->A
-A=51\=>3\->A
+\Text U,V," "
+\theta=28\=>U-6\->U
+\theta=37\=>U+6\->U
+\theta=38\=>39\->V
+\theta=27\=>83\->V
+U=\(-)3\=>45\->U
+U=51\=>3\->U
 \theta\<>31\=>\Goto1
-\Int (.17A+.5\->G
-\Int (.02B+4.89\->H
+\Int (.17U+.5\->G
+\Int (.02V+4.89\->H
 \Mat Z[G,H\->D
 G\->C
 H=6\=>G+10\->C
 ((C=14\ Or C=7\ Or C=11\ Or C=12\ Or C=13)\ And \Not \r)\ Or C=9\ Or C=8\ Or C=15\ Or \Not D\=>\Goto1
-C<8\=>\Mat Z[G,H]-1\->\Mat Z[G,H
+C<8\=>D-1\->\Mat Z[G,H
 C=1\ Or C=2\=>80C+\Mat Z[1,1\->\Mat Z[1,1
 C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
 \If C=5\ Or C=6
@@ -1728,6 +1729,16 @@ G=2\=>0\->G
 \Next 
 \IfEnd
 \S-Gph3 \DrawOff
+\If \Not \r
+\Then \Mat Z[G,H\->D
+6G-3\->K
+44H-176\->L
+D=0\=>0\->C
+D=0\=>\Prog "TNT8"
+\Text K,L+31,"  "
+D\>=2\=>\Text K,L+31,D
+\Goto1
+\IfEnd
 %End
 %Header Record
 Format:TXT
@@ -1957,7 +1968,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2829
+Capacity:2830
 File Name:TNT12
 Group Name:
 Password:
@@ -2381,7 +2392,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7967
+Capacity:7968
 File Name:TNT14
 Group Name:
 Password:
