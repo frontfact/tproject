@@ -25,13 +25,13 @@ First released on 15th december 2001.
 - [x] ~~Check if 'vision' power exists~~ → it does
 - [x] ~~Extract shop init from TNT15~~ → TNT16
 - [x] ~~Extract hostel from TNT4~~ → TNT17
-- [ ] Display 'hum?' only if progress < W ?
+- [x] ~~Display 'hum?' only if progress < W ?~~ no
 - [ ] Port to graph35+
 - [ ] Port to graph100+
 - [ ] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [ ] Notice in markdown/pdf
 	- [ ] screenshots of attaks/powers
-	- [ ] 'hum?' in points of interest
+	- [x] ~~'hum?' in points of interest~~ no
 	- [x] sequence diagram for TNT2 (main loop)
 	- [x] sequence diagram for TNT3 (city loop)
 	- [ ] sequence diagram for TNT14 (fight loop)
