@@ -1,3 +1,4 @@
+import argparse
 import sys
 import re
 import shutil, os
@@ -258,6 +259,13 @@ class CatFile(object):
                 return (program.name, 0)
         self.programs = sorted(self.programs, key=sort_key)
 
+    def sort(self):
+        self.sort_programs()
+        tproject = self.find('TPROJECT')
+        if tproject is not None:
+            self.programs.remove(tproject)
+            self.programs.insert(0, tproject)
+
     def find(self, progname: str):
         for program in self.programs:
             if program.name==progname:
@@ -311,25 +319,28 @@ class CatFile(object):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python decaterizr.py <file.cat>")
-        sys.exit(1)
-    filepath = sys.argv[1]
-    if True:
-        cat = CatFile(filepath)
-        cat.check_capacity()
-        cat.dump_programs('../src')
-    else:
-        cat = CatFile('nonexisting.cat')
-        cat.forge_token_programs()
-    if True:
-        cat.sort_programs()
-        tproject = cat.find('TPROJECT')
-        if tproject is not None:
-            cat.programs.remove(tproject)
-            cat.programs.insert(0, tproject)
-        cat.dump_programs('../src')
-        cat.write()
+    p = argparse.ArgumentParser()
+    p.add_argument('filepath')
+    p.add_argument('--sort', '-s', action='store_true')
+    p.add_argument('--forge', action='store_true')
+    p.add_argument('--dump', '-d', action='store_true')
+    p.add_argument('--overwrite', '-o', action='store_true')
+    args = p.parse_args()
+
+    catfile = CatFile(args.filepath)
+
+    if args.sort:
+        catfile.sort()
+
+    if args.dump:
+        catfile.dump_programs('../src')
+
+    if args.overwrite:
+        catfile.write()
+
+    if args.forge:
+        dummy = CatFile('non-existing.cat')
+        dummy.forge_token_programs()
 
 
 if __name__ == "__main__":
