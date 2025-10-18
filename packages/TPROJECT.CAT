@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1352
+Capacity:1353
 File Name:TPROJECT
 Group Name:
 Password:
@@ -109,9 +109,9 @@ D>1\=>0\->D
 70\->\R a1
 55\->\R a2
 \ClrText
-"Il est recom\ande de  parcourir la notice  avant de jouer."\Disp\ClrText
-\Green "R\Rappel :"
-\Orange "Z parle en \orange."\Disp"Son interlocuteur,   en bleu."\Disp\ClrText
+"Il est recommande de parcourir la notice  avant de jouer."\Disp\ClrText
+\Green "Rappel :"
+\Orange "Z parle en orange."\Disp"Son interlocuteur,   en bleu."\Disp\ClrText
 "TNTSOFT vous souhaiteun agreable voyage"
 \For 0\->X \To 400
 \Next 
@@ -145,18 +145,18 @@ Option4:
 \F-Line 127,63,127,2
 \F-Line 127,2,37,2
 \Green \Text 3,38,"\(-)Carte de Gaia\(-)"
-\Orange \Text 3,100,"[\millie\Cntu]"
+\Orange \Text 3,100,"[menu]"
 \Mat Z[12,6\->Z
-\Text 1,4,"Bot\milli\Ra"
+\Text 1,4,"Botma"
 Z>9\=>\Text 7,4,"Tara"
 \If Z>12
 \Then \Green \Text 13,4,"Atlantis"
 \Green \PlotOn 4,51
 \IfEnd
 Z>18\=>\Text 19,4,"Elos"
-Z>25\=>\Text 25,4,"Hele\Cntia"
-Z>28\=>\Text 31,4,"Wi\Cnthill"
-Z>30\=>\Text 37,4,"Ply\milliout"
+Z>25\=>\Text 25,4,"Helenia"
+Z>28\=>\Text 31,4,"Winhill"
+Z>30\=>\Text 37,4,"Plymout"
 \If Z>41
 \Then \Text 43,4,"Sanctua"
 \PlotOn 4,21
@@ -551,7 +551,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:8630
+Capacity:8634
 File Name:TNT4
 Group Name:
 Password:
@@ -581,7 +581,7 @@ Option4:
 "Laissez moi seul"
 "avec lui."\Disp\ClrText
 "Bonjour Z,"
-"Je suis R\Redox."
+"Je suis Redox."
 \Orange "...? Ou suis\(-)je ?"\Disp"Chez moi.Je t'ai"
 "soigne apres t'avoir trouve blesse."\Disp\ClrText
 "Malgre ton amnesie,  nous avons besoin de toi."\Disp\ClrText
@@ -589,7 +589,7 @@ Option4:
 "Bute\(-)le et reviens"
 "me voir."\Disp\ClrText
 "Achete\(-)toi soin,"
-"adrena et chl\ore :"
+"adrena et chlore :"
 "Tu devras combattre."\Disp20.109\->\Mat A[2,5
 \Isz Z
 230\->\Mat Z[10,4
@@ -607,14 +607,14 @@ Option4:
 \If W=6
 \Then \Orange "Il y a quelqu'un ?"
 "NON"
-\Orange "Je m'aut\orise donc a prendre cette gemme."\Disp\Isz Z
+\Orange "Je m'autorise donc a prendre cette gemme."\Disp\Isz Z
 \IfEnd
 \If W=7
 \Then "Merci beaucoup."
 "Enzo est rentre chez lui,juste en face."\Disp\Isz Z
 \IfEnd
 \If W=8
-\Then \Orange "Enzo,tu es m\ort !    Prepare toi au combat      "
+\Then \Orange "Enzo,tu es mort !    Prepare toi au combat      "
 "Enzo:      "
 "Incarnation GOA."
 \For 0\->X \To 99
@@ -626,14 +626,14 @@ Option4:
 "Mais c'est toi, Z ?!"
 \Orange "Il parait, oui."
 "Je sais que c'est"
-"R\Redox qui t'envoie."\Disp\ClrText
+"Redox qui t'envoie."\Disp\ClrText
 "Ne lui fais pas"
 "confiance...."
-"R\Reste avec moi."\Disp\ClrText
+"Reste avec moi."\Disp\ClrText
 \Green "Quel est ton choix ?"
 " "
 \Orange "1.Suivre Enzo"
-\Orange "2.R\Retour a R\Redox"
+\Orange "2.Retour a Redox"
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>72\ And \theta\<>62
@@ -643,11 +643,11 @@ Option4:
 70\->\R a1
 15\->\R a2
 "Tu as fait le bon"
-"choix,R\Redox t'aurait tue."
+"choix,Redox t'aurait tue."
 \Else 70\->\R a1
 50\->\R a2
 1\->\Mat Z[11,5
-\Green "\->retour chez R\Redox..."
+\Green "\->retour chez Redox..."
 \For 0\->X \To 300
 \Next 
 "Bien,petit,tu meritesma confiance."
@@ -671,11 +671,11 @@ J\->\R a2
 "Je sais."\Disp\ClrText
 "Cela fait"
 "bien longtemps que jen'avais vu quelqu'un."\Disp\ClrText
-"Al\ors ecoute bien :  cette chose toutes"
-"choses dev\ore."\Disp\ClrText
+"Alors ecoute bien :  cette chose toutes"
+"choses devore."\Disp\ClrText
 "Elle ronge le fer,"
-"M\ord l'acier."\Disp\ClrText
-"Met a m\ort les rois, detruit les villes   et rabat les hautes  montagnes..."\Disp\Pi\->T:7\->E:5\->M:8\->P:3\->S
+"Mord l'acier."\Disp\ClrText
+"Met a mort les rois, detruit les villes   et rabat les hautes  montagnes..."\Disp\Pi\->T:7\->E:5\->M:8\->P:3\->S
 \Orange "C'EST LE..."?\->R
 \ClrText
 \If R=TEMPS
@@ -691,7 +691,7 @@ J\->\R a2
 \IfEnd
 \IfEnd
 \If W=13
-\Then "Troll:si tu me bats  au bras de fer, ma   Lune est a toi. Mais si tu perds... Je te mange. D'acc\ord ?"
+\Then "Troll:si tu me bats  au bras de fer, ma   Lune est a toi. Mais si tu perds... Je te mange. D'accord ?"
 \Locate 1,7,"[EXE]\->OK [EXIT]\->Fuite"
 \Do
 \Getkey
@@ -699,7 +699,7 @@ J\->\R a2
 \Ans\<>31\=>\Return
 \ClrText
 \Locate 1,1,"!DEFI AU BRAS DE FER!"
-\Locate 1,2,"Appuyer n'imp\orte ou"
+\Locate 1,2,"Appuyer n'importe ou"
 \Locate 1,3,"fait monter le nombre"
 \Locate 11,4,"--"
 \Locate 4,5,"Press  50  a key"
@@ -756,7 +756,7 @@ X<11\=>\Stop
 \ClrText
 \Green "Les trois Lunes se"
 \Green "fondent en une"
-\Green "pour f\ormer le prismeANGEL !!!"\Disp\Isz Z
+\Green "pour former le prismeANGEL !!!"\Disp\Isz Z
 \IfEnd
 \If W=18\ And ((1=\Mat Z[11,5]\ And G=5)\ Or (G=6\ And 2=\Mat Z[11,5
 \Then "Tu l'as ? Parfait !"
@@ -768,17 +768,17 @@ X<11\=>\Stop
 "peux garder le prisme"
 \Orange "(mais que me"
 \Orange "cache\(-)t\(-)il ?)"
-"R\Rendez vous a ELOS,  pres du magasin."\Disp\Isz Z
+"Rendez vous a ELOS,  pres du magasin."\Disp\Isz Z
 \IfEnd
 \If W=19
-\Then \Green "...Enzo et R\Redox te"
+\Then \Green "...Enzo et Redox te"
 \Green "regardent,un sourire aux levres..."\Disp\ClrText
 "Nous t'avons menti   pour que tu nous"
 "aides a trouver le"
 "prisme ANGEL."\Disp\ClrText
 "Nous n'avons plus    besoin de toi,"
 "trouve-toi un boulot a Elos, vis heureux, et adieu."\Disp\ClrText
-\Green "Les deux complices tetournent le dos et...s\ortent en ville."\Disp\ClrText
+\Green "Les deux complices tetournent le dos et...sortent en ville."\Disp\ClrText
 \Green "FIN."
 \For 0\->X \To 500
 \Next 
@@ -791,7 +791,7 @@ X<11\=>\Stop
 \Then "Salut Z.Je m'apelle  Jessie et je veux"
 "t'aider:le prisme"
 "MAGMA est a ELOS."\Disp\ClrText
-"Si tu le trouves,tu  pourras te venger de R\Redox et d'Enzo..."\Disp22.125\->\Mat A[3,13
+"Si tu le trouves,tu  pourras te venger de Redox et d'Enzo..."\Disp22.125\->\Mat A[3,13
 \Isz Z
 \IfEnd
 \If W=21
@@ -801,15 +801,15 @@ X<11\=>\Stop
 \If W=22
 \Then "Maire d'ELOS"
 "Chasseur de prime? J'ai un job pour toi."\Disp\ClrText
-"Tue le m\andiv\or qui  terr\orise ma ville   et gagne 4000\@24."\Disp\Orange "...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
+"Tue le mandivor qui  terrorise ma ville   et gagne 4000\@24."\Disp\Orange "...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
 \Isz Z
 \IfEnd
 \If W=23
 \Then I\->\R a1
 J\->\R a2
-\Orange "Le m\andiv\or !"
+\Orange "Le mandivor !"
 \Prog "TNT14"
-\Orange "Plutot c\oriace..."\Disp24\->Z
+\Orange "Plutot coriace..."\Disp24\->Z
 \IfEnd
 \If W=24\ And 4999<\Mat Z[10,4
 \Then "Dur de m'en separer, mais j'ai vraiement"
@@ -818,15 +818,15 @@ J\->\R a2
 \Isz Z
 \IfEnd
 \If W=25
-\Then "Jessie:tu sais,Z...  Enzo et R\Redox..."
+\Then "Jessie:tu sais,Z...  Enzo et Redox..."
 \Orange "Eh bien ?"\Disp"Je crois que ton...  accident faisait"
 "parti de leur plan."\Disp\ClrText
 \Orange "..."\Disp\Orange "Ou sont-ils ?"\Disp"Partis. A HELENIA."\Disp\Isz Z
 \IfEnd
 \If W=26
 \Then "Z ?!"
-"Je suis Wills.Jessie m'a prevenu de ton   arrivee."\Disp\Orange "Ou est R\Redox ?"\Disp\ClrText
-"Dans la f\oret,il"
+"Je suis Wills.Jessie m'a prevenu de ton   arrivee."\Disp\Orange "Ou est Redox ?"\Disp\ClrText
+"Dans la foret,il"
 "cherche le prisme    PHOENIX."\Disp\ClrText
 "Va voir l'Ancien a   l'Est,il pourra"
 "t'aider."\Disp22.128\->\Mat A[3,6
@@ -841,10 +841,10 @@ J\->\R a2
 \Then "Ben voyons..."\Disp\Else "Exact."
 "Ecoute bien."\Disp\ClrText
 "Les prismes ont troisfonctions."\Disp\ClrText
-"\=>Invocation en combat\=>les 3 reunis f\ormentl'ARME SUPREME"
+"\=>Invocation en combat\=>les 3 reunis formentl'ARME SUPREME"
 "\=>Inscriptions de"
-"sagesse:j'ign\ore leurrole."\Disp\ClrText
-"R\Reviens me voir"
+"sagesse:j'ignore leurrole."\Disp\ClrText
+"Reviens me voir"
 "si tu as les"
 "3 prismes et"
 "3 groseyes."\Disp\Isz Z
@@ -853,17 +853,17 @@ J\->\R a2
 \IfEnd
 \If W=28
 \Then "Va livrer ce colis   a WINHILL."
-"R\Redox et Enzo t'y"
+"Redox et Enzo t'y"
 "attendent,"
 "ils disent avoir"
 "trouve le prisme"
 "PHOENIX."\Disp\ClrText
 "Mais la guerre"
-"vegetale fait rage aHELENIA...  la F\oret ne te laissera pas   s\ortir et..."
+"vegetale fait rage aHELENIA...  la Foret ne te laissera pas   sortir et..."
 \Orange "NON. Je passerai."\Disp28.5\->Z
 \IfEnd
 \If W=29
-\Then "Enzo \@26 R\Redox :"
+\Then "Enzo \@26 Redox :"
 "\Donne nous le colis, il est indispensable au Projet T."\Disp\ClrText
 \Orange "Le Projet T ?"
 \Orange "Mais de quoi s'agit\(-) \(-)il ?!"\Disp\ClrText
@@ -880,7 +880,7 @@ J\->\R a2
 \Orange "Inscriptions ?"\Disp\Isz Z
 \IfEnd
 \If W=30
-\Then "Maire: On dit qu'a lasource du fleuve se  trouve un tres\or..."\Disp\Isz Z
+\Then "Maire: On dit qu'a lasource du fleuve se  trouve un tresor..."\Disp\Isz Z
 0\->\Mat Z[10,2
 \IfEnd
 \If W=31
@@ -903,14 +903,14 @@ J\->\R a2
 "Tu peux choisir Xmetadans ATTAK pendant uncombat \!mark"\Disp\ClrText
 "Maintenant allons"
 "retrouver Jessie a "
-"PLYMOUT:elle saura   comment contrecarrer les plans de R\Redox."\Disp\Isz Z
+"PLYMOUT:elle saura   comment contrecarrer les plans de Redox."\Disp\Isz Z
 \IfEnd
 \If W=32
-\Then \Orange "R\Redox et Enzo !      Ils ne m'ont pas vu  entrer..."\Disp\Orange "Mais que font-ils ?!"\Disp\ClrText
+\Then \Orange "Redox et Enzo !      Ils ne m'ont pas vu  entrer..."\Disp\Orange "Mais que font-ils ?!"\Disp\ClrText
 "\EE\@25 )\@26)\->\ab/c\theta\xrt]=]\Pi...         Et voila !"\Disp"Dans quelques minutesTomberry ressurgira. NOUS AVONS ACCOMPLI  NOTRE MISSION !"\Disp\ClrText
 "Mais ? Qui est la ?  Z !!! Tu n'aurais"
 "jamais du nous suivre          "
-"R\Redox : "
+"Redox : "
 "INCARNATION ARAKN !"
 \For 0\->X \To 99
 \Next 
@@ -937,9 +937,9 @@ J\->\R a2
 23\->\Mat A[8,12
 \IfEnd
 \If W=35
-\Then \Orange "Jessie ! Il n'y a pasde temps a perdre !  R\Redox et Enzo disent avoir reveille..."
+\Then \Orange "Jessie ! Il n'y a pasde temps a perdre !  Redox et Enzo disent avoir reveille..."
 "TOMBERRY ?!!!"\Disp\ClrText
-"Al\ors ils avaient lestrois inscriptions desagesse..."\Disp"Nous devons trouver  un moyen de detruire ce demon !"\Disp\ClrText
+"Alors ils avaient lestrois inscriptions desagesse..."\Disp"Nous devons trouver  un moyen de detruire ce demon !"\Disp\ClrText
 "Mais pour l'instant  il faut fuir la villeau plus vite ! DANS  QUELQUES SECONDES    ELLE SERA ANEANTIE !"\Disp17\->\Mat Z[12,1
 \Isz Z
 \IfEnd
@@ -951,7 +951,7 @@ J\->\R a2
 \If W=41
 \Then "Wills: Tu n'est pas  avec Jessie ?"
 \Orange "Non,je ne l'ai pas  vu."\Disp\ClrText
-"Elle n'est pas enc\orerevenu.Je vais partira sa recherche."\Disp\ClrText
+"Elle n'est pas encorerevenu.Je vais partira sa recherche."\Disp\ClrText
 \Orange "Tu as eu des infos   sur Tomberry ?"\Disp\ClrText
 "Eh bien,j'ai appris  qu'il etait capable  de detruire Gaia..."
 \Orange "Ca,je le savais."
@@ -1106,7 +1106,7 @@ G\->H
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3348
+Capacity:3351
 File Name:TNT6
 Group Name:
 Password:
@@ -1212,7 +1212,7 @@ A\->\Mat Z[11,4
 \Text 51,38,"pouvoir\->             "
 \If A=1\ Or A=2
 \Then A=1\=>\Text 51,73,"acier"
-A=2\=>\Text 51,73,"f\orce"
+A=2\=>\Text 51,73,"force"
 \Circle 110,37,10
 10-A\->P
 1\->Q
@@ -1302,7 +1302,7 @@ A>24\=>\Orange \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
 \Then \For 1\->A \To 3
 \Cls
 \RclPict 1
-\Text 51,38,"pouvoir\->m\orsure     "
+\Text 51,38,"pouvoir\->morsure     "
 \Next 
 \For 1\->A \To 6
 \Orange \Text \Int 20\Ran#+10,\Int 20\Ran#+40,"#"
@@ -1358,7 +1358,7 @@ A>24\=>\Orange \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
 \IfEnd
 \If A=13\ Or A=16
 \Then A=13\=>\Text 51,73,"foudre"
-A=16\=>\Text 51,73,"\orage"
+A=16\=>\Text 51,73,"orage"
 \If A=16
 \Then 0\->W
 \For 61\->A \To 37 \Step \(-)3
@@ -1463,7 +1463,7 @@ Q=6\=>P-10\->P
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:923
+Capacity:927
 File Name:TNT8
 Group Name:
 Password:
@@ -1475,13 +1475,13 @@ Option4:
 \If O=2
 \Then \Not C\=>\Green \Text K,L,"       "
 C=1\=>\Green \Text K,L,"acier   "
-C=2\=>\Green \Text K,L,"f\orce  "
+C=2\=>\Green \Text K,L,"force  "
 C=3\=>\Green \Text K,L,"onde   "
 C=4\=>\Green \Text K,L,"eclair "
 C=5\=>\Green \Text K,L,"vision "
 C=6\=>\Green \Text K,L,"boost  "
 C=7\=>\Green \Text K,L,"vague  "
-C=8\=>\Green \Text K,L,"m\orsur "
+C=8\=>\Green \Text K,L,"morsur "
 C=10\=>\Green \Text K,L,"soleil "
 C=9\=>\Green \Text K,L,"griffe "
 C=12\=>\Green \Text K,L,"onde+  "
@@ -1489,7 +1489,7 @@ C=13\=>\Green \Text K,L,"foudre "
 C=11\=>\Green \Text K,L,"vital  "
 C=14\=>\Green \Text K,L,"vampyr "
 C=15\=>\Green \Text K,L,"flamme "
-C=16\=>\Green \Text K,L,"\orage  "
+C=16\=>\Green \Text K,L,"orage  "
 C=17\=>\Green \Text K,L,"enfers "
 \IfEnd
 \If O=1
@@ -1508,7 +1508,7 @@ C=8\=>\Green \Text K,L,"Xmeta   "
 C=1\=>\Text K,L,"soin"
 C=2\=>\Text K,L,"soin +"
 C=3\=>\Text K,L,"adrena"
-C=4\=>\Text K,L,"chl\ore"
+C=4\=>\Text K,L,"chlore"
 C=7\=>\Text K,L,"groseye"
 C=8\=>\Text K,L,"[tarte]"
 C=14\=>\Text K,L,"fusil"
@@ -1525,7 +1525,7 @@ C=13\=>\Text K,L,"PHOENIX"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2747
+Capacity:2748
 File Name:TNT9
 Group Name:
 Password:
@@ -1701,7 +1701,7 @@ G=2\=>0\->G
 \Next 
 \IfEnd
 \If C=13
-\Then \Text 51,38," \->Z abs\orbe la vie ! "
+\Then \Text 51,38," \->Z absorbe la vie ! "
 {59,45,39,59,62,57,53,54,55,56,61,65,70,68,69,75,72,68,65,64,65,59}\->\List 1
 {55,50,40,46,44,37,36,34,32,30,33,34,44,47,49,48,53,55,60,54,47,55}\->\List 3
 \DrawStat
@@ -1864,7 +1864,7 @@ A=5\=>\Return
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1035
+Capacity:1036
 File Name:TNT11
 Group Name:
 Password:
@@ -1900,7 +1900,7 @@ Option4:
 \Green \Text 3,49,\Mat Z[10,4
 \Lbl V
 \Green \Text 7,91," Acheter"
-\Green \Text 13,91," S\ortir"
+\Green \Text 13,91," Sortir"
 \Green \Text 19,91," Objets "
 1\->A
 \Do
@@ -1968,7 +1968,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2830
+Capacity:2832
 File Name:TNT12
 Group Name:
 Password:
@@ -2182,15 +2182,15 @@ S\=>\Ans+1
 M\<>7\=>\Prog "TNT5"
 \If S=43\ Or S=44\ Or S=32\ Or S=33\ Or S=8\ Or S=10.5\ Or S=99\ Or S=28.5
 \Then S=44\ Or S=33\ Or S=8\=>\Text 51,75,"Enzo   "
-S=32\ Or S=43\=>\Text 51,75,"R\Redox  "
-S=10.5\=>\Text 51,75,"Minaut\or"
+S=32\ Or S=43\=>\Text 51,75,"Redox  "
+S=10.5\=>\Text 51,75,"Minautor"
 S=28.5\=>\Text 51,75,"Un vegetal"
 S=99\=>\Text 51,75,"le Gardien"
 \Else M=1\=>\Text 51,90,"lapranak"
 M=2\=>\Text 51,90,"srilane"
-M=3\=>\Text 51,89,"m\andiv\or"
+M=3\=>\Text 51,89,"mandivor"
 M=4\=>\Text 51,90,"arakn'"
-M=5\=>\Text 51,90,"\orinaphe"
+M=5\=>\Text 51,90,"orinaphe"
 M=6\=>\Text 51,88,"goa geant"
 M=7\=>\Text 51,90,"spectre"
 \IfEnd
@@ -2200,7 +2200,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5655
+Capacity:5654
 File Name:TNT13
 Group Name:
 Password:
@@ -2242,7 +2242,7 @@ V=10\=>\Orange \Text 5,3,"ATLANTIS"
 \Orange \F-Line 11,47-W,11+(2W+1),47-W
 \Next 
 \Orange \F-Line 7,45,29,45
-\Text 13,13,"\TeraN\Tera"
+\Text 13,13,"TNT"
 \Green \F-Line 4,37,4,41
 \Green \F-Line 4,41,35,41
 \Green \F-Line 35,41,35,37
@@ -2332,7 +2332,7 @@ V=9\=>\Goto9
 5(U-1\->\theta
 5(W-1\->E
 \If O
-\Then O=3\=>\Orange \Text \theta+1,E+48,"\@7FD2":O=2\=>\Orange \Text \theta+3,E+49,"\Deg>":O=5\=>\Orange \Text \theta+1,E+49,"o":O=6\=>\Text \theta+1,E+48,"@":O=4\=>\Text \theta+2,E+49,"\@5C":O=7\=>\Orange \Text \theta+2,E+47,"#":O=8\=>\Text \theta+1,E+48,"~":O=9\=>\Orange \Text \theta+1,E+48,"*"
+\Then O=3\=>\Orange \Text \theta+1,E+48,"p":O=2\=>\Orange \Text \theta+3,E+49,"\Deg>":O=5\=>\Orange \Text \theta+1,E+49,"o":O=6\=>\Text \theta+1,E+48,"@":O=4\=>\Text \theta+2,E+49,"\@5C":O=7\=>\Orange \Text \theta+2,E+47,"#":O=8\=>\Text \theta+1,E+48,"~":O=9\=>\Orange \Text \theta+1,E+48,"*"
 \IfEnd
 \If B\>=2
 \Then \Green \F-Line E+52,63-\theta,E+52,58-\theta
@@ -2392,7 +2392,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7968
+Capacity:7969
 File Name:TNT14
 Group Name:
 Password:
@@ -2512,7 +2512,7 @@ S=8\=>\Return
 \GotoD
 \IfEnd
 \If \r=1
-\Then \Orange \Text 19,3,"f\orce:   "
+\Then \Orange \Text 19,3,"force:   "
 1\->O
 7\->L
 \For 1\->E \To 5
@@ -2865,7 +2865,7 @@ V=2\=>\Text 51,38,"Z attaque +1          "
 \Orange \Text 25,104,":"
 \For 1\->X \To 80
 \Next 
-\Text 51,38,"Z abs\orbe enn vie \!mark   "
+\Text 51,38,"Z absorbe enn vie \!mark   "
 \For 103\->A \To 47 \Step \(-)2
 \Orange \F-Line A,36+3\Ran#,A-1,36+3\Ran#
 \Next 
@@ -3111,7 +3111,7 @@ A>14\=>5
 A>19\=>6
 A>25\=>7
 \Ans\->\Mat Z[11,2
-\Orange \Text 10,1,"\Experience:"
+\Orange \Text 10,1,"Experience:"
 \Mat Z[11,6\->E
 \Int 100\Ran#+2\Mat Z[7,4]+40\Mat Z[6,2]+40\Mat Z[6,3]+200-20\Mat Z[6,4\->A
 \Orange \Text 16,1,E
@@ -3121,7 +3121,7 @@ A>25\=>7
 \Orange \Text 22,27,E+A
 E+A\->\Mat Z[11,6
 0\->A
-\Green \Text 10,80,"R\Recompense:"
+\Green \Text 10,80,"Recompense:"
 \Not \Mat Z[8,4\=>\Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
 23=\Mat Z[12,6\=>5000\->A
 A+\Mat Z[10,4\->\Mat Z[10,4
@@ -3194,7 +3194,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3761
+Capacity:3771
 File Name:TNT15
 Group Name:
 Password:
@@ -3233,20 +3233,20 @@ Option4:
 \If 4=\Mat Z[12,6
 \Then \ClrText
 \Orange "Une gemme !"
-\Orange "Enc\ore une a trouver."\Disp6\->\Mat Z[12,6
+\Orange "Encore une a trouver."\Disp6\->\Mat Z[12,6
 \IfEnd
 \IfEnd
 \Lbl O
 \If W=28.5
-\Then "STOP.Aucun humain n' est aut\orise a s\ortirpour l'inst..."
+\Then "STOP.Aucun humain n' est autorise a sortirpour l'inst..."
 \Orange "Je suis presse."
 \Prog "TNT14"
 29\->\theta
 \theta\->\Mat Z[12,6
 \IfEnd
 \If W=36
-\Then "Les p\ortes de la"
-"ville sont mobiliseespour l'evacuation !  Passons par le p\ort !"\Disp0\->\theta
+\Then "Les portes de la"
+"ville sont mobiliseespour l'evacuation !  Passons par le port !"\Disp0\->\theta
 \IfEnd
 \If W=37
 \Then \PlotOff I,J
@@ -3278,14 +3278,14 @@ Option4:
 "arreter,sinon..."\Disp\ClrText
 "C'est la fin de Gaia."\Disp\Orange "Je prend les choses  en main."\Disp\ClrText
 \Orange "Jessie,donne l'alerteet fait evacuer les  villes voisines."\Disp\ClrText
-\Orange "Wills,essaie d'avoir plus d'inf\ormations  sur Tomberry du cote de la FFC."\Disp\ClrText
+\Orange "Wills,essaie d'avoir plus d'informations  sur Tomberry du cote de la FFC."\Disp\ClrText
 \Orange "Je vais voir un"
 \Orange "vieil ami a HELENIA. On se retrouve a...  BOTMA."\Disp\ClrText
-"A tes \ordres,Z."
+"A tes ordres,Z."
 "Prend ca :"
 "-5 soin+"
 "-5 adrena"
-"-5 chl\ore"
+"-5 chlore"
 "Et... bonne chance."\Disp\For 2\->O \To 4
 \For 1\->W \To 5
 \Prog "TNT7"
@@ -3300,13 +3300,13 @@ Option4:
 1\->\Mat Z[10,1
 \IfEnd
 \If A=60\ And B=42\ And \Not \Mat Z[10,2
-\Then \Orange "Le tres\or..."\Disp\Orange "Ca semble trop facilepour etre vrai."\Disp"Voix : En effet..."
+\Then \Orange "Le tresor..."\Disp\Orange "Ca semble trop facilepour etre vrai."\Disp"Voix : En effet..."
 99\->W
 A\->\Mat Z[9,1
 B\->\Mat Z[9,2
 \Prog "TNT14"
 "Tu m'as vaincu,"
-"le tres\or est a toi."\Disp\Green "Z obtient :"
+"le tresor est a toi."\Disp\Green "Z obtient :"
 \Green "-3 soin+"
 \Green "-3 groseyes"
 \Green "-300 skulls"\Disp\For 2\->O \To 7 \Step 5
@@ -3359,8 +3359,8 @@ B\->\Mat Z[9,2
 "TU ME DEFIES, ETRANGEMORTEL ?"\Disp\Orange "Je viens mettre fin aton regne."\Disp"AH AH AH..."\Disp\ClrText
 "TU DEVRAS D'ABORD"
 "VAINCRE MES DISCIPLES"\Disp\ClrText
-\Orange "R\Redox ? Enzo ?"
-\Orange "Je les croyais m\orts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!         "
+\Orange "Redox ? Enzo ?"
+\Orange "Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!         "
 43\->W
 \Prog "TNT14"
 44\->W
@@ -3449,7 +3449,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:869
+Capacity:870
 File Name:TNT17
 Group Name:
 Password:
@@ -3472,7 +3472,7 @@ Option4:
 \Locate 1,3,"Que desires-tu ?"
 \Locate 3,5,"1.Sauvegarder"
 \Locate 3,6,"2.Me reposer (25\@24)"
-\Locate 3,7,"3.S\ortir"
+\Locate 3,7,"3.Sortir"
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>72\ And \theta\<>62\ And \theta\<>52
@@ -3492,7 +3492,7 @@ Option4:
 \Locate 1,5,"\Deg>\Deg>\Deg>"
 \Locate 10,3,"Vie :   \slash"
 \Locate 8,5,"Magie :   \slash"
-\Locate 8,4,"F\orce :   \slash"
+\Locate 8,4,"Force :   \slash"
 \Locate 8,6,"Attak :   \slash"
 \Locate 8,7,"Defns :   \slash"
 \For 1\->X \To 5
@@ -3507,7 +3507,7 @@ Option4:
 X=2\=>0\->X
 \For 3\->W \To 7
 \Not X\=>\Locate W,2,"Z"
-X\=>\Locate W,2,"\@7FD1"
+X\=>\Locate W,2,"z"
 \For 1\->Y \To 30
 \Next 
 \Next 

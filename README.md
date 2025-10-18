@@ -28,7 +28,7 @@ First released on 15th december 2001.
 - [ ] Display 'hum?' only if progress < W ?
 - [ ] Port to graph35+
 - [ ] Port to graph100+
-- [ ] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
+- [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [ ] Notice in markdown/pdf
 	- [ ] screenshots of attaks/powers
 	- [ ] 'hum?' in points of interest

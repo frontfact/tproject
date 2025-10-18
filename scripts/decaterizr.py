@@ -19,7 +19,10 @@ class Token:
         return self.dst
     
     def __eq__(self, other):
-        return self.src == other.src
+        return isinstance(other, Token) and self.src == other.src
+    
+    def __hash__(self):
+        return hash(self.src)
 
 
 SpaceToken = Token(' ', ' ', 1, False)
@@ -174,6 +177,27 @@ class Program:
             cap += token.size
         return 3 + cap
 
+    def simplify(self):
+        subst = {
+            Token('@7FD1','z',2,True): Token('z','z',1, False),
+            Token('@7FD2','p',2,True): Token('p','p',1,False),
+            Token('Tera','T',1,True): Token('T','T',1,False),
+            Token('or','or',1,True): [Token('o','o',1,False), Token('r','r',1,False)],
+            Token('Re','e',2,True): Token('e','e',1,False),
+            Token('Ra','a',1,True): Token('a','a',1,False),
+            Token('E','E',1,True): Token('E','E',1,False),
+            Token('milli','m',1,True): Token('m','m',1,False),
+            Token('Cnt','n',1,True): Token('n','n',1,False),
+        }
+        for i, token in enumerate(self.tokens):
+            alt = subst.get(token)
+            if alt is not None:
+                if isinstance(alt, list):
+                    del self.tokens[i]
+                    self.tokens[i:i] = alt
+                else:
+                    self.tokens[i] = alt
+
 
 class CatFile(object):
     def __init__(self, filepath):
@@ -212,12 +236,11 @@ class CatFile(object):
     def useless_tokens(self):
         programs_tokens = set()
         for program in self.programs:
-            ptokens = program.raw_tokens()
-            programs_tokens.update(ptokens)
-        with open("used.txt", 'w') as f:
-            for token, dest, size in language_tokens:
-                if dest in programs_tokens:
-                    f.write(f'{token};{dest};{size}\n')
+            programs_tokens.update(program.tokens)
+        with open("used.txt", 'w', encoding='utf-8') as f:
+            for token in language_tokens:
+                if token in programs_tokens:
+                    f.write(f'{token.src};{token.dst};{token.size}\n')
                     
     def check_capacity(self):
         for program in self.programs:
@@ -272,6 +295,11 @@ class CatFile(object):
                 return program
         return None
 
+    def simplify(self):
+        for program in self.programs:
+            program.simplify()
+        self.useless_tokens()
+
     @classmethod
     def DumpPrograms(cls, catfile, outputpath: PathLike, clean: bool):
         outputpath = Path(outputpath)
@@ -325,9 +353,13 @@ def main():
     p.add_argument('--forge', action='store_true')
     p.add_argument('--dump', '-d', action='store_true')
     p.add_argument('--overwrite', '-o', action='store_true')
+    p.add_argument('--simplify', action='store_true')
     args = p.parse_args()
 
     catfile = CatFile(args.filepath)
+
+    if args.simplify:
+        catfile.simplify()
 
     if args.sort:
         catfile.sort()
