@@ -2242,7 +2242,7 @@ V=10\=>\Orange \Text 5,3,"ATLANTIS"
 \Orange \F-Line 11,47-W,11+(2W+1),47-W
 \Next 
 \Orange \F-Line 7,45,29,45
-\Text 13,13,"TNT"
+\Text 13,13,"\TeraN\Tera"
 \Green \F-Line 4,37,4,41
 \Green \F-Line 4,41,35,41
 \Green \F-Line 35,41,35,37

@@ -181,7 +181,6 @@ class Program:
         subst = {
             Token('@7FD1','z',2,True): Token('z','z',1, False),
             Token('@7FD2','p',2,True): Token('p','p',1,False),
-            Token('Tera','T',1,True): Token('T','T',1,False),
             Token('or','or',1,True): [Token('o','o',1,False), Token('r','r',1,False)],
             Token('Re','e',2,True): Token('e','e',1,False),
             Token('Ra','a',1,True): Token('a','a',1,False),
