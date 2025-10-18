@@ -58,11 +58,11 @@ Text 38,80,"T-Project"
 Text 52,21,"NOUVELLE PARTIE"
 Text 58,21,"CONTINUER"
 Lbl 1
-Text 52+6D,17,"-"
+Text 52+6D,16,"-"
 Do
   Getkey→θ
 LpWhile θ≠28 And θ≠37 And θ≠31 And θ≠33
-Text 6D+52,17," "
+Text 6D+52,16," "
 If θ≠31
 Then 
   Isz D

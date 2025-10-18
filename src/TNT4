@@ -17,20 +17,26 @@ Then
   If W=1
   Then 
     Orange "ZZZZ...    zzzz...     ZZZZ...    ?!"
-    "            "
+    " "
     "Il se reveille."
-    "Laissez moi seul"
+    "Laissez-moi seul"
     "avec lui."◢
     ClrText
     "Bonjour Z,"
     "Je suis Redox."
     Orange "...? Ou suis-je ?"◢
     "Chez moi.Je t'ai"
-    "soigne apres t'avoir trouve blesse."◢
+    "soigne apres t'avoir"
+    "trouve blesse."◢
     ClrText
-    "Malgre ton amnesie,  nous avons besoin de toi."◢
+    "Malgre ton amnesie,"
+    "nous avons besoin de"
+    "toi."◢
     ClrText
-    "Nous avons retrouve  la trace d'Enzo, un  ennemi potentiel de  la FFC°."◢
+    "Nous avons retrouve"
+    "la trace d'Enzo, un"
+    "ennemi potentiel de"
+    "la FFC°."◢
     ClrText
     "Bute-le et reviens"
     "me voir."◢
@@ -48,7 +54,8 @@ Then
     "     ~ RESTO ~"
     Orange "Ou est Enzo ?"
     "He la !"
-    "Ce renseignement ne  sera pas gratuit:"
+    "Ce renseignement ne"
+    "sera pas gratuit:"
     "Il t'en coutera..."
     "disons deux gemmes"◢
     32.107→Mat A[H,G
@@ -65,13 +72,14 @@ Then
   If W=7
   Then 
     "Merci beaucoup."
-    "Enzo est rentre chez lui,juste en face."◢
+    "Enzo est rentre chez"
+    "lui, juste en face."◢
     Isz Z
   IfEnd
   If W=8
   Then 
-    Orange "Enzo,tu es mort !    Prepare toi au combat      "
-    "Enzo:      "
+    Orange "Enzo, tu es mort !   Prepare-toi au combat"
+    "Enzo:"
     "Incarnation GOA."
     For 0→X To 99
     Next
@@ -102,7 +110,7 @@ Then
       70→a₁
       15→a₂
       "Tu as fait le bon"
-      "choix,Redox t'aurait tue."
+      "choix, Redox t'auraittue."
     Else 
       70→a₁
       50→a₂
@@ -112,20 +120,25 @@ Then
       Next
       "Bien,petit,tu meritesma confiance."
     IfEnd
-    "prend ces skulls et  soigne toi."◢
+    "Prends ces skulls et"
+    "soigne-toi."◢
     ClrText
-    "Ensuite,va a TARA,un ami t'y attend."◢
+    "Ensuite,va a TARA,"
+    "un ami t'y attend."◢
     60+Mat Z[10,4→Mat Z[10,4
     10→Z
   IfEnd
   If W=10
   Then 
-    "Va voir le sage au   bout du labyrinthe,tuverras,il est un peu etrange..."◢
+    "Va voir le sage au"
+    "bout du labyrinthe,tuverras,il est un peu"
+    "etrange..."◢
     10.5→Z
   IfEnd
   If W=10.5
   Then 
-    "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!          "
+    "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
+    "SACRE ?!!"
     I→a₁
     J→a₂
     Prog "TNT14"
@@ -133,19 +146,24 @@ Then
   IfEnd
   If W=11
   Then 
-    Orange "Bonjour Sage.Je suis Z.Je..."
+    Orange "Bonjour Sage."
+    Orange "Je suis Z. Je..."
     "Je sais."◢
     ClrText
     "Cela fait"
     "bien longtemps que jen'avais vu quelqu'un."◢
     ClrText
-    "Alors ecoute bien :  cette chose toutes"
+    "Alors ecoute bien :"
+    "Cette chose toutes"
     "choses devore."◢
     ClrText
     "Elle ronge le fer,"
     "Mord l'acier."◢
     ClrText
-    "Met a mort les rois, detruit les villes   et rabat les hautes  montagnes..."◢
+    "Met a mort les rois,"
+    "detruit les villes"
+    "et rabat les hautes"
+    "montagnes..."◢
     π→T:7→E:5→M:8→P:3→S
     Orange "C'EST LE..."?→R
     ClrText
@@ -153,21 +171,28 @@ Then
     Then 
       "Tu me plais."
       "Je t'offre une"
-      "groseye et une Lune. les deux autres sont a ATLANTIS."◢
+      "groseye et une Lune."
+      "Les deux autres sont"
+      "a ATLANTIS."◢
       7→O
       Prog "TNT7"
       16→O
       Prog "TNT7"
       13→Z
     Else 
-      "Je te laisse un peu  de temps pour y"
+      "Je te laisse un peu"
+      "de temps pour y"
       "reflechir."◢
       Return
     IfEnd
   IfEnd
   If W=13
   Then 
-    "Troll:si tu me bats  au bras de fer, ma   Lune est a toi. Mais si tu perds... Je te mange. D'accord ?"
+    "Troll: si tu me bats"
+    "au bras de fer, ma"
+    "Lune est a toi. Mais"
+    "si tu perds... Je te"
+    "mange. D'accord ?"
     Locate 1,7,"[EXE]→OK [EXIT]→Fuite"
     Do
       Getkey
@@ -190,7 +215,7 @@ Then
       If Ans≠Y And Ans
       Then 
         Ans→Y
-        X+2.3→X
+        X+2.5→X
       IfEnd
       Locate 11,5,Int X
       X>89⇒Break
@@ -198,17 +223,19 @@ Then
     ClrText
     X<11⇒"Fin..."
     X<11⇒Stop
-    "Troll : Hmmf.        Voila ta Lune."◢
+    "Troll : Hmmf."
+    "Voila ta Lune."◢
     16→O
     Prog "TNT7"
     Isz Z
   IfEnd
   If W=14
   Then 
-    "Vieille:Au voleur !"
+    "Vieille: Au voleur !"
     "Mes bijoux,"
     "Mon argent !!!"
-    "Une recompense a qui les retrouvera !"◢
+    "Une recompense a qui"
+    "les retrouvera !"◢
     22.117→Mat A[3,8
     Isz Z
   IfEnd
@@ -219,7 +246,8 @@ Then
   IfEnd
   If W=16
   Then 
-    "J'heberge quelqu'un. Vous voulez le voir ?"◢
+    "J'heberge quelqu'un."
+    "Vous voulez le voir ?"◢
     ClrText
     "Voleur : Ne me faitespas de mal !"
     "Voila les bijoux de  la vieille et son"
@@ -235,9 +263,7 @@ Then
     "Et mon argent ?"
     Orange "Il s'est enfui avec  (He-He-He)."◢
     ClrText
-    "Bon...voici une"
-    "Lune pour te"
-    "remercier."◢
+    "Bon... voici une Lunepour te remercier."◢
     0→Mat Z[6,6
     11→O
     Prog "TNT7"
@@ -259,7 +285,7 @@ Then
     "peux garder le prisme"
     Orange "(mais que me"
     Orange "cache-t-il ?)"
-    "Rendez vous a ELOS,  pres du magasin."◢
+    "Rendez-vous a ELOS,  pres du magasin."◢
     Isz Z
   IfEnd
   If W=19
@@ -287,11 +313,11 @@ Then
   IfEnd
   If W=20
   Then 
-    "Salut Z.Je m'apelle  Jessie et je veux"
-    "t'aider:le prisme"
+    "Salut Z. Je m'appelleJessie et je veux"
+    "t'aider: le prisme"
     "MAGMA est a ELOS."◢
     ClrText
-    "Si tu le trouves,tu  pourras te venger de Redox et d'Enzo..."◢
+    "Si tu le trouves, tu pourras te venger de Redox et d'Enzo..."◢
     22.125→Mat A[3,13
     Isz Z
   IfEnd
@@ -303,8 +329,9 @@ Then
   IfEnd
   If W=22
   Then 
-    "Maire d'ELOS"
-    "Chasseur de prime? J'ai un job pour toi."◢
+    "Maire d'ELOS :"
+    "Chasseur de prime ?"
+    "J'ai un job pour toi."◢
     ClrText
     "Tue le mandivor qui  terrorise ma ville   et gagne 4000$."◢
     Orange "...Non, 5000."◢
@@ -323,8 +350,8 @@ Then
   IfEnd
   If W=24 And 4999<Mat Z[10,4
   Then 
-    "Dur de m'en separer, mais j'ai vraiement"
-    "besoin d'argent en cemoment.Le voici."◢
+    "Dur de m'en separer, mais j'ai vraiment"
+    "besoin d'argent en cemoment. Le voici."◢
     Green "Z obtient MAGMA !"◢
     Mat Z[10,4]-5000→Mat Z[10,4
     1→Mat Z[2,6
@@ -332,10 +359,10 @@ Then
   IfEnd
   If W=25
   Then 
-    "Jessie:tu sais,Z...  Enzo et Redox..."
+    "Jessie: tu sais, Z...Enzo et Redox..."
     Orange "Eh bien ?"◢
     "Je crois que ton...  accident faisait"
-    "parti de leur plan."◢
+    "partie de leur plan."◢
     ClrText
     Orange "..."◢
     Orange "Ou sont-ils ?"◢
@@ -345,13 +372,16 @@ Then
   If W=26
   Then 
     "Z ?!"
-    "Je suis Wills.Jessie m'a prevenu de ton   arrivee."◢
+    "Je suis Wills. Jessiem'a prevenu de ton"
+    "arrivee."◢
     Orange "Ou est Redox ?"◢
     ClrText
-    "Dans la foret,il"
-    "cherche le prisme    PHOENIX."◢
+    "Dans la foret, il"
+    "cherche le prisme"
+    "PHOENIX."◢
     ClrText
-    "Va voir l'Ancien a   l'Est,il pourra"
+    "Va voir l'Ancien a"
+    "l'Est, il pourra"
     "t'aider."◢
     22.128→Mat A[3,6
     Isz Z
@@ -398,32 +428,33 @@ Then
     "PHOENIX."◢
     ClrText
     "Mais la guerre"
-    "vegetale fait rage aHELENIA...  la Foret ne te laissera pas   sortir et..."
+    "vegetale fait rage a HELENIA...  la Foret ne te laissera pas   sortir et..."
     Orange "NON. Je passerai."◢
     28.5→Z
   IfEnd
   If W=29
   Then 
     "Enzo & Redox :"
-    "Donne nous le colis, il est indispensable au Projet T."◢
+    "Donne-nous le colis, il est indispensable au Projet T."◢
       ClrText
       Orange "Le Projet T ?"
       Orange "Mais de quoi s'agit- -il ?!"◢
       ClrText
       "Nous t'offrons la"
       "verite en echange du colis..."◢
-      Orange "...Bien.Le voila."◢
+      Orange "...Bien. Le voila."◢
       ClrText
       ".............."
-      "Le prisme PHOENIX !  Enfin ! La troisieme inscription..."◢
+      "Le prisme PHOENIX !"
+      "Enfin ! La troisieme inscription..."◢
       ClrText
-      Orange "Le...Le prisme !"
+      Orange "Le... Le prisme !"
       Orange "Il explose !!!"
       I→a₁
       J→a₂
       Prog "TNT14"
       Orange "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
-      Orange "Inscriptions ?"◢
+      Orange "inscriptions ?"◢
       Isz Z
     IfEnd
     If W=30
@@ -436,15 +467,16 @@ Then
     Then 
       "Z ! content de te"
       "revoir..."
-      Orange "Dis moi Wills,tu me  connaissait avant queje perde la memoire ?"◢
+      Orange "Dis-moi Wills,tu me  connaissais avant queje perde la memoire ?"◢
       ClrText
-      "Oui,nous etions"
+      "Oui, nous etions"
       "freres d'arme..."
-      "On etait toujours    ensemble en mission."◢
+      "On etait toujours"
+      "ensemble en mission."◢
       ClrText
-      "Ton attaque preferee etait Xmeta, tu t'en souviens ?     "
-      Orange "...       "
-      "Je te l'apprend."◢
+      "Ton attaque preferee etait Xmeta, tu t'en souviens ?"
+      Orange "..."
+      "Je te l'apprends."◢
       ClrText
       For 1→X To 5
         If 4>Mat Z[X,4
@@ -458,7 +490,7 @@ Then
       ClrText
       "Maintenant allons"
       "retrouver Jessie a "
-      "PLYMOUT:elle saura   comment contrecarrer les plans de Redox."◢
+      "PLYMOUT: elle saura  comment contrecarrer les plans de Redox."◢
       Isz Z
     IfEnd
     If W=32
@@ -470,8 +502,8 @@ Then
       "Dans quelques minutesTomberry ressurgira. NOUS AVONS ACCOMPLI  NOTRE MISSION !"◢
       ClrText
       "Mais ? Qui est la ?  Z !!! Tu n'aurais"
-      "jamais du nous suivre          "
-      "Redox : "
+      "jamais du nous suivre"
+      "Redox :"
       "INCARNATION ARAKN !"
       For 0→X To 99
       Next
@@ -479,8 +511,8 @@ Then
       J→a₂
       Prog "TNT14"
       33→W
-      "Enzo : Je vais t'"
-      "aneantir, miserable  insecte !!!  "
+      "Enzo : Je vais"
+      "t'aneantir, miserableinsecte !!!"
       " "
       "INCARNATION GOA !"
       For 0→X To 99
@@ -492,7 +524,7 @@ Then
       Orange "(...)"◢
       Orange "(mais trop tard...)"◢
       ClrText
-      Orange "Je doit rejoindre"
+      Orange "Je dois rejoindre"
       Orange "Wills et Jessie."◢
       34→Z
     IfEnd
@@ -525,20 +557,22 @@ Then
     IfEnd
     If W=41
     Then 
-      "Wills: Tu n'est pas  avec Jessie ?"
-      Orange "Non,je ne l'ai pas  vu."◢
+      "Wills: Tu n'es pas"
+      "avec Jessie ?"
+      Orange "Non, je ne l'ai pas  vue."◢
       ClrText
-      "Elle n'est pas encorerevenu.Je vais partira sa recherche."◢
+      "Elle n'est pas encorerevenue. Je vais"
+      "partir a sa recherche"◢
       ClrText
       Orange "Tu as eu des infos   sur Tomberry ?"◢
       ClrText
-      "Eh bien,j'ai appris  qu'il etait capable  de detruire Gaia..."
-      Orange "Ca,je le savais."
+      "Eh bien, j'ai appris qu'il etait capable  de detruire Gaia..."
+      Orange "Ca, je le savais."
       "...Et il se trouve ence moment a SANCTUA."◢
       ClrText
       Orange "SANCTUA ?"◢
       "Son repaire sacre."◢
-      Orange "Bien.J'y vais."◢
+      Orange "Bien. J'y vais."◢
       ClrText
       "J'espere que tu sais ce que tu fais."◢
       Orange "Moi aussi."◢

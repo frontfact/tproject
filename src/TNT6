@@ -210,7 +210,7 @@ Else
     For 1→A To 3
       Cls
       RclPict 1
-      Text 51,38,"pouvoir→morsure     "
+      Text 51,38,"pouvoir→morsur      "
     Next
     For 1→A To 6
       Orange Text Int 20Ran#+10,Int 20Ran#+40,"#"

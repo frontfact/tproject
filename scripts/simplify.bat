@@ -1,2 +1,2 @@
 
-python decaterizr.py ..\packages\TPROJECT.CAT --simplify --dump -o
+python decaterizr.py ..\packages\TPROJECT.CAT --simplify --dump --overwrite

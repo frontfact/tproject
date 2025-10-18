@@ -67,15 +67,15 @@ Option4:
 \Text 28,93,"The"
 \Orange \F-Line 80,28,115,28
 \Orange \F-Line 80,20,115,20
-\Text 38,80,"T\(-)Project"
+\Text 38,80,"T-Project"
 \Text 52,21,"NOUVELLE PARTIE"
 \Text 58,21,"CONTINUER"
 \Lbl 1
-\Text 52+6D,17,"\(-)"
+\Text 52+6D,16,"-"
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>28\ And \theta\<>37\ And \theta\<>31\ And \theta\<>33
-\Text 6D+52,17," "
+\Text 6D+52,16," "
 \If \theta\<>31
 \Then \Isz D
 D>1\=>0\->D
@@ -144,7 +144,7 @@ Option4:
 \F-Line 37,63,127,63
 \F-Line 127,63,127,2
 \F-Line 127,2,37,2
-\Green \Text 3,38,"\(-)Carte de Gaia\(-)"
+\Green \Text 3,38,"-Carte de Gaia-"
 \Orange \Text 3,100,"[menu]"
 \Mat Z[12,6\->Z
 \Text 1,4,"Botma"
@@ -367,11 +367,11 @@ A=65\=>B=44\=>\Text 31,4,"       "
 \If \theta\<>31\ Or \Not \Ans
 \Then \Orange \Text W,1," "
 6\->V
-\theta=28\=>\(-)6\->V
+\theta=28\=>-6\->V
 W\->\r
 \Do
 W+V\->W
-W=\(-)5\=>43\->W
+W=-5\=>43\->W
 W=49\=>1\->W
 W=\r\=>\Goto8
 \PxlTest W,4
@@ -381,16 +381,16 @@ W=\r\=>\Goto8
 0\->P~Q
 \If W=1\ Or W=7\ Or W=19
 \Then 71\->W
-\(-)1\->P
+-1\->P
 18\->V
 \IfEnd
 \If W=31
-\Then \(-)1\->Q
+\Then -1\->Q
 65\->W
 44\->V
 \IfEnd
 \If W=13\ Or W=37
-\Then \(-)1\->Q
+\Then -1\->Q
 124\->W
 11\->V
 \IfEnd
@@ -400,17 +400,17 @@ W=\r\=>\Goto8
 34\->V
 \IfEnd
 1\->\r:1\->\theta
-W<A\=>\(-)1\->\theta
-V<B\=>\(-)1\->\r
+W<A\=>-1\->\theta
+V<B\=>-1\->\r
 \If \Abs (W-A)>\Abs (V-B
 \Then (V-B)/(W-A\->Z
-W<A\=>\(-)Z\->Z
+W<A\=>-Z\->Z
 \For A\->U \To W \Step \theta
 B+Z\->B
 \Orange \PlotOn U,B
 \Next 
 \Else (W-A)/(V-B\->Z
-V<B\=>\(-)Z\->Z
+V<B\=>-Z\->Z
 \For B\->U \To V \Step \r
 A+Z\->A
 \Orange \PlotOn A,U
@@ -551,7 +551,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:8657
+Capacity:8656
 File Name:TNT4
 Group Name:
 Password:
@@ -576,20 +576,26 @@ Option4:
 \IfEnd
 \If W=1
 \Then \Orange "ZZZZ...    zzzz...     ZZZZ...    ?!"
-"            "
+" "
 "Il se reveille."
-"Laissez moi seul"
+"Laissez-moi seul"
 "avec lui."\Disp\ClrText
 "Bonjour Z,"
 "Je suis Redox."
-\Orange "...? Ou suis\(-)je ?"\Disp"Chez moi.Je t'ai"
-"soigne apres t'avoir trouve blesse."\Disp\ClrText
-"Malgre ton amnesie,  nous avons besoin de toi."\Disp\ClrText
-"Nous avons retrouve  la trace d'Enzo, un  ennemi potentiel de  la FFC\Deg>."\Disp\ClrText
-"Bute\(-)le et reviens"
+\Orange "...? Ou suis-je ?"\Disp"Chez moi.Je t'ai"
+"soigne apres t'avoir"
+"trouve blesse."\Disp\ClrText
+"Malgre ton amnesie,"
+"nous avons besoin de"
+"toi."\Disp\ClrText
+"Nous avons retrouve"
+"la trace d'Enzo, un"
+"ennemi potentiel de"
+"la FFC\Deg>."\Disp\ClrText
+"Bute-le et reviens"
 "me voir."\Disp\ClrText
 "Prends cet argent et"
-"achete\(-)toi soin,"
+"achete-toi soin,"
 "adrena et chlore :"
 "Tu devras combattre."\Disp20.109\->\Mat A[2,5
 \Isz Z
@@ -599,7 +605,8 @@ Option4:
 \Then "     ~ RESTO ~"
 \Orange "Ou est Enzo ?"
 "He la !"
-"Ce renseignement ne  sera pas gratuit:"
+"Ce renseignement ne"
+"sera pas gratuit:"
 "Il t'en coutera..."
 "disons deux gemmes"\Disp32.107\->\Mat A[H,G
 \Int 8\Ran#+13\->\Mat Z[12,1
@@ -612,11 +619,12 @@ Option4:
 \IfEnd
 \If W=7
 \Then "Merci beaucoup."
-"Enzo est rentre chez lui,juste en face."\Disp\Isz Z
+"Enzo est rentre chez"
+"lui, juste en face."\Disp\Isz Z
 \IfEnd
 \If W=8
-\Then \Orange "Enzo,tu es mort !    Prepare toi au combat      "
-"Enzo:      "
+\Then \Orange "Enzo, tu es mort !   Prepare-toi au combat"
+"Enzo:"
 "Incarnation GOA."
 \For 0\->X \To 99
 \Next 
@@ -644,7 +652,7 @@ Option4:
 70\->\R a1
 15\->\R a2
 "Tu as fait le bon"
-"choix,Redox t'aurait tue."
+"choix, Redox t'auraittue."
 \Else 70\->\R a1
 50\->\R a2
 1\->\Mat Z[11,5
@@ -653,46 +661,63 @@ Option4:
 \Next 
 "Bien,petit,tu meritesma confiance."
 \IfEnd
-"prend ces skulls et  soigne toi."\Disp\ClrText
-"Ensuite,va a TARA,un ami t'y attend."\Disp60+\Mat Z[10,4\->\Mat Z[10,4
+"Prends ces skulls et"
+"soigne-toi."\Disp\ClrText
+"Ensuite,va a TARA,"
+"un ami t'y attend."\Disp60+\Mat Z[10,4\->\Mat Z[10,4
 10\->Z
 \IfEnd
 \If W=10
-\Then "Va voir le sage au   bout du labyrinthe,tuverras,il est un peu etrange..."\Disp10.5\->Z
+\Then "Va voir le sage au"
+"bout du labyrinthe,tuverras,il est un peu"
+"etrange..."\Disp10.5\->Z
 \IfEnd
 \If W=10.5
-\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!          "
+\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
+"SACRE ?!!"
 I\->\R a1
 J\->\R a2
 \Prog "TNT14"
 11\->Z
 \IfEnd
 \If W=11
-\Then \Orange "Bonjour Sage.Je suis Z.Je..."
+\Then \Orange "Bonjour Sage."
+\Orange "Je suis Z. Je..."
 "Je sais."\Disp\ClrText
 "Cela fait"
 "bien longtemps que jen'avais vu quelqu'un."\Disp\ClrText
-"Alors ecoute bien :  cette chose toutes"
+"Alors ecoute bien :"
+"Cette chose toutes"
 "choses devore."\Disp\ClrText
 "Elle ronge le fer,"
 "Mord l'acier."\Disp\ClrText
-"Met a mort les rois, detruit les villes   et rabat les hautes  montagnes..."\Disp\Pi\->T:7\->E:5\->M:8\->P:3\->S
+"Met a mort les rois,"
+"detruit les villes"
+"et rabat les hautes"
+"montagnes..."\Disp\Pi\->T:7\->E:5\->M:8\->P:3\->S
 \Orange "C'EST LE..."?\->R
 \ClrText
 \If R=TEMPS
 \Then "Tu me plais."
 "Je t'offre une"
-"groseye et une Lune. les deux autres sont a ATLANTIS."\Disp7\->O
+"groseye et une Lune."
+"Les deux autres sont"
+"a ATLANTIS."\Disp7\->O
 \Prog "TNT7"
 16\->O
 \Prog "TNT7"
 13\->Z
-\Else "Je te laisse un peu  de temps pour y"
+\Else "Je te laisse un peu"
+"de temps pour y"
 "reflechir."\Disp\Return
 \IfEnd
 \IfEnd
 \If W=13
-\Then "Troll:si tu me bats  au bras de fer, ma   Lune est a toi. Mais si tu perds... Je te mange. D'accord ?"
+\Then "Troll: si tu me bats"
+"au bras de fer, ma"
+"Lune est a toi. Mais"
+"si tu perds... Je te"
+"mange. D'accord ?"
 \Locate 1,7,"[EXE]\->OK [EXIT]\->Fuite"
 \Do
 \Getkey
@@ -710,11 +735,11 @@ J\->\R a2
 \LpWhile \Not \Getkey
 \Locate 4,5,"     "
 \Locate 15,5,"     "
-\For 50\->X \To 10 \Step \(-)1
+\For 50\->X \To 10 \Step -1
 \Getkey
 \If \Ans\<>Y\ And \Ans
 \Then \Ans\->Y
-X+2.3\->X
+X+2.5\->X
 \IfEnd
 \Locate 11,5,\Int X
 X>89\=>\Break
@@ -722,22 +747,25 @@ X>89\=>\Break
 \ClrText
 X<11\=>"Fin..."
 X<11\=>\Stop
-"Troll : Hmmf.        Voila ta Lune."\Disp16\->O
+"Troll : Hmmf."
+"Voila ta Lune."\Disp16\->O
 \Prog "TNT7"
 \Isz Z
 \IfEnd
 \If W=14
-\Then "Vieille:Au voleur !"
+\Then "Vieille: Au voleur !"
 "Mes bijoux,"
 "Mon argent !!!"
-"Une recompense a qui les retrouvera !"\Disp22.117\->\Mat A[3,8
+"Une recompense a qui"
+"les retrouvera !"\Disp22.117\->\Mat A[3,8
 \Isz Z
 \IfEnd
 \If W=15
 \Then "Il se passe des trucslouches au sud..."\Disp\Isz Z
 \IfEnd
 \If W=16
-\Then "J'heberge quelqu'un. Vous voulez le voir ?"\Disp\ClrText
+\Then "J'heberge quelqu'un."
+"Vous voulez le voir ?"\Disp\ClrText
 "Voleur : Ne me faitespas de mal !"
 "Voila les bijoux de  la vieille et son"
 "argent..."
@@ -748,10 +776,8 @@ X<11\=>\Stop
 \Then \Orange "J'ai retrouve vos"
 \Orange "bijoux."
 "Et mon argent ?"
-\Orange "Il s'est enfui avec  (He\(-)He\(-)He)."\Disp\ClrText
-"Bon...voici une"
-"Lune pour te"
-"remercier."\Disp0\->\Mat Z[6,6
+\Orange "Il s'est enfui avec  (He-He-He)."\Disp\ClrText
+"Bon... voici une Lunepour te remercier."\Disp0\->\Mat Z[6,6
 11\->O
 \Prog "TNT7"
 \ClrText
@@ -768,8 +794,8 @@ X<11\=>\Stop
 "qui m'interesse,tu"
 "peux garder le prisme"
 \Orange "(mais que me"
-\Orange "cache\(-)t\(-)il ?)"
-"Rendez vous a ELOS,  pres du magasin."\Disp\Isz Z
+\Orange "cache-t-il ?)"
+"Rendez-vous a ELOS,  pres du magasin."\Disp\Isz Z
 \IfEnd
 \If W=19
 \Then \Green "...Enzo et Redox te"
@@ -789,10 +815,10 @@ X<11\=>\Stop
 \Orange "comme ca..."\Disp\Isz Z
 \IfEnd
 \If W=20
-\Then "Salut Z.Je m'apelle  Jessie et je veux"
-"t'aider:le prisme"
+\Then "Salut Z. Je m'appelleJessie et je veux"
+"t'aider: le prisme"
 "MAGMA est a ELOS."\Disp\ClrText
-"Si tu le trouves,tu  pourras te venger de Redox et d'Enzo..."\Disp22.125\->\Mat A[3,13
+"Si tu le trouves, tu pourras te venger de Redox et d'Enzo..."\Disp22.125\->\Mat A[3,13
 \Isz Z
 \IfEnd
 \If W=21
@@ -800,8 +826,9 @@ X<11\=>\Stop
 \Isz Z
 \IfEnd
 \If W=22
-\Then "Maire d'ELOS"
-"Chasseur de prime? J'ai un job pour toi."\Disp\ClrText
+\Then "Maire d'ELOS :"
+"Chasseur de prime ?"
+"J'ai un job pour toi."\Disp\ClrText
 "Tue le mandivor qui  terrorise ma ville   et gagne 4000\@24."\Disp\Orange "...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
 \Isz Z
 \IfEnd
@@ -813,23 +840,26 @@ J\->\R a2
 \Orange "Plutot coriace..."\Disp24\->Z
 \IfEnd
 \If W=24\ And 4999<\Mat Z[10,4
-\Then "Dur de m'en separer, mais j'ai vraiement"
-"besoin d'argent en cemoment.Le voici."\Disp\Green "Z obtient MAGMA !"\Disp\Mat Z[10,4]-5000\->\Mat Z[10,4
+\Then "Dur de m'en separer, mais j'ai vraiment"
+"besoin d'argent en cemoment. Le voici."\Disp\Green "Z obtient MAGMA !"\Disp\Mat Z[10,4]-5000\->\Mat Z[10,4
 1\->\Mat Z[2,6
 \Isz Z
 \IfEnd
 \If W=25
-\Then "Jessie:tu sais,Z...  Enzo et Redox..."
+\Then "Jessie: tu sais, Z...Enzo et Redox..."
 \Orange "Eh bien ?"\Disp"Je crois que ton...  accident faisait"
-"parti de leur plan."\Disp\ClrText
+"partie de leur plan."\Disp\ClrText
 \Orange "..."\Disp\Orange "Ou sont-ils ?"\Disp"Partis. A HELENIA."\Disp\Isz Z
 \IfEnd
 \If W=26
 \Then "Z ?!"
-"Je suis Wills.Jessie m'a prevenu de ton   arrivee."\Disp\Orange "Ou est Redox ?"\Disp\ClrText
-"Dans la foret,il"
-"cherche le prisme    PHOENIX."\Disp\ClrText
-"Va voir l'Ancien a   l'Est,il pourra"
+"Je suis Wills. Jessiem'a prevenu de ton"
+"arrivee."\Disp\Orange "Ou est Redox ?"\Disp\ClrText
+"Dans la foret, il"
+"cherche le prisme"
+"PHOENIX."\Disp\ClrText
+"Va voir l'Ancien a"
+"l'Est, il pourra"
 "t'aider."\Disp22.128\->\Mat A[3,6
 \Isz Z
 \IfEnd
@@ -860,25 +890,26 @@ J\->\R a2
 "trouve le prisme"
 "PHOENIX."\Disp\ClrText
 "Mais la guerre"
-"vegetale fait rage aHELENIA...  la Foret ne te laissera pas   sortir et..."
+"vegetale fait rage a HELENIA...  la Foret ne te laissera pas   sortir et..."
 \Orange "NON. Je passerai."\Disp28.5\->Z
 \IfEnd
 \If W=29
 \Then "Enzo \@26 Redox :"
-"\Donne nous le colis, il est indispensable au Projet T."\Disp\ClrText
+"\Donne-nous le colis, il est indispensable au Projet T."\Disp\ClrText
 \Orange "Le Projet T ?"
-\Orange "Mais de quoi s'agit\(-) \(-)il ?!"\Disp\ClrText
+\Orange "Mais de quoi s'agit- -il ?!"\Disp\ClrText
 "Nous t'offrons la"
-"verite en echange du colis..."\Disp\Orange "...Bien.Le voila."\Disp\ClrText
+"verite en echange du colis..."\Disp\Orange "...Bien. Le voila."\Disp\ClrText
 ".............."
-"Le prisme PHOENIX !  Enfin ! La troisieme inscription..."\Disp\ClrText
-\Orange "Le...Le prisme !"
+"Le prisme PHOENIX !"
+"Enfin ! La troisieme inscription..."\Disp\ClrText
+\Orange "Le... Le prisme !"
 \Orange "Il explose !!!"
 I\->\R a1
 J\->\R a2
 \Prog "TNT14"
 \Orange "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
-\Orange "Inscriptions ?"\Disp\Isz Z
+\Orange "inscriptions ?"\Disp\Isz Z
 \IfEnd
 \If W=30
 \Then "Maire: On dit qu'a lasource du fleuve se  trouve un tresor..."\Disp\Isz Z
@@ -887,13 +918,14 @@ J\->\R a2
 \If W=31
 \Then "Z ! content de te"
 "revoir..."
-\Orange "Dis moi Wills,tu me  connaissait avant queje perde la memoire ?"\Disp\ClrText
-"Oui,nous etions"
+\Orange "Dis-moi Wills,tu me  connaissais avant queje perde la memoire ?"\Disp\ClrText
+"Oui, nous etions"
 "freres d'arme..."
-"On etait toujours    ensemble en mission."\Disp\ClrText
-"Ton attaque preferee etait Xmeta, tu t'en souviens ?     "
-\Orange "...       "
-"Je te l'apprend."\Disp\ClrText
+"On etait toujours"
+"ensemble en mission."\Disp\ClrText
+"Ton attaque preferee etait Xmeta, tu t'en souviens ?"
+\Orange "..."
+"Je te l'apprends."\Disp\ClrText
 \For 1\->X \To 5
 \If 4>\Mat Z[X,4
 \Then 8\->\Mat Z[X,4
@@ -901,17 +933,17 @@ J\->\R a2
 \IfEnd
 \Next 
 "Voila,"
-"Tu peux choisir Xmetadans ATTAK pendant uncombat \!mark"\Disp\ClrText
+"Tu peux choisir Xmetadans ATTAK pendant uncombat !"\Disp\ClrText
 "Maintenant allons"
 "retrouver Jessie a "
-"PLYMOUT:elle saura   comment contrecarrer les plans de Redox."\Disp\Isz Z
+"PLYMOUT: elle saura  comment contrecarrer les plans de Redox."\Disp\Isz Z
 \IfEnd
 \If W=32
 \Then \Orange "Redox et Enzo !      Ils ne m'ont pas vu  entrer..."\Disp\Orange "Mais que font-ils ?!"\Disp\ClrText
 "\EE\@25 )\@26)\->\ab/c\theta\xrt]=]\Pi...         Et voila !"\Disp"Dans quelques minutesTomberry ressurgira. NOUS AVONS ACCOMPLI  NOTRE MISSION !"\Disp\ClrText
 "Mais ? Qui est la ?  Z !!! Tu n'aurais"
-"jamais du nous suivre          "
-"Redox : "
+"jamais du nous suivre"
+"Redox :"
 "INCARNATION ARAKN !"
 \For 0\->X \To 99
 \Next 
@@ -919,8 +951,8 @@ I\->\R a1
 J\->\R a2
 \Prog "TNT14"
 33\->W
-"Enzo : Je vais t'"
-"aneantir, miserable  insecte !!!  "
+"Enzo : Je vais"
+"t'aneantir, miserableinsecte !!!"
 " "
 "INCARNATION GOA !"
 \For 0\->X \To 99
@@ -928,7 +960,7 @@ J\->\R a2
 \Prog "TNT14"
 "...Nous mourrons......mais.....Tomberry.........est libre"\Disp\ClrText
 \Orange "(je suis venge)"\Disp\Orange "(...)"\Disp\Orange "(mais trop tard...)"\Disp\ClrText
-\Orange "Je doit rejoindre"
+\Orange "Je dois rejoindre"
 \Orange "Wills et Jessie."\Disp34\->Z
 \IfEnd
 \If W=34
@@ -950,14 +982,16 @@ J\->\R a2
 \Orange \Text 58,2,"MONTEZ,VITE !!! \->EXE"\Disp\Isz Z
 \IfEnd
 \If W=41
-\Then "Wills: Tu n'est pas  avec Jessie ?"
-\Orange "Non,je ne l'ai pas  vu."\Disp\ClrText
-"Elle n'est pas encorerevenu.Je vais partira sa recherche."\Disp\ClrText
+\Then "Wills: Tu n'es pas"
+"avec Jessie ?"
+\Orange "Non, je ne l'ai pas  vue."\Disp\ClrText
+"Elle n'est pas encorerevenue. Je vais"
+"partir a sa recherche"\Disp\ClrText
 \Orange "Tu as eu des infos   sur Tomberry ?"\Disp\ClrText
-"Eh bien,j'ai appris  qu'il etait capable  de detruire Gaia..."
-\Orange "Ca,je le savais."
+"Eh bien, j'ai appris qu'il etait capable  de detruire Gaia..."
+\Orange "Ca, je le savais."
 "...Et il se trouve ence moment a SANCTUA."\Disp\ClrText
-\Orange "SANCTUA ?"\Disp"Son repaire sacre."\Disp\Orange "Bien.J'y vais."\Disp\ClrText
+\Orange "SANCTUA ?"\Disp"Son repaire sacre."\Disp\Orange "Bien. J'y vais."\Disp\ClrText
 "J'espere que tu sais ce que tu fais."\Disp\Orange "Moi aussi."\Disp\Isz Z
 \IfEnd
 Z\->\Mat Z[12,6
@@ -1029,7 +1063,7 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \Then \If C\<>\Pi
 \Then R-16\<>\List 3[8\=>{R-5,R-3,R-9,R-10,R-11,R-17,R-14,R-16,R-14,R-12,R-11,R-12,R-11,R-12,R-9,R-8,R-9,R-5,R-5,R-6,R-5,R-5}\->\List 3
 \DrawStat
-\Else \For 105\->C \To 50 \Step \(-)7-\Int 2\Ran#
+\Else \For 105\->C \To 50 \Step -7-\Int 2\Ran#
 \Orange \F-Line C,33,C-5,36
 \Orange \F-Line C-4,33,C-9,30
 \Next 
@@ -1042,7 +1076,7 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \PlotOn R-21,38
 \F-Line R-21,37,R-20,37
 \Else 3\->D
-\For 88\->C \To 40 \Step \(-)D
+\For 88\->C \To 40 \Step -D
 \Isz D
 \Orange \F-Line 90,42,C,35
 \Orange \F-Line C,35,90,27
@@ -1055,7 +1089,7 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \Text 16,R-11,"."
 \DrawStat
 \Else 0\->D
-\For 100\->C \To 50 \Step \(-)6
+\For 100\->C \To 50 \Step -6
 \Orange \F-Line C,38,C-7,38
 \Orange \F-Line C,38+D,C-7,40+D
 \Orange \F-Line C,38-D,C-7,36-D
@@ -1069,13 +1103,13 @@ D+2\->D
 \Then R-21\<>\List 3[8\=>{125,R,R-11,R-12,R-18,R-21,R-23,R-21,R-18,R-20,R-20,R-19,R-20,R-15,R-10,R-9,R-12,R-7,R-6,R-4,125,R-4}\->\List 3
 \DrawStat
 \F-Line R-17,24,R-16,26
-\Else \For 92\->A \To 67 \Step \(-)1
-\Orange \PlotOn A,\Int (\(-).84A+109.28)
+\Else \For 92\->A \To 67 \Step -1
+\Orange \PlotOn A,\Int (-.84A+109.28)
 \Next 
 \For 1\->B \To 15
 \Orange \PlotChg 66+3\Ran#,52+3\Ran#
 \Next 
-\For 60\->A \To 20 \Step \(-)4+2\Ran#
+\For 60\->A \To 20 \Step -4+2\Ran#
 \Orange \F-Line 67,53,45+2\Ran#,A
 \Next 
 \IfEnd
@@ -1085,7 +1119,7 @@ D+2\->D
 \Then R-7\<>\List 3[8\=>{125,R+7,R+4,R,R-3,R-6,R-6,R-7,R-2,R-2,R-3,R-5,R-8,R-9,R-14,R-17,R-17,R-18,R-16,R-18,R-21,R-21,R-19,R-21,R-19,R-14,R-14,R-16,R-17,R-16,R-12,R-11,R-9,R-13,R-13,R-10,R-7,R+2,R+5,R+9,125}\->\List 3
 \DrawStat
 \Else 0\->G~H
-\For 100\->C \To 55 \Step \(-)5
+\For 100\->C \To 55 \Step -5
 \Int 5\Ran#-2\->G
 C=55\=>0\->G
 \Orange \F-Line C,40+H,C-5,40+G
@@ -1184,7 +1218,7 @@ A=7\=>\Text 51,64,"furie"
 \IfEnd
 \If A=3
 \Then 4\->P
-\(-)1\->Q
+-1\->Q
 \IfEnd
 \If A=4
 \Then 6\->P
@@ -1232,9 +1266,9 @@ A=2\=>\Text 51,73,"force"
 \If A=12
 \Then \Text 51,73,"onde+"
 \For 1\->A \To 40 \Step 2
-A<13\=>\Green \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
-A>12\=>A<25\=>\F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
-A>24\=>\Orange \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
+A<13\=>\Green \F-Line -A+90,38-A/2,-A+90,38+A/2
+A>12\=>A<25\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
+A>24\=>\Orange \F-Line -A+90,38-A/2,-A+90,38+A/2
 \Next 
 \For 1\->A \To 50
 \Next 
@@ -1250,7 +1284,7 @@ A>24\=>\Orange \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
 \If A=3
 \Then \Text 51,73,"onde"
 \For 1\->A \To 40 \Step 2
-\F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
+\F-Line -A+90,38-A/2,-A+90,38+A/2
 \Next 
 6\->P
 7\->Q
@@ -1303,7 +1337,7 @@ A>24\=>\Orange \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
 \Then \For 1\->A \To 3
 \Cls
 \RclPict 1
-\Text 51,38,"pouvoir\->morsure     "
+\Text 51,38,"pouvoir\->morsur      "
 \Next 
 \For 1\->A \To 6
 \Orange \Text \Int 20\Ran#+10,\Int 20\Ran#+40,"#"
@@ -1362,7 +1396,7 @@ A>24\=>\Orange \F-Line \(-)A+90,38-A/2,\(-)A+90,38+A/2
 A=16\=>\Text 51,73,"orage"
 \If A=16
 \Then 0\->W
-\For 61\->A \To 37 \Step \(-)3
+\For 61\->A \To 37 \Step -3
 \Dsz W
 \For 50+W\->P \To 68+W \Step 4
 \PlotOn P,A
@@ -1567,7 +1601,7 @@ A+10(B-5)\->C
 3\->U
 39\->V
 \Lbl 1
-\F-Line V+1,\(-)U+62,V+2,\(-)U+62
+\F-Line V+1,-U+62,V+2,-U+62
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>38\ And \theta\<>27\ And \theta\<>28\ And \theta\<>37\ And \theta\<>47\ And \theta\<>31
@@ -1577,7 +1611,7 @@ A+10(B-5)\->C
 \theta=37\=>U+6\->U
 \theta=38\=>39\->V
 \theta=27\=>83\->V
-U=\(-)3\=>45\->U
+U=-3\=>45\->U
 U=51\=>3\->U
 \theta\<>31\=>\Goto1
 \Int (.17U+.5\->G
@@ -1600,7 +1634,7 @@ C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
 \If C=7
 \Then \Cls
 \RclPict 1
-\For 29\->A \To 11 \Step \(-)6
+\For 29\->A \To 11 \Step -6
 \Green \Text A,55,"     "
 \Next 
 320\->A
@@ -1614,7 +1648,7 @@ C-.15\->C
 \Orange \F-Line 107+10\cos (C-20,16+7\sin (C-20,107+10\cos C,16+7\sin C
 \Next 
 107\->A
-\For \(-)1\->C \To 1 \Step 2
+\For -1\->C \To 1 \Step 2
 \For 4\->B \To 10 \Step 3
 \Orange \F-Line A+CB\ab/c2,16,A+C(B+5,25
 \Orange \F-Line A+C(B-5,25,A+C(B-2,40
@@ -1905,7 +1939,7 @@ Option4:
 \Green \Text 19,91," Objets "
 1\->A
 \Do
-\Green \F-Line 91,\(-)6A+61,93,\(-)6A+61
+\Green \F-Line 91,-6A+61,93,-6A+61
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
@@ -2360,7 +2394,7 @@ V=5\=>\Text 21,58,"\theta"
 32\->B
 1\->D
 \For 1\->C \To 2
-C=2\=>\(-)1\->D
+C=2\=>-1\->D
 C=2\=>86\->A
 \F-Line A-6D,B+9,A-6D,B+7
 \F-Line A-5D,B+11,A-5D,B+5
@@ -2472,7 +2506,7 @@ S=8\=>\Return
 \Text 57,3,"[EXE]\->choisir une action     "
 \StoPict 1
 \Do
-\Green \F-Line 3,\(-)6\r+43,5,\(-)6\r+43
+\Green \F-Line 3,-6\r+43,5,-6\r+43
 \Do
 \If \Not \Int ((5\Mat Z[6,4])\Ran#
 \Then \Prog "TNT6"
@@ -2495,7 +2529,7 @@ S=8\=>\Return
 \For 1\->X \To 200
 \Next 
 \Return
-\Else \Text 57,3,"Le monstre ratrappe Z ! "
+\Else \Text 57,3,"Le monstre rattrape Z ! "
 \For 1\->X \To 200
 \Next 
 0\->P~Q
@@ -2528,7 +2562,7 @@ S=8\=>\Return
 1\->\r
 \Text 57,3,"[EXE]\->Choisir une attak     "
 \Do
-\Green \F-Line 3,\(-)6\r+43,5,\(-)6\r+43
+\Green \F-Line 3,-6\r+43,5,-6\r+43
 \Mat Z[\r,4\->V
 V<4\=>1
 V=4\=>2
@@ -2538,7 +2572,7 @@ V=7\=>6
 V=8\=>9
 \Ans\->O
 \If \Not V
-\Then \Orange \Text 19,28,"\(-)"
+\Then \Orange \Text 19,28,"-"
 \Else \Orange \Text 19,28,O
 \IfEnd
 \StoPict 1
@@ -2596,7 +2630,7 @@ S=8\=>\Return
 \IfEnd
 \If V=3
 \Then 9\->P
-\(-)1\->Q
+-1\->Q
 \IfEnd
 \If V=4
 \Then 1\->P
@@ -2719,7 +2753,7 @@ S=8\=>\Return
 \Text 57,3,"[EXE]\->Choisir un pouvoir    "
 0\->O
 \Do
-\Green \F-Line 3,\(-)6\r+43,5,\(-)6\r+43
+\Green \F-Line 3,-6\r+43,5,-6\r+43
 O\->B
 \Mat Z[\r,3\->V
 V<6\=>1
@@ -2735,7 +2769,7 @@ V=17\=>12
 \Ans\->O
 B>9\=>O\<=9\=>\Orange \Text 19,28,"  "
 \If \Not V
-\Then \Orange \Text 19,28,"\(-)"
+\Then \Orange \Text 19,28,"-"
 \Else \Orange \Text 19,28,O
 \IfEnd
 \StoPict 1
@@ -2785,7 +2819,7 @@ S=8\=>\Return
 \For 2\->A \To 3
 \Text 16+7A,105,\Mat Z[6,A
 \Next 
-\For 5.8\->A \To 0 \Step \(-).2
+\For 5.8\->A \To 0 \Step -.2
 \Text 4,99,\Int A
 \Next 
 \Cls
@@ -2866,8 +2900,8 @@ V=2\=>\Text 51,38,"Z attaque +1          "
 \Orange \Text 25,104,":"
 \For 1\->X \To 80
 \Next 
-\Text 51,38,"Z absorbe enn vie \!mark   "
-\For 103\->A \To 47 \Step \(-)2
+\Text 51,38,"Z absorbe enn vie !   "
+\For 103\->A \To 47 \Step -2
 \Orange \F-Line A,36+3\Ran#,A-1,36+3\Ran#
 \Next 
 \Int (20+10\Ran#+\Mat Z[1,1\->\Mat Z[1,1
@@ -2930,7 +2964,7 @@ V=2\=>\Text 51,38,"Z attaque +1          "
 \Next 
 0\->O
 \If V=16
-\Then \For 61\->P \To 34 \Step \(-)3
+\Then \For 61\->P \To 34 \Step -3
 \Isz O
 \For 91+O\->Q \To 109+O \Step 4
 \PlotOn Q,P
@@ -3027,7 +3061,7 @@ C\->W
 \Next 
 1\->Q
 \Do
-\Green \Text 19+6Q,3,"\(-)"
+\Green \Text 19+6Q,3,"-"
 \Do
 \Getkey\->\theta
 \If \theta=47
@@ -3042,7 +3076,7 @@ C\->W
 \Not Q\=>5\->Q
 Q=6\=>1\->Q
 \LpWhile \theta\<>31
-\Green \Text 19+6Q,3,"\(-)"
+\Green \Text 19+6Q,3,"-"
 51\->K
 73\->L
 \Mat Z[Q,5-O\->C
@@ -3195,7 +3229,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3771
+Capacity:3748
 File Name:TNT15
 Group Name:
 Password:
@@ -3217,7 +3251,8 @@ Option4:
 \Then \Mat Z[12,1]-1\->\Mat Z[12,1
 \Mat Z[12,1\=>\Return
 \If 36=W
-\Then "Trop tard !...       TOMBERRY....NON !!!!!             "
+\Then "Trop tard !..."
+"TOMBERRY.... NON !!!!"
 \sin 5\->X
 .\->\Mat Z[1,1
 \GotoT
@@ -3239,7 +3274,9 @@ Option4:
 \IfEnd
 \Lbl O
 \If W=28.5
-\Then "STOP.Aucun humain n' est autorise a sortirpour l'inst..."
+\Then "STOP. Aucun humain"
+"n'est autorise a"
+"sortir pour l'inst.."
 \Orange "Je suis presse."
 \Prog "TNT14"
 29\->\theta
@@ -3251,7 +3288,7 @@ Option4:
 \IfEnd
 \If W=37
 \Then \PlotOff I,J
-\For 21\->A \To 11 \Step \(-)5
+\For 21\->A \To 11 \Step -5
 \Text A,A+37,"\theta"
 \For 0\->X \To 99
 \Next 
@@ -3275,15 +3312,15 @@ Option4:
 \Next 
 41\->\Mat Z[12,6
 1\->\Mat Z[12,2
-"On debarque ici."\Disp"Tu comprends qui est Tomberry maintenant ?Il nous faut trouver un moyen de l'"
-"arreter,sinon..."\Disp\ClrText
-"C'est la fin de Gaia."\Disp\Orange "Je prend les choses  en main."\Disp\ClrText
-\Orange "Jessie,donne l'alerteet fait evacuer les  villes voisines."\Disp\ClrText
+"On debarque ici."\Disp"Tu comprends qui est Tomberry maintenant ?Il nous faut trouver un moyen de"
+"l'arreter, sinon..."\Disp\ClrText
+"C'est la fin de Gaia."\Disp\Orange "Je prends les choses en main."\Disp\ClrText
+\Orange "Jessie,donne l'alerteet fais evacuer les  villes voisines."\Disp\ClrText
 \Orange "Wills,essaie d'avoir plus d'informations  sur Tomberry du cote de la FFC."\Disp\ClrText
 \Orange "Je vais voir un"
 \Orange "vieil ami a HELENIA. On se retrouve a...  BOTMA."\Disp\ClrText
-"A tes ordres,Z."
-"Prend ca :"
+"A tes ordres, Z."
+"Prends ca :"
 "-5 soin+"
 "-5 adrena"
 "-5 chlore"
@@ -3323,14 +3360,15 @@ B\->\Mat Z[9,2
 \Then "Z ! Je craignais de  ne jamais te revoir."\Disp\ClrText
 \Orange "Le temps presse, j'aibesoin de cette arme qui peut sauver GAIA."\Disp\ClrText
 "L'Arme Ultime..."\Disp\If 3>\Mat Z[7,5
-\Then "Il me faut 3 groseyesFais vite."\Disp\Else "Tu as les 3 prismes  et les 3 groseyes ?  Laisse moi un peu de temps."\Disp0.5\->\Mat Z[12,2
+\Then "Il me faut 3 groseyesFais vite."\Disp\Else "Tu as les 3 prismes  et les 3 groseyes ?  Laisse-moi un peu de temps."\Disp0.5\->\Mat Z[12,2
 \Mat Z[7,5]-3\->\Mat Z[7,5
 \IfEnd
 \Else 0\->\Mat Z[12,2]
 "La Tarte aux groseyesest prete."\Disp\Orange "COMMENT ?!!!"\Disp"Oh, je ne te l'avais pas dit ?"\Disp\ClrText
 "L'Arme Ultime est uneTarte aux groseyes,  faite des PRISMES et de 3 GROSEYES."\Disp\Orange "(une tarte...)"\Disp\ClrText
-"Utilise-la contre    Tomberry.Compris ?"\Disp\Orange "Bien sur."\Disp\ClrText
-\Orange "Je te laisse,Sage.   Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
+"Utilise-la contre"
+"Tomberry. Compris ?"\Disp\Orange "Bien sur."\Disp\ClrText
+\Orange "Je te laisse, Sage.  Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
 "C'est ca. Adieu."\Disp1\->\Mat Z[8,5
 \IfEnd
 \Lbl T
@@ -3361,7 +3399,7 @@ B\->\Mat Z[9,2
 "TU DEVRAS D'ABORD"
 "VAINCRE MES DISCIPLES"\Disp\ClrText
 \Orange "Redox ? Enzo ?"
-\Orange "Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!         "
+\Orange "Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
 43\->W
 \Prog "TNT14"
 44\->W
@@ -3371,13 +3409,14 @@ B\->\Mat Z[9,2
 55\->\Mat Z[12,6
 \Prog "TNT13"
 \ClrText
-"IMPRESSIONANT...     MAIS QUE PEUX-TU"
+"IMPRESSIONNANT..."
+"MAIS QUE PEUX-TU"
 "CONTRE MOI ?"\Disp\If \Not \Mat Z[8,5
 \Then "SANS L'ARME SUPREME  TU N'ES RIEN !"
 \For 0\->X \To 99
 \Next 
 0\->\Mat Z[1,1
-\For 31\->A \To 19 \Step \(-)6
+\For 31\->A \To 19 \Step -6
 \Text A,81,"   "
 \Next 
 \sin 5\->X
@@ -3402,7 +3441,7 @@ B\->\Mat Z[9,2
 \Isz C
 \Next 
 3\->C
-\For 1800\->D \To 1 \Step \(-)40
+\For 1800\->D \To 1 \Step -40
 \Green \F-Line A+C\sin D,B+C\cos D,A+C\sin (D-40),B+C\cos (D-40
 \Orange \F-Line A,B,A+60\Ran#-30,B+60\Ran#-30
 C+.6\->C
@@ -3412,8 +3451,8 @@ C+.6\->C
 \For 0\->X \To 1500
 \Next 
 \ClrText
-"Z ?...      Z ?!   "\Disp\Orange "Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
-"Jessie:Ton dernier"
+"Z ?...      Z ?!"\Disp\Orange "Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
+"Jessie: Ton dernier"
 "combat a bien failli t'etre fatal..."\Disp\Orange "Et...et Tomberry ?"\Disp"Detruit. A jamais."
 \For 0\->X \To 600
 \Next 
@@ -3424,7 +3463,7 @@ C+.6\->C
 \Prog "TNT5"
 \StoPict 1
 117\->R
-\ViewWindow 127,\(-)1,0,63,1,0
+\ViewWindow 127,-1,0,63,1,0
 \RclPict 1
 \Prog "TNT5"
 \Text 30,51,"THE END"

@@ -98,7 +98,7 @@ Then
     Next
     Return
   Else 
-    Text 57,3,"Le monstre ratrappe Z ! "
+    Text 57,3,"Le monstre rattrape Z ! "
     For 1→X To 200
     Next
     0→P~Q

@@ -16,7 +16,8 @@ Then
   Mat Z[12,1⇒Return
   If 36=W
   Then 
-    "Trop tard !...       TOMBERRY....NON !!!!!             "
+    "Trop tard !..."
+    "TOMBERRY.... NON !!!!"
     sin 5→X
     .→Mat Z[1,1
     Goto T
@@ -42,7 +43,9 @@ IfEnd
 Lbl O
 If W=28.5
 Then 
-  "STOP.Aucun humain n' est autorise a sortirpour l'inst..."
+  "STOP. Aucun humain"
+  "n'est autorise a"
+  "sortir pour l'inst.."
   Orange "Je suis presse."
   Prog "TNT14"
   29→θ
@@ -83,21 +86,21 @@ Then
   41→Mat Z[12,6
   1→Mat Z[12,2
   "On debarque ici."◢
-  "Tu comprends qui est Tomberry maintenant ?Il nous faut trouver un moyen de l'"
-  "arreter,sinon..."◢
+  "Tu comprends qui est Tomberry maintenant ?Il nous faut trouver un moyen de"
+  "l'arreter, sinon..."◢
   ClrText
   "C'est la fin de Gaia."◢
-  Orange "Je prend les choses  en main."◢
+  Orange "Je prends les choses en main."◢
   ClrText
-  Orange "Jessie,donne l'alerteet fait evacuer les  villes voisines."◢
+  Orange "Jessie,donne l'alerteet fais evacuer les  villes voisines."◢
   ClrText
   Orange "Wills,essaie d'avoir plus d'informations  sur Tomberry du cote de la FFC."◢
   ClrText
   Orange "Je vais voir un"
   Orange "vieil ami a HELENIA. On se retrouve a...  BOTMA."◢
   ClrText
-  "A tes ordres,Z."
-  "Prend ca :"
+  "A tes ordres, Z."
+  "Prends ca :"
   "-5 soin+"
   "-5 adrena"
   "-5 chlore"
@@ -154,7 +157,7 @@ Then
     Then 
       "Il me faut 3 groseyesFais vite."◢
     Else 
-      "Tu as les 3 prismes  et les 3 groseyes ?  Laisse moi un peu de temps."◢
+      "Tu as les 3 prismes  et les 3 groseyes ?  Laisse-moi un peu de temps."◢
       0.5→Mat Z[12,2
       Mat Z[7,5]-3→Mat Z[7,5
     IfEnd
@@ -167,10 +170,11 @@ Then
     "L'Arme Ultime est uneTarte aux groseyes,  faite des PRISMES et de 3 GROSEYES."◢
     Orange "(une tarte...)"◢
     ClrText
-    "Utilise-la contre    Tomberry.Compris ?"◢
+    "Utilise-la contre"
+    "Tomberry. Compris ?"◢
     Orange "Bien sur."◢
     ClrText
-    Orange "Je te laisse,Sage.   Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
+    Orange "Je te laisse, Sage.  Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
     "C'est ca. Adieu."◢
     1→Mat Z[8,5
   IfEnd
@@ -209,7 +213,7 @@ Then
   ClrText
   Orange "Redox ? Enzo ?"
   Orange "Je les croyais morts?"◢
-  "EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!         "
+  "EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
   43→W
   Prog "TNT14"
   44→W
@@ -219,7 +223,8 @@ Then
   55→Mat Z[12,6
   Prog "TNT13"
   ClrText
-  "IMPRESSIONANT...     MAIS QUE PEUX-TU"
+  "IMPRESSIONNANT..."
+  "MAIS QUE PEUX-TU"
   "CONTRE MOI ?"◢
   If Not Mat Z[8,5
   Then 
@@ -264,11 +269,11 @@ Then
   For 0→X To 1500
   Next
   ClrText
-  "Z ?...      Z ?!   "◢
+  "Z ?...      Z ?!"◢
   Orange "Que ? Oh, ma tete..."◢
   "Wills:Il est vivant."◢
   ClrText
-  "Jessie:Ton dernier"
+  "Jessie: Ton dernier"
   "combat a bien failli t'etre fatal..."◢
   Orange "Et...et Tomberry ?"◢
   "Detruit. A jamais."

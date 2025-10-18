@@ -14,7 +14,7 @@ First released on 15th december 2001.
 - [x] Dynamic step to display score
 - [x] User menu : remove 'options', 'retour', 'quitter le jeu'
 - [x] ~~Suggest to load a game if a save exists~~ → impossible
-- [ ] Fix dialogs typos
+- [x] Fix dialogs typos
 - [x] ~~Facilitate the arm wrestling against the troll~~ → not necessary (on graph65)
 - [x] Enable F6 key (go to world) during city loading
 - [x] Objects : do not display 'Epee' and 'Livre'
