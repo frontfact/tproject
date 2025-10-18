@@ -35,7 +35,8 @@ Then
     "Bute-le et reviens"
     "me voir."◢
     ClrText
-    "Achete-toi soin,"
+    "Prends cet argent et"
+    "achete-toi soin,"
     "adrena et chlore :"
     "Tu devras combattre."◢
     20.109→Mat A[2,5

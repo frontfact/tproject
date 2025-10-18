@@ -9,7 +9,7 @@ First released on 15th december 2001.
 
 # Backlog
 
-- [ ] 1st dialog : clarify with "tiens, prends cet argent pour etc."
+- [x] 1st dialog : clarify with "tiens, prends cet argent pour etc."
 - [x] Fix typo "scull" in user menu
 - [x] Dynamic step to display score
 - [x] User menu : remove 'options', 'retour', 'quitter le jeu'

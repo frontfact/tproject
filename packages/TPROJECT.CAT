@@ -551,7 +551,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:8634
+Capacity:8657
 File Name:TNT4
 Group Name:
 Password:
@@ -588,7 +588,8 @@ Option4:
 "Nous avons retrouve  la trace d'Enzo, un  ennemi potentiel de  la FFC\Deg>."\Disp\ClrText
 "Bute\(-)le et reviens"
 "me voir."\Disp\ClrText
-"Achete\(-)toi soin,"
+"Prends cet argent et"
+"achete\(-)toi soin,"
 "adrena et chlore :"
 "Tu devras combattre."\Disp20.109\->\Mat A[2,5
 \Isz Z
