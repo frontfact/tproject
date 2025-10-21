@@ -30,6 +30,8 @@ LineFeedToken = Token('\n', '\n', 1, False)
 DispToken = Token('Disp', '◢', 1, True)
 StepToken = Token('Step ', 'Step ', 1, True)
 ToToken = Token('To ', 'To ', 1, True)
+GreenToken = Token('Green ', 'Green ', 2, True)
+OrangeToken = Token('Orange ', 'Orange ', 2, True)
 
 
 def load_tokens(path):
@@ -197,6 +199,12 @@ class Program:
                     self.tokens[i:i] = alt
                 else:
                     self.tokens[i] = alt
+    
+    def decolorize(self):
+        for i in range(len(self.tokens)-1, -1, -1):
+            token = self.tokens[i]
+            if token==GreenToken or token==OrangeToken:
+                del self.tokens[i]
 
 
 class CatFile(object):
@@ -300,6 +308,10 @@ class CatFile(object):
             program.simplify()
         self.useless_tokens()
 
+    def decolorize(self):
+        for program in self.programs:
+            program.decolorize()
+
     @classmethod
     def DumpPrograms(cls, catfile, outputpath: PathLike, clean: bool):
         outputpath = Path(outputpath)
@@ -354,12 +366,16 @@ def main():
     p.add_argument('--dump', '-d', action='store_true')
     p.add_argument('--overwrite', '-o', action='store_true')
     p.add_argument('--simplify', action='store_true')
+    p.add_argument('--decolorize', action='store_true')
     args = p.parse_args()
 
     catfile = CatFile(args.filepath)
 
     if args.simplify:
         catfile.simplify()
+
+    if args.decolorize:
+        catfile.decolorize()
 
     if args.sort:
         catfile.sort()

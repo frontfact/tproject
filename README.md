@@ -26,8 +26,12 @@ First released on 15th december 2001.
 - [x] ~~Extract shop init from TNT15~~ → TNT16
 - [x] ~~Extract hostel from TNT4~~ → TNT17
 - [ ] Display 'hum?' only if progress < W ?
-- [ ] Port to graph35+
-- [ ] Port to graph100+
+- [ ] Port to graph35+/graph100+
+    - [ ] remove ':' separators
+	- [ ] monochrome
+		- [ ] modify menus using [    ] brackets to select entries
+	- [ ] ¥ not rendered with `Text` command
+	- [ ] factorize sleep loops into TNT18 + use a global sleep factor (using free Mat Z cell ?)
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [ ] Notice in markdown/pdf
 	- [ ] screenshots of attaks/powers
