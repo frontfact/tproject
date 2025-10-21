@@ -185,7 +185,9 @@ Z>30\=>\Text 37,4,"Plymout"
 \F-Line 108,24-W,106,26-W
 \F-Line 103,27+W,105,28+W
 \Next 
-\Green \Text 20,84,"++":\Text 22,82,"++":\Green \Text 24,80,"++"
+\Green \Text 20,84,"++"
+\Text 22,82,"++"
+\Green \Text 24,80,"++"
 \PlotOn 82,37
 \Green \Text 42,89,"\@5C\@5C"
 \Green \Text 47,87,"\@5C\@5C"
@@ -399,7 +401,8 @@ W=\r\=>\Goto8
 85\->W
 34\->V
 \IfEnd
-1\->\r:1\->\theta
+1\->\r
+1\->\theta
 W<A\=>-1\->\theta
 V<B\=>-1\->\r
 \If \Abs (W-A)>\Abs (V-B
@@ -694,7 +697,11 @@ J\->\R a2
 "Met a mort les rois,"
 "detruit les villes"
 "et rabat les hautes"
-"montagnes..."\Disp\Pi\->T:7\->E:5\->M:8\->P:3\->S
+"montagnes..."\Disp\Pi\->T
+7\->E
+5\->M
+8\->P
+3\->S
 \Orange "C'EST LE..."?\->R
 \ClrText
 \If R=TEMPS
@@ -866,7 +873,10 @@ J\->\R a2
 \If W=27
 \Then H=3\=>"M"\DispH=4\=>G=12\=>"o"\DispH=5\=>"r"\DispH=4\=>G=10\=>"k"\Disp\If H=2
 \Then "Quel est mon nom ?"
-\Pi\->M:3\->O:8\->R:9\->K
+\Pi\->M
+3\->O
+8\->R
+9\->K
 \Orange "FACILE, C'EST..."?\->Q
 \If Q\<>MORK
 \Then "Ben voyons..."\Disp\Else "Exact."
@@ -2367,7 +2377,14 @@ V=9\=>\Goto9
 5(U-1\->\theta
 5(W-1\->E
 \If O
-\Then O=3\=>\Orange \Text \theta+1,E+48,"p":O=2\=>\Orange \Text \theta+3,E+49,"\Deg>":O=5\=>\Orange \Text \theta+1,E+49,"o":O=6\=>\Text \theta+1,E+48,"@":O=4\=>\Text \theta+2,E+49,"\@5C":O=7\=>\Orange \Text \theta+2,E+47,"#":O=8\=>\Text \theta+1,E+48,"~":O=9\=>\Orange \Text \theta+1,E+48,"*"
+\Then O=3\=>\Orange \Text \theta+1,E+48,"p"
+O=2\=>\Orange \Text \theta+3,E+49,"\Deg>"
+O=5\=>\Orange \Text \theta+1,E+49,"o"
+O=6\=>\Text \theta+1,E+48,"@"
+O=4\=>\Text \theta+2,E+49,"\@5C"
+O=7\=>\Orange \Text \theta+2,E+47,"#"
+O=8\=>\Text \theta+1,E+48,"~"
+O=9\=>\Orange \Text \theta+1,E+48,"*"
 \IfEnd
 \If B\>=2
 \Then \Green \F-Line E+52,63-\theta,E+52,58-\theta

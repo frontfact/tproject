@@ -183,7 +183,8 @@ Then
   85→W
   34→V
 IfEnd
-1→r:1→θ
+1→r
+1→θ
 W<A⇒-1→θ
 V<B⇒-1→r
 If Abs (W-A)>Abs (V-B

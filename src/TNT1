@@ -56,7 +56,9 @@ For 0→W To 1
   F-Line 108,24-W,106,26-W
   F-Line 103,27+W,105,28+W
 Next
-Green Text 20,84,"++":Text 22,82,"++":Green Text 24,80,"++"
+Green Text 20,84,"++"
+Text 22,82,"++"
+Green Text 24,80,"++"
 PlotOn 82,37
 Green Text 42,89,"¥¥"
 Green Text 47,87,"¥¥"

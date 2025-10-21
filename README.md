@@ -27,7 +27,7 @@ First released on 15th december 2001.
 - [x] ~~Extract hostel from TNT4~~ → TNT17
 - [ ] Display 'hum?' only if progress < W ?
 - [ ] Port to graph35+/graph100+
-    - [ ] remove ':' separators
+    - [x] remove ':' separators
 	- [ ] monochrome
 		- [ ] modify menus using [    ] brackets to select entries
 	- [ ] ¥ not rendered with `Text` command
