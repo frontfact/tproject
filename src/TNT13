@@ -32,10 +32,6 @@ For 0→W To 2
 Next
 Orange F-Line 7,45,29,45
 Text 13,13,"𝐓N𝐓"
-Green F-Line 4,37,4,41
-Green F-Line 4,41,35,41
-Green F-Line 35,41,35,37
-Green F-Line 35,37,4,37
 Green Text 31,3,"$"
 Green Text 31,10,Mat Z[10,4
 Green Text 38,3,"[MENU]"

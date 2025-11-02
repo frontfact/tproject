@@ -1,3 +1,7 @@
+Green F-Line 4,37,4,41
+Green F-Line 4,41,35,41
+Green F-Line 35,41,35,37
+Green F-Line 35,37,4,37
 4+30(Mat Z[1,1]/Mat Z[1,2→D
 For 38→Y To 40
   Orange F-Line 5,Y,D,Y

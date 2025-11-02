@@ -2234,7 +2234,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5631
+Capacity:5571
 File Name:TNT13
 Group Name:
 Password:
@@ -2277,10 +2277,6 @@ V=10\=>\Orange \Text 5,3,"ATLANTIS"
 \Next 
 \Orange \F-Line 7,45,29,45
 \Text 13,13,"\TeraN\Tera"
-\Green \F-Line 4,37,4,41
-\Green \F-Line 4,41,35,41
-\Green \F-Line 35,41,35,37
-\Green \F-Line 35,37,4,37
 \Green \Text 31,3,"\@24"
 \Green \Text 31,10,\Mat Z[10,4
 \Green \Text 38,3,"[MENU]"
@@ -3581,7 +3577,7 @@ X\=>\Locate W,2,"z"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:52
+Capacity:112
 File Name:TNT18
 Group Name:
 Password:
@@ -3590,6 +3586,10 @@ Option2:
 Option3:
 Option4:
 %Data Record
+\Green \F-Line 4,37,4,41
+\Green \F-Line 4,41,35,41
+\Green \F-Line 35,41,35,37
+\Green \F-Line 35,37,4,37
 4+30(\Mat Z[1,1]/\Mat Z[1,2\->D
 \For 38\->Y \To 40
 \Orange \F-Line 5,Y,D,Y
