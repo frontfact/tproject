@@ -160,8 +160,7 @@ V=5⇒Text 21,58,"θ"
 Lbl 9
 Orange Text 55,42,"             "
 StoPict 1
-5π→W
-Prog "TNT1"
+Prog "TNT18"
 If V=3 And 41=Mat Z[12,6
 Then 
   ClrText

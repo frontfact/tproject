@@ -53,8 +53,7 @@ IfEnd
 If b₀
 Then 
   Green Text 31,10,Mat Z[10,4
-  5π→W
-  Prog "TNT1"
+  Prog "TNT18"
   Mat Z[9,3→θ
   Mat Z[11,1→V
   If b₁≠π
@@ -88,8 +87,7 @@ Then
   RclPict 1
   Green PlotOn I,J
   Green Text 31,10,Mat Z[10,4
-  5π→W
-  Prog "TNT1"
+  Prog "TNT18"
   Goto 1
 IfEnd
 θ=29⇒Prog "TNT15"

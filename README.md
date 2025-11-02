@@ -25,6 +25,7 @@ First released on 15th december 2001.
 - [x] ~~Check if 'vision' power exists~~ → it does
 - [x] ~~Extract shop init from TNT15~~ → TNT16
 - [x] ~~Extract hostel from TNT4~~ → TNT17
+- [x] ~~Extract life bar from TNT1~~ → TNT18
 - [ ] Display 'hum?' only if progress < W ?
 - [ ] Port to graph35+/graph100+
     - [x] remove ':' separators
@@ -33,6 +34,7 @@ First released on 15th december 2001.
 	- [ ] ¥ not rendered with `Text` command
 	- [ ] factorize sleep loops into TNT18 + use a global sleep factor (using free Mat Z cell ?)
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
+- [x] Fix exit from shop without checking progress
 - [ ] Notice in markdown/pdf
 	- [ ] screenshots of attaks/powers
 	- [ ] 'hum?' in points of interest

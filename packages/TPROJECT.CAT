@@ -121,7 +121,7 @@ D>1\=>0\->D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1499
+Capacity:1434
 File Name:TNT1
 Group Name:
 Password:
@@ -130,13 +130,6 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\If W=5\Pi
-\Then 4+30(\Mat Z[1,1]/\Mat Z[1,2\->D
-\For 38\->W \To 40
-\Orange \F-Line 5,W,D,W
-\Next 
-\Return
-\IfEnd
 \Cls
 \F-Line 36,55,127,55
 \F-Line 36,2,36,63
@@ -429,7 +422,7 @@ V+Q\->B
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1142
+Capacity:1134
 File Name:TNT3
 Group Name:
 Password:
@@ -486,8 +479,7 @@ V\->\Mat Z[11,1
 \IfEnd
 \If \R b0
 \Then \Green \Text 31,10,\Mat Z[10,4
-5\Pi\->W
-\Prog "TNT1"
+\Prog "TNT18"
 \Mat Z[9,3\->\theta
 \Mat Z[11,1\->V
 \If \R b1\<>\Pi
@@ -519,8 +511,7 @@ V\->\Mat Z[11,1
 \RclPict 1
 \Green \PlotOn I,J
 \Green \Text 31,10,\Mat Z[10,4
-5\Pi\->W
-\Prog "TNT1"
+\Prog "TNT18"
 \Goto1
 \IfEnd
 \theta=29\=>\Prog "TNT15"
@@ -2244,7 +2235,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5635
+Capacity:5631
 File Name:TNT13
 Group Name:
 Password:
@@ -2399,8 +2390,7 @@ V=5\=>\Text 21,58,"\theta"
 \Lbl 9
 \Orange \Text 55,42,"             "
 \StoPict 1
-5\Pi\->W
-\Prog "TNT1"
+\Prog "TNT18"
 \If V=3\ And 41=\Mat Z[12,6
 \Then \ClrText
 \Orange "L'onde de choc s'est ressentie jusqu'ici, la population est"
@@ -3587,4 +3577,22 @@ X\=>\Locate W,2,"z"
 \Next 
 \IfEnd
 \GotoA
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:52
+File Name:TNT18
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+4+30(\Mat Z[1,1]/\Mat Z[1,2\->D
+\For 38\->Y \To 40
+\Orange \F-Line 5,Y,D,Y
+\Next 
 %End
