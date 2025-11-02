@@ -2002,7 +2002,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2799
+Capacity:2772
 File Name:TNT12
 Group Name:
 Password:
@@ -2066,11 +2066,9 @@ M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,4
 \Orange \Text 11,3,"NIVEAU"
 \Orange \Text 11,30,\Mat Z[11,2
 \If \Int 3\Ran#
-\Then \Green \Graph Y=16+3\Ran#
-\Green \Text 45,1,"         "
-\Else \Orange \Graph Y=16+\Ran#
+\Then \Green \Graph (X,Y)=(37+15T,16+3\Ran#
+\Else \Orange \Graph (X,Y)=(37+15T,16+2\Ran#
 \Orange \F-Line 38,16,125,16
-\Orange \Text 45,1,"         "
 \IfEnd
 1\->W
 \Pi\->N

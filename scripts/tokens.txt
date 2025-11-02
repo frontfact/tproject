@@ -99,5 +99,6 @@ theta;θ;1
 To ;To ;1
 ViewWindow ;ViewWindow ;1
 xyLine;xyLine;2
+Graph (X,Y)=(;Graph (X,Y)=(;1
 Horizontal ;Horizontal ;2
 Vertical ;Vertical ;2

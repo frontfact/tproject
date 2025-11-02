@@ -54,12 +54,10 @@ Orange Text 11,3,"NIVEAU"
 Orange Text 11,30,Mat Z[11,2
 If Int 3Ran#
 Then 
-  Green Graph Y=16+3Ran#
-  Green Text 45,1,"         "
+  Green Graph (X,Y)=(37+15T,16+3Ran#
 Else 
-  Orange Graph Y=16+Ran#
+  Orange Graph (X,Y)=(37+15T,16+2Ran#
   Orange F-Line 38,16,125,16
-  Orange Text 45,1,"         "
 IfEnd
 1→W
 π→N
