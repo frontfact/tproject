@@ -36,11 +36,10 @@ Do
   Green Text 6A+1,91," "
   θ=28⇒Dsz A
   θ=37⇒Isz A
-  θ=47⇒Return
   Not A⇒3→A
   A=4⇒1→A
-LpWhile θ≠31
-If A=2
+LpWhile θ≠31 And θ≠47
+If A=2 Or θ=47
 Then 
   If 2=Mat Z[12,6
   Then 
