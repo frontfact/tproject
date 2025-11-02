@@ -1,11 +1,11 @@
 0→P~Q
 Cls
-F-Line 1,1,127,1
-F-Line 127,1,127,63
-F-Line 127,63,1,63
-F-Line 1,63,1,1
-F-Line 36,1,36,63
-F-Line 37,1,37,63
+Horizontal 1
+Vertical 127
+Horizontal 63
+Vertical 1
+Vertical 36
+Vertical 37
 Green Text 4,7,"OBJETS"
 F-Line 1,53,37,53
 Orange Text 14,3,"[EXE]"

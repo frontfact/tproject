@@ -99,3 +99,5 @@ theta;θ;1
 To ;To ;1
 ViewWindow ;ViewWindow ;1
 xyLine;xyLine;2
+Horizontal ;Horizontal ;2
+Vertical ;Vertical ;2

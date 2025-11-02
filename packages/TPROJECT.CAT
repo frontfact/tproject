@@ -1570,7 +1570,7 @@ C=13\=>\Text K,L,"PHOENIX"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2748
+Capacity:2699
 File Name:TNT9
 Group Name:
 Password:
@@ -1581,12 +1581,12 @@ Option4:
 %Data Record
 0\->P~Q
 \Cls
-\F-Line 1,1,127,1
-\F-Line 127,1,127,63
-\F-Line 127,63,1,63
-\F-Line 1,63,1,1
-\F-Line 36,1,36,63
-\F-Line 37,1,37,63
+\Horizontal 1
+\Vertical 127
+\Horizontal 63
+\Vertical 1
+\Vertical 36
+\Vertical 37
 \Green \Text 4,7,"OBJETS"
 \F-Line 1,53,37,53
 \Orange \Text 14,3,"[EXE]"
@@ -1789,7 +1789,7 @@ D\>=2\=>\Text K,L+31,D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1369
+Capacity:1279
 File Name:TNT10
 Group Name:
 Password:
@@ -1800,16 +1800,15 @@ Option4:
 %Data Record
 \Lbl 0
 \Cls
-\Green \F-Line 1,1,127,1
-\Green \F-Line 127,1,127,63
-\Green \F-Line 127,63,1,63
-\Green \F-Line 1,63,1,1
-\F-Line 126,2,126,62
-\F-Line 126,62,2,62
-\F-Line 2,62,2,2
-\Green \F-Line 126,51,2,51
-\Green \F-Line 2,51,2,62
-\Green \F-Line 1,52,127,52
+\Green \Horizontal 1
+\Green \Vertical 127
+\Green \Horizontal 63
+\Green \Vertical 1
+\Vertical 126
+\Horizontal 62
+\Vertical 2
+\Green \Horizontal 51
+\Green \Horizontal 52
 \Text 5,5,"skulls:"
 \Text 5,34,\Mat Z[10,4
 \Green \F-Line 59,62,59,51
@@ -1909,7 +1908,7 @@ A=5\=>\Return
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1036
+Capacity:995
 File Name:TNT11
 Group Name:
 Password:
@@ -1920,11 +1919,11 @@ Option4:
 %Data Record
 \Lbl 0
 \Cls
-\F-Line 1,1,127,1
-\F-Line 127,1,127,63
-\F-Line 127,63,1,63
-\F-Line 1,63,1,1
-\F-Line 40,1,40,63
+\Horizontal 1
+\Vertical 127
+\Horizontal 63
+\Vertical 1
+\Vertical 40
 \Text 40,65,"~FFC shop~"
 \Orange \F-Line 90,59,124,59
 \Orange \F-Line 125,58,125,40
@@ -2013,7 +2012,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2832
+Capacity:2799
 File Name:TNT12
 Group Name:
 Password:
@@ -2059,10 +2058,10 @@ M=5\=>{41,41,43,42,29,30,32,29,28,28,27,27,20,20,25,25,17,17,21,24,27,23}\->\Lis
 M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,43,42,40,35,35,35,39,41,40,31,24,19,17,17,18,22,22}\->\List 4
 55=\Mat Z[12,6\=>\Return
 \Cls
-\F-Line 1,1,127,1
-\F-Line 127,1,127,63
-\F-Line 127,63,1,63
-\F-Line 1,63,1,1
+\Horizontal 1
+\Vertical 127
+\Horizontal 63
+\Vertical 1
 \F-Line 1,9,36,9
 \F-Line 36,9,36,63
 \F-Line 1,55,36,55
@@ -2245,7 +2244,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5654
+Capacity:5635
 File Name:TNT13
 Group Name:
 Password:
@@ -2261,11 +2260,11 @@ V\->\Mat Z[11,1
 \Lbl S
 \Cls
 \BG-None
-\Green \F-Line 1,13,127,13
-\Green \F-Line 47,14,47,63
-\Green \F-Line 1,63,127,63
+\Green \Horizontal 13
+\Green \F-Line 47,13,47,63
+\Green \Horizontal 63
 \Green \F-Line 1,63,1,13
-\Green \F-Line 127,14,127,63
+\Green \F-Line 127,13,127,63
 V=1\=>\Orange \Text 5,3,"BOTMA"
 V=2\=>\Orange \Text 5,3,"ELOS"
 V=3\=>\Orange \Text 5,3,"HELENIA"
@@ -2295,7 +2294,7 @@ V=10\=>\Orange \Text 5,3,"ATLANTIS"
 \Green \Text 31,3,"\@24"
 \Green \Text 31,10,\Mat Z[10,4
 \Green \Text 38,3,"[MENU]"
-\Green \Text 45,3,"[F6]\->MONDE"
+\Green \Text 45,3,"[F6]Monde"
 \Orange \Text 55,42,"(CHARGEMENT)"
 \Identity 1\->\Mat A
 \If V=4

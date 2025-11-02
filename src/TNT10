@@ -1,15 +1,14 @@
 Lbl 0
 Cls
-Green F-Line 1,1,127,1
-Green F-Line 127,1,127,63
-Green F-Line 127,63,1,63
-Green F-Line 1,63,1,1
-F-Line 126,2,126,62
-F-Line 126,62,2,62
-F-Line 2,62,2,2
-Green F-Line 126,51,2,51
-Green F-Line 2,51,2,62
-Green F-Line 1,52,127,52
+Green Horizontal 1
+Green Vertical 127
+Green Horizontal 63
+Green Vertical 1
+Vertical 126
+Horizontal 62
+Vertical 2
+Green Horizontal 51
+Green Horizontal 52
 Text 5,5,"skulls:"
 Text 5,34,Mat Z[10,4
 Green F-Line 59,62,59,51

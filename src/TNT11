@@ -1,10 +1,10 @@
 Lbl 0
 Cls
-F-Line 1,1,127,1
-F-Line 127,1,127,63
-F-Line 127,63,1,63
-F-Line 1,63,1,1
-F-Line 40,1,40,63
+Horizontal 1
+Vertical 127
+Horizontal 63
+Vertical 1
+Vertical 40
 Text 40,65,"~FFC shop~"
 Orange F-Line 90,59,124,59
 Orange F-Line 125,58,125,40
