@@ -62,14 +62,14 @@ Then
   PlotOff I,J
   For 21→A To 11 Step -5
     Text A,A+37,"θ"
-    For 0→X To 99
-    Next
+    .3→X
+    Prog "T0"
     Text A,A+37,"~"
   Next
   38→Mat Z[12,6
   0→Mat Z[9,3
-  For 0→X To 199
-  Next
+  .7→X
+  Prog "T0"
   sin 5→X
   Goto T
 IfEnd
@@ -79,8 +79,8 @@ Then
   For 47→A To 73
     Isz B
     PlotOn A,B
-    For 0→X To 60
-    Next
+    .2→X
+    Prog "T0"
     PlotOff A,B
   Next
   41→Mat Z[12,6
@@ -229,8 +229,8 @@ Then
   If Not Mat Z[8,5
   Then 
     "SANS L'ARME SUPREME  TU N'ES RIEN !"
-    For 0→X To 99
-    Next
+    .3→X
+    Prog "T0"
     0→Mat Z[1,1
     For 31→A To 19 Step -6
       Text A,81,"   "
@@ -242,8 +242,8 @@ Then
     Green "Z envoie :"
     Green "Tarte aux groseyes !"
   IfEnd
-  For 0→X To 99
-  Next
+  .3→X
+  Prog "T0"
   87→A
   38→B
   5→C
@@ -266,8 +266,8 @@ Then
   Next
   Cls
   Plot 0,0
-  For 0→X To 1500
-  Next
+  5.→X
+  Prog "T0"
   ClrText
   "Z ?...      Z ?!"◢
   Orange "Que ? Oh, ma tete..."◢
@@ -277,8 +277,8 @@ Then
   "combat a bien failli t'etre fatal..."◢
   Orange "Et...et Tomberry ?"◢
   "Detruit. A jamais."
-  For 0→X To 600
-  Next
+  2.→X
+  Prog "T0"
   Lbl R
   Prog "TNT12"
   117→R

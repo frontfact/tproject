@@ -27,12 +27,15 @@ First released on 15th december 2001.
 - [x] ~~Extract hostel from TNT4~~ → TNT17
 - [x] ~~Extract life bar from TNT1~~ → TNT18
 - [ ] Display 'hum?' only if progress < W ?
-- [ ] Port to graph35+/graph100+
+- [ ] Optimize `Mat Z[12,6]→X` in TNT13
+- [x] Port to graph35+/graph100+
     - [x] remove ':' separators
-	- [ ] monochrome
-		- [ ] modify menus using [    ] brackets to select entries
+	- [x] monochrome
+		- [x] modify menus using [    ] brackets to select entries
+		- [x] life gauge in cities
+		- [ ] make dialogs speaker explicit
 	- [ ] ¥ not rendered with `Text` command
-	- [ ] factorize sleep loops into TNT18 + use a global sleep factor (using free Mat Z cell ?)
+	- [x] factorize sleep loops into Prog "T0" + use a global sleep factor
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [x] Fix exit from shop without checking progress
 - [ ] Notice in markdown/pdf

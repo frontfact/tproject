@@ -205,6 +205,6 @@ Else
 IfEnd
 W+P→A
 V+Q→B
-For 1→W To 150
-Next
+.5→X
+Prog "T0"
 Goto 8

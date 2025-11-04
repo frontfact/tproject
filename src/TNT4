@@ -9,8 +9,8 @@ Then
   If W≠Z
   Then 
     Text 54,60,"HUM ?"
-    For 0→W To 50
-    Next
+    .2→X
+    Prog "T0"
     Text 54,60,"      "
     Return
   IfEnd
@@ -81,11 +81,11 @@ Then
     Orange "Enzo, tu es mort !   Prepare-toi au combat"
     "Enzo:"
     "Incarnation GOA."
-    For 0→X To 99
-    Next
+    .3→X
+    Prog "T0"
     Prog "TNT14"
-    For 0→X To 300
-    Next
+    1.→X
+    Prog "T0"
     ClrText
     "Mais c'est toi, Z ?!"
     Orange "Il parait, oui."
@@ -116,8 +116,8 @@ Then
       50→a₂
       1→Mat Z[11,5
       Green "→retour chez Redox..."
-      For 0→X To 300
-      Next
+      1.→X
+      Prog "T0"
       "Bien,petit,tu meritesma confiance."
     IfEnd
     "Prends ces skulls et"
@@ -307,8 +307,8 @@ Then
     Green "Les deux complices tetournent le dos et...sortent en ville."◢
     ClrText
     Green "FIN."
-    For 0→X To 500
-    Next
+    1.6→X
+    Prog "T0"
     Orange "Hep-hep-hep..."
     Orange "C'est que le debut dujeu,la."
     Orange "Ces deux cons vont   pas s'en tirer"
@@ -512,8 +512,8 @@ Then
       "jamais du nous suivre"
       "Redox :"
       "INCARNATION ARAKN !"
-      For 0→X To 99
-      Next
+      .3→X
+      Prog "T0"
       I→a₁
       J→a₂
       Prog "TNT14"
@@ -522,8 +522,8 @@ Then
       "t'aneantir, miserableinsecte !!!"
       " "
       "INCARNATION GOA !"
-      For 0→X To 99
-      Next
+      .3→X
+      Prog "T0"
       Prog "TNT14"
       "...Nous mourrons......mais.....Tomberry.........est libre"◢
       ClrText

@@ -53,8 +53,8 @@ Then
     For 3→W To 7
       Not X⇒Locate W,2,"Z"
       X⇒Locate W,2,"z"
-      For 1→Y To 30
-      Next
+      .1→X
+      Prog "T0"
     Next
   Next
 IfEnd
@@ -73,7 +73,7 @@ Then
   ClrText
   Locate 7,4,"* Level *"
   Locate 7,5,"* Saved *"
-  For 0→W To 300
-  Next
+  1.→X
+  Prog "T0"
 IfEnd
 Goto A

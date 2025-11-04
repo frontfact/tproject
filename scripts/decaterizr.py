@@ -1,4 +1,5 @@
 import argparse
+import copy
 import sys
 import re
 import shutil, os
@@ -32,6 +33,8 @@ StepToken = Token('Step ', 'Step ', 1, True)
 ToToken = Token('To ', 'To ', 1, True)
 GreenToken = Token('Green ', 'Green ', 2, True)
 OrangeToken = Token('Orange ', 'Orange ', 2, True)
+YenToken = Token('@5C', '¥', 1, True)
+EsperluetteToken = Token('@26', '&', 1, True)
 
 
 def load_tokens(path):
@@ -85,7 +88,7 @@ class AsciiParser:
 
 
 class Program:
-    def __init__(self, header_lines, data):
+    def __init__(self, header_lines, data, ctype='G65'):
         self.header = {}
         for line in header_lines:
             line = line.rstrip()
@@ -96,6 +99,7 @@ class Program:
                 self.header[line] = ''
         self.data = data
         self.tokens = self.parse_tokens()
+        self.ctype = ctype
         
     def print_header(self):
         for k,v in self.header.items():
@@ -117,20 +121,33 @@ class Program:
 
     def write(self, fout):
         # write header
-        fout.write(f'%Header Record\n')
-        fout.write(f'Format:{self.header["Format"]}\n')
-        fout.write(f'Communication SW:{self.header["Communication SW"]}\n')
-        fout.write(f'Data Type:{self.header["Data Type"]}\n')
-        fout.write(f'Capacity:{self.capacity}\n')
-        fout.write(f'File Name:{self.header["File Name"]}\n')
-        fout.write(f'Group Name:{self.header["Group Name"]}\n')
-        fout.write(f'Password:{self.header["Password"]}\n')
-        fout.write(f'Option1:{self.header["Option1"]}\n')
-        fout.write(f'Option2:{self.header["Option2"]}\n')
-        fout.write(f'Option3:{self.header["Option3"]}\n')
-        fout.write(f'Option4:{self.header["Option4"]}\n')
+        if self.ctype == 'G100':
+            fout.write(f'%Header Record\n')
+            fout.write(f'Format:MCS1\n')
+            fout.write(f'Type Number:1\n')
+            fout.write(f'File Name:{self.name}\n')
+            fout.write(f'Option Name:\n')
+            fout.write(f'Communication SW:0\n')
+            fout.write(f'Capacity:{self.capacity}\n')
+            fout.write(f'Data Type:PG\n')
+        else:
+            fout.write(f'%Header Record\n')
+            fout.write(f'Format:{self.header["Format"]}\n')
+            fout.write(f'Communication SW:{self.header["Communication SW"]}\n')
+            fout.write(f'Data Type:{self.header["Data Type"]}\n')
+            fout.write(f'Capacity:{self.capacity}\n')
+            fout.write(f'File Name:{self.name}\n')
+            fout.write(f'Group Name:{self.header["Group Name"]}\n')
+            fout.write(f'Password:{self.header["Password"]}\n')
+            fout.write(f'Option1:{self.header["Option1"]}\n')
+            fout.write(f'Option2:{self.header["Option2"]}\n')
+            fout.write(f'Option3:{self.header["Option3"]}\n')
+            fout.write(f'Option4:{self.header["Option4"]}\n')
         # write data
         fout.write(f'%Data Record\n')
+        if '100' in self.ctype:
+            fout.write(f'Password:\n')
+            fout.write(f'BaseN:0\n')
         for token in self.tokens:
             # backslash in front of listed tokens
             if token.listed:
@@ -200,17 +217,43 @@ class Program:
                 else:
                     self.tokens[i] = alt
     
-    def decolorize(self):
+    def make_mono(self):
         for i in range(len(self.tokens)-1, -1, -1):
             token = self.tokens[i]
+            if token==YenToken:
+                self.tokens[i] = EsperluetteToken
             if token==GreenToken or token==OrangeToken:
                 del self.tokens[i]
 
+    def find_used_vars(self):
+        operators = ['+', '-', '→', '⇒', '=', '≠', '≥', '≤', '>', '<', 'Not ', ' Or ', ' And ']
+        operands = list()
+        for i, token in enumerate(self.tokens):
+            if token.dst in operators:
+                if i>0:
+                    operands.append(self.tokens[i-1])
+                if i<len(self.tokens)-1:
+                    operands.append(self.tokens[i+1])
+        vars = set()
+        for operand in operands:
+            if len(operand.dst)>1:
+                continue
+            if re.match('[A-Z]|r|θ', operand.dst):
+                vars.add(operand.dst)
+        vars = sorted(list(vars))
+        return vars
+
+
 
 class CatFile(object):
-    def __init__(self, filepath):
+    def __init__(self, filepath, ctype=None):
         self.programs: List[Program] = []
         self.filepath: Path = Path(filepath)
+        self.ctype = 'G65'
+        if 'G100' in filepath:
+            self.ctype = 'G100'
+        if ctype is not None:
+            self.ctype = ctype
         if Path(filepath).exists():
             self.parse(Path(filepath).read_text(encoding='utf-8'))
 
@@ -229,12 +272,15 @@ class CatFile(object):
                     i += 1
             # read data
             if i < len(lines) and lines[i].startswith('%Data Record'):
-                i += 1
+                if '100' in self.ctype:
+                    i+= 3
+                else:
+                    i += 1
                 while i < len(lines) and not lines[i].startswith('%End'):
                     data.append(lines[i])
                     i += 1
                 # append program
-                self.programs.append(Program(header, data))
+                self.programs.append(Program(header, data, self.ctype))
             else:
                 i += 1
 
@@ -276,6 +322,8 @@ class CatFile(object):
 
 
     def dump_programs(self, outputpath: PathLike):
+        if '100' in self.ctype:
+            outputpath += "/G100"
         # create output directory
         CatFile.DumpPrograms(self, outputpath, False)
     
@@ -292,10 +340,13 @@ class CatFile(object):
 
     def sort(self):
         self.sort_programs()
-        tproject = self.find('TPROJECT')
-        if tproject is not None:
-            self.programs.remove(tproject)
-            self.programs.insert(0, tproject)
+        def set_program_index(name, index):
+            program = self.find(name)
+            if program is not None:
+                self.programs.remove(program)
+                self.programs.insert(index, program)
+        set_program_index('TPROJECT', 0)
+        set_program_index('T0', len(self.programs))
 
     def find(self, progname: str):
         for program in self.programs:
@@ -308,17 +359,33 @@ class CatFile(object):
             program.simplify()
         self.useless_tokens()
 
-    def decolorize(self):
+    def make_mono(self, ctype):
         for program in self.programs:
-            program.decolorize()
+            program.make_mono()
+        # T0(65) = 300/s
+        # T0(35+) = 833/s
+        # T0(100+) = 190/s
+        t0 = self.find('T0')
+        if '35+' in ctype:
+            t0.tokens[0] = Token('8','8',1,False)
+            t0.tokens[1] = Token('3','3',1,False)
+            t0.tokens[2] = Token('3','3',1,False)
+        if '65' in ctype:
+            t0.tokens[0] = Token('3','3',1,False)
+            t0.tokens[1] = Token('0','0',1,False)
+            t0.tokens[2] = Token('0','0',1,False)
+        if '100+' in ctype:
+            t0.tokens[0] = Token('1','1',1,False)
+            t0.tokens[1] = Token('9','9',1,False)
+            t0.tokens[2] = Token('0','0',1,False)
 
     @classmethod
     def DumpPrograms(cls, catfile, outputpath: PathLike, clean: bool):
         outputpath = Path(outputpath)
         if clean:
             shutil.rmtree(outputpath, ignore_errors=True)
-            os.makedirs(outputpath)
         # dump programs
+        os.makedirs(outputpath, exist_ok=True)
         for program in catfile.programs:
             filepath = outputpath / program.name
             with open(str(filepath), mode='w', encoding='utf-8') as fout:
@@ -357,6 +424,11 @@ class CatFile(object):
             self.programs.append(program)
         CatFile.Write(self, 'tokens.cat')
 
+    def analyze(self):
+        for prog in self.programs:
+            vars = prog.find_used_vars()
+            print(f'{prog.name} : {vars}')
+
 
 def main():
     p = argparse.ArgumentParser()
@@ -366,16 +438,14 @@ def main():
     p.add_argument('--dump', '-d', action='store_true')
     p.add_argument('--overwrite', '-o', action='store_true')
     p.add_argument('--simplify', action='store_true')
-    p.add_argument('--decolorize', action='store_true')
+    p.add_argument('--make_mono', action='store_true')
+    p.add_argument('--analyze', action='store_true')
     args = p.parse_args()
 
     catfile = CatFile(args.filepath)
 
     if args.simplify:
         catfile.simplify()
-
-    if args.decolorize:
-        catfile.decolorize()
 
     if args.sort:
         catfile.sort()
@@ -386,9 +456,22 @@ def main():
     if args.overwrite:
         catfile.write()
 
+    if args.make_mono:
+        cat35 = copy.deepcopy(catfile)
+        cat35.make_mono('35+')
+        cat35.Write(cat35, '../packages/TPROJECT35.cat')
+        cat35.dump_programs('../src/mono35+')
+        cat100 = copy.deepcopy(catfile)
+        cat100.make_mono('100+')
+        cat100.Write(cat100, '../packages/TPROJECT100.cat')
+        cat100.dump_programs('../src/mono100+')
+
     if args.forge:
         dummy = CatFile('non-existing.cat')
         dummy.forge_token_programs()
+
+    if args.analyze:
+        catfile.analyze()
 
 
 if __name__ == "__main__":

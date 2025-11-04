@@ -18,8 +18,8 @@ P=9⇒Q+Mat Z[6,3→Mat Z[6,3
 1>Mat Z[6,3⇒1→Mat Z[6,3
 If I≠Mat Z[1,1] Or J≠Mat Z[6,1
 Then 
-  For 1→P To 150
-  Next
+  .5→X
+  Prog "T0"
   Mat Z[1,1]<1⇒8π→X
   X=8π⇒Prog "TNT6"
   Mat Z[6,1]<1⇒Goto 2
@@ -32,7 +32,7 @@ Orange Text 3,6,"   "
 Orange Text 3,6,Mat Z[1,1
 Green Text 25,3,"-stats- "
 Green Text 31,3,"fo   /  "
-Green Text 37,3,"ma      "
+Green Text 37,3,"ma     "
 Green Text 37,23,"/"
 Green Text 43,3,"at   /  "
 Green Text 49,3,"de   /  "
@@ -94,13 +94,13 @@ Then
   If Not Int 2Ran#
   Then 
     Text 57,3,"Z prend la fuite...     "
-    For 1→X To 200
-    Next
+    .6→X
+    Prog "T0"
     Return
   Else 
     Text 57,3,"Le monstre rattrape Z ! "
-    For 1→X To 200
-    Next
+    .6→X
+    Prog "T0"
     0→P~Q
     Goto D
   IfEnd
@@ -118,7 +118,7 @@ Then
 IfEnd
 If r=1
 Then 
-  Orange Text 19,3,"force:   "
+  Orange Text 19,3,"force:  "
   1→O
   7→L
   For 1→E To 5
@@ -162,11 +162,11 @@ Then
     Green Text 6r+19,3," "
     θ=28⇒Dsz r
     θ=37⇒Isz r
-    r=6⇒1→r
     Not r⇒5→r
+    r=6⇒1→r
     If θ=47
     Then 
-      Orange Text 19,3,"         "
+      Orange Text 19,3,"        "
       Goto I
     IfEnd
   LpWhile θ≠31
@@ -243,13 +243,13 @@ Then
     Prog "TNT5"
     If V=5
     Then 
-      For 1→X To 99
-      Next
+      .3→X
+      Prog "T0"
       Cls
       RclPict 1
       Plot 0,0
-      For 1→W To 70
-      Next
+      .2→X
+      Prog "T0"
       For 12→C To 42 Step 6
         Text C,40,"        "
         C<31⇒Green Text C-1,50,"       "
@@ -266,8 +266,8 @@ Then
     π→N
     75→R
     Prog "TNT5"
-    For 1→X To 70
-    Next
+    .2→X
+    Prog "T0"
     For 11→W To 26 Step 6
       Green Text W,82,"     "
     Next
@@ -330,7 +330,7 @@ Then
 IfEnd
 If r=2
 Then 
-  Orange Text 19,3,"magie:   "
+  Orange Text 19,3,"magie:  "
   7→L
   2→O
   For 1→E To 5
@@ -385,7 +385,7 @@ Then
     r=6⇒1→r
     If θ=47
     Then 
-      Orange Text 19,3,"         "
+      Orange Text 19,3,"        "
       Goto I
     IfEnd
   LpWhile θ≠31
@@ -438,8 +438,8 @@ Then
   If V=4
   Then 
     Orange F-Line 67,55,67,61
-    For 1→W To 80
-    Next
+    .3→X
+    Prog "T0"
     Orange F-Line 107,61,100,45
     Orange F-Line 104,53,108,38
     Orange F-Line 106,45,101,30
@@ -496,19 +496,19 @@ Then
   If V=14
   Then 
     Orange F-Line 67,53,104,36
-    For 1→X To 70
-    Next
+    .2→X
+    Prog "T0"
     Cls
     RclPict 1
     Orange F-Line 67,53,104,34
-    For 1→X To 80
-    Next
+    .3→X
+    Prog "T0"
     Cls
     RclPict 1
     Orange Text 25,104,":"
-    For 1→X To 80
-    Next
-    Text 51,38,"Z absorbe enn vie !   "
+    .3→X
+    Prog "T0"
+    Text 51,38,"Z absorbe vie ennemi !"
     For 103→A To 47 Step -2
       Orange F-Line A,36+3Ran#,A-1,36+3Ran#
     Next
@@ -530,8 +530,8 @@ Then
   Then 
     For 1→A To 5
       Orange F-Line 67,53,Int 10Ran#+100,Int 25Ran#+20
-      For 1→X To 50
-      Next
+      .2→X
+      Prog "T0"
       Cls
       RclPict 1
     Next
@@ -575,8 +575,8 @@ Then
       Orange F-Line 67,54,66,61
       Orange F-Line 67,54,68,61
     IfEnd
-    For 1→A To 99
-    Next
+    .3→X
+    Prog "T0"
     0→O
     If V=16
     Then 
@@ -589,16 +589,16 @@ Then
     IfEnd
     Orange F-Line 107,61,101,45
     Orange F-Line 109,61,101,45
-    For 1→A To 99
-    Next
+    .3→X
+    Prog "T0"
     Orange F-Line 104,53,109,38
     Orange F-Line 106,53,109,38
-    For 1→A To 99
-    Next
+    .3→X
+    Prog "T0"
     Orange F-Line 106,45,102,30
     Orange F-Line 108,45,102,30
-    For 1→A To 99
-    Next
+    .3→X
+    Prog "T0"
     1→P
     40→Q
     V=13⇒28→Q
@@ -632,8 +632,8 @@ Then
   If L
   Then 
     Text 57,3,"tu connais deja cela.       "
-    For 1→P To 200
-    Next
+    .7→X
+    Prog "T0"
     0→P~Q
     Goto D
   IfEnd
@@ -659,15 +659,15 @@ Then
     55→L
     Text 57,3,"tu as appris                  "
     Prog "TNT8"
-    For 1→P To 200
-    Next
+    .7→X
+    Prog "T0"
     0→P~Q
     0→Mat Z[11,3
     Goto D
   Else 
     Text 57,3,"  ...tu n'as plus de place..."
-    For 1→X To 200
-    Next
+    .7→X
+    Prog "T0"
     Green Text 51,81,"       "
     Text 51,38,"supprimer quoi ?     "
     Text 57,3,"[EXE]→choisir   [EXIT]→quitter"
@@ -711,8 +711,8 @@ Then
     64→L
     Text 57,3," et il apprend                "
     Prog "TNT8"
-    For 1→X To 200
-    Next
+    .7→X
+    Prog "T0"
     0→P~Q
     0→Mat Z[11,3
     Goto D

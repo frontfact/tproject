@@ -30,6 +30,30 @@ Orange F-Line 6,6,5,7
 Orange PlotOn 6,8
 Orange Text 52,13,"HELI"
 Orange Text 58,13,"PORT"
+Green Text 20,84,"++"
+Text 22,82,"++"
+Green Text 24,80,"++"
+PlotOn 82,37
+Green Text 42,89,"¥¥"
+Green Text 47,87,"¥¥"
+Green Text 33,49,"¥"
+Green Text 19,106,"¥¥"
+Orange Text 41,64,"."
+Z>9⇒Orange Text 50,67,"."
+Z>12⇒Orange Text 54,105,"."
+Z>18⇒Orange Text 37,70,"."
+Z>25⇒Orange Text 19,104,"."
+Z>28⇒Orange Text 23,47,"."
+Z>30⇒Z<38⇒Orange Text 47,43,"."
+Z>41⇒Orange Text 37,87,"."
+Orange Text 45,70,"°"
+PlotOff 70,18
+Orange Text 29,85,"°"
+PlotOff 87,34
+Orange Text 19,64,"°"
+PlotOff 65,43
+Orange Text 52,123,"°"
+PlotOff 124,10
 {48,63,72,75,89,90,90,108,118,117,104,98,97,100,93,83,87,82,78,75,72,53,54,48,47,43,48}→List 1
 {46,46,50,50,48,44,43,47,45,41,39,34,27,11,5,11,29,37,37,42,42,37,25,25,32,35,46}→List 2
 S-Gph2 DrawOff
@@ -48,14 +72,6 @@ For 0→W To 1
   F-Line 108,24-W,106,26-W
   F-Line 103,27+W,105,28+W
 Next
-Green Text 20,84,"++"
-Text 22,82,"++"
-Green Text 24,80,"++"
-PlotOn 82,37
-Green Text 42,89,"¥¥"
-Green Text 47,87,"¥¥"
-Green Text 33,49,"¥"
-Green Text 19,106,"¥¥"
 F-Line 65,15,69,13
 F-Line 69,13,71,16
 F-Line 71,16,75,17
@@ -66,20 +82,4 @@ F-Line 48,38,46,34
 F-Line 92,30,93,36
 F-Line 93,36,97,38
 F-Line 97,38,101,36
-Orange Text 41,64,"."
-Z>9⇒Orange Text 50,67,"."
-Z>12⇒Orange Text 54,105,"."
-Z>18⇒Orange Text 37,70,"."
-Z>25⇒Orange Text 19,104,"."
-Z>28⇒Orange Text 23,47,"."
-Z>30⇒Z<38⇒Orange Text 47,43,"."
-Z>41⇒Orange Text 37,87,"."
-Orange Text 45,70,"°"
-PlotOff 70,18
-Orange Text 29,85,"°"
-PlotOff 87,34
-Orange Text 19,64,"°"
-PlotOff 65,43
-Orange Text 52,123,"°"
-PlotOff 124,10
 StoPict 1

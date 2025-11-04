@@ -62,14 +62,14 @@ Green Text 7,91,"c'est   "
 Green Text 13,91,"       "
 Green Text 19,91,"skulls. "
 Do
-  Green Text 6U-3,4,"[       ]"
+  Green Text 6U-3,3,"-"
   Green Text 13,91,"   "
   U≠9⇒Green Text 13,91,List 2[U
   Do
     Getkey→θ
     θ=47⇒Goto V
   LpWhile Not θ
-  Green Text 6U-3,4,"         "
+  Green Text 6U-3,3," "
   θ=28⇒Dsz U
   θ=37⇒Isz U
   U=0⇒9→U
@@ -83,8 +83,8 @@ Then
   Green Text 13,91,"manque "
   Green Text 19,91,"   $    "
   Green Text 19,91,List 2[U]-Mat Z[10,4
-  For 1→X To 200
-  Next
+  .6→X
+  Prog "T0"
   Goto C
 IfEnd
 Prog "TNT7"

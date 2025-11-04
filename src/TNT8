@@ -1,7 +1,7 @@
 If O=2
 Then 
   Not C⇒Green Text K,L,"       "
-  C=1⇒Green Text K,L,"acier   "
+  C=1⇒Green Text K,L,"acier  "
   C=2⇒Green Text K,L,"force  "
   C=3⇒Green Text K,L,"onde   "
   C=4⇒Green Text K,L,"eclair "
@@ -9,11 +9,11 @@ Then
   C=6⇒Green Text K,L,"boost  "
   C=7⇒Green Text K,L,"vague  "
   C=8⇒Green Text K,L,"morsur "
-  C=10⇒Green Text K,L,"soleil "
   C=9⇒Green Text K,L,"griffe "
+  C=10⇒Green Text K,L,"soleil "
+  C=11⇒Green Text K,L,"vital  "
   C=12⇒Green Text K,L,"onde+  "
   C=13⇒Green Text K,L,"foudre "
-  C=11⇒Green Text K,L,"vital  "
   C=14⇒Green Text K,L,"vampyr "
   C=15⇒Green Text K,L,"flamme "
   C=16⇒Green Text K,L,"orage  "
@@ -29,7 +29,7 @@ Then
   C=5⇒Green Text K,L,"double "
   C=6⇒Green Text K,L,"charge "
   C=7⇒Green Text K,L,"furie  "
-  C=8⇒Green Text K,L,"Xmeta   "
+  C=8⇒Green Text K,L,"Xmeta  "
 IfEnd
 If O=3
 Then 
@@ -38,14 +38,14 @@ Then
   C=2⇒Text K,L,"soin +"
   C=3⇒Text K,L,"adrena"
   C=4⇒Text K,L,"chlore"
-  C=7⇒Text K,L,"groseye"
-  C=8⇒Text K,L,"[tarte]"
-  C=14⇒Text K,L,"fusil"
-  C=15⇒Text K,L,"balles"
-  C=16⇒Text K,L,"LUNE"
   C=5⇒Text K,L,"protec"
   C=6⇒Text K,L,"power+"
+  C=7⇒Text K,L,"groseye"
+  C=8⇒Text K,L,"[tarte]"
   C=11⇒Text K,L,"ANGEL"
   C=12⇒Text K,L,"MAGMA"
   C=13⇒Text K,L,"PHOENIX"
+  C=14⇒Text K,L,"fusil"
+  C=15⇒Text K,L,"balles"
+  C=16⇒Text K,L,"LUNE"
 IfEnd
