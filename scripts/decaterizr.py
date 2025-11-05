@@ -34,7 +34,7 @@ ToToken = Token('To ', 'To ', 1, True)
 GreenToken = Token('Green ', 'Green ', 2, True)
 OrangeToken = Token('Orange ', 'Orange ', 2, True)
 YenToken = Token('@5C', '¥', 1, True)
-EsperluetteToken = Token('@26', '&', 1, True)
+YToken = Token('Y', 'Y', 1, False)
 
 
 def load_tokens(path):
@@ -221,7 +221,7 @@ class Program:
         for i in range(len(self.tokens)-1, -1, -1):
             token = self.tokens[i]
             if token==YenToken:
-                self.tokens[i] = EsperluetteToken
+                self.tokens[i] = YToken
             if token==GreenToken or token==OrangeToken:
                 del self.tokens[i]
 
