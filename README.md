@@ -3,9 +3,25 @@
 
 # The T-Project
 
-A RPG game running on Casio graph65 (CFX-9960GT).
+An adventure game running on [Casio Graph 65](https://fr.wikipedia.org/wiki/Casio_CFX-9960GT) (CFX-9960GT).
 
-First released on 15th december 2001.
+First released on 15th december 2001, it has been recently dusted and ported to monochrome calculators (Casio Graph [35+](https://fr.wikipedia.org/wiki/Casio_Graph_35%2B) & [100+](https://fr.wikipedia.org/wiki/Casio_Graph_100%2B)).
+
+[Instructions](./doc/notice.md) are available in french.
+
+# Limitations
+
+The game requires 64kB of memory to run (47kB of programs, 1 picture, 2-3 matrices and lists).
+
+# Packages
+
+- [TPROJECT.CAT](./packages/TPROJECT.CAT) for graph65 (3 colors)
+- [TPROJECT35.CAT](./packages/TPROJECT35.cat) for graph35+ (monochrome)
+- [TPROJECT100.CAT](./packages/TPROJECT100.cat) for graph100+ (monochrome)
+
+# Contact
+
+tntsoft@fastmail.com
 
 # Backlog
 
@@ -25,8 +41,8 @@ First released on 15th december 2001.
 - [x] ~~Check if 'vision' power exists~~ → it does
 - [x] ~~Extract shop init from TNT15~~ → TNT16
 - [x] ~~Extract hostel from TNT4~~ → TNT17
-- [x] ~~Extract life bar from TNT1~~ → TNT18
-- [ ] Display 'hum?' only if progress < W ?
+- [x] ~~Extract life gauge from TNT1~~ → TNT18
+- [x] ~~Display 'hum?' only if progress < W ?~~ no
 - [ ] Optimize `Mat Z[12,6]→X` in TNT13
 - [x] Port to graph35+/graph100+
     - [x] remove ':' separators
@@ -38,9 +54,11 @@ First released on 15th december 2001.
 	- [x] factorize sleep loops into Prog "T0" + use a global sleep factor
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [x] Fix exit from shop without checking progress
-- [ ] Notice in markdown/pdf
-	- [ ] screenshots of attaks/powers
-	- [ ] 'hum?' in points of interest
+- [ ] Display advancement in user menu
+- [x] Notice in markdown/pdf
+	- [x] screenshots of attaks/powers
+	- [x] ~~'hum?' in points of interest~~ no
 	- [x] sequence diagram for TNT2 (main loop)
 	- [x] sequence diagram for TNT3 (city loop)
 	- [ ] sequence diagram for TNT14 (fight loop)
+	- [ ] Add advancement help in notice
