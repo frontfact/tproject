@@ -94,7 +94,6 @@ Then
   A≥48 And A≤49 And B≥37 And B≤38⇒4→V
   A≥44 And A≤45 And B≥13 And B≤14⇒5→V
   A≥68 And A≤69 And B≥10 And B≤11⇒6→V
-  A≥78 And A≤79 And B≥40 And B≤41⇒7→V
   A≥88 And A≤89 And B≥23 And B≤26⇒9→V
   A≥106 And A≤107 And B≥6 And B≤7⇒10→V
   If V
