@@ -62,3 +62,4 @@ tntsoft@fastmail.com
 	- [x] sequence diagram for TNT3 (city loop)
 	- [ ] sequence diagram for TNT14 (fight loop)
 	- [ ] Add advancement help in notice
+	- [x] Locate cities in notice

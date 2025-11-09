@@ -35,7 +35,7 @@ Sur chaque continent se trouve un héliport. Ils vous permettront de vous dépla
 
 Déplacez-vous dans les villes avec les touches directionnelles. Vous pourrez rencontrer des personnages dans les maisons ou, parfois, dans les rues.
 
-![dialog](./images/02-dialog-tara.bmp)
+![dialog](./images/02-dialog-botma.bmp)
 
 Pressez `[MENU]` pour consulter vos stats ou utiliser un objet.
 
@@ -53,11 +53,7 @@ Un ![°](./images/shop.bmp) vous signale la présence d'un magasin. Vous en trou
 
 ![shop](./images/15-shop.bmp)
 
-|  |  |  |
-|:-:|:-:|:-:|
-| ![botma](./images/city-01-botma.bmp) | ![tara](./images/city-02-tara.bmp) | ![atlantis](./images/city-03-atlantis.bmp) |
-| ![elos](./images/city-04-elos.bmp) | ![helenia](./images/city-05-helenia.bmp) | ![winhill](./images/city-06-winhill.bmp) |
-| ![plymout](./images/city-07-plymout.bmp) | ![sanctua](./images/city-08-sanctua.bmp) |  |
+![cities](./images/cities.bmp)
 
 ## Combats
 
@@ -86,7 +82,7 @@ Si vous sortez victorieux du combat, vous remporterez :
 - Des objets divers
 - Des améliorations progressives de vos statistiques
 
-![endfight](./images/01-battle-end-screen2.bmp)
+![endfight](./images/01-battle-end-screen.bmp)
 
 **Note** : toutes les améliorations, expérience, récompenses ou objets trouvés sont proportionnels à la force du monstre.
 
