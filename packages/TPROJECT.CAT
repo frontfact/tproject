@@ -549,7 +549,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:8640
+Capacity:8665
 File Name:TNT4
 Group Name:
 Password:
@@ -624,10 +624,10 @@ Option4:
 \Then \Orange "Enzo, tu es mort !   Prepare-toi au combat"
 "Enzo:"
 "Incarnation GOA."
-.3\->X
+4\->X
 \Prog "T0"
 \Prog "TNT14"
-1.\->X
+1\->X
 \Prog "T0"
 \ClrText
 "Mais c'est toi, Z ?!"
@@ -655,7 +655,7 @@ Option4:
 50\->\R a2
 1\->\Mat Z[11,5
 \Green "\->retour chez Redox..."
-1.\->X
+1\->X
 \Prog "T0"
 "Bien,petit,tu meritesma confiance."
 \IfEnd
@@ -673,6 +673,8 @@ Option4:
 \If W=10.5
 \Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
 "SACRE ?!!"
+3\->X
+\Prog "T0"
 I\->\R a1
 J\->\R a2
 \Prog "TNT14"
@@ -838,6 +840,8 @@ X<11\=>\Stop
 \Then I\->\R a1
 J\->\R a2
 \Orange "Le mandivor !"
+3\->X
+\Prog "T0"
 \Prog "TNT14"
 \Orange "Plutot coriace..."\Disp24\->Z
 \IfEnd
@@ -910,6 +914,8 @@ J\->\R a2
 "Enfin ! La troisieme inscription..."\Disp\ClrText
 \Orange "Le... Le prisme !"
 \Orange "Il explose !!!"
+3\->X
+\Prog "T0"
 I\->\R a1
 J\->\R a2
 \Prog "TNT14"
@@ -950,7 +956,7 @@ J\->\R a2
 "jamais du nous suivre"
 "Redox :"
 "INCARNATION ARAKN !"
-.3\->X
+4\->X
 \Prog "T0"
 I\->\R a1
 J\->\R a2
@@ -960,7 +966,7 @@ J\->\R a2
 "t'aneantir, miserableinsecte !!!"
 " "
 "INCARNATION GOA !"
-.3\->X
+4\->X
 \Prog "T0"
 \Prog "TNT14"
 "...Nous mourrons......mais.....Tomberry.........est libre"\Disp\ClrText
@@ -1146,7 +1152,7 @@ G\->H
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3326
+Capacity:3325
 File Name:TNT6
 Group Name:
 Password:
@@ -1457,7 +1463,7 @@ J\<>\Mat Z[6,1\=>\Orange \Text 5,C,\Mat Z[6,1]-J
 1>\Mat Z[1,1\=>0\->\Mat Z[1,1
 \If \Not \Mat Z[1,1
 \Then \Orange \Text 3,6,"0  "
-2.\->X
+2\->X
 \Prog "T0"
 \Cls
 \Text 30,41,"GAME OVER..."
@@ -1565,7 +1571,7 @@ C=16\=>\Text K,L,"LUNE"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2683
+Capacity:2682
 File Name:TNT9
 Group Name:
 Password:
@@ -1698,7 +1704,7 @@ P<31\=>\Green \Text P-1,50,"       "
 .6\->X
 \Prog "T0"
 \Orange \F-Line 51,33,59,43
-1.\->X
+1\->X
 \Prog "T0"
 \Green \F-Line 45,38,88,58
 \Green \F-Line 55,56,88,58
@@ -3231,7 +3237,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3730
+Capacity:3728
 File Name:TNT15
 Group Name:
 Password:
@@ -3450,13 +3456,13 @@ C+.6\->C
 \Next 
 \Cls
 \Plot 0,0
-5.\->X
+5\->X
 \Prog "T0"
 \ClrText
 "Z ?...      Z ?!"\Disp\Orange "Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
 "Jessie: Ton dernier"
 "combat a bien failli t'etre fatal..."\Disp\Orange "Et...et Tomberry ?"\Disp"Detruit. A jamais."
-2.\->X
+2\->X
 \Prog "T0"
 \Lbl R
 \Prog "TNT12"
@@ -3569,7 +3575,7 @@ X\=>\Locate W,2,"z"
 \ClrText
 \Locate 7,4,"\aster Level \aster"
 \Locate 7,5,"\aster Saved \aster"
-1.\->X
+1\->X
 \Prog "T0"
 \IfEnd
 \GotoA
