@@ -231,7 +231,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1632
+Capacity:1650
 File Name:TNT2
 Group Name:
 Password:
@@ -245,14 +245,16 @@ Option4:
 \Mat Z[9,2\->B
 \Prog "TNT3"
 \Lbl 9
+\Prog "TNT1"
 \Mat Z[9,1\->A
 \Mat Z[9,2\->B
+\Lbl 7
 \Mat Z[9,4\->\theta
 \theta=27\=>\Dsz A
 \theta=38\=>\Isz A
 \theta=28\=>\Dsz B
 \theta=37\=>\Isz B
-\Prog "TNT1"
+-1\->C
 \If Z=38
 \Then \Prog "TNT15"
 B+2\->B
@@ -261,7 +263,13 @@ B+2\->B
 \Cls
 \Deg
 \RclPict 1
-\PlotOn A,B
+\If C<0
+\Then \For 1\->C \To 6
+\PlotChg A,B
+.1\->X
+\Prog "T0"
+\Next 
+\IfEnd
 \Lbl S
 0\->P
 \If 1>\Mat Z[10,3
@@ -344,12 +352,7 @@ B\->\Mat Z[9,2
 0\->V
 \Goto9
 \IfEnd
-\Mat Z[9,4\->\theta
-\theta=27\=>\Dsz A
-\theta=28\=>\Dsz B
-\theta=37\=>\Isz B
-\theta=38\=>\Isz A
-\Goto8
+\Goto7
 \IfEnd
 \GotoS
 \Lbl H
@@ -375,7 +378,7 @@ H=3\=>\Text 31,4,"       "
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
-\theta=47\=>\Goto8
+\theta=47\=>\Goto7
 \PxlTest W,4
 \If \theta\<>31\ Or \Not \Ans
 \Then \PlotOff 1,62-W
@@ -387,7 +390,7 @@ W\->\r
 W+V\->W
 W=-5\=>43\->W
 W=49\=>1\->W
-W=\r\=>\Goto8
+W=\r\=>\Goto7
 \PxlTest W,4
 \LpWhile \Not \Ans
 \GotoV
