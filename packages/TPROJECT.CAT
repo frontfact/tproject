@@ -102,7 +102,7 @@ D>1\=>0\->D
 \Prog "TNT2"
 \IfEnd
 \Identity 1\->\Mat Z
-[[40,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][66,21,28,.,.,.][0,1,.,.,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
+[[40,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][66,19,28,.,.,.][0,1,.,.,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
 0\->A~Z
 \Cls
 0\->\r
@@ -121,7 +121,7 @@ D>1\=>0\->D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1434
+Capacity:1465
 File Name:TNT1
 Group Name:
 Password:
@@ -131,51 +131,66 @@ Option3:
 Option4:
 %Data Record
 \Cls
-\F-Line 36,55,127,55
-\F-Line 36,2,36,63
-\F-Line 37,2,37,63
+\Vertical 36
+\Vertical 37
+\Vertical 127
+\F-Line 37,1,127,1
+\F-Line 37,55,127,55
 \F-Line 37,63,127,63
-\F-Line 127,63,127,2
-\F-Line 127,2,37,2
+\F-Line 1,14,36,14
+\F-Line 1,15,36,15
 \Green \Text 3,38,"-Carte de Gaia-"
 \Orange \Text 3,100,"[menu]"
 \Mat Z[12,6\->Z
+{65,-9,-9,-9,-9,-9,-9,-9}\->\List 1
+{19,10,6,23,41,37,13,23}\->\List 2
 \Text 1,4,"Botma"
-Z>9\=>\Text 7,4,"Tara"
+\If Z>9
+\Then \Text 7,4,"Tara"
+68\->\List 1[2
+\IfEnd
 \If Z>12
 \Then \Green \Text 13,4,"Atlantis"
 \Green \PlotOn 4,51
+106\->\List 1[3
 \IfEnd
-Z>18\=>\Text 19,4,"Elos"
-Z>25\=>\Text 25,4,"Helenia"
-Z>28\=>\Text 31,4,"Winhill"
-Z>30\=>\Text 37,4,"Plymout"
+\If Z>18
+\Then \Text 19,4,"Elos"
+71\->\List 1[4
+\IfEnd
+\If Z>25
+\Then \Text 25,4,"Helenia"
+105\->\List 1[5
+\IfEnd
+\If Z>28
+\Then \Text 31,4,"Winhill"
+48\->\List 1[6
+\IfEnd
+\If Z>30\ And Z<38
+\Then \Text 37,4,"Plymout"
+43\->\List 1[7
+\IfEnd
 \If Z>41
 \Then \Text 43,4,"Sanctua"
 \PlotOn 4,21
+88\->\List 1[8
 \IfEnd
-\F-Line 1,15,37,15
-\F-Line 1,14,37,14
-\Orange \F-Line 6,6,5,7
-\Orange \PlotOn 6,8
+\S-Gph2 \DrawOff
+\S-Gph3 \DrawOff
+\S-Gph1 \DrawOn,\Scatter,\List 1,\List 2,1,\Square
+\DrawStat
+\Orange \Text 56,6,"\Deg>"
+\PlotOff 8,7
 \Orange \Text 52,13,"HELI"
 \Orange \Text 58,13,"PORT"
-\Green \Text 20,84,"++"
-\Text 22,82,"++"
-\Green \Text 24,80,"++"
-\PlotOn 82,37
+{82,86,84,88,86,90}\->\List 1
+{38,38,40,40,42,42}\->\List 2
+\S-Gph1 \DrawOn,\Scatter,\List 1,\List 2,1,\Cross
+\DrawStat
 \Green \Text 42,89,"\@5C\@5C"
 \Green \Text 47,87,"\@5C\@5C"
 \Green \Text 33,49,"\@5C"
 \Green \Text 19,106,"\@5C\@5C"
-\Orange \Text 41,64,"."
-Z>9\=>\Orange \Text 50,67,"."
-Z>12\=>\Orange \Text 54,105,"."
-Z>18\=>\Orange \Text 37,70,"."
-Z>25\=>\Orange \Text 19,104,"."
-Z>28\=>\Orange \Text 23,47,"."
-Z>30\=>Z<38\=>\Orange \Text 47,43,"."
-Z>41\=>\Orange \Text 37,87,"."
 \Orange \Text 45,70,"\Deg>"
 \PlotOff 70,18
 \Orange \Text 29,85,"\Deg>"
@@ -186,8 +201,6 @@ Z>41\=>\Orange \Text 37,87,"."
 \PlotOff 124,10
 {48,63,72,75,89,90,90,108,118,117,104,98,97,100,93,83,87,82,78,75,72,53,54,48,47,43,48}\->\List 1
 {46,46,50,50,48,44,43,47,45,41,39,34,27,11,5,11,29,37,37,42,42,37,25,25,32,35,46}\->\List 2
-\S-Gph2 \DrawOff
-\S-Gph3 \DrawOff
 \S-Gph1 \DrawOn,\xyLine,\List 1,\List 2,1,\Dot
 \DrawStat
 {65,70,72,75,76,73,60,62,65}\->\List 1
@@ -308,14 +321,14 @@ A<38\=>126\->A
 0\->V
 \PxlTest 64-B,A
 \If \Ans
-\Then A\>=65\ And A\<=66\ And B\>=19\ And B\<=20\=>1\->V
-A\>=71\ And A\<=72\ And B\>=23\ And B\<=24\=>2\->V
-A\>=105\ And A\<=106\ And B\>=41\ And B\<=42\=>3\->V
-A\>=48\ And A\<=49\ And B\>=37\ And B\<=38\=>4\->V
-A\>=44\ And A\<=45\ And B\>=13\ And B\<=14\=>5\->V
-A\>=68\ And A\<=69\ And B\>=10\ And B\<=11\=>6\->V
-A\>=88\ And A\<=89\ And B\>=23\ And B\<=26\=>9\->V
-A\>=106\ And A\<=107\ And B\>=6\ And B\<=7\=>10\->V
+\Then A\>=64\ And A\<=66\ And B\>=18\ And B\<=20\=>1\->V
+A\>=70\ And A\<=72\ And B\>=22\ And B\<=24\=>2\->V
+A\>=104\ And A\<=106\ And B\>=40\ And B\<=42\=>3\->V
+A\>=47\ And A\<=49\ And B\>=36\ And B\<=38\=>4\->V
+A\>=42\ And A\<=44\ And B\>=12\ And B\<=14\=>5\->V
+A\>=67\ And A\<=69\ And B\>=9\ And B\<=11\=>6\->V
+A\>=87\ And A\<=89\ And B\>=22\ And B\<=26\=>9\->V
+A\>=105\ And A\<=107\ And B\>=5\ And B\<=7\=>10\->V
 \If V
 \Then 0\->\R a1
 0\->\R a2
