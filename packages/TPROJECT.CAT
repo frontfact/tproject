@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1353
+Capacity:1360
 File Name:TPROJECT
 Group Name:
 Password:
@@ -18,7 +18,7 @@ Option4:
 \Lbl S
 \Cls
 \S-WindMan
-\ViewWindow 1,127,0,1,63,0
+\ViewWindow 1,127,0,1,63,0,0,90,1
 \Deg
 \CoordOff
 \GridOff
@@ -231,7 +231,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1778
+Capacity:1632
 File Name:TNT2
 Group Name:
 Password:
@@ -278,7 +278,12 @@ B\->\Mat Z[9,2
 \Else \Mat Z[10,3]-1\->\Mat Z[10,3
 \IfEnd
 \PlotOn A,B
-(A=71\ And B=18)\ Or (A=124\ And B=11)\ Or (A=65\ And B=44)\ Or (A=86\ And B=34)\=>12<\Mat Z[12,6\=>\GotoH
+0\->H
+A=71\ And B=18\=>1\->H
+A=124\ And B=11\=>2\->H
+A=65\ And B=44\=>3\->H
+A=86\ And B=34\=>4\->H
+H\=>\GotoH
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
@@ -349,30 +354,31 @@ B\->\Mat Z[9,2
 \Lbl H
 A\->\Mat Z[9,1
 B\->\Mat Z[9,2
-\If A=71\ And B=18
+\If H=1
 \Then \Text 1,4,"      "
 \Text 7,4,"    "
 \Text 19,4,"    "
 \IfEnd
-\If A=124\ And B=11
+\If H=2
 \Then \Green \Text 13,4,"        "
 \Text 37,4,"        "
 \IfEnd
-A=65\=>B=44\=>\Text 31,4,"       "
-\If A=86\ And B=34
+H=3\=>\Text 31,4,"       "
+\If H=4
 \Then \Text 25,4,"        "
 \Text 43,4,"        "
 \IfEnd
 1\->W
 \Lbl V
-\Orange \F-Line 1,62-W,2,62-W
+\Green \F-Line 1,62-W,2,62-W
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
 \theta=47\=>\Goto8
 \PxlTest W,4
 \If \theta\<>31\ Or \Not \Ans
-\Then \Orange \Text W,1," "
+\Then \PlotOff 1,62-W
+\PlotOff 2,62-W
 6\->V
 \theta=28\=>-6\->V
 W\->\r
@@ -386,45 +392,31 @@ W=\r\=>\Goto8
 \GotoV
 \IfEnd
 0\->P~Q
-\If W=1\ Or W=7\ Or W=19
-\Then 71\->W
--1\->P
+(W-1)/6\->V
+\If V=0\ Or V=1\ Or V=3
+\Then 71\->U
 18\->V
+-1\->P
 \IfEnd
-\If W=31
-\Then -1\->Q
-65\->W
+\If V=5
+\Then 65\->U
 44\->V
+-1\->Q
 \IfEnd
-\If W=13\ Or W=37
-\Then -1\->Q
-124\->W
+\If V=2\ Or V=6
+\Then 124\->U
 11\->V
+-1\->Q
 \IfEnd
-\If W=25\ Or W=43
-\Then 2\->P
-85\->W
+\If V=4\ Or V=7
+\Then 86\->U
 34\->V
+1\->P
 \IfEnd
-1\->\r
-1\->\theta
-W<A\=>-1\->\theta
-V<B\=>-1\->\r
-\If \Abs (W-A)>\Abs (V-B
-\Then (V-B)/(W-A\->Z
-W<A\=>-Z\->Z
-\For A\->U \To W \Step \theta
-B+Z\->B
-\Orange \PlotOn U,B
-\Next 
-\Else (W-A)/(V-B\->Z
-V<B\=>-Z\->Z
-\For B\->U \To V \Step \r
-A+Z\->A
-\Orange \PlotOn A,U
-\Next 
-\IfEnd
-W+P\->A
+(V-B)/(U-A)\->E
+(U-A)/\Tmax\->F
+\Orange \Graph (X,Y)=(A+FT,B+EFT)
+U+P\->A
 V+Q\->B
 .5\->X
 \Prog "T0"
@@ -2013,7 +2005,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2770
+Capacity:2766
 File Name:TNT12
 Group Name:
 Password:
@@ -2077,8 +2069,8 @@ M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,4
 \Orange \Text 11,3,"NIVEAU"
 \Orange \Text 11,30,\Mat Z[11,2
 \If \Int 3\Ran#
-\Then \Green \Graph (X,Y)=(37+15T,16+\Ran#
-\Else \Orange \Graph (X,Y)=(37+15T,16+\Ran#
+\Then \Green \Graph (X,Y)=(37+T,16+\Ran#
+\Else \Orange \Graph (X,Y)=(37+T,16+\Ran#
 \Orange \F-Line 38,16,125,16
 \IfEnd
 1\->W
