@@ -90,6 +90,7 @@ S-WindMan;S-WindMan;2
 sin ;sin ;1
 sqrt;√;1
 Square;Square;2
+Cross;Cross;2
 Step ;Step ;1
 Stop;Stop;2
 StoPict ;StoPict ;2
@@ -99,7 +100,9 @@ theta;θ;1
 To ;To ;1
 ViewWindow ;ViewWindow ;1
 xyLine;xyLine;2
+Scatter;Scatter;2
 Graph (X,Y)=(;Graph (X,Y)=(;1
+Tmax;Tθmax;2
 List1;List1;2
 List2;List2;2
 List3;List3;2
