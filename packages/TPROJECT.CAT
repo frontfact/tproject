@@ -470,13 +470,13 @@ V=3\ And ((H=5\ And G=2\ And \Not \Mat Z[10,1])\ Or (G=16\ And H=2\ And \Mat Z[1
 V\->\Mat Z[11,1
 \R b2=1\=>\Prog "TNT4"
 \R b2=3\=>\Prog "TNT17"
+\Mat Z[11,1\->V
 \If Z=37
 \Then \Prog "TNT15"
 \Return
 \IfEnd
 \If \R a1
-\Then \Mat Z[11,1\->V
-\R a1\->I
+\Then \R a1\->I
 \R a2\->J
 \GotoS
 \IfEnd
