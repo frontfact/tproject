@@ -3,14 +3,16 @@ Mat Z[9,1→A
 Mat Z[9,2→B
 Prog "TNT3"
 Lbl 9
+Prog "TNT1"
 Mat Z[9,1→A
 Mat Z[9,2→B
+Lbl 7
 Mat Z[9,4→θ
 θ=27⇒Dsz A
 θ=38⇒Isz A
 θ=28⇒Dsz B
 θ=37⇒Isz B
-Prog "TNT1"
+-1→C
 If Z=38
 Then 
   Prog "TNT15"
@@ -18,8 +20,16 @@ Then
 IfEnd
 Lbl 8
 Cls
+Deg
 RclPict 1
-PlotOn A,B
+If C<0
+Then 
+  For 1→C To 6
+    PlotChg A,B
+    .1→X
+    Prog "T0"
+  Next
+IfEnd
 Lbl S
 0→P
 If 1>Mat Z[10,3
@@ -39,7 +49,12 @@ Else
   Mat Z[10,3]-1→Mat Z[10,3
 IfEnd
 PlotOn A,B
-(A=71 And B=18) Or (A=124 And B=11) Or (A=65 And B=44) Or (A=86 And B=34)⇒12<Mat Z[12,6⇒Goto H
+0→H
+A=71 And B=18⇒1→H
+A=124 And B=11⇒2→H
+A=65 And B=44⇒3→H
+A=86 And B=34⇒4→H
+H⇒Goto H
 Do
   Getkey→θ
 LpWhile Not θ
@@ -88,14 +103,14 @@ A<38⇒126→A
 PxlTest 64-B,A
 If Ans
 Then 
-  A≥65 And A≤66 And B≥19 And B≤20⇒1→V
-  A≥71 And A≤72 And B≥23 And B≤24⇒2→V
-  A≥105 And A≤106 And B≥41 And B≤42⇒3→V
-  A≥48 And A≤49 And B≥37 And B≤38⇒4→V
-  A≥44 And A≤45 And B≥13 And B≤14⇒5→V
-  A≥68 And A≤69 And B≥10 And B≤11⇒6→V
-  A≥88 And A≤89 And B≥23 And B≤26⇒9→V
-  A≥106 And A≤107 And B≥6 And B≤7⇒10→V
+  A≥64 And A≤66 And B≥18 And B≤20⇒1→V
+  A≥70 And A≤72 And B≥22 And B≤24⇒2→V
+  A≥104 And A≤106 And B≥40 And B≤42⇒3→V
+  A≥47 And A≤49 And B≥36 And B≤38⇒4→V
+  A≥42 And A≤44 And B≥12 And B≤14⇒5→V
+  A≥67 And A≤69 And B≥9 And B≤11⇒6→V
+  A≥87 And A≤89 And B≥22 And B≤26⇒9→V
+  A≥105 And A≤107 And B≥5 And B≤7⇒10→V
   If V
   Then 
     0→a₁
@@ -106,45 +121,41 @@ Then
     0→V
     Goto 9
   IfEnd
-  Mat Z[9,4→θ
-  θ=27⇒Dsz A
-  θ=28⇒Dsz B
-  θ=37⇒Isz B
-  θ=38⇒Isz A
-  Goto 8
+  Goto 7
 IfEnd
 Goto S
 Lbl H
 A→Mat Z[9,1
 B→Mat Z[9,2
-If A=71 And B=18
+If H=1
 Then 
   Text 1,4,"      "
   Text 7,4,"    "
   Text 19,4,"    "
 IfEnd
-If A=124 And B=11
+If H=2
 Then 
   Green Text 13,4,"        "
   Text 37,4,"        "
 IfEnd
-A=65⇒B=44⇒Text 31,4,"       "
-If A=86 And B=34
+H=3⇒Text 31,4,"       "
+If H=4
 Then 
   Text 25,4,"        "
   Text 43,4,"        "
 IfEnd
 1→W
 Lbl V
-Orange F-Line 1,62-W,2,62-W
+Green F-Line 1,62-W,2,62-W
 Do
   Getkey→θ
 LpWhile Not θ
-θ=47⇒Goto 8
+θ=47⇒Goto 7
 PxlTest W,4
 If θ≠31 Or Not Ans
 Then 
-  Orange Text W,1," "
+  PlotOff 1,62-W
+  PlotOff 2,62-W
   6→V
   θ=28⇒-6→V
   W→r
@@ -152,57 +163,41 @@ Then
     W+V→W
     W=-5⇒43→W
     W=49⇒1→W
-    W=r⇒Goto 8
+    W=r⇒Goto 7
     PxlTest W,4
   LpWhile Not Ans
   Goto V
 IfEnd
 0→P~Q
-If W=1 Or W=7 Or W=19
+(W-1)/6→V
+If V=0 Or V=1 Or V=3
 Then 
-  71→W
-  -1→P
+  71→U
   18→V
+  -1→P
 IfEnd
-If W=31
+If V=5
 Then 
-  -1→Q
-  65→W
+  65→U
   44→V
-IfEnd
-If W=13 Or W=37
-Then 
   -1→Q
-  124→W
+IfEnd
+If V=2 Or V=6
+Then 
+  124→U
   11→V
+  -1→Q
 IfEnd
-If W=25 Or W=43
+If V=4 Or V=7
 Then 
-  2→P
-  85→W
+  86→U
   34→V
+  1→P
 IfEnd
-1→r
-1→θ
-W<A⇒-1→θ
-V<B⇒-1→r
-If Abs (W-A)>Abs (V-B
-Then 
-  (V-B)/(W-A→Z
-  W<A⇒-Z→Z
-  For A→U To W Step θ
-    B+Z→B
-    Orange PlotOn U,B
-  Next
-Else 
-  (W-A)/(V-B→Z
-  V<B⇒-Z→Z
-  For B→U To V Step r
-    A+Z→A
-    Orange PlotOn A,U
-  Next
-IfEnd
-W+P→A
+(V-B)/(U-A)→E
+(U-A)/Tθmax→F
+Orange Graph (X,Y)=(A+FT,B+EFT)
+U+P→A
 V+Q→B
 .5→X
 Prog "T0"

@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1341
+Capacity:1348
 File Name:TPROJECT
 Group Name:
 Password:
@@ -18,7 +18,7 @@ Option4:
 \Lbl S
 \Cls
 \S-WindMan
-\ViewWindow 1,127,0,1,63,0
+\ViewWindow 1,127,0,1,63,0,0,90,1
 \Deg
 \CoordOff
 \GridOff
@@ -102,7 +102,7 @@ D>1\=>0\->D
 \Prog "TNT2"
 \IfEnd
 \Identity 1\->\Mat Z
-[[40,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][66,21,28,.,.,.][0,1,.,.,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
+[[40,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][66,19,28,.,.,.][0,1,.,.,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
 0\->A~Z
 \Cls
 0\->\r
@@ -121,7 +121,7 @@ D>1\=>0\->D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1382
+Capacity:1419
 File Name:TNT1
 Group Name:
 Password:
@@ -131,51 +131,66 @@ Option3:
 Option4:
 %Data Record
 \Cls
-\F-Line 36,55,127,55
-\F-Line 36,2,36,63
-\F-Line 37,2,37,63
+\Vertical 36
+\Vertical 37
+\Vertical 127
+\F-Line 37,1,127,1
+\F-Line 37,55,127,55
 \F-Line 37,63,127,63
-\F-Line 127,63,127,2
-\F-Line 127,2,37,2
+\F-Line 1,14,36,14
+\F-Line 1,15,36,15
 \Text 3,38,"-Carte de Gaia-"
 \Text 3,100,"[menu]"
 \Mat Z[12,6\->Z
+{65,-9,-9,-9,-9,-9,-9,-9}\->\List1
+{19,10,6,23,41,37,13,23}\->\List2
 \Text 1,4,"Botma"
-Z>9\=>\Text 7,4,"Tara"
+\If Z>9
+\Then \Text 7,4,"Tara"
+68\->\List 1[2
+\IfEnd
 \If Z>12
 \Then \Text 13,4,"Atlantis"
 \PlotOn 4,51
+106\->\List 1[3
 \IfEnd
-Z>18\=>\Text 19,4,"Elos"
-Z>25\=>\Text 25,4,"Helenia"
-Z>28\=>\Text 31,4,"Winhill"
-Z>30\=>\Text 37,4,"Plymout"
+\If Z>18
+\Then \Text 19,4,"Elos"
+71\->\List 1[4
+\IfEnd
+\If Z>25
+\Then \Text 25,4,"Helenia"
+105\->\List 1[5
+\IfEnd
+\If Z>28
+\Then \Text 31,4,"Winhill"
+48\->\List 1[6
+\IfEnd
+\If Z>30\ And Z<38
+\Then \Text 37,4,"Plymout"
+43\->\List 1[7
+\IfEnd
 \If Z>41
 \Then \Text 43,4,"Sanctua"
 \PlotOn 4,21
+88\->\List 1[8
 \IfEnd
-\F-Line 1,15,37,15
-\F-Line 1,14,37,14
-\F-Line 6,6,5,7
-\PlotOn 6,8
+\S-Gph2 \DrawOff
+\S-Gph3 \DrawOff
+\S-Gph1 \DrawOn,\Scatter,\List1,\List2,1,\Square
+\DrawStat
+\Text 56,6,"\Deg>"
+\PlotOff 8,7
 \Text 52,13,"HELI"
 \Text 58,13,"PORT"
-\Text 20,84,"++"
-\Text 22,82,"++"
-\Text 24,80,"++"
-\PlotOn 82,37
+{82,86,84,88,86,90}\->\List1
+{38,38,40,40,42,42}\->\List2
+\S-Gph1 \DrawOn,\Scatter,\List1,\List2,1,\Cross
+\DrawStat
 \Text 42,89,"YY"
 \Text 47,87,"YY"
 \Text 33,49,"Y"
 \Text 19,106,"YY"
-\Text 41,64,"."
-Z>9\=>\Text 50,67,"."
-Z>12\=>\Text 54,105,"."
-Z>18\=>\Text 37,70,"."
-Z>25\=>\Text 19,104,"."
-Z>28\=>\Text 23,47,"."
-Z>30\=>Z<38\=>\Text 47,43,"."
-Z>41\=>\Text 37,87,"."
 \Text 45,70,"\Deg>"
 \PlotOff 70,18
 \Text 29,85,"\Deg>"
@@ -184,17 +199,15 @@ Z>41\=>\Text 37,87,"."
 \PlotOff 65,43
 \Text 52,123,"\Deg>"
 \PlotOff 124,10
-{48,63,72,75,89,90,90,108,118,117,104,98,97,100,93,83,87,82,78,75,72,53,54,48,47,43,48}\->\List 1
-{46,46,50,50,48,44,43,47,45,41,39,34,27,11,5,11,29,37,37,42,42,37,25,25,32,35,46}\->\List 2
-\S-Gph2 \DrawOff
-\S-Gph3 \DrawOff
-\S-Gph1 \DrawOn,\xyLine,\List 1,\List 2,1,\Dot
+{48,63,72,75,89,90,90,108,118,117,104,98,97,100,93,83,87,82,78,75,72,53,54,48,47,43,48}\->\List1
+{46,46,50,50,48,44,43,47,45,41,39,34,27,11,5,11,29,37,37,42,42,37,25,25,32,35,46}\->\List2
+\S-Gph1 \DrawOn,\xyLine,\List1,\List2,1,\Dot
 \DrawStat
-{65,70,72,75,76,73,60,62,65}\->\List 1
-{23,27,27,20,13,8,9,17,23}\->\List 2
+{65,70,72,75,76,73,60,62,65}\->\List1
+{23,27,27,20,13,8,9,17,23}\->\List2
 \DrawStat
-{37,46,48,44,48,52,52,36,36,127,127,121,115,110,105,103,105,110,112,116,117,127}\->\List 1
-{17,20,18,13,11,9,7,8,2,2,18,10,8,9,12,6,4,4,6,5,4,8}\->\List 2
+{37,46,48,44,48,52,52,36,36,127,127,121,115,110,105,103,105,110,112,116,117,127}\->\List1
+{17,20,18,13,11,9,7,8,2,2,18,10,8,9,12,6,4,4,6,5,4,8}\->\List2
 \DrawStat
 \For 0\->W \To 1
 \F-Line 109+W,26,111+W,29
@@ -218,7 +231,7 @@ Z>41\=>\Text 37,87,"."
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1793
+Capacity:1642
 File Name:TNT2
 Group Name:
 Password:
@@ -232,22 +245,31 @@ Option4:
 \Mat Z[9,2\->B
 \Prog "TNT3"
 \Lbl 9
+\Prog "TNT1"
 \Mat Z[9,1\->A
 \Mat Z[9,2\->B
+\Lbl 7
 \Mat Z[9,4\->\theta
 \theta=27\=>\Dsz A
 \theta=38\=>\Isz A
 \theta=28\=>\Dsz B
 \theta=37\=>\Isz B
-\Prog "TNT1"
+-1\->C
 \If Z=38
 \Then \Prog "TNT15"
 B+2\->B
 \IfEnd
 \Lbl 8
 \Cls
+\Deg
 \RclPict 1
-\PlotOn A,B
+\If C<0
+\Then \For 1\->C \To 6
+\PlotChg A,B
+.1\->X
+\Prog "T0"
+\Next 
+\IfEnd
 \Lbl S
 0\->P
 \If 1>\Mat Z[10,3
@@ -265,7 +287,12 @@ B\->\Mat Z[9,2
 \Else \Mat Z[10,3]-1\->\Mat Z[10,3
 \IfEnd
 \PlotOn A,B
-(A=71\ And B=18)\ Or (A=124\ And B=11)\ Or (A=65\ And B=44)\ Or (A=86\ And B=34)\=>12<\Mat Z[12,6\=>\GotoH
+0\->H
+A=71\ And B=18\=>1\->H
+A=124\ And B=11\=>2\->H
+A=65\ And B=44\=>3\->H
+A=86\ And B=34\=>4\->H
+H\=>\GotoH
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
@@ -308,15 +335,14 @@ A<38\=>126\->A
 0\->V
 \PxlTest 64-B,A
 \If \Ans
-\Then A\>=65\ And A\<=66\ And B\>=19\ And B\<=20\=>1\->V
-A\>=71\ And A\<=72\ And B\>=23\ And B\<=24\=>2\->V
-A\>=105\ And A\<=106\ And B\>=41\ And B\<=42\=>3\->V
-A\>=48\ And A\<=49\ And B\>=37\ And B\<=38\=>4\->V
-A\>=44\ And A\<=45\ And B\>=13\ And B\<=14\=>5\->V
-A\>=68\ And A\<=69\ And B\>=10\ And B\<=11\=>6\->V
-A\>=78\ And A\<=79\ And B\>=40\ And B\<=41\=>7\->V
-A\>=88\ And A\<=89\ And B\>=23\ And B\<=26\=>9\->V
-A\>=106\ And A\<=107\ And B\>=6\ And B\<=7\=>10\->V
+\Then A\>=64\ And A\<=66\ And B\>=18\ And B\<=20\=>1\->V
+A\>=70\ And A\<=72\ And B\>=22\ And B\<=24\=>2\->V
+A\>=104\ And A\<=106\ And B\>=40\ And B\<=42\=>3\->V
+A\>=47\ And A\<=49\ And B\>=36\ And B\<=38\=>4\->V
+A\>=42\ And A\<=44\ And B\>=12\ And B\<=14\=>5\->V
+A\>=67\ And A\<=69\ And B\>=9\ And B\<=11\=>6\->V
+A\>=87\ And A\<=89\ And B\>=22\ And B\<=26\=>9\->V
+A\>=105\ And A\<=107\ And B\>=5\ And B\<=7\=>10\->V
 \If V
 \Then 0\->\R a1
 0\->\R a2
@@ -326,28 +352,23 @@ B\->\Mat Z[9,2
 0\->V
 \Goto9
 \IfEnd
-\Mat Z[9,4\->\theta
-\theta=27\=>\Dsz A
-\theta=28\=>\Dsz B
-\theta=37\=>\Isz B
-\theta=38\=>\Isz A
-\Goto8
+\Goto7
 \IfEnd
 \GotoS
 \Lbl H
 A\->\Mat Z[9,1
 B\->\Mat Z[9,2
-\If A=71\ And B=18
+\If H=1
 \Then \Text 1,4,"      "
 \Text 7,4,"    "
 \Text 19,4,"    "
 \IfEnd
-\If A=124\ And B=11
+\If H=2
 \Then \Text 13,4,"        "
 \Text 37,4,"        "
 \IfEnd
-A=65\=>B=44\=>\Text 31,4,"       "
-\If A=86\ And B=34
+H=3\=>\Text 31,4,"       "
+\If H=4
 \Then \Text 25,4,"        "
 \Text 43,4,"        "
 \IfEnd
@@ -357,10 +378,11 @@ A=65\=>B=44\=>\Text 31,4,"       "
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
-\theta=47\=>\Goto8
+\theta=47\=>\Goto7
 \PxlTest W,4
 \If \theta\<>31\ Or \Not \Ans
-\Then \Text W,1," "
+\Then \PlotOff 1,62-W
+\PlotOff 2,62-W
 6\->V
 \theta=28\=>-6\->V
 W\->\r
@@ -368,51 +390,37 @@ W\->\r
 W+V\->W
 W=-5\=>43\->W
 W=49\=>1\->W
-W=\r\=>\Goto8
+W=\r\=>\Goto7
 \PxlTest W,4
 \LpWhile \Not \Ans
 \GotoV
 \IfEnd
 0\->P~Q
-\If W=1\ Or W=7\ Or W=19
-\Then 71\->W
--1\->P
+(W-1)/6\->V
+\If V=0\ Or V=1\ Or V=3
+\Then 71\->U
 18\->V
+-1\->P
 \IfEnd
-\If W=31
-\Then -1\->Q
-65\->W
+\If V=5
+\Then 65\->U
 44\->V
+-1\->Q
 \IfEnd
-\If W=13\ Or W=37
-\Then -1\->Q
-124\->W
+\If V=2\ Or V=6
+\Then 124\->U
 11\->V
+-1\->Q
 \IfEnd
-\If W=25\ Or W=43
-\Then 2\->P
-85\->W
+\If V=4\ Or V=7
+\Then 86\->U
 34\->V
+1\->P
 \IfEnd
-1\->\r
-1\->\theta
-W<A\=>-1\->\theta
-V<B\=>-1\->\r
-\If \Abs (W-A)>\Abs (V-B
-\Then (V-B)/(W-A\->Z
-W<A\=>-Z\->Z
-\For A\->U \To W \Step \theta
-B+Z\->B
-\PlotOn U,B
-\Next 
-\Else (W-A)/(V-B\->Z
-V<B\=>-Z\->Z
-\For B\->U \To V \Step \r
-A+Z\->A
-\PlotOn A,U
-\Next 
-\IfEnd
-W+P\->A
+(V-B)/(U-A)\->E
+(U-A)/\Tmax\->F
+\Graph (X,Y)=(A+FT,B+EFT)
+U+P\->A
 V+Q\->B
 .5\->X
 \Prog "T0"
@@ -466,13 +474,13 @@ V=3\ And ((H=5\ And G=2\ And \Not \Mat Z[10,1])\ Or (G=16\ And H=2\ And \Mat Z[1
 V\->\Mat Z[11,1
 \R b2=1\=>\Prog "TNT4"
 \R b2=3\=>\Prog "TNT17"
+\Mat Z[11,1\->V
 \If Z=37
 \Then \Prog "TNT15"
 \Return
 \IfEnd
 \If \R a1
-\Then \Mat Z[11,1\->V
-\R a1\->I
+\Then \R a1\->I
 \R a2\->J
 \GotoS
 \IfEnd
@@ -545,7 +553,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:8510
+Capacity:8535
 File Name:TNT4
 Group Name:
 Password:
@@ -620,10 +628,10 @@ Option4:
 \Then "Enzo, tu es mort !   Prepare-toi au combat"
 "Enzo:"
 "Incarnation GOA."
-.3\->X
+4\->X
 \Prog "T0"
 \Prog "TNT14"
-1.\->X
+1\->X
 \Prog "T0"
 \ClrText
 "Mais c'est toi, Z ?!"
@@ -651,7 +659,7 @@ Option4:
 50\->\R a2
 1\->\Mat Z[11,5
 "\->retour chez Redox..."
-1.\->X
+1\->X
 \Prog "T0"
 "Bien,petit,tu meritesma confiance."
 \IfEnd
@@ -669,6 +677,8 @@ Option4:
 \If W=10.5
 \Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
 "SACRE ?!!"
+3\->X
+\Prog "T0"
 I\->\R a1
 J\->\R a2
 \Prog "TNT14"
@@ -834,6 +844,8 @@ X<11\=>\Stop
 \Then I\->\R a1
 J\->\R a2
 "Le mandivor !"
+3\->X
+\Prog "T0"
 \Prog "TNT14"
 "Plutot coriace..."\Disp24\->Z
 \IfEnd
@@ -906,6 +918,8 @@ J\->\R a2
 "Enfin ! La troisieme inscription..."\Disp\ClrText
 "Le... Le prisme !"
 "Il explose !!!"
+3\->X
+\Prog "T0"
 I\->\R a1
 J\->\R a2
 \Prog "TNT14"
@@ -946,7 +960,7 @@ J\->\R a2
 "jamais du nous suivre"
 "Redox :"
 "INCARNATION ARAKN !"
-.3\->X
+4\->X
 \Prog "T0"
 I\->\R a1
 J\->\R a2
@@ -956,7 +970,7 @@ J\->\R a2
 "t'aneantir, miserableinsecte !!!"
 " "
 "INCARNATION GOA !"
-.3\->X
+4\->X
 \Prog "T0"
 \Prog "TNT14"
 "...Nous mourrons......mais.....Tomberry.........est libre"\Disp\ClrText
@@ -1002,7 +1016,7 @@ Z\->\Mat Z[12,6
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2257
+Capacity:2250
 File Name:TNT5
 Group Name:
 Password:
@@ -1015,7 +1029,7 @@ Option4:
 \Then \If C\<>\Pi
 \Then \S-Gph1 \DrawOn
 \S-Gph2 \DrawOff
-R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9,R+6,R+5,R+6,R+7,R+6,R+5,R+6,R+5,R+6,R+10,R+11,R+12,R+15,R+13,R+12,R+11,R+6,R+8,R+6,R+8,R+5,R+5,R+4,R+4,R+8,R+8,R+13,R+16,R+13,R+8,R+10,R+11,R+14,R+16,R+12,R+9}\->\List 1
+R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9,R+6,R+5,R+6,R+7,R+6,R+5,R+6,R+5,R+6,R+10,R+11,R+12,R+15,R+13,R+12,R+11,R+6,R+8,R+6,R+8,R+5,R+5,R+4,R+4,R+8,R+8,R+13,R+16,R+13,R+8,R+10,R+11,R+14,R+16,R+12,R+9}\->\List1
 \PlotOn R+5,50
 \DrawStat
 \IfEnd
@@ -1047,7 +1061,7 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \S-Gph2 \DrawOn
 \If M=1
 \Then \If C\<>\Pi
-\Then R-12\<>\List 3[8\=>{125,R+5,R+5,R-15,R-20,R-12,R-7,R-12,R-17,R-13,125}\->\List 3
+\Then R-12\<>\List 3[8\=>{125,R+5,R+5,R-15,R-20,R-12,R-7,R-12,R-17,R-13,125}\->\List3
 \DrawStat
 \F-Line R-16,44,R-13,48
 \F-Line R-13,48,R-12,44
@@ -1062,7 +1076,7 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \IfEnd
 \If M=2
 \Then \If C\<>\Pi
-\Then R-16\<>\List 3[8\=>{R-5,R-3,R-9,R-10,R-11,R-17,R-14,R-16,R-14,R-12,R-11,R-12,R-11,R-12,R-9,R-8,R-9,R-5,R-5,R-6,R-5,R-5}\->\List 3
+\Then R-16\<>\List 3[8\=>{R-5,R-3,R-9,R-10,R-11,R-17,R-14,R-16,R-14,R-12,R-11,R-12,R-11,R-12,R-9,R-8,R-9,R-5,R-5,R-6,R-5,R-5}\->\List3
 \DrawStat
 \Else \For 105\->C \To 50 \Step -7-\Int 2\Ran#
 \F-Line C,33,C-5,36
@@ -1072,7 +1086,7 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \IfEnd
 \If M=3
 \Then \If C\<>\Pi
-\Then R-21\<>\List 3[8\=>{R+9,R+1,R+4,R-8,R-4,R-9,R-18,R-21,R-22,R-24,R-17,R-16,R-17,R-17,R-16,R-18,R-16,R-16,R-8,R-8,R-9,R-15,R-9,R-8,R-6,R-5,R-8,R-5,R-6,R-5,R-2,R-1,R-2,R-5,R-2,R,R,R+6}\->\List 3
+\Then R-21\<>\List 3[8\=>{R+9,R+1,R+4,R-8,R-4,R-9,R-18,R-21,R-22,R-24,R-17,R-16,R-17,R-17,R-16,R-18,R-16,R-16,R-8,R-8,R-9,R-15,R-9,R-8,R-6,R-5,R-8,R-5,R-6,R-5,R-2,R-1,R-2,R-5,R-2,R,R,R+6}\->\List3
 \DrawStat
 \PlotOn R-21,38
 \F-Line R-21,37,R-20,37
@@ -1086,7 +1100,7 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \IfEnd
 \If M=4
 \Then \If C\<>\Pi
-\Then R\<>\List 3[8\=>{108,R-6,R+1,R+3,R+3,R,R+2,R,R-1,R-3,R-6,R-3,R,R-2,R-5,R-11,R-14,R-16,R-15,R-16,R-14,R-12,R-13,R-13,R-12,R-9,R-9,R-11,R-12,R-11,R-13,R-15,R-14,R-15,R-15,R-11,R-8,R-7,R-8,108}\->\List 3
+\Then R\<>\List 3[8\=>{108,R-6,R+1,R+3,R+3,R,R+2,R,R-1,R-3,R-6,R-3,R,R-2,R-5,R-11,R-14,R-16,R-15,R-16,R-14,R-12,R-13,R-13,R-12,R-9,R-9,R-11,R-12,R-11,R-13,R-15,R-14,R-15,R-15,R-11,R-8,R-7,R-8,108}\->\List3
 \Text 16,R-11,"."
 \DrawStat
 \Else 0\->D
@@ -1101,7 +1115,7 @@ D+2\->D
 \IfEnd
 \If M=5
 \Then \If C\<>\Pi
-\Then R-21\<>\List 3[8\=>{125,R,R-11,R-12,R-18,R-21,R-23,R-21,R-18,R-20,R-20,R-19,R-20,R-15,R-10,R-9,R-12,R-7,R-6,R-4,125,R-4}\->\List 3
+\Then R-21\<>\List 3[8\=>{125,R,R-11,R-12,R-18,R-21,R-23,R-21,R-18,R-20,R-20,R-19,R-20,R-15,R-10,R-9,R-12,R-7,R-6,R-4,125,R-4}\->\List3
 \DrawStat
 \F-Line R-17,24,R-16,26
 \Else \For 92\->A \To 67 \Step -1
@@ -1117,7 +1131,7 @@ D+2\->D
 \IfEnd
 \If M=6
 \Then \If C\<>\Pi
-\Then R-7\<>\List 3[8\=>{125,R+7,R+4,R,R-3,R-6,R-6,R-7,R-2,R-2,R-3,R-5,R-8,R-9,R-14,R-17,R-17,R-18,R-16,R-18,R-21,R-21,R-19,R-21,R-19,R-14,R-14,R-16,R-17,R-16,R-12,R-11,R-9,R-13,R-13,R-10,R-7,R+2,R+5,R+9,125}\->\List 3
+\Then R-7\<>\List 3[8\=>{125,R+7,R+4,R,R-3,R-6,R-6,R-7,R-2,R-2,R-3,R-5,R-8,R-9,R-14,R-17,R-17,R-18,R-16,R-18,R-21,R-21,R-19,R-21,R-19,R-14,R-14,R-16,R-17,R-16,R-12,R-11,R-9,R-13,R-13,R-10,R-7,R+2,R+5,R+9,125}\->\List3
 \DrawStat
 \Else 0\->G~H
 \For 100\->C \To 55 \Step -5
@@ -1142,7 +1156,7 @@ G\->H
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3254
+Capacity:3253
 File Name:TNT6
 Group Name:
 Password:
@@ -1453,7 +1467,7 @@ J\<>\Mat Z[6,1\=>\Text 5,C,\Mat Z[6,1]-J
 1>\Mat Z[1,1\=>0\->\Mat Z[1,1
 \If \Not \Mat Z[1,1
 \Then \Text 3,6,"0  "
-2.\->X
+2\->X
 \Prog "T0"
 \Cls
 \Text 30,41,"GAME OVER..."
@@ -1561,7 +1575,7 @@ C=16\=>\Text K,L,"LUNE"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2593
+Capacity:2588
 File Name:TNT9
 Group Name:
 Password:
@@ -1694,7 +1708,7 @@ P<31\=>\Text P-1,50,"       "
 .6\->X
 \Prog "T0"
 \F-Line 51,33,59,43
-1.\->X
+1\->X
 \Prog "T0"
 \F-Line 45,38,88,58
 \F-Line 55,56,88,58
@@ -1720,8 +1734,8 @@ G=2\=>0\->G
 \IfEnd
 \If C=12
 \Then \Text 51,38," \->ennemi plus faible !"
-{42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}\->\List 1
-{16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}\->\List 3
+{42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}\->\List1
+{16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}\->\List3
 \DrawStat
 \PlotOn 68,49
 \Text 11,61,"@"
@@ -1738,8 +1752,8 @@ G=2\=>0\->G
 \IfEnd
 \If C=13
 \Then \Text 51,38," \->Z absorbe la vie ! "
-{59,45,39,59,62,57,53,54,55,56,61,65,70,68,69,75,72,68,65,64,65,59}\->\List 1
-{55,50,40,46,44,37,36,34,32,30,33,34,44,47,49,48,53,55,60,54,47,55}\->\List 3
+{59,45,39,59,62,57,53,54,55,56,61,65,70,68,69,75,72,68,65,64,65,59}\->\List1
+{55,50,40,46,44,37,36,34,32,30,33,34,44,47,49,48,53,55,60,54,47,55}\->\List3
 \DrawStat
 \F-Line 46,43,50,49
 \F-Line 52,45,55,49
@@ -2001,7 +2015,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2750
+Capacity:2730
 File Name:TNT12
 Group Name:
 Password:
@@ -2032,19 +2046,19 @@ S=44\ Or S=33\ Or S=8\=>6
 S=29\=>7
 55=\Mat Z[12,6\=>6
 \Ans\->M
-\S-Gph3 \DrawOff,\xyLine,\List 1,\List 3,1,\Dot
-\S-Gph2 \DrawOff,\xyLine,\List 3,\List 4,1,\Dot
-S=99\=>\S-Gph2 \DrawOn,\xyLine,\List 3,\List 4,1,\Square
-\S-Gph1 \DrawOff,\xyLine,\List 1,\List 2,1,\Dot
+\S-Gph3 \DrawOff,\xyLine,\List1,\List3,1,\Dot
+\S-Gph2 \DrawOff,\xyLine,\List3,\List4,1,\Dot
+S=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
+\S-Gph1 \DrawOff,\xyLine,\List1,\List2,1,\Dot
 8\->\Dim \List 1
-\List 1\->\List 3
-{17,17,25,31,45,45,47,48,51,52,52,49,47,47,45,45,31,31,26,25,22,17,22,31,31,27,24,17,17,17,24,27,32,31,33,36,39,41,42,41,37,35,36,37,40,42,42,40,38,36,35,34}\->\List 2
-M=1\=>{25,25,50,50,40,40,32,26,26,17,17}\->\List 4
-M=2\=>{23,23,41,42,41,23,23,17,23,23,19,17,19,23,23,17,23,23,22,19,18,17}\->\List 4
-M=3\=>{25,25,26,26,27,27,35,28,28,42,39,38,37,34,29,26,31,34,27,26,21,15,21,26,25,22,15,22,25,27,22,15,22,27,26,23,21,15}\->\List 4
-M=4\=>{63,48,46,43,37,32,30,32,31,33,32,33,29,31,29,29,30,32,34,32,32,36,35,33,33,36,38,41,39,41,43,43,41,43,44,48,48,48,48,63}\->\List 4
-M=5\=>{41,41,43,42,29,30,32,29,28,28,27,27,20,20,25,25,17,17,21,24,27,23}\->\List 4
-M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,43,42,40,35,35,35,39,41,40,31,24,19,17,17,18,22,22}\->\List 4
+\List 1\->\List3
+{17,17,25,31,45,45,47,48,51,52,52,49,47,47,45,45,31,31,26,25,22,17,22,31,31,27,24,17,17,17,24,27,32,31,33,36,39,41,42,41,37,35,36,37,40,42,42,40,38,36,35,34}\->\List2
+M=1\=>{25,25,50,50,40,40,32,26,26,17,17}\->\List4
+M=2\=>{23,23,41,42,41,23,23,17,23,23,19,17,19,23,23,17,23,23,22,19,18,17}\->\List4
+M=3\=>{25,25,26,26,27,27,35,28,28,42,39,38,37,34,29,26,31,34,27,26,21,15,21,26,25,22,15,22,25,27,22,15,22,27,26,23,21,15}\->\List4
+M=4\=>{63,48,46,43,37,32,30,32,31,33,32,33,29,31,29,29,30,32,34,32,32,36,35,33,33,36,38,41,39,41,43,43,41,43,44,48,48,48,48,63}\->\List4
+M=5\=>{41,41,43,42,29,30,32,29,28,28,27,27,20,20,25,25,17,17,21,24,27,23}\->\List4
+M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,43,42,40,35,35,35,39,41,40,31,24,19,17,17,18,22,22}\->\List4
 55=\Mat Z[12,6\=>\Return
 \Cls
 \Horizontal 1
@@ -2065,8 +2079,8 @@ M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,4
 \Text 11,3,"NIVEAU"
 \Text 11,30,\Mat Z[11,2
 \If \Int 3\Ran#
-\Then \Graph (X,Y)=(37+15T,16+\Ran#
-\Else \Graph (X,Y)=(37+15T,16+\Ran#
+\Then \Graph (X,Y)=(37+T,16+\Ran#
+\Else \Graph (X,Y)=(37+T,16+\Ran#
 \F-Line 38,16,125,16
 \IfEnd
 1\->W
@@ -2471,9 +2485,9 @@ X=8\Pi\=>\Prog "TNT6"
 \Text 37,23,"\slash"
 \Text 43,3,"at   \slash  "
 \Text 49,3,"de   \slash  "
-\For 2\->T \To 5
+\For 2\->V \To 5
 \For 1\->U \To 2
-\Text 6T+19,13U+1,\Mat Z[T,U
+\Text 6V+19,13U+1,\Mat Z[V,U
 \If \Not \Int ((4\Mat Z[6,4])\Ran#
 \Then \Prog "TNT6"
 S=8\=>\Return
@@ -3227,7 +3241,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3664
+Capacity:3662
 File Name:TNT15
 Group Name:
 Password:
@@ -3446,13 +3460,13 @@ C+.6\->C
 \Next 
 \Cls
 \Plot 0,0
-5.\->X
+5\->X
 \Prog "T0"
 \ClrText
 "Z ?...      Z ?!"\Disp"Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
 "Jessie: Ton dernier"
 "combat a bien failli t'etre fatal..."\Disp"Et...et Tomberry ?"\Disp"Detruit. A jamais."
-2.\->X
+2\->X
 \Prog "T0"
 \Lbl R
 \Prog "TNT12"
@@ -3471,7 +3485,7 @@ C+.6\->C
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:93
+Capacity:91
 File Name:TNT16
 Group Name:
 Password:
@@ -3480,14 +3494,14 @@ Option2:
 Option3:
 Option4:
 %Data Record
-{1,2,3,4,5,6,14,15}\->\List 1
-{\Int 8\Ran#+16,\Int 8\Ran#+21,\Int 10\Ran#+40,\Int 10\Ran#+45,\Int 51\Ran#+90,\Int 51\Ran#+99,\Int 41\Ran#+160,\Int 3\Ran#+3}\->\List 2
+{1,2,3,4,5,6,14,15}\->\List1
+{\Int 8\Ran#+16,\Int 8\Ran#+21,\Int 10\Ran#+40,\Int 10\Ran#+45,\Int 51\Ran#+90,\Int 51\Ran#+99,\Int 41\Ran#+160,\Int 3\Ran#+3}\->\List2
 %End
 %Header Record
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:857
+Capacity:865
 File Name:TNT17
 Group Name:
 Password:
@@ -3501,10 +3515,7 @@ Option4:
 \If 36=\Mat Z[12,6
 \Then "Fuyez, fuyez vite !"\Disp\Return
 \IfEnd
-" "
-\For 1\->W \To 3
-" "
-\Next 
+\ClrText
 \Locate 1,1,"~~~~~~ AUBERGE ~~~~~~"
 \Locate 1,2,"Bonjour etranger,"
 \Locate 1,3,"Que desires-tu ?"
@@ -3513,8 +3524,8 @@ Option4:
 \Locate 3,7,"3.Sortir"
 \Do
 \Getkey\->\theta
-\LpWhile \theta\<>72\ And \theta\<>62\ And \theta\<>52
-\theta=52\=>\Return
+\LpWhile \theta\<>72\ And \theta\<>62\ And \theta\<>52\ And \theta\<>47
+\theta<53\=>\Return
 \If \theta=62
 \Then \If 25>\Mat Z[10,4
 \Then \ClrText
@@ -3539,13 +3550,13 @@ Option4:
 \Locate 4Y+11,X+2,\Mat Z[X,1
 \Next 
 \Next 
-0\->X
+0\->U
 \For 0\->V \To 8
-\Isz X
-X=2\=>0\->X
+\Isz U
+U=2\=>0\->U
 \For 3\->W \To 7
-\Not X\=>\Locate W,2,"Z"
-X\=>\Locate W,2,"z"
+\Not U\=>\Locate W,2,"Z"
+U\=>\Locate W,2,"z"
 .1\->X
 \Prog "T0"
 \Next 
@@ -3555,17 +3566,19 @@ X\=>\Locate W,2,"z"
 \Then \ClrText
 \Locate 5,1," SAUVEGARDER "
 \Locate 1,3,"Confirmer ?"
-\Locate 1,7,"[1]\->Oui       [2]\->Non"
+\Locate 1,7,"[EXE]\->Oui  [EXIT]\->Non"
 \Do
-\Getkey
-\LpWhile \Not \Ans
-\Ans=62\=>\GotoA
+\Getkey\->\theta
+\LpWhile \theta\<>31\ And \theta\<>47
+.2\->X
+\Prog "T0"
+\theta=47\=>\GotoA
 \Int (9999\Ran#*9999\Ran#\->\Mat Z[10,3
 \Mat Z*\Mat Z[10,3\->\Mat Y
 \ClrText
 \Locate 7,4,"\aster Level \aster"
 \Locate 7,5,"\aster Saved \aster"
-1.\->X
+1\->X
 \Prog "T0"
 \IfEnd
 \GotoA

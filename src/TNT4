@@ -81,10 +81,10 @@ Then
     Orange "Enzo, tu es mort !   Prepare-toi au combat"
     "Enzo:"
     "Incarnation GOA."
-    .3→X
+    4→X
     Prog "T0"
     Prog "TNT14"
-    1.→X
+    1→X
     Prog "T0"
     ClrText
     "Mais c'est toi, Z ?!"
@@ -116,7 +116,7 @@ Then
       50→a₂
       1→Mat Z[11,5
       Green "→retour chez Redox..."
-      1.→X
+      1→X
       Prog "T0"
       "Bien,petit,tu meritesma confiance."
     IfEnd
@@ -139,6 +139,8 @@ Then
   Then 
     "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
     "SACRE ?!!"
+    3→X
+    Prog "T0"
     I→a₁
     J→a₂
     Prog "TNT14"
@@ -348,6 +350,8 @@ Then
     I→a₁
     J→a₂
     Orange "Le mandivor !"
+    3→X
+    Prog "T0"
     Prog "TNT14"
     Orange "Plutot coriace..."◢
     24→Z
@@ -457,6 +461,8 @@ Then
       ClrText
       Orange "Le... Le prisme !"
       Orange "Il explose !!!"
+      3→X
+      Prog "T0"
       I→a₁
       J→a₂
       Prog "TNT14"
@@ -512,7 +518,7 @@ Then
       "jamais du nous suivre"
       "Redox :"
       "INCARNATION ARAKN !"
-      .3→X
+      4→X
       Prog "T0"
       I→a₁
       J→a₂
@@ -522,7 +528,7 @@ Then
       "t'aneantir, miserableinsecte !!!"
       " "
       "INCARNATION GOA !"
-      .3→X
+      4→X
       Prog "T0"
       Prog "TNT14"
       "...Nous mourrons......mais.....Tomberry.........est libre"◢

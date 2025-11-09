@@ -36,9 +36,9 @@ Green Text 37,3,"ma     "
 Green Text 37,23,"/"
 Green Text 43,3,"at   /  "
 Green Text 49,3,"de   /  "
-For 2→T To 5
+For 2→V To 5
   For 1→U To 2
-    Green Text 6T+19,13U+1,Mat Z[T,U
+    Green Text 6V+19,13U+1,Mat Z[V,U
     If Not Int ((4Mat Z[6,4])Ran#
     Then 
       Prog "TNT6"

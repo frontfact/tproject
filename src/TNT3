@@ -37,6 +37,7 @@ Then
   V→Mat Z[11,1
   b₂=1⇒Prog "TNT4"
   b₂=3⇒Prog "TNT17"
+  Mat Z[11,1→V
   If Z=37
   Then 
     Prog "TNT15"
@@ -44,7 +45,6 @@ Then
   IfEnd
   If a₁
   Then 
-    Mat Z[11,1→V
     a₁→I
     a₂→J
     Goto S
