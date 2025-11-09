@@ -459,11 +459,11 @@ def main():
     if args.make_mono:
         cat35 = copy.deepcopy(catfile)
         cat35.make_mono('35+')
-        cat35.Write(cat35, '../packages/TPROJECT35.cat')
+        cat35.Write(cat35, '../packages/TPROJECT35.CAT')
         cat35.dump_programs('../src/mono35+')
         cat100 = copy.deepcopy(catfile)
         cat100.make_mono('100+')
-        cat100.Write(cat100, '../packages/TPROJECT100.cat')
+        cat100.Write(cat100, '../packages/TPROJECT100.CAT')
         cat100.dump_programs('../src/mono100+')
 
     if args.forge:

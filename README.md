@@ -16,8 +16,8 @@ The game requires 64kB of memory to run (47kB of programs, 1 picture, 2-3 matric
 # Packages
 
 - [TPROJECT.CAT](./packages/TPROJECT.CAT) for graph65 (3 colors)
-- [TPROJECT35.CAT](./packages/TPROJECT35.cat) for graph35+ (monochrome)
-- [TPROJECT100.CAT](./packages/TPROJECT100.cat) for graph100+ (monochrome)
+- [TPROJECT35.CAT](./packages/TPROJECT35.CAT) for graph35+ (monochrome)
+- [TPROJECT100.CAT](./packages/TPROJECT100.CAT) for graph100+ (monochrome)
 
 # Contact
 
