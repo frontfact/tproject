@@ -3546,13 +3546,13 @@ Option4:
 \Locate 4Y+11,X+2,\Mat Z[X,1
 \Next 
 \Next 
-0\->X
+0\->U
 \For 0\->V \To 8
-\Isz X
-X=2\=>0\->X
+\Isz U
+U=2\=>0\->U
 \For 3\->W \To 7
-\Not X\=>\Locate W,2,"Z"
-X\=>\Locate W,2,"z"
+\Not U\=>\Locate W,2,"Z"
+U\=>\Locate W,2,"z"
 .1\->X
 \Prog "T0"
 \Next 
