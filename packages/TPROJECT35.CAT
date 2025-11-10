@@ -1156,7 +1156,7 @@ G\->H
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3253
+Capacity:3076
 File Name:TNT6
 Group Name:
 Password:
@@ -1165,7 +1165,6 @@ Option2:
 Option3:
 Option4:
 %Data Record
-X=8\Pi\=>\GotoL
 0\->N
 \StoPict 1
 \Mat Z[1,1\->I
@@ -1463,26 +1462,7 @@ J\<>\Mat Z[6,1\=>\Text 5,C,\Mat Z[6,1]-J
 \Then .3\->X
 \Prog "T0"
 \IfEnd
-\Lbl L
-1>\Mat Z[1,1\=>0\->\Mat Z[1,1
-\If \Not \Mat Z[1,1
-\Then \Text 3,6,"0  "
-2\->X
-\Prog "T0"
-\Cls
-\Text 30,41,"GAME OVER..."
-\Stop
-\IfEnd
-0\->W
-0\->P~Q
-\Cls
-\RclPict 1
-\Text 3,6,"   "
-\Text 3,6,\Mat Z[1,1
-0\->P~Q
-1>\Mat Z[6,1\=>1\->\Mat Z[6,1
-\Mat Z[1,1\->I
-\Mat Z[6,1\->J
+\Prog "TNT19"
 %End
 %Header Record
 Format:TXT
@@ -2439,7 +2419,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7723
+Capacity:7712
 File Name:TNT14
 Group Name:
 Password:
@@ -2469,9 +2449,8 @@ P=9\=>Q+\Mat Z[6,3\->\Mat Z[6,3
 \If I\<>\Mat Z[1,1]\ Or J\<>\Mat Z[6,1
 \Then .5\->X
 \Prog "T0"
-\Mat Z[1,1]<1\=>8\Pi\->X
-X=8\Pi\=>\Prog "TNT6"
-\Mat Z[6,1]<1\=>\Goto2
+1>\Mat Z[1,1\=>\Prog "TNT19"
+1>\Mat Z[6,1\=>\Goto2
 \IfEnd
 0\->P~Q
 \Lbl 1
@@ -3604,6 +3583,38 @@ Option4:
 \For 38\->Y \To 40
 \F-Line 5,Y,D,Y
 \Next 
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:157
+File Name:TNT19
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If 1>\Mat Z[1,1
+\Then \Text 3,6,"0  "
+2\->X
+\Prog "T0"
+\Cls
+\Text 30,41,"GAME OVER..."
+\Stop
+\IfEnd
+0\->W
+0\->P~Q
+\Cls
+\RclPict 1
+\Text 3,6,"   "
+\Text 3,6,\Mat Z[1,1
+0\->P~Q
+1>\Mat Z[6,1\=>1\->\Mat Z[6,1
+\Mat Z[1,1\->I
+\Mat Z[6,1\->J
 %End
 %Header Record
 Format:TXT

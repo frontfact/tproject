@@ -20,9 +20,8 @@ If I≠Mat Z[1,1] Or J≠Mat Z[6,1
 Then 
   .5→X
   Prog "T0"
-  Mat Z[1,1]<1⇒8π→X
-  X=8π⇒Prog "TNT6"
-  Mat Z[6,1]<1⇒Goto 2
+  1>Mat Z[1,1⇒Prog "TNT19"
+  1>Mat Z[6,1⇒Goto 2
 IfEnd
 0→P~Q
 Lbl 1

@@ -1,0 +1,19 @@
+If 1>Mat Z[1,1
+Then 
+  Orange Text 3,6,"0  "
+  2→X
+  Prog "T0"
+  Cls
+  Text 30,41,"GAME OVER..."
+  Stop
+IfEnd
+0→W
+0→P~Q
+Cls
+RclPict 1
+Orange Text 3,6,"   "
+Orange Text 3,6,Mat Z[1,1
+0→P~Q
+1>Mat Z[6,1⇒1→Mat Z[6,1
+Mat Z[1,1→I
+Mat Z[6,1→J
