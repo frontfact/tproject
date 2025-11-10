@@ -323,7 +323,7 @@ Then
     65→R
     Prog "TNT5"
   IfEnd
-  Mat Z[1,1→J
+  Mat Z[1,1→I
   Mat Z[6,1→J
   Goto D
 IfEnd
