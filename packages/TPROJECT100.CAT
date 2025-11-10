@@ -121,7 +121,7 @@ D>1\=>0\->D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1419
+Capacity:1424
 File Name:TNT1
 Group Name:
 Password:
@@ -140,7 +140,7 @@ Option4:
 \F-Line 1,14,36,14
 \F-Line 1,15,36,15
 \Text 3,38,"-Carte de Gaia-"
-\Text 3,100,"[menu]"
+\Text 3,100,"[me\R nu]"
 \Mat Z[12,6\->Z
 {65,-9,-9,-9,-9,-9,-9,-9}\->\List1
 {19,10,6,23,41,37,13,23}\->\List2
@@ -150,7 +150,7 @@ Option4:
 68\->\List 1[2
 \IfEnd
 \If Z>12
-\Then \Text 13,4,"Atlantis"
+\Then \Text 13,4,"Atla\R ntis"
 \PlotOn 4,51
 106\->\List 1[3
 \IfEnd
@@ -159,11 +159,11 @@ Option4:
 71\->\List 1[4
 \IfEnd
 \If Z>25
-\Then \Text 25,4,"Helenia"
+\Then \Text 25,4,"Hele\R nia"
 105\->\List 1[5
 \IfEnd
 \If Z>28
-\Then \Text 31,4,"Winhill"
+\Then \Text 31,4,"Wi\R nhill"
 48\->\List 1[6
 \IfEnd
 \If Z>30\ And Z<38
@@ -171,7 +171,7 @@ Option4:
 43\->\List 1[7
 \IfEnd
 \If Z>41
-\Then \Text 43,4,"Sanctua"
+\Then \Text 43,4,"Sa\R nctua"
 \PlotOn 4,21
 88\->\List 1[8
 \IfEnd
@@ -1156,7 +1156,7 @@ G\->H
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3253
+Capacity:3259
 File Name:TNT6
 Group Name:
 Password:
@@ -1194,8 +1194,8 @@ A=6\=>62\->R
 A=7\=>7\->W
 \Text 51,38,"attak\->               "
 A=1\=>\Text 51,64,"coup"
-A=3\=>\Text 51,64,"feinte"
-A=4\=>\Text 51,64,"tranch"
+A=3\=>\Text 51,64,"fei\R nte"
+A=4\=>\Text 51,64,"tra\R nch"
 A=5\=>\Text 51,64,"double"
 A=6\=>\Text 51,64,"charge"
 A=7\=>\Text 51,64,"furie"
@@ -1279,7 +1279,7 @@ A=2\=>\Text 51,73,"force"
 10\->Q
 \IfEnd
 \If A=12
-\Then \Text 51,73,"onde+"
+\Then \Text 51,73,"o\R nde+"
 \For 1\->A \To 40 \Step 2
 A<13\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 A>12\=>A<25\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
@@ -1297,7 +1297,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 20\->Q
 \IfEnd
 \If A=3
-\Then \Text 51,73,"onde"
+\Then \Text 51,73,"o\R nde"
 \For 1\->A \To 40 \Step 2
 \F-Line -A+90,38-A/2,-A+90,38+A/2
 \Next 
@@ -1327,7 +1327,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 22\->Q
 \IfEnd
 \If A=5
-\Then \Text 51,73,"vision"
+\Then \Text 51,73,"visio\R n"
 \For 60\->A \To 99 \Step 2
 \PlotOn A,40
 \Next 
@@ -1435,7 +1435,7 @@ A=16\=>\Text 51,73,"orage"
 A=13\=>29\->Q
 \IfEnd
 \If A=17
-\Then \Text 51,73,"enfers"
+\Then \Text 51,73,"e\R nfers"
 \For 43\->A \To 125 \Step 3
 40\Ran#
 \F-Line A-6,17,A-3,23+\Ans
@@ -1513,7 +1513,7 @@ Q=6\=>P-10\->P
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:871
+Capacity:880
 File Name:TNT8
 Group Name:
 Password:
@@ -1526,28 +1526,28 @@ Option4:
 \Then \Not C\=>\Text K,L,"       "
 C=1\=>\Text K,L,"acier  "
 C=2\=>\Text K,L,"force  "
-C=3\=>\Text K,L,"onde   "
+C=3\=>\Text K,L,"o\R nde   "
 C=4\=>\Text K,L,"eclair "
-C=5\=>\Text K,L,"vision "
+C=5\=>\Text K,L,"visio\R n "
 C=6\=>\Text K,L,"boost  "
 C=7\=>\Text K,L,"vague  "
 C=8\=>\Text K,L,"morsur "
 C=9\=>\Text K,L,"griffe "
 C=10\=>\Text K,L,"soleil "
 C=11\=>\Text K,L,"vital  "
-C=12\=>\Text K,L,"onde+  "
+C=12\=>\Text K,L,"o\R nde+  "
 C=13\=>\Text K,L,"foudre "
 C=14\=>\Text K,L,"vampyr "
 C=15\=>\Text K,L,"flamme "
 C=16\=>\Text K,L,"orage  "
-C=17\=>\Text K,L,"enfers "
+C=17\=>\Text K,L,"e\R nfers "
 \IfEnd
 \If O=1
 \Then \Not C\=>\Text K,L,"       "
 C=1\=>\Text K,L,"coup   "
 C=2\=>\Text K,L,"garde  "
-C=3\=>\Text K,L,"feinte "
-C=4\=>\Text K,L,"tranch "
+C=3\=>\Text K,L,"fei\R nte "
+C=4\=>\Text K,L,"tra\R nch "
 C=5\=>\Text K,L,"double "
 C=6\=>\Text K,L,"charge "
 C=7\=>\Text K,L,"furie  "
@@ -1555,9 +1555,9 @@ C=8\=>\Text K,L,"Xmeta  "
 \IfEnd
 \If O=3
 \Then \Not C\=>\Text K,L,"       "
-C=1\=>\Text K,L,"soin"
-C=2\=>\Text K,L,"soin +"
-C=3\=>\Text K,L,"adrena"
+C=1\=>\Text K,L,"soi\R n"
+C=2\=>\Text K,L,"soi\R n +"
+C=3\=>\Text K,L,"adre\R na"
 C=4\=>\Text K,L,"chlore"
 C=5\=>\Text K,L,"protec"
 C=6\=>\Text K,L,"power+"
@@ -1575,7 +1575,7 @@ C=16\=>\Text K,L,"LUNE"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2588
+Capacity:2594
 File Name:TNT9
 Group Name:
 Password:
@@ -1595,7 +1595,7 @@ Option4:
 \Text 4,7,"OBJETS"
 \F-Line 1,53,37,53
 \Text 14,3,"[EXE]"
-\Text 20,5,"prendre"
+\Text 20,5,"pre\R ndre"
 \Text 28,3,"[EXIT]"
 \Text 34,3,"quitter"
 \F-Line 1,23,36,23
@@ -1693,7 +1693,7 @@ P<31\=>\Text P-1,50,"       "
 \S-Gph2 \DrawOff
 \S-Gph3 \DrawOn
 \If C=11
-\Then \Text 51,38," \->ennemi plus lent !"
+\Then \Text 51,38," \->e\R n\R nemi plus le\R nt !"
 \F-Line 55,56,65,38
 \F-Line 65,38,55,20
 \F-Line 55,20,45,38
@@ -1733,7 +1733,7 @@ G=2\=>0\->G
 3+\Mat Z[6,4\->\Mat Z[6,4
 \IfEnd
 \If C=12
-\Then \Text 51,38," \->ennemi plus faible !"
+\Then \Text 51,38," \->e\R n\R nemi plus faible !"
 {42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}\->\List1
 {16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}\->\List3
 \DrawStat
@@ -1794,7 +1794,7 @@ D\>=2\=>\Text K,L+31,D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1200
+Capacity:1202
 File Name:TNT10
 Group Name:
 Password:
@@ -1821,14 +1821,14 @@ Option4:
 \Text 5,63,"Z"
 \F-Line 69,62,69,51
 \F-Line 70,62,70,51
-\Text 5,73,"sante:   \slash"
+\Text 5,73,"sa\R nte:   \slash"
 \Text 5,97,\Mat Z[1,1
 \Text 5,113,\Mat Z[1,2
 \Text 15,9,"attaques"
 \Text 21,9,"stats"
 \Text 27,9,"objets"
 \Text 51,4,"[EXIT]"
-\Text 57,8,"Return"
+\Text 57,8,"Retur\R n"
 \F-Line 48,1,48,52
 \F-Line 49,1,49,52
 1\->A
@@ -1912,7 +1912,7 @@ A=5\=>\Return
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:926
+Capacity:928
 File Name:TNT11
 Group Name:
 Password:
@@ -1942,7 +1942,7 @@ Option4:
 6Q-3\->K
 \Prog "TNT8"
 \Next 
-\Text 51,7,"-rien-"
+\Text 51,7,"-rie\R n-"
 \Text 57,7,"[EXIT]"
 \Text 3,42,"\@24"
 \Text 3,49,\Mat Z[10,4
@@ -1998,7 +1998,7 @@ U=9\=>\GotoV
 \List 1[U\->O
 \If \List 2[U]>\Mat Z[10,4
 \Then \Text 7,91,"il vous "
-\Text 13,91,"manque "
+\Text 13,91,"ma\R nque "
 \Text 19,91,"   \@24    "
 \Text 19,91,\List 2[U]-\Mat Z[10,4
 .6\->X
@@ -2015,7 +2015,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2730
+Capacity:2741
 File Name:TNT12
 Group Name:
 Password:
@@ -2088,7 +2088,7 @@ M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,4
 41\->R
 0\->C
 \Prog "TNT5"
-\Text 51,38,"Z combat un ..."
+\Text 51,38,"Z combat u\R n ..."
 \Mat Z[11,2\->N
 \If M=1
 \Then 1\ab/c2N+2\->A~D
@@ -2226,17 +2226,17 @@ S\=>\Ans+1
 115\->R
 M\<>7\=>\Prog "TNT5"
 \If S=43\ Or S=44\ Or S=32\ Or S=33\ Or S=8\ Or S=10.5\ Or S=99\ Or S=28.5
-\Then S=44\ Or S=33\ Or S=8\=>\Text 51,75,"Enzo   "
+\Then S=44\ Or S=33\ Or S=8\=>\Text 51,75,"E\R nzo   "
 S=32\ Or S=43\=>\Text 51,75,"Redox  "
-S=10.5\=>\Text 51,75,"Minautor"
-S=28.5\=>\Text 51,75,"Un vegetal"
-S=99\=>\Text 51,75,"le Gardien"
-\Else M=1\=>\Text 51,90,"lapranak"
-M=2\=>\Text 51,90,"srilane"
-M=3\=>\Text 51,89,"mandivor"
-M=4\=>\Text 51,90,"arakn'"
-M=5\=>\Text 51,90,"orinaphe"
-M=6\=>\Text 51,88,"goa geant"
+S=10.5\=>\Text 51,75,"Mi\R nautor"
+S=28.5\=>\Text 51,75,"U\R n vegetal"
+S=99\=>\Text 51,75,"le Gardie\R n"
+\Else M=1\=>\Text 51,90,"lapra\R nak"
+M=2\=>\Text 51,90,"srila\R ne"
+M=3\=>\Text 51,89,"ma\R ndivor"
+M=4\=>\Text 51,90,"arak\R n'"
+M=5\=>\Text 51,90,"ori\R naphe"
+M=6\=>\Text 51,88,"goa gea\R nt"
 M=7\=>\Text 51,90,"spectre"
 \IfEnd
 \StoPict 1
@@ -2245,7 +2245,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5501
+Capacity:5503
 File Name:TNT13
 Group Name:
 Password:
@@ -2291,7 +2291,7 @@ V=10\=>\Text 5,3,"ATLANTIS"
 \Text 31,3,"\@24"
 \Text 31,10,\Mat Z[10,4
 \Text 38,3,"[MENU]"
-\Text 45,3,"[F6]Monde"
+\Text 45,3,"[F6] Mo\R nde"
 \Text 55,42,"(CHARGEMENT)"
 \Identity 1\->\Mat A
 \If V=4
@@ -2439,7 +2439,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7723
+Capacity:7752
 File Name:TNT14
 Group Name:
 Password:
@@ -2496,7 +2496,7 @@ S=8\=>\Return
 \Next 
 \Mat Z[1,1\->I
 \Mat Z[6,1\->J
-\Text 57,3,"[EXE]\->menu action            "
+\Text 57,3,"[EXE]\->me\R nu actio\R n            "
 \StoPict 1
 \Do
 \If \Not \Int ((5\Mat Z[6,4])\Ran#
@@ -2512,10 +2512,10 @@ S=8\=>\Return
 \Text 25,3," attak  "
 \Text 31,3," pouvoir"
 \Text 37,3," objet  "
-\Text 43,3," aprend"
+\Text 43,3," apre\R nd"
 \Text 49,3," fuite  "
 1\->\r
-\Text 57,3,"[EXE]\->choisir une action     "
+\Text 57,3,"[EXE]\->choisir u\R ne actio\R n     "
 \StoPict 1
 \Do
 \F-Line 3,-6\r+43,5,-6\r+43
@@ -2537,11 +2537,11 @@ S=8\=>\Return
 \LpWhile \Ans
 \If \r=5
 \Then \If \Not \Int 2\Ran#
-\Then \Text 57,3,"Z prend la fuite...     "
+\Then \Text 57,3,"Z pre\R nd la fuite...     "
 .6\->X
 \Prog "T0"
 \Return
-\Else \Text 57,3,"Le monstre rattrape Z ! "
+\Else \Text 57,3,"Le mo\R nstre rattrape Z ! "
 .6\->X
 \Prog "T0"
 0\->P~Q
@@ -2572,7 +2572,7 @@ S=8\=>\Return
 \Prog "TNT8"
 \Next 
 1\->\r
-\Text 57,3,"[EXE]\->Choisir une attak     "
+\Text 57,3,"[EXE]\->Choisir u\R ne attak     "
 \Do
 \F-Line 3,-6\r+43,5,-6\r+43
 \Mat Z[\r,4\->V
@@ -2727,7 +2727,7 @@ W=4\=>2\->W
 \Next 
 \IfEnd
 \If V=2
-\Then \Text 51,38,"defense +1            "
+\Then \Text 51,38,"defe\R nse +1            "
 \For 11\->A \To 26 \Step 6
 \Text A,50,"     "
 \Next 
@@ -2738,7 +2738,7 @@ W=4\=>2\->W
 \Prog "TNT5"
 \IfEnd
 \If V=3
-\Then \Text 51,38,"ennemi def -1        "
+\Then \Text 51,38,"e\R n\R nemi def -1        "
 1\->W
 \Pi\->N
 65\->R
@@ -2762,7 +2762,7 @@ S=8\=>\Return
 \Prog "TNT8"
 \Next 
 1\->\r
-\Text 57,3,"[EXE]\->Choisir un pouvoir    "
+\Text 57,3,"[EXE]\->Choisir u\R n pouvoir    "
 0\->O
 \Do
 \F-Line 3,-6\r+43,5,-6\r+43
@@ -2878,7 +2878,7 @@ W>23\=>\F-Line W+65,38-.5W,W+65,38+.5W
 20\->Q
 \IfEnd
 \If V=1\ Or V=2
-\Then V=1\=>\Text 51,38,"Z defense +1          "
+\Then V=1\=>\Text 51,38,"Z defe\R nse +1          "
 V=2\=>\Text 51,38,"Z attaque +1          "
 \Circle 49,37,10
 5-V\->P
@@ -2890,7 +2890,7 @@ V=2\=>\Text 51,38,"Z attaque +1          "
 \RclPict 1
 \Plot 0,0
 \Next 
-\Text 51,38,"ennemi att -1        "
+\Text 51,38,"e\R n\R nemi att -1        "
 \For 1\->A \To 7
 \Text \Int 20\Ran#+20,\Int 20\Ran#+96,"#"
 \Next 
@@ -2912,7 +2912,7 @@ V=2\=>\Text 51,38,"Z attaque +1          "
 \Text 25,104,":"
 .3\->X
 \Prog "T0"
-\Text 51,38,"Z absorbe vie ennemi !"
+\Text 51,38,"Z absorbe vie e\R n\R nemi !"
 \For 103\->A \To 47 \Step -2
 \F-Line A,36+3\Ran#,A-1,36+3\Ran#
 \Next 
@@ -2937,7 +2937,7 @@ V=2\=>\Text 51,38,"Z attaque +1          "
 \Cls
 \RclPict 1
 \Next 
-\Text 51,38,"ennemi def -1        "
+\Text 51,38,"e\R n\R nemi def -1        "
 \For 0\->A \To 5
 \F-Line 11\Ran#+99,25\Ran#+20,11\Ran#+99,25\Ran#+20
 \Next 
@@ -2946,7 +2946,7 @@ V=2\=>\Text 51,38,"Z attaque +1          "
 14\->Q
 \IfEnd
 \If V=11
-\Then \Text 51,38,"Z regenere...        "
+\Then \Text 51,38,"Z rege\R nere...        "
 \Circle 49,37,10
 \For 0\->A \To 9
 \F-Line 49,37,40\Ran#+29,40\Ran#+17
@@ -3016,7 +3016,7 @@ V=13\=>28\->Q
 81\->L
 \Mat Z[11,3\->O
 \Mat Z[11,4\->C
-\Text 51,38,"apprendre        ?    "
+\Text 51,38,"appre\R ndre        ?    "
 \Prog "TNT8"
 \Text 57,3,"                             "
 0\->L
@@ -3024,7 +3024,7 @@ V=13\=>28\->Q
 C=\Mat Z[K,5-O\=>1\->L
 \Next 
 \If L
-\Then \Text 57,3,"tu connais deja cela.       "
+\Then \Text 57,3,"tu co\R n\R nais deja cela.       "
 .7\->X
 \Prog "T0"
 0\->P~Q
@@ -3055,7 +3055,7 @@ L\=>\Break
 0\->P~Q
 0\->\Mat Z[11,3
 \GotoD
-\Else \Text 57,3,"  ...tu n'as plus de place..."
+\Else \Text 57,3,"  ...tu \R n'as plus de place..."
 .7\->X
 \Prog "T0"
 \Text 51,81,"       "
@@ -3098,7 +3098,7 @@ Q=6\=>1\->Q
 C\->\Mat Z[Q,5-O
 57\->K
 64\->L
-\Text 57,3," et il apprend                "
+\Text 57,3," et il appre\R nd                "
 \Prog "TNT8"
 .7\->X
 \Prog "T0"
@@ -3158,7 +3158,7 @@ A>14\=>5
 A>19\=>6
 A>25\=>7
 \Ans\->\Mat Z[11,2
-\Text 10,1,"Experience:"
+\Text 10,1,"Experie\R nce:"
 \Mat Z[11,6\->E
 \Int 100\Ran#+2\Mat Z[7,4]+40\Mat Z[6,2]+40\Mat Z[6,3]+200-20\Mat Z[6,4\->A
 \Text 16,1,E
@@ -3168,7 +3168,7 @@ A>25\=>7
 \Text 22,27,E+A
 E+A\->\Mat Z[11,6
 0\->A
-\Text 10,80,"Recompense:"
+\Text 10,80,"Recompe\R nse:"
 \Not \Mat Z[8,4\=>\Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
 23=\Mat Z[12,6\=>5000\->A
 A+\Mat Z[10,4\->\Mat Z[10,4
@@ -3184,7 +3184,7 @@ A=5000\=>85\->B
 \Text 16,B,A
 \Text 35,1,"Objets trouves:"
 \If \Not S\ And \Not T
-\Then \Text 43,10,"aucun"
+\Then \Text 43,10,"aucu\R n"
 \Else 43\->K
 10\->L
 3\->O
@@ -3224,7 +3224,7 @@ T\->O
 99<\Mat Z[X,Y\=>99\->\Mat Z[X,Y
 \Next 
 \Next 
-\Text 35,83,"niveau:"
+\Text 35,83,"\R niveau:"
 \Text 35,114,\Mat Z[11,2
 \Text 41,80,"att"
 \Text 47,80,"def"

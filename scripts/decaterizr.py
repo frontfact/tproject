@@ -35,6 +35,9 @@ GreenToken = Token('Green ', 'Green ', 2, True)
 OrangeToken = Token('Orange ', 'Orange ', 2, True)
 YenToken = Token('@5C', '¥', 1, True)
 YToken = Token('Y', 'Y', 1, False)
+TextToken = Token('Text ', 'Text ', 2, True)
+nToken = Token('n', 'n', 1, False)
+nRecrToken = Token('R n', 'n', 2, True)
 
 
 def load_tokens(path):
@@ -217,13 +220,25 @@ class Program:
                 else:
                     self.tokens[i] = alt
     
-    def make_mono(self):
+    def make_mono(self, ctype: str):
         for i in range(len(self.tokens)-1, -1, -1):
             token = self.tokens[i]
-            if token==YenToken:
-                self.tokens[i] = YToken
             if token==GreenToken or token==OrangeToken:
                 del self.tokens[i]
+
+        Text_seen_since_last_linefeed = False
+        for i, token in enumerate(self.tokens):
+            # '¥' not rendered with `Text` on G35/G100, replace by 'Y'
+            if token == YenToken:
+                self.tokens[i] = YToken
+            if '100' in ctype:
+                if token == LineFeedToken:
+                    Text_seen_since_last_linefeed = False
+                if token == TextToken:
+                    Text_seen_since_last_linefeed = True
+                # regular 'n' is too wide on G100, use alternative 'n'
+                if (token == nToken) and Text_seen_since_last_linefeed:
+                    self.tokens[i] = nRecrToken
 
     def find_used_vars(self):
         operators = ['+', '-', '→', '⇒', '=', '≠', '≥', '≤', '>', '<', 'Not ', ' Or ', ' And ']
@@ -359,9 +374,9 @@ class CatFile(object):
             program.simplify()
         self.useless_tokens()
 
-    def make_mono(self, ctype):
+    def make_mono(self, ctype: str):
         for program in self.programs:
-            program.make_mono()
+            program.make_mono(ctype)
         # T0(65) = 300/s
         # T0(35+) = 833/s
         # T0(100+) = 190/s
