@@ -2245,7 +2245,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5571
+Capacity:5572
 File Name:TNT13
 Group Name:
 Password:
@@ -2291,7 +2291,7 @@ V=10\=>\Orange \Text 5,3,"ATLANTIS"
 \Green \Text 31,3,"\@24"
 \Green \Text 31,10,\Mat Z[10,4
 \Green \Text 38,3,"[MENU]"
-\Green \Text 45,3,"[F6]Monde"
+\Green \Text 45,3,"[F6] Monde"
 \Orange \Text 55,42,"(CHARGEMENT)"
 \Identity 1\->\Mat A
 \If V=4

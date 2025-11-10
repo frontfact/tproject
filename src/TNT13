@@ -35,7 +35,7 @@ Text 13,13,"𝐓N𝐓"
 Green Text 31,3,"$"
 Green Text 31,10,Mat Z[10,4
 Green Text 38,3,"[MENU]"
-Green Text 45,3,"[F6]Monde"
+Green Text 45,3,"[F6] Monde"
 Orange Text 55,42,"(CHARGEMENT)"
 Identity 1→Mat A
 If V=4
