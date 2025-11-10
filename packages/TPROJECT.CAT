@@ -3588,7 +3588,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:163
+Capacity:143
 File Name:TNT19
 Group Name:
 Password:
@@ -3612,7 +3612,6 @@ Option4:
 \Orange \Text 3,6,"   "
 \Orange \Text 3,6,\Mat Z[1,1
 0\->P~Q
-1>\Mat Z[6,1\=>1\->\Mat Z[6,1
 \Mat Z[1,1\->I
 \Mat Z[6,1\->J
 %End
