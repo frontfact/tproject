@@ -1025,9 +1025,9 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\Dim \List 6\->B
+\Dim \List \Ans\->B
 \For 1\->A \To B
-\List 6[A\->\r
+\List \Ans[A\->\r
 \If \r=0
 \Then \S-Gph1 \DrawOn
 \S-Gph2 \DrawOff
@@ -1930,7 +1930,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2739
+Capacity:2736
 File Name:TNT12
 Group Name:
 Password:
@@ -1999,7 +1999,7 @@ M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,4
 \F-Line 38,16,125,16
 \IfEnd
 41\->R
-{0,1}\->\List6
+{0,1}
 \Prog "TNT5"
 \Text 51,38,"Z combat u\R n ..."
 \Mat Z[11,2\->N
@@ -2352,7 +2352,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7444
+Capacity:7387
 File Name:TNT14
 Group Name:
 Password:
@@ -2521,49 +2521,49 @@ S=8\=>\Return
 \Mat Z[2,1]-O\->\Mat Z[2,1
 41\->R
 \If V=1
-\Then {8}\->\List6
+\Then {8}
 \Prog "TNT5"
 75\->R
-{0,2}\->\List6
+{0,2}
 \Prog "TNT5"
 1\->P
 6\->Q
 \IfEnd
 \If V=2
 \Then \Text 51,38,"defe\R nse +1            "
-{5,3}\->\List6
+{5,3}
 \Prog "TNT5"
 4\->P
 1\->Q
 \IfEnd
 \If V=3
 \Then \Text 51,38,"e\R n\R nemi def -1        "
-{8}\->\List6
+{8}
 \Prog "TNT5"
 65\->R
-{0,1}\->\List6
+{0,1}
 \Prog "TNT5"
 9\->P
 -1\->Q
 \IfEnd
 \If V=4
-\Then {8}\->\List6
+\Then {8}
 \Prog "TNT5"
 75\->R
-{0,1}\->\List6
+{0,1}
 \Prog "TNT5"
 .2\->X
 \Prog "T0"
-{5,3}\->\List6
+{5,3}
 \Prog "TNT5"
 1\->P
 10\->Q
 \IfEnd
 \If V=5
-\Then {8}\->\List6
+\Then {8}
 \Prog "TNT5"
 75\->R
-{0,2}\->\List6
+{0,2}
 \Prog "TNT5"
 .3\->X
 \Prog "T0"
@@ -2573,39 +2573,39 @@ S=8\=>\Return
 .2\->X
 \Prog "T0"
 41\->R
-{8}\->\List6
+{8}
 \Prog "TNT5"
 75\->R
-{0,2}\->\List6
+{0,2}
 \Prog "TNT5"
 1\->P
 15\->Q
 \IfEnd
 \If V=6
-\Then {5,2}\->\List6
+\Then {5,2}
 \Prog "TNT5"
-{8}\->\List6
+{8}
 \Prog "TNT5"
 85\->R
-{0,2}\->\List6
+{0,2}
 \Prog "TNT5"
 1\->P
 24\->Q
 \Int (\Mat Z[1,1]-6-6\Ran#\->\Mat Z[1,1
 \IfEnd
 \If V=7
-\Then {8}\->\List6
+\Then {8}
 \Prog "TNT5"
 75\->R
-{0,2}\->\List6
+{0,2}
 \Prog "TNT5"
-{6,3,7,2,6,3}\->\List6
+{6,3,7,2,6,3}
 \Prog "TNT5"
 1\->P
 26\->Q
 \IfEnd
 \If V=8
-\Then {5,4}\->\List6
+\Then {5,4}
 \Prog "TNT5"
 \For 1\->A \To 12
 \F-Line 108,37,\Int 20\Ran#+98,\Int 20\Ran#+27

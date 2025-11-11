@@ -1,6 +1,6 @@
-Dim List 6→B
+Dim List Ans→B
 For 1→A To B
-  List 6[A→r
+  List Ans[A→r
   If r=0
   Then 
     S-Gph1 DrawOn

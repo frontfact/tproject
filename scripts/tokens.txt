@@ -107,8 +107,6 @@ List1;List1;2
 List2;List2;2
 List3;List3;2
 List4;List4;2
-List5;List5;2
-List6;List6;2
 Horizontal ;Horizontal ;2
 Vertical ;Vertical ;2
 #G100

@@ -173,10 +173,10 @@ Then
   41→R
   If V=1
   Then 
-    {8}→List6
+    {8}
     Prog "TNT5"
     75→R
-    {0,2}→List6
+    {0,2}
     Prog "TNT5"
     1→P
     6→Q
@@ -184,7 +184,7 @@ Then
   If V=2
   Then 
     Text 51,38,"defense +1            "
-    {5,3}→List6
+    {5,3}
     Prog "TNT5"
     4→P
     1→Q
@@ -192,34 +192,34 @@ Then
   If V=3
   Then 
     Text 51,38,"ennemi def -1        "
-    {8}→List6
+    {8}
     Prog "TNT5"
     65→R
-    {0,1}→List6
+    {0,1}
     Prog "TNT5"
     9→P
     -1→Q
   IfEnd
   If V=4
   Then 
-    {8}→List6
+    {8}
     Prog "TNT5"
     75→R
-    {0,1}→List6
+    {0,1}
     Prog "TNT5"
     .2→X
     Prog "T0"
-    {5,3}→List6
+    {5,3}
     Prog "TNT5"
     1→P
     10→Q
   IfEnd
   If V=5
   Then 
-    {8}→List6
+    {8}
     Prog "TNT5"
     75→R
-    {0,2}→List6
+    {0,2}
     Prog "TNT5"
     .3→X
     Prog "T0"
@@ -229,22 +229,22 @@ Then
     .2→X
     Prog "T0"
     41→R
-    {8}→List6
+    {8}
     Prog "TNT5"
     75→R
-    {0,2}→List6
+    {0,2}
     Prog "TNT5"
     1→P
     15→Q
   IfEnd
   If V=6
   Then 
-    {5,2}→List6
+    {5,2}
     Prog "TNT5"
-    {8}→List6
+    {8}
     Prog "TNT5"
     85→R
-    {0,2}→List6
+    {0,2}
     Prog "TNT5"
     1→P
     24→Q
@@ -252,19 +252,19 @@ Then
   IfEnd
   If V=7
   Then 
-    {8}→List6
+    {8}
     Prog "TNT5"
     75→R
-    {0,2}→List6
+    {0,2}
     Prog "TNT5"
-    {6,3,7,2,6,3}→List6
+    {6,3,7,2,6,3}
     Prog "TNT5"
     1→P
     26→Q
   IfEnd
   If V=8
   Then 
-    {5,4}→List6
+    {5,4}
     Prog "TNT5"
     For 1→A To 12
       Orange F-Line 108,37,Int 20Ran#+98,Int 20Ran#+27
