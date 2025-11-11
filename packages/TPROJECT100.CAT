@@ -1082,7 +1082,7 @@ U<31\=>\Text U-1,R+14,"      "
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3153
+Capacity:3149
 File Name:TNT6
 Group Name:
 Password:
@@ -1091,7 +1091,6 @@ Option2:
 Option3:
 Option4:
 %Data Record
-0\->N
 \StoPict 1
 \Mat Z[1,1\->I
 \Mat Z[6,1\->J
@@ -3108,7 +3107,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3664
+Capacity:3660
 File Name:TNT15
 Group Name:
 Password:
@@ -3338,7 +3337,6 @@ C+.6\->C
 \Lbl R
 \Prog "TNT12"
 117\->R
-0\->N
 \Prog "TNT20"
 \StoPict 1
 117\->R

@@ -282,7 +282,6 @@ Then
   Lbl R
   Prog "TNT12"
   117→R
-  0→N
   Prog "TNT20"
   StoPict 1
   117→R
