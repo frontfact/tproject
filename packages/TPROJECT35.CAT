@@ -1156,7 +1156,7 @@ G\->H
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3076
+Capacity:3144
 File Name:TNT6
 Group Name:
 Password:
@@ -1463,6 +1463,15 @@ J\<>\Mat Z[6,1\=>\Text 5,C,\Mat Z[6,1]-J
 \Prog "T0"
 \IfEnd
 \Prog "TNT19"
+0\->W
+0\->P~Q
+\Cls
+\RclPict 1
+\Text 3,6,"   "
+\Text 3,6,\Mat Z[1,1
+0\->P~Q
+\Mat Z[1,1\->I
+\Mat Z[6,1\->J
 %End
 %Header Record
 Format:TXT
@@ -2419,7 +2428,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7712
+Capacity:7702
 File Name:TNT14
 Group Name:
 Password:
@@ -2449,7 +2458,7 @@ P=9\=>Q+\Mat Z[6,3\->\Mat Z[6,3
 \If I\<>\Mat Z[1,1]\ Or J\<>\Mat Z[6,1
 \Then .5\->X
 \Prog "T0"
-1>\Mat Z[1,1\=>\Prog "TNT19"
+\Prog "TNT19"
 1>\Mat Z[6,1\=>\Goto2
 \IfEnd
 0\->P~Q
@@ -3588,7 +3597,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:137
+Capacity:69
 File Name:TNT19
 Group Name:
 Password:
@@ -3605,15 +3614,6 @@ Option4:
 \Text 30,41,"GAME OVER..."
 \Stop
 \IfEnd
-0\->W
-0\->P~Q
-\Cls
-\RclPict 1
-\Text 3,6,"   "
-\Text 3,6,\Mat Z[1,1
-0\->P~Q
-\Mat Z[1,1\->I
-\Mat Z[6,1\->J
 %End
 %Header Record
 Format:TXT

@@ -329,3 +329,12 @@ Then
   Prog "T0"
 IfEnd
 Prog "TNT19"
+0→W
+0→P~Q
+Cls
+RclPict 1
+Orange Text 3,6,"   "
+Orange Text 3,6,Mat Z[1,1
+0→P~Q
+Mat Z[1,1→I
+Mat Z[6,1→J
