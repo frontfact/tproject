@@ -1016,7 +1016,7 @@ Z\->\Mat Z[12,6
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2250
+Capacity:2483
 File Name:TNT5
 Group Name:
 Password:
@@ -1026,35 +1026,58 @@ Option3:
 Option4:
 %Data Record
 \If N=\Pi
-\Then \If C\<>\Pi
+\Then \Dim \List 6\->B
+\For 1\->A \To B
+\List 6[A\->\r
+\If \r=0
 \Then \S-Gph1 \DrawOn
 \S-Gph2 \DrawOff
 R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9,R+6,R+5,R+6,R+7,R+6,R+5,R+6,R+5,R+6,R+10,R+11,R+12,R+15,R+13,R+12,R+11,R+6,R+8,R+6,R+8,R+5,R+5,R+4,R+4,R+8,R+8,R+13,R+16,R+13,R+8,R+10,R+11,R+14,R+16,R+12,R+9}\->\List1
 \PlotOn R+5,50
 \DrawStat
 \IfEnd
-\If W=1
+\If \r=1
 \Then \F-Line R+15,36,R+26,53
 \F-Line R+16,35,R+26,53
 \F-Line R+16,40,R+19,37
 \IfEnd
-\If W=2
+\If \r=2
 \Then \F-Line R+14,37,R+34,39
 \F-Line R+14,36,R+29,38
 \F-Line R+18,34,R+17,39
 \IfEnd
-\If W=3
+\If \r=3
 \Then \F-Line R+14,37,R+33,34
 \F-Line R+14,36,R+29,34
 \F-Line R+18,38,R+17,34
 \IfEnd
-\If W=4
+\If \r=4
 \Then \F-Line R+18,39,R+18,35
 \For 60\->A \To 110 \Step 3
 \F-Line A-3,38,A,37
 \F-Line A-3,36,A,37
 \Next 
 \IfEnd
+\If \r=5
+\Then \Text 11,R+23," "
+\Text 17,R+20," "
+\Text 22,R+16," "
+\Text 24,R+16," "
+\IfEnd
+\If \r=6
+\Then \Text 25,R+17,"     "
+\IfEnd
+\If \r=7
+\Then \Text 26,R+17," "
+\Text 28,R+21,"    "
+\IfEnd
+\If \r=8
+\Then \For 12\->U \To 42 \Step 6
+\Text U,R,"     "
+U<31\=>\Text U-1,R+14,"      "
+\Next 
+\IfEnd
+\Next 
 \Return
 \IfEnd
 \S-Gph1 \DrawOff
@@ -2004,7 +2027,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2730
+Capacity:2731
 File Name:TNT12
 Group Name:
 Password:
@@ -2072,10 +2095,9 @@ M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,4
 \Else \Graph (X,Y)=(37+T,16+\Ran#
 \F-Line 38,16,125,16
 \IfEnd
-1\->W
 \Pi\->N
 41\->R
-0\->C
+{0,1}\->\List6
 \Prog "TNT5"
 \Text 51,38,"Z combat un ..."
 \Mat Z[11,2\->N
@@ -2428,7 +2450,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7702
+Capacity:7423
 File Name:TNT14
 Group Name:
 Password:
@@ -2595,142 +2617,100 @@ S=8\=>\Return
 \IfEnd
 \LpWhile \theta\<>31
 \Mat Z[2,1]-O\->\Mat Z[2,1
-\If V=8
-\Then \For 11\->A \To 26 \Step 6
-\Text A,50,"     "
-\Next 
-4\->W
-\Pi\->C
 \Pi\->N
 41\->R
-\Prog "TNT5"
-\For 1\->A \To 12
-\F-Line 108,37,\Int 20\Ran#+98,\Int 20\Ran#+27
-\Next 
-1\->P
-32\->Q
-\IfEnd
-\If V=6
-\Then \For 11\->A \To 26 \Step 6
-\Text A,50,"     "
-\Next 
-2\->W
-\Pi\->C
-\Pi\->N
-41\->R
-\Prog "TNT5"
-\IfEnd
 \If V=1
-\Then 1\->P
+\Then {8}\->\List6
+\Prog "TNT5"
+75\->R
+{0,2}\->\List6
+\Prog "TNT5"
+1\->P
 6\->Q
 \IfEnd
 \If V=2
-\Then 4\->P
+\Then \Text 51,38,"defense +1            "
+{5,3}\->\List6
+\Prog "TNT5"
+4\->P
 1\->Q
 \IfEnd
 \If V=3
-\Then 9\->P
+\Then \Text 51,38,"ennemi def -1        "
+{8}\->\List6
+\Prog "TNT5"
+65\->R
+{0,1}\->\List6
+\Prog "TNT5"
+9\->P
 -1\->Q
 \IfEnd
 \If V=4
-\Then 1\->P
+\Then {8}\->\List6
+\Prog "TNT5"
+75\->R
+{0,1}\->\List6
+\Prog "TNT5"
+.2\->X
+\Prog "T0"
+{5,3}\->\List6
+\Prog "TNT5"
+1\->P
 10\->Q
 \IfEnd
 \If V=5
-\Then 1\->P
-15\->Q
-\IfEnd
-\If V=7
-\Then 1\->P
-26\->Q
-\IfEnd
-\If V\<>2\ And V\<>8
-\Then \For 12\->C \To 42 \Step 6
-\Text C,40,"        "
-C<31\=>\Text C-1,50,"       "
-\Next 
-\IfEnd
-\If V=1\ Or V=5
-\Then 2\->W
-75\->R
-\Pi\->N
+\Then {8}\->\List6
 \Prog "TNT5"
-\If V=5
-\Then .3\->X
+75\->R
+{0,2}\->\List6
+\Prog "TNT5"
+.3\->X
 \Prog "T0"
 \Cls
 \RclPict 1
 \Plot 0,0
 .2\->X
 \Prog "T0"
-\For 12\->C \To 42 \Step 6
-\Text C,40,"        "
-C<31\=>\Text C-1,50,"       "
-\Next 
-2\->W
-\Pi\->N
+41\->R
+{8}\->\List6
+\Prog "TNT5"
 75\->R
+{0,2}\->\List6
 \Prog "TNT5"
-\IfEnd
-\IfEnd
-\If V=4
-\Then 1\->W
-\Pi\->N
-75\->R
-\Prog "TNT5"
-.2\->X
-\Prog "T0"
-\For 11\->W \To 26 \Step 6
-\Text W,82,"     "
-\Next 
-3\->W
-\Pi\->C
-\Pi\->N
-\Prog "TNT5"
+1\->P
+15\->Q
 \IfEnd
 \If V=6
-\Then 85\->R
-2\->W
-\Pi\->N
-0\->C
+\Then {5,2}\->\List6
+\Prog "TNT5"
+{8}\->\List6
+\Prog "TNT5"
+85\->R
+{0,2}\->\List6
 \Prog "TNT5"
 1\->P
 24\->Q
 \Int (\Mat Z[1,1]-6-6\Ran#\->\Mat Z[1,1
 \IfEnd
 \If V=7
-\Then 2\->W
-\Pi\->N
+\Then {8}\->\List6
+\Prog "TNT5"
 75\->R
+{0,2}\->\List6
 \Prog "TNT5"
-\For 1\->B \To 3
-\For 23\->A \To 33 \Step 6
-\Text A,82,"       "
-\Next 
-\Isz W
-W=4\=>2\->W
-\Pi\->C
-\Pi\->N
+{6,3,7,2,6,3}\->\List6
 \Prog "TNT5"
-\Next 
+1\->P
+26\->Q
 \IfEnd
-\If V=2
-\Then \Text 51,38,"defense +1            "
-\For 11\->A \To 26 \Step 6
-\Text A,50,"     "
+\If V=8
+\Then {5,4}\->\List6
+\Prog "TNT5"
+\For 1\->A \To 12
+\F-Line 108,37,\Int 20\Ran#+98,\Int 20\Ran#+27
 \Next 
-3\->W
-\Pi\->C
-\Pi\->N
-41\->R
-\Prog "TNT5"
-\IfEnd
-\If V=3
-\Then \Text 51,38,"ennemi def -1        "
-1\->W
-\Pi\->N
-65\->R
-\Prog "TNT5"
+1\->P
+32\->Q
 \IfEnd
 \Mat Z[1,1\->I
 \Mat Z[6,1\->J
@@ -3223,7 +3203,6 @@ T\->O
 \Text 53,94,\Mat Z[1,1
 \Text 53,112,\Mat Z[1,2\Disp\ClrList
 \ClrText
-\Return
 %End
 %Header Record
 Format:TXT

@@ -59,10 +59,9 @@ Else
   Orange Graph (X,Y)=(37+T,16+Ran#
   Orange F-Line 38,16,125,16
 IfEnd
-1→W
 π→N
 41→R
-0→C
+{0,1}→List6
 Prog "TNT5"
 Text 51,38,"Z combat un ..."
 Mat Z[11,2→N

@@ -1,39 +1,66 @@
 If N=π
 Then 
-  If C≠π
-  Then 
-    S-Gph1 DrawOn
-    S-Gph2 DrawOff
-    R+2≠List 1[8⇒{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9,R+6,R+5,R+6,R+7,R+6,R+5,R+6,R+5,R+6,R+10,R+11,R+12,R+15,R+13,R+12,R+11,R+6,R+8,R+6,R+8,R+5,R+5,R+4,R+4,R+8,R+8,R+13,R+16,R+13,R+8,R+10,R+11,R+14,R+16,R+12,R+9}→List1
-    PlotOn R+5,50
-    DrawStat
-  IfEnd
-  If W=1
-  Then 
-    Green F-Line R+15,36,R+26,53
-    Green F-Line R+16,35,R+26,53
-    Green F-Line R+16,40,R+19,37
-  IfEnd
-  If W=2
-  Then 
-    Green F-Line R+14,37,R+34,39
-    Green F-Line R+14,36,R+29,38
-    Green F-Line R+18,34,R+17,39
-  IfEnd
-  If W=3
-  Then 
-    Green F-Line R+14,37,R+33,34
-    Green F-Line R+14,36,R+29,34
-    Green F-Line R+18,38,R+17,34
-  IfEnd
-  If W=4
-  Then 
-    Green F-Line R+18,39,R+18,35
-    For 60→A To 110 Step 3
-      Green F-Line A-3,38,A,37
-      Green F-Line A-3,36,A,37
-    Next
-  IfEnd
+  Dim List 6→B
+  For 1→A To B
+    List 6[A→r
+    If r=0
+    Then 
+      S-Gph1 DrawOn
+      S-Gph2 DrawOff
+      R+2≠List 1[8⇒{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9,R+6,R+5,R+6,R+7,R+6,R+5,R+6,R+5,R+6,R+10,R+11,R+12,R+15,R+13,R+12,R+11,R+6,R+8,R+6,R+8,R+5,R+5,R+4,R+4,R+8,R+8,R+13,R+16,R+13,R+8,R+10,R+11,R+14,R+16,R+12,R+9}→List1
+      PlotOn R+5,50
+      DrawStat
+    IfEnd
+    If r=1
+    Then 
+      Green F-Line R+15,36,R+26,53
+      Green F-Line R+16,35,R+26,53
+      Green F-Line R+16,40,R+19,37
+    IfEnd
+    If r=2
+    Then 
+      Green F-Line R+14,37,R+34,39
+      Green F-Line R+14,36,R+29,38
+      Green F-Line R+18,34,R+17,39
+    IfEnd
+    If r=3
+    Then 
+      Green F-Line R+14,37,R+33,34
+      Green F-Line R+14,36,R+29,34
+      Green F-Line R+18,38,R+17,34
+    IfEnd
+    If r=4
+    Then 
+      Green F-Line R+18,39,R+18,35
+      For 60→A To 110 Step 3
+        Green F-Line A-3,38,A,37
+        Green F-Line A-3,36,A,37
+      Next
+    IfEnd
+    If r=5
+    Then 
+      Green Text 11,R+23," "
+      Green Text 17,R+20," "
+      Green Text 22,R+16," "
+      Green Text 24,R+16," "
+    IfEnd
+    If r=6
+    Then 
+      Green Text 25,R+17,"     "
+    IfEnd
+    If r=7
+    Then 
+      Green Text 26,R+17," "
+      Green Text 28,R+21,"    "
+    IfEnd
+    If r=8
+    Then 
+      For 12→U To 42 Step 6
+        Text U,R,"     "
+        U<31⇒Green Text U-1,R+14,"      "
+      Next
+    IfEnd
+  Next
   Return
 IfEnd
 S-Gph1 DrawOff
