@@ -40,7 +40,7 @@ Then
     0→C
     If M≠7
     Then 
-      Prog "TNT5"
+      Prog "TNT20"
       If A=5
       Then 
         .3→X
@@ -53,7 +53,7 @@ Then
           Text Q,71,"              "
         Next
         Text 43,71,"              "
-        Prog "TNT5"
+        Prog "TNT20"
         6→P
         15→Q
       IfEnd
@@ -93,7 +93,7 @@ Then
     Text 51,38,"attak→Xmeta           "
     115→R
     π→C
-    M≠7⇒Prog "TNT5"
+    M≠7⇒Prog "TNT20"
     6→P
     30→Q
   IfEnd

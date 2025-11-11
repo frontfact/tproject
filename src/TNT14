@@ -170,7 +170,6 @@ Then
     IfEnd
   LpWhile θ≠31
   Mat Z[2,1]-O→Mat Z[2,1
-  π→N
   41→R
   If V=1
   Then 
@@ -760,7 +759,6 @@ Else
   10→L
   T→C
   Prog "TNT8"
-  π→N
   S→O
   Prog "TNT7"
   T→O

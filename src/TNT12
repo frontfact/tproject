@@ -59,7 +59,6 @@ Else
   Orange Graph (X,Y)=(37+T,16+Ran#
   Orange F-Line 38,16,125,16
 IfEnd
-π→N
 41→R
 {0,1}→List6
 Prog "TNT5"
@@ -216,7 +215,7 @@ For 1→B To 3
   Ans→Mat Z[8,B
 Next
 115→R
-M≠7⇒Prog "TNT5"
+M≠7⇒Prog "TNT20"
 If S=43 Or S=44 Or S=32 Or S=33 Or S=8 Or S=10.5 Or S=99 Or S=28.5
 Then 
   S=44 Or S=33 Or S=8⇒Text 51,75,"Enzo   "

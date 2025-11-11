@@ -1016,7 +1016,7 @@ Z\->\Mat Z[12,6
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2483
+Capacity:774
 File Name:TNT5
 Group Name:
 Password:
@@ -1025,8 +1025,7 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\If N=\Pi
-\Then \Dim \List 6\->B
+\Dim \List 6\->B
 \For 1\->A \To B
 \List 6[A\->\r
 \If \r=0
@@ -1078,108 +1077,12 @@ U<31\=>\Text U-1,R+14,"      "
 \Next 
 \IfEnd
 \Next 
-\Return
-\IfEnd
-\S-Gph1 \DrawOff
-\S-Gph2 \DrawOn
-\If M=1
-\Then \If C\<>\Pi
-\Then R-12\<>\List 3[8\=>{125,R+5,R+5,R-15,R-20,R-12,R-7,R-12,R-17,R-13,125}\->\List3
-\DrawStat
-\F-Line R-16,44,R-13,48
-\F-Line R-13,48,R-12,44
-\F-Line R-12,44,R-16,44
-\Else \F-Line 105,35,60,35
-\F-Line 105,30,60,30
-\F-Line 60,35,50,38
-\F-Line 50,38,55,32
-\F-Line 55,32,50,27
-\F-Line 50,27,60,30
-\IfEnd
-\IfEnd
-\If M=2
-\Then \If C\<>\Pi
-\Then R-16\<>\List 3[8\=>{R-5,R-3,R-9,R-10,R-11,R-17,R-14,R-16,R-14,R-12,R-11,R-12,R-11,R-12,R-9,R-8,R-9,R-5,R-5,R-6,R-5,R-5}\->\List3
-\DrawStat
-\Else \For 105\->C \To 50 \Step -7-\Int 2\Ran#
-\F-Line C,33,C-5,36
-\F-Line C-4,33,C-9,30
-\Next 
-\IfEnd
-\IfEnd
-\If M=3
-\Then \If C\<>\Pi
-\Then R-21\<>\List 3[8\=>{R+9,R+1,R+4,R-8,R-4,R-9,R-18,R-21,R-22,R-24,R-17,R-16,R-17,R-17,R-16,R-18,R-16,R-16,R-8,R-8,R-9,R-15,R-9,R-8,R-6,R-5,R-8,R-5,R-6,R-5,R-2,R-1,R-2,R-5,R-2,R,R,R+6}\->\List3
-\DrawStat
-\PlotOn R-21,38
-\F-Line R-21,37,R-20,37
-\Else 3\->D
-\For 88\->C \To 40 \Step -D
-\Isz D
-\F-Line 90,42,C,35
-\F-Line C,35,90,27
-\Next 
-\IfEnd
-\IfEnd
-\If M=4
-\Then \If C\<>\Pi
-\Then R\<>\List 3[8\=>{108,R-6,R+1,R+3,R+3,R,R+2,R,R-1,R-3,R-6,R-3,R,R-2,R-5,R-11,R-14,R-16,R-15,R-16,R-14,R-12,R-13,R-13,R-12,R-9,R-9,R-11,R-12,R-11,R-13,R-15,R-14,R-15,R-15,R-11,R-8,R-7,R-8,108}\->\List3
-\Text 16,R-11,"."
-\DrawStat
-\Else 0\->D
-\For 100\->C \To 50 \Step -6
-\F-Line C,38,C-7,38
-\F-Line C,38+D,C-7,40+D
-\F-Line C,38-D,C-7,36-D
-\F-Line C-7,40+D,C-7,36-D
-D+2\->D
-\Next 
-\IfEnd
-\IfEnd
-\If M=5
-\Then \If C\<>\Pi
-\Then R-21\<>\List 3[8\=>{125,R,R-11,R-12,R-18,R-21,R-23,R-21,R-18,R-20,R-20,R-19,R-20,R-15,R-10,R-9,R-12,R-7,R-6,R-4,125,R-4}\->\List3
-\DrawStat
-\F-Line R-17,24,R-16,26
-\Else \For 92\->A \To 67 \Step -1
-\PlotOn A,\Int (-.84A+109.28)
-\Next 
-\For 1\->B \To 15
-\PlotChg 66+3\Ran#,52+3\Ran#
-\Next 
-\For 60\->A \To 20 \Step -4+2\Ran#
-\F-Line 67,53,45+2\Ran#,A
-\Next 
-\IfEnd
-\IfEnd
-\If M=6
-\Then \If C\<>\Pi
-\Then R-7\<>\List 3[8\=>{125,R+7,R+4,R,R-3,R-6,R-6,R-7,R-2,R-2,R-3,R-5,R-8,R-9,R-14,R-17,R-17,R-18,R-16,R-18,R-21,R-21,R-19,R-21,R-19,R-14,R-14,R-16,R-17,R-16,R-12,R-11,R-9,R-13,R-13,R-10,R-7,R+2,R+5,R+9,125}\->\List3
-\DrawStat
-\Else 0\->G~H
-\For 100\->C \To 55 \Step -5
-\Int 5\Ran#-2\->G
-C=55\=>0\->G
-\F-Line C,40+H,C-5,40+G
-\F-Line C,41+H,C-5,41+G
-G\->H
-\Next 
-\F-Line 50,42,48,42
-\F-Line 50,39,48,39
-\IfEnd
-\IfEnd
-\If W=7
-\Then \For 1\->W \To 20
-\F-Line 52,42,24\Ran#+40,24\Ran#+30
-\Next 
-\IfEnd
-0\->C
 %End
 %Header Record
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3150
+Capacity:3153
 File Name:TNT6
 Group Name:
 Password:
@@ -1223,7 +1126,7 @@ A=6\=>\Text 51,64,"charge"
 A=7\=>\Text 51,64,"furie"
 0\->C
 \If M\<>7
-\Then \Prog "TNT5"
+\Then \Prog "TNT20"
 \If A=5
 \Then .3\->X
 \Prog "T0"
@@ -1235,7 +1138,7 @@ A=7\=>\Text 51,64,"furie"
 \Text Q,71,"              "
 \Next 
 \Text 43,71,"              "
-\Prog "TNT5"
+\Prog "TNT20"
 6\->P
 15\->Q
 \IfEnd
@@ -1269,7 +1172,7 @@ A=7\=>\Text 51,64,"furie"
 \Then \Text 51,38,"attak\->Xmeta           "
 115\->R
 \Pi\->C
-M\<>7\=>\Prog "TNT5"
+M\<>7\=>\Prog "TNT20"
 6\->P
 30\->Q
 \IfEnd
@@ -2027,7 +1930,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2742
+Capacity:2739
 File Name:TNT12
 Group Name:
 Password:
@@ -2095,7 +1998,6 @@ M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,4
 \Else \Graph (X,Y)=(37+T,16+\Ran#
 \F-Line 38,16,125,16
 \IfEnd
-\Pi\->N
 41\->R
 {0,1}\->\List6
 \Prog "TNT5"
@@ -2235,7 +2137,7 @@ S\=>\Ans+1
 \Ans\->\Mat Z[8,B
 \Next 
 115\->R
-M\<>7\=>\Prog "TNT5"
+M\<>7\=>\Prog "TNT20"
 \If S=43\ Or S=44\ Or S=32\ Or S=33\ Or S=8\ Or S=10.5\ Or S=99\ Or S=28.5
 \Then S=44\ Or S=33\ Or S=8\=>\Text 51,75,"E\R nzo   "
 S=32\ Or S=43\=>\Text 51,75,"Redox  "
@@ -2450,7 +2352,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7452
+Capacity:7444
 File Name:TNT14
 Group Name:
 Password:
@@ -2617,7 +2519,6 @@ S=8\=>\Return
 \IfEnd
 \LpWhile \theta\<>31
 \Mat Z[2,1]-O\->\Mat Z[2,1
-\Pi\->N
 41\->R
 \If V=1
 \Then {8}\->\List6
@@ -3162,7 +3063,6 @@ S\->C
 10\->L
 T\->C
 \Prog "TNT8"
-\Pi\->N
 S\->O
 \Prog "TNT7"
 T\->O
@@ -3208,7 +3108,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3662
+Capacity:3664
 File Name:TNT15
 Group Name:
 Password:
@@ -3439,12 +3339,12 @@ C+.6\->C
 \Prog "TNT12"
 117\->R
 0\->N
-\Prog "TNT5"
+\Prog "TNT20"
 \StoPict 1
 117\->R
 \ViewWindow 127,-1,0,63,1,0
 \RclPict 1
-\Prog "TNT5"
+\Prog "TNT20"
 \Text 30,51,"THE END"
 \Stop
 %End
@@ -3593,6 +3493,114 @@ Option4:
 \Text 30,41,"GAME OVER..."
 \Stop
 \IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1697
+File Name:TNT20
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\S-Gph1 \DrawOff
+\S-Gph2 \DrawOn
+\If M=1
+\Then \If C\<>\Pi
+\Then R-12\<>\List 3[8\=>{125,R+5,R+5,R-15,R-20,R-12,R-7,R-12,R-17,R-13,125}\->\List3
+\DrawStat
+\F-Line R-16,44,R-13,48
+\F-Line R-13,48,R-12,44
+\F-Line R-12,44,R-16,44
+\Else \F-Line 105,35,60,35
+\F-Line 105,30,60,30
+\F-Line 60,35,50,38
+\F-Line 50,38,55,32
+\F-Line 55,32,50,27
+\F-Line 50,27,60,30
+\IfEnd
+\IfEnd
+\If M=2
+\Then \If C\<>\Pi
+\Then R-16\<>\List 3[8\=>{R-5,R-3,R-9,R-10,R-11,R-17,R-14,R-16,R-14,R-12,R-11,R-12,R-11,R-12,R-9,R-8,R-9,R-5,R-5,R-6,R-5,R-5}\->\List3
+\DrawStat
+\Else \For 105\->C \To 50 \Step -7-\Int 2\Ran#
+\F-Line C,33,C-5,36
+\F-Line C-4,33,C-9,30
+\Next 
+\IfEnd
+\IfEnd
+\If M=3
+\Then \If C\<>\Pi
+\Then R-21\<>\List 3[8\=>{R+9,R+1,R+4,R-8,R-4,R-9,R-18,R-21,R-22,R-24,R-17,R-16,R-17,R-17,R-16,R-18,R-16,R-16,R-8,R-8,R-9,R-15,R-9,R-8,R-6,R-5,R-8,R-5,R-6,R-5,R-2,R-1,R-2,R-5,R-2,R,R,R+6}\->\List3
+\DrawStat
+\PlotOn R-21,38
+\F-Line R-21,37,R-20,37
+\Else 3\->D
+\For 88\->C \To 40 \Step -D
+\Isz D
+\F-Line 90,42,C,35
+\F-Line C,35,90,27
+\Next 
+\IfEnd
+\IfEnd
+\If M=4
+\Then \If C\<>\Pi
+\Then R\<>\List 3[8\=>{108,R-6,R+1,R+3,R+3,R,R+2,R,R-1,R-3,R-6,R-3,R,R-2,R-5,R-11,R-14,R-16,R-15,R-16,R-14,R-12,R-13,R-13,R-12,R-9,R-9,R-11,R-12,R-11,R-13,R-15,R-14,R-15,R-15,R-11,R-8,R-7,R-8,108}\->\List3
+\Text 16,R-11,"."
+\DrawStat
+\Else 0\->D
+\For 100\->C \To 50 \Step -6
+\F-Line C,38,C-7,38
+\F-Line C,38+D,C-7,40+D
+\F-Line C,38-D,C-7,36-D
+\F-Line C-7,40+D,C-7,36-D
+D+2\->D
+\Next 
+\IfEnd
+\IfEnd
+\If M=5
+\Then \If C\<>\Pi
+\Then R-21\<>\List 3[8\=>{125,R,R-11,R-12,R-18,R-21,R-23,R-21,R-18,R-20,R-20,R-19,R-20,R-15,R-10,R-9,R-12,R-7,R-6,R-4,125,R-4}\->\List3
+\DrawStat
+\F-Line R-17,24,R-16,26
+\Else \For 92\->A \To 67 \Step -1
+\PlotOn A,\Int (-.84A+109.28)
+\Next 
+\For 1\->B \To 15
+\PlotChg 66+3\Ran#,52+3\Ran#
+\Next 
+\For 60\->A \To 20 \Step -4+2\Ran#
+\F-Line 67,53,45+2\Ran#,A
+\Next 
+\IfEnd
+\IfEnd
+\If M=6
+\Then \If C\<>\Pi
+\Then R-7\<>\List 3[8\=>{125,R+7,R+4,R,R-3,R-6,R-6,R-7,R-2,R-2,R-3,R-5,R-8,R-9,R-14,R-17,R-17,R-18,R-16,R-18,R-21,R-21,R-19,R-21,R-19,R-14,R-14,R-16,R-17,R-16,R-12,R-11,R-9,R-13,R-13,R-10,R-7,R+2,R+5,R+9,125}\->\List3
+\DrawStat
+\Else 0\->G~H
+\For 100\->C \To 55 \Step -5
+\Int 5\Ran#-2\->G
+C=55\=>0\->G
+\F-Line C,40+H,C-5,40+G
+\F-Line C,41+H,C-5,41+G
+G\->H
+\Next 
+\F-Line 50,42,48,42
+\F-Line 50,39,48,39
+\IfEnd
+\IfEnd
+\If W=7
+\Then \For 1\->W \To 20
+\F-Line 52,42,24\Ran#+40,24\Ran#+30
+\Next 
+\IfEnd
+0\->C
 %End
 %Header Record
 Format:TXT
