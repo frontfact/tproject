@@ -1082,7 +1082,7 @@ U<31\=>\Text U-1,R+14,"      "
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3149
+Capacity:2750
 File Name:TNT6
 Group Name:
 Password:
@@ -1095,10 +1095,9 @@ Option4:
 \Mat Z[1,1\->I
 \Mat Z[6,1\->J
 \Int 2\Ran#
-3>\Mat Z[6,3\=>\Not \Int (\Mat Z[6,3]\Ran#\=>5\Pi\->X
 \If \Ans
 \Then \Mat Z[7,\Int 3\Ran#+1\->A
-X=5\Pi\=>2\->A
+3>\Mat Z[6,3\=>\Not \Int (\Mat Z[6,3]\Ran#\=>2\->A
 \If A\<>8
 \Then 1\->\Mat Z[11,3
 A\->\Mat Z[11,4
@@ -1117,12 +1116,11 @@ A\->\Mat Z[11,4
 A=6\=>62\->R
 A=7\=>7\->W
 \Text 51,38,"attak\->               "
-A=1\=>\Text 51,64,"coup"
-A=3\=>\Text 51,64,"fei\R nte"
-A=4\=>\Text 51,64,"tra\R nch"
-A=5\=>\Text 51,64,"double"
-A=6\=>\Text 51,64,"charge"
-A=7\=>\Text 51,64,"furie"
+A\->C
+1\->O
+51\->K
+64\->L
+\Prog "TNT8"
 0\->C
 \If M\<>7
 \Then \Prog "TNT20"
@@ -1148,8 +1146,7 @@ A=7\=>\Text 51,64,"furie"
 6\->Q
 \IfEnd
 \If A=2
-\Then \Text 51,38,"attak\->garde          "
-\For 85\->A \To 88
+\Then \For 85\->A \To 88
 \F-Line A,23,A,55
 \Next 
 9\->P
@@ -1168,8 +1165,7 @@ A=7\=>\Text 51,64,"furie"
 26\->Q
 \IfEnd
 \If A=8
-\Then \Text 51,38,"attak\->Xmeta           "
-115\->R
+\Then 115\->R
 \Pi\->C
 M\<>7\=>\Prog "TNT20"
 6\->P
@@ -1184,16 +1180,18 @@ M\<>7\=>\Prog "TNT20"
 2\->\Mat Z[11,3
 A\->\Mat Z[11,4
 \Text 51,38,"pouvoir\->             "
+A\->C
+2\->O
+51\->K
+73\->L
+\Prog "TNT8"
 \If A=1\ Or A=2
-\Then A=1\=>\Text 51,73,"acier"
-A=2\=>\Text 51,73,"force"
-\Circle 110,37,10
+\Then \Circle 110,37,10
 10-A\->P
 1\->Q
 \IfEnd
 \If A=4
-\Then \Text 51,73,"eclair"
-\F-Line 105,50,105,61
+\Then \F-Line 105,50,105,61
 .3\->X
 \Prog "T0"
 \F-Line 50,61,54,45
@@ -1203,8 +1201,7 @@ A=2\=>\Text 51,73,"force"
 10\->Q
 \IfEnd
 \If A=12
-\Then \Text 51,73,"o\R nde+"
-\For 1\->A \To 40 \Step 2
+\Then \For 1\->A \To 40 \Step 2
 A<13\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 A>12\=>A<25\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
@@ -1221,8 +1218,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 20\->Q
 \IfEnd
 \If A=3
-\Then \Text 51,73,"o\R nde"
-\For 1\->A \To 40 \Step 2
+\Then \For 1\->A \To 40 \Step 2
 \F-Line -A+90,38-A/2,-A+90,38+A/2
 \Next 
 6\->P
@@ -1251,14 +1247,12 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 22\->Q
 \IfEnd
 \If A=5
-\Then \Text 51,73,"visio\R n"
-\For 60\->A \To 99 \Step 2
+\Then \For 60\->A \To 99 \Step 2
 \PlotOn A,40
 \Next 
 \IfEnd
 \If A=6
-\Then \Text 51,73,"boost"
-\Circle 110,37,10
+\Then \Circle 110,37,10
 \For 9\->A \To 19
 \F-Line 110,37,\Int 34\Ran#+93,\Int 38\Ran#+18
 \Next 
@@ -1266,8 +1260,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 1+\Mat Z[6,3\->\Mat Z[6,3
 \IfEnd
 \If A=7
-\Then \Text 51,73,"vague"
-\Graph Y<64
+\Then \Graph Y<64
 \Graph Y>64
 6\->P
 16\->Q
@@ -1286,8 +1279,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 14\->Q
 \IfEnd
 \If A=10
-\Then \Text 51,73,"soleil"
-\Circle 76,37,11
+\Then \Circle 76,37,11
 \For 1\->A \To 25
 \F-Line 76,37,\Int 87\Ran#+38,\Int 48\Ran#+13
 \Next 
@@ -1312,8 +1304,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 \Mat Z[5,1]-1\->\Mat Z[5,1
 \IfEnd
 \If A=11
-\Then \Text 51,73,"vital"
-\Circle 110,37,10
+\Then \Circle 110,37,10
 \For 0\->A \To 9
 \F-Line 110,37,34\Ran#+93,40\Ran#+17
 \Next 
@@ -1321,8 +1312,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 \Int (40+9\Ran#\->Q
 \IfEnd
 \If A=15
-\Then \Text 51,73,"flamme"
-\For 46\->W \To 70 \Step 3
+\Then \For 46\->W \To 70 \Step 3
 27\Ran#
 \F-Line W-6,17,W-3,17+\Ans
 \F-Line W-3,17+\Ans,W,17
@@ -1331,9 +1321,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 34\->Q
 \IfEnd
 \If A=13\ Or A=16
-\Then A=13\=>\Text 51,73,"foudre"
-A=16\=>\Text 51,73,"orage"
-\If A=16
+\Then \If A=16
 \Then 0\->W
 \For 61\->A \To 37 \Step -3
 \Dsz W
@@ -1359,8 +1347,7 @@ A=16\=>\Text 51,73,"orage"
 A=13\=>29\->Q
 \IfEnd
 \If A=17
-\Then \Text 51,73,"e\R nfers"
-\For 43\->A \To 125 \Step 3
+\Then \For 43\->A \To 125 \Step 3
 40\Ran#
 \F-Line A-6,17,A-3,23+\Ans
 \F-Line A-3,23+\Ans,A,17
