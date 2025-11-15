@@ -15,16 +15,16 @@ Orange Text 34,3,"quitter"
 F-Line 1,23,36,23
 Green Text 44,3,"$"
 Green Text 44,10,Mat Z[10,4
-3→O
 For 5→B To 6
   For 1→A To 8
-    A+10(B-5)→C
     If Mat Z[A,B
     Then 
       6A-3→K
       44B-176→L
+      A+10(B-5)→C
+      {3,C,K,L}
       Prog "TNT8"
-      Mat Z[A,B]>1⇒Text K,L+31,Mat Z[A,B
+      1<Mat Z[A,B⇒Text K,L+31,Mat Z[A,B
     IfEnd
   Next
 Next
@@ -208,8 +208,7 @@ Then
   Mat Z[G,H→D
   6G-3→K
   44H-176→L
-  D=0⇒0→C
-  D=0⇒Prog "TNT8"
+  D=0⇒Text K,L,"        "
   Text K,L+31,"  "
   D≥2⇒Text K,L+31,D
   Goto 1

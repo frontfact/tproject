@@ -74,19 +74,15 @@ IfEnd
 If A=1
 Then 
   Text 15,55,"attaks"
-  1→O
-  51→L
   For 1→B To 5
     Mat Z[B,4→C
-    15+6B→K
+    {1,C,15+6B,51}
     Prog "TNT8"
   Next
   Text 15,93,"pouvoirs"
-  2→O
-  88→L
   For 1→B To 5
     Mat Z[B,3→C
-    15+6B→K
+    {2,C,15+6B,88}
     Prog "TNT8"
   Next
   Green Text 51,55,"PRESS [EXIT]"

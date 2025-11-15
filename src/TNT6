@@ -29,10 +29,7 @@ Then
     A=6⇒62→R
     A=7⇒7→W
     Text 51,38,"attak→               "
-    A→C
-    1→O
-    51→K
-    64→L
+    {1,A,51,64}
     Prog "TNT8"
     0→C
     If M≠7
@@ -103,10 +100,7 @@ Else
   2→Mat Z[11,3
   A→Mat Z[11,4
   Text 51,38,"pouvoir→             "
-  A→C
-  2→O
-  51→K
-  73→L
+  {2,A,51,73}
   Prog "TNT8"
   If A=1 Or A=2
   Then 

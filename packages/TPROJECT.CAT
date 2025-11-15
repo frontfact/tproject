@@ -1082,7 +1082,7 @@ U<31\=>\Green \Text U-1,R+14,"      "
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2820
+Capacity:2808
 File Name:TNT6
 Group Name:
 Password:
@@ -1116,10 +1116,7 @@ A\->\Mat Z[11,4
 A=6\=>62\->R
 A=7\=>7\->W
 \Text 51,38,"attak\->               "
-A\->C
-1\->O
-51\->K
-64\->L
+{1,A,51,64}
 \Prog "TNT8"
 0\->C
 \If M\<>7
@@ -1180,10 +1177,7 @@ M\<>7\=>\Prog "TNT20"
 2\->\Mat Z[11,3
 A\->\Mat Z[11,4
 \Text 51,38,"pouvoir\->             "
-A\->C
-2\->O
-51\->K
-73\->L
+{2,A,51,73}
 \Prog "TNT8"
 \If A=1\ Or A=2
 \Then \Circle 110,37,10
@@ -1414,7 +1408,7 @@ Q=6\=>P-10\->P
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:925
+Capacity:961
 File Name:TNT8
 Group Name:
 Password:
@@ -1423,60 +1417,63 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\If O=2
-\Then \Not C\=>\Green \Text K,L,"       "
-C=1\=>\Green \Text K,L,"acier  "
-C=2\=>\Green \Text K,L,"force  "
-C=3\=>\Green \Text K,L,"onde   "
-C=4\=>\Green \Text K,L,"eclair "
-C=5\=>\Green \Text K,L,"vision "
-C=6\=>\Green \Text K,L,"boost  "
-C=7\=>\Green \Text K,L,"vague  "
-C=8\=>\Green \Text K,L,"morsur "
-C=9\=>\Green \Text K,L,"griffe "
-C=10\=>\Green \Text K,L,"soleil "
-C=11\=>\Green \Text K,L,"vital  "
-C=12\=>\Green \Text K,L,"onde+  "
-C=13\=>\Green \Text K,L,"foudre "
-C=14\=>\Green \Text K,L,"vampyr "
-C=15\=>\Green \Text K,L,"flamme "
-C=16\=>\Green \Text K,L,"orage  "
-C=17\=>\Green \Text K,L,"enfers "
+\List \Ans[2\->\theta
+\List \Ans[3\->Y
+\List \Ans[4\->X
+\If \List \Ans[1=1
+\Then \Not \theta\=>\Green \Text Y,X,"       "
+\theta=1\=>\Green \Text Y,X,"coup   "
+\theta=2\=>\Green \Text Y,X,"garde  "
+\theta=3\=>\Green \Text Y,X,"feinte "
+\theta=4\=>\Green \Text Y,X,"tranch "
+\theta=5\=>\Green \Text Y,X,"double "
+\theta=6\=>\Green \Text Y,X,"charge "
+\theta=7\=>\Green \Text Y,X,"furie  "
+\theta=8\=>\Green \Text Y,X,"Xmeta  "
 \IfEnd
-\If O=1
-\Then \Not C\=>\Green \Text K,L,"       "
-C=1\=>\Green \Text K,L,"coup   "
-C=2\=>\Green \Text K,L,"garde  "
-C=3\=>\Green \Text K,L,"feinte "
-C=4\=>\Green \Text K,L,"tranch "
-C=5\=>\Green \Text K,L,"double "
-C=6\=>\Green \Text K,L,"charge "
-C=7\=>\Green \Text K,L,"furie  "
-C=8\=>\Green \Text K,L,"Xmeta  "
+\If \List \Ans[1=2
+\Then \Not \theta\=>\Green \Text Y,X,"       "
+\theta=1\=>\Green \Text Y,X,"acier  "
+\theta=2\=>\Green \Text Y,X,"force  "
+\theta=3\=>\Green \Text Y,X,"onde   "
+\theta=4\=>\Green \Text Y,X,"eclair "
+\theta=5\=>\Green \Text Y,X,"vision "
+\theta=6\=>\Green \Text Y,X,"boost  "
+\theta=7\=>\Green \Text Y,X,"vague  "
+\theta=8\=>\Green \Text Y,X,"morsur "
+\theta=9\=>\Green \Text Y,X,"griffe "
+\theta=10\=>\Green \Text Y,X,"soleil "
+\theta=11\=>\Green \Text Y,X,"vital  "
+\theta=12\=>\Green \Text Y,X,"onde+  "
+\theta=13\=>\Green \Text Y,X,"foudre "
+\theta=14\=>\Green \Text Y,X,"vampyr "
+\theta=15\=>\Green \Text Y,X,"flamme "
+\theta=16\=>\Green \Text Y,X,"orage  "
+\theta=17\=>\Green \Text Y,X,"enfers "
 \IfEnd
-\If O=3
-\Then \Not C\=>\Text K,L,"       "
-C=1\=>\Text K,L,"soin"
-C=2\=>\Text K,L,"soin +"
-C=3\=>\Text K,L,"adrena"
-C=4\=>\Text K,L,"chlore"
-C=5\=>\Text K,L,"protec"
-C=6\=>\Text K,L,"power+"
-C=7\=>\Text K,L,"groseye"
-C=8\=>\Text K,L,"[tarte]"
-C=11\=>\Text K,L,"ANGEL"
-C=12\=>\Text K,L,"MAGMA"
-C=13\=>\Text K,L,"PHOENIX"
-C=14\=>\Text K,L,"fusil"
-C=15\=>\Text K,L,"balles"
-C=16\=>\Text K,L,"LUNE"
+\If \List \Ans[1=3
+\Then \Not \theta\=>\Text Y,X,"       "
+\theta=1\=>\Text Y,X,"soin"
+\theta=2\=>\Text Y,X,"soin +"
+\theta=3\=>\Text Y,X,"adrena"
+\theta=4\=>\Text Y,X,"chlore"
+\theta=5\=>\Text Y,X,"protec"
+\theta=6\=>\Text Y,X,"power+"
+\theta=7\=>\Text Y,X,"groseye"
+\theta=8\=>\Text Y,X,"[tarte]"
+\theta=11\=>\Text Y,X,"ANGEL"
+\theta=12\=>\Text Y,X,"MAGMA"
+\theta=13\=>\Text Y,X,"PHOENIX"
+\theta=14\=>\Text Y,X,"fusil"
+\theta=15\=>\Text Y,X,"balles"
+\theta=16\=>\Text Y,X,"LUNE"
 \IfEnd
 %End
 %Header Record
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2678
+Capacity:2687
 File Name:TNT9
 Group Name:
 Password:
@@ -1502,15 +1499,15 @@ Option4:
 \F-Line 1,23,36,23
 \Green \Text 44,3,"\@24"
 \Green \Text 44,10,\Mat Z[10,4
-3\->O
 \For 5\->B \To 6
 \For 1\->A \To 8
-A+10(B-5)\->C
 \If \Mat Z[A,B
 \Then 6A-3\->K
 44B-176\->L
+A+10(B-5)\->C
+{3,C,K,L}
 \Prog "TNT8"
-\Mat Z[A,B]>1\=>\Text K,L+31,\Mat Z[A,B
+1<\Mat Z[A,B\=>\Text K,L+31,\Mat Z[A,B
 \IfEnd
 \Next 
 \Next 
@@ -1684,8 +1681,7 @@ G=2\=>0\->G
 \Then \Mat Z[G,H\->D
 6G-3\->K
 44H-176\->L
-D=0\=>0\->C
-D=0\=>\Prog "TNT8"
+D=0\=>Text K,L,"        "
 \Text K,L+31,"  "
 D\>=2\=>\Text K,L+31,D
 \Goto1
@@ -1695,7 +1691,7 @@ D\>=2\=>\Text K,L+31,D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1236
+Capacity:1232
 File Name:TNT10
 Group Name:
 Password:
@@ -1778,19 +1774,15 @@ A=5\=>\Return
 \IfEnd
 \If A=1
 \Then \Text 15,55,"attaks"
-1\->O
-51\->L
 \For 1\->B \To 5
 \Mat Z[B,4\->C
-15+6B\->K
+{1,C,15+6B,51}
 \Prog "TNT8"
 \Next 
 \Text 15,93,"pouvoirs"
-2\->O
-88\->L
 \For 1\->B \To 5
 \Mat Z[B,3\->C
-15+6B\->K
+{2,C,15+6B,88}
 \Prog "TNT8"
 \Next 
 \Green \Text 51,55,"PRESS [EXIT]"
@@ -1813,7 +1805,7 @@ A=5\=>\Return
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:980
+Capacity:978
 File Name:TNT11
 Group Name:
 Password:
@@ -1835,12 +1827,10 @@ Option4:
 \Orange \F-Line 124,39,90,39
 \Orange \F-Line 89,40,89,58
 \Orange \F-Line 89,49,89,84
-3\->O
-7\->L
 1\->U
 \For 1\->Q \To 8
 \List 1[Q\->C
-6Q-3\->K
+{3,C,6Q-3,7}
 \Prog "TNT8"
 \Next 
 \Text 51,7,"-rien-"
@@ -2338,7 +2328,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7540
+Capacity:7539
 File Name:TNT14
 Group Name:
 Password:
@@ -2458,15 +2448,13 @@ S=8\=>\Return
 \IfEnd
 \If \r=1
 \Then \Orange \Text 19,3,"force:  "
-1\->O
-7\->L
 \For 1\->E \To 5
 \If \Not \Int ((3\Mat Z[6,4])\Ran#
 \Then \Prog "TNT6"
 S=8\=>\Return
 \IfEnd
-6E+19\->K
 \Mat Z[E,4\->C
+{1,C,6E+19,7}
 \Prog "TNT8"
 \Next 
 1\->\r
@@ -2605,15 +2593,13 @@ S=8\=>\Return
 \IfEnd
 \If \r=2
 \Then \Orange \Text 19,3,"magie:  "
-7\->L
-2\->O
 \For 1\->E \To 5
 \If \Not \Int ((3\Mat Z[6,4])\Ran#
 \Then \Prog "TNT6"
 S=8\=>\Return
 \IfEnd
-6E+19\->K
-\Mat Z[E,3\->C
+\Mat Z[E,3]\->C
+{2,C,6E+19,7}
 \Prog "TNT8"
 \Next 
 1\->\r
@@ -2867,11 +2853,10 @@ V=13\=>28\->Q
 \GotoD
 \IfEnd
 \If \r=4
-\Then 51\->K
-81\->L
+\Then \Text 51,38,"apprendre        ?    "
 \Mat Z[11,3\->O
 \Mat Z[11,4\->C
-\Text 51,38,"apprendre        ?    "
+{O,C,51,81}
 \Prog "TNT8"
 \Text 57,3,"                             "
 0\->L
@@ -2901,9 +2886,8 @@ L\=>\Break
 \Next 
 \If L
 \Then C\->\Mat Z[L,5-O
-57\->K
-55\->L
 \Text 57,3,"tu as appris                  "
+{O,C,57,55}
 \Prog "TNT8"
 .7\->X
 \Prog "T0"
@@ -2919,11 +2903,10 @@ L\=>\Break
 \For 25\->W \To 49 \Step 6
 \Green \Text W,3,"        "
 \Next 
-7\->L
 C\->W
 \For 1\->Q \To 5
 \Mat Z[Q,5-O\->C
-19+6Q\->K
+{O,C,19+6Q,7}
 \Prog "TNT8"
 \Next 
 1\->Q
@@ -2944,16 +2927,14 @@ C\->W
 Q=6\=>1\->Q
 \LpWhile \theta\<>31
 \Green \Text 19+6Q,3,"-"
-51\->K
-73\->L
 \Mat Z[Q,5-O\->C
 \Text 51,38,"Z oublie            "
+{O,C,51,73}
 \Prog "TNT8"
 \Mat Z[11,4\->C
 C\->\Mat Z[Q,5-O
-57\->K
-64\->L
 \Text 57,3," et il apprend                "
+{O,C,57,64}
 \Prog "TNT8"
 .7\->X
 \Prog "T0"
@@ -3040,14 +3021,9 @@ A=5000\=>85\->B
 \Text 35,1,"Objets trouves:"
 \If \Not S\ And \Not T
 \Then \Text 43,10,"aucun"
-\Else 43\->K
-10\->L
-3\->O
-S\->C
+\Else {3,S,43,10}
 \Prog "TNT8"
-49\->K
-10\->L
-T\->C
+{3,T,49,10}
 \Prog "TNT8"
 S\->O
 \Prog "TNT7"

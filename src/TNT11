@@ -11,12 +11,10 @@ Orange F-Line 125,58,125,40
 Orange F-Line 124,39,90,39
 Orange F-Line 89,40,89,58
 Orange F-Line 89,49,89,84
-3→O
-7→L
 1→U
 For 1→Q To 8
   List 1[Q→C
-  6Q-3→K
+  {3,C,6Q-3,7}
   Prog "TNT8"
 Next
 Text 51,7,"-rien-"

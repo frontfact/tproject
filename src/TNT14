@@ -118,16 +118,14 @@ IfEnd
 If r=1
 Then 
   Orange Text 19,3,"force:  "
-  1→O
-  7→L
   For 1→E To 5
     If Not Int ((3Mat Z[6,4])Ran#
     Then 
       Prog "TNT6"
       S=8⇒Return
     IfEnd
-    6E+19→K
     Mat Z[E,4→C
+    {1,C,6E+19,7}
     Prog "TNT8"
   Next
   1→r
@@ -279,16 +277,14 @@ IfEnd
 If r=2
 Then 
   Orange Text 19,3,"magie:  "
-  7→L
-  2→O
   For 1→E To 5
     If Not Int ((3Mat Z[6,4])Ran#
     Then 
       Prog "TNT6"
       S=8⇒Return
     IfEnd
-    6E+19→K
-    Mat Z[E,3→C
+    Mat Z[E,3]→C
+    {2,C,6E+19,7}
     Prog "TNT8"
   Next
   1→r
@@ -566,11 +562,10 @@ Then
 IfEnd
 If r=4
 Then 
-  51→K
-  81→L
+  Text 51,38,"apprendre        ?    "
   Mat Z[11,3→O
   Mat Z[11,4→C
-  Text 51,38,"apprendre        ?    "
+  {O,C,51,81}
   Prog "TNT8"
   Text 57,3,"                             "
   0→L
@@ -603,9 +598,8 @@ Then
   If L
   Then 
     C→Mat Z[L,5-O
-    57→K
-    55→L
     Text 57,3,"tu as appris                  "
+    {O,C,57,55}
     Prog "TNT8"
     .7→X
     Prog "T0"
@@ -622,11 +616,10 @@ Then
     For 25→W To 49 Step 6
       Green Text W,3,"        "
     Next
-    7→L
     C→W
     For 1→Q To 5
       Mat Z[Q,5-O→C
-      19+6Q→K
+      {O,C,19+6Q,7}
       Prog "TNT8"
     Next
     1→Q
@@ -648,16 +641,14 @@ Then
       Q=6⇒1→Q
     LpWhile θ≠31
     Green Text 19+6Q,3,"-"
-    51→K
-    73→L
     Mat Z[Q,5-O→C
     Text 51,38,"Z oublie            "
+    {O,C,51,73}
     Prog "TNT8"
     Mat Z[11,4→C
     C→Mat Z[Q,5-O
-    57→K
-    64→L
     Text 57,3," et il apprend                "
+    {O,C,57,64}
     Prog "TNT8"
     .7→X
     Prog "T0"
@@ -750,14 +741,9 @@ If Not S And Not T
 Then 
   Text 43,10,"aucun"
 Else 
-  43→K
-  10→L
-  3→O
-  S→C
+  {3,S,43,10}
   Prog "TNT8"
-  49→K
-  10→L
-  T→C
+  {3,T,49,10}
   Prog "TNT8"
   S→O
   Prog "TNT7"
