@@ -165,7 +165,7 @@ class Program:
         dec = {'Next', 'IfEnd', 'WhileEnd', 'LpWhile '}
         level = 0
         first = True
-        for t in self.tokens:
+        for i, t in enumerate(self.tokens):
             if t == LineFeedToken:
                 output += str(t)
                 first = True
@@ -188,6 +188,10 @@ class Program:
             if t.dst in inc:
                 level += 1
                 if t.dst=='Then ':
+                    output += '\n'
+                    first = True
+            else:
+                if (t.dst == ']') and (self.tokens[i+1].dst == '['):
                     output += '\n'
                     first = True
         return output
