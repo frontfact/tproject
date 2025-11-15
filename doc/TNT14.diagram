@@ -1,0 +1,57 @@
+# using https://sequencediagram.org/
+title The T-Project : battle
+
+participant "TNT14\nBattle main prog" as TNT14
+participant "TNT12\nBattle init" as TNT12
+participant "TNT6\nMonster turn" as TNT6
+participant "TNT5\nMonster draw/\nranged attack" as TNT5
+participant "TNT9\nItem menu" as TNT9
+participant "TNT19\nMonster \nGameOver" as TNT19
+
+activate TNT14
+TNT14->TNT12:load battle+draw screen
+TNT12->TNT5:draw Z
+TNT12->TNT5:draw monster
+TNT12->TNT12:StoPict 1
+TNT12->TNT14:
+TNT14->TNT14:Goto 1
+note over TNT14:Lbl D
+space
+activate TNT14
+TNT14->TNT14:Check damages
+TNT14->TNT19:Game over
+TNT14->TNT14:Monster died ? Goto 2
+deactivate TNT14
+note over TNT14:Lbl 1
+space
+activate TNT14
+TNT14->TNT14:Display stats
+TNT14->TNT6:Ran# monster attack
+TNT14->TNT14:Menu #1 → r \n- attak\n- pouvoir\n- objet\n- aprend\n- fuite
+TNT14->TNT6:Ran# monster attack
+deactivate TNT14
+space 
+TNT14->TNT14:r=5 ? flee logic, then **Goto D**
+TNT14->TNT9: r=3 ? Display item menu, then **Goto D**
+space
+activate TNT14
+TNT14->TNT14:r=1 ? Display attaks
+TNT14->TNT6:Ran# monster attack
+TNT14->TNT14:Menu #2 attak → V \n- coup\n- feinte\n- etc.
+TNT14->TNT6:Ran# monster attack
+deactivate TNT14
+space
+activate TNT14
+TNT14->TNT14:r=2 ? Display spells
+TNT14->TNT6:Ran# monster attack
+TNT14->TNT14:Menu #3 spell → V \n- onde\n- boost\n- etc.
+TNT14->TNT6:Ran# monster attack
+deactivate TNT14
+space
+activate TNT14
+TNT14->TNT14:r=4 ? Learn last attak | spell
+deactivate TNT14
+space 
+TNT14->TNT14:Goto D
+note over TNT14:Lbl 2
+TNT14->TNT14:Battle end screen

@@ -33,7 +33,7 @@ Les villes qui vous sont accessibles sont représentées par un point orange sur
 
 Sur chaque continent se trouve un héliport. Ils vous permettront de vous déplacer très rapidement, sans vous faire attaquer, et présentent l'avantage non négligeable d'être gratuits.
 
-Déplacez-vous dans les villes avec les touches directionnelles. Vous pourrez rencontrer des personnages dans les maisons ou, parfois, dans les rues.
+Déplacez-vous dans les villes avec les touches directionnelles. Vous pourrez rencontrer des personnages dans les maisons ou, parfois, dans les rues. Un ![hum?](./images/hum.bmp) marque un endroit qui a été ou sera scénarisé pendant le jeu.
 
 ![dialog](./images/02-dialog-botma.bmp)
 
@@ -95,7 +95,7 @@ Les attaks sont au nombre de 8 :
 | id | Nom | Coût<br>(force) | Effet | 👁 |
 |:---|:----|:---------------:|:------|:--:|
 | 1 | coup | 1 | Inflige des dommages à l'ennemi | ![coup](./images/attak-01-coup.bmp) |
-| 2 | garde | 1 | Augmente la défense jusqu'à la fin du combat | ![garde](./images/attak-02-garde.bmp) |
+| 2 | garde | 1 | Augmente la défense | ![garde](./images/attak-02-garde.bmp) |
 | 3 | feinte | 1 | Diminue la défense de l'ennemi | ![feinte](./images/attak-03-feinte.bmp) |
 | 4 | tranch | 2 | Inflige des dommages à l'ennemi | ![tranch](./images/attak-04-tranch.bmp) |
 | 5 | double | 3 | Inflige des dommages à l'ennemi | ![double](./images/attak-05-double.bmp) |
@@ -113,12 +113,12 @@ Vous pourrez en apprendre 17 sorts différents :
 
 | id | Nom | Coût<br>(magie) | Effet | 👁 |
 |:---|:----|:---------------:|:------|:--:|
-| 1 | acier | 1 | Augmente la défense jusqu'à la fin du combat | ![acier](./images/magic-01-acier.bmp) |
-| 2 | force | 1 | Augmente l'attaque jusqu'à la fin du combat | ![force](./images/magic-02-force.bmp) |
+| 1 | acier | 1 | Augmente la défense | ![acier](./images/magic-01-acier.bmp) |
+| 2 | force | 1 | Augmente l'attaque | ![force](./images/magic-02-force.bmp) |
 | 3 | onde | 1 | Inflige des dommages à l'ennemi | ![onde](./images/magic-03-onde.bmp) |
 | 4 | éclair | 2 | Inflige des dommages à l'ennemi | ![eclair](./images/magic-04-eclair.bmp) |
 | 5 | vision | 1 | Affiche les stats de l'ennemi | ![vision](./images/magic-05-vision.bmp) |
-| 6 | boost | 4 | Augmente l'attaque et la défense jusqu'à la fin du combat | ![boost](./images/magic-06-boost.bmp) |
+| 6 | boost | 4 | Augmente l'attaque et la défense | ![boost](./images/magic-06-boost.bmp) |
 | 7 | vague | 4 | Inflige des dommages à l'ennemi | ![vague](./images/magic-07-vague.bmp) |
 | 8 | morsur | 5 | Inflige des dommages à l'ennemi et diminue son attaque | ![morsur](./images/magic-08-morsur.bmp) |
 | 9 | griffe | 5 | Inflige des dommages à l'ennemi et diminue sa défense | ![griffe](./images/magic-09-griffe.bmp) |

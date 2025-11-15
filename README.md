@@ -54,12 +54,14 @@ tntsoft@fastmail.com
 	- [x] factorize sleep loops into Prog "T0" + use a global sleep factor
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [x] Fix exit from shop without checking progress
-- [ ] Display advancement in user menu
+- [ ] Display progress in user menu
+- [ ] Fix blinking screen around progress 9 when searching for gems in botma (on G35+)
+- [ ] Fix 'aprend' menu dash, one pixel too far
 - [x] Notice in markdown/pdf
 	- [x] screenshots of attaks/powers
-	- [x] ~~'hum?' in points of interest~~ no
+	- [x] 'hum?' in points of interest
 	- [x] sequence diagram for TNT2 (main loop)
 	- [x] sequence diagram for TNT3 (city loop)
-	- [ ] sequence diagram for TNT14 (fight loop)
-	- [ ] Add advancement help in notice
+	- [x] sequence diagram for TNT14 (fight loop)
+	- [ ] Add progress help in notice
 	- [x] Locate cities in notice
