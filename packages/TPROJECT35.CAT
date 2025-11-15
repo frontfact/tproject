@@ -3072,7 +3072,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3660
+Capacity:3666
 File Name:TNT15
 Group Name:
 Password:
@@ -3082,7 +3082,6 @@ Option3:
 Option4:
 %Data Record
 \R b0=.142\=>\GotoF
-\ClrText
 \Mat Z[12,6\->W
 \If \theta=29
 \Then \If W=28.5\ Or W=36\ Or W=37
@@ -3093,6 +3092,7 @@ Option4:
 \If \Mat Z[12,1
 \Then \Mat Z[12,1]-1\->\Mat Z[12,1
 \Mat Z[12,1\=>\Return
+\ClrText
 \If 36=W
 \Then "Trop tard !..."
 "TOMBERRY.... NON !!!!"
@@ -3116,6 +3116,7 @@ Option4:
 \IfEnd
 \IfEnd
 \Lbl O
+\ClrText
 \If W=28.5
 \Then "STOP. Aucun humain"
 "n'est autorise a"
@@ -3213,6 +3214,7 @@ B\->\Mat Z[9,2
 "Tomberry. Compris ?"\Disp"Bien sur."\Disp\ClrText
 "Je te laisse, Sage.  Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
 "C'est ca. Adieu."\Disp1\->\Mat Z[8,5
+\IfEnd
 \IfEnd
 \Lbl T
 \If X=\sin 5

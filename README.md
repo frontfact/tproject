@@ -55,7 +55,7 @@ tntsoft@fastmail.com
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [x] Fix exit from shop without checking progress
 - [ ] Display progress in user menu
-- [ ] Fix blinking screen around progress 9 when searching for gems in botma (on G35+)
+- [x] Fix blinking screen around progress 9 when searching for gems in botma (on G35+)
 - [ ] Fix 'aprend' menu dash, one pixel too far
 - [x] Notice in markdown/pdf
 	- [x] screenshots of attaks/powers

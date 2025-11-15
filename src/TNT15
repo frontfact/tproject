@@ -1,5 +1,4 @@
 b₀=.142⇒Goto F
-ClrText
 Mat Z[12,6→W
 If θ=29
 Then 
@@ -14,6 +13,7 @@ If Mat Z[12,1
 Then 
   Mat Z[12,1]-1→Mat Z[12,1
   Mat Z[12,1⇒Return
+  ClrText
   If 36=W
   Then 
     "Trop tard !..."
@@ -41,6 +41,7 @@ Then
   IfEnd
 IfEnd
 Lbl O
+ClrText
 If W=28.5
 Then 
   "STOP. Aucun humain"
@@ -178,115 +179,116 @@ Then
     "C'est ca. Adieu."◢
     1→Mat Z[8,5
   IfEnd
-  Lbl T
-  If X=sin 5
-  Then 
-    StoPict 1
-    BG-Pict 1
-    For 1→W To 9
-      Plot 0,0
-      Cls
-    Next
-    Plot 0,0
-    BG-None
-    For 1→W To 32
-      Text Int 33Ran#+7,Int 53Ran#+53,"  * "
-      Green Text Int 33Ran#+7,Int 53Ran#+53,"    "
-      Orange Text Int 33Ran#+7,Int 53Ran#+53," *  "
-    Next
-    If Not Mat Z[1,1
-    Then 
-      Cls
-      Text 30,41,"GAME OVER..."
-      Stop
-    IfEnd
-  IfEnd
-  Return
-  Lbl F
-  ClrText
-  "TU ME DEFIES, ETRANGEMORTEL ?"◢
-  Orange "Je viens mettre fin aton regne."◢
-  "AH AH AH..."◢
-  ClrText
-  "TU DEVRAS D'ABORD"
-  "VAINCRE MES DISCIPLES"◢
-  ClrText
-  Orange "Redox ? Enzo ?"
-  Orange "Je les croyais morts?"◢
-  "EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
-  43→W
-  Prog "TNT14"
-  44→W
-  Prog "TNT14"
-  9→V
-  0→b₀
-  55→Mat Z[12,6
-  Prog "TNT13"
-  ClrText
-  "IMPRESSIONNANT..."
-  "MAIS QUE PEUX-TU"
-  "CONTRE MOI ?"◢
-  If Not Mat Z[8,5
-  Then 
-    "SANS L'ARME SUPREME  TU N'ES RIEN !"
-    .3→X
-    Prog "T0"
-    0→Mat Z[1,1
-    For 31→A To 19 Step -6
-      Text A,81,"   "
-    Next
-    sin 5→X
-    Goto T
-  Else 
-    Orange "Je peux...  CA."◢
-    Green "Z envoie :"
-    Green "Tarte aux groseyes !"
-  IfEnd
-  .3→X
-  Prog "T0"
-  87→A
-  38→B
-  5→C
+IfEnd
+Lbl T
+If X=sin 5
+Then 
   StoPict 1
   BG-Pict 1
-  For 0→D To 9
-    Cls
+  For 1→W To 9
     Plot 0,0
+    Cls
   Next
+  Plot 0,0
   BG-None
-  For 1→D To 1800 Step 50
-    Orange F-Line A+Csin D,B+Ccos D,A+(C-10)sin D,B+(C-10)cos D
-    Isz C
+  For 1→W To 32
+    Text Int 33Ran#+7,Int 53Ran#+53,"  * "
+    Green Text Int 33Ran#+7,Int 53Ran#+53,"    "
+    Orange Text Int 33Ran#+7,Int 53Ran#+53," *  "
   Next
-  3→C
-  For 1800→D To 1 Step -40
-    Green F-Line A+Csin D,B+Ccos D,A+Csin (D-40),B+Ccos (D-40
-    Orange F-Line A,B,A+60Ran#-30,B+60Ran#-30
-    C+.6→C
+  If Not Mat Z[1,1
+  Then 
+    Cls
+    Text 30,41,"GAME OVER..."
+    Stop
+  IfEnd
+IfEnd
+Return
+Lbl F
+ClrText
+"TU ME DEFIES, ETRANGEMORTEL ?"◢
+Orange "Je viens mettre fin aton regne."◢
+"AH AH AH..."◢
+ClrText
+"TU DEVRAS D'ABORD"
+"VAINCRE MES DISCIPLES"◢
+ClrText
+Orange "Redox ? Enzo ?"
+Orange "Je les croyais morts?"◢
+"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
+43→W
+Prog "TNT14"
+44→W
+Prog "TNT14"
+9→V
+0→b₀
+55→Mat Z[12,6
+Prog "TNT13"
+ClrText
+"IMPRESSIONNANT..."
+"MAIS QUE PEUX-TU"
+"CONTRE MOI ?"◢
+If Not Mat Z[8,5
+Then 
+  "SANS L'ARME SUPREME  TU N'ES RIEN !"
+  .3→X
+  Prog "T0"
+  0→Mat Z[1,1
+  For 31→A To 19 Step -6
+    Text A,81,"   "
   Next
+  sin 5→X
+  Goto T
+Else 
+  Orange "Je peux...  CA."◢
+  Green "Z envoie :"
+  Green "Tarte aux groseyes !"
+IfEnd
+.3→X
+Prog "T0"
+87→A
+38→B
+5→C
+StoPict 1
+BG-Pict 1
+For 0→D To 9
   Cls
   Plot 0,0
-  5→X
-  Prog "T0"
-  ClrText
-  "Z ?...      Z ?!"◢
-  Orange "Que ? Oh, ma tete..."◢
-  "Wills:Il est vivant."◢
-  ClrText
-  "Jessie: Ton dernier"
-  "combat a bien failli t'etre fatal..."◢
-  Orange "Et...et Tomberry ?"◢
-  "Detruit. A jamais."
-  2→X
-  Prog "T0"
-  Lbl R
-  Prog "TNT12"
-  117→R
-  Prog "TNT20"
-  StoPict 1
-  117→R
-  ViewWindow 127,-1,0,63,1,0
-  RclPict 1
-  Prog "TNT20"
-  Text 30,51,"THE END"
-  Stop
+Next
+BG-None
+For 1→D To 1800 Step 50
+  Orange F-Line A+Csin D,B+Ccos D,A+(C-10)sin D,B+(C-10)cos D
+  Isz C
+Next
+3→C
+For 1800→D To 1 Step -40
+  Green F-Line A+Csin D,B+Ccos D,A+Csin (D-40),B+Ccos (D-40
+  Orange F-Line A,B,A+60Ran#-30,B+60Ran#-30
+  C+.6→C
+Next
+Cls
+Plot 0,0
+5→X
+Prog "T0"
+ClrText
+"Z ?...      Z ?!"◢
+Orange "Que ? Oh, ma tete..."◢
+"Wills:Il est vivant."◢
+ClrText
+"Jessie: Ton dernier"
+"combat a bien failli t'etre fatal..."◢
+Orange "Et...et Tomberry ?"◢
+"Detruit. A jamais."
+2→X
+Prog "T0"
+Lbl R
+Prog "TNT12"
+117→R
+Prog "TNT20"
+StoPict 1
+117→R
+ViewWindow 127,-1,0,63,1,0
+RclPict 1
+Prog "TNT20"
+Text 30,51,"THE END"
+Stop
