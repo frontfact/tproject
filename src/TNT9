@@ -152,7 +152,7 @@ Then
       Orange F-Line 110,58,99+G,A
       Text 64-A,97+G,"*"
     Next
-    3+Mat Z[6,4→Mat Z[6,4
+    3Mat Z[10,5]+Mat Z[6,4→Mat Z[6,4
   IfEnd
   If C=12
   Then 

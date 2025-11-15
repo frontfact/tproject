@@ -358,7 +358,7 @@ Then
     Text 20,80,"vie:   /"
     Text 30,90,"att:"
     Text 37,90,"def:"
-    Text 11,117,22-Mat Z[6,4
+    Text 11,117,22-Mat Z[10,6
     Text 20,94,Mat Z[6,1
     Text 20,110,Mat Z[7,4
     For 2→A To 3
@@ -713,7 +713,7 @@ A>25⇒7
 Ans→Mat Z[11,2
 Orange Text 10,1,"Experience:"
 Mat Z[11,6→E
-Int 100Ran#+2Mat Z[7,4]+40Mat Z[6,2]+40Mat Z[6,3]+200-20Mat Z[6,4→A
+Int 100Ran#+2Mat Z[7,4]+40Mat Z[6,2]+40Mat Z[6,3]+200-20Mat Z[10,6→A
 Orange Text 16,1,E
 Orange Text 16,22,"+"
 Orange Text 16,27,A
