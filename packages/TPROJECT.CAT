@@ -1062,9 +1062,9 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \IfEnd
 \If \r=4
 \Then \Green \F-Line R+18,39,R+18,35
-\For 60\->A \To 110 \Step 3
-\Green \F-Line A-3,38,A,37
-\Green \F-Line A-3,36,A,37
+\For 60\->U \To 110 \Step 3
+\Green \F-Line U-3,38,U,37
+\Green \F-Line U-3,36,U,37
 \Next 
 \IfEnd
 \If \r=5
