@@ -750,7 +750,7 @@ J\->\R a2
 \Getkey
 \If \Ans\<>Y\ And \Ans
 \Then \Ans\->Y
-X+2.5\->X
+X+4\->X
 \IfEnd
 \Locate 11,5,\Int X
 X>89\=>\Break
