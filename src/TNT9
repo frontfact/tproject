@@ -77,13 +77,13 @@ Then
     C-.15→C
   Next
   For 20→C To 180 Step 20
-    Orange F-Line 107+10cos (C-20,16+7sin (C-20,107+10cos C,16+7sin C
+    Orange F-Line 107+10cos (C-20),16+7sin (C-20),107+10cos C,16+7sin C
   Next
   107→A
   For -1→C To 1 Step 2
     For 4→B To 10 Step 3
-      Orange F-Line A+CB⌟2,16,A+C(B+5,25
-      Orange F-Line A+C(B-5,25,A+C(B-2,40
+      Orange F-Line A+CB⌟2,16,A+C(B+5),25
+      Orange F-Line A+C(B-5),25,A+C(B-2),40
     Next
     Orange F-Line A,42,A+7C,42
     Orange F-Line A+7C,42,A+15C,38

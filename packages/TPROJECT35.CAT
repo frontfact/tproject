@@ -1476,7 +1476,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2540
+Capacity:2545
 File Name:TNT9
 Group Name:
 Password:
@@ -1561,13 +1561,13 @@ A+10\->A
 C-.15\->C
 \Next 
 \For 20\->C \To 180 \Step 20
-\F-Line 107+10\cos (C-20,16+7\sin (C-20,107+10\cos C,16+7\sin C
+\F-Line 107+10\cos (C-20),16+7\sin (C-20),107+10\cos C,16+7\sin C
 \Next 
 107\->A
 \For -1\->C \To 1 \Step 2
 \For 4\->B \To 10 \Step 3
-\F-Line A+CB\ab/c2,16,A+C(B+5,25
-\F-Line A+C(B-5,25,A+C(B-2,40
+\F-Line A+CB\ab/c2,16,A+C(B+5),25
+\F-Line A+C(B-5),25,A+C(B-2),40
 \Next 
 \F-Line A,42,A+7C,42
 \F-Line A+7C,42,A+15C,38
