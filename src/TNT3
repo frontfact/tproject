@@ -38,7 +38,7 @@ Then
   b₂=1⇒Prog "TNT4"
   b₂=3⇒Prog "TNT17"
   Mat Z[11,1→V
-  If Z=37
+  If 37=Mat Z[12,6
   Then 
     Prog "TNT15"
     Return

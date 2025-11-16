@@ -43,7 +43,7 @@ tntsoft@fastmail.com
 - [x] ~~Extract hostel from TNT4~~ → TNT17
 - [x] ~~Extract life gauge from TNT1~~ → TNT18
 - [x] ~~Display 'hum?' only if progress < W ?~~ no
-- [ ] Optimize `Mat Z[12,6]→X` in TNT13
+- [x] Optimize `Mat Z[12,6]→X` in TNT13
 - [x] Port to graph35+/graph100+
     - [x] remove ':' separators
 	- [x] monochrome
@@ -56,7 +56,11 @@ tntsoft@fastmail.com
 - [x] Fix exit from shop without checking progress
 - [ ] Display progress in user menu
 - [x] Use getkey to block vision spell
+- [ ] Rename programs as "Z01" "Z02" etc.
 - [ ] Refactor monster drawings like Z/TNT5
+- [ ] Refactor TNT12 using a matrix
+- [ ] Rewrite TNT3
+- [ ] Rewrite TNT15
 - [x] Fix blinking screen around progress 9 when searching for gems in botma (on G35+)
 - [x] Notice in markdown/pdf
 	- [x] screenshots of attaks/powers
