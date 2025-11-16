@@ -1072,9 +1072,9 @@ R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9
 \Green \Text 28,R+21,"    "
 \IfEnd
 \If \r=8
-\Then \For 12\->U \To 42 \Step 6
+\Then \For 11\->U \To 41 \Step 6
 \Text U,R,"     "
-U<31\=>\Green \Text U-1,R+14,"      "
+U<30\=>\Green \Text U-1,R+14,"      "
 \Next 
 \IfEnd
 \Next 
@@ -1105,10 +1105,10 @@ A\->\Mat Z[11,4
 \IfEnd
 \If A\<>2\ And A\<>8
 \Then \If M\<>7
-\Then \For 3\->Q \To 40 \Step 6
+\Then \For 3\->Q \To 39 \Step 6
 \Text Q,71,"              "
 \Next 
-\Text 43,71,"             "
+\Text 41,71,"             "
 \IfEnd
 \If A=3
 \Then 90\->R
@@ -1129,10 +1129,10 @@ A=7\=>7\->W
 \RclPict 1
 72\->R
 0\->C
-\For 3\->Q \To 40 \Step 6
+\For 3\->Q \To 39 \Step 6
 \Text Q,71,"              "
 \Next 
-\Text 43,71,"              "
+\Text 41,71,"              "
 \Prog "TNT20"
 6\->P
 15\->Q
@@ -1907,7 +1907,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2768
+Capacity:2723
 File Name:TNT12
 Group Name:
 Password:
@@ -1970,11 +1970,7 @@ M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,4
 \F-Line 37,62,37,16
 \Orange \Text 11,3,"NIVEAU"
 \Orange \Text 11,30,\Mat Z[11,2
-\If \Int 3\Ran#
-\Then \Green \Graph (X,Y)=(37+T,16+\Ran#
-\Else \Orange \Graph (X,Y)=(37+T,16+\Ran#
-\Orange \F-Line 38,16,125,16
-\IfEnd
+\Graph (X,Y)=(37+T,16+\Ran#
 41\->R
 {0,1}
 \Prog "TNT5"

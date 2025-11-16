@@ -53,9 +53,9 @@ For 1→A To B
   IfEnd
   If r=8
   Then 
-    For 12→U To 42 Step 6
+    For 11→U To 41 Step 6
       Text U,R,"     "
-      U<31⇒Green Text U-1,R+14,"      "
+      U<30⇒Green Text U-1,R+14,"      "
     Next
   IfEnd
 Next

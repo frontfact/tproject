@@ -52,13 +52,7 @@ F-Line 126,62,37,62
 F-Line 37,62,37,16
 Orange Text 11,3,"NIVEAU"
 Orange Text 11,30,Mat Z[11,2
-If Int 3Ran#
-Then 
-  Green Graph (X,Y)=(37+T,16+Ran#
-Else 
-  Orange Graph (X,Y)=(37+T,16+Ran#
-  Orange F-Line 38,16,125,16
-IfEnd
+Graph (X,Y)=(37+T,16+Ran#
 41→R
 {0,1}
 Prog "TNT5"

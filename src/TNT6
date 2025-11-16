@@ -15,10 +15,10 @@ Then
   Then 
     If M≠7
     Then 
-      For 3→Q To 40 Step 6
+      For 3→Q To 39 Step 6
         Text Q,71,"              "
       Next
-      Text 43,71,"             "
+      Text 41,71,"             "
     IfEnd
     If A=3
     Then 
@@ -43,10 +43,10 @@ Then
         RclPict 1
         72→R
         0→C
-        For 3→Q To 40 Step 6
+        For 3→Q To 39 Step 6
           Text Q,71,"              "
         Next
-        Text 43,71,"              "
+        Text 41,71,"              "
         Prog "TNT20"
         6→P
         15→Q
