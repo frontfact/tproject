@@ -178,8 +178,8 @@ P→Mat Z[6,1
 P→Mat Z[7,4
 Int A+Int 2Ran#→Mat Z[6,2
 Int D+Int 2Ran#→Mat Z[6,3
-Int (V+2Ran#-(N/3))→V
-V→Mat Z[10,6
+V+2Ran#-(N/3)→V
+Int V→Mat Z[10,6
 VMat Z[10,5→Mat Z[6,4
 N-1→A
 8

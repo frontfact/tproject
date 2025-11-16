@@ -1907,7 +1907,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2709
+Capacity:2707
 File Name:TNT12
 Group Name:
 Password:
@@ -2079,8 +2079,8 @@ P\->\Mat Z[6,1
 P\->\Mat Z[7,4
 \Int A+\Int 2\Ran#\->\Mat Z[6,2
 \Int D+\Int 2\Ran#\->\Mat Z[6,3
-\Int (V+2\Ran#-(N/3))\->V
-V\->\Mat Z[10,6
+V+2\Ran#-(N/3)\->V
+\Int V\->\Mat Z[10,6
 V\Mat Z[10,5\->\Mat Z[6,4
 N-1\->A
 8
@@ -2326,7 +2326,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7359
+Capacity:7338
 File Name:TNT14
 Group Name:
 Password:
@@ -2374,7 +2374,7 @@ P=9\=>Q+\Mat Z[6,3\->\Mat Z[6,3
 \For 2\->V \To 5
 \For 1\->U \To 2
 \Text 6V+19,13U+1,\Mat Z[V,U
-\If \Not \Int ((4\Mat Z[6,4])\Ran#
+\If \Not \Int (4\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
 S=8\=>\Return
 \IfEnd
@@ -2385,7 +2385,7 @@ S=8\=>\Return
 \Text 57,3,"[EXE]\->menu action            "
 \StoPict 1
 \Do
-\If \Not \Int ((5\Mat Z[6,4])\Ran#
+\If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
 S=8\=>\Return
 \Text 43,14,\Mat Z[4,1
@@ -2406,7 +2406,7 @@ S=8\=>\Return
 \Do
 \F-Line 3,-6\r+43,5,-6\r+43
 \Do
-\If \Not \Int ((5\Mat Z[6,4])\Ran#
+\If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
 S=8\=>\Return
 \IfEnd
@@ -2447,7 +2447,7 @@ S=8\=>\Return
 \If \r=1
 \Then \Text 19,3,"force:  "
 \For 1\->E \To 5
-\If \Not \Int ((3\Mat Z[6,4])\Ran#
+\If \Not \Int (3\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
 S=8\=>\Return
 \IfEnd
@@ -2473,7 +2473,7 @@ V=8\=>9
 \IfEnd
 \StoPict 1
 \Do
-\If \Not \Int ((5\Mat Z[6,4])\Ran#
+\If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
 S=8\=>\Return
 \IfEnd
@@ -2592,7 +2592,7 @@ S=8\=>\Return
 \If \r=2
 \Then \Text 19,3,"magie:  "
 \For 1\->E \To 5
-\If \Not \Int ((3\Mat Z[6,4])\Ran#
+\If \Not \Int (3\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
 S=8\=>\Return
 \IfEnd
@@ -2625,7 +2625,7 @@ B>9\=>O\<=9\=>\Text 19,28,"  "
 \IfEnd
 \StoPict 1
 \Do
-\If \Not \Int ((5\Mat Z[6,4])\Ran#
+\If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
 S=8\=>\Return
 \IfEnd

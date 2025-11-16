@@ -38,7 +38,7 @@ Green Text 49,3,"de   /  "
 For 2→V To 5
   For 1→U To 2
     Green Text 6V+19,13U+1,Mat Z[V,U
-    If Not Int ((4Mat Z[6,4])Ran#
+    If Not Int (4Ran#Mat Z[6,4
     Then 
       Prog "TNT6"
       S=8⇒Return
@@ -50,7 +50,7 @@ Mat Z[6,1→J
 Text 57,3,"[EXE]→menu action            "
 StoPict 1
 Do
-  If Not Int ((5Mat Z[6,4])Ran#
+  If Not Int (5Ran#Mat Z[6,4
   Then 
     Prog "TNT6"
     S=8⇒Return
@@ -72,7 +72,7 @@ StoPict 1
 Do
   Green F-Line 3,-6r+43,5,-6r+43
   Do
-    If Not Int ((5Mat Z[6,4])Ran#
+    If Not Int (5Ran#Mat Z[6,4
     Then 
       Prog "TNT6"
       S=8⇒Return
@@ -119,7 +119,7 @@ If r=1
 Then 
   Orange Text 19,3,"force:  "
   For 1→E To 5
-    If Not Int ((3Mat Z[6,4])Ran#
+    If Not Int (3Ran#Mat Z[6,4
     Then 
       Prog "TNT6"
       S=8⇒Return
@@ -148,7 +148,7 @@ Then
     IfEnd
     StoPict 1
     Do
-      If Not Int ((5Mat Z[6,4])Ran#
+      If Not Int (5Ran#Mat Z[6,4
       Then 
         Prog "TNT6"
         S=8⇒Return
@@ -278,7 +278,7 @@ If r=2
 Then 
   Orange Text 19,3,"magie:  "
   For 1→E To 5
-    If Not Int ((3Mat Z[6,4])Ran#
+    If Not Int (3Ran#Mat Z[6,4
     Then 
       Prog "TNT6"
       S=8⇒Return
@@ -314,7 +314,7 @@ Then
     IfEnd
     StoPict 1
     Do
-      If Not Int ((5Mat Z[6,4])Ran#
+      If Not Int (5Ran#Mat Z[6,4
       Then 
         Prog "TNT6"
         S=8⇒Return
