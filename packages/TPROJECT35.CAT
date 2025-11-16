@@ -1476,7 +1476,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2603
+Capacity:2540
 File Name:TNT9
 Group Name:
 Password:
@@ -1547,12 +1547,12 @@ C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
 \For 1\->X \To 3
 \Mat Z[X,1]>\Mat Z[X,2\=>\Mat Z[X,2\->\Mat Z[X,1
 \Next 
+41\->R
 \If C=7
 \Then \Cls
 \RclPict 1
-\For 29\->A \To 11 \Step -6
-\Text A,55,"     "
-\Next 
+{5}
+\Prog "TNT5"
 320\->A
 27\->C
 \For 57\->B \To 106
@@ -1586,10 +1586,8 @@ M\<>7\=>\Mat Z[6,1]-16-\Int 7\Ran#\->\Mat Z[6,1
 \If C>10\ And C<14\ And \Mat Z[3,1]>19
 \Then \Cls
 \RclPict 1
-\For 12\->P \To 42 \Step 6
-\Text P,40,"        "
-P<31\=>\Text P-1,50,"       "
-\Next 
+{8}
+\Prog "TNT5"
 \S-Gph1 \DrawOff
 \S-Gph2 \DrawOff
 \S-Gph3 \DrawOn

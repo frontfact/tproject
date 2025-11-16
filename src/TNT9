@@ -62,13 +62,13 @@ IfEnd
 For 1→X To 3
   Mat Z[X,1]>Mat Z[X,2⇒Mat Z[X,2→Mat Z[X,1
 Next
+41→R
 If C=7
 Then 
   Cls
   RclPict 1
-  For 29→A To 11 Step -6
-    Green Text A,55,"     "
-  Next
+  {5}
+  Prog "TNT5"
   320→A
   27→C
   For 57→B To 106
@@ -104,10 +104,8 @@ If C>10 And C<14 And Mat Z[3,1]>19
 Then 
   Cls
   RclPict 1
-  For 12→P To 42 Step 6
-    Text P,40,"        "
-    P<31⇒Green Text P-1,50,"       "
-  Next
+  {8}
+  Prog "TNT5"
   S-Gph1 DrawOff
   S-Gph2 DrawOff
   S-Gph3 DrawOn
