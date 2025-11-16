@@ -16,10 +16,10 @@ P=8⇒Q+Mat Z[6,2→Mat Z[6,2
 P=9⇒Q+Mat Z[6,3→Mat Z[6,3
 1>Mat Z[6,2⇒1→Mat Z[6,2
 1>Mat Z[6,3⇒1→Mat Z[6,3
+.7→X
+Prog "T0"
 If I≠Mat Z[1,1] Or J≠Mat Z[6,1
 Then 
-  .5→X
-  Prog "T0"
   Prog "TNT19"
   1>Mat Z[6,1⇒Goto 2
 IfEnd

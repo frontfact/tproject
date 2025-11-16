@@ -298,11 +298,8 @@ Mat Z[6,1]>Mat Z[7,4⇒Mat Z[7,4→Mat Z[6,1
 S=8⇒1+Int 3Ran#→Mat Z[1,1
 I≠Mat Z[1,1⇒Orange Text 5,60,Mat Z[1,1]-I
 J≠Mat Z[6,1⇒Orange Text 5,C,Mat Z[6,1]-J
-If I≠Mat Z[1,1] Or J≠Mat Z[6,1
-Then 
-  .7→X
-  Prog "T0"
-IfEnd
+.7→X
+Prog "T0"
 Prog "TNT19"
 0→W
 0→P~Q
