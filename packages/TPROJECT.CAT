@@ -554,7 +554,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:8665
+Capacity:8754
 File Name:TNT4
 Group Name:
 Password:
@@ -662,7 +662,8 @@ Option4:
 \Green "\->retour chez Redox..."
 1\->X
 \Prog "T0"
-"Bien,petit,tu meritesma confiance."
+"Bien, Z, tu merites"
+"ma confiance."
 \IfEnd
 "Prends ces skulls et"
 "soigne-toi."\Disp\ClrText
@@ -722,20 +723,25 @@ J\->\R a2
 \IfEnd
 \IfEnd
 \If W=13
-\Then "Troll: si tu me bats"
+\Then "Troll: Si tu me bats"
 "au bras de fer, ma"
-"Lune est a toi. Mais"
-"si tu perds... Je te"
-"mange. D'accord ?"
-\Locate 1,7,"[EXE]\->OK [EXIT]\->Fuite"
+"Lune est a toi."
+"L'essai coute 10\@24."
+"Partant ?"
+\Locate 1,7,"[EXE]\->Oui [EXIT]\->Non"
 \Do
 \Getkey
 \LpWhile \Not \Ans
 \Ans\<>31\=>\Return
 \ClrText
+\If 10>\Mat Z[10,4
+\Then "Troll: reviens quand"
+"tu auras 10\@24 a perdre"\Disp\Return
+\IfEnd
+\Mat Z[10,4]-10\->\Mat Z[10,4
 \Locate 1,1,"!DEFI AU BRAS DE FER!"
 \Locate 1,2,"Appuyer n'importe ou"
-\Locate 1,3,"fait monter le nombre"
+\Locate 1,3,"fait monter ton score"
 \Locate 11,4,"--"
 \Locate 4,5,"Press  50  a key"
 \Locate 11,6,"--"
@@ -756,8 +762,9 @@ X+4\->X
 X>89\=>\Break
 \Next 
 \ClrText
-X<11\=>"Fin..."
-X<11\=>\Stop
+\If X<11
+\Then "Perdu..."\Disp\Return
+\IfEnd
 "Troll : Hmmf."
 "Voila ta Lune."\Disp16\->O
 \Prog "TNT7"
