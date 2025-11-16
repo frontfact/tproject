@@ -740,6 +740,8 @@ J\->\R a2
 \Locate 4,5,"Press  50  a key"
 \Locate 11,6,"--"
 \Locate 2,7,"10\->Perdu \slash 90\->Gagne"
+.5\->X
+\Prog "T0"
 \Do
 \LpWhile \Not \Getkey
 \Locate 4,5,"     "
