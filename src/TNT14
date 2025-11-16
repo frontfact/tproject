@@ -349,10 +349,10 @@ Then
   Then 
     If M≠7
     Then 
-      For 3→B To 40 Step 6
+      For 3→B To 39 Step 6
         Text B,71,"              "
       Next
-      Text 43,71,"              "
+      Text 41,71,"              "
     IfEnd
     Text 11,86,"vitesse"
     Text 20,80,"vie:   /"
@@ -364,9 +364,8 @@ Then
     For 2→A To 3
       Text 16+7A,105,Mat Z[6,A
     Next
-    For 5.8→A To 0 Step -.2
-      Text 4,99,Int A
-    Next
+    Do
+    LpWhile Not Getkey
     Cls
     RclPict 1
     Plot 0,0

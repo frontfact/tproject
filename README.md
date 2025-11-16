@@ -50,13 +50,14 @@ tntsoft@fastmail.com
 		- [x] modify menus using [    ] brackets to select entries
 		- [x] life gauge in cities
 		- [ ] make dialogs speaker explicit
-	- [ ] ¥ not rendered with `Text` command
+	- [x] ¥ not rendered with `Text` command
 	- [x] factorize sleep loops into Prog "T0" + use a global sleep factor
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [x] Fix exit from shop without checking progress
 - [ ] Display progress in user menu
+- [x] Use getkey to block vision spell
+- [ ] Refactor monster drawings like Z/TNT5
 - [x] Fix blinking screen around progress 9 when searching for gems in botma (on G35+)
-- [ ] Fix 'aprend' menu dash, one pixel too far
 - [x] Notice in markdown/pdf
 	- [x] screenshots of attaks/powers
 	- [x] 'hum?' in points of interest
