@@ -216,8 +216,8 @@ If S=43 Or S=44 Or S=32 Or S=33 Or S=8 Or S=10.5 Or S=99 Or S=28.5
 Then 
   S=44 Or S=33 Or S=8⇒Text 51,75,"Enzo   "
   S=32 Or S=43⇒Text 51,75,"Redox  "
-  S=10.5⇒Text 51,75,"Minautor"
-  S=28.5⇒Text 51,75,"Un vegetal"
+  S=10.5⇒Text 51,75,"le Minautor"
+  S=28.5⇒Text 51,75,"un Vegetal"
   S=99⇒Text 51,75,"le Gardien"
 Else 
   M=1⇒Text 51,90,"lapranak"

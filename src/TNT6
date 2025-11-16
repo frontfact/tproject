@@ -1,15 +1,25 @@
 StoPict 1
 Mat Z[1,1→I
 Mat Z[6,1→J
+Text 51,38,"                      "
 Int 2Ran#
 If Ans
 Then 
-  Mat Z[7,Int 3Ran#+1→A
-  3>Mat Z[6,3⇒Not Int (Mat Z[6,3]Ran#⇒2→A
+  Mat Z[7,1+Int 3Ran#→A
+  3>Mat Z[6,3⇒Not Int (Ran#Mat Z[6,3⇒2→A
+  Text 51,38,"attak→"
+  {1,A,51,64}
+  Prog "TNT8"
   If A≠8
   Then 
     1→Mat Z[11,3
     A→Mat Z[11,4
+  IfEnd
+  If A=2
+  Then 
+    For 85→P To 88
+      Orange F-Line P,23,P,55
+    Next
   IfEnd
   If A≠2 And A≠8
   Then 
@@ -18,9 +28,6 @@ Then
     72→R
     A=3⇒90→R
     A=6⇒62→R
-    Text 51,38,"attak→               "
-    {1,A,51,64}
-    Prog "TNT8"
     {M,1}
     A=7⇒{M,7}
     Prog "TNT20"
@@ -34,9 +41,13 @@ Then
       Prog "TNT20"
       {M,1}
       Prog "TNT20"
-      6→P
-      15→Q
     IfEnd
+  IfEnd
+  If A=8
+  Then 
+    115→R
+    {M,0}
+    Prog "TNT20"
   IfEnd
   If A=1
   Then 
@@ -45,9 +56,6 @@ Then
   IfEnd
   If A=2
   Then 
-    For 85→A To 88
-      Orange F-Line A,23,A,55
-    Next
     9→P
     1→Q
   IfEnd
@@ -61,18 +69,10 @@ Then
     6→P
     10→Q
   IfEnd
-  If A=7
+  If A=5
   Then 
     6→P
-    26→Q
-  IfEnd
-  If A=8
-  Then 
-    115→R
-    {M,0}
-    Prog "TNT20"
-    6→P
-    30→Q
+    15→Q
   IfEnd
   If A=6
   Then 
@@ -80,11 +80,21 @@ Then
     6→P
     24→Q
   IfEnd
+  If A=7
+  Then 
+    6→P
+    26→Q
+  IfEnd
+  If A=8
+  Then 
+    6→P
+    30→Q
+  IfEnd
 Else 
-  Mat Z[8,Int 3Ran#+1→A
+  Mat Z[8,1+Int 3Ran#→A
   2→Mat Z[11,3
   A→Mat Z[11,4
-  Text 51,38,"pouvoir→             "
+  Text 51,38,"pouvoir→"
   {2,A,51,73}
   Prog "TNT8"
   If A=1 Or A=2
@@ -92,6 +102,14 @@ Else
     Circle 110,37,10
     10-A→P
     1→Q
+  IfEnd
+  If A=3
+  Then 
+    For 1→A To 40 Step 2
+      F-Line -A+90,38-A/2,-A+90,38+A/2
+    Next
+    6→P
+    7→Q
   IfEnd
   If A=4
   Then 
@@ -103,55 +121,6 @@ Else
     Orange F-Line 49,44,53,34
     6→P
     10→Q
-  IfEnd
-  If A=12
-  Then 
-    For 1→A To 40 Step 2
-      A<13⇒Green F-Line -A+90,38-A/2,-A+90,38+A/2
-      A>12⇒A<25⇒F-Line -A+90,38-A/2,-A+90,38+A/2
-      A>24⇒Orange F-Line -A+90,38-A/2,-A+90,38+A/2
-    Next
-    .2→X
-    Prog "T0"
-    For 4→P To 6
-      Cls
-      Plot 0,0
-      RclPict 1
-      Plot 0,0
-    Next
-    6→P
-    20→Q
-  IfEnd
-  If A=3
-  Then 
-    For 1→A To 40 Step 2
-      F-Line -A+90,38-A/2,-A+90,38+A/2
-    Next
-    6→P
-    7→Q
-  IfEnd
-  If A=14
-  Then 
-    Orange F-Line 90,40,43,36
-    .2→X
-    Prog "T0"
-    Cls
-    RclPict 1
-    Orange F-Line 90,40,49,40
-    .2→X
-    Prog "T0"
-    Cls
-    RclPict 1
-    Orange Text 22,45,":"
-    Text 51,38,"pouvoir→vampyr      "
-    .2→X
-    Prog "T0"
-    For 47→A To 99 Step 2
-      Orange F-Line A,39+3Ran#,A+1,39+3Ran#
-    Next
-    Int (16+10Ran#+Mat Z[6,1→Mat Z[6,1
-    6→P
-    22→Q
   IfEnd
   If A=5
   Then 
@@ -180,14 +149,31 @@ Else
     For 1→A To 3
       Cls
       RclPict 1
-      Text 51,38,"pouvoir→morsur      "
     Next
+    Text 51,38,"pouvoir→morsur"
     For 1→A To 6
       Orange Text Int 20Ran#+10,Int 20Ran#+40,"#"
     Next
     Mat Z[4,1]-1→Mat Z[4,1
     6→P
     14→Q
+  IfEnd
+  If A=9
+  Then 
+    For 1→A To 5
+      Orange F-Line 95,40,15Ran#+40,30Ran#+25
+      .2→X
+      Prog "T0"
+      Cls
+      RclPict 1
+    Next
+    Text 51,38,"pouvoir→griffe"
+    For 0→A To 6
+      Orange F-Line 15Ran#+40,30Ran#+25,15Ran#+40,30Ran#+25
+    Next
+    6→P
+    14→Q
+    Mat Z[5,1]-1→Mat Z[5,1
   IfEnd
   If A=10
   Then 
@@ -199,23 +185,6 @@ Else
     24→Q
     Int (Mat Z[6,1]-9-6Ran#→Mat Z[6,1
   IfEnd
-  If A=9
-  Then 
-    For 1→A To 5
-      Orange F-Line 95,40,15Ran#+40,30Ran#+25
-      .2→X
-      Prog "T0"
-      Cls
-      RclPict 1
-    Next
-    Text 51,38,"pouvoir→griffe       "
-    For 0→A To 5
-      Orange F-Line 15Ran#+40,30Ran#+25,15Ran#+40,30Ran#+25
-    Next
-    6→P
-    14→Q
-    Mat Z[5,1]-1→Mat Z[5,1
-  IfEnd
   If A=11
   Then 
     Green Circle 110,37,10
@@ -224,6 +193,47 @@ Else
     Next
     7→P
     Int (40+9Ran#→Q
+  IfEnd
+  If A=12
+  Then 
+    For 1→A To 40 Step 2
+      A<13⇒Green F-Line -A+90,38-A/2,-A+90,38+A/2
+      A>12⇒A<25⇒F-Line -A+90,38-A/2,-A+90,38+A/2
+      A>24⇒Orange F-Line -A+90,38-A/2,-A+90,38+A/2
+    Next
+    .2→X
+    Prog "T0"
+    For 4→P To 6
+      Cls
+      Plot 0,0
+      RclPict 1
+      Plot 0,0
+    Next
+    6→P
+    20→Q
+  IfEnd
+  If A=14
+  Then 
+    Orange F-Line 90,40,43,36
+    .2→X
+    Prog "T0"
+    Cls
+    RclPict 1
+    Orange F-Line 90,40,49,40
+    .2→X
+    Prog "T0"
+    Cls
+    RclPict 1
+    Orange Text 22,45,":"
+    Text 51,38,"pouvoir→vampyr"
+    .2→X
+    Prog "T0"
+    For 47→A To 99 Step 2
+      Orange F-Line A,39+3Ran#,A+1,39+3Ran#
+    Next
+    Int (16+10Ran#+Mat Z[6,1→Mat Z[6,1
+    6→P
+    22→Q
   IfEnd
   If A=15
   Then 
@@ -270,7 +280,7 @@ Else
       Orange F-Line A-6,17,A-3,23+Ans
       Orange F-Line A-3,23+Ans,A,17
     Next
-    Int (Mat Z[6,1]-20-Int 9Ran#→Mat Z[6,1
+    Int (Mat Z[6,1]-20-9Ran#→Mat Z[6,1
     6→P
     50→Q
   IfEnd
@@ -284,7 +294,7 @@ P=6⇒Mat Z[1,1]-Int (2Ran#+1⌟3Q+2⌟3Q(Mat Z[6,2]/Mat Z[5,1→Mat Z[1,1
 P>6⇒P<10⇒Q+Mat Z[6,P-6→Mat Z[6,P-6
 Mat Z[6,1]>Mat Z[7,4⇒Mat Z[7,4→Mat Z[6,1
 110→C
-1=Mat Z[11,3]⇒6=Mat Z[11,4⇒80→C
+1=Mat Z[11,3⇒6=Mat Z[11,4⇒80→C
 S=8⇒1+Int 3Ran#→Mat Z[1,1
 I≠Mat Z[1,1⇒Orange Text 5,60,Mat Z[1,1]-I
 J≠Mat Z[6,1⇒Orange Text 5,C,Mat Z[6,1]-J
@@ -300,6 +310,5 @@ Cls
 RclPict 1
 Orange Text 3,6,"   "
 Orange Text 3,6,Mat Z[1,1
-0→P~Q
 Mat Z[1,1→I
 Mat Z[6,1→J

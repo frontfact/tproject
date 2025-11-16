@@ -47,7 +47,7 @@ For 2→V To 5
 Next
 Mat Z[1,1→I
 Mat Z[6,1→J
-Text 57,3,"[EXE]→menu action            "
+Text 57,3,"[EXE]→menu action             "
 StoPict 1
 Do
   If Not Int (5Ran#Mat Z[6,4
@@ -67,7 +67,7 @@ Green Text 37,3," objet  "
 Green Text 43,3," aprend"
 Green Text 49,3," fuite  "
 1→r
-Text 57,3,"[EXE]→choisir une action     "
+Text 57,3,"[EXE]→choisir une action      "
 StoPict 1
 Do
   Green F-Line 3,-6r+43,5,-6r+43
@@ -92,12 +92,12 @@ If r=5
 Then 
   If Not Int 2Ran#
   Then 
-    Text 57,3,"Z prend la fuite...     "
+    Text 57,3,"Z prend la fuite...           "
     .6→X
     Prog "T0"
     Return
   Else 
-    Text 57,3,"Le monstre rattrape Z ! "
+    Text 57,3,"Le monstre rattrape Z !       "
     .6→X
     Prog "T0"
     0→P~Q
@@ -129,7 +129,7 @@ Then
     Prog "TNT8"
   Next
   1→r
-  Text 57,3,"[EXE]→Choisir une attak     "
+  Text 57,3,"[EXE]→choisir une attak       "
   Do
     Green F-Line 3,-6r+43,5,-6r+43
     Mat Z[r,4→V
@@ -167,6 +167,7 @@ Then
       Goto I
     IfEnd
   LpWhile θ≠31
+  Text 51,38,"                      "
   Mat Z[2,1]-O→Mat Z[2,1
   41→R
   If V=1
@@ -181,7 +182,7 @@ Then
   IfEnd
   If V=2
   Then 
-    Text 51,38,"defense +1            "
+    Text 51,38,"defense +1"
     {5,3}
     Prog "TNT5"
     4→P
@@ -189,7 +190,7 @@ Then
   IfEnd
   If V=3
   Then 
-    Text 51,38,"ennemi def -1        "
+    Text 51,38,"defense ennemi -1     "
     {8}
     Prog "TNT5"
     65→R
@@ -288,7 +289,7 @@ Then
     Prog "TNT8"
   Next
   1→r
-  Text 57,3,"[EXE]→Choisir un pouvoir    "
+  Text 57,3,"[EXE]→choisir un pouvoir      "
   0→O
   Do
     Green F-Line 3,-6r+43,5,-6r+43
@@ -334,16 +335,33 @@ Then
     IfEnd
   LpWhile θ≠31
   Mat Z[3,1]-O→Mat Z[3,1
-  If V=6
+  Text 51,38,"                      "
+  If V=1 Or V=2
   Then 
-    Text 51,38,"att+1 / def+1         "
-    Orange Circle 49,37,10
-    For 0→A To 9
-      Orange F-Line 49,37,Int 50Ran#+24,Int 50Ran#+12
-    Next
-    1+Mat Z[4,1→Mat Z[4,1
-    4→P
+    V=1⇒Text 51,38,"defense +1"
+    V=2⇒Text 51,38,"attaque +1"
+    Circle 49,37,10
+    5-V→P
     1→Q
+  IfEnd
+  If V=3
+  Then 
+    For 1→W To 40 Step 2
+      F-Line W+65,38-W/2,W+65,38+W/2
+    Next
+    1→P
+    7→Q
+  IfEnd
+  If V=4
+  Then 
+    Orange F-Line 67,55,67,61
+    .3→X
+    Prog "T0"
+    Orange F-Line 107,61,100,45
+    Orange F-Line 104,53,108,38
+    Orange F-Line 106,45,101,30
+    1→P
+    10→Q
   IfEnd
   If V=5
   Then 
@@ -366,6 +384,17 @@ Then
     Plot 0,0
     0→P~Q
   IfEnd
+  If V=6
+  Then 
+    Text 51,38,"attaque+1 / defense+1"
+    Orange Circle 49,37,10
+    For 0→A To 9
+      Orange F-Line 49,37,Int 50Ran#+24,Int 50Ran#+12
+    Next
+    1+Mat Z[4,1→Mat Z[4,1
+    4→P
+    1→Q
+  IfEnd
   If V=7
   Then 
     Graph Y<64
@@ -373,24 +402,57 @@ Then
     1→P
     16→Q
   IfEnd
-  If V=4
+  If V=8
   Then 
-    Orange F-Line 67,55,67,61
-    .3→X
-    Prog "T0"
-    Orange F-Line 107,61,100,45
-    Orange F-Line 104,53,108,38
-    Orange F-Line 106,45,101,30
-    1→P
-    10→Q
-  IfEnd
-  If V=3
-  Then 
-    For 1→W To 40 Step 2
-      F-Line W+65,38-W/2,W+65,38+W/2
+    For 1→A To 3
+      Cls
+      RclPict 1
+      Plot 0,0
+    Next
+    Text 51,38,"attaque ennemi -1"
+    For 1→A To 7
+      Orange Text Int 20Ran#+20,Int 20Ran#+96,"#"
     Next
     1→P
-    7→Q
+    14→Q
+    Mat Z[6,2]-1→Mat Z[6,2
+  IfEnd
+  If V=9
+  Then 
+    For 1→A To 5
+      Orange F-Line 67,53,Int 10Ran#+100,Int 25Ran#+20
+      .2→X
+      Prog "T0"
+      Cls
+      RclPict 1
+    Next
+    Text 51,38,"defense ennemi -1"
+    For 0→A To 5
+      Orange F-Line 11Ran#+99,25Ran#+20,11Ran#+99,25Ran#+20
+    Next
+    Mat Z[6,3]-1→Mat Z[6,3
+    1→P
+    14→Q
+  IfEnd
+  If V=10
+  Then 
+    Orange Circle 76,37,11
+    For 1→A To 35
+      Orange F-Line 76,37,Int 75Ran#+50,Int 50Ran#+14
+    Next
+    Int (Mat Z[1,1]-9-6Ran#→Mat Z[1,1
+    1→P
+    24→Q
+  IfEnd
+  If V=11
+  Then 
+    Text 51,38,"regenere..."
+    Green Circle 49,37,10
+    For 0→A To 9
+      Green F-Line 49,37,40Ran#+29,40Ran#+17
+    Next
+    2→P
+    Int (60+20Ran#→Q
   IfEnd
   If V=12
   Then 
@@ -408,29 +470,6 @@ Then
     1→P
     20→Q
   IfEnd
-  If V=1 Or V=2
-  Then 
-    V=1⇒Text 51,38,"Z defense +1          "
-    V=2⇒Text 51,38,"Z attaque +1          "
-    Circle 49,37,10
-    5-V→P
-    1→Q
-  IfEnd
-  If V=8
-  Then 
-    For 1→A To 3
-      Cls
-      RclPict 1
-      Plot 0,0
-    Next
-    Text 51,38,"ennemi att -1        "
-    For 1→A To 7
-      Orange Text Int 20Ran#+20,Int 20Ran#+96,"#"
-    Next
-    1→P
-    14→Q
-    Mat Z[6,2]-1→Mat Z[6,2
-  IfEnd
   If V=14
   Then 
     Orange F-Line 67,53,104,36
@@ -446,50 +485,13 @@ Then
     Orange Text 25,104,":"
     .3→X
     Prog "T0"
-    Text 51,38,"Z absorbe vie ennemi !"
+    Text 51,38,"absorbe vie ennemi !"
     For 103→A To 47 Step -2
       Orange F-Line A,36+3Ran#,A-1,36+3Ran#
     Next
-    Int (20+10Ran#+Mat Z[1,1→Mat Z[1,1
+    Int (20+10Ran#)+Mat Z[1,1→Mat Z[1,1
     1→P
     22→Q
-  IfEnd
-  If V=10
-  Then 
-    Orange Circle 76,37,11
-    For 1→A To 35
-      Orange F-Line 76,37,Int 75Ran#+50,Int 50Ran#+14
-    Next
-    Int (Mat Z[1,1]-9-6Ran#→Mat Z[1,1
-    1→P
-    24→Q
-  IfEnd
-  If V=9
-  Then 
-    For 1→A To 5
-      Orange F-Line 67,53,Int 10Ran#+100,Int 25Ran#+20
-      .2→X
-      Prog "T0"
-      Cls
-      RclPict 1
-    Next
-    Text 51,38,"ennemi def -1        "
-    For 0→A To 5
-      Orange F-Line 11Ran#+99,25Ran#+20,11Ran#+99,25Ran#+20
-    Next
-    Mat Z[6,3]-1→Mat Z[6,3
-    1→P
-    14→Q
-  IfEnd
-  If V=11
-  Then 
-    Text 51,38,"Z regenere...        "
-    Green Circle 49,37,10
-    For 0→A To 9
-      Green F-Line 49,37,40Ran#+29,40Ran#+17
-    Next
-    2→P
-    Int (60+20Ran#→Q
   IfEnd
   If V=15
   Then 
@@ -561,20 +563,20 @@ Then
   Mat Z[11,4→C
   {O,C,51,81}
   Prog "TNT8"
-  Text 57,3,"                             "
+  Text 57,3,"                              "
   0→L
   For 1→K To 5
     C=Mat Z[K,5-O⇒1→L
   Next
   If L
   Then 
-    Text 57,3,"tu connais deja cela.       "
+    Text 57,3,"tu connais deja cela.         "
     .7→X
     Prog "T0"
     0→P~Q
     Goto D
   IfEnd
-  Text 57,3,"[EXE]→oui       [EXIT]→retour"
+  Text 57,3,"[EXE]→oui       [EXIT]→retour "
   Do
     Getkey→θ
   LpWhile θ≠31 And θ≠47
@@ -601,7 +603,7 @@ Then
     0→Mat Z[11,3
     Goto D
   Else 
-    Text 57,3,"  ...tu n'as plus de place..."
+    Text 57,3,"  ...tu n'as plus de place... "
     .7→X
     Prog "T0"
     Green Text 51,81,"       "
