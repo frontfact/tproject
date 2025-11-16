@@ -347,13 +347,8 @@ Then
   IfEnd
   If V=5
   Then 
-    If M≠7
-    Then 
-      For 3→B To 39 Step 6
-        Text B,71,"              "
-      Next
-      Text 41,71,"              "
-    IfEnd
+    {M,2}
+    Prog "TNT20"
     Text 11,86,"vitesse"
     Text 20,80,"vie:   /"
     Text 30,90,"att:"

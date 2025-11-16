@@ -13,44 +13,29 @@ Then
   IfEnd
   If A≠2 And A≠8
   Then 
-    If M≠7
-    Then 
-      For 3→Q To 39 Step 6
-        Text Q,71,"              "
-      Next
-      Text 41,71,"             "
-    IfEnd
-    If A=3
-    Then 
-      90→R
-    Else 
-      72→R
-    IfEnd
+    {M,2}
+    Prog "TNT20"
+    72→R
+    A=3⇒90→R
     A=6⇒62→R
-    A=7⇒7→W
     Text 51,38,"attak→               "
     {1,A,51,64}
     Prog "TNT8"
-    0→C
-    If M≠7
+    {M,1}
+    A=7⇒{M,7}
+    Prog "TNT20"
+    If A=5
     Then 
+      .3→X
+      Prog "T0"
+      Cls
+      RclPict 1
+      {M,2}
       Prog "TNT20"
-      If A=5
-      Then 
-        .3→X
-        Prog "T0"
-        Cls
-        RclPict 1
-        72→R
-        0→C
-        For 3→Q To 39 Step 6
-          Text Q,71,"              "
-        Next
-        Text 41,71,"              "
-        Prog "TNT20"
-        6→P
-        15→Q
-      IfEnd
+      {M,1}
+      Prog "TNT20"
+      6→P
+      15→Q
     IfEnd
   IfEnd
   If A=1
@@ -84,8 +69,8 @@ Then
   If A=8
   Then 
     115→R
-    π→C
-    M≠7⇒Prog "TNT20"
+    {M,0}
+    Prog "TNT20"
     6→P
     30→Q
   IfEnd
@@ -305,7 +290,7 @@ I≠Mat Z[1,1⇒Orange Text 5,60,Mat Z[1,1]-I
 J≠Mat Z[6,1⇒Orange Text 5,C,Mat Z[6,1]-J
 If I≠Mat Z[1,1] Or J≠Mat Z[6,1
 Then 
-  .3→X
+  .7→X
   Prog "T0"
 IfEnd
 Prog "TNT19"

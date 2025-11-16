@@ -57,7 +57,7 @@ tntsoft@fastmail.com
 - [ ] Display progress in user menu
 - [x] Use getkey to block vision spell
 - [ ] Rename programs as "Z01" "Z02" etc.
-- [ ] Refactor monster drawings like Z/TNT5
+- [x] Refactor monster drawings like Z/TNT5
 - [ ] Refactor TNT12 using a matrix
 - [ ] Rewrite TNT3
 - [ ] Rewrite TNT15

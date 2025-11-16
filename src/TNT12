@@ -210,7 +210,8 @@ For 1→B To 3
   Ans→Mat Z[8,B
 Next
 115→R
-M≠7⇒Prog "TNT20"
+{M,1}
+Prog "TNT20"
 If S=43 Or S=44 Or S=32 Or S=33 Or S=8 Or S=10.5 Or S=99 Or S=28.5
 Then 
   S=44 Or S=33 Or S=8⇒Text 51,75,"Enzo   "

@@ -1,8 +1,19 @@
+List Ans[1→M
+M=7⇒Return
+List Ans[2→C
+If C=2
+Then 
+  For 3→D To 39 Step 6
+    Text D,71,"              "
+  Next
+  Text 41,71,"             "
+  Return
+IfEnd
 S-Gph1 DrawOff
 S-Gph2 DrawOn
 If M=1
 Then 
-  If C≠π
+  If C
   Then 
     R-12≠List 3[8⇒{125,R+5,R+5,R-15,R-20,R-12,R-7,R-12,R-17,R-13,125}→List3
     DrawStat
@@ -20,20 +31,20 @@ Then
 IfEnd
 If M=2
 Then 
-  If C≠π
+  If C
   Then 
     R-16≠List 3[8⇒{R-5,R-3,R-9,R-10,R-11,R-17,R-14,R-16,R-14,R-12,R-11,R-12,R-11,R-12,R-9,R-8,R-9,R-5,R-5,R-6,R-5,R-5}→List3
     DrawStat
   Else 
-    For 105→C To 50 Step -7-Int 2Ran#
-      Orange F-Line C,33,C-5,36
-      Orange F-Line C-4,33,C-9,30
+    For 105→D To 50 Step -7-Int 2Ran#
+      Orange F-Line D,33,D-5,36
+      Orange F-Line D-4,33,D-9,30
     Next
   IfEnd
 IfEnd
 If M=3
 Then 
-  If C≠π
+  If C
   Then 
     R-21≠List 3[8⇒{R+9,R+1,R+4,R-8,R-4,R-9,R-18,R-21,R-22,R-24,R-17,R-16,R-17,R-17,R-16,R-18,R-16,R-16,R-8,R-8,R-9,R-15,R-9,R-8,R-6,R-5,R-8,R-5,R-6,R-5,R-2,R-1,R-2,R-5,R-2,R,R,R+6}→List3
     DrawStat
@@ -50,64 +61,63 @@ Then
 IfEnd
 If M=4
 Then 
-  If C≠π
+  If C
   Then 
     R≠List 3[8⇒{108,R-6,R+1,R+3,R+3,R,R+2,R,R-1,R-3,R-6,R-3,R,R-2,R-5,R-11,R-14,R-16,R-15,R-16,R-14,R-12,R-13,R-13,R-12,R-9,R-9,R-11,R-12,R-11,R-13,R-15,R-14,R-15,R-15,R-11,R-8,R-7,R-8,108}→List3
     Text 16,R-11,"."
     DrawStat
   Else 
-    0→D
-    For 100→C To 50 Step -6
-      Orange F-Line C,38,C-7,38
-      Orange F-Line C,38+D,C-7,40+D
-      Orange F-Line C,38-D,C-7,36-D
-      Orange F-Line C-7,40+D,C-7,36-D
-      D+2→D
+    0→r
+    For 100→D To 50 Step -6
+      Orange F-Line D,38,D-7,38
+      Orange F-Line D,38+r,D-7,40+r
+      Orange F-Line D,38-r,D-7,36-r
+      Orange F-Line D-7,40+r,D-7,36-r
+      r+2→r
     Next
   IfEnd
 IfEnd
 If M=5
 Then 
-  If C≠π
+  If C
   Then 
     R-21≠List 3[8⇒{125,R,R-11,R-12,R-18,R-21,R-23,R-21,R-18,R-20,R-20,R-19,R-20,R-15,R-10,R-9,R-12,R-7,R-6,R-4,125,R-4}→List3
     DrawStat
     F-Line R-17,24,R-16,26
   Else 
-    For 92→A To 67 Step -1
-      Orange PlotOn A,Int (-.84A+109.28)
+    For 92→D To 67 Step -1
+      Orange PlotOn D,Int (-.84D+109.28)
     Next
-    For 1→B To 15
+    For 1→D To 15
       Orange PlotChg 66+3Ran#,52+3Ran#
     Next
-    For 60→A To 20 Step -4+2Ran#
-      Orange F-Line 67,53,45+2Ran#,A
+    For 60→D To 20 Step -4+2Ran#
+      Orange F-Line 67,53,45+2Ran#,D
     Next
   IfEnd
 IfEnd
 If M=6
 Then 
-  If C≠π
+  If C
   Then 
     R-7≠List 3[8⇒{125,R+7,R+4,R,R-3,R-6,R-6,R-7,R-2,R-2,R-3,R-5,R-8,R-9,R-14,R-17,R-17,R-18,R-16,R-18,R-21,R-21,R-19,R-21,R-19,R-14,R-14,R-16,R-17,R-16,R-12,R-11,R-9,R-13,R-13,R-10,R-7,R+2,R+5,R+9,125}→List3
     DrawStat
   Else 
     0→G~H
-    For 100→C To 55 Step -5
+    For 100→D To 55 Step -5
       Int 5Ran#-2→G
-      C=55⇒0→G
-      Orange F-Line C,40+H,C-5,40+G
-      Orange F-Line C,41+H,C-5,41+G
+      D=55⇒0→G
+      Orange F-Line D,40+H,D-5,40+G
+      Orange F-Line D,41+H,D-5,41+G
       G→H
     Next
     Orange F-Line 50,42,48,42
     Orange F-Line 50,39,48,39
   IfEnd
 IfEnd
-If W=7
+If C=7
 Then 
-  For 1→W To 20
+  For 1→D To 20
     Orange F-Line 52,42,24Ran#+40,24Ran#+30
   Next
 IfEnd
-0→C
