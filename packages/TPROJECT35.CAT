@@ -431,7 +431,7 @@ V+Q\->B
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1119
+Capacity:1082
 File Name:TNT3
 Group Name:
 Password:
@@ -462,7 +462,7 @@ J\->\Mat Z[12,5
 \Cls
 \RclPict 1
 \IfEnd
-V=3\ And ((H=5\ And G=2\ And \Not \Mat Z[10,1])\ Or (G=16\ And H=2\ And \Mat Z[12,2\=>\Prog "TNT15"
+V=3\ And \Not \Mat Z[10,1\=>\Prog "TNT15"
 \If \R b2=1\ Or \R b2=3
 \Then \If \R b2=3\ Or (100\Frac 10\R b0=\Mat Z[12,6
 \Then \Text 31,10,"      "
@@ -507,7 +507,7 @@ V\->\Mat Z[11,1
 \LpWhile \Not \theta
 \theta\->\Mat Z[9,3
 \Mat Z[12,1\=>\Prog "TNT15"
-\Ans=\sin 9\=>\GotoS
+\Ans=\Pi\=>\GotoS
 \If \theta=48
 \Then \Text 31,10,"       "
 \Text 23,2,"         "
@@ -554,7 +554,7 @@ N=2\ Or O>3\ Or (H=1\ And \theta=28)\ Or (G=1\ And \theta=38)\=>\Goto1
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:8624
+Capacity:10403
 File Name:TNT4
 Group Name:
 Password:
@@ -563,12 +563,10 @@ Option2:
 Option3:
 Option4:
 %Data Record
+100\Frac 10\R b0\->W
+\Not W\=>\Return
 0\->\R a1
 0\->\R a2
-\R b0=.142\=>\Prog "TNT15"
-\If \Frac 10\R b0
-\Then \ClrText
-100\Frac 10\R b0\->W
 \Mat Z[12,6\->Z
 \If W\<>Z
 \Then \Text 54,60,"HUM ?"
@@ -577,6 +575,7 @@ Option4:
 \Text 54,60,"      "
 \Return
 \IfEnd
+\ClrText
 \If W=1
 \Then "ZZZZ...    zzzz...     ZZZZ...    ?!"
 " "
@@ -598,10 +597,11 @@ Option4:
 "Bute-le et reviens"
 "me voir."\Disp\ClrText
 "Prends cet argent et"
-"achete-toi soin,"
+"va au magasin"
+"t'acheter soin,"
 "adrena et chlore :"
-"Tu devras combattre."\Disp20.109\->\Mat A[2,5
-\Isz Z
+"tu en auras besoin"
+"pour combattre."\Disp\Isz Z
 230\->\Mat Z[10,4
 \IfEnd
 \If W=3
@@ -666,7 +666,8 @@ Option4:
 "ma confiance."
 \IfEnd
 "Prends ces skulls et"
-"soigne-toi."\Disp\ClrText
+"va te reposer a"
+"l'auberge."\Disp\ClrText
 "Ensuite,va a TARA,"
 "un ami t'y attend."\Disp60+\Mat Z[10,4\->\Mat Z[10,4
 10\->Z
@@ -850,15 +851,6 @@ X>89\=>\Break
 "Tue le mandivor qui  terrorise ma ville   et gagne 4000\@24."\Disp"...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
 \Isz Z
 \IfEnd
-\If W=23
-\Then I\->\R a1
-J\->\R a2
-"Le mandivor !"
-3\->X
-\Prog "T0"
-\Prog "TNT14"
-"Plutot coriace..."\Disp24\->Z
-\IfEnd
 \If W=24\ And 4999<\Mat Z[10,4
 \Then "Dur de m'en separer, mais j'ai vraiment"
 "besoin d'argent en cemoment. Le voici."\Disp"Z obtient MAGMA !"\Disp\Mat Z[10,4]-5000\->\Mat Z[10,4
@@ -895,9 +887,15 @@ J\->\R a2
 \Then "Ben voyons..."\Disp\Else "Exact."
 "Ecoute bien."\Disp\ClrText
 "Les prismes ont troisfonctions."\Disp\ClrText
-"\=>Invocation en combat\=>les 3 reunis formentl'ARME SUPREME"
-"\=>Inscriptions de"
-"sagesse:j'ignore leurrole."\Disp\ClrText
+"D'abord, tu peux les"
+"invoquer lors d'un"
+"combat."\Disp" "
+"Ensuite, les 3 reunisforment l'ARME SUPREME"\Disp" "
+"Enfin, il parait"
+"que les inscriptions de sagesse qu'ils"
+"arborent ont un"
+"secret."
+"J'ignore lequel."\Disp\ClrText
 "Reviens me voir"
 "si tu as les"
 "3 prismes et"
@@ -918,7 +916,7 @@ J\->\R a2
 \IfEnd
 \If W=29
 \Then "Enzo \@26 Redox :"
-"\Donne-nous le colis, il est indispensable au Projet T."\Disp\ClrText
+"Donne-nous le colis, il est indispensable au Projet T."\Disp\ClrText
 "Le Projet T ?"
 "Mais de quoi s'agit- -il ?!"\Disp\ClrText
 "Nous t'offrons la"
@@ -975,7 +973,7 @@ J\->\R a2
 I\->\R a1
 J\->\R a2
 \Prog "TNT14"
-33\->W
+33\->Z
 "Enzo : Je vais"
 "t'aneantir, miserableinsecte !!!"
 " "
@@ -1006,6 +1004,25 @@ J\->\R a2
 \Text 52,2,"J'AI UN BATEAU DE PECHE ICI:"
 \Text 58,2,"MONTEZ,VITE !!! \->EXE"\Disp\Isz Z
 \IfEnd
+\If W=39
+\Then "Z ! Je craignais de  ne jamais te revoir."\Disp\ClrText
+"Le temps presse, j'aibesoin de cette arme qui peut sauver GAIA."\Disp\ClrText
+"L'Arme Ultime..."\Disp\If 3>\Mat Z[7,5
+\Then "Il me faut 3 groseyesFais vite !"\Disp\Return
+\IfEnd
+"Tu as les 3 prismes  et les 3 groseyes ?  Laisse-moi un peu de temps."\Disp\Mat Z[7,5]-3\->\Mat Z[7,5
+\Isz Z
+23.140\->\Mat A[2,16
+\IfEnd
+\If W=40
+\Then "La Tarte aux groseyesest prete."\Disp"COMMENT ?!!!"\Disp"Oh, je ne te l'avais pas dit ?"\Disp\ClrText
+"L'Arme Ultime est uneTarte aux groseyes,  faite des PRISMES et de 3 GROSEYES."\Disp"(une tarte...)"\Disp\ClrText
+"Utilise-la contre"
+"Tomberry. Compris ?"\Disp"Bien sur."\Disp\ClrText
+"Je te laisse, Sage.  Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
+"C'est ca. Adieu."\Disp1\->\Mat Z[8,5
+\Isz Z
+\IfEnd
 \If W=41
 \Then "Wills: Tu n'es pas"
 "avec Jessie ?"
@@ -1019,8 +1036,84 @@ J\->\R a2
 "SANCTUA ?"\Disp"Son repaire sacre."\Disp"Bien. J'y vais."\Disp\ClrText
 "J'espere que tu sais ce que tu fais."\Disp"Moi aussi."\Disp\Isz Z
 \IfEnd
-Z\->\Mat Z[12,6
+\If W=42
+\Then \ClrText
+"TU ME DEFIES, ETRANGEMORTEL ?"\Disp"Je viens mettre fin aton regne."\Disp"AH AH AH..."\Disp\ClrText
+"TU DEVRAS D'ABORD"
+"VAINCRE MES DISCIPLES"\Disp\ClrText
+"Redox ? Enzo ?"
+"Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
+43\->Z
+\Prog "TNT14"
+44\->Z
+\Prog "TNT14"
+9\->V
+0\->\R b0
+55\->\Mat Z[12,6
+\Prog "TNT13"
+\ClrText
+"IMPRESSIONNANT..."
+"MAIS QUE PEUX-TU"
+"CONTRE MOI ?"\Disp\If \Not \Mat Z[8,5
+\Then "SANS L'ARME SUPREME  TU N'ES RIEN !"
+1\->X
+\Prog "T0"
+\For 31\->A \To 19 \Step -6
+\Text A,81,"   "
+\Next 
+.\->\Mat Z[1,1
+\Prog "TNT21"
 \IfEnd
+"Je peux...  CA."\Disp"Z envoie :"
+"Tarte aux groseyes !"
+.5\->X
+\Prog "T0"
+87\->A
+38\->B
+5\->C
+\StoPict 1
+\BG-Pict 1
+\For 0\->D \To 9
+\Cls
+\Plot 0,0
+\Next 
+\BG-None
+\For 1\->D \To 1800 \Step 50
+\F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
+\Isz C
+.1\->X
+\Prog "T0"
+\Next 
+3\->C
+\For 1800\->D \To 1 \Step -40
+\F-Line A+C\sin D,B+C\cos D,A+C\sin (D-40),B+C\cos (D-40
+\F-Line A,B,A+60\Ran#-30,B+60\Ran#-30
+C+.6\->C
+.1\->X
+\Prog "T0"
+\Next 
+\Cls
+\Plot 0,0
+5\->X
+\Prog "T0"
+\ClrText
+"Z ?...      Z ?!"\Disp"Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
+"Jessie: Ton dernier"
+"combat a bien failli t'etre fatal..."\Disp"Et...et Tomberry ?"\Disp"Detruit. A jamais."
+2\->X
+\Prog "T0"
+\Prog "TNT12"
+117\->R
+{M,1}
+\Prog "TNT20"
+\StoPict 1
+117\->R
+\ViewWindow 127,-1,0,63,1,0
+\RclPict 1
+\Prog "TNT20"
+\Text 30,51,"THE END"\Disp\Stop
+\IfEnd
+Z\->\Mat Z[12,6
 %End
 %Header Record
 Format:TXT
@@ -1919,7 +2012,7 @@ Option4:
 \Identity 1\->\Mat A
 0\->\Mat Z[8,4
 0\->S
-W=43\ Or W=44\ Or W=32\ Or W=33\ Or W=28.5\ Or W=8\ Or W=10.5\ Or W=23\ Or W=29\ Or W=99\=>W\->S
+Z=43\ Or Z=44\ Or Z=32\ Or Z=33\ Or Z=28.5\ Or Z=8\ Or Z=10.5\ Or Z=23\ Or Z=29\ Or Z=99\=>Z\->S
 S\=>1\->\Mat Z[8,4
 \For 4\->X \To 5
 \Mat Z[X,2\->\Mat Z[X,1
@@ -2133,7 +2226,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5331
+Capacity:5373
 File Name:TNT13
 Group Name:
 Password:
@@ -2201,7 +2294,9 @@ Z>21\=>12.124\->\Mat A[2,6
 [[.4,.4,.4,.,.,30,22,20.4,32,12,.,.4,.4,.4,.4,2.4][.4,.4,.,.,.4,3,2.4,.4,20.4,32,2,.,.4,.4,20.4,23.127][.4,.4,.,.4,20.4,22.126,23,.4,.4,22.4,32.127,2,.,.4,.4,20][.4,2.4,.,.,.,.4,.,.,30,22.127,22.4,32.127,.,.4,.,22][30,22.127,.4,.,.4,.4,.4,.4,.,20.4,32.127,.,.,.4,20,23][.,.4,2.4,2,.,.,.,.,.,.4,.4,.,.4,2.4,.,20][.,30,22.2,32,.,.4,.4,2.4,2.4,.4,.4,.,20.4,23,.4,20][.,20.4,23.3,23,.,.4,20.4,23,23,.4,.4,.,.4,.,.,23][.,.,.,.,.,.,.,.,.,.,.,3,.,.,20.4,22][.4,.4,.4,.4,.4,.4,.4,.4,.4,.4,20.4,22,.4,.4,.4,.4]]\->\Mat A
 60\->I
 20\->J
-Z>27\=>22.128\->\Mat A[3,6
+Z>26\=>22.128\->\Mat A[3,6
+Z>38\=>23.139\->\Mat A[2,16
+Z>39\=>23.140\->\Mat A[2,16
 \IfEnd
 \If V=4
 \Then \Text 5,3,"WINHILL"
@@ -3056,7 +3151,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3672
+Capacity:1782
 File Name:TNT15
 Group Name:
 Password:
@@ -3065,35 +3160,37 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\R b0=.142\=>\GotoF
-\Mat Z[12,6\->W
+\Mat Z[12,6\->Z
 \If \theta=29
-\Then \If W=28.5\ Or W=36\ Or W=37
-\Then \GotoO
-\Else \Return
-\IfEnd
+\Then Z=28.5\ Or Z=36\ Or Z=37\=>\GotoO
+\Return
 \IfEnd
 \If \Mat Z[12,1
 \Then \Mat Z[12,1]-1\->\Mat Z[12,1
 \Mat Z[12,1\=>\Return
 \ClrText
-\If 36=W
+\If Z=36
 \Then "Trop tard !..."
 "TOMBERRY.... NON !!!!"
-\sin 5\->X
 .\->\Mat Z[1,1
-\GotoT
+\Prog "TNT21"
 \IfEnd
-\If 23=W
-\Then .123\->\R b0
-\Prog "TNT4"
+\If Z=23
+\Then I\->\R a1
+J\->\R a2
+\ClrText
+"Le mandivor !"
+2\->X
+\Prog "T0"
+\Prog "TNT14"
+"Plutot coriace..."\Disp24\->\Mat Z[12,6
 \Mat Z[11,1\->V
 \R a1\->\Mat Z[12,4
 \R a2\->\Mat Z[12,5
-\sin 9
+\Pi
 \Return
 \IfEnd
-\If 4=\Mat Z[12,6
+\If Z=4
 \Then \ClrText
 "Une gemme !"
 "Encore une a trouver."\Disp6\->\Mat Z[12,6
@@ -3101,20 +3198,22 @@ Option4:
 \IfEnd
 \Lbl O
 \ClrText
-\If W=28.5
+\If Z=28.5
 \Then "STOP. Aucun humain"
 "n'est autorise a"
 "sortir pour l'inst.."
 "Je suis presse."
+1\->X
+\Prog "T0"
 \Prog "TNT14"
 29\->\theta
 \theta\->\Mat Z[12,6
 \IfEnd
-\If W=36
+\If Z=36
 \Then "Les portes de la"
 "ville sont mobiliseespour l'evacuation !  Passons par le port !"\Disp0\->\theta
 \IfEnd
-\If W=37
+\If Z=37
 \Then \PlotOff I,J
 \For 21\->A \To 11 \Step -5
 \Text A,A+37,"\theta"
@@ -3124,22 +3223,17 @@ Option4:
 \Next 
 38\->\Mat Z[12,6
 0\->\Mat Z[9,3
-.7\->X
-\Prog "T0"
-\sin 5\->X
-\GotoT
+\Prog "TNT21"
 \IfEnd
 \If Z=38
 \Then 14\->B
 \For 47\->A \To 73
 \Isz B
 \PlotOn A,B
-.2\->X
+.1\->X
 \Prog "T0"
 \PlotOff A,B
 \Next 
-41\->\Mat Z[12,6
-1\->\Mat Z[12,2
 "On debarque ici."\Disp"Tu comprends qui est Tomberry maintenant ?Il nous faut trouver un moyen de"
 "l'arreter, sinon..."\Disp\ClrText
 "C'est la fin de Gaia."\Disp"Je prends les choses en main."\Disp\ClrText
@@ -3158,6 +3252,7 @@ Option4:
 \Next 
 \Next 
 9\->\Mat Z[10,3
+39\->\Mat Z[12,6
 \IfEnd
 \If V=3\ And H=5\ And G=2\ And \Not \Mat Z[10,1
 \Then "Mais nous avons le"
@@ -3167,136 +3262,23 @@ Option4:
 \IfEnd
 \If A=60\ And B=42\ And \Not \Mat Z[10,2
 \Then "Le tresor..."\Disp"Ca semble trop facilepour etre vrai."\Disp"Voix : En effet..."
-99\->W
+2\->X
+\Prog "T0"
 A\->\Mat Z[9,1
 B\->\Mat Z[9,2
+99\->Z
 \Prog "TNT14"
 "Tu m'as vaincu,"
 "le tresor est a toi."\Disp"Z obtient :"
 "-3 soin+"
 "-3 groseyes"
-"-300 skulls"\Disp\For 2\->O \To 7 \Step 5
-3+\Mat Z[O,5\->\Mat Z[O,5
-\Next 
+"-300 skulls"\Disp3+\Mat Z[2,5\->\Mat Z[2,5
+3+\Mat Z[7,5\->\Mat Z[7,5
 300+\Mat Z[10,4\->\Mat Z[10,4
 1\->\Mat Z[10,2
 \Mat Z[9,1\->A
 \Mat Z[9,2\->B
 \IfEnd
-\If G=16\ And H=2\ And V=3\ And \Mat Z[12,2
-\Then \If 1=\Mat Z[12,2
-\Then "Z ! Je craignais de  ne jamais te revoir."\Disp\ClrText
-"Le temps presse, j'aibesoin de cette arme qui peut sauver GAIA."\Disp\ClrText
-"L'Arme Ultime..."\Disp\If 3>\Mat Z[7,5
-\Then "Il me faut 3 groseyesFais vite."\Disp\Else "Tu as les 3 prismes  et les 3 groseyes ?  Laisse-moi un peu de temps."\Disp0.5\->\Mat Z[12,2
-\Mat Z[7,5]-3\->\Mat Z[7,5
-\IfEnd
-\Else 0\->\Mat Z[12,2]
-"La Tarte aux groseyesest prete."\Disp"COMMENT ?!!!"\Disp"Oh, je ne te l'avais pas dit ?"\Disp\ClrText
-"L'Arme Ultime est uneTarte aux groseyes,  faite des PRISMES et de 3 GROSEYES."\Disp"(une tarte...)"\Disp\ClrText
-"Utilise-la contre"
-"Tomberry. Compris ?"\Disp"Bien sur."\Disp\ClrText
-"Je te laisse, Sage.  Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
-"C'est ca. Adieu."\Disp1\->\Mat Z[8,5
-\IfEnd
-\IfEnd
-\Lbl T
-\If X=\sin 5
-\Then \StoPict 1
-\BG-Pict 1
-\For 1\->W \To 9
-\Plot 0,0
-\Cls
-\Next 
-\Plot 0,0
-\BG-None
-\For 1\->W \To 32
-\Text \Int 33\Ran#+7,\Int 53\Ran#+53,"  \aster "
-\Text \Int 33\Ran#+7,\Int 53\Ran#+53,"    "
-\Text \Int 33\Ran#+7,\Int 53\Ran#+53," \aster  "
-\Next 
-\If \Not \Mat Z[1,1
-\Then \Cls
-\Text 30,41,"GAME OVER..."
-\Stop
-\IfEnd
-\IfEnd
-\Return
-\Lbl F
-\ClrText
-"TU ME DEFIES, ETRANGEMORTEL ?"\Disp"Je viens mettre fin aton regne."\Disp"AH AH AH..."\Disp\ClrText
-"TU DEVRAS D'ABORD"
-"VAINCRE MES DISCIPLES"\Disp\ClrText
-"Redox ? Enzo ?"
-"Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
-43\->W
-\Prog "TNT14"
-44\->W
-\Prog "TNT14"
-9\->V
-0\->\R b0
-55\->\Mat Z[12,6
-\Prog "TNT13"
-\ClrText
-"IMPRESSIONNANT..."
-"MAIS QUE PEUX-TU"
-"CONTRE MOI ?"\Disp\If \Not \Mat Z[8,5
-\Then "SANS L'ARME SUPREME  TU N'ES RIEN !"
-.3\->X
-\Prog "T0"
-0\->\Mat Z[1,1
-\For 31\->A \To 19 \Step -6
-\Text A,81,"   "
-\Next 
-\sin 5\->X
-\GotoT
-\Else "Je peux...  CA."\Disp"Z envoie :"
-"Tarte aux groseyes !"
-\IfEnd
-.3\->X
-\Prog "T0"
-87\->A
-38\->B
-5\->C
-\StoPict 1
-\BG-Pict 1
-\For 0\->D \To 9
-\Cls
-\Plot 0,0
-\Next 
-\BG-None
-\For 1\->D \To 1800 \Step 50
-\F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
-\Isz C
-\Next 
-3\->C
-\For 1800\->D \To 1 \Step -40
-\F-Line A+C\sin D,B+C\cos D,A+C\sin (D-40),B+C\cos (D-40
-\F-Line A,B,A+60\Ran#-30,B+60\Ran#-30
-C+.6\->C
-\Next 
-\Cls
-\Plot 0,0
-5\->X
-\Prog "T0"
-\ClrText
-"Z ?...      Z ?!"\Disp"Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
-"Jessie: Ton dernier"
-"combat a bien failli t'etre fatal..."\Disp"Et...et Tomberry ?"\Disp"Detruit. A jamais."
-2\->X
-\Prog "T0"
-\Lbl R
-\Prog "TNT12"
-117\->R
-{M,1}
-\Prog "TNT20"
-\StoPict 1
-117\->R
-\ViewWindow 127,-1,0,63,1,0
-\RclPict 1
-\Prog "TNT20"
-\Text 30,51,"THE END"
-\Stop
 %End
 %Header Record
 Format:TXT
@@ -3426,7 +3408,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:69
+Capacity:57
 File Name:TNT19
 Group Name:
 Password:
@@ -3436,8 +3418,7 @@ Option3:
 Option4:
 %Data Record
 \If 1>\Mat Z[1,1
-\Then \Text 3,6,"0  "
-2\->X
+\Then 2\->X
 \Prog "T0"
 \Cls
 \Text 30,41,"GAME OVER..."
@@ -3560,6 +3541,34 @@ G\->H
 \F-Line 52,42,24\Ran#+40,24\Ran#+30
 \Next 
 \IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:131
+File Name:TNT21
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\StoPict 1
+\BG-Pict 1
+\For 1\->W \To 9
+\Plot 0,0
+\Cls
+\Next 
+\Plot 0,0
+\BG-None
+\For 1\->W \To 32
+\Text \Int 33\Ran#+7,\Int 53\Ran#+53,"  \aster "
+\Text \Int 33\Ran#+7,\Int 53\Ran#+53,"    "
+\Text \Int 33\Ran#+7,\Int 53\Ran#+53," \aster  "
+\Next 
+\Prog "TNT19"
 %End
 %Header Record
 Format:TXT

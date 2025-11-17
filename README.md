@@ -60,7 +60,7 @@ tntsoft@fastmail.com
 - [x] Refactor monster drawings like Z/TNT5
 - [ ] Refactor TNT12 using a matrix
 - [ ] Rewrite TNT3
-- [ ] Rewrite TNT15
+- [x] Rewrite TNT15
 - [x] Fix blinking screen around progress 9 when searching for gems in botma (on G35+)
 - [x] Notice in markdown/pdf
 	- [x] screenshots of attaks/powers

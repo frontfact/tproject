@@ -1,6 +1,5 @@
 If 1>Mat Z[1,1
 Then 
-  Orange Text 3,6,"0  "
   2→X
   Prog "T0"
   Cls

@@ -21,7 +21,7 @@ Then
   Cls
   RclPict 1
 IfEnd
-V=3 And ((H=5 And G=2 And Not Mat Z[10,1]) Or (G=16 And H=2 And Mat Z[12,2⇒Prog "TNT15"
+V=3 And Not Mat Z[10,1⇒Prog "TNT15"
 If b₂=1 Or b₂=3
 Then 
   If b₂=3 Or (100Frac 10b₀=Mat Z[12,6
@@ -73,7 +73,7 @@ Do
 LpWhile Not θ
 θ→Mat Z[9,3
 Mat Z[12,1⇒Prog "TNT15"
-Ans=sin 9⇒Goto S
+Ans=π⇒Goto S
 If θ=48
 Then 
   Green Text 31,10,"       "

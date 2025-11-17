@@ -1,7 +1,7 @@
 Identity 1→Mat A
 0→Mat Z[8,4
 0→S
-W=43 Or W=44 Or W=32 Or W=33 Or W=28.5 Or W=8 Or W=10.5 Or W=23 Or W=29 Or W=99⇒W→S
+Z=43 Or Z=44 Or Z=32 Or Z=33 Or Z=28.5 Or Z=8 Or Z=10.5 Or Z=23 Or Z=29 Or Z=99⇒Z→S
 S⇒1→Mat Z[8,4
 For 4→X To 5
   Mat Z[X,2→Mat Z[X,1
