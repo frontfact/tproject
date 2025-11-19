@@ -18,8 +18,6 @@ Then
   IfEnd
   If Z=23
   Then 
-    I→a₁
-    J→a₂
     ClrText
     Orange "Le mandivor !"
     2→X
@@ -27,10 +25,7 @@ Then
     Prog "TNT14"
     Orange "Plutot coriace..."◢
     24→Mat Z[12,6
-    Mat Z[11,1→V
-    a₁→Mat Z[12,4
-    a₂→Mat Z[12,5
-    π
+    sin 9
     Return
   IfEnd
   If Z=4
@@ -128,8 +123,6 @@ Then
   "Voix : En effet..."
   2→X
   Prog "T0"
-  A→Mat Z[9,1
-  B→Mat Z[9,2
   99→Z
   Prog "TNT14"
   "Tu m'as vaincu,"

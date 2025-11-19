@@ -1,118 +1,121 @@
 Lbl I
 Prog "TNT13"
 θ=29⇒Goto W
+{1}
+Prog "TNT4"
+Lbl 0
+Mat Z[12,4→G
+Mat Z[12,5→H
+'backstep
+Mat Z[9,3→θ
+θ=27⇒Dsz G
+θ=38⇒Isz G
+θ=37⇒Dsz H
+θ=28⇒Isz H
 Lbl 1
-0→N~O
+'plot Z
+5G+45→I
+65-5H→J
 Green PlotOn I,J
-I→Mat Z[12,4
-J→Mat Z[12,5
-Int (65-J)/5→H
-Int (I-50)/5+1→G
-Frac Mat A[H,G→b₀
-Int (10b₀→b₂
-If b₂=2
-Then 
-  V→Mat Z[11,1
-  Green Text 31,10,"       "
-  Orange Text 23,2,"         "
-  PlotOff I,J
-  StoPict 1
-  Prog "TNT11"
-  Cls
-  RclPict 1
-IfEnd
-V=3 And Not Mat Z[10,1⇒Prog "TNT15"
-If b₂=1 Or b₂=3
-Then 
-  If b₂=3 Or (100Frac 10b₀=Mat Z[12,6
-  Then 
-    Green Text 31,10,"      "
-    Orange Text 23,2,"         "
-    PlotOff I,J
-    StoPict 1
-    Green PlotOn I,J
-  Else 
-    π→b₁
-  IfEnd
-  V→Mat Z[11,1
-  b₂=1⇒Prog "TNT4"
-  b₂=3⇒Prog "TNT17"
-  Mat Z[11,1→V
-  If 37=Mat Z[12,6
-  Then 
-    Prog "TNT15"
-    Return
-  IfEnd
-  If a₁
-  Then 
-    a₁→I
-    a₂→J
-    Goto S
-  IfEnd
-IfEnd
-If b₀
-Then 
-  Green Text 31,10,Mat Z[10,4
-  Prog "TNT18"
-  Mat Z[9,3→θ
-  Mat Z[11,1→V
-  If b₁≠π
-  Then 
-    PlotOff I,J
-    θ=27⇒I-5→I
-    θ=38⇒I+5→I
-    θ=37⇒J+5→J
-    θ=28⇒J-5→J
-  IfEnd
-  0→b₀
-  b₁≠π⇒Goto 1
-  0→b₁
-IfEnd
+'getkey
 Do
   Getkey→θ
 LpWhile Not θ
 θ→Mat Z[9,3
-Mat Z[12,1⇒Prog "TNT15"
-Ans=π⇒Goto S
-If θ=48
+'f6
+If θ=29
+Then 
+  If 36=Mat Z[12,6
+  Then 
+    Prog "TNT15"
+  Else 
+    Goto W
+  IfEnd
+IfEnd
+'move
+2→N
+4→O
+If θ=27 And G<16
+Then 
+  Int .1Mat A[H,G→N
+  Int 10Frac Mat A[H,G+1→O
+IfEnd
+If θ=38 And G>1
+Then 
+  Mat A[H,G-1→N
+  Int 10Frac N→O
+  Int .1N→N
+IfEnd
+If θ=28 And H>1
+Then 
+  Mat A[H-1,G→N
+  Int 10Frac N→O
+  Int (10Frac .1N→N
+IfEnd
+If θ=37 And H<10
+Then 
+  Int (10Frac .1Mat A[H,G→N
+  Int 10Frac Mat A[H+1,G→O
+IfEnd
+'wall
+N=2 Or O>3⇒Goto 1
+'
+PlotOff I,J
+θ=27⇒Isz G
+θ=38⇒Dsz G
+θ=37⇒Isz H
+θ=28⇒Dsz H
+G→Mat Z[12,4
+H→Mat Z[12,5
+'current
+Frac Mat A[H,G→b₀
+Int (10b₀→b₂
+'menu,shop,inn
+If θ=48 Or b₂=2 Or b₂=3
 Then 
   Green Text 31,10,"       "
   Orange Text 23,2,"         "
-  PlotOff I,J
   StoPict 1
-  V→Mat Z[11,1
-  Prog "TNT10"
-  Mat Z[11,1→V
+  θ=48⇒Prog "TNT10"
+  b₂=2⇒Prog "TNT11"
+  b₂=3⇒Prog "TNT17"
   Cls
   RclPict 1
-  Green PlotOn I,J
   Green Text 31,10,Mat Z[10,4
   Prog "TNT18"
-  Goto 1
+  θ=48⇒Goto 1
+  Goto 0
 IfEnd
-θ=29⇒Prog "TNT15"
-θ=29⇒Goto W
-θ=27 Or θ=37⇒Mat A[H,G
-θ=28 And H>1⇒Mat A[H-1,G
-θ=38 And G>1⇒Mat A[H,G-1
-Ans→N
-Int (10Frac N→O
-θ=27⇒G<16⇒Int (10Frac Mat A[H,G+1→O
-θ=37⇒H<10⇒Int (10Frac Mat A[H+1,G→O
-θ=27 Or θ=38⇒Int (10Frac .01N→N
-θ=37 Or θ=28⇒Int (10Frac .1N→N
-N=2 Or O>3 Or (H=1 And θ=28) Or (G=1 And θ=38)⇒Goto 1
-PlotOff I,J
-θ=27⇒I+5→I
-θ=28⇒J+5→J
-θ=37⇒J-5→J
-θ=38⇒I-5→I
+'countdowns
+V=3⇒Not Mat Z[10,1⇒Prog "TNT15"
+Mat Z[12,1⇒Prog "TNT15"
+Ans=sin 9⇒Goto S
+'scenario
+If b₂=1
+Then 
+  100Frac 10b₀→W
+  If W=Mat Z[12,6
+  Then 
+    {W}
+    Prog "TNT4"
+    If 37=Mat Z[12,6
+    Then 
+      Prog "TNT15"
+      Return
+    IfEnd
+    Ans=sin 9⇒Goto S
+  Else 
+    Text 54,60,"HUM ?"
+    .2→X
+    Prog "T0"
+    Text 54,60,"      "
+  IfEnd
+IfEnd
 Goto 1
 Lbl W
-Mat Z[9,1→A
-Mat Z[9,2→B
 Int 5Ran#+6→Mat Z[10,3
 Return
 Lbl S
 sin 3→X
+0
 Goto I

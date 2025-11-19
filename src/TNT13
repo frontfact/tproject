@@ -1,36 +1,10 @@
 ClrList
-X=sin 3⇒Goto S
-V→Mat Z[11,1
-0→O
-Lbl S
 Cls
 BG-None
-Green Horizontal 13
-Green F-Line 47,13,47,63
-Green Horizontal 63
-Green F-Line 1,63,1,13
-Green F-Line 127,13,127,63
-For 0→W To 7
-  Green F-Line 3+W,51,3+W,44
-Next
-Orange PlotOn 7,45
-For 1→W To 2
-  Orange F-Line 7+W,45+2W,7+W,45
-Next
-Orange F-Line 10,45,10,50
-Orange F-Line 11,45,11,49
-For 0→W To 2
-  Orange F-Line 11,47-W,11+(2W+1),47-W
-Next
-Orange F-Line 7,45,29,45
-Text 13,13,"𝐓N𝐓"
-Green Text 31,3,"$"
-Green Text 31,10,Mat Z[10,4
-Green Text 38,3,"[MENU]"
-Green Text 45,3,"[F6] Monde"
 Orange Text 55,42,"(CHARGEMENT)"
 Identity 1→Mat A
 Mat Z[12,6→Z
+Mat Z[11,1→V
 If V=1
 Then 
   Orange Text 5,3,"BOTMA"
@@ -44,8 +18,8 @@ Then
   [3,.,.,.4,.7,20,22,.4,.4,2,.,.,.,.,3,.4]
   [22,.4,.,.,.,2,.4,.4,20.4,32,.,.,2.4,20.4,22.141,.4]
   [32.103,2,2,2,32,22.108,.4,.4,.4,.4,2,32,22,2.4,.4,.4]]→Mat A
-  75→I
-  45→J
+  6→G
+  4→H
   Z>3⇒32.107→Mat A[10,1
   If Z>17
   Then 
@@ -70,8 +44,8 @@ Then
   [20,3,.,2,30,12,22,21,32,20,21,.,2,2,2,22]
   [2,22,20,31,2,20,23,.,.,30,22,20,3,22,32,20]
   [32,12,22,2,22,2,2,2,2.4,2,2,2,2,2,2,22]]→Mat A
-  50→I
-  40→J
+  1→G
+  5→H
   Z>20⇒22.125→Mat A[3,13
   Z>21⇒12.124→Mat A[2,6
 IfEnd
@@ -88,8 +62,8 @@ Then
   [.,20.4,23.3,23,.,.4,20.4,23,23,.4,.4,.,.4,.,.,23]
   [.,.,.,.,.,.,.,.,.,.,.,3,.,.,20.4,22]
   [.4,.4,.4,.4,.4,.4,.4,.4,.4,.4,20.4,22,.4,.4,.4,.4]]→Mat A
-  60→I
-  20→J
+  3→G
+  9→H
   Z>26⇒22.128→Mat A[3,6
   Z>38⇒23.139→Mat A[2,16
   Z>39⇒23.140→Mat A[2,16
@@ -107,8 +81,8 @@ Then
   [2.8,2.8,2.8,2.8,2.8,2.8,22.8,.4,2,20,23,.4,.5,33,22,.5]
   [2.4,2.4,.4,.4,.4,.4,.4,20.4,32,.,3,.4,20.5,22.131,.5,.5]
   [2,32,2,2,2,2,2,2,2,22,22,.4,.4,.5,.5,.4]]→Mat A
-  55→I
-  45→J
+  2→G
+  4→H
 IfEnd
 If V=5
 Then 
@@ -123,8 +97,8 @@ Then
   [12,32,.,.,.4,2,3,2,20.4,20,22,22,3,2,.,20]
   [.5,.5,.5,.5,20.4,20,23,23,20.4,20,20,20,22,32,3,23]
   [.5,.5,.5,.5,22.4,32,2,22.132,2.4,2,2,2,32,22.135,22,22]]→Mat A
-  125→I
-  25→J
+  16→G
+  8→H
   Z>33⇒23.134→Mat A[8,12
 IfEnd
 If V=6
@@ -140,8 +114,8 @@ Then
   [33,33,23,23,22,23,33,32,22,23,33,22,33,33,22,23]
   [32,33,33,33,32,22,23,32,33,22,23,33,33,23,33.1105,22]
   [32,22,32,32,32,22,32,32,32,32,22,32,32,22,32,22.111]]→Mat A
-  55→I
-  50→J
+  2→G
+  3→H
 IfEnd
 If V=10
 Then 
@@ -156,27 +130,43 @@ Then
   [.6,.6,22.6,20,2.6,22.6,.,2,22,20.6,2,3,3,2,23,.6]
   [.6,20.6,2,2,2,2,22,.6,.6,.6,20.6,22,22,20.6,22,.6]
   [.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6,.6]]→Mat A
-  90→I
-  35→J
+  9→G
+  6→H
   Z>14⇒22.117→Mat A[3,8
 IfEnd
 If V=9
 Then 
   Orange Text 5,3,"SANCTUA"
   {10,16}→Dim Mat A
-  50→I
-  40→J
+  1→G
+  5→H
 IfEnd
 Prog "TNT16"
-If a₁
-Then 
-  a₁→I
-  a₂→J
-IfEnd
-0→a₁
-0→a₂
-I→Mat Z[12,4
-J→Mat Z[12,5
+G→Mat Z[12,4
+H→Mat Z[12,5
+Green Horizontal 13
+Green F-Line 47,13,47,63
+Green Horizontal 63
+Green F-Line 1,63,1,13
+Green F-Line 127,13,127,63
+For 0→W To 7
+  Green F-Line 3+W,51,3+W,44
+Next
+Orange PlotOn 7,45
+For 1→W To 2
+  Orange F-Line 7+W,45+2W,7+W,45
+Next
+Orange F-Line 10,45,10,50
+Orange F-Line 11,45,11,49
+For 0→W To 2
+  Orange F-Line 11,47-W,11+(2W+1),47-W
+Next
+Orange F-Line 7,45,29,45
+Text 13,13,"𝐓N𝐓"
+Green Text 31,3,"$"
+Green Text 31,10,Mat Z[10,4
+Green Text 38,3,"[MENU]"
+Green Text 45,3,"[F6] Monde"
 If V≠9
 Then 
   For 1→U To 10

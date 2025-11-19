@@ -1,7 +1,4 @@
 300/300→Mat Z[10,5
-Mat Z[11,1→V
-Mat Z[9,1→A
-Mat Z[9,2→B
 Prog "TNT3"
 Lbl 9
 Prog "TNT1"
@@ -32,11 +29,10 @@ Then
   Next
 IfEnd
 Lbl S
-0→P
+A→Mat Z[9,1
+B→Mat Z[9,2
 If 1>Mat Z[10,3
 Then 
-  A→Mat Z[9,1
-  B→Mat Z[9,2
   For 0→W To 340 Step 25
     Orange F-Line A,B,A+12cos W,B+9sin W
   Next
@@ -66,29 +62,28 @@ Then
   Prog "TNT15"
   Goto 9
 IfEnd
-If θ=48 Or Not Int 30Ran#
+If θ=48
 Then 
-  A→Mat Z[9,1
-  B→Mat Z[9,2
-  If θ=48
+  Prog "TNT10"
+  Mat Z[9,1→A
+  Mat Z[9,2→B
+  Goto 8
+IfEnd
+If Not Int 30Ran#
+Then 
+  ClrText
+  Locate 1,1,"~ MARCHAND AMBULANT ~"
+  Locate 1,3,"1→Voir les prix"
+  Locate 1,4,"2→Non merci"
+  Do
+    Getkey
+  LpWhile Ans≠72 And Ans≠62
+  ClrText
+  0→r
+  If Ans=72
   Then 
-    Prog "TNT10"
-  Else 
-    0→Mat Z[9,4
-    ClrText
-    Locate 1,1,"~ MARCHAND AMBULANT ~"
-    Locate 1,3,"1→Voir les prix"
-    Locate 1,4,"2→Non merci"
-    Do
-      Getkey
-    LpWhile Ans≠72 And Ans≠62
-    ClrText
-    0→r
-    If Ans=72
-    Then 
-      Prog "TNT16"
-      Prog "TNT11"
-    IfEnd
+    Prog "TNT16"
+    Prog "TNT11"
   IfEnd
   Mat Z[9,1→A
   Mat Z[9,2→B
@@ -114,20 +109,14 @@ Then
   A≥105 And A≤107 And B≥5 And B≤7⇒10→V
   If V
   Then 
-    0→a₁
-    0→a₂
-    A→Mat Z[9,1
-    B→Mat Z[9,2
+    V→Mat Z[11,1
     Prog "TNT3"
-    0→V
     Goto 9
   IfEnd
   Goto 7
 IfEnd
 Goto S
 Lbl H
-A→Mat Z[9,1
-B→Mat Z[9,2
 If H=1
 Then 
   Text 1,4,"      "

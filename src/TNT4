@@ -1,16 +1,6 @@
-100Frac 10b₀→W
-Not W⇒Return
-0→a₁
-0→a₂
+List Ans[1]→W
 Mat Z[12,6→Z
-If W≠Z
-Then 
-  Text 54,60,"HUM ?"
-  .2→X
-  Prog "T0"
-  Text 54,60,"      "
-  Return
-IfEnd
+W≠Z⇒Return
 ClrText
 If W=1
 Then 
@@ -47,6 +37,8 @@ Then
   "pour combattre."◢
   Isz Z
   230→Mat Z[10,4
+  5→Mat Z[12,4
+  3→Mat Z[11,5
 IfEnd
 If W=3
 Then 
@@ -106,14 +98,14 @@ Then
   If θ=72
   Then 
     2→Mat Z[11,5
-    70→a₁
-    15→a₂
+    5→Mat Z[12,4
+    10→Mat Z[12,5
     "Tu as fait le bon"
     "choix, Redox t'auraittue."
   Else 
-    70→a₁
-    50→a₂
     1→Mat Z[11,5
+    5→Mat Z[12,4
+    3→Mat Z[12,5
     Green "→retour chez Redox..."
     1→X
     Prog "T0"
@@ -128,6 +120,7 @@ Then
   "un ami t'y attend."◢
   60+Mat Z[10,4→Mat Z[10,4
   10→Z
+  sin 9
 IfEnd
 If W=10
 Then 
@@ -142,10 +135,9 @@ Then
   "SACRE ?!!"
   3→X
   Prog "T0"
-  I→a₁
-  J→a₂
   Prog "TNT14"
   11→Z
+  sin 9
 IfEnd
 If W=11
 Then 
@@ -471,14 +463,13 @@ Then
   ClrText
   Orange "Le... Le prisme !"
   Orange "Il explose !!!"
-  3→X
+  2→X
   Prog "T0"
-  I→a₁
-  J→a₂
   Prog "TNT14"
   Orange "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
   Orange "inscriptions ?"◢
   Isz Z
+  sin 9
 IfEnd
 If W=30
 Then 
@@ -530,10 +521,7 @@ Then
   "INCARNATION ARAKN !"
   4→X
   Prog "T0"
-  I→a₁
-  J→a₂
   Prog "TNT14"
-  33→Z
   "Enzo : Je vais"
   "t'aneantir, miserableinsecte !!!"
   " "
@@ -550,6 +538,7 @@ Then
   Orange "Je dois rejoindre"
   Orange "Wills et Jessie."◢
   34→Z
+  sin 9
 IfEnd
 If W=34
 Then 
@@ -575,7 +564,7 @@ If W=36
 Then 
   0→Mat Z[12,1
   Orange Text 52,2,"J'AI UN BATEAU DE PECHE ICI:"
-  Orange Text 58,2,"MONTEZ,VITE !!! →EXE"◢
+  Orange Text 58,2,"MONTEZ, VITE !!!"◢
   Isz Z
 IfEnd
 If W=39
@@ -653,8 +642,6 @@ Then
   Prog "TNT14"
   44→Z
   Prog "TNT14"
-  9→V
-  0→b₀
   55→Mat Z[12,6
   Prog "TNT13"
   ClrText

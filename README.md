@@ -59,7 +59,8 @@ tntsoft@fastmail.com
 - [ ] Rename programs as "Z01" "Z02" etc.
 - [x] Refactor monster drawings like Z/TNT5
 - [ ] Refactor TNT12 using a matrix
-- [ ] Rewrite TNT3
+- [x] Rewrite TNT3
+- [ ] TNT13 : draw cities after decorative elements ? (see helenia on monochrome)
 - [x] Rewrite TNT15
 - [x] Fix blinking screen around progress 9 when searching for gems in botma (on G35+)
 - [x] Notice in markdown/pdf
