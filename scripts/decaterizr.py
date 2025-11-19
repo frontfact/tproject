@@ -175,13 +175,13 @@ class Program:
                 first = True
                 continue
             if t.dst == 'Else ':
-                level = max(level - 1, 0)
+                level -= 1
                 output += (indent * level + str(t) + '\n')
                 level += 1
                 first = True
                 continue
             if t.dst in dec:
-                level = max(level - 1, 0)
+                level -= 1
             line = (indent * level + str(t)) if first else str(t)
             output += line
             first = False
@@ -194,6 +194,8 @@ class Program:
                 if (t.dst == ']') and (self.tokens[i+1].dst == '['):
                     output += '\n'
                     first = True
+        if level != 0:
+            raise Exception(f'Indentation level error in {self.name}')
         return output
 
     @property
@@ -480,11 +482,11 @@ def main():
         cat35 = copy.deepcopy(catfile)
         cat35.make_mono('35+')
         cat35.Write(cat35, '../packages/TPROJECT35.CAT')
-        cat35.dump_programs('../src/mono35+')
+        #cat35.dump_programs('../src/mono35+')
         cat100 = copy.deepcopy(catfile)
         cat100.make_mono('100+')
         cat100.Write(cat100, '../packages/TPROJECT100.CAT')
-        cat100.dump_programs('../src/mono100+')
+        #cat100.dump_programs('../src/mono100+')
 
     if args.forge:
         dummy = CatFile('non-existing.cat')
