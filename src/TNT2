@@ -1,121 +1,111 @@
 300/300→Mat Z[10,5
 Prog "TNT3"
-Lbl 9
+Lbl I
 Prog "TNT1"
+Lbl 0
+Deg
+Cls
+RclPict 1
 Mat Z[9,1→A
 Mat Z[9,2→B
-Lbl 7
 Mat Z[9,4→θ
 θ=27⇒Dsz A
 θ=38⇒Isz A
 θ=28⇒Dsz B
 θ=37⇒Isz B
--1→C
-If Z=38
-Then 
-  Prog "TNT15"
-  B+2→B
-IfEnd
-Lbl 8
-Cls
-Deg
-RclPict 1
-If C<0
-Then 
-  For 1→C To 6
-    PlotChg A,B
-    .1→X
-    Prog "T0"
-  Next
-IfEnd
-Lbl S
-A→Mat Z[9,1
-B→Mat Z[9,2
-If 1>Mat Z[10,3
-Then 
-  For 0→W To 340 Step 25
-    Orange F-Line A,B,A+12cos W,B+9sin W
-  Next
-  Prog "TNT14"
-  0→Mat Z[9,4
-  Mat Z[9,1→A
-  Mat Z[9,2→B
-  Int 6Ran#+7→Mat Z[10,3
-  Goto 9
-Else 
-  Mat Z[10,3]-1→Mat Z[10,3
-IfEnd
+38=Mat Z[12,6⇒Prog "TNT15"
+For 1→C To 6
+  PlotChg A,B
+  .1→X
+  Prog "T0"
+Next
 PlotOn A,B
-0→H
-A=71 And B=18⇒1→H
-A=124 And B=11⇒2→H
-A=65 And B=44⇒3→H
-A=86 And B=34⇒4→H
-H⇒Goto H
+0
+Lbl 1
 Do
   Getkey→θ
 LpWhile Not θ
 θ→Mat Z[9,4
 PlotOff A,B
-If A=60 And B=42 And Not Mat Z[10,2
-Then 
-  Prog "TNT15"
-  Goto 9
-IfEnd
-If θ=48
-Then 
-  Prog "TNT10"
-  Mat Z[9,1→A
-  Mat Z[9,2→B
-  Goto 8
-IfEnd
-If Not Int 30Ran#
-Then 
-  ClrText
-  Locate 1,1,"~ MARCHAND AMBULANT ~"
-  Locate 1,3,"1→Voir les prix"
-  Locate 1,4,"2→Non merci"
-  Do
-    Getkey
-  LpWhile Ans≠72 And Ans≠62
-  ClrText
-  0→r
-  If Ans=72
-  Then 
-    Prog "TNT16"
-    Prog "TNT11"
-  IfEnd
-  Mat Z[9,1→A
-  Mat Z[9,2→B
-  Goto 8
-IfEnd
+A→G
+B→H
 θ=27⇒Isz A
 θ=38⇒Dsz A
 θ=37⇒Dsz B
 θ=28⇒Isz B
 A>126⇒38→A
 A<38⇒126→A
-0→V
+A→Mat Z[9,1
+B→Mat Z[9,2
 PxlTest 64-B,A
+PlotOn A,B
 If Ans
 Then 
-  A≥64 And A≤66 And B≥18 And B≤20⇒1→V
-  A≥70 And A≤72 And B≥22 And B≤24⇒2→V
-  A≥104 And A≤106 And B≥40 And B≤42⇒3→V
-  A≥47 And A≤49 And B≥36 And B≤38⇒4→V
-  A≥42 And A≤44 And B≥12 And B≤14⇒5→V
-  A≥67 And A≤69 And B≥9 And B≤11⇒6→V
-  A≥87 And A≤89 And B≥22 And B≤26⇒9→V
-  A≥105 And A≤107 And B≥5 And B≤7⇒10→V
+  0→V
+  A≥64⇒A≤66⇒B≥18⇒B≤20⇒1→V
+  A≥70⇒A≤72⇒B≥22⇒B≤24⇒2→V
+  A≥104⇒A≤106⇒B≥40⇒B≤42⇒3→V
+  A≥47⇒A≤49⇒B≥36⇒B≤38⇒4→V
+  A≥42⇒A≤44⇒B≥12⇒B≤14⇒5→V
+  A≥67⇒A≤69⇒B≥9⇒B≤11⇒6→V
+  A≥87⇒A≤89⇒B≥22⇒B≤26⇒9→V
+  A≥105⇒A≤107⇒B≥5⇒B≤7⇒10→V
   If V
   Then 
     V→Mat Z[11,1
     Prog "TNT3"
-    Goto 9
+    Goto I
   IfEnd
-  Goto 7
+  Goto 0
 IfEnd
-Goto S
+If (A≠G) Or (B≠H)
+Then 
+  Mat Z[10,3]-1→Mat Z[10,3
+IfEnd
+If 1>Mat Z[10,3
+Then 
+  For 0→W To 340 Step 25
+    Orange F-Line A,B,A+12cos W,B+9sin W
+  Next
+  Prog "TNT14"
+  Int 6Ran#+7→Mat Z[10,3
+  Goto I
+IfEnd
+0→H
+A=71⇒B=18⇒1→H
+A=124⇒B=11⇒2→H
+A=65⇒B=44⇒3→H
+A=86⇒B=34⇒4→H
+H⇒Goto H
+If A=60 And B=42 And Not Mat Z[10,2
+Then 
+  Prog "TNT15"
+  Goto I
+IfEnd
+If Not Int 30Ran# Or θ=48
+Then 
+  If θ=48
+  Then 
+    Prog "TNT10"
+  Else 
+    ClrText
+    Locate 1,1,"~ MARCHAND AMBULANT ~"
+    Locate 1,3,"1→Voir les prix"
+    Locate 1,4,"2→Non merci"
+    Do
+      Getkey
+    LpWhile Ans≠72 And Ans≠62
+    If Ans=72
+    Then 
+      0→r
+      Prog "TNT16"
+      Prog "TNT11"
+    IfEnd
+  IfEnd
+  0→Mat Z[9,4
+  Goto 0
+IfEnd
+Goto 1
 Lbl H
 If H=1
 Then 
@@ -153,42 +143,44 @@ Then
     W+V→W
     W=-5⇒43→W
     W=49⇒1→W
-    W=r⇒Goto 7
+    W=r⇒Goto 0
     PxlTest W,4
   LpWhile Not Ans
   Goto V
 IfEnd
-0→P~Q
 (W-1)/6→V
 If V=0 Or V=1 Or V=3
 Then 
   71→U
   18→V
-  -1→P
+  27→θ
 IfEnd
 If V=5
 Then 
   65→U
   44→V
-  -1→Q
+  28→θ
 IfEnd
 If V=2 Or V=6
 Then 
   124→U
   11→V
-  -1→Q
+  28→θ
 IfEnd
 If V=4 Or V=7
 Then 
   86→U
   34→V
-  1→P
+  38→θ
 IfEnd
+180Mat Z[10,5→Tθmax
 (V-B)/(U-A)→E
 (U-A)/Tθmax→F
 Orange Graph (X,Y)=(A+FT,B+EFT)
-U+P→A
-V+Q→B
-.5→X
+90→Tθmax
+U→Mat Z[9,1
+V→Mat Z[9,2
+θ→Mat Z[9,4
+1→X
 Prog "T0"
-Goto 8
+Goto 0

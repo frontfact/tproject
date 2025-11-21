@@ -71,7 +71,7 @@ Then
 IfEnd
 If Z=38
 Then 
-  14→B
+  16→B
   For 47→A To 73
     Isz B
     PlotOn A,B

@@ -3,6 +3,7 @@ Prog "TNT13"
 θ=29⇒Goto W
 {1}
 Prog "TNT4"
+0
 Lbl 0
 Mat Z[12,4→G
 Mat Z[12,5→H
@@ -89,7 +90,7 @@ IfEnd
 'countdowns
 V=3⇒Not Mat Z[10,1⇒Prog "TNT15"
 Mat Z[12,1⇒Prog "TNT15"
-Ans=sin 9⇒Goto S
+Ans=sin 9⇒Goto I
 'scenario
 If b₂=1
 Then 
@@ -103,7 +104,7 @@ Then
       Prog "TNT15"
       Return
     IfEnd
-    Ans=sin 9⇒Goto S
+    Ans=sin 9⇒Goto I
   Else 
     Text 54,60,"HUM ?"
     .2→X
@@ -114,8 +115,3 @@ IfEnd
 Goto 1
 Lbl W
 Int 5Ran#+6→Mat Z[10,3
-Return
-Lbl S
-sin 3→X
-0
-Goto I

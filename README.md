@@ -25,25 +25,14 @@ tntsoft@fastmail.com
 
 # Backlog
 
-- [x] 1st dialog : clarify with "tiens, prends cet argent pour etc."
-- [x] Fix typo "scull" in user menu
 - [x] Dynamic step to display score
-- [x] User menu : remove 'options', 'retour', 'quitter le jeu'
 - [x] ~~Suggest to load a game if a save exists~~ → impossible
 - [x] Fix dialogs typos
-- [x] ~~Facilitate the arm wrestling against the troll~~ → not necessary (on graph65)
+- [x] Facilitate the arm wrestling against the troll
 - [x] Enable F6 key (go to world) during city loading
-- [x] Objects : do not display 'Epee' and 'Livre'
-- [x] Objects : remove menu entry [jeter]
 - [x] Shop : Enable [exit] key to exit shop
 - [x] Objects : allow to take several objects in a row, except during fight : Not r, TNT9
 - [ ] Check if we can use pict-2 to store last visited city. probably requires 4096 bytes saving elsewhere
-- [x] ~~Check if 'vision' power exists~~ → it does
-- [x] ~~Extract shop init from TNT15~~ → TNT16
-- [x] ~~Extract hostel from TNT4~~ → TNT17
-- [x] ~~Extract life gauge from TNT1~~ → TNT18
-- [x] ~~Display 'hum?' only if progress < W ?~~ no
-- [x] Optimize `Mat Z[12,6]→X` in TNT13
 - [x] Port to graph35+/graph100+
     - [x] remove ':' separators
 	- [x] monochrome
@@ -53,22 +42,7 @@ tntsoft@fastmail.com
 	- [x] ¥ not rendered with `Text` command
 	- [x] factorize sleep loops into Prog "T0" + use a global sleep factor
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
-- [x] Fix exit from shop without checking progress
-- [ ] Display progress in user menu
-- [x] Use getkey to block vision spell
+- [ ] Add progress hint in user menu
 - [ ] Rename programs as "Z01" "Z02" etc.
-- [x] Refactor monster drawings like Z/TNT5
 - [ ] Refactor TNT12 using a matrix
-- [ ] Fix world coordinates on city exit (there's like two backsteps)
-- [x] Rewrite TNT3
-- [x] TNT13 : draw cities after decorative elements ? (see helenia on monochrome)
-- [x] Rewrite TNT15
-- [x] Fix blinking screen around progress 9 when searching for gems in botma (on G35+)
 - [x] Notice in markdown/pdf
-	- [x] screenshots of attaks/powers
-	- [x] 'hum?' in points of interest
-	- [x] sequence diagram for TNT2 (main loop)
-	- [x] sequence diagram for TNT3 (city loop)
-	- [x] sequence diagram for TNT14 (fight loop)
-	- [ ] Add progress help in notice
-	- [x] Locate cities in notice

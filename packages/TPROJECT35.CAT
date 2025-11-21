@@ -226,7 +226,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1566
+Capacity:1522
 File Name:TNT2
 Group Name:
 Password:
@@ -237,112 +237,103 @@ Option4:
 %Data Record
 833/300\->\Mat Z[10,5
 \Prog "TNT3"
-\Lbl 9
+\Lbl I
 \Prog "TNT1"
+\Lbl 0
+\Deg
+\Cls
+\RclPict 1
 \Mat Z[9,1\->A
 \Mat Z[9,2\->B
-\Lbl 7
 \Mat Z[9,4\->\theta
 \theta=27\=>\Dsz A
 \theta=38\=>\Isz A
 \theta=28\=>\Dsz B
 \theta=37\=>\Isz B
--1\->C
-\If Z=38
-\Then \Prog "TNT15"
-B+2\->B
-\IfEnd
-\Lbl 8
-\Cls
-\Deg
-\RclPict 1
-\If C<0
-\Then \For 1\->C \To 6
+38=\Mat Z[12,6\=>\Prog "TNT15"
+\For 1\->C \To 6
 \PlotChg A,B
 .1\->X
 \Prog "T0"
 \Next 
-\IfEnd
-\Lbl S
-A\->\Mat Z[9,1
-B\->\Mat Z[9,2
-\If 1>\Mat Z[10,3
-\Then \For 0\->W \To 340 \Step 25
-\F-Line A,B,A+12\cos W,B+9\sin W
-\Next 
-\Prog "TNT14"
-0\->\Mat Z[9,4
-\Mat Z[9,1\->A
-\Mat Z[9,2\->B
-\Int 6\Ran#+7\->\Mat Z[10,3
-\Goto9
-\Else \Mat Z[10,3]-1\->\Mat Z[10,3
-\IfEnd
 \PlotOn A,B
-0\->H
-A=71\ And B=18\=>1\->H
-A=124\ And B=11\=>2\->H
-A=65\ And B=44\=>3\->H
-A=86\ And B=34\=>4\->H
-H\=>\GotoH
+0
+\Lbl 1
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
 \theta\->\Mat Z[9,4
 \PlotOff A,B
-\If A=60\ And B=42\ And \Not \Mat Z[10,2
-\Then \Prog "TNT15"
-\Goto9
-\IfEnd
-\If \theta=48
-\Then \Prog "TNT10"
-\Mat Z[9,1\->A
-\Mat Z[9,2\->B
-\Goto8
-\IfEnd
-\If \Not \Int 30\Ran#
-\Then \ClrText
-\Locate 1,1,"~ MARCHAND AMBULANT ~"
-\Locate 1,3,"1\->Voir les prix"
-\Locate 1,4,"2\->Non merci"
-\Do
-\Getkey
-\LpWhile \Ans\<>72\ And \Ans\<>62
-\ClrText
-0\->\r
-\If \Ans=72
-\Then \Prog "TNT16"
-\Prog "TNT11"
-\IfEnd
-\Mat Z[9,1\->A
-\Mat Z[9,2\->B
-\Goto8
-\IfEnd
+A\->G
+B\->H
 \theta=27\=>\Isz A
 \theta=38\=>\Dsz A
 \theta=37\=>\Dsz B
 \theta=28\=>\Isz B
 A>126\=>38\->A
 A<38\=>126\->A
-0\->V
+A\->\Mat Z[9,1
+B\->\Mat Z[9,2
 \PxlTest 64-B,A
+\PlotOn A,B
 \If \Ans
-\Then A\>=64\ And A\<=66\ And B\>=18\ And B\<=20\=>1\->V
-A\>=70\ And A\<=72\ And B\>=22\ And B\<=24\=>2\->V
-A\>=104\ And A\<=106\ And B\>=40\ And B\<=42\=>3\->V
-A\>=47\ And A\<=49\ And B\>=36\ And B\<=38\=>4\->V
-A\>=42\ And A\<=44\ And B\>=12\ And B\<=14\=>5\->V
-A\>=67\ And A\<=69\ And B\>=9\ And B\<=11\=>6\->V
-A\>=87\ And A\<=89\ And B\>=22\ And B\<=26\=>9\->V
-A\>=105\ And A\<=107\ And B\>=5\ And B\<=7\=>10\->V
+\Then 0\->V
+A\>=64\=>A\<=66\=>B\>=18\=>B\<=20\=>1\->V
+A\>=70\=>A\<=72\=>B\>=22\=>B\<=24\=>2\->V
+A\>=104\=>A\<=106\=>B\>=40\=>B\<=42\=>3\->V
+A\>=47\=>A\<=49\=>B\>=36\=>B\<=38\=>4\->V
+A\>=42\=>A\<=44\=>B\>=12\=>B\<=14\=>5\->V
+A\>=67\=>A\<=69\=>B\>=9\=>B\<=11\=>6\->V
+A\>=87\=>A\<=89\=>B\>=22\=>B\<=26\=>9\->V
+A\>=105\=>A\<=107\=>B\>=5\=>B\<=7\=>10\->V
 \If V
 \Then V\->\Mat Z[11,1
 \Prog "TNT3"
-\Goto9
+\GotoI
 \IfEnd
-\Goto7
+\Goto0
 \IfEnd
-\GotoS
+\If (A\<>G)\ Or (B\<>H)
+\Then \Mat Z[10,3]-1\->\Mat Z[10,3
+\IfEnd
+\If 1>\Mat Z[10,3
+\Then \For 0\->W \To 340 \Step 25
+\F-Line A,B,A+12\cos W,B+9\sin W
+\Next 
+\Prog "TNT14"
+\Int 6\Ran#+7\->\Mat Z[10,3
+\GotoI
+\IfEnd
+0\->H
+A=71\=>B=18\=>1\->H
+A=124\=>B=11\=>2\->H
+A=65\=>B=44\=>3\->H
+A=86\=>B=34\=>4\->H
+H\=>\GotoH
+\If A=60\ And B=42\ And \Not \Mat Z[10,2
+\Then \Prog "TNT15"
+\GotoI
+\IfEnd
+\If \Not \Int 30\Ran#\ Or \theta=48
+\Then \If \theta=48
+\Then \Prog "TNT10"
+\Else \ClrText
+\Locate 1,1,"~ MARCHAND AMBULANT ~"
+\Locate 1,3,"1\->Voir les prix"
+\Locate 1,4,"2\->Non merci"
+\Do
+\Getkey
+\LpWhile \Ans\<>72\ And \Ans\<>62
+\If \Ans=72
+\Then 0\->\r
+\Prog "TNT16"
+\Prog "TNT11"
+\IfEnd
+\IfEnd
+0\->\Mat Z[9,4
+\Goto0
+\IfEnd
+\Goto1
 \Lbl H
 \If H=1
 \Then \Text 1,4,"      "
@@ -376,47 +367,49 @@ W\->\r
 W+V\->W
 W=-5\=>43\->W
 W=49\=>1\->W
-W=\r\=>\Goto7
+W=\r\=>\Goto0
 \PxlTest W,4
 \LpWhile \Not \Ans
 \GotoV
 \IfEnd
-0\->P~Q
 (W-1)/6\->V
 \If V=0\ Or V=1\ Or V=3
 \Then 71\->U
 18\->V
--1\->P
+27\->\theta
 \IfEnd
 \If V=5
 \Then 65\->U
 44\->V
--1\->Q
+28\->\theta
 \IfEnd
 \If V=2\ Or V=6
 \Then 124\->U
 11\->V
--1\->Q
+28\->\theta
 \IfEnd
 \If V=4\ Or V=7
 \Then 86\->U
 34\->V
-1\->P
+38\->\theta
 \IfEnd
+180\Mat Z[10,5\->\Tmax
 (V-B)/(U-A)\->E
 (U-A)/\Tmax\->F
 \Graph (X,Y)=(A+FT,B+EFT)
-U+P\->A
-V+Q\->B
-.5\->X
+90\->\Tmax
+U\->\Mat Z[9,1
+V\->\Mat Z[9,2
+\theta\->\Mat Z[9,4
+1\->X
 \Prog "T0"
-\Goto8
+\Goto0
 %End
 %Header Record
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:952
+Capacity:938
 File Name:TNT3
 Group Name:
 Password:
@@ -430,6 +423,7 @@ Option4:
 \theta=29\=>\GotoW
 {1}
 \Prog "TNT4"
+0
 \Lbl 0
 \Mat Z[12,4\->G
 \Mat Z[12,5\->H
@@ -508,7 +502,7 @@ H\->\Mat Z[12,5
 'countdowns
 V=3\=>\Not \Mat Z[10,1\=>\Prog "TNT15"
 \Mat Z[12,1\=>\Prog "TNT15"
-\Ans=\sin 9\=>\GotoS
+\Ans=\sin 9\=>\GotoI
 'scenario
 \If \R b2=1
 \Then 100\Frac 10\R b0\->W
@@ -519,7 +513,7 @@ V=3\=>\Not \Mat Z[10,1\=>\Prog "TNT15"
 \Then \Prog "TNT15"
 \Return
 \IfEnd
-\Ans=\sin 9\=>\GotoS
+\Ans=\sin 9\=>\GotoI
 \Else \Text 54,60,"HUM ?"
 .2\->X
 \Prog "T0"
@@ -529,11 +523,6 @@ V=3\=>\Not \Mat Z[10,1\=>\Prog "TNT15"
 \Goto1
 \Lbl W
 \Int 5\Ran#+6\->\Mat Z[10,3
-\Return
-\Lbl S
-\sin 3\->X
-0
-\GotoI
 %End
 %Header Record
 Format:TXT
@@ -3185,7 +3174,7 @@ Option4:
 \Prog "TNT21"
 \IfEnd
 \If Z=38
-\Then 14\->B
+\Then 16\->B
 \For 47\->A \To 73
 \Isz B
 \PlotOn A,B
