@@ -3196,6 +3196,7 @@ Option4:
 \Next 
 9\->\Mat Z[10,3
 39\->\Mat Z[12,6
+\RclPict 1
 \IfEnd
 \If V=3\ And H=5\ And G=2\ And \Not \Mat Z[10,1
 \Then "Mais nous avons le"
