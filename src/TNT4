@@ -638,11 +638,12 @@ Then
   Orange "Redox ? Enzo ?"
   Orange "Je les croyais morts?"◢
   "EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
+  4→X
+  Prog "T0"
   43→Z
   Prog "TNT14"
   44→Z
   Prog "TNT14"
-  55→Mat Z[12,6
   Prog "TNT13"
   ClrText
   "IMPRESSIONNANT..."
@@ -662,11 +663,8 @@ Then
   Orange "Je peux...  CA."◢
   Green "Z envoie :"
   Green "Tarte aux groseyes !"
-  .5→X
+  2→X
   Prog "T0"
-  87→A
-  38→B
-  5→C
   StoPict 1
   BG-Pict 1
   For 0→D To 9
@@ -674,6 +672,9 @@ Then
     Plot 0,0
   Next
   BG-None
+  87→A
+  38→B
+  5→C
   For 1→D To 1800 Step 50
     Orange F-Line A+Csin D,B+Ccos D,A+(C-10)sin D,B+(C-10)cos D
     Isz C
@@ -703,12 +704,12 @@ Then
   "Detruit. A jamais."
   2→X
   Prog "T0"
-  Prog "TNT12"
+  {6}
+  Prog "TNT22"
   117→R
-  {M,1}
+  {6,1}
   Prog "TNT20"
   StoPict 1
-  117→R
   ViewWindow 127,-1,0,63,1,0
   RclPict 1
   Prog "TNT20"

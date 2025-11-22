@@ -226,7 +226,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1530
+Capacity:1534
 File Name:TNT2
 Group Name:
 Password:
@@ -529,7 +529,7 @@ V=3\=>\Not \Mat Z[10,1\=>\Prog "TNT15"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:10498
+Capacity:10493
 File Name:TNT4
 Group Name:
 Password:
@@ -1963,7 +1963,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2726
+Capacity:1901
 File Name:TNT12
 Group Name:
 Password:
@@ -2177,7 +2177,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5380
+Capacity:5390
 File Name:TNT13
 Group Name:
 Password:
@@ -2355,7 +2355,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7432
+Capacity:7441
 File Name:TNT14
 Group Name:
 Password:
@@ -3091,7 +3091,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1752
+Capacity:1746
 File Name:TNT15
 Group Name:
 Password:

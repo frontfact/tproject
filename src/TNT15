@@ -66,7 +66,6 @@ Then
     Text A,A+37,"~"
   Next
   38→Mat Z[12,6
-  0→Mat Z[9,3
   Prog "TNT21"
 IfEnd
 If Z=38
@@ -106,6 +105,7 @@ Then
   Next
   9→Mat Z[10,3
   39→Mat Z[12,6
+  RclPict 1
 IfEnd
 If V=3 And H=5 And G=2 And Not Mat Z[10,1
 Then 

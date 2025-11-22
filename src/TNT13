@@ -141,9 +141,10 @@ Then
   1→G
   5→H
 IfEnd
-Prog "TNT16"
 G→Mat Z[12,4
 H→Mat Z[12,5
+0→Mat Z[9,3
+Prog "TNT16"
 Green Horizontal 13
 Green F-Line 47,13,47,63
 Green Horizontal 63

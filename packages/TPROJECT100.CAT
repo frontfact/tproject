@@ -226,7 +226,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1522
+Capacity:1526
 File Name:TNT2
 Group Name:
 Password:
@@ -394,6 +394,7 @@ W=\r\=>\Goto0
 38\->\theta
 \IfEnd
 180\Mat Z[10,5\->\Tmax
+\RclPict 1
 (V-B)/(U-A)\->E
 (U-A)/\Tmax\->F
 \Graph (X,Y)=(A+FT,B+EFT)
@@ -528,7 +529,7 @@ V=3\=>\Not \Mat Z[10,1\=>\Prog "TNT15"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:10340
+Capacity:10335
 File Name:TNT4
 Group Name:
 Password:
@@ -1007,11 +1008,12 @@ X>89\=>\Break
 "VAINCRE MES DISCIPLES"\Disp\ClrText
 "Redox ? Enzo ?"
 "Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
+4\->X
+\Prog "T0"
 43\->Z
 \Prog "TNT14"
 44\->Z
 \Prog "TNT14"
-55\->\Mat Z[12,6
 \Prog "TNT13"
 \ClrText
 "IMPRESSIONNANT..."
@@ -1028,11 +1030,8 @@ X>89\=>\Break
 \IfEnd
 "Je peux...  CA."\Disp"Z envoie :"
 "Tarte aux groseyes !"
-.5\->X
+2\->X
 \Prog "T0"
-87\->A
-38\->B
-5\->C
 \StoPict 1
 \BG-Pict 1
 \For 0\->D \To 9
@@ -1040,6 +1039,9 @@ X>89\=>\Break
 \Plot 0,0
 \Next 
 \BG-None
+87\->A
+38\->B
+5\->C
 \For 1\->D \To 1800 \Step 50
 \F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
 \Isz C
@@ -1064,12 +1066,12 @@ C+.6\->C
 "combat a bien failli t'etre fatal..."\Disp"Et...et Tomberry ?"\Disp"Detruit. A jamais."
 2\->X
 \Prog "T0"
-\Prog "TNT12"
+{6}
+\Prog "TNT22"
 117\->R
-{M,1}
+{6,1}
 \Prog "TNT20"
 \StoPict 1
-117\->R
 \ViewWindow 127,-1,0,63,1,0
 \RclPict 1
 \Prog "TNT20"
@@ -1961,7 +1963,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2723
+Capacity:1898
 File Name:TNT12
 Group Name:
 Password:
@@ -1990,22 +1992,10 @@ S=23\=>3
 S=10.5\=>5
 S=44\ Or S=33\ Or S=8\=>6
 S=29\=>7
-55=\Mat Z[12,6\=>6
 \Ans\->M
-\S-Gph3 \DrawOff,\xyLine,\List1,\List3,1,\Dot
-\S-Gph2 \DrawOff,\xyLine,\List3,\List4,1,\Dot
+{M}
+\Prog "TNT22"
 S=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
-\S-Gph1 \DrawOff,\xyLine,\List1,\List2,1,\Dot
-8\->\Dim \List 1
-\List 1\->\List3
-{17,17,25,31,45,45,47,48,51,52,52,49,47,47,45,45,31,31,26,25,22,17,22,31,31,27,24,17,17,17,24,27,32,31,33,36,39,41,42,41,37,35,36,37,40,42,42,40,38,36,35,34}\->\List2
-M=1\=>{25,25,50,50,40,40,32,26,26,17,17}\->\List4
-M=2\=>{23,23,41,42,41,23,23,17,23,23,19,17,19,23,23,17,23,23,22,19,18,17}\->\List4
-M=3\=>{25,25,26,26,27,27,35,28,28,42,39,38,37,34,29,26,31,34,27,26,21,15,21,26,25,22,15,22,25,27,22,15,22,27,26,23,21,15}\->\List4
-M=4\=>{63,48,46,43,37,32,30,32,31,33,32,33,29,31,29,29,30,32,34,32,32,36,35,33,33,36,38,41,39,41,43,43,41,43,44,48,48,48,48,63}\->\List4
-M=5\=>{41,41,43,42,29,30,32,29,28,28,27,27,20,20,25,25,17,17,21,24,27,23}\->\List4
-M=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,43,42,40,35,35,35,39,41,40,31,24,19,17,17,18,22,22}\->\List4
-55=\Mat Z[12,6\=>\Return
 \Cls
 \Horizontal 1
 \Vertical 127
@@ -2187,7 +2177,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5313
+Capacity:5323
 File Name:TNT13
 Group Name:
 Password:
@@ -2265,9 +2255,10 @@ Z>14\=>22.117\->\Mat A[3,8
 1\->G
 5\->H
 \IfEnd
-\Prog "TNT16"
 G\->\Mat Z[12,4
 H\->\Mat Z[12,5
+0\->\Mat Z[9,3
+\Prog "TNT16"
 \Horizontal 13
 \F-Line 47,13,47,63
 \Horizontal 63
@@ -2364,7 +2355,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7284
+Capacity:7293
 File Name:TNT14
 Group Name:
 Password:
@@ -3041,10 +3032,12 @@ E+A\->\Mat Z[11,6
 \Text 16,84,"\@24"
 \Not \Mat Z[8,4\=>\Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
 23=\Mat Z[12,6\=>5000\->A
-A+\Mat Z[10,4\->\Mat Z[10,4
+\If A
+\Then A+\Mat Z[10,4\->\Mat Z[10,4
 \For 0\->B \To A \Step A/5
 \Text 16,91,\Int B
 \Next 
+\IfEnd
 \Text 16,91,A
 \Text 35,1,"Objets trouves:"
 \If \Not S\ And \Not T
@@ -3098,7 +3091,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1718
+Capacity:1712
 File Name:TNT15
 Group Name:
 Password:
@@ -3164,7 +3157,6 @@ Option4:
 \Text A,A+37,"~"
 \Next 
 38\->\Mat Z[12,6
-0\->\Mat Z[9,3
 \Prog "TNT21"
 \IfEnd
 \If Z=38
@@ -3195,6 +3187,7 @@ Option4:
 \Next 
 9\->\Mat Z[10,3
 39\->\Mat Z[12,6
+\RclPict 1
 \IfEnd
 \If V=3\ And H=5\ And G=2\ And \Not \Mat Z[10,1
 \Then "Mais nous avons le"
@@ -3509,6 +3502,33 @@ Option4:
 \Text \Int 33\Ran#+7,\Int 53\Ran#+53," \aster  "
 \Next 
 \Prog "TNT19"
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:816
+File Name:TNT22
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\S-Gph1 \DrawOff,\xyLine,\List1,\List2,1,\Dot
+\S-Gph2 \DrawOff,\xyLine,\List3,\List4,1,\Dot
+\S-Gph3 \DrawOff,\xyLine,\List1,\List3,1,\Dot
+8\->\Dim \List1
+\List 1\->\List3
+{17,17,25,31,45,45,47,48,51,52,52,49,47,47,45,45,31,31,26,25,22,17,22,31,31,27,24,17,17,17,24,27,32,31,33,36,39,41,42,41,37,35,36,37,40,42,42,40,38,36,35,34}\->\List2
+\List \Ans[1
+\Ans=1\=>{25,25,50,50,40,40,32,26,26,17,17}\->\List4
+\Ans=2\=>{23,23,41,42,41,23,23,17,23,23,19,17,19,23,23,17,23,23,22,19,18,17}\->\List4
+\Ans=3\=>{25,25,26,26,27,27,35,28,28,42,39,38,37,34,29,26,31,34,27,26,21,15,21,26,25,22,15,22,25,27,22,15,22,27,26,23,21,15}\->\List4
+\Ans=4\=>{63,48,46,43,37,32,30,32,31,33,32,33,29,31,29,29,30,32,34,32,32,36,35,33,33,36,38,41,39,41,43,43,41,43,44,48,48,48,48,63}\->\List4
+\Ans=5\=>{41,41,43,42,29,30,32,29,28,28,27,27,20,20,25,25,17,17,21,24,27,23}\->\List4
+\Ans=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,43,42,40,35,35,35,39,41,40,31,24,19,17,17,18,22,22}\->\List4
 %End
 %Header Record
 Format:TXT
