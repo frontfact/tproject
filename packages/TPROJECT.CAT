@@ -1008,6 +1008,8 @@ X>89\=>\Break
 "VAINCRE MES DISCIPLES"\Disp\ClrText
 \Orange "Redox ? Enzo ?"
 \Orange "Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
+4\->X
+\Prog "T0"
 43\->Z
 \Prog "TNT14"
 44\->Z
@@ -1029,11 +1031,8 @@ X>89\=>\Break
 \IfEnd
 \Orange "Je peux...  CA."\Disp\Green "Z envoie :"
 \Green "Tarte aux groseyes !"
-.5\->X
+2\->X
 \Prog "T0"
-87\->A
-38\->B
-5\->C
 \StoPict 1
 \BG-Pict 1
 \For 0\->D \To 9
@@ -1041,6 +1040,9 @@ X>89\=>\Break
 \Plot 0,0
 \Next 
 \BG-None
+87\->A
+38\->B
+5\->C
 \For 1\->D \To 1800 \Step 50
 \Orange \F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
 \Isz C
