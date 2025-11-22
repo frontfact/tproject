@@ -394,6 +394,7 @@ W=\r\=>\Goto0
 38\->\theta
 \IfEnd
 180\Mat Z[10,5\->\Tmax
+\RclPict 1
 (V-B)/(U-A)\->E
 (U-A)/\Tmax\->F
 \Orange \Graph (X,Y)=(A+FT,B+EFT)
