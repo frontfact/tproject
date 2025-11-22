@@ -3032,10 +3032,12 @@ E+A\->\Mat Z[11,6
 \Green \Text 16,84,"\@24"
 \Not \Mat Z[8,4\=>\Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
 23=\Mat Z[12,6\=>5000\->A
-A+\Mat Z[10,4\->\Mat Z[10,4
+\If A
+\Then A+\Mat Z[10,4\->\Mat Z[10,4
 \For 0\->B \To A \Step A/5
 \Green \Text 16,91,\Int B
 \Next 
+\IfEnd
 \Green \Text 16,91,A
 \Text 35,1,"Objets trouves:"
 \If \Not S\ And \Not T
