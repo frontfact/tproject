@@ -56,6 +56,7 @@ Graph Y=;Graph Y=;1
 Graph Y<;Graph Y<;1
 Graph Y>;Graph Y>;1
 Green ;Green ;2
+Blue ;Blue ;2
 GridOff;GridOff;2
 Identity ;Identity ;2
 If ;If ;2

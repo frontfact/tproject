@@ -33,6 +33,7 @@ StepToken = Token('Step ', 'Step ', 1, True)
 ToToken = Token('To ', 'To ', 1, True)
 GreenToken = Token('Green ', 'Green ', 2, True)
 OrangeToken = Token('Orange ', 'Orange ', 2, True)
+BlueToken = Token('Blue ', 'Blue ', 2, True)
 YenToken = Token('@5C', '¥', 1, True)
 YToken = Token('Y', 'Y', 1, False)
 TextToken = Token('Text ', 'Text ', 2, True)
@@ -227,10 +228,16 @@ class Program:
                     self.tokens[i] = alt
     
     def make_mono(self, ctype: str):
+        color_token_removed = False
         for i in range(len(self.tokens)-1, -1, -1):
             token = self.tokens[i]
-            if token==GreenToken or token==OrangeToken:
+            if token in [GreenToken, OrangeToken, BlueToken]:
                 del self.tokens[i]
+                color_token_removed = True
+            else:
+                if color_token_removed and token.dst==',':
+                    del self.tokens[i]
+                color_token_removed = False
 
         Text_seen_since_last_linefeed = False
         for i, token in enumerate(self.tokens):
