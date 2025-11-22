@@ -3166,7 +3166,6 @@ Option4:
 \Text A,A+37,"~"
 \Next 
 38\->\Mat Z[12,6
-0\->\Mat Z[9,3
 \Prog "TNT21"
 \IfEnd
 \If Z=38
