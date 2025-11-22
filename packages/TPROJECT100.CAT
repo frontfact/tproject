@@ -1747,7 +1747,7 @@ D\>=2\=>\Text K,L+31,D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1198
+Capacity:1191
 File Name:TNT10
 Group Name:
 Password:
@@ -1818,8 +1818,7 @@ A=5\=>\Return
 \Text 51,90,\Mat Z[12,3
 \Text 57,51,"SCORE:"
 \Int (11\Mat Z[12,6]+5\Mat Z[12,3]+0.5\Mat Z[10,4]+1.5\Mat Z[1,2]+15\Mat Z[2,2]+15\Mat Z[3,2]+9\Mat Z[4,2]+9\Mat Z[5,2\->C
-\Int (C/10\->T
-\For 1\->D \To C \Step T
+\For 1\->D \To C \Step .1C
 \Text 57,74,D
 \Next 
 \Do
@@ -2365,7 +2364,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7324
+Capacity:7284
 File Name:TNT14
 Group Name:
 Password:
@@ -3039,19 +3038,14 @@ A>25\=>7
 E+A\->\Mat Z[11,6
 0\->A
 \Text 10,80,"Recompe\R nse:"
+\Text 16,84,"\@24"
 \Not \Mat Z[8,4\=>\Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
 23=\Mat Z[12,6\=>5000\->A
 A+\Mat Z[10,4\->\Mat Z[10,4
-\Text 16,105,"\@24"
-\If A<99
-\Then \For 0\->B \To A \Step 3
-\Text 16,91,B
+\For 0\->B \To A \Step A/5
+\Text 16,91,\Int B
 \Next 
-\Text 16,91,"   "
-\IfEnd
-91\->B
-A=5000\=>85\->B
-\Text 16,B,A
+\Text 16,91,A
 \Text 35,1,"Objets trouves:"
 \If \Not S\ And \Not T
 \Then \Text 43,10,"aucu\R n"

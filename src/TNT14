@@ -718,20 +718,14 @@ Orange Text 22,27,E+A
 E+A→Mat Z[11,6
 0→A
 Green Text 10,80,"Recompense:"
+Green Text 16,84,"$"
 Not Mat Z[8,4⇒Int (25+8M+9Ran#+0.4Mat Z[11,2→A
 23=Mat Z[12,6⇒5000→A
 A+Mat Z[10,4→Mat Z[10,4
-Green Text 16,105,"$"
-If A<99
-Then 
-  For 0→B To A Step 3
-    Green Text 16,91,B
-  Next
-  Green Text 16,91,"   "
-IfEnd
-91→B
-A=5000⇒85→B
-Green Text 16,B,A
+For 0→B To A Step A/5
+  Green Text 16,91,Int B
+Next
+Green Text 16,91,A
 Text 35,1,"Objets trouves:"
 If Not S And Not T
 Then 

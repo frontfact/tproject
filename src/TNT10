@@ -61,8 +61,7 @@ Then
   Text 51,90,Mat Z[12,3
   Text 57,51,"SCORE:"
   Int (11Mat Z[12,6]+5Mat Z[12,3]+0.5Mat Z[10,4]+1.5Mat Z[1,2]+15Mat Z[2,2]+15Mat Z[3,2]+9Mat Z[4,2]+9Mat Z[5,2→C
-  Int (C/10→T
-  For 1→D To C Step T
+  For 1→D To C Step .1C
     Text 57,74,D
   Next
   Do
