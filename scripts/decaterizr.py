@@ -393,20 +393,19 @@ class CatFile(object):
         # T0(65) = 300/s
         # T0(35+) = 833/s
         # T0(100+) = 190/s
-        for prog_name in ['T0', 'TNT2']:
-            t0 = self.find(prog_name)
-            if '35+' in ctype:
-                t0.tokens[0] = Token('8','8',1,False)
-                t0.tokens[1] = Token('3','3',1,False)
-                t0.tokens[2] = Token('3','3',1,False)
-            if '65' in ctype:
-                t0.tokens[0] = Token('3','3',1,False)
-                t0.tokens[1] = Token('0','0',1,False)
-                t0.tokens[2] = Token('0','0',1,False)
-            if '100+' in ctype:
-                t0.tokens[0] = Token('1','1',1,False)
-                t0.tokens[1] = Token('9','9',1,False)
-                t0.tokens[2] = Token('0','0',1,False)
+        tnt2 = self.find('TNT2')
+        if '35+' in ctype:
+            tnt2.tokens[0] = Token('8','8',1,False)
+            tnt2.tokens[1] = Token('3','3',1,False)
+            tnt2.tokens[2] = Token('3','3',1,False)
+        if '65' in ctype:
+            tnt2.tokens[0] = Token('3','3',1,False)
+            tnt2.tokens[1] = Token('0','0',1,False)
+            tnt2.tokens[2] = Token('0','0',1,False)
+        if '100+' in ctype:
+            tnt2.tokens[0] = Token('1','1',1,False)
+            tnt2.tokens[1] = Token('9','9',1,False)
+            tnt2.tokens[2] = Token('0','0',1,False)
 
     @classmethod
     def DumpPrograms(cls, catfile, outputpath: PathLike, clean: bool):

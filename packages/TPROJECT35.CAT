@@ -3436,7 +3436,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:21
+Capacity:29
 File Name:T0
 Group Name:
 Password:
@@ -3445,7 +3445,7 @@ Option2:
 Option3:
 Option4:
 %Data Record
-833X\->X
+300X\Mat Z[10,5\->X
 \For 1\->Y \To X
 \Next 
 %End
