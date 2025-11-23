@@ -1963,7 +1963,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1898
+Capacity:1594
 File Name:TNT12
 Group Name:
 Password:
@@ -1973,29 +1973,45 @@ Option3:
 Option4:
 %Data Record
 \Identity 1\->\Mat A
-0\->\Mat Z[8,4
-0\->S
-Z=43\ Or Z=44\ Or Z=32\ Or Z=33\ Or Z=28.5\ Or Z=8\ Or Z=10.5\ Or Z=23\ Or Z=29\ Or Z=99\=>Z\->S
-S\=>1\->\Mat Z[8,4
 \For 4\->X \To 5
 \Mat Z[X,2\->\Mat Z[X,1
 \Next 
 0\->\Mat Z[11,3
 0\->\Mat Z[11,4
-\Do
-1+\Int ((2.5+0.8\Mat Z[11,2])\Ran#
-\LpWhile \Ans>7
-S=43\ Or S=32\=>4
-S=99\=>1
-S=28.5\=>2
-S=23\=>3
-S=10.5\=>5
-S=44\ Or S=33\ Or S=8\=>6
-S=29\=>7
-\Ans\->M
+0\->\Mat Z[8,4
+\Mat Z[11,2\->N
+\Mat Z[12,6\->Z
+{.}
+Z=8\=>{6,9,9,99,11}
+Z=10.5\=>{5,4,4,120,11}
+Z=23\=>{3,7,6,400,7}
+Z=28.5\=>{2,7,5,250,8}
+Z=29\=>{7,10,9,650,7}
+Z=32\=>{4,14,8,400,8}
+Z=33\=>{6,15,9,600,8}
+Z=43\=>{4,20,13,700,8}
+Z=44\=>{6,20,13,800,8}
+Z=99\=>{1,15,12,800,7}
+\If \Dim \List \Ans=1
+\Then \Do
+1+\Int ((2.5+.8N)\Ran#\->M
+\LpWhile M>7
+M=1\=>{1,2+N/2,2+N/2,18+10N+8N\Ran#,10}
+M=2\=>{2,2+N/3,2+3N/4,20+11N+8N\Ran#,12}
+M=3\=>{3,N+1,1+2N/3,16+12N+6N\Ran#,9}
+M=4\=>{4,2+4N/5,2+4N/5,20+14N+7N\Ran#,12}
+M=5\=>{5,N+2,N+2,25+20N+8N\Ran#,14}
+M=6\=>{6,N+1,1+3N/4,20+16N+8N\Ran#,8}
+M=7\=>{7,N+2,2+2N/3,40+15N+13N\Ran#,8}
+\IfEnd
+\List \Ans[1\->M
+\List \Ans[2\->A
+\List \Ans[3\->D
+\List \Ans[4\->P
+\List \Ans[5\->V
 {M}
 \Prog "TNT22"
-S=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
+Z=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
 \Cls
 \Horizontal 1
 \Vertical 127
@@ -2013,111 +2029,12 @@ S=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
 \F-Line 126,62,37,62
 \F-Line 37,62,37,16
 \Text 11,3,"NIVEAU"
-\Text 11,30,\Mat Z[11,2
+\Text 11,30,N
 \Graph (X,Y)=(37+T,16+\Ran#
 41\->R
 {0,1}
 \Prog "TNT5"
 \Text 51,38,"Z combat u\R n ..."
-\Mat Z[11,2\->N
-\If M=1
-\Then 1\ab/c2N+2\->A~D
-18+10N+8N\Ran#\->P
-10\->V
-\IfEnd
-\If M=2
-\Then 20+11N+8N\Ran#\->P
-1\ab/c3N+2\->A
-3\ab/c4N+2\->D
-12\->V
-\IfEnd
-\If M=3
-\Then 16+12N+6N\Ran#\->P
-N+1\->A
-2\ab/c3N+1\->D
-9\->V
-\IfEnd
-\If M=4
-\Then 20+14N+7N\Ran#\->P
-4\ab/c5N+2\->A~D
-12\->V
-\IfEnd
-\If M=5
-\Then 25+20N+8N\Ran#\->P
-N+2\->A~D
-14\->V
-\IfEnd
-\If M=6
-\Then 20+16N+8N\Ran#\->P
-N+1\->A
-3\ab/c4N+1\->D
-8\->V
-\IfEnd
-\If M=7
-\Then 15N+13N\Ran#+40\->P
-N+2\->A
-2\ab/c3N+2\->D
-8\->V
-\IfEnd
-\If S=32
-\Then 500\->P
-14\->A
-8\->D
-8\->V
-\IfEnd
-\If S=43
-\Then 700\->P
-20\->A
-13\->D
-8\->V
-\IfEnd
-\If S=44
-\Then 800\->P
-20\->A
-13\->D
-8\->V
-\IfEnd
-\If S=33
-\Then 600\->P
-15\->A
-9\->D
-8\->V
-\IfEnd
-\If S=28.5
-\Then 250\->P
-7\->A
-5\->D
-8\->V
-\IfEnd
-\If S=99
-\Then 800\->P
-15\->A
-12\->D
-7\->V
-\IfEnd
-\If S=10.5
-\Then 120\->P
-4\->A~D
-11\->V
-\IfEnd
-\If S=23
-\Then 400\->P
-7\->A
-6\->D
-7\->V
-\IfEnd
-\If S=29
-\Then 650\->P
-10\->A
-9\->D
-7\->V
-\IfEnd
-\If S=8
-\Then 99\->P
-9\->A~D
-11\->V
-\IfEnd
-\Int (P+16\Ran#-8\->P
 \Getkey=65\=>1\->P
 P\->\Mat Z[6,1
 P\->\Mat Z[7,4
@@ -2126,18 +2043,15 @@ P\->\Mat Z[7,4
 V+2\Ran#-(N/3)\->V
 \Int V\->\Mat Z[10,6
 V\Mat Z[10,5\->\Mat Z[6,4
-N-1\->A
 8
 N<6\=>4
 N<2\=>1
-S=10.5\=>6
-S=8\=>8
+Z=8\=>8
+Z=10.5\=>6
 \Ans\->\Mat Z[7,1
 \For 2\->B \To 3
-A+\Int 4\Ran#
-S=8\=>7
-S\=>\Ans+1
-\Not \Ans\=>1
+1+\Int N\Ran#
+Z=8\=>8
 \Ans>8\=>8
 \Ans\->\Mat Z[7,B
 \Next 
@@ -2149,20 +2063,19 @@ N=4\=>\Int 5\Ran#+6
 N=5\=>\Int 6\Ran#+8
 N=6\=>\Int 6\Ran#+10
 N=7\=>\Int 8\Ran#+10
-S=8\=>14
-S\=>\Ans+1
+Z=8\=>15
 \Ans>17\=>17
 \Ans\->\Mat Z[8,B
 \Next 
 115\->R
 {M,1}
 \Prog "TNT20"
-\If S=43\ Or S=44\ Or S=32\ Or S=33\ Or S=8\ Or S=10.5\ Or S=99\ Or S=28.5
-\Then S=44\ Or S=33\ Or S=8\=>\Text 51,75,"E\R nzo   "
-S=32\ Or S=43\=>\Text 51,75,"Redox  "
-S=10.5\=>\Text 51,75,"le Mi\R nautor"
-S=28.5\=>\Text 51,75,"u\R n Vegetal"
-S=99\=>\Text 51,75,"le Gardie\R n"
+\If Z=43\ Or Z=44\ Or Z=32\ Or Z=33\ Or Z=8\ Or Z=10.5\ Or Z=99\ Or Z=28.5
+\Then Z=44\ Or Z=33\ Or Z=8\=>\Text 51,75,"E\R nzo   "
+Z=32\ Or Z=43\=>\Text 51,75,"Redox  "
+Z=10.5\=>\Text 51,75,"le Mi\R nautor"
+Z=28.5\=>\Text 51,75,"u\R n Vegetal"
+Z=99\=>\Text 51,75,"le Gardie\R n"
 \Else M=1\=>\Text 51,90,"lapra\R nak"
 M=2\=>\Text 51,90,"srila\R ne"
 M=3\=>\Text 51,89,"ma\R ndivor"
@@ -2405,7 +2318,7 @@ P=9\=>Q+\Mat Z[6,3\->\Mat Z[6,3
 \Text 6V+19,13U+1,\Mat Z[V,U
 \If \Not \Int (4\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
-S=8\=>\Return
+Z=8\=>\Return
 \IfEnd
 \Next 
 \Next 
@@ -2416,7 +2329,7 @@ S=8\=>\Return
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
-S=8\=>\Return
+Z=8\=>\Return
 \Text 43,14,\Mat Z[4,1
 \Text 49,14,\Mat Z[5,1
 \StoPict 1
@@ -2437,7 +2350,7 @@ S=8\=>\Return
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
-S=8\=>\Return
+Z=8\=>\Return
 \IfEnd
 \Getkey\->\theta
 \theta=47\=>\Goto1
@@ -2478,7 +2391,7 @@ S=8\=>\Return
 \For 1\->E \To 5
 \If \Not \Int (3\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
-S=8\=>\Return
+Z=8\=>\Return
 \IfEnd
 \Mat Z[E,4\->C
 {1,C,6E+19,7}
@@ -2504,7 +2417,7 @@ V=8\=>9
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
-S=8\=>\Return
+Z=8\=>\Return
 \IfEnd
 \Getkey\->\theta
 \theta=31\ And (\Not V\ Or O>\Mat Z[2,1\=>0\->\theta
@@ -2624,7 +2537,7 @@ S=8\=>\Return
 \For 1\->E \To 5
 \If \Not \Int (3\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
-S=8\=>\Return
+Z=8\=>\Return
 \IfEnd
 \Mat Z[E,3]\->C
 {2,C,6E+19,7}
@@ -2657,7 +2570,7 @@ B>9\=>O\<=9\=>\Text 19,28,"  "
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "TNT6"
-S=8\=>\Return
+Z=8\=>\Return
 \IfEnd
 \Getkey\->\theta
 \theta=31\ And (\Not V\ Or O>\Mat Z[3,1\=>0\->\theta

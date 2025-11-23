@@ -41,7 +41,7 @@ For 2→V To 5
     If Not Int (4Ran#Mat Z[6,4
     Then 
       Prog "TNT6"
-      S=8⇒Return
+      Z=8⇒Return
     IfEnd
   Next
 Next
@@ -53,7 +53,7 @@ Do
   If Not Int (5Ran#Mat Z[6,4
   Then 
     Prog "TNT6"
-    S=8⇒Return
+    Z=8⇒Return
     Green Text 43,14,Mat Z[4,1
     Green Text 49,14,Mat Z[5,1
     StoPict 1
@@ -75,7 +75,7 @@ Do
     If Not Int (5Ran#Mat Z[6,4
     Then 
       Prog "TNT6"
-      S=8⇒Return
+      Z=8⇒Return
     IfEnd
     Getkey→θ
     θ=47⇒Goto 1
@@ -122,7 +122,7 @@ Then
     If Not Int (3Ran#Mat Z[6,4
     Then 
       Prog "TNT6"
-      S=8⇒Return
+      Z=8⇒Return
     IfEnd
     Mat Z[E,4→C
     {1,C,6E+19,7}
@@ -151,7 +151,7 @@ Then
       If Not Int (5Ran#Mat Z[6,4
       Then 
         Prog "TNT6"
-        S=8⇒Return
+        Z=8⇒Return
       IfEnd
       Getkey→θ
       θ=31 And (Not V Or O>Mat Z[2,1⇒0→θ
@@ -282,7 +282,7 @@ Then
     If Not Int (3Ran#Mat Z[6,4
     Then 
       Prog "TNT6"
-      S=8⇒Return
+      Z=8⇒Return
     IfEnd
     Mat Z[E,3]→C
     {2,C,6E+19,7}
@@ -318,7 +318,7 @@ Then
       If Not Int (5Ran#Mat Z[6,4
       Then 
         Prog "TNT6"
-        S=8⇒Return
+        Z=8⇒Return
       IfEnd
       Getkey→θ
       θ=31 And (Not V Or O>Mat Z[3,1⇒0→θ

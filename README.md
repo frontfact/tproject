@@ -44,5 +44,4 @@ tntsoft@fastmail.com
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [ ] Add progress hint in user menu
 - [ ] Rename programs as "Z01" "Z02" etc.
-- [ ] Refactor TNT12 using a matrix
 - [x] Notice in markdown/pdf
