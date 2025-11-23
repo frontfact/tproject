@@ -37,7 +37,7 @@ List Ans[3→D
 List Ans[4→P
 List Ans[5→V
 {M}
-Prog "TNT22"
+Prog "Z22"
 Z=99⇒S-Gph2 DrawOn,xyLine,List3,List4,1,Square
 Cls
 Horizontal 1
@@ -60,7 +60,7 @@ Orange Text 11,30,N
 Graph (X,Y)=(37+T,16+Ran#
 41→R
 {0,1}
-Prog "TNT5"
+Prog "Z05"
 Text 51,38,"Z combat un ..."
 Getkey=65⇒1→P
 P→Mat Z[6,1
@@ -96,7 +96,7 @@ For 1→B To 3
 Next
 115→R
 {M,1}
-Prog "TNT20"
+Prog "Z20"
 If Z=43 Or Z=44 Or Z=32 Or Z=33 Or Z=8 Or Z=10.5 Or Z=99 Or Z=28.5
 Then 
   Z=44 Or Z=33 Or Z=8⇒Text 51,75,"Enzo   "

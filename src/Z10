@@ -76,13 +76,13 @@ Then
   For 1→B To 5
     Mat Z[B,4→C
     {1,C,15+6B,51}
-    Prog "TNT8"
+    Prog "Z08"
   Next
   Text 15,93,"pouvoirs"
   For 1→B To 5
     Mat Z[B,3→C
     {2,C,15+6B,88}
-    Prog "TNT8"
+    Prog "Z08"
   Next
   Green Text 51,55,"PRESS [EXIT]"
   Do
@@ -96,7 +96,7 @@ IfEnd
 If A=3
 Then 
   0→r
-  Prog "TNT9"
+  Prog "Z09"
   Goto 0
 IfEnd
 Goto Q

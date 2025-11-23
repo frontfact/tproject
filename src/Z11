@@ -15,7 +15,7 @@ Orange F-Line 89,49,89,84
 For 1→Q To 8
   List 1[Q→C
   {3,C,6Q-3,7}
-  Prog "TNT8"
+  Prog "Z08"
 Next
 Text 51,7,"-rien-"
 Text 57,7,"[EXIT]"
@@ -52,7 +52,7 @@ IfEnd
 If A=3
 Then 
   0→r
-  Prog "TNT9"
+  Prog "Z09"
   Goto 0
 IfEnd
 Lbl C
@@ -82,10 +82,10 @@ Then
   Green Text 19,91,"   $    "
   Green Text 19,91,List 2[U]-Mat Z[10,4
   .6→X
-  Prog "T0"
+  Prog "Z0"
   Goto C
 IfEnd
-Prog "TNT7"
+Prog "Z07"
 Not X⇒Mat Z[10,4]-List 2[U→Mat Z[10,4
 Green Text 3,49,"    "
 Green Text 3,49,Mat Z[10,4

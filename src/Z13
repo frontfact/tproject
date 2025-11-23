@@ -144,7 +144,7 @@ IfEnd
 G→Mat Z[12,4
 H→Mat Z[12,5
 0→Mat Z[9,3
-Prog "TNT16"
+Prog "Z16"
 Green Horizontal 13
 Green F-Line 47,13,47,63
 Green Horizontal 63
@@ -200,7 +200,7 @@ Then
 IfEnd
 Orange Text 55,42,"             "
 StoPict 1
-Prog "TNT18"
+Prog "Z18"
 If V=3 And Z=41
 Then 
   ClrText

@@ -73,10 +73,10 @@ Then
   "Enzo:"
   "Incarnation GOA."
   4→X
-  Prog "T0"
-  Prog "TNT14"
+  Prog "Z0"
+  Prog "Z14"
   1→X
-  Prog "T0"
+  Prog "Z0"
   ClrText
   "Mais c'est toi, Z ?!"
   Orange "Il parait, oui."
@@ -108,7 +108,7 @@ Then
     3→Mat Z[12,5
     Green "→retour chez Redox..."
     1→X
-    Prog "T0"
+    Prog "Z0"
     "Bien, Z, tu merites"
     "ma confiance."
   IfEnd
@@ -134,8 +134,8 @@ Then
   "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
   "SACRE ?!!"
   3→X
-  Prog "T0"
-  Prog "TNT14"
+  Prog "Z0"
+  Prog "Z14"
   11→Z
   sin 9
 IfEnd
@@ -174,9 +174,9 @@ Then
     "Les deux autres sont"
     "a ATLANTIS."◢
     7→O
-    Prog "TNT7"
+    Prog "Z07"
     16→O
-    Prog "TNT7"
+    Prog "Z07"
     13→Z
   Else 
     "Je te laisse un peu"
@@ -213,7 +213,7 @@ Then
   Locate 11,6,"--"
   Locate 2,7,"10→Perdu / 90→Gagne"
   .5→X
-  Prog "T0"
+  Prog "Z0"
   Do
   LpWhile Not Getkey
   Locate 4,5,"     "
@@ -237,7 +237,7 @@ Then
   "Troll : Hmmf."
   "Voila ta Lune."◢
   16→O
-  Prog "TNT7"
+  Prog "Z07"
   Isz Z
 IfEnd
 If W=14
@@ -277,7 +277,7 @@ Then
   "Bon... voici une Lunepour te remercier."◢
   0→Mat Z[6,6
   11→O
-  Prog "TNT7"
+  Prog "Z07"
   ClrText
   Green "Les trois Lunes se"
   Green "fondent en une"
@@ -315,7 +315,7 @@ Then
   ClrText
   Green "FIN."
   1.6→X
-  Prog "T0"
+  Prog "Z0"
   Orange "Hep-hep-hep..."
   Orange "C'est que le debut dujeu,la."
   Orange "Ces deux cons vont   pas s'en tirer"
@@ -464,8 +464,8 @@ Then
   Orange "Le... Le prisme !"
   Orange "Il explose !!!"
   2→X
-  Prog "T0"
-  Prog "TNT14"
+  Prog "Z0"
+  Prog "Z14"
   Orange "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
   Orange "inscriptions ?"◢
   Isz Z
@@ -520,15 +520,15 @@ Then
   "Redox :"
   "INCARNATION ARAKN !"
   4→X
-  Prog "T0"
-  Prog "TNT14"
+  Prog "Z0"
+  Prog "Z14"
   "Enzo : Je vais"
   "t'aneantir, miserableinsecte !!!"
   " "
   "INCARNATION GOA !"
   4→X
-  Prog "T0"
-  Prog "TNT14"
+  Prog "Z0"
+  Prog "Z14"
   "...Nous mourrons......mais.....Tomberry.........est libre"◢
   ClrText
   Orange "(je suis venge)"◢
@@ -639,12 +639,12 @@ Then
   Orange "Je les croyais morts?"◢
   "EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
   4→X
-  Prog "T0"
+  Prog "Z0"
   43→Z
-  Prog "TNT14"
+  Prog "Z14"
   44→Z
-  Prog "TNT14"
-  Prog "TNT13"
+  Prog "Z14"
+  Prog "Z13"
   ClrText
   "IMPRESSIONNANT..."
   "MAIS QUE PEUX-TU"
@@ -653,18 +653,18 @@ Then
   Then 
     "SANS L'ARME SUPREME  TU N'ES RIEN !"
     1→X
-    Prog "T0"
+    Prog "Z0"
     For 31→A To 19 Step -6
       Text A,81,"   "
     Next
     .→Mat Z[1,1
-    Prog "TNT21"
+    Prog "Z21"
   IfEnd
   Orange "Je peux...  CA."◢
   Green "Z envoie :"
   Green "Tarte aux groseyes !"
   2→X
-  Prog "T0"
+  Prog "Z0"
   StoPict 1
   BG-Pict 1
   For 0→D To 9
@@ -679,7 +679,7 @@ Then
     Orange F-Line A+Csin D,B+Ccos D,A+(C-10)sin D,B+(C-10)cos D
     Isz C
     .1→X
-    Prog "T0"
+    Prog "Z0"
   Next
   3→C
   For 1800→D To 1 Step -40
@@ -687,12 +687,12 @@ Then
     Orange F-Line A,B,A+60Ran#-30,B+60Ran#-30
     C+.6→C
     .1→X
-    Prog "T0"
+    Prog "Z0"
   Next
   Cls
   Plot 0,0
   5→X
-  Prog "T0"
+  Prog "Z0"
   ClrText
   "Z ?...      Z ?!"◢
   Orange "Que ? Oh, ma tete..."◢
@@ -703,16 +703,16 @@ Then
   Orange "Et...et Tomberry ?"◢
   "Detruit. A jamais."
   2→X
-  Prog "T0"
+  Prog "Z0"
   {6}
-  Prog "TNT22"
+  Prog "Z22"
   117→R
   {6,1}
-  Prog "TNT20"
+  Prog "Z20"
   StoPict 1
   ViewWindow 127,-1,0,63,1,0
   RclPict 1
-  Prog "TNT20"
+  Prog "Z20"
   Text 30,51,"THE END"◢
   Stop
 IfEnd

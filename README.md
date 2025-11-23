@@ -43,5 +43,5 @@ tntsoft@fastmail.com
 	- [x] factorize sleep loops into Prog "T0" + use a global sleep factor
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [ ] Add progress hint in user menu
-- [ ] Rename programs as "Z01" "Z02" etc.
+- [ ] fix floating values in end-battle screen
 - [x] Notice in markdown/pdf

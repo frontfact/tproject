@@ -366,16 +366,6 @@ class CatFile(object):
                 return (program.name, 0)
         self.programs = sorted(self.programs, key=sort_key)
 
-    def sort(self):
-        self.sort_programs()
-        def set_program_index(name, index):
-            program = self.find(name)
-            if program is not None:
-                self.programs.remove(program)
-                self.programs.insert(index, program)
-        set_program_index('TPROJECT', 0)
-        set_program_index('T0', len(self.programs))
-
     def find(self, progname: str):
         for program in self.programs:
             if program.name==progname:
@@ -393,7 +383,7 @@ class CatFile(object):
         # T0(65) = 300/s
         # T0(35+) = 833/s
         # T0(100+) = 190/s
-        tnt2 = self.find('TNT2')
+        tnt2 = self.find('Z02')
         if '35+' in ctype:
             tnt2.tokens[0] = Token('8','8',1,False)
             tnt2.tokens[1] = Token('3','3',1,False)
@@ -476,7 +466,7 @@ def main():
         catfile.simplify()
 
     if args.sort:
-        catfile.sort()
+        catfile.sort_programs()
 
     if args.dump:
         catfile.dump_programs('../src')

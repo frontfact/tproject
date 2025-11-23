@@ -9,7 +9,7 @@ Then
   3>Mat Z[6,3⇒Not Int (Ran#Mat Z[6,3⇒2→A
   Text 51,38,"attak→"
   {1,A,51,64}
-  Prog "TNT8"
+  Prog "Z08"
   If A≠8
   Then 
     1→Mat Z[11,3
@@ -24,30 +24,30 @@ Then
   If A≠2 And A≠8
   Then 
     {M,2}
-    Prog "TNT20"
+    Prog "Z20"
     72→R
     A=3⇒90→R
     A=6⇒62→R
     {M,1}
     A=7⇒{M,7}
-    Prog "TNT20"
+    Prog "Z20"
     If A=5
     Then 
       .3→X
-      Prog "T0"
+      Prog "Z0"
       Cls
       RclPict 1
       {M,2}
-      Prog "TNT20"
+      Prog "Z20"
       {M,1}
-      Prog "TNT20"
+      Prog "Z20"
     IfEnd
   IfEnd
   If A=8
   Then 
     115→R
     {M,0}
-    Prog "TNT20"
+    Prog "Z20"
   IfEnd
   If A=1
   Then 
@@ -96,7 +96,7 @@ Else
   A→Mat Z[11,4
   Text 51,38,"pouvoir→"
   {2,A,51,73}
-  Prog "TNT8"
+  Prog "Z08"
   If A=1 Or A=2
   Then 
     Circle 110,37,10
@@ -115,7 +115,7 @@ Else
   Then 
     Orange F-Line 105,50,105,61
     .3→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 50,61,54,45
     Orange F-Line 52,50,47,41
     Orange F-Line 49,44,53,34
@@ -163,7 +163,7 @@ Else
     For 1→A To 5
       Orange F-Line 95,40,15Ran#+40,30Ran#+25
       .2→X
-      Prog "T0"
+      Prog "Z0"
       Cls
       RclPict 1
     Next
@@ -202,7 +202,7 @@ Else
       A>24⇒Orange F-Line -A+90,38-A/2,-A+90,38+A/2
     Next
     .2→X
-    Prog "T0"
+    Prog "Z0"
     For 4→P To 6
       Cls
       Plot 0,0
@@ -216,18 +216,18 @@ Else
   Then 
     Orange F-Line 90,40,43,36
     .2→X
-    Prog "T0"
+    Prog "Z0"
     Cls
     RclPict 1
     Orange F-Line 90,40,49,40
     .2→X
-    Prog "T0"
+    Prog "Z0"
     Cls
     RclPict 1
     Orange Text 22,45,":"
     Text 51,38,"pouvoir→vampyr"
     .2→X
-    Prog "T0"
+    Prog "Z0"
     For 47→A To 99 Step 2
       Orange F-Line A,39+3Ran#,A+1,39+3Ran#
     Next
@@ -257,16 +257,16 @@ Else
         Next
       Next
       .3→X
-      Prog "T0"
+      Prog "Z0"
     IfEnd
     Orange F-Line 51,61,54,45
     Orange F-Line 49,61,54,45
     .2→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 51,50,43,38
     Orange F-Line 54,50,43,38
     .2→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 48,44,53,26
     Orange F-Line 50,44,53,26
     6→P
@@ -299,8 +299,8 @@ S=8⇒1+Int 3Ran#→Mat Z[1,1
 I≠Mat Z[1,1⇒Orange Text 5,60,Mat Z[1,1]-I
 J≠Mat Z[6,1⇒Orange Text 5,C,Mat Z[6,1]-J
 .7→X
-Prog "T0"
-Prog "TNT19"
+Prog "Z0"
+Prog "Z19"
 0→W
 0→P~Q
 Cls

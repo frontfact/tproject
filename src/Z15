@@ -14,15 +14,15 @@ Then
     "Trop tard !..."
     "TOMBERRY.... NON !!!!"
     .→Mat Z[1,1
-    Prog "TNT21"
+    Prog "Z21"
   IfEnd
   If Z=23
   Then 
     ClrText
     Orange "Le mandivor !"
     2→X
-    Prog "T0"
-    Prog "TNT14"
+    Prog "Z0"
+    Prog "Z14"
     Orange "Plutot coriace..."◢
     24→Mat Z[12,6
     sin 9
@@ -45,8 +45,8 @@ Then
   "sortir pour l'inst.."
   Orange "Je suis presse."
   1→X
-  Prog "T0"
-  Prog "TNT14"
+  Prog "Z0"
+  Prog "Z14"
   29→θ
   θ→Mat Z[12,6
 IfEnd
@@ -62,11 +62,11 @@ Then
   For 21→A To 11 Step -5
     Text A,A+37,"θ"
     .3→X
-    Prog "T0"
+    Prog "Z0"
     Text A,A+37,"~"
   Next
   38→Mat Z[12,6
-  Prog "TNT21"
+  Prog "Z21"
 IfEnd
 If Z=38
 Then 
@@ -75,7 +75,7 @@ Then
     Isz B
     PlotOn A,B
     .1→X
-    Prog "T0"
+    Prog "Z0"
     PlotOff A,B
   Next
   "On debarque ici."◢
@@ -100,7 +100,7 @@ Then
   "Et... bonne chance."◢
   For 2→O To 4
     For 1→W To 5
-      Prog "TNT7"
+      Prog "Z07"
     Next
   Next
   9→Mat Z[10,3
@@ -113,7 +113,7 @@ Then
   "soleil...  qui fait  pousser not'groseye"◢
   Green "Z obtient 1 groseye."◢
   7→O
-  Prog "TNT7"
+  Prog "Z07"
   1→Mat Z[10,1
 IfEnd
 If A=60 And B=42 And Not Mat Z[10,2
@@ -122,9 +122,9 @@ Then
   Orange "Ca semble trop facilepour etre vrai."◢
   "Voix : En effet..."
   2→X
-  Prog "T0"
+  Prog "Z0"
   99→Z
-  Prog "TNT14"
+  Prog "Z14"
   "Tu m'as vaincu,"
   "le tresor est a toi."◢
   Green "Z obtient :"

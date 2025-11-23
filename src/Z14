@@ -1,4 +1,4 @@
-Prog "TNT12"
+Prog "Z12"
 Goto 1
 Lbl D
 1>Mat Z[6,3⇒1→Mat Z[6,3
@@ -17,10 +17,10 @@ P=9⇒Q+Mat Z[6,3→Mat Z[6,3
 1>Mat Z[6,2⇒1→Mat Z[6,2
 1>Mat Z[6,3⇒1→Mat Z[6,3
 .7→X
-Prog "T0"
+Prog "Z0"
 If I≠Mat Z[1,1] Or J≠Mat Z[6,1
 Then 
-  Prog "TNT19"
+  Prog "Z19"
   1>Mat Z[6,1⇒Goto 2
 IfEnd
 0→P~Q
@@ -40,7 +40,7 @@ For 2→V To 5
     Green Text 6V+19,13U+1,Mat Z[V,U
     If Not Int (4Ran#Mat Z[6,4
     Then 
-      Prog "TNT6"
+      Prog "Z06"
       Z=8⇒Return
     IfEnd
   Next
@@ -52,7 +52,7 @@ StoPict 1
 Do
   If Not Int (5Ran#Mat Z[6,4
   Then 
-    Prog "TNT6"
+    Prog "Z06"
     Z=8⇒Return
     Green Text 43,14,Mat Z[4,1
     Green Text 49,14,Mat Z[5,1
@@ -74,7 +74,7 @@ Do
   Do
     If Not Int (5Ran#Mat Z[6,4
     Then 
-      Prog "TNT6"
+      Prog "Z06"
       Z=8⇒Return
     IfEnd
     Getkey→θ
@@ -94,12 +94,12 @@ Then
   Then 
     Text 57,3,"Z prend la fuite...           "
     .6→X
-    Prog "T0"
+    Prog "Z0"
     Return
   Else 
     Text 57,3,"Le monstre rattrape Z !       "
     .6→X
-    Prog "T0"
+    Prog "Z0"
     0→P~Q
     Goto D
   IfEnd
@@ -109,7 +109,7 @@ Then
   StoPict 1
   Mat Z[1,1→I
   Mat Z[6,1→J
-  Prog "TNT9"
+  Prog "Z09"
   Cls
   RclPict 1
   PlotOn 0,0
@@ -121,12 +121,12 @@ Then
   For 1→E To 5
     If Not Int (3Ran#Mat Z[6,4
     Then 
-      Prog "TNT6"
+      Prog "Z06"
       Z=8⇒Return
     IfEnd
     Mat Z[E,4→C
     {1,C,6E+19,7}
-    Prog "TNT8"
+    Prog "Z08"
   Next
   1→r
   Text 57,3,"[EXE]→choisir une attak       "
@@ -150,7 +150,7 @@ Then
     Do
       If Not Int (5Ran#Mat Z[6,4
       Then 
-        Prog "TNT6"
+        Prog "Z06"
         Z=8⇒Return
       IfEnd
       Getkey→θ
@@ -173,10 +173,10 @@ Then
   If V=1
   Then 
     {8}
-    Prog "TNT5"
+    Prog "Z05"
     75→R
     {0,2}
-    Prog "TNT5"
+    Prog "Z05"
     1→P
     6→Q
   IfEnd
@@ -184,7 +184,7 @@ Then
   Then 
     Text 51,38,"defense +1"
     {5,3}
-    Prog "TNT5"
+    Prog "Z05"
     4→P
     1→Q
   IfEnd
@@ -192,59 +192,59 @@ Then
   Then 
     Text 51,38,"defense ennemi -1     "
     {8}
-    Prog "TNT5"
+    Prog "Z05"
     65→R
     {0,1}
-    Prog "TNT5"
+    Prog "Z05"
     9→P
     -1→Q
   IfEnd
   If V=4
   Then 
     {8}
-    Prog "TNT5"
+    Prog "Z05"
     75→R
     {0,1}
-    Prog "TNT5"
+    Prog "Z05"
     .2→X
-    Prog "T0"
+    Prog "Z0"
     {5,3}
-    Prog "TNT5"
+    Prog "Z05"
     1→P
     10→Q
   IfEnd
   If V=5
   Then 
     {8}
-    Prog "TNT5"
+    Prog "Z05"
     75→R
     {0,2}
-    Prog "TNT5"
+    Prog "Z05"
     .3→X
-    Prog "T0"
+    Prog "Z0"
     Cls
     RclPict 1
     Plot 0,0
     .2→X
-    Prog "T0"
+    Prog "Z0"
     41→R
     {8}
-    Prog "TNT5"
+    Prog "Z05"
     75→R
     {0,2}
-    Prog "TNT5"
+    Prog "Z05"
     1→P
     15→Q
   IfEnd
   If V=6
   Then 
     {5,2}
-    Prog "TNT5"
+    Prog "Z05"
     {8}
-    Prog "TNT5"
+    Prog "Z05"
     85→R
     {0,2}
-    Prog "TNT5"
+    Prog "Z05"
     1→P
     24→Q
     Int (Mat Z[1,1]-6-6Ran#→Mat Z[1,1
@@ -252,19 +252,19 @@ Then
   If V=7
   Then 
     {8}
-    Prog "TNT5"
+    Prog "Z05"
     75→R
     {0,2}
-    Prog "TNT5"
+    Prog "Z05"
     {6,3,7,2,6,3}
-    Prog "TNT5"
+    Prog "Z05"
     1→P
     26→Q
   IfEnd
   If V=8
   Then 
     {5,4}
-    Prog "TNT5"
+    Prog "Z05"
     For 1→A To 12
       Orange F-Line 108,37,Int 20Ran#+98,Int 20Ran#+27
     Next
@@ -281,12 +281,12 @@ Then
   For 1→E To 5
     If Not Int (3Ran#Mat Z[6,4
     Then 
-      Prog "TNT6"
+      Prog "Z06"
       Z=8⇒Return
     IfEnd
     Mat Z[E,3]→C
     {2,C,6E+19,7}
-    Prog "TNT8"
+    Prog "Z08"
   Next
   1→r
   Text 57,3,"[EXE]→choisir un pouvoir      "
@@ -317,7 +317,7 @@ Then
     Do
       If Not Int (5Ran#Mat Z[6,4
       Then 
-        Prog "TNT6"
+        Prog "Z06"
         Z=8⇒Return
       IfEnd
       Getkey→θ
@@ -356,7 +356,7 @@ Then
   Then 
     Orange F-Line 67,55,67,61
     .3→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 107,61,100,45
     Orange F-Line 104,53,108,38
     Orange F-Line 106,45,101,30
@@ -366,7 +366,7 @@ Then
   If V=5
   Then 
     {M,2}
-    Prog "TNT20"
+    Prog "Z20"
     Text 11,86,"vitesse"
     Text 20,80,"vie:   /"
     Text 30,90,"att:"
@@ -422,7 +422,7 @@ Then
     For 1→A To 5
       Orange F-Line 67,53,Int 10Ran#+100,Int 25Ran#+20
       .2→X
-      Prog "T0"
+      Prog "Z0"
       Cls
       RclPict 1
     Next
@@ -474,17 +474,17 @@ Then
   Then 
     Orange F-Line 67,53,104,36
     .2→X
-    Prog "T0"
+    Prog "Z0"
     Cls
     RclPict 1
     Orange F-Line 67,53,104,34
     .3→X
-    Prog "T0"
+    Prog "Z0"
     Cls
     RclPict 1
     Orange Text 25,104,":"
     .3→X
-    Prog "T0"
+    Prog "Z0"
     Text 51,38,"absorbe vie ennemi !"
     For 103→A To 47 Step -2
       Orange F-Line A,36+3Ran#,A-1,36+3Ran#
@@ -516,7 +516,7 @@ Then
       Orange F-Line 67,54,68,61
     IfEnd
     .3→X
-    Prog "T0"
+    Prog "Z0"
     0→O
     If V=16
     Then 
@@ -530,15 +530,15 @@ Then
     Orange F-Line 107,61,101,45
     Orange F-Line 109,61,101,45
     .3→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 104,53,109,38
     Orange F-Line 106,53,109,38
     .3→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 106,45,102,30
     Orange F-Line 108,45,102,30
     .3→X
-    Prog "T0"
+    Prog "Z0"
     1→P
     40→Q
     V=13⇒28→Q
@@ -562,7 +562,7 @@ Then
   Mat Z[11,3→O
   Mat Z[11,4→C
   {O,C,51,81}
-  Prog "TNT8"
+  Prog "Z08"
   Text 57,3,"                              "
   0→L
   For 1→K To 5
@@ -572,7 +572,7 @@ Then
   Then 
     Text 57,3,"tu connais deja cela.         "
     .7→X
-    Prog "T0"
+    Prog "Z0"
     0→P~Q
     Goto D
   IfEnd
@@ -596,16 +596,16 @@ Then
     C→Mat Z[L,5-O
     Text 57,3,"tu as appris                  "
     {O,C,57,55}
-    Prog "TNT8"
+    Prog "Z08"
     .7→X
-    Prog "T0"
+    Prog "Z0"
     0→P~Q
     0→Mat Z[11,3
     Goto D
   Else 
     Text 57,3,"  ...tu n'as plus de place... "
     .7→X
-    Prog "T0"
+    Prog "Z0"
     Green Text 51,81,"       "
     Text 51,38,"supprimer quoi ?     "
     Text 57,3,"[EXE]→choisir   [EXIT]→quitter"
@@ -616,7 +616,7 @@ Then
     For 1→Q To 5
       Mat Z[Q,5-O→C
       {O,C,19+6Q,7}
-      Prog "TNT8"
+      Prog "Z08"
     Next
     1→Q
     Do
@@ -640,14 +640,14 @@ Then
     Mat Z[Q,5-O→C
     Text 51,38,"Z oublie            "
     {O,C,51,73}
-    Prog "TNT8"
+    Prog "Z08"
     Mat Z[11,4→C
     C→Mat Z[Q,5-O
     Text 57,3," et il apprend                "
     {O,C,57,64}
-    Prog "TNT8"
+    Prog "Z08"
     .7→X
-    Prog "T0"
+    Prog "Z0"
     0→P~Q
     0→Mat Z[11,3
     Goto D
@@ -735,13 +735,13 @@ Then
   Text 43,10,"aucun"
 Else 
   {3,S,43,10}
-  Prog "TNT8"
+  Prog "Z08"
   {3,T,49,10}
-  Prog "TNT8"
+  Prog "Z08"
   S→O
-  Prog "TNT7"
+  Prog "Z07"
   T→O
-  Prog "TNT7"
+  Prog "Z07"
 IfEnd
 If θ<Mat Z[11,2
 Then 

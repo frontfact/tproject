@@ -1,8 +1,8 @@
 Lbl I
-Prog "TNT13"
+Prog "Z13"
 θ=29⇒Goto W
 {1}
-Prog "TNT4"
+Prog "Z04"
 0
 Lbl 0
 Mat Z[12,4→G
@@ -28,7 +28,7 @@ If θ=29
 Then 
   If 36=Mat Z[12,6
   Then 
-    Prog "TNT15"
+    Prog "Z15"
   Else 
     Goto W
   IfEnd
@@ -77,19 +77,19 @@ Then
   Green Text 31,10,"       "
   Orange Text 23,2,"         "
   StoPict 1
-  θ=48⇒Prog "TNT10"
-  b₂=2⇒Prog "TNT11"
-  b₂=3⇒Prog "TNT17"
+  θ=48⇒Prog "Z10"
+  b₂=2⇒Prog "Z11"
+  b₂=3⇒Prog "Z17"
   Cls
   RclPict 1
   Green Text 31,10,Mat Z[10,4
-  Prog "TNT18"
+  Prog "Z18"
   θ=48⇒Goto 1
   Goto 0
 IfEnd
 'countdowns
-V=3⇒Not Mat Z[10,1⇒Prog "TNT15"
-Mat Z[12,1⇒Prog "TNT15"
+V=3⇒Not Mat Z[10,1⇒Prog "Z15"
+Mat Z[12,1⇒Prog "Z15"
 Ans=sin 9⇒Goto I
 'scenario
 If b₂=1
@@ -98,17 +98,17 @@ Then
   If W=Mat Z[12,6
   Then 
     {W}
-    Prog "TNT4"
+    Prog "Z04"
     If 37=Mat Z[12,6
     Then 
-      Prog "TNT15"
+      Prog "Z15"
       Return
     IfEnd
     Ans=sin 9⇒Goto I
   Else 
     Text 54,60,"HUM ?"
     .2→X
-    Prog "T0"
+    Prog "Z0"
     Text 54,60,"      "
   IfEnd
 IfEnd

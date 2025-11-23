@@ -51,7 +51,7 @@ Then
       Not U⇒Locate W,2,"Z"
       U⇒Locate W,2,"z"
       .1→X
-      Prog "T0"
+      Prog "Z0"
     Next
   Next
 IfEnd
@@ -65,7 +65,7 @@ Then
     Getkey→θ
   LpWhile θ≠31 And θ≠47
   .2→X
-  Prog "T0"
+  Prog "Z0"
   θ=47⇒Goto A
   Int (9999Ran#*9999Ran#→Mat Z[10,3
   Mat Z*Mat Z[10,3→Mat Y
@@ -73,6 +73,6 @@ Then
   Locate 7,4,"* Level *"
   Locate 7,5,"* Saved *"
   1→X
-  Prog "T0"
+  Prog "Z0"
 IfEnd
 Goto A

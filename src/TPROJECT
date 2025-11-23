@@ -101,6 +101,6 @@ Else
   ClrText
   "TNTSOFT vous souhaiteun agreable voyage"
   1.3→X
-  Prog "T0"
+  Prog "Z0"
 IfEnd
-Prog "TNT2"
+Prog "Z02"

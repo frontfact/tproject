@@ -1,7 +1,7 @@
 300/300→Mat Z[10,5
-Prog "TNT3"
+Prog "Z03"
 Lbl I
-Prog "TNT1"
+Prog "Z01"
 Lbl 0
 Deg
 Cls
@@ -13,11 +13,11 @@ Mat Z[9,4→θ
 θ=38⇒Isz A
 θ=28⇒Dsz B
 θ=37⇒Isz B
-38=Mat Z[12,6⇒Prog "TNT15"
+38=Mat Z[12,6⇒Prog "Z15"
 For 1→C To 6
   PlotChg A,B
   .1→X
-  Prog "T0"
+  Prog "Z0"
 Next
 PlotOn A,B
 0
@@ -53,7 +53,7 @@ Then
   If V
   Then 
     V→Mat Z[11,1
-    Prog "TNT3"
+    Prog "Z03"
     Goto I
   IfEnd
   Goto 0
@@ -67,7 +67,7 @@ Then
   For 0→W To 340 Step 25
     Orange F-Line A,B,A+12cos W,B+9sin W
   Next
-  Prog "TNT14"
+  Prog "Z14"
   Int 6Ran#+7→Mat Z[10,3
   Goto I
 IfEnd
@@ -79,14 +79,14 @@ A=86⇒B=34⇒4→H
 H⇒Goto H
 If A=60 And B=42 And Not Mat Z[10,2
 Then 
-  Prog "TNT15"
+  Prog "Z15"
   Goto I
 IfEnd
 If Not Int 30Ran# Or θ=48
 Then 
   If θ=48
   Then 
-    Prog "TNT10"
+    Prog "Z10"
   Else 
     ClrText
     Locate 1,1,"~ MARCHAND AMBULANT ~"
@@ -98,8 +98,8 @@ Then
     If Ans=72
     Then 
       0→r
-      Prog "TNT16"
-      Prog "TNT11"
+      Prog "Z16"
+      Prog "Z11"
     IfEnd
   IfEnd
   0→Mat Z[9,4
@@ -183,5 +183,5 @@ U→Mat Z[9,1
 V→Mat Z[9,2
 θ→Mat Z[9,4
 1→X
-Prog "T0"
+Prog "Z0"
 Goto 0

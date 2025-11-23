@@ -23,7 +23,7 @@ For 5→B To 6
       44B-176→L
       A+10(B-5)→C
       {3,C,K,L}
-      Prog "TNT8"
+      Prog "Z08"
       1<Mat Z[A,B⇒Text K,L+31,Mat Z[A,B
     IfEnd
   Next
@@ -68,7 +68,7 @@ Then
   Cls
   RclPict 1
   {5}
-  Prog "TNT5"
+  Prog "Z05"
   320→A
   27→C
   For 57→B To 106
@@ -93,7 +93,7 @@ Then
   Next
   Int (Mat Z[6,1]-130-41Ran#→Mat Z[6,1
   1.3→X
-  Prog "T0"
+  Prog "Z0"
 IfEnd
 If C=14 And Mat Z[5,6
 Then 
@@ -105,7 +105,7 @@ Then
   Cls
   RclPict 1
   {8}
-  Prog "TNT5"
+  Prog "Z05"
   S-Gph1 DrawOff
   S-Gph2 DrawOff
   S-Gph3 DrawOn
@@ -118,16 +118,16 @@ Then
     F-Line 45,38,55,56
     Orange F-Line 55,48,55,28
     .6→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 48,38,62,38
     .6→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 51,43,59,33
     .6→X
-    Prog "T0"
+    Prog "Z0"
     Orange F-Line 51,33,59,43
     1→X
-    Prog "T0"
+    Prog "Z0"
     Green F-Line 45,38,88,58
     Green F-Line 55,56,88,58
     Green F-Line 65,38,88,58
@@ -198,7 +198,7 @@ Then
   Mat Z[6,1]-Int (9Ran#+2Mat Z[3,1]+((C-11)/3)Mat Z[3,1→Mat Z[6,1
   0→Mat Z[3,1
   1.3→X
-  Prog "T0"
+  Prog "Z0"
 IfEnd
 S-Gph3 DrawOff
 If Not r
