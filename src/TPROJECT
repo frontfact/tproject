@@ -1,7 +1,6 @@
 'TNTSOFT
 'V 1.3.1
 Identity 1→Mat A
-Lbl S
 Cls
 S-WindMan
 ViewWindow 1,127,0,1,63,0,0,90,1
@@ -56,62 +55,52 @@ Orange F-Line 80,20,115,20
 Text 38,80,"T-Project"
 Text 52,21,"NOUVELLE PARTIE"
 Text 58,21,"CONTINUER"
-Lbl 1
-Text 52+6D,16,"-"
 Do
-  Getkey→θ
-LpWhile θ≠28 And θ≠37 And θ≠31 And θ≠33
-Text 6D+52,16," "
-If θ≠31
-Then 
-  Isz D
-  D>1⇒0→D
-  Goto 1
-IfEnd
+  Text 52+6D,16,"-"
+  Do
+    Getkey→θ
+  LpWhile θ≠28 And θ≠37 And θ≠31
+  Text 52+6D,16," "
+  If θ≠31
+  Then 
+    Isz D
+    D>1⇒0→D
+  IfEnd
+LpWhile θ≠31
 Cls
 ClrText
 If D
 Then 
   Locate 1,1,"CHARGEMENT..."
   Mat Y*(1⌟√(Mat Y[10,3→Mat Z
-  0→C
   For 1→A To 12
     For 1→B To 6
-      Int (Mat Z[A,B]≠Mat Z[A,B⇒Isz C
+      Int (Mat Z[A,B]≠Mat Z[A,B⇒Stop
     Next
   Next
+Else 
+  Identity 1→Mat Z
+  [[40,40,3,1,.,.]
+  [12,12,2,3,.,.]
+  [12,12,1,2,.,.]
+  [3,3,.,.,.,.]
+  [3,3,.,.,.,.]
+  [.,.,.,.,.,.]
+  [.,.,.,.,.,.]
+  [.,.,.,.,.,.]
+  [67,19,.,38,.,.]
+  [0,1,.,.,.,.]
+  [1,1,.,.,.,.]
+  [.,.,.,.,.,1]]→Mat Z
   ClrText
-  If C
-  Then 
-    Identity 1→Mat Y
-    Goto S
-  IfEnd
-  Prog "TNT2"
+  "Il est recommande de parcourir la notice  avant de jouer."◢
+  ClrText
+  Green "Rappel :"
+  Orange "Z parle en orange."◢
+  "Son interlocuteur,   en bleu."◢
+  ClrText
+  "TNTSOFT vous souhaiteun agreable voyage"
+  1.3→X
+  Prog "T0"
 IfEnd
-Identity 1→Mat Z
-[[40,40,3,1,.,.]
-[12,12,2,3,.,.]
-[12,12,1,2,.,.]
-[3,3,.,.,.,.]
-[3,3,.,.,.,.]
-[.,.,.,.,.,.]
-[.,.,.,.,.,.]
-[.,.,.,.,.,.]
-[67,19,.,38,.,.]
-[0,1,.,.,.,.]
-[1,1,.,.,.,.]
-[.,.,.,.,.,1]]→Mat Z
-0→A~Z
-Cls
-0→r
-ClrText
-"Il est recommande de parcourir la notice  avant de jouer."◢
-ClrText
-Green "Rappel :"
-Orange "Z parle en orange."◢
-"Son interlocuteur,   en bleu."◢
-ClrText
-"TNTSOFT vous souhaiteun agreable voyage"
-1.3→X
-Prog "T0"
 Prog "TNT2"

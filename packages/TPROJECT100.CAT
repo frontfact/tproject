@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1321
+Capacity:1271
 File Name:TPROJECT
 Group Name:
 Password:
@@ -14,7 +14,6 @@ Option4:
 'TNTSOFT
 'V 1.3.1
 \Identity 1\->\Mat A
-\Lbl S
 \Cls
 \S-WindMan
 \ViewWindow 1,127,0,1,63,0,0,90,1
@@ -69,40 +68,29 @@ Option4:
 \Text 38,80,"T-Project"
 \Text 52,21,"NOUVELLE PARTIE"
 \Text 58,21,"CONTINUER"
-\Lbl 1
+\Do
 \Text 52+6D,16,"-"
 \Do
 \Getkey\->\theta
-\LpWhile \theta\<>28\ And \theta\<>37\ And \theta\<>31\ And \theta\<>33
-\Text 6D+52,16," "
+\LpWhile \theta\<>28\ And \theta\<>37\ And \theta\<>31
+\Text 52+6D,16," "
 \If \theta\<>31
 \Then \Isz D
 D>1\=>0\->D
-\Goto1
 \IfEnd
+\LpWhile \theta\<>31
 \Cls
 \ClrText
 \If D
 \Then \Locate 1,1,"CHARGEMENT..."
 \Mat Y*(1\ab/c\sqrt(\Mat Y[10,3\->\Mat Z
-0\->C
 \For 1\->A \To 12
 \For 1\->B \To 6
-\Int (\Mat Z[A,B]\<>\Mat Z[A,B\=>\Isz C
+\Int (\Mat Z[A,B]\<>\Mat Z[A,B\=>\Stop
 \Next 
 \Next 
-\ClrText
-\If C
-\Then \Identity 1\->\Mat Y
-\GotoS
-\IfEnd
-\Prog "TNT2"
-\IfEnd
-\Identity 1\->\Mat Z
+\Else \Identity 1\->\Mat Z
 [[40,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][67,19,.,38,.,.][0,1,.,.,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
-0\->A~Z
-\Cls
-0\->\r
 \ClrText
 "Il est recommande de parcourir la notice  avant de jouer."\Disp\ClrText
 "Rappel :"
@@ -110,6 +98,7 @@ D>1\=>0\->D
 "TNTSOFT vous souhaiteun agreable voyage"
 1.3\->X
 \Prog "T0"
+\IfEnd
 \Prog "TNT2"
 %End
 %Header Record
