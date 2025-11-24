@@ -1969,7 +1969,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1589
+Capacity:1590
 File Name:Z12
 Group Name:
 Password:
@@ -2013,7 +2013,7 @@ M=7\=>{7,N+2,2+2N/3,40+15N+13N\Ran#,8}
 \List \Ans[1\->M
 \List \Ans[2\->A
 \List \Ans[3\->D
-\List \Ans[4\->P
+\Int \List \Ans[4\->P
 \List \Ans[5\->V
 {M}
 \Prog "Z22"
