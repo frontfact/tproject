@@ -821,7 +821,8 @@ X>89\=>\Break
 \Then "Maire d'ELOS :"
 "Chasseur de prime ?"
 "J'ai un job pour toi."\Disp\ClrText
-"Tue le mandivor qui  terrorise ma ville   et gagne 4000\@24."\Disp\Orange "...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
+"Tue le mandivor qui"
+"erre dans les rues etterrorise ma ville,  et gagne 4000\@24."\Disp\Orange "...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
 \Isz Z
 \IfEnd
 \If W=24\ And 4999<\Mat Z[10,4
