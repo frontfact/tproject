@@ -2535,8 +2535,6 @@ Z=8\=>\Return
 1\->P
 32\->Q
 \IfEnd
-\Mat Z[1,1\->I
-\Mat Z[6,1\->J
 \GotoD
 \IfEnd
 \If \r=2
