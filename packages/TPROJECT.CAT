@@ -1294,7 +1294,7 @@ A\->\Mat Z[11,4
 \Cls
 \RclPict 1
 \Next 
-\Text 51,38,"pouvoir\->morsur"
+\Text 51,38,"pouvoir\->morsur       "
 \For 1\->A \To 6
 \Orange \Text \Int 20\Ran#+10,\Int 20\Ran#+40,"#"
 \Next 
@@ -1310,7 +1310,7 @@ A\->\Mat Z[11,4
 \Cls
 \RclPict 1
 \Next 
-\Text 51,38,"pouvoir\->griffe"
+\Text 51,38,"pouvoir\->griffe       "
 \For 0\->A \To 6
 \Orange \F-Line 15\Ran#+40,30\Ran#+25,15\Ran#+40,30\Ran#+25
 \Next 
@@ -1364,7 +1364,7 @@ A>24\=>\Orange \F-Line -A+90,38-A/2,-A+90,38+A/2
 \Cls
 \RclPict 1
 \Orange \Text 22,45,":"
-\Text 51,38,"pouvoir\->vampyr"
+\Text 51,38,"pouvoir\->vampyr       "
 .2\->X
 \Prog "Z0"
 \For 47\->A \To 99 \Step 2
