@@ -2384,10 +2384,7 @@ Z=8\=>\Return
 \IfEnd
 \IfEnd
 \If \r=3
-\Then \StoPict 1
-\Mat Z[1,1\->I
-\Mat Z[6,1\->J
-\Prog "Z09"
+\Then \Prog "Z09"
 \Cls
 \RclPict 1
 \PlotOn 0,0
