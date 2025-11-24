@@ -303,7 +303,7 @@ A\>=105\=>A\<=107\=>B\>=5\=>B\<=7\=>10\->V
 \Then \Mat Z[10,3]-1\->\Mat Z[10,3
 \IfEnd
 \If 1>\Mat Z[10,3
-\Then \For 0\->W \To 340 \Step 25
+\Then \For 0\->W \To 336 \Step 24
 \Orange \F-Line A,B,A+12\cos W,B+9\sin W
 \Next 
 \Prog "Z14"
