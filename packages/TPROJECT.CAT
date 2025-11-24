@@ -1474,7 +1474,7 @@ Q=6\=>P-10\->P
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:961
+Capacity:957
 File Name:Z08
 Group Name:
 Password:
@@ -1483,10 +1483,11 @@ Option2:
 Option3:
 Option4:
 %Data Record
+\List \Ans[1\->O
 \List \Ans[2\->\theta
 \List \Ans[3\->Y
 \List \Ans[4\->X
-\If 1=\List \Ans[1
+\If O=1
 \Then \Not \theta\=>\Green \Text Y,X,"       "
 \theta=1\=>\Green \Text Y,X,"coup   "
 \theta=2\=>\Green \Text Y,X,"garde  "
@@ -1497,7 +1498,7 @@ Option4:
 \theta=7\=>\Green \Text Y,X,"furie  "
 \theta=8\=>\Green \Text Y,X,"Xmeta  "
 \IfEnd
-\If 2=\List \Ans[1
+\If O=2
 \Then \Not \theta\=>\Green \Text Y,X,"       "
 \theta=1\=>\Green \Text Y,X,"acier  "
 \theta=2\=>\Green \Text Y,X,"force  "
@@ -1517,7 +1518,7 @@ Option4:
 \theta=16\=>\Green \Text Y,X,"orage  "
 \theta=17\=>\Green \Text Y,X,"enfers "
 \IfEnd
-\If 3=\List \Ans[1
+\If O=3
 \Then \Not \theta\=>\Text Y,X,"       "
 \theta=1\=>\Text Y,X,"soin"
 \theta=2\=>\Text Y,X,"soin +"
