@@ -479,7 +479,7 @@ Option4:
 \Int 10\Frac \Mat A[H+1,G\->O
 \IfEnd
 'wall
-N=2\ Or O>3\=>\Goto1
+\theta\<>48\=>N=2\ Or O>3\=>\Goto1
 '
 \PlotOff I,J
 \theta=27\=>\Isz G
