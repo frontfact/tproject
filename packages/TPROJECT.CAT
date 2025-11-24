@@ -426,6 +426,7 @@ Option3:
 Option4:
 %Data Record
 \Lbl I
+{\Ans}
 \Prog "Z13"
 \theta=29\=>\GotoW
 {1}
@@ -1020,6 +1021,7 @@ X>89\=>\Break
 \Prog "Z14"
 44\->Z
 \Prog "Z14"
+{\sin 9}
 \Prog "Z13"
 \ClrText
 "IMPRESSIONNANT..."
@@ -2175,8 +2177,10 @@ Z>14\=>22.117\->\Mat A[3,8
 1\->G
 5\->H
 \IfEnd
-G\->\Mat Z[12,4
+\If \sin 9\<>\List \Ans[1
+\Then G\->\Mat Z[12,4
 H\->\Mat Z[12,5
+\IfEnd
 0\->\Mat Z[9,3
 \Prog "Z16"
 \Green \Horizontal 13
