@@ -120,7 +120,7 @@ Then
   "un ami t'y attend."◢
   60+Mat Z[10,4→Mat Z[10,4
   10→Z
-  sin 9
+  π
 IfEnd
 If W=10
 Then 
@@ -131,13 +131,12 @@ Then
 IfEnd
 If W=10.5
 Then 
-  "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
-  "SACRE ?!!"
+  "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
   3→X
   Prog "Z0"
   Prog "Z14"
   11→Z
-  sin 9
+  π
 IfEnd
 If W=11
 Then 
@@ -344,7 +343,8 @@ Then
   "Chasseur de prime ?"
   "J'ai un job pour toi."◢
   ClrText
-  "Tue le mandivor qui  terrorise ma ville   et gagne 4000$."◢
+  "Tue le mandivor qui"
+  "erre dans les rues etterrorise ma ville,  et gagne 4000$."◢
   Orange "...Non, 5000."◢
   "Hum...soit."◢
   20→Mat Z[12,1
@@ -469,7 +469,7 @@ Then
   Orange "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
   Orange "inscriptions ?"◢
   Isz Z
-  sin 9
+  π
 IfEnd
 If W=30
 Then 
@@ -538,7 +538,7 @@ Then
   Orange "Je dois rejoindre"
   Orange "Wills et Jessie."◢
   34→Z
-  sin 9
+  π
 IfEnd
 If W=34
 Then 
@@ -644,6 +644,7 @@ Then
   Prog "Z14"
   44→Z
   Prog "Z14"
+  {π}
   Prog "Z13"
   ClrText
   "IMPRESSIONNANT..."

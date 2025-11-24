@@ -25,7 +25,7 @@ Then
     Prog "Z14"
     Orange "Plutot coriace..."◢
     24→Mat Z[12,6
-    sin 9
+    π
     Return
   IfEnd
   If Z=4

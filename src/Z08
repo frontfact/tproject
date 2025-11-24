@@ -1,7 +1,8 @@
+List Ans[1→O
 List Ans[2→θ
 List Ans[3→Y
 List Ans[4→X
-If 1=List Ans[1
+If O=1
 Then 
   Not θ⇒Green Text Y,X,"       "
   θ=1⇒Green Text Y,X,"coup   "
@@ -13,7 +14,7 @@ Then
   θ=7⇒Green Text Y,X,"furie  "
   θ=8⇒Green Text Y,X,"Xmeta  "
 IfEnd
-If 2=List Ans[1
+If O=2
 Then 
   Not θ⇒Green Text Y,X,"       "
   θ=1⇒Green Text Y,X,"acier  "
@@ -34,7 +35,7 @@ Then
   θ=16⇒Green Text Y,X,"orage  "
   θ=17⇒Green Text Y,X,"enfers "
 IfEnd
-If 3=List Ans[1
+If O=3
 Then 
   Not θ⇒Text Y,X,"       "
   θ=1⇒Text Y,X,"soin"

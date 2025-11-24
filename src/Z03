@@ -1,4 +1,5 @@
 Lbl I
+{Ans}
 Prog "Z13"
 θ=29⇒Goto W
 {1}
@@ -59,7 +60,7 @@ Then
   Int 10Frac Mat A[H+1,G→O
 IfEnd
 'wall
-N=2 Or O>3⇒Goto 1
+θ≠48⇒N=2 Or O>3⇒Goto 1
 '
 PlotOff I,J
 θ=27⇒Isz G
@@ -90,13 +91,14 @@ IfEnd
 'countdowns
 V=3⇒Not Mat Z[10,1⇒Prog "Z15"
 Mat Z[12,1⇒Prog "Z15"
-Ans=sin 9⇒Goto I
+Ans=π⇒Goto I
 'scenario
 If b₂=1
 Then 
   100Frac 10b₀→W
   If W=Mat Z[12,6
   Then 
+    Green Text 31,10,"       "
     {W}
     Prog "Z04"
     If 37=Mat Z[12,6
@@ -104,7 +106,8 @@ Then
       Prog "Z15"
       Return
     IfEnd
-    Ans=sin 9⇒Goto I
+    Ans=π⇒Goto I
+    Green Text 31,10,Mat Z[10,4
   Else 
     Text 54,60,"HUM ?"
     .2→X

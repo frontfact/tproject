@@ -303,7 +303,7 @@ A\>=105\=>A\<=107\=>B\>=5\=>B\<=7\=>10\->V
 \Then \Mat Z[10,3]-1\->\Mat Z[10,3
 \IfEnd
 \If 1>\Mat Z[10,3
-\Then \For 0\->W \To 340 \Step 25
+\Then \For 0\->W \To 336 \Step 24
 \F-Line A,B,A+12\cos W,B+9\sin W
 \Next 
 \Prog "Z14"
@@ -416,7 +416,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:918
+Capacity:960
 File Name:Z03
 Group Name:
 Password:
@@ -426,6 +426,7 @@ Option3:
 Option4:
 %Data Record
 \Lbl I
+{\Ans}
 \Prog "Z13"
 \theta=29\=>\GotoW
 {1}
@@ -479,7 +480,7 @@ Option4:
 \Int 10\Frac \Mat A[H+1,G\->O
 \IfEnd
 'wall
-N=2\ Or O>3\=>\Goto1
+\theta\<>48\=>N=2\ Or O>3\=>\Goto1
 '
 \PlotOff I,J
 \theta=27\=>\Isz G
@@ -509,18 +510,20 @@ H\->\Mat Z[12,5
 'countdowns
 V=3\=>\Not \Mat Z[10,1\=>\Prog "Z15"
 \Mat Z[12,1\=>\Prog "Z15"
-\Ans=\sin 9\=>\GotoI
+\Ans=\Pi\=>\GotoI
 'scenario
 \If \R b2=1
 \Then 100\Frac 10\R b0\->W
 \If W=\Mat Z[12,6
-\Then {W}
+\Then \Text 31,10,"       "
+{W}
 \Prog "Z04"
 \If 37=\Mat Z[12,6
 \Then \Prog "Z15"
 \Return
 \IfEnd
-\Ans=\sin 9\=>\GotoI
+\Ans=\Pi\=>\GotoI
+\Text 31,10,\Mat Z[10,4
 \Else \Text 54,60,"HUM ?"
 .2\->X
 \Prog "Z0"
@@ -535,7 +538,7 @@ V=3\=>\Not \Mat Z[10,1\=>\Prog "Z15"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:10307
+Capacity:10326
 File Name:Z04
 Group Name:
 Password:
@@ -645,7 +648,7 @@ W\<>Z\=>\Return
 "Ensuite,va a TARA,"
 "un ami t'y attend."\Disp60+\Mat Z[10,4\->\Mat Z[10,4
 10\->Z
-\sin 9
+\Pi
 \IfEnd
 \If W=10
 \Then "Va voir le sage au"
@@ -653,13 +656,12 @@ W\<>Z\=>\Return
 "etrange..."\Disp10.5\->Z
 \IfEnd
 \If W=10.5
-\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
-"SACRE ?!!"
+\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
 3\->X
 \Prog "Z0"
 \Prog "Z14"
 11\->Z
-\sin 9
+\Pi
 \IfEnd
 \If W=11
 \Then "Bonjour Sage."
@@ -822,7 +824,8 @@ X>89\=>\Break
 \Then "Maire d'ELOS :"
 "Chasseur de prime ?"
 "J'ai un job pour toi."\Disp\ClrText
-"Tue le mandivor qui  terrorise ma ville   et gagne 4000\@24."\Disp"...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
+"Tue le mandivor qui"
+"erre dans les rues etterrorise ma ville,  et gagne 4000\@24."\Disp"...Non, 5000."\Disp"Hum...soit."\Disp20\->\Mat Z[12,1
 \Isz Z
 \IfEnd
 \If W=24\ And 4999<\Mat Z[10,4
@@ -905,7 +908,7 @@ X>89\=>\Break
 \Prog "Z14"
 "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
 "inscriptions ?"\Disp\Isz Z
-\sin 9
+\Pi
 \IfEnd
 \If W=30
 \Then "Maire: On dit qu'a lasource du fleuve se  trouve un tresor..."\Disp\Isz Z
@@ -955,7 +958,7 @@ X>89\=>\Break
 "(je suis venge)"\Disp"(...)"\Disp"(mais trop tard...)"\Disp\ClrText
 "Je dois rejoindre"
 "Wills et Jessie."\Disp34\->Z
-\sin 9
+\Pi
 \IfEnd
 \If W=34
 \Then "Chuttt ! Ils"
@@ -1020,6 +1023,7 @@ X>89\=>\Break
 \Prog "Z14"
 44\->Z
 \Prog "Z14"
+{\Pi}
 \Prog "Z13"
 \ClrText
 "IMPRESSIONNANT..."
@@ -1155,7 +1159,7 @@ U<30\=>\Text U-1,R+14,"      "
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2574
+Capacity:2595
 File Name:Z06
 Group Name:
 Password:
@@ -1294,7 +1298,7 @@ A\->\Mat Z[11,4
 \Cls
 \RclPict 1
 \Next 
-\Text 51,38,"pouvoir\->morsur"
+\Text 51,38,"pouvoir\->morsur       "
 \For 1\->A \To 6
 \Text \Int 20\Ran#+10,\Int 20\Ran#+40,"#"
 \Next 
@@ -1310,7 +1314,7 @@ A\->\Mat Z[11,4
 \Cls
 \RclPict 1
 \Next 
-\Text 51,38,"pouvoir\->griffe"
+\Text 51,38,"pouvoir\->griffe       "
 \For 0\->A \To 6
 \F-Line 15\Ran#+40,30\Ran#+25,15\Ran#+40,30\Ran#+25
 \Next 
@@ -1364,7 +1368,7 @@ A>24\=>\F-Line -A+90,38-A/2,-A+90,38+A/2
 \Cls
 \RclPict 1
 \Text 22,45,":"
-\Text 51,38,"pouvoir\->vampyr"
+\Text 51,38,"pouvoir\->vampyr       "
 .2\->X
 \Prog "Z0"
 \For 47\->A \To 99 \Step 2
@@ -1474,7 +1478,7 @@ Q=6\=>P-10\->P
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:907
+Capacity:903
 File Name:Z08
 Group Name:
 Password:
@@ -1483,10 +1487,11 @@ Option2:
 Option3:
 Option4:
 %Data Record
+\List \Ans[1\->O
 \List \Ans[2\->\theta
 \List \Ans[3\->Y
 \List \Ans[4\->X
-\If 1=\List \Ans[1
+\If O=1
 \Then \Not \theta\=>\Text Y,X,"       "
 \theta=1\=>\Text Y,X,"coup   "
 \theta=2\=>\Text Y,X,"garde  "
@@ -1497,7 +1502,7 @@ Option4:
 \theta=7\=>\Text Y,X,"furie  "
 \theta=8\=>\Text Y,X,"Xmeta  "
 \IfEnd
-\If 2=\List \Ans[1
+\If O=2
 \Then \Not \theta\=>\Text Y,X,"       "
 \theta=1\=>\Text Y,X,"acier  "
 \theta=2\=>\Text Y,X,"force  "
@@ -1517,7 +1522,7 @@ Option4:
 \theta=16\=>\Text Y,X,"orage  "
 \theta=17\=>\Text Y,X,"enfers "
 \IfEnd
-\If 3=\List \Ans[1
+\If O=3
 \Then \Not \theta\=>\Text Y,X,"       "
 \theta=1\=>\Text Y,X,"soin"
 \theta=2\=>\Text Y,X,"soin +"
@@ -2096,7 +2101,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5318
+Capacity:5333
 File Name:Z13
 Group Name:
 Password:
@@ -2174,8 +2179,10 @@ Z>14\=>22.117\->\Mat A[3,8
 1\->G
 5\->H
 \IfEnd
-G\->\Mat Z[12,4
+\If \Pi\<>\List \Ans[1
+\Then G\->\Mat Z[12,4
 H\->\Mat Z[12,5
+\IfEnd
 0\->\Mat Z[9,3
 \Prog "Z16"
 \Horizontal 13
@@ -2274,7 +2281,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7217
+Capacity:7173
 File Name:Z14
 Group Name:
 Password:
@@ -2383,10 +2390,7 @@ Z=8\=>\Return
 \IfEnd
 \IfEnd
 \If \r=3
-\Then \StoPict 1
-\Mat Z[1,1\->I
-\Mat Z[6,1\->J
-\Prog "Z09"
+\Then \Prog "Z09"
 \Cls
 \RclPict 1
 \PlotOn 0,0
@@ -2534,8 +2538,6 @@ Z=8\=>\Return
 1\->P
 32\->Q
 \IfEnd
-\Mat Z[1,1\->I
-\Mat Z[6,1\->J
 \GotoD
 \IfEnd
 \If \r=2
@@ -3010,7 +3012,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1700
+Capacity:1699
 File Name:Z15
 Group Name:
 Password:
@@ -3041,7 +3043,7 @@ Option4:
 \Prog "Z0"
 \Prog "Z14"
 "Plutot coriace..."\Disp24\->\Mat Z[12,6
-\sin 9
+\Pi
 \Return
 \IfEnd
 \If Z=4

@@ -416,7 +416,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:926
+Capacity:972
 File Name:Z03
 Group Name:
 Password:
@@ -538,7 +538,7 @@ V=3\=>\Not \Mat Z[10,1\=>\Prog "Z15"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:10465
+Capacity:10484
 File Name:Z04
 Group Name:
 Password:
@@ -1159,7 +1159,7 @@ U<30\=>\Green \Text U-1,R+14,"      "
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2644
+Capacity:2665
 File Name:Z06
 Group Name:
 Password:
@@ -2101,7 +2101,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5386
+Capacity:5401
 File Name:Z13
 Group Name:
 Password:
@@ -2281,7 +2281,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7397
+Capacity:7353
 File Name:Z14
 Group Name:
 Password:
@@ -3012,7 +3012,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1734
+Capacity:1733
 File Name:Z15
 Group Name:
 Password:

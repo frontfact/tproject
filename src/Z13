@@ -141,8 +141,11 @@ Then
   1→G
   5→H
 IfEnd
-G→Mat Z[12,4
-H→Mat Z[12,5
+If π≠List Ans[1
+Then 
+  G→Mat Z[12,4
+  H→Mat Z[12,5
+IfEnd
 0→Mat Z[9,3
 Prog "Z16"
 Green Horizontal 13

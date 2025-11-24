@@ -43,5 +43,7 @@ tntsoft@fastmail.com
 	- [x] factorize sleep loops into Prog "T0" + use a global sleep factor
 - [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
 - [ ] Add progress hint in user menu
-- [ ] fix floating values in end-battle screen
 - [x] Notice in markdown/pdf
+	- E/R send to tara, the wise man send to atlantis, and we get ANGEL, but then what ? <= not clear : we look for prisms
+	- Missing Disp when back to botma after antlantis : "peux garder le prisme"◢
+	- Remove the choice between Redox & Enzo in botma ?

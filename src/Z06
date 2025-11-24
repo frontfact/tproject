@@ -150,7 +150,7 @@ Else
       Cls
       RclPict 1
     Next
-    Text 51,38,"pouvoir→morsur"
+    Text 51,38,"pouvoir→morsur       "
     For 1→A To 6
       Orange Text Int 20Ran#+10,Int 20Ran#+40,"#"
     Next
@@ -167,7 +167,7 @@ Else
       Cls
       RclPict 1
     Next
-    Text 51,38,"pouvoir→griffe"
+    Text 51,38,"pouvoir→griffe       "
     For 0→A To 6
       Orange F-Line 15Ran#+40,30Ran#+25,15Ran#+40,30Ran#+25
     Next
@@ -225,7 +225,7 @@ Else
     Cls
     RclPict 1
     Orange Text 22,45,":"
-    Text 51,38,"pouvoir→vampyr"
+    Text 51,38,"pouvoir→vampyr       "
     .2→X
     Prog "Z0"
     For 47→A To 99 Step 2

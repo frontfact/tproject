@@ -106,9 +106,6 @@ Then
 IfEnd
 If r=3
 Then 
-  StoPict 1
-  Mat Z[1,1→I
-  Mat Z[6,1→J
   Prog "Z09"
   Cls
   RclPict 1
@@ -271,8 +268,6 @@ Then
     1→P
     32→Q
   IfEnd
-  Mat Z[1,1→I
-  Mat Z[6,1→J
   Goto D
 IfEnd
 If r=2
