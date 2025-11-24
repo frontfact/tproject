@@ -510,7 +510,7 @@ H\->\Mat Z[12,5
 'countdowns
 V=3\=>\Not \Mat Z[10,1\=>\Prog "Z15"
 \Mat Z[12,1\=>\Prog "Z15"
-\Ans=\sin 9\=>\GotoI
+\Ans=\Pi\=>\GotoI
 'scenario
 \If \R b2=1
 \Then 100\Frac 10\R b0\->W
@@ -521,7 +521,7 @@ V=3\=>\Not \Mat Z[10,1\=>\Prog "Z15"
 \Then \Prog "Z15"
 \Return
 \IfEnd
-\Ans=\sin 9\=>\GotoI
+\Ans=\Pi\=>\GotoI
 \Else \Text 54,60,"HUM ?"
 .2\->X
 \Prog "Z0"
@@ -646,7 +646,7 @@ W\<>Z\=>\Return
 "Ensuite,va a TARA,"
 "un ami t'y attend."\Disp60+\Mat Z[10,4\->\Mat Z[10,4
 10\->Z
-\sin 9
+\Pi
 \IfEnd
 \If W=10
 \Then "Va voir le sage au"
@@ -659,7 +659,7 @@ W\<>Z\=>\Return
 \Prog "Z0"
 \Prog "Z14"
 11\->Z
-\sin 9
+\Pi
 \IfEnd
 \If W=11
 \Then \Orange "Bonjour Sage."
@@ -906,7 +906,7 @@ X>89\=>\Break
 \Prog "Z14"
 \Orange "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
 \Orange "inscriptions ?"\Disp\Isz Z
-\sin 9
+\Pi
 \IfEnd
 \If W=30
 \Then "Maire: On dit qu'a lasource du fleuve se  trouve un tresor..."\Disp\Isz Z
@@ -956,7 +956,7 @@ X>89\=>\Break
 \Orange "(je suis venge)"\Disp\Orange "(...)"\Disp\Orange "(mais trop tard...)"\Disp\ClrText
 \Orange "Je dois rejoindre"
 \Orange "Wills et Jessie."\Disp34\->Z
-\sin 9
+\Pi
 \IfEnd
 \If W=34
 \Then "Chuttt ! Ils"
@@ -1021,7 +1021,7 @@ X>89\=>\Break
 \Prog "Z14"
 44\->Z
 \Prog "Z14"
-{\sin 9}
+{\Pi}
 \Prog "Z13"
 \ClrText
 "IMPRESSIONNANT..."
@@ -2177,7 +2177,7 @@ Z>14\=>22.117\->\Mat A[3,8
 1\->G
 5\->H
 \IfEnd
-\If \sin 9\<>\List \Ans[1
+\If \Pi\<>\List \Ans[1
 \Then G\->\Mat Z[12,4
 H\->\Mat Z[12,5
 \IfEnd
@@ -3041,7 +3041,7 @@ Option4:
 \Prog "Z0"
 \Prog "Z14"
 \Orange "Plutot coriace..."\Disp24\->\Mat Z[12,6
-\sin 9
+\Pi
 \Return
 \IfEnd
 \If Z=4
