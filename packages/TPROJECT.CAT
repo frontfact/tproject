@@ -653,8 +653,7 @@ W\<>Z\=>\Return
 "etrange..."\Disp10.5\->Z
 \IfEnd
 \If W=10.5
-\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHE"
-"SACRE ?!!"
+\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
 3\->X
 \Prog "Z0"
 \Prog "Z14"
