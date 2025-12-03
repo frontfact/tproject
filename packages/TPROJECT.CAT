@@ -414,7 +414,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:944
+Capacity:974
 File Name:Z03
 Group Name:
 Password:
@@ -2088,7 +2088,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5401
+Capacity:5398
 File Name:Z13
 Group Name:
 Password:
@@ -3030,16 +3030,16 @@ Option4:
 \ClrText
 \If Z=4
 \Then \ClrText
-\Orange "Une gemme !"
-\Orange "Encore une a trouver."\Disp6\->\Mat Z[12,6
+"Z> Une gemme !"
+"Encore une a trouver."\Disp6\->\Mat Z[12,6
 \IfEnd
 \If Z=23
 \Then \ClrText
-\Orange "Le mandivor !"
+"Le mandivor !"
 2\->X
 \Prog "Z0"
 \Prog "Z14"
-\Orange "Plutot coriace..."\Disp24\->\Mat Z[12,6
+"Plutot coriace..."\Disp24\->\Mat Z[12,6
 \Pi
 \Return
 \IfEnd
