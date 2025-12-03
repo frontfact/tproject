@@ -537,7 +537,7 @@ H\->\Mat Z[12,5
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:10433
+Capacity:10335
 File Name:Z04
 Group Name:
 Password:
@@ -598,50 +598,29 @@ W\<>Z\=>\Return
 "lui, juste en face."\Disp\Isz Z
 \IfEnd
 \If W=8
-\Then \Orange "Enzo, tu es mort !   Prepare-toi au combat"
-"Enzo:"
-"Incarnation GOA."
+\Then "Z> Enzo, tu es mort !Prepare-toi au combat "
+"Enzo> Incarnation GOA"
 4\->X
 \Prog "Z0"
 \Prog "Z14"
 1\->X
 \Prog "Z0"
 \ClrText
-"Mais c'est toi, Z ?!"
-\Orange "Il parait, oui."
-"Je sais que c'est"
-"Redox qui t'envoie."\Disp\ClrText
+"E> Mais c'est toi, Z?Z> Il parait, oui."\Disp" "
+"E> C'est Redox qui"
+"t'envoie!"\Disp" "
 "Ne lui fais pas"
-"confiance...."
-"Reste avec moi."\Disp\ClrText
-\Green "Quel est ton choix ?"
-" "
-\Orange "1.Suivre Enzo"
-\Orange "2.Retour a Redox"
-\Do
-\Getkey\->\theta
-\LpWhile \theta\<>72\ And \theta\<>62
-\ClrText
-\If \theta=72
-\Then 2\->\Mat Z[11,5
-5\->\Mat Z[12,4
-10\->\Mat Z[12,5
-"Tu as fait le bon"
-"choix, Redox t'auraittue."
-\Else 1\->\Mat Z[11,5
-5\->\Mat Z[12,4
-3\->\Mat Z[12,5
-\Green "\->retour chez Redox..."
-1\->X
-\Prog "Z0"
-"Bien, Z, tu merites"
-"ma confiance."
-\IfEnd
-"Prends ces skulls et"
-"va te reposer a"
-"l'auberge."\Disp\ClrText
-"Ensuite,va a TARA,"
-"un ami t'y attend."\Disp60+\Mat Z[10,4\->\Mat Z[10,4
+"confiance, il veut"
+"recuperer les prismesde pouvoir pour"
+"prendre le controle  de la FFC."\Disp\ClrText
+"Faisons plutot"
+"equipe tous les deux.Prends ces skulls et repose-toi a"
+"l'auberge."\Disp"Ensuite, va aux"
+"catacombes de TARA,  l'hermite qui s'y"
+"trouve pourrait bien nous aider..."\Disp" "
+"Moi je vais creuser  une piste au nord,"
+"on se retrouve ici"
+"des que possible !"\Disp60+\Mat Z[10,4\->\Mat Z[10,4
 10\->Z
 \Pi
 \IfEnd
@@ -775,8 +754,8 @@ X>89\=>\Break
 \Green "fondent en une"
 \Green "pour former le prismeANGEL !!!"\Disp\Isz Z
 \IfEnd
-\If W=18\ And ((1=\Mat Z[11,5]\ And G=5)\ Or (G=6\ And 2=\Mat Z[11,5
-\Then "Tu l'as ? Parfait !"
+\If W=18
+\Then "E> Tu l'as ? Parfait!"
 "Il existe 3 prismes. Chacun possede des"
 "pouvoirs terribles etune inscription de"
 "sagesse."\Disp\ClrText
@@ -2088,7 +2067,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5398
+Capacity:5356
 File Name:Z13
 Group Name:
 Password:
@@ -2109,12 +2088,7 @@ Option4:
 6\->G
 4\->H
 Z>3\=>32.107\->\Mat A[10,1
-\If Z>17
-\Then \If 1=\Mat Z[11,5
-\Then 20.118\->\Mat A[2,5
-\Else 22.118\->\Mat A[10,6
-\IfEnd
-\IfEnd
+Z>17\=>22.118\->\Mat A[10,6
 \IfEnd
 \If V=2
 \Then \Orange \Text 5,3,"ELOS"
@@ -2998,7 +2972,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1700
+Capacity:1695
 File Name:Z15
 Group Name:
 Password:

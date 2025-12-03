@@ -12,7 +12,7 @@
 | 8 | Monster<br>Spell 1 | Monster<br>Spell 2 | Monster<br>Spell 3 | regular monster ➜ 0<br>persona monster ➜ 1 | Object 8<br>(tarte) | Object 18<br>(unused) |
 | 9 | X coordinate<br>in world map | Y coordinate<br>in world map | Last Getkey<br>code in city | Last Getkey<br>code in world | (unused) | (unused) |
 | 10 | Groseye found<br>in city around<br>progress 27? (0/1)  | Treasure found<br>in city around<br>progress 30 (0/1) | Counter to next fight<br>and also<br>Saving cipher key | $$$ | calculator<br>speed factor | Monster inertia<br>(raw) |
-| 11 | Current city ID | Z Level | Attak (1)<br>or<br>Spell (2) | Attak/Spell ID | Chosen scenario<br>1 or 2 | Z Experience |
+| 11 | Current city ID | Z Level | Attak (1)<br>or<br>Spell (2) | Attak/Spell ID | (unused) | Z Experience |
 | 12 | Step counter<br>in city | (unused) | Victories<br>count | X coordinate<br>in city | Y coordinate<br>in city | Progress<br>in game |
 
 ## TNT12
