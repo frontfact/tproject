@@ -506,9 +506,6 @@ H\->\Mat Z[12,5
 \theta=48\=>\Goto1
 \Goto0
 \IfEnd
-'countdowns
-\Prog "Z15"
-\Ans=\Pi\=>\GotoI
 'scenario
 \If \R b2=1
 \Then 100\Frac 10\R b0\->W
@@ -522,12 +519,16 @@ H\->\Mat Z[12,5
 \IfEnd
 \Ans=\Pi\=>\GotoI
 \Green \Text 31,10,\Mat Z[10,4
+\Goto1
 \Else \Text 54,60,"HUM ?"
 .2\->X
 \Prog "Z0"
 \Text 54,60,"      "
 \IfEnd
 \IfEnd
+'countdowns
+\Prog "Z15"
+\Ans=\Pi\=>\GotoI
 \Goto1
 \Lbl W
 \Int 5\Ran#+6\->\Mat Z[10,3
