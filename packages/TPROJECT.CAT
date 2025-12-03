@@ -230,7 +230,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1519
+Capacity:1507
 File Name:Z02
 Group Name:
 Password:
@@ -314,7 +314,7 @@ A=124\=>B=11\=>2\->H
 A=65\=>B=44\=>3\->H
 A=86\=>B=34\=>4\->H
 H\=>\GotoH
-\If A=60\ And B=42\ And \Not \Mat Z[10,2
+\If A=60\ And B=42
 \Then \Prog "Z15"
 \GotoI
 \IfEnd
@@ -414,7 +414,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:972
+Capacity:944
 File Name:Z03
 Group Name:
 Password:
@@ -449,16 +449,14 @@ Option4:
 \Getkey\->\theta
 \LpWhile \Not \theta
 \theta\->\Mat Z[9,3
+\Mat Z[12,6\->Z
 'f6
 \If \theta=29
-\Then \If 36=\Mat Z[12,6
-\Then \Prog "Z15"
-\Else \GotoW
-\IfEnd
+\Then Z=28.5\ Or Z=36=>\Prog "Z15"
+Z\<>36=>\GotoW
 \IfEnd
 'move
 2\->N
-4\->O
 \If \theta=27\ And G<16
 \Then \Int .1\Mat A[H,G\->N
 \Int 10\Frac \Mat A[H,G+1\->O
@@ -506,8 +504,7 @@ H\->\Mat Z[12,5
 \Goto0
 \IfEnd
 'countdowns
-V=3\=>\Not \Mat Z[10,1\=>\Prog "Z15"
-\Mat Z[12,1\=>\Prog "Z15"
+\Prog "Z15"
 \Ans=\Pi\=>\GotoI
 'scenario
 \If \R b2=1
@@ -518,7 +515,7 @@ V=3\=>\Not \Mat Z[10,1\=>\Prog "Z15"
 \Prog "Z04"
 \If 37=\Mat Z[12,6
 \Then \Prog "Z15"
-\Return
+\GotoW
 \IfEnd
 \Ans=\Pi\=>\GotoI
 \Green \Text 31,10,\Mat Z[10,4
@@ -2998,7 +2995,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1733
+Capacity:1700
 File Name:Z15
 Group Name:
 Password:
@@ -3009,18 +3006,29 @@ Option4:
 %Data Record
 \Mat Z[12,6\->Z
 \If \theta=29
-\Then Z=28.5\ Or Z=36\ Or Z=37\=>\GotoO
+\Then \ClrText
+\If Z=28.5
+\Then "V> STOP. Aucun humainn'est autorise a"
+"sortir pour l'inst.."
+\Orange "Je suis presse."
+2\->X
+\Prog "Z0"
+\Prog "Z14"
+29\->\Mat Z[12,6
+\IfEnd
+\If Z=36
+\Then "Les portes de la"
+"ville sont mobiliseespour l'evacuation !  Passons par le port !"\Disp\IfEnd
 \Return
 \IfEnd
 \If \Mat Z[12,1
 \Then \Mat Z[12,1]-1\->\Mat Z[12,1
 \Mat Z[12,1\=>\Return
 \ClrText
-\If Z=36
-\Then "Trop tard !..."
-"TOMBERRY.... NON !!!!"
-.\->\Mat Z[1,1
-\Prog "Z21"
+\If Z=4
+\Then \ClrText
+\Orange "Une gemme !"
+\Orange "Encore une a trouver."\Disp6\->\Mat Z[12,6
 \IfEnd
 \If Z=23
 \Then \ClrText
@@ -3032,28 +3040,12 @@ Option4:
 \Pi
 \Return
 \IfEnd
-\If Z=4
-\Then \ClrText
-\Orange "Une gemme !"
-\Orange "Encore une a trouver."\Disp6\->\Mat Z[12,6
-\IfEnd
-\IfEnd
-\Lbl O
-\ClrText
-\If Z=28.5
-\Then "STOP. Aucun humain"
-"n'est autorise a"
-"sortir pour l'inst.."
-\Orange "Je suis presse."
-1\->X
-\Prog "Z0"
-\Prog "Z14"
-29\->\theta
-\theta\->\Mat Z[12,6
-\IfEnd
 \If Z=36
-\Then "Les portes de la"
-"ville sont mobiliseespour l'evacuation !  Passons par le port !"\Disp0\->\theta
+\Then "Trop tard !..."
+"TOMBERRY.... NON !!!!"
+.\->\Mat Z[1,1
+\Prog "Z21"
+\IfEnd
 \IfEnd
 \If Z=37
 \Then \PlotOff I,J
