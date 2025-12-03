@@ -593,7 +593,7 @@ W\<>Z\=>\Return
 "donc a prendre cette gemme."\Disp\Isz Z
 \IfEnd
 \If W=7
-\Then "Merci beaucoup."
+\Then "~Merci beaucoup."
 "Enzo est rentre chez"
 "lui, juste en face."\Disp\Isz Z
 \IfEnd
