@@ -483,6 +483,9 @@ Z\<>36=>\GotoW
 \theta=38\=>\Dsz G
 \theta=37\=>\Isz H
 \theta=28\=>\Dsz H
+5G+45\->I
+65-5H\->J
+\Green \PlotOn I,J
 G\->\Mat Z[12,4
 H\->\Mat Z[12,5
 'current
