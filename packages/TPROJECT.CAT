@@ -588,9 +588,9 @@ W\<>Z\=>\Return
 \Isz Z
 \IfEnd
 \If W=6
-\Then \Orange "Il y a quelqu'un ?"
-"NON"
-\Orange "Je m'autorise donc a prendre cette gemme."\Disp\Isz Z
+\Then "Z> Il y a quelqu'un ? "\Disp"~NON"\Disp" "
+"Z> Je m'autorise"
+"donc a prendre cette gemme."\Disp\Isz Z
 \IfEnd
 \If W=7
 \Then "Merci beaucoup."
