@@ -537,7 +537,7 @@ H\->\Mat Z[12,5
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:10335
+Capacity:10298
 File Name:Z04
 Group Name:
 Password:
@@ -625,23 +625,17 @@ W\<>Z\=>\Return
 \Pi
 \IfEnd
 \If W=10
-\Then "Va voir le sage au"
-"bout du labyrinthe,tuverras,il est un peu"
-"etrange..."\Disp10.5\->Z
+\Then "L'hermite ? oui, il  doit etre au fond."
+"Mais attention, il"
+"parait qu'une Bete"
+"rode dans les parages..."\Disp\Isz Z
+39+\Int 20\Ran#\->\Mat Z[12,1
 \IfEnd
-\If W=10.5
-\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
-3\->X
-\Prog "Z0"
-\Prog "Z14"
-11\->Z
-\Pi
-\IfEnd
-\If W=11
-\Then \Orange "Bonjour Sage."
-\Orange "Je suis Z. Je..."
-"Je sais."\Disp\ClrText
-"Cela fait"
+\If W=12
+\Then "Z> Bonjour Sage."
+"Je suis Z. Je..."
+"Sage> Je sais."\Disp\ClrText
+"Sage> Cela fait"
 "bien longtemps que jen'avais vu quelqu'un."\Disp\ClrText
 "Alors ecoute bien :"
 "Cette chose toutes"
@@ -667,7 +661,7 @@ W\<>Z\=>\Return
 \Prog "Z07"
 16\->O
 \Prog "Z07"
-13\->Z
+\Isz Z
 \Else "Je te laisse un peu"
 "de temps pour y"
 "reflechir."\Disp\Return
@@ -1940,7 +1934,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1593
+Capacity:1585
 File Name:Z12
 Group Name:
 Password:
@@ -1960,7 +1954,7 @@ Option4:
 \Mat Z[12,6\->Z
 {.}
 Z=8\=>{6,9,9,99,11}
-Z=10.5\=>{5,4,4,120,11}
+Z=11\=>{5,4,4,120,11}
 Z=23\=>{3,7,6,400,7}
 Z=28.5\=>{2,7,5,250,8}
 Z=29\=>{7,10,9,650,7}
@@ -2024,7 +2018,7 @@ V\Mat Z[10,5\->\Mat Z[6,4
 N<6\=>4
 N<2\=>1
 Z=8\=>8
-Z=10.5\=>6
+Z=11\=>6
 \Ans\->\Mat Z[7,1
 \For 2\->B \To 3
 1+\Int N\Ran#
@@ -2047,10 +2041,10 @@ Z=8\=>15
 115\->R
 {M,1}
 \Prog "Z20"
-\If Z=43\ Or Z=44\ Or Z=32\ Or Z=33\ Or Z=8\ Or Z=10.5\ Or Z=99\ Or Z=28.5
+\If Z=43\ Or Z=44\ Or Z=32\ Or Z=33\ Or Z=8\ Or Z=11\ Or Z=99\ Or Z=28.5
 \Then Z=44\ Or Z=33\ Or Z=8\=>\Text 51,75,"Enzo   "
 Z=32\ Or Z=43\=>\Text 51,75,"Redox  "
-Z=10.5\=>\Text 51,75,"le Minautor"
+Z=11\=>\Text 51,75,"le Minautor"
 Z=28.5\=>\Text 51,75,"un Vegetal"
 Z=99\=>\Text 51,75,"le Gardien"
 \Else M=1\=>\Text 51,90,"lapranak"
@@ -2067,7 +2061,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5356
+Capacity:5351
 File Name:Z13
 Group Name:
 Password:
@@ -2122,7 +2116,7 @@ Z>33\=>23.134\->\Mat A[8,12
 \IfEnd
 \If V=6
 \Then \Orange \Text 5,3,"TARA"
-[[33,32,33.110,32,23,32,23,33,32,33,32,32,32,33,23,23][32,23,23,33,32,33,22,23,22,32,32,32,23,23,32,23][32.3,22,23,23,33,22,22,32,32,23,33,22,23,22,32,23][33,32,23,32,32,23,33,23,23,23,23,23,33,32,23,23][23,33,32,22,33,23,23,23,23,23,32,32,33,23,23,23][23,22,32,22,33,22,23,23,22,32,32,23,33,23,23,22][32,32,32,23,23,33,22,32,23,33,22,23,33,23,32,23][33,33,23,23,22,23,33,32,22,23,33,22,33,33,22,23][32,33,33,33,32,22,23,32,33,22,23,33,33,23,33.1105,22][32,22,32,32,32,22,32,32,32,32,22,32,32,22,32,22.111]]\->\Mat A
+[[33,32,33.110,32,23,32,23,33,32,33,32,32,32,33,23,23][32,23,23,33,32,33,22,23,22,32,32,32,23,23,32,23][32.3,22,23,23,33,22,22,32,32,23,33,22,23,22,32,23][33,32,23,32,32,23,33,23,23,23,23,23,33,32,23,23][23,33,32,22,33,23,23,23,23,23,32,32,33,23,23,23][23,22,32,22,33,22,23,23,22,32,32,23,33,23,23,22][32,32,32,23,23,33,22,32,23,33,22,23,33,23,32,23][33,33,23,23,22,23,33,32,22,23,33,22,33,33,22,23][32,33,33,33,32,22,23,32,33,22,23,33,33,23,33,22][32,22,32,32,32,22,32,32,32,32,22,32,32,22,32,22.112]]\->\Mat A
 2\->G
 3\->H
 \IfEnd
@@ -2241,7 +2235,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7353
+Capacity:7341
 File Name:Z14
 Group Name:
 Password:
@@ -2869,12 +2863,13 @@ X<14\=>\Dsz B
 A=1\=>B\->S
 A=2\=>B\->T
 \Next 
+\Mat Z[12,6\->Z
 \If \Mat Z[8,4
-\Then \If 29=\Mat Z[12,6
+\Then \If Z=29
 \Then 13\->S
 0\->T
 \IfEnd
-\If 10.5=\Mat Z[12,6
+\If Z=11
 \Then 2\->S
 4\->T
 \IfEnd
@@ -2912,7 +2907,7 @@ E+A\->\Mat Z[11,6
 \Green \Text 10,80,"Recompense:"
 \Green \Text 16,84,"\@24"
 \Not \Mat Z[8,4\=>\Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
-23=\Mat Z[12,6\=>5000\->A
+Z=23\=>5000\->A
 \If A
 \Then A+\Mat Z[10,4\->\Mat Z[10,4
 \For 0\->B \To A \Step A/5
@@ -2972,7 +2967,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1695
+Capacity:1795
 File Name:Z15
 Group Name:
 Password:
@@ -3006,6 +3001,15 @@ Option4:
 \Then \ClrText
 "Z> Une gemme !"
 "Encore une a trouver."\Disp6\->\Mat Z[12,6
+\IfEnd
+\If Z=11
+\Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
+3\->X
+\Prog "Z0"
+\Prog "Z14"
+12\->\Mat Z[12,6
+\Pi
+\Return
 \IfEnd
 \If Z=23
 \Then \ClrText
