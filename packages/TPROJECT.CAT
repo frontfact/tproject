@@ -537,7 +537,7 @@ H\->\Mat Z[12,5
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:10298
+Capacity:10414
 File Name:Z04
 Group Name:
 Password:
@@ -668,7 +668,7 @@ W\<>Z\=>\Return
 \IfEnd
 \IfEnd
 \If W=13
-\Then "Troll: Si tu me bats"
+\Then "Troll> Si tu me bats"
 "au bras de fer, ma"
 "Lune est a toi."
 "L'essai coute 10\@24."
@@ -680,7 +680,7 @@ W\<>Z\=>\Return
 \Ans\<>31\=>\Return
 \ClrText
 \If 10>\Mat Z[10,4
-\Then "Troll: reviens quand"
+\Then "Troll> Reviens quand"
 "tu auras 10\@24 a perdre"\Disp\Return
 \IfEnd
 \Mat Z[10,4]-10\->\Mat Z[10,4
@@ -710,13 +710,13 @@ X>89\=>\Break
 \If X<11
 \Then "Perdu..."\Disp\Return
 \IfEnd
-"Troll : Hmmf."
+"Troll> Hmmf."
 "Voila ta Lune."\Disp16\->O
 \Prog "Z07"
 \Isz Z
 \IfEnd
 \If W=14
-\Then "Vieille: Au voleur !"
+\Then "Vieille> Au voleur !"
 "Mes bijoux,"
 "Mon argent !!!"
 "Une recompense a qui"
@@ -724,41 +724,40 @@ X>89\=>\Break
 \Isz Z
 \IfEnd
 \If W=15
-\Then "Il se passe des trucslouches au sud..."\Disp\Isz Z
+\Then "~Il se passe"
+"des trucs louches"
+"au sud..."\Disp\Isz Z
 \IfEnd
 \If W=16
-\Then "J'heberge quelqu'un."
-"Vous voulez le voir ?"\Disp\ClrText
-"Voleur : Ne me faitespas de mal !"
+\Then "~J'heberge quelqu'un.Vous voulez le voir ?"\Disp\ClrText
+"Voleur> Ne me faites pas de mal !"
 "Voila les bijoux de  la vieille et son"
 "argent..."
 "Oubliez-moi !"\Disp80+\Mat Z[10,4\->\Mat Z[10,4
 \Isz Z
 \IfEnd
 \If W=17
-\Then \Orange "J'ai retrouve vos"
-\Orange "bijoux."
-"Et mon argent ?"
-\Orange "Il s'est enfui avec  (He-He-He)."\Disp\ClrText
-"Bon... voici une Lunepour te remercier."\Disp0\->\Mat Z[6,6
-11\->O
-\Prog "Z07"
+\Then "Z> J'ai retrouve vos bijoux."
+"Vieille> Ah ! Merci !Et mon argent ?"
+"Z> Il s'est enfui  avec (He-He-He)."\Disp\ClrText
+"Vieille> Bon... voiciune Lune pour te"
+"remercier."\Disp0\->\Mat Z[6,6
+1\->\Mat Z[1,6
 \ClrText
-\Green "Les trois Lunes se"
-\Green "fondent en une"
+\Green "Les trois Lunes se   fondent en une"
 \Green "pour former le prismeANGEL !!!"\Disp\Isz Z
 \IfEnd
 \If W=18
-\Then "E> Tu l'as ? Parfait!"
-"Il existe 3 prismes. Chacun possede des"
-"pouvoirs terribles etune inscription de"
+\Then "Enzo> Tu as reussi a recuperer le prisme ?Parfait !"\Disp\ClrText
+"E> Il existe trois   prismes. Chacun"
+"possede des pouvoirs terribles et une"
+"inscription de"
 "sagesse."\Disp\ClrText
 "C'est l'inscription"
-"qui m'interesse,tu"
-"peux garder le prisme"
-\Orange "(mais que me"
-\Orange "cache-t-il ?)"
-"Rendez-vous a ELOS,  pres du magasin."\Disp\Isz Z
+"qui m'interesse, tu"
+"peux garder le prisme"\Disp"Z> (mais que me"
+"cache-t-il ?)"\Disp"E> Un ami m'a donne  rendez-vous a ELOS,"
+"pres du magasin. Tu  m'accompagnes ?"\Disp\Isz Z
 \IfEnd
 \If W=19
 \Then \Green "...Enzo et Redox te"
