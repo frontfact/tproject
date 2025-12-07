@@ -3,6 +3,7 @@ import copy
 import re
 import shutil
 import os
+import sys
 from pathlib import Path
 from typing import List, TypeVar
 
@@ -198,7 +199,7 @@ class Program:
                     output += '\n'
                     first = True
         if level != 0:
-            raise Exception(f'Indentation level error in {self.name}')
+            print(f'Indentation level error in {self.name}', file=sys.stderr)
         return output
 
     @property
@@ -390,7 +391,7 @@ class CatFile(object):
 
     @classmethod
     def Write(cls, catfile, filepath: PathLike):
-        with open(str(filepath), mode='w', encoding='utf-8', newline='\n') as fout:
+        with open(str(filepath), mode='w', encoding='utf-8') as fout:
             for program in catfile.programs:
                 program.write(fout)
 
