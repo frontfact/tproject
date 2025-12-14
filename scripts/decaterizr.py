@@ -392,8 +392,12 @@ class CatFile(object):
     @classmethod
     def Write(cls, catfile, filepath: PathLike):
         with open(str(filepath), mode='w', encoding='utf-8') as fout:
+            totalsize = 0
             for program in catfile.programs:
                 program.write(fout)
+                totalsize += program.capacity
+            diff_to_pict = totalsize-47498
+            print(f'{Path(filepath).stem} : {totalsize} ({diff_to_pict}={-100.*diff_to_pict/4096.:3.1f}%)')
 
     def forge_token_programs(self):
         header_lines = [

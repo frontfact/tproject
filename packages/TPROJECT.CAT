@@ -90,7 +90,7 @@ D>1\=>0\->D
 \Next 
 \Next 
 \Else \Identity 1\->\Mat Z
-[[13,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][67,19,.,38,.,.][0,1,.,230,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
+[[13,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][67,19,.,38,.,.][.,.,.,230,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
 \ClrText
 "Il est recommande de parcourir la notice  avant de jouer."\Disp\ClrText
 "TNTSOFT vous souhaiteun agreable voyage"
@@ -230,7 +230,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1787
+Capacity:1791
 File Name:Z02
 Group Name:
 Password:
@@ -316,7 +316,8 @@ A=86\=>B=34\=>4\->H
 H\=>\GotoH
 \If A=60\ And B=42\ And \Not \Mat Z[10,2
 \Then \ClrText
-\Orange "Le tresor..."\Disp\Orange "Ca semble trop facilepour etre vrai."\Disp"Voix> En effet..."
+"Z> Le tresor..."\Disp"Z> Ca semble trop"
+"facile pour etre vrai"\Disp"Voix> En effet..."
 2\->X
 \Prog "Z0"
 99\->Z
@@ -564,7 +565,7 @@ H\->\Mat Z[12,5
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:10527
+Capacity:139
 File Name:Z04
 Group Name:
 Password:
@@ -574,528 +575,19 @@ Option3:
 Option4:
 %Data Record
 \List \Ans[1]\->W
+\Mat Z[11,1\->V
 \Mat Z[12,6\->Z
 0\->D
 W=Z\=>1\->D
 \ClrText
-\If W=1\ And D
-\Then "Il se reveille."
-"Laissez-moi seul"
-"avec lui."\Disp\ClrText
-"ZZZZ...    zzzz...    ZZZZ... uhn?!"\Disp\ClrText
-"Redox> Z! Ca va? J'aibien cru que tu ne"
-"reprendrais jamais"
-"conscience!"\Disp\ClrText
-"R> Enzo est sur le"
-"point de trouver"
-"les Lunes, il faut"
-"l'en empecher!"\Disp\ClrText
-"R> Bute-le et reviensme voir."\Disp\ClrText
-"R> Va au magasin"
-"t'acheter soins,"
-"adrena et chlore,"
-"tu en auras besoin."\Disp\Isz Z
-5\->\Mat Z[12,4
-2\->\Mat Z[12,5
-\IfEnd
-\If W=2\ And Z<11
-\Then "Z> Ou puis-je trouverEnzo ?"
-" "
-"~Oh... il va souvent au resto du Sud-Ouest"\Disp\Isz Z
-\IfEnd
-\If W=3\ And Z<11
-\Then "~ RESTO ~"
-"Z> Ou est Enzo ?"
-"~He la !"
-"Ce renseignement ne"
-"sera pas gratuit:"
-"Il t'en coutera..."
-"disons deux gemmes"\Disp""
-\If D
-\Then 32.107\->\Mat A[10,1
-\Int 8\Ran#+13\->\Mat Z[12,1
-4\->Z
-\IfEnd
-\IfEnd
-\If W=6\ And D
-\Then "Z> Il y a quelqu'un ? "\Disp"~NON"\Disp" "
-"Z> Je m'autorise"
-"donc a prendre cette gemme."\Disp\Isz Z
-\IfEnd
-\If W=7\ And D
-\Then "~Merci beaucoup."
-"Enzo est rentre chez"
-"lui, juste en face."\Disp\Isz Z
-\IfEnd
-\If W=8\ And D
-\Then "Z> Enzo, tu es mort !Prepare-toi au combat "
-"Enzo> Incarnation GOA"
-4\->X
-\Prog "Z0"
-\Prog "Z14"
-1\->X
-\Prog "Z0"
-\ClrText
-"E> Mais c'est toi, Z?Z> Il parait, oui."\Disp" "
-"E> C'est Redox qui"
-"t'envoie!"\Disp\ClrText
-"Ne lui fais pas"
-"confiance, il veut"
-"recuperer les prismesde pouvoir pour"
-"prendre le controle  de la FFC."\Disp\ClrText
-"Faisons plutot"
-"equipe tous les deux.Prends ces skulls et repose-toi a"
-"l'auberge."\Disp\ClrText
-"Ensuite, va aux"
-"catacombes de TARA,  l'hermite qui s'y"
-"trouve pourrait bien nous aider..."\Disp\ClrText
-"Moi je vais creuser  une piste au nord,"
-"on se retrouve ici"
-"des que possible !"\Disp60+\Mat Z[10,4\->\Mat Z[10,4
-10\->Z
-\Pi
-\IfEnd
-\If W=10\ And Z>9\ And Z<13
-\Then "L'hermite ? oui, il  doit etre au fond."
-"Mais attention, il"
-"parait qu'une Bete"
-"rode dans les parages..."\Disp\Not \Mat Z[12,1\=>39+\Int 20\Ran#\->\Mat Z[12,1
-D\=>11\->Z
-\IfEnd
-\If W=12\ And D
-\Then "Z> Bonjour Sage."
-"Je suis Z. Je..."
-"Sage> Je sais."\Disp\ClrText
-4\->M~P
-"Sage> Cela fait"
-"bien longtemps que jen'avais vu quelqu'un."\Disp\ClrText
-7\->E
-"Alors ecoute bien :"
-"Cette chose toutes"
-"choses devore."\Disp\ClrText
-"Elle ronge le fer,"
-"Mord l'acier."\Disp\ClrText
-"Met a mort les rois,"
-"detruit les villes,"
-"et rabat les hautes"
-"montagnes..."\Disp\Pi\->S~T
-\Orange "C'EST LE..."?\->R
-\ClrText
-\If R=TEMPS
-\Then "Tu me plais."
-"Je t'offre une"
-"groseye et une Lune."
-"Les deux autres sont"
-"a ATLANTIS."\Disp7\->O
-\Prog "Z07"
-16\->O
-\Prog "Z07"
-\Isz Z
-\Else "Je te laisse un peu"
-"de temps pour y"
-"reflechir."\Disp\Return
-\IfEnd
-\IfEnd
-\If W=13\ And D
-\Then "Troll> Si tu me bats"
-"au bras de fer, ma"
-"Lune est a toi."
-"L'essai coute 10\@24."
-"Partant ?"
-\Locate 1,7,"[EXE]\->Oui [EXIT]\->Non"
-\Do
-\Getkey
-\LpWhile \Not \Ans
-\Ans\<>31\=>\Return
-\ClrText
-\If 10>\Mat Z[10,4
-\Then "Troll> Reviens quand"
-"tu auras 10\@24 a perdre"\Disp\Return
-\IfEnd
-\Mat Z[10,4]-10\->\Mat Z[10,4
-\Locate 1,1,"!DEFI AU BRAS DE FER!"
-\Locate 1,2,"Appuyer n'importe ou"
-\Locate 1,3,"fait monter ton score"
-\Locate 11,4,"--"
-\Locate 4,5,"Press  50  a key"
-\Locate 11,6,"--"
-\Locate 2,7,"10\->Perdu \slash 90\->Gagne"
-.5\->X
-\Prog "Z0"
-\Do
-\LpWhile \Not \Getkey
-\Locate 4,5,"     "
-\Locate 15,5,"     "
-\For 50\->X \To 10 \Step -1
-\Getkey
-\If \Ans\<>Y\ And \Ans
-\Then \Ans\->Y
-X+4\->X
-\IfEnd
-\Locate 11,5,\Int X
-X>89\=>\Break
-\Next 
-\ClrText
-\If X<11
-\Then "Perdu..."\Disp\Return
-\IfEnd
-"Troll> Hmmf."
-"Voila ta Lune."\Disp16\->O
-\Prog "Z07"
-\Isz Z
-\IfEnd
-\If W=14
-\Then \If Z>13\ And Z<17
-\Then "Vieille> Au voleur !"
-"Mes bijoux,"
-"Mon argent !!!"
-"Une recompense a qui"
-"les retrouvera !"\Disp\Isz Z
-\IfEnd
-\If Z=17
-\Then "Z> J'ai retrouve vos bijoux."
-"Vieille> Ah ! Merci !Et mon argent ?"
-"Z> Il s'est enfui"
-"avec (He-He-He)."\Disp\ClrText
-"Vieille> Bon..."
-"Voici une Lune pour  te remercier."\Disp\ClrText
-\Green "Les trois Lunes se   fondent en une"
-\Green "pour former le prismeANGEL !!!"\Disp\Isz Z
-0\->\Mat Z[6,6
-1\->\Mat Z[1,6
-\IfEnd
-\IfEnd
-\If W=15\ And Z>13\ And Z<17
-\Then "~Il se passe"
-"des trucs louches"
-"au sud..."\Disp""
-\IfEnd
-\If W=16\ And Z>14\ And Z<17
-\Then "~J'heberge quelqu'un.Vous voulez le voir ?"\Disp\ClrText
-"Voleur> Ne me faites pas de mal !"
-"Voila les bijoux de  la vieille et son"
-"argent..."
-"Oubliez-moi !"\Disp80+\Mat Z[10,4\->\Mat Z[10,4
-17\->Z
-\IfEnd
-\If W=18\ And D
-\Then "Enzo> Tu as reussi a recuperer le prisme ?Parfait !"\Disp\ClrText
-"E> Il existe trois   prismes. Chacun"
-"possede des pouvoirs terribles et une"
-"inscription de"
-"sagesse."\Disp\ClrText
-"C'est l'inscription"
-"qui m'interesse, tu"
-"peux garder le prisme"\Disp"Z> (mais que me"
-"cache-t-il ?)"\Disp\ClrText
-"E> Un ami m'a donne  rendez-vous a ELOS,"
-"pres du magasin. Tu  m'accompagnes ?"\Disp\Isz Z
-\IfEnd
-\If W=19
-\Then \If Z<25
-\Then "~Un etranger se vanted'avoir le prisme"
-"MAGMA, mais il en"
-"demande un prix"
-"exorbitant !"\Disp" "
-Z<24\=>"Enzo> Allons trouver ce type !"\Disp""
-\IfEnd
-Z=25\=>"~Enzo m'a dit de te  dire qu'il a laisse  des instructions à Jessie."
-\IfEnd
-\If W=21\ And Z>18\ And Z<25
-\Then \If \Mat Z[10,4]<5000
-\Then "~Je suis pret a cederle prisme MAGMA pour la modique somme"
-"de 5000\@24 !"\Disp20\->Z
-\Else "~Dur de m'en separer,mais j'ai vraiment"
-"besoin d'argent en cemoment."
-"Voici le primse."\Disp" "
-"Z obtient MAGMA !"\Disp\Mat Z[10,4]-5000\->\Mat Z[10,4
-1\->\Mat Z[2,6
-25\->Z
-\IfEnd
-\IfEnd
-\If W=22\ And Z>18\ And Z<23
-\Then "Maire d'ELOS>"
-"Chasseur de prime ?"
-"J'ai un job pour toi."\Disp\ClrText
-"Tue le mandivor qui"
-"erre dans les rues etterrorise ma ville,  et gagne 4000\@24."\Disp\Orange "...Non, 5000."\Disp"Hum...soit."\Disp15+\Int 5\Ran#\->\Mat Z[12,1
-23\->Z
-\IfEnd
-\If W=20\ And Z=25
-\Then "Jessie> Tu sais, Z...Enzo et Redox..."
-"Z> Eh bien ?"\Disp\ClrText
-" "
-"J> Je crois que ton..accident faisait"
-"partie de leur plan."\Disp\ClrText
-" "
-"Z> ..."\Disp"Ou sont-ils ?"\Disp" "
-"J> Partis. A HELENIA."\Disp\Isz Z
-\IfEnd
-\If W=26
-\Then \If D
-\Then "Z ?!"
-"Je suis Wills. Jessiem'a prevenu de ton"
-"arrivee."\Disp\Orange "Ou est Redox ?"\Disp\ClrText
-"Dans la foret, il"
-"cherche le prisme"
-"PHOENIX."\Disp\ClrText
-"Va voir l'Ancien a"
-"l'Est, il pourra"
-"t'aider."\Disp\Isz Z
-\IfEnd
-\If Z=28
-\Then "Va livrer ce colis   a WINHILL."
-"Redox et Enzo t'y"
-"attendent,"
-"ils disent avoir"
-"trouve le prisme"
-"PHOENIX."\Disp\ClrText
-"Mais la guerre"
-"vegetale fait rage a HELENIA...  la Foret ne te laissera pas   sortir et..."
-\Orange "NON. Je passerai."\Disp28.5\->Z
-\IfEnd
-\IfEnd
-\If \Int W=27\ And Z<28
-\Then W=27.1\=>"~M"\DispW=27.2\=>"~o"\DispW=27.3\=>"~r"\DispW=27.4\=>"~k"\Disp""
-\IfEnd
-\If W=27\ And D
-\Then "Ancien> As-tu ecoute la foret ?"
-"Quel est mon nom ?"
-" "
-\Pi\->M
-3\->O
-8\->R
-9\->K
-\Orange "FACILE, C'EST..."?\->Q
-\If Q\<>MORK
-\Then "Ancien> Ben voyons..."\Disp\Else "Ancien> Exact."\Disp\ClrText
-"Ecoute bien."\Disp\ClrText
-"Les prismes ont troisfonctions."\Disp\ClrText
-"D'abord, tu peux les"
-"invoquer lors d'un"
-"combat."\Disp\ClrText
-"Ensuite, les 3 reunisforment l'ARME SUPREME"\Disp\ClrText
-"Enfin, il parait"
-"que les inscriptions de sagesse qu'ils"
-"arborent recelent un secret."
-"J'ignore lequel."\Disp\ClrText
-"Ancien> Reviens me"
-"voir quand tu auras  les3 prismes et"
-"3 groseyes."\Disp\Isz Z
-\IfEnd
-\IfEnd
-\If W=28\ And \Not \Mat Z[10,1
-\Then "~Mais nous avons le"
-"soleil...  qui fa"
-"pousser not'groseye"\Disp" "
-\Green "Z obtient 1 groseye."\Disp7\->O
-\Prog "Z07"
-1\->\Mat Z[10,1
-\IfEnd
-\If W=29\ And D
-\Then "Enzo \@26 Redox :"
-"Donne-nous le colis, il est indispensable au Projet T."\Disp\ClrText
-\Orange "Le Projet T ?"
-\Orange "Mais de quoi s'agit- -il ?!"\Disp\ClrText
-"Nous t'offrons la"
-"verite en echange du colis..."\Disp\Orange "...Bien. Le voila."\Disp\ClrText
-".............."
-"Le prisme PHOENIX !"
-"Enfin ! La troisieme inscription..."\Disp\ClrText
-\Orange "Le... Le prisme !"
-\Orange "Il explose !!!"
-2\->X
-\Prog "Z0"
-\Prog "Z14"
-\Orange "Ils sont partis...   Mais que comptent-ilsfaire de ces 3"
-\Orange "inscriptions ?"\Disp\Isz Z
-\Pi
-\IfEnd
-\If W=30\ And D
-\Then "Maire: On dit qu'a lasource du fleuve se  trouve un tresor..."\Disp\Isz Z
-0\->\Mat Z[10,2
-\IfEnd
-\If W=31\ And D
-\Then "Z ! content de te"
-"revoir..."
-\Orange "Dis-moi Wills,tu me  connaissais avant queje perde la memoire ?"\Disp\ClrText
-"Oui, nous etions"
-"freres d'arme..."
-"On etait toujours"
-"ensemble en mission."\Disp\ClrText
-"Ton attaque preferee etait Xmeta, tu t'en souviens ?"
-\Orange "..."
-"Je te l'apprends."\Disp\ClrText
-\For 1\->X \To 5
-\If 4>\Mat Z[X,4
-\Then 8\->\Mat Z[X,4
-6\->X
-\IfEnd
-\Next 
-"Voila,"
-"Tu peux choisir Xmetadans ATTAK pendant uncombat !"\Disp\ClrText
-"Maintenant allons"
-"retrouver Jessie a "
-"PLYMOUT: elle saura  comment contrecarrer les plans de Redox."\Disp\Isz Z
-\IfEnd
-\If W=32\ And D
-\Then \Orange "Redox et Enzo !      Ils ne m'ont pas vu  entrer..."\Disp\Orange "Mais que font-ils ?!"\Disp\ClrText
-"\EE\@25 )\@26)\->\ab/c\theta\xrt]=]\Pi...         Et voila !"\Disp"Dans quelques minutesTomberry ressurgira. NOUS AVONS ACCOMPLI  NOTRE MISSION !"\Disp\ClrText
-"Mais ? Qui est la ?  Z !!! Tu n'aurais"
-"jamais du nous suivre"
-"Redox :"
-"INCARNATION ARAKN !"
-4\->X
-\Prog "Z0"
-\Prog "Z14"
-"Enzo : Je vais"
-"t'aneantir, miserableinsecte !!!"
-" "
-"INCARNATION GOA !"
-4\->X
-\Prog "Z0"
-\Prog "Z14"
-"...Nous mourrons......mais.....Tomberry.........est libre"\Disp\ClrText
-\Orange "(je suis venge)"\Disp\Orange "(...)"\Disp\Orange "(mais trop tard...)"\Disp\ClrText
-\Orange "Je dois rejoindre"
-\Orange "Wills et Jessie."\Disp34\->Z
-\Pi
-\IfEnd
-\If W=34\ And D
-\Then "Chuttt ! Ils"
-"t'attendent derriere."\Disp\Isz Z
-28\->\Mat Z[9,3
-23\->\Mat A[8,12
-\IfEnd
-\If W=35\ And D
-\Then \Orange "Jessie ! Il n'y a pasde temps a perdre !  Redox et Enzo disent avoir reveille..."
-"TOMBERRY ?!!!"\Disp\ClrText
-"Alors ils avaient lestrois inscriptions desagesse..."\Disp"Nous devons trouver  un moyen de detruire ce demon !"\Disp\ClrText
-"Mais pour l'instant  il faut fuir la villeau plus vite ! DANS  QUELQUES SECONDES    ELLE SERA ANEANTIE !"\Disp17\->\Mat Z[12,1
-\Isz Z
-\IfEnd
-\If W=36\ And D
-\Then 0\->\Mat Z[12,1
-\Orange \Text 52,2,"J'AI UN BATEAU DE PECHE ICI:"
-\Orange \Text 58,2,"MONTEZ, VITE !!!"\Disp\PlotOff I,J
-\For 21\->A \To 11 \Step -5
-\Text A,A+37,"\theta"
-.4\->X
-\Prog "Z0"
-\Text A,A+37,"~"
-\Next 
-38\->Z
-\Prog "Z21"
-\IfEnd
-\If W=39\ And D
-\Then "Z ! Je craignais de  ne jamais te revoir."\Disp\ClrText
-\Orange "Le temps presse, j'aibesoin de cette arme qui peut sauver GAIA."\Disp\ClrText
-"L'Arme Ultime..."\Disp\If 3>\Mat Z[7,5
-\Then "Il me faut 3 groseyesFais vite !"\Disp\Return
-\IfEnd
-"Tu as les 3 prismes  et les 3 groseyes ?  Laisse-moi un peu de temps."\Disp\Mat Z[7,5]-3\->\Mat Z[7,5
-\Isz Z
-23.140\->\Mat A[2,16
-\IfEnd
-\If W=40\ And D
-\Then "La Tarte aux groseyesest prete."\Disp\Orange "COMMENT ?!!!"\Disp"Oh, je ne te l'avais pas dit ?"\Disp\ClrText
-"L'Arme Ultime est uneTarte aux groseyes,  faite des PRISMES et de 3 GROSEYES."\Disp\Orange "(une tarte...)"\Disp\ClrText
-"Utilise-la contre"
-"Tomberry. Compris ?"\Disp\Orange "Bien sur."\Disp\ClrText
-\Orange "Je te laisse, Sage.  Je serai digne de l' admiration de Gaia,  que je jure de sauverdes griffes de..."
-"C'est ca. Adieu."\Disp1\->\Mat Z[8,5
-\Isz Z
-\IfEnd
-\If W=41\ And D
-\Then "Wills: Tu n'es pas"
-"avec Jessie ?"
-\Orange "Non, je ne l'ai pas  vue."\Disp\ClrText
-"Elle n'est pas encorerevenue. Je vais"
-"partir a sa recherche"\Disp\ClrText
-\Orange "Tu as eu des infos   sur Tomberry ?"\Disp\ClrText
-"Eh bien, j'ai appris qu'il etait capable  de detruire Gaia..."
-\Orange "Ca, je le savais."
-"...Et il se trouve ence moment a SANCTUA."\Disp\ClrText
-\Orange "SANCTUA ?"\Disp"Son repaire sacre."\Disp\Orange "Bien. J'y vais."\Disp\ClrText
-"J'espere que tu sais ce que tu fais."\Disp\Orange "Moi aussi."\Disp\Isz Z
-\IfEnd
-\If W=42\ And D
-\Then \ClrText
-"TU ME DEFIES, ETRANGEMORTEL ?"\Disp\Orange "Je viens mettre fin aton regne."\Disp"AH AH AH..."\Disp\ClrText
-"TU DEVRAS D'ABORD"
-"VAINCRE MES DISCIPLES"\Disp\ClrText
-\Orange "Redox ? Enzo ?"
-\Orange "Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
-4\->X
-\Prog "Z0"
-43\->Z
-\Prog "Z14"
-44\->Z
-\Prog "Z14"
-{\Pi}
-\Prog "Z13"
-\ClrText
-"IMPRESSIONNANT..."
-"MAIS QUE PEUX-TU"
-"CONTRE MOI ?"\Disp\If \Not \Mat Z[8,5
-\Then "SANS L'ARME SUPREME  TU N'ES RIEN !"
-1\->X
-\Prog "Z0"
-\For 31\->A \To 19 \Step -6
-\Text A,81,"   "
-\Next 
-.\->\Mat Z[1,1
-\Prog "Z21"
-\IfEnd
-\Orange "Je peux...  CA."\Disp\Green "Z envoie :"
-\Green "Tarte aux groseyes !"
-2\->X
-\Prog "Z0"
-\StoPict 1
-\BG-Pict 1
-\For 0\->D \To 9
-\Cls
-\Plot 0,0
-\Next 
-\BG-None
-87\->A
-38\->B
-5\->C
-\For 1\->D \To 1800 \Step 50
-\Orange \F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
-\Isz C
-.1\->X
-\Prog "Z0"
-\Next 
-3\->C
-\For 1800\->D \To 1 \Step -40
-\Green \F-Line A+C\sin D,B+C\cos D,A+C\sin (D-40),B+C\cos (D-40
-\Orange \F-Line A,B,A+60\Ran#-30,B+60\Ran#-30
-C+.6\->C
-.1\->X
-\Prog "Z0"
-\Next 
-\Cls
-\Plot 0,0
-5\->X
-\Prog "Z0"
-\ClrText
-"Z ?...      Z ?!"\Disp\Orange "Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
-"Jessie: Ton dernier"
-"combat a bien failli t'etre fatal..."\Disp\Orange "Et...et Tomberry ?"\Disp"Detruit. A jamais."
-2\->X
-\Prog "Z0"
-{6}
-\Prog "Z22"
-117\->R
-{6,1}
-\Prog "Z20"
-\StoPict 1
-\ViewWindow 127,-1,0,63,1,0
-\RclPict 1
-\Prog "Z20"
-\Text 30,51,"THE END"\Disp\Stop
-\IfEnd
+V=1\Prog "Z31"
+V=2\Prog "Z32"
+V=3\Prog "Z33"
+V=4\Prog "Z34"
+V=5\Prog "Z35"
+V=6\Prog "Z36"
+V=7\Prog "Z37"
+V=8\Prog "Z38"
 Z\->\Mat Z[12,6
 %End
 %Header Record
@@ -1769,7 +1261,7 @@ D\>=2\=>\Text K,L+31,D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1222
+Capacity:1156
 File Name:Z10
 Group Name:
 Password:
@@ -1780,32 +1272,30 @@ Option4:
 %Data Record
 \Lbl 0
 \Cls
-\Green \Horizontal 1
-\Green \Vertical 127
-\Green \Horizontal 63
-\Green \Vertical 1
-\Vertical 126
-\Horizontal 62
+\Vertical 1
 \Vertical 2
+\Horizontal 1
+\Vertical 126
+\Vertical 127
+\Horizontal 62
+\Horizontal 63
+\Green \Vertical 48
+\Green \Vertical 49
 \Green \Horizontal 51
 \Green \Horizontal 52
-\Text 5,5,"skulls:"
-\Text 5,34,\Mat Z[10,4
-\Green \F-Line 59,62,59,51
-\Green \F-Line 58,62,58,51
-\Orange \Text 5,63,"Z"
-\Green \F-Line 69,62,69,51
-\Green \F-Line 70,62,70,51
+\Text 5,5,"\@24"
+\Text 5,10,\Mat Z[10,4
+\Orange \Text 5,51,"Z"
+\Text 5,55,\Mat Z[12,6
+\F-Line 70,51,70,62
+\F-Line 71,51,71,62
 \Text 5,73,"sante:   \slash"
 \Text 5,97,\Mat Z[1,1
 \Text 5,113,\Mat Z[1,2
 \Orange \Text 15,9,"attaques"
 \Orange \Text 21,9,"stats"
 \Orange \Text 27,9,"objets"
-\Text 51,4,"[EXIT]"
 \Text 57,8,"Return"
-\Green \F-Line 48,1,48,52
-\Green \F-Line 49,1,49,52
 1\->A
 \Lbl Q
 \Text 6A+9,4,"-"
@@ -2102,7 +1592,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5228
+Capacity:5129
 File Name:Z13
 Group Name:
 Password:
@@ -2145,7 +1635,7 @@ Z>17\=>22.118\->\Mat A[10,6
 \IfEnd
 \If V=5
 \Then \Orange \Text 5,3,"HELENIA"
-[[.4,.4,.4,.,.,30,22,20.4,32,12,.1273,.4,.4,.4,.4,2.4][.4,.4,.,.,.4,3.1272,2.4,.4,20.4,32,2,.,.4,.4,20.4,23.127][.4,.4,.,.4,20.4,22.126,23,.4,.4,22.4,32,2,.,.4,.4,20][.4,2.4,.,.,.1274,.4,.1271,.,30,22,22.4,32,.,.4,.,22][30,22.128,.4,.,.4,.4,.4,.4,.,20.4,32,.,.,.4,20,23][.,.4,2.4,2,.,.,.,.,.,.4,.4,.,.4,2.4,.,20][.,30,22.2,32,.,.4,.4,2.4,2.4,.4,.4,.,20.4,23,.4,20][.,20.4,23.3,23,.,.4,20.4,23,23,.4,.4,.,.4,.,.,23][.,.,.,.,.,.,.,.,.,.,.,3,.,.,20.4,22][.4,.4,.4,.4,.4,.4,.4,.4,.4,.4,20.4,22,.4,.4,.4,.4]]\->\Mat A
+[[.4,.4,.4,.,.,30,22,20.4,32,12,.1273,.4,.4,.4,.4,2.4][.4,.4,.,.,.4,3.1272,2.4,.4,20.4,32,2,.,.4,.4,20.4,23.127][.4,.4,.,.4,20.4,22.126,23.1415,.4,.4,22.4,32,2,.,.4,.4,20][.4,2.4,.,.,.1274,.4,.1271,.,30,22,22.4,32,.,.4,.,22][30,22.128,.4,.,.4,.4,.4,.4,.,20.4,32,.,.,.4,20,23][.,.4,2.4,2,.,.,.,.,.,.4,.4,.,.4,2.4,.,20][.,30,22.2,32,.,.4,.4,2.4,2.4,.4,.4,.,20.4,23,.4,20][.,20.4,23.3,23,.,.4,20.4,23,23,.4,.4,.,.4,.,.,23][.,.,.,.,.,.,.,.,.,.,.,3,.,.,20.4,22][.4,.4,.4,.4,.4,.4,.4,.4,.4,.4,20.4,22,.4,.4,.4,.4]]\->\Mat A
 3\->G
 9\->H
 \IfEnd
@@ -2202,8 +1692,7 @@ H\->\Mat Z[12,5
 5(U-1\->\r
 \For 1\->W \To 16
 5(W-1\->E
-Z>1\=>\Getkey\->\theta
-\theta=29\=>\Return
+Z>1\=>\Getkey=29\=>\Return
 \Mat A[U,W\->M
 \Int (10\Frac M\->O
 \Int .1M\->B
@@ -2228,10 +1717,6 @@ V=7\=>\Text 21,58,"\theta"
 \Orange \Text 55,42,"             "
 \StoPict 1
 \Prog "Z18"
-\If V=5\ And Z=41
-\Then \ClrText
-\Orange "L'onde de choc s'est ressentie jusqu'ici, la population est"
-\Orange "paniquee..."\Disp\IfEnd
 \If V=8
 \Then 87\->A
 32\->B
@@ -3002,7 +2487,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:999
+Capacity:935
 File Name:Z15
 Group Name:
 Password:
@@ -3056,15 +2541,20 @@ Option4:
 \Prog "Z0"
 \PlotOff A,B
 \Next 
-"On debarque ici."\Disp"Tu comprends qui est Tomberry maintenant ?Il nous faut trouver un moyen de"
-"l'arreter, sinon..."\Disp\ClrText
-"C'est la fin de Gaia."\Disp\Orange "Je prends les choses en main."\Disp\ClrText
-\Orange "Jessie,donne l'alerteet fais evacuer les  villes voisines."\Disp\ClrText
-\Orange "Wills,essaie d'avoir plus d'informations  sur Tomberry du cote de la FFC."\Disp\ClrText
-\Orange "Je vais voir un"
-\Orange "vieil ami a HELENIA. On se retrouve a...  BOTMA."\Disp\ClrText
-"A tes ordres, Z."
-"Prends ca :"
+"Wills> On debarque"\Disp"Tu comprends qui est Tomberry maintenant ?Il faut trouver un"
+"moyen de l'arreter,"
+"sinon..."
+"C'est la fin de Gaia."\Disp\ClrText
+"Z> Je prends les choses en main."\Disp\ClrText
+"Z> Allez donner"
+"l'alerte et faites"
+"evacuer les villes"
+"voisines."\Disp\ClrText
+"Z> Ensuite rejoignez--moi a HELENIA, je"
+"dois y interroger"
+"l'Ancien..."\Disp\ClrText
+"W\@26J> D'accord !"
+"Tiens prends ca :"
 "-5 soin+"
 "-5 adrena"
 "-5 chlore"
@@ -3397,4 +2887,661 @@ Option4:
 \Ans=4\=>{63,48,46,43,37,32,30,32,31,33,32,33,29,31,29,29,30,32,34,32,32,36,35,33,33,36,38,41,39,41,43,43,41,43,44,48,48,48,48,63}\->\List4
 \Ans=5\=>{41,41,43,42,29,30,32,29,28,28,27,27,20,20,25,25,17,17,21,24,27,23}\->\List4
 \Ans=6\=>{29,29,28,23,23,26,28,29,39,41,44,46,47,46,47,47,45,45,47,47,44,43,41,43,43,42,40,35,35,35,39,41,40,31,24,19,17,17,18,22,22}\->\List4
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1873
+File Name:Z31
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=1\ And D
+\Then "Il se reveille."
+"Laissez-moi seul"
+"avec lui."\Disp\ClrText
+"ZZZZ...    zzzz...    ZZZZ... uhn?!"\Disp\ClrText
+"Redox> Z! Ca va? J'aibien cru que tu ne"
+"reprendrais jamais"
+"conscience!"\Disp\ClrText
+"R> Enzo est sur le"
+"point de trouver"
+"les Lunes, il faut"
+"l'en empecher!"\Disp\ClrText
+"R> Bute-le et reviensme voir."\Disp\ClrText
+"R> Va au magasin"
+"t'acheter soins,"
+"adrena et chlore,"
+"tu en auras besoin."\Disp\Isz Z
+5\->\Mat Z[12,4
+2\->\Mat Z[12,5
+\IfEnd
+\If W=2\ And Z<11
+\Then "Z> Ou puis-je trouverEnzo ?"
+" "
+"~Oh... il va souvent au resto du Sud-Ouest"\Disp\Isz Z
+\IfEnd
+\If W=3
+\Then \If Z<11
+\Then "~ RESTO ~"
+"Z> Ou est Enzo ?"
+"~He la !"
+"Ce renseignement ne"
+"sera pas gratuit:"
+"Il t'en coutera..."
+"disons deux gemmes"\Disp""
+\If D
+\Then 32.107\->\Mat A[10,1
+\Int 8\Ran#+13\->\Mat Z[12,1
+4\->Z
+\IfEnd
+\IfEnd
+\If Z=7
+\Then "~Merci beaucoup."
+"Enzo est rentre chez"
+"lui, juste en face."\Disp\Isz Z
+\IfEnd
+\IfEnd
+\If W=6\ And D
+\Then "Z> Il y a quelqu'un ? "\Disp"~NON"\Disp" "
+"Z> Je m'autorise"
+"donc a prendre cette gemme."\Disp\Isz Z
+\IfEnd
+\If W=8
+\Then \If D
+\Then "Z> Enzo, tu es mort !Prepare-toi au combat "
+"Enzo> Incarnation GOA"
+4\->X
+\Prog "Z0"
+\Prog "Z14"
+1\->X
+\Prog "Z0"
+\ClrText
+"E> Mais c'est toi, Z?Z> Il parait, oui."\Disp" "
+"E> C'est Redox qui"
+"t'envoie!"\Disp\ClrText
+"Ne lui fais pas"
+"confiance, il veut"
+"recuperer les prismesde pouvoir pour"
+"prendre le controle  de la FFC."\Disp\ClrText
+"Faisons plutot"
+"equipe tous les deux.Prends ces skulls et repose-toi a"
+"l'auberge."\Disp\ClrText
+"Ensuite, va aux"
+"catacombes de TARA,  l'hermite qui s'y"
+"trouve pourrait bien nous aider..."\Disp\ClrText
+"Moi je vais creuser  une piste au nord,"
+"on se retrouve ici"
+"des que possible !"\Disp60+\Mat Z[10,4\->\Mat Z[10,4
+10\->Z
+\Pi
+\IfEnd
+\If Z=18
+\Then "Enzo> Tu as reussi a recuperer le prisme ?Parfait !"\Disp\ClrText
+"E> Il existe trois   prismes. Chacun"
+"possede des pouvoirs terribles et une"
+"inscription de"
+"sagesse."\Disp\ClrText
+"C'est l'inscription"
+"qui m'interesse, tu"
+"peux garder le prisme"\Disp"Z> (mais que me"
+"cache-t-il ?)"\Disp\ClrText
+"E> Un ami m'a donne  rendez-vous a ELOS,"
+"pres du magasin. Tu  m'accompagnes ?"\Disp\Isz Z
+\IfEnd
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:722
+File Name:Z32
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=10\ And Z>9\ And Z<13
+\Then "L'hermite ? oui, il  doit etre au fond."
+"Mais attention, il"
+"parait qu'une Bete"
+"rode dans les parages..."\Disp\Not \Mat Z[12,1\=>39+\Int 20\Ran#\->\Mat Z[12,1
+D\=>11\->Z
+\IfEnd
+\If W=12\ And D
+\Then "Z> Bonjour Sage."
+"Je suis Z. Je..."
+"Sage> Je sais."\Disp\ClrText
+4\->M~P
+"Sage> Cela fait"
+"bien longtemps que jen'avais vu quelqu'un."\Disp\ClrText
+7\->E
+"Alors ecoute bien :"
+"Cette chose toutes"
+"choses devore."\Disp\ClrText
+"Elle ronge le fer,"
+"Mord l'acier."\Disp\ClrText
+"Met a mort les rois,"
+"detruit les villes,"
+"et rabat les hautes"
+"montagnes..."\Disp\Pi\->S~T
+"C'EST LE..."?\->R
+\ClrText
+\If R=TEMPS
+\Then "Tu me plais."
+"Je t'offre une"
+"groseye et une Lune."
+"Les deux autres sont"
+"a ATLANTIS."\Disp7\->O
+\Prog "Z07"
+16\->O
+\Prog "Z07"
+\Isz Z
+\Else "Je te laisse un peu"
+"de temps pour y"
+"reflechir."\Disp\Return
+\IfEnd
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1292
+File Name:Z33
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=13\ And D
+\Then "Troll> Si tu me bats"
+"au bras de fer, ma"
+"Lune est a toi."
+"L'essai coute 10\@24."
+"Partant ?"
+\Locate 1,7,"[EXE]\->Oui [EXIT]\->Non"
+\Do
+\Getkey
+\LpWhile \Not \Ans
+\Ans\<>31\=>\Return
+\ClrText
+\If 10>\Mat Z[10,4
+\Then "Troll> Reviens quand"
+"tu auras 10\@24 a perdre"\Disp\Return
+\IfEnd
+\Mat Z[10,4]-10\->\Mat Z[10,4
+\Locate 1,1,"!DEFI AU BRAS DE FER!"
+\Locate 1,2,"Appuyer n'importe ou"
+\Locate 1,3,"fait monter ton score"
+\Locate 11,4,"--"
+\Locate 4,5,"Press  50  a key"
+\Locate 11,6,"--"
+\Locate 2,7,"10\->Perdu \slash 90\->Gagne"
+.5\->X
+\Prog "Z0"
+\Do
+\LpWhile \Not \Getkey
+\Locate 4,5,"     "
+\Locate 15,5,"     "
+\For 50\->X \To 10 \Step -1
+\Getkey
+\If \Ans\<>Y\ And \Ans
+\Then \Ans\->Y
+X+4\->X
+\IfEnd
+\Locate 11,5,\Int X
+X>89\=>\Break
+\Next 
+\ClrText
+\If X<11
+\Then "Perdu..."\Disp\Return
+\IfEnd
+"Troll> Hmmf."
+"Voila ta Lune."\Disp16\->O
+\Prog "Z07"
+\Isz Z
+\IfEnd
+\If W=14
+\Then \If Z>13\ And Z<17
+\Then "Vieille> Au voleur !"
+"Mes bijoux,"
+"Mon argent !!!"
+"Une recompense a qui"
+"les retrouvera !"\Disp\Isz Z
+\IfEnd
+\If Z=17
+\Then "Z> J'ai retrouve vos bijoux."
+"Vieille> Ah ! Merci !Et mon argent ?"
+"Z> Il s'est enfui"
+"avec (He-He-He)."\Disp\ClrText
+"Vieille> Bon..."
+"Voici une Lune pour  te remercier."\Disp\ClrText
+"Les trois Lunes se   fondent en une"
+"pour former le prismeANGEL !!!"\Disp\Isz Z
+0\->\Mat Z[6,6
+1\->\Mat Z[1,6
+\IfEnd
+\IfEnd
+\If W=15\ And Z>13\ And Z<17
+\Then "~Il se passe"
+"des trucs louches"
+"au sud..."\Disp""
+\IfEnd
+\If W=16\ And Z>14\ And Z<17
+\Then "~J'heberge quelqu'un.Vous voulez le voir ?"\Disp\ClrText
+"Voleur> Ne me faites pas de mal !"
+"Voila les bijoux de  la vieille et son"
+"argent..."
+"Oubliez-moi !"\Disp80+\Mat Z[10,4\->\Mat Z[10,4
+17\->Z
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:913
+File Name:Z34
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=19
+\Then \If Z<25
+\Then "~Un etranger se vanted'avoir le prisme"
+"MAGMA, mais il en"
+"demande un prix"
+"exorbitant !"\Disp" "
+Z<24\=>"Enzo> Allons chercherce type !"\Disp\ClrText
+\IfEnd
+\If Z=25
+\Then "~Enzo est parti,"
+"il a laisse des"
+"instructions à Jessie,"
+"tu pourras la"
+"trouver chez elle."\Disp\ClrText
+\IfEnd
+\IfEnd
+\If W=21\ And Z>18\ And Z<25
+\Then \If \Mat Z[10,4]<5000
+\Then "~Je suis pret a cederle prisme MAGMA pour la modique somme"
+"de 5000\@24 !"\Disp20\->Z
+\Else "~Dur de m'en separer,mais j'ai vraiment"
+"besoin d'argent en cemoment."
+"Voici le primse."\Disp" "
+"Z obtient MAGMA !"\Disp\Mat Z[10,4]-5000\->\Mat Z[10,4
+1\->\Mat Z[2,6
+25\->Z
+\IfEnd
+\IfEnd
+\If W=22\ And Z>18\ And Z<23
+\Then "Maire d'ELOS>"
+"Chasseur de prime ?"
+"J'ai un job pour toi."\Disp\ClrText
+"Tue le mandivor qui"
+"erre dans les rues etterrorise ma ville,  et gagne 4000\@24."\Disp"...Non, 5000."\Disp"Hum...soit."\Disp15+\Int 5\Ran#\->\Mat Z[12,1
+23\->Z
+\IfEnd
+\If W=20\ And Z=25
+\Then "Jessie> Z!"
+"Enzo a du partir,"
+"il nous demande de"
+"chercher le dernier"
+"prisme a HELENIA."
+"Allons-y !"\Disp\Isz Z
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:2625
+File Name:Z35
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=26
+\Then \If D
+\Then "Z ! Jessie !"
+"Je suis Wills, Enzo"
+"m'a demande de venir vous aider ici."\Disp\ClrText
+"Wills> Je vous"
+"propose qu'on fouillela ville et on"
+"se retrouve ici, OK?"\Disp\Isz Z
+\IfEnd
+\If Z=28
+\Then "Wills> J'ai fait choublanc, et vous ?"\Disp\ClrText
+"Z> Moi j'ai rencontre"
+"un petit vieux qui"
+"m'a parle des prismeset d'une Arme Supreme"
+"mais je n'ai rien"
+"trouve d'autre..."\Disp\ClrText
+"Jessie> Moi j'ai recuun appel de WINHILL :des srilanes mettent la ville a sac,"
+"Il faut qu'on aille  aider les habitants !"\Disp\Isz Z
+\IfEnd
+\IfEnd
+\If \Int W=27\ And Z<28
+\Then W=27.1\=>"~M"\DispW=27.2\=>"~o"\DispW=27.3\=>"~r"\DispW=27.4\=>"~k"\Disp""
+\IfEnd
+\If W=27
+\Then \If D
+\Then "Ancien> As-tu ecoute la foret ?"
+"Quel est mon nom ?"
+" "
+\Pi\->M
+3\->O
+8\->R
+9\->K
+"Z> FACILE, C'EST..."?\->Q
+\If Q\<>MORK
+\Then "Ancien> Ben voyons..."\Disp\Else "Ancien> Exact."\Disp\ClrText
+"Ecoute bien."\Disp\ClrText
+"Les prismes ont troisfonctions."\Disp\ClrText
+"D'abord, tu peux les"
+"invoquer lors d'un"
+"combat."\Disp\ClrText
+"Ensuite, les 3 reunisforment l'ARME SUPREME"\Disp\ClrText
+"Enfin, il parait"
+"que les inscriptions de sagesse qu'ils"
+"arborent recelent un secret."
+"J'ignore lequel."\Disp\ClrText
+"Ancien> Reviens me"
+"voir quand tu auras  les3 prismes et"
+"3 groseyes."\Disp\Isz Z
+\IfEnd
+\IfEnd
+\If Z=39
+\Then "Ancien> Z !"
+"Je craignais de ne"
+"jamais te revoir."\Disp\ClrText
+"Z> Le temps presse,  j'ai besoin de cette arme ultime qui peut sauver GAIA."\Disp\ClrText
+"Ancien> L'Arme Ultime..."\Disp\Isz Z
+\IfEnd
+\If Z=40
+\Then \If 3>\Mat Z[7,5
+\Then "Ancien> Il me faut 3 groseyes pour"
+"obtenir l'Arme Ultime"\Disp\Return
+\Else "Ancien> Tu as les 3  prismes ainsi que"
+"3 groseyes ? parfait !"\Disp\ClrText
+\Mat Z[7,5]-3\->\Mat Z[7,5
+15\->\Mat Z[10,1
+\Isz Z
+\IfEnd
+\IfEnd
+\If Z=41
+\Then \If 0<\Mat Z[10,1
+\Then "Laisse-moi un peu de temps, j'ai quelques manipulations"
+"a effectuer"\Disp""
+\Else "Ancien> La Tarte aux groseyes est prete."\Disp\ClrText
+"Z> COMMENT ?!!!"\Disp\ClrText
+"Ancien> Oh, je ne te l'avais pas dit ?"\Disp\ClrText
+"L'Arme Ultime est uneTarte aux groseyes,  faite des PRISMES et de 3 GROSEYES."\Disp"Z> (une tarte...)"\Disp\ClrText
+"Ancien> Utilise-la   contre Tomberry."
+"Compris ?"\Disp\ClrText
+"Z> Bien sur."\Disp"Je te laisse, Sage."
+"Je serai digne de"
+"l'admiration de Gaia,que je jure de sauverdes griffes de..."
+"Ancien> Oui-oui merciAdieu."\Disp1\->\Mat Z[8,5
+41.5\->Z
+\IfEnd
+\IfEnd
+\IfEnd
+\If W=41.5\ And D
+\Then "Wills> Tu n'es pas"
+"avec Jessie ?"
+"Z> Non, je ne l'ai pas  vue."\Disp\ClrText
+"Elle n'est pas encorerevenue. Je vais"
+"partir a sa recherche"\Disp\ClrText
+"Z> Tu as eu des infos   sur Tomberry ?"\Disp\ClrText
+"W> Eh bien, j'ai appris qu'il etait capable  de detruire Gaia..."
+"Z> Ca, je le savais."
+"W> ...Et il se trouve ence moment a SANCTUA."\Disp\ClrText
+"Z> SANCTUA ?"\Disp"W> Son repaire sacre."\Disp"Z> Bien. J'y vais."\Disp\ClrText
+"W> J'espere que tu sais ce que tu fais."\Disp"Z> Moi aussi."\Disp42\->Z
+\IfEnd
+\If W=28\ And \Not \Mat Z[10,1
+\Then "~Mais nous avons le"
+"soleil...  qui fa"
+"pousser not'groseye"\Disp" "
+"Z obtient 1 groseye."\Disp7\->O
+\Prog "Z07"
+1\->\Mat Z[10,1
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1085
+File Name:Z36
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=29\ And D
+\Then "Enzo \@26 Redox >"
+"Donne-nous le colis, il est indispensable au Projet T."\Disp\ClrText
+"Z> Le Projet T ?"
+"Mais de quoi s'agit- -il ?!"\Disp\ClrText
+"E\@26R> Nous t'offrons"
+"la verite en echange du colis..."\Disp\ClrText
+"Z> ...Bien. Le voila."\Disp\ClrText
+".............."
+"Le prisme PHOENIX !"
+"Enfin ! La troisieme inscription..."\Disp\ClrText
+"Le... Le prisme !"
+"Z> Il explose !!!"
+2\->X
+\Prog "Z0"
+\Prog "Z14"
+"Z> Ils sont partis...Mais que comptent-ilsfaire de ces 3"
+"inscriptions ?"\Disp31\->Z
+\Pi
+\IfEnd
+\If W=30
+\Then "Maire> On dit qu'a lasource du fleuve se  trouve un tresor..."\Disp" "
+\Mat Z[10,2\=>"Z> Ouais !"\Disp""
+\IfEnd
+\If W=31\ And D
+\Then "W> Z ! content de te revoir..."
+"Z> Dis-moi Wills, tu me connaissais avant que je perde la"
+"memoire ?"\Disp\ClrText
+"W> Oui, nous etions"
+"freres d'arme..."
+"On etait toujours"
+"ensemble en mission."\Disp\ClrText
+"W> Ton attaque"
+"preferee etait Xmeta,tu t'en souviens ?"
+"Z> ..."\Disp\ClrText
+"W> Je te l'apprends."\Disp\ClrText
+\For 1\->X \To 5
+\If 4>\Mat Z[X,4
+\Then 8\->\Mat Z[X,4
+6\->X
+\IfEnd
+\Next 
+"W> Voila,"
+"Tu peux choisir Xmetadans ATTAK pendant uncombat !"\Disp\ClrText
+"Maintenant allons"
+"retrouver Jessie a "
+"PLYMOUT: elle saura  comment contrecarrer les plans de Redox."\Disp\Isz Z
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1210
+File Name:Z37
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=32\ And D
+\Then "Z> Redox et Enzo !"
+"Ils ne m'ont pas vu  entrer..."\Disp\ClrText
+"Z> Mais que font-ils?"\Disp\ClrText
+"\EE\@25 )\@26)\->\ab/c\theta\xrt]=]\Pi...         Et voila !"\Disp"Dans quelques minutesTomberry ressurgira. NOUS AVONS ACCOMPLI  NOTRE MISSION !"\Disp\ClrText
+"Mais ? Qui est la ?  Z !!! Tu n'aurais"
+"jamais du nous suivre"
+"Redox>"
+"INCARNATION ARAKN !"
+4\->X
+\Prog "Z0"
+\Prog "Z14"
+"Enzo> Je vais"
+"t'aneantir, miserableinsecte !!!"
+" "
+"INCARNATION GOA !"
+4\->X
+\Prog "Z0"
+\Prog "Z14"
+"...Nous mourrons......mais.....Tomberry.........est libre"\Disp\ClrText
+"Z> (je suis venge)"\Disp"(...)"\Disp"(mais trop tard...)"\Disp\ClrText
+"Z> (allons retrouver Wills et Jessie"
+"en ville)"\Disp34\->Z
+\Pi
+\IfEnd
+\If W=34\ And D
+\Then "~Chuttt ! Ils"
+"t'attendent derriere."\Disp\Isz Z
+28\->\Mat Z[9,3
+23\->\Mat A[8,12
+\IfEnd
+\If W=35\ And D
+\Then "Z> Jessie ! Il n'y a pas de temps a perdreRedox et Enzo disent avoir reveille..."
+"Jessie> TOMBERRY ?!!"\Disp\ClrText
+"Alors ils avaient lestrois inscriptions desagesse..."\Disp\ClrText
+"Nous devons trouver  un moyen de detruire ce demon !"\Disp\ClrText
+"Mais pour l'instant  il faut fuir la villeau plus vite ! DANS  QUELQUES SECONDES    ELLE SERA ANEANTIE !"\Disp17\->\Mat Z[12,1
+\Isz Z
+\IfEnd
+\If W=36\ And D
+\Then 0\->\Mat Z[12,1
+\Text 52,2,"J'AI UN BATEAU DE PECHE ICI:"
+\Text 58,2,"MONTEZ, VITE !!!"\Disp\PlotOff I,J
+\For 21\->A \To 11 \Step -5
+\Text A,A+37,"\theta"
+.6\->X
+\Prog "Z0"
+\Text A,A+37,"~"
+\Next 
+38\->Z
+\Prog "Z21"
+\IfEnd
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1022
+File Name:Z38
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\If W=42\ And D
+\Then \ClrText
+"TU ME DEFIES, ETRANGEMORTEL ?"\Disp"Je viens mettre fin aton regne."\Disp"AH AH AH..."\Disp\ClrText
+"TU DEVRAS D'ABORD"
+"VAINCRE MES DISCIPLES"\Disp\ClrText
+"Redox ? Enzo ?"
+"Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
+4\->X
+\Prog "Z0"
+43\->Z
+\Prog "Z14"
+44\->Z
+\Prog "Z14"
+{\Pi}
+\Prog "Z13"
+\ClrText
+"IMPRESSIONNANT..."
+"MAIS QUE PEUX-TU"
+"CONTRE MOI ?"\Disp\If \Not \Mat Z[8,5
+\Then "SANS L'ARME SUPREME  TU N'ES RIEN !"
+1\->X
+\Prog "Z0"
+\For 31\->A \To 19 \Step -6
+\Text A,81,"   "
+\Next 
+.\->\Mat Z[1,1
+\Prog "Z21"
+\IfEnd
+"Je peux...  CA."\Disp"Z envoie :"
+"Tarte aux groseyes !"
+2\->X
+\Prog "Z0"
+\StoPict 1
+\BG-Pict 1
+\For 0\->D \To 9
+\Cls
+\Plot 0,0
+\Next 
+\BG-None
+87\->A
+38\->B
+5\->C
+\For 1\->D \To 1800 \Step 50
+\F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
+\Isz C
+.1\->X
+\Prog "Z0"
+\Next 
+3\->C
+\For 1800\->D \To 1 \Step -40
+\F-Line A+C\sin D,B+C\cos D,A+C\sin (D-40),B+C\cos (D-40
+\F-Line A,B,A+60\Ran#-30,B+60\Ran#-30
+C+.6\->C
+.1\->X
+\Prog "Z0"
+\Next 
+\Cls
+\Plot 0,0
+5\->X
+\Prog "Z0"
+\ClrText
+"Z ?...      Z ?!"\Disp"Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
+"Jessie: Ton dernier"
+"combat a bien failli t'etre fatal..."\Disp"Et...et Tomberry ?"\Disp"Detruit. A jamais."
+2\->X
+\Prog "Z0"
+{6}
+\Prog "Z22"
+117\->R
+{6,1}
+\Prog "Z20"
+\StoPict 1
+\ViewWindow 127,-1,0,63,1,0
+\RclPict 1
+\Prog "Z20"
+\Text 30,51,"THE END"\Disp\Stop
+\IfEnd
 %End
