@@ -33,16 +33,17 @@ tntsoft@fastmail.com
 - [x] Shop : Enable [exit] key to exit shop
 - [x] Objects : allow to take several objects in a row, except during fight : Not r, TNT9
 - [ ] Check if we can use pict-2 to store last visited city. probably requires 4096 bytes saving elsewhere
+	- initial size : 47498 bytes
+	- current size : 44655 bytes
 - [x] Port to graph35+/graph100+
     - [x] remove ':' separators
 	- [x] monochrome
 		- [x] modify menus using [    ] brackets to select entries
 		- [x] life gauge in cities
-		- [ ] make dialogs speaker explicit
+		- [x] make dialogs speaker explicit
 	- [x] ¥ not rendered with `Text` command
 	- [x] factorize sleep loops into Prog "T0" + use a global sleep factor
-- [x] Simplify cat encoding : Re, Ra, E, r, or, a, an, milli, Cnt, etc.
-- [ ] Add progress hint in user menu
+- [ ] Fix text not erased on monster attak/spell ("... defense -1"?)
 - [x] Notice in markdown/pdf
 	- E/R send to tara, the wise man send to atlantis, and we get ANGEL, but then what ? <= not clear : we look for prisms
 	- Missing Disp when back to botma after antlantis : "peux garder le prisme"◢

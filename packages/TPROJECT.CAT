@@ -428,7 +428,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1148
+Capacity:1049
 File Name:Z03
 Group Name:
 Password:
@@ -447,24 +447,20 @@ Option4:
 \Lbl 0
 \Mat Z[12,4\->G
 \Mat Z[12,5\->H
-'backstep
 \Mat Z[9,3\->\theta
 \theta=27\=>\Dsz G
 \theta=38\=>\Isz G
 \theta=37\=>\Dsz H
 \theta=28\=>\Isz H
 \Lbl 1
-'plot Z
 5G+45\->I
 65-5H\->J
 \Green \PlotOn I,J
-'getkey
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
 \theta\->\Mat Z[9,3
 \Mat Z[12,6\->Z
-'f6
 \If \theta=29
 \Then \If Z=28.5
 \Then \ClrText
@@ -487,7 +483,6 @@ Option4:
 \IfEnd
 \GotoW
 \IfEnd
-'move
 2\->N
 \If \theta=27\ And G<16
 \Then \Int .1\Mat A[H,G\->N
@@ -507,9 +502,7 @@ Option4:
 \Then \Int (10\Frac .1\Mat A[H,G\->N
 \Int 10\Frac \Mat A[H+1,G\->O
 \IfEnd
-'wall
 \theta\<>48\=>N=2\ Or O>3\=>\Goto1
-'
 \PlotOff I,J
 \theta=27\=>\Isz G
 \theta=38\=>\Dsz G
@@ -520,17 +513,15 @@ Option4:
 \Green \PlotOn I,J
 G\->\Mat Z[12,4
 H\->\Mat Z[12,5
-'current
-\Frac \Mat A[H,G\->\R b0
-\Int (10\R b0\->\R b2
-'menu,shop,inn
-\If \theta=48\ Or \R b2=2\ Or \R b2=3
+\Frac \Mat A[H,G\->F
+\Int (10F\->E
+\If \theta=48\ Or E=2\ Or E=3
 \Then \Green \Text 31,10,"       "
 \Orange \Text 23,2,"         "
 \StoPict 1
 \theta=48\=>\Prog "Z10"
-\R b2=2\=>\Prog "Z11"
-\R b2=3\=>\Prog "Z17"
+E=2\=>\Prog "Z11"
+E=3\=>\Prog "Z17"
 \Cls
 \RclPict 1
 \Green \Text 31,10,\Mat Z[10,4
@@ -539,9 +530,8 @@ H\->\Mat Z[12,5
 \PlotOff I,J
 \Goto0
 \IfEnd
-'scenario
-\If \R b2=1
-\Then 100\Frac 10\R b0\->W
+\If E=1
+\Then 100\Frac 10F\->W
 \If W
 \Then \Green \Text 31,10,"       "
 {W}
@@ -552,7 +542,6 @@ H\->\Mat Z[12,5
 \Goto1
 \IfEnd
 \IfEnd
-'countdowns
 \If \Mat Z[12,1
 \Then \Prog "Z15"
 \Ans=\Pi\=>\GotoI
@@ -565,7 +554,7 @@ H\->\Mat Z[12,5
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:139
+Capacity:147
 File Name:Z04
 Group Name:
 Password:
@@ -580,14 +569,14 @@ Option4:
 0\->D
 W=Z\=>1\->D
 \ClrText
-V=1\Prog "Z31"
-V=2\Prog "Z32"
-V=3\Prog "Z33"
-V=4\Prog "Z34"
-V=5\Prog "Z35"
-V=6\Prog "Z36"
-V=7\Prog "Z37"
-V=8\Prog "Z38"
+V=1\=>\Prog "Z31"
+V=2\=>\Prog "Z32"
+V=3\=>\Prog "Z33"
+V=4\=>\Prog "Z34"
+V=5\=>\Prog "Z35"
+V=6\=>\Prog "Z36"
+V=7\=>\Prog "Z37"
+V=8\=>\Prog "Z38"
 Z\->\Mat Z[12,6
 %End
 %Header Record
@@ -1284,7 +1273,7 @@ Option4:
 \Green \Horizontal 51
 \Green \Horizontal 52
 \Text 5,5,"\@24"
-\Text 5,10,\Mat Z[10,4
+\Text 5,11,\Mat Z[10,4
 \Orange \Text 5,51,"Z"
 \Text 5,55,\Mat Z[12,6
 \F-Line 70,51,70,62
@@ -1699,7 +1688,7 @@ Z>1\=>\Getkey=29\=>\Return
 \Int (10\Frac .1M\->C
 \If O
 \Then O=2\=>\Orange \Text \r+3,E+49,"\Deg>"
-O=3\=>\Orange \Text \r+2,E+48,"p"
+O=3\=>\Orange \Text \r+2,E+49,"p"
 O=4\=>\Text \r+2,E+49,"\@5C"
 O=5\=>\Orange \Text \r+1,E+49,"o"
 O=6\=>\Text \r+1,E+48,"@"
@@ -2487,7 +2476,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:935
+Capacity:793
 File Name:Z15
 Group Name:
 Password:
@@ -2541,27 +2530,23 @@ Option4:
 \Prog "Z0"
 \PlotOff A,B
 \Next 
-"Wills> On debarque"\Disp"Tu comprends qui est Tomberry maintenant ?Il faut trouver un"
-"moyen de l'arreter,"
-"sinon..."
-"C'est la fin de Gaia."\Disp\ClrText
-"Z> Je prends les choses en main."\Disp\ClrText
-"Z> Allez donner"
-"l'alerte et faites"
-"evacuer les villes"
-"voisines."\Disp\ClrText
-"Z> Ensuite rejoignez--moi a HELENIA, je"
-"dois y interroger"
-"l'Ancien..."\Disp\ClrText
+"Z> On debarque ici !"\Disp\ClrText
+"Z> Je vais a HELENIA voir l'Ancien,"
+"faites evacuer les"
+"villes et mettez"
+"les habitants aux"
+"abris !"\Disp\ClrText
+"Z> On se retrouve"
+"chez Wills !"
+" "
 "W\@26J> D'accord !"
-"Tiens prends ca :"
-"-5 soin+"
-"-5 adrena"
-"-5 chlore"
-"Et... bonne chance."\Disp\For 2\->O \To 4
-\For 1\->W \To 5
-\Prog "Z07"
-\Next 
+"Tiens, prends de quoicombattre :"
+"+5 soin+"
+"+5 adrena"
+"+5 chlore"
+"Et... bonne chance !"\Disp""
+\For 2\->O \To 4
+5+\Mat Z[O,5\->\Mat Z[O,5
 \Next 
 9\->\Mat Z[10,3
 39\->\Mat Z[12,6
