@@ -3122,7 +3122,7 @@ X>89\=>\Break
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:916
+Capacity:919
 File Name:Z34
 Group Name:
 Password:
@@ -3141,9 +3141,8 @@ Z<24\=>"Enzo> Allons chercherce type !"\Disp\ClrText
 \IfEnd
 \If Z=25
 \Then "~Enzo est parti,"
-"il a laisse des"
-"instructions a Jessie,"
-"tu pourras la"
+"mais il a laisse des instructions a Jessie "
+"Tu pourras la"
 "trouver chez elle."\Disp\ClrText
 \IfEnd
 \IfEnd
@@ -3201,11 +3200,10 @@ Option4:
 \If Z=28
 \Then "Wills> J'ai fait choublanc, et vous ?"\Disp\ClrText
 "Z> Moi j'ai rencontreun petit vieux qui"
-"m'a parle des prismeset d'une Arme Supreme"
-"mais je n'ai rien"
+"m'a parle des prismeset d'une Arme Suprememais je n'ai rien"
 "trouve d'autre..."\Disp\ClrText
 "Jessie> Moi j'ai recuun appel de WINHILL :des srilanes mettent la ville a sac,"
-"Il faut qu'on aille  aider les habitants !"\Disp\Isz Z
+"Il faut qu'on aille  aider les habitants!"\Disp\Isz Z
 \IfEnd
 \If Z=41.5
 \Then "Wills> Tu n'es pas"
@@ -3234,6 +3232,7 @@ Option4:
 8\->R
 9\->K
 "Z> FACILE, C'EST..."?\->Q
+\ClrText
 \If Q\<>MORK
 \Then "Ancien> Ben voyons..."\Disp\Else "Ancien> Exact."\Disp\ClrText
 "Ecoute bien."\Disp\ClrText
