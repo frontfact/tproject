@@ -84,17 +84,16 @@ D>1\=>0\->D
 \If D
 \Then \Locate 1,1,"CHARGEMENT..."
 \For 1\->K \To 24
-\Mat Y[1,K\->X
-\Int (X/10^8\->A
-\Int ((X-A*10^8)/10^4)\->B
-X-A*10^8-B*10^4\->C
+\Mat Y[1,K
+\Int (\Ans/10^8\->A
+\Int ((\Ans-A*10^8)/10^4)\->B
 3K-2\->P
 \Int ((P-1)/6)+1\->L
 A\->\Mat Z[L,P-6L+6
 \Int (P/6)+1\->L
-B\->\Mat Z[L,P+1-6L+6]
+B\->\Mat Z[L,P+1-6L+6
 \Int ((P+1)/6)+1\->L
-C\->\Mat Z[L,P+2-6L+6
+\Ans-A*10^8-B*10^4\->\Mat Z[L,P+2-6L+6
 \Next 
 \Else \Identity 1\->\Mat Z
 [[13,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][67,19,.,38,.,.][.,.,.,230,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
@@ -665,7 +664,7 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\StoPict 1
+\StoPict 2
 \Mat Z[1,1\->I
 \Mat Z[6,1\->J
 \Text 51,38,"                      "
@@ -1583,7 +1582,7 @@ M=5\=>\Text 51,90,"orinaphe"
 M=6\=>\Text 51,88,"goa geant"
 M=7\=>\Text 51,90,"spectre"
 \IfEnd
-\StoPict 1
+\StoPict 2
 %End
 %Header Record
 Format:TXT
@@ -1806,14 +1805,14 @@ Z=8\=>\Return
 \Mat Z[1,1\->I
 \Mat Z[6,1\->J
 \Text 57,3,"[EXE]\->menu action             "
-\StoPict 1
+\StoPict 2
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
 Z=8\=>\Return
 \Green \Text 43,14,\Mat Z[4,1
 \Green \Text 49,14,\Mat Z[5,1
-\StoPict 1
+\StoPict 2
 \IfEnd
 \Getkey
 \LpWhile \Not \Ans
@@ -1825,7 +1824,7 @@ Z=8\=>\Return
 \Green \Text 49,3," fuite  "
 1\->\r
 \Text 57,3,"[EXE]\->choisir une action      "
-\StoPict 1
+\StoPict 2
 \Do
 \Green \F-Line 3,-6\r+43,5,-6\r+43
 \Do
@@ -1892,7 +1891,7 @@ V=8\=>9
 \Then \Orange \Text 19,28,"-"
 \Else \Orange \Text 19,28,O
 \IfEnd
-\StoPict 1
+\StoPict 2
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
@@ -2042,7 +2041,7 @@ B>9\=>O\<=9\=>\Orange \Text 19,28,"  "
 \Then \Orange \Text 19,28,"-"
 \Else \Orange \Text 19,28,O
 \IfEnd
-\StoPict 1
+\StoPict 2
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
