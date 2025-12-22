@@ -312,7 +312,7 @@ A\>=87\=>A\<=89\=>B\>=22\=>B\<=26\=>8\->V
 \Next 
 \Prog "Z14"
 \Int 6\Ran#+7\->\Mat Z[10,3
-\GotoI
+\Goto1
 \IfEnd
 0\->H
 A=71\=>B=18\=>1\->H
@@ -336,7 +336,7 @@ H\=>\GotoH
 3+\Mat Z[7,5\->\Mat Z[7,5
 300+\Mat Z[10,4\->\Mat Z[10,4
 1\->\Mat Z[10,2
-\GotoI
+\Goto1
 \IfEnd
 \If \Not \Int 30\Ran#\ Or \theta=48
 \Then \If \theta=48
@@ -434,7 +434,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1049
+Capacity:1069
 File Name:Z03
 Group Name:
 Password:
@@ -543,6 +543,7 @@ E=3\=>\Prog "Z17"
 {W}
 \Prog "Z04"
 37=\Mat Z[12,6\=>\GotoW
+0\->\Mat Z[9,3
 \Ans=\Pi\=>\Goto0
 \Green \Text 31,10,\Mat Z[10,4
 \Goto1
@@ -550,6 +551,7 @@ E=3\=>\Prog "Z17"
 \IfEnd
 \If \Mat Z[12,1
 \Then \Prog "Z15"
+0\->\Mat Z[9,3
 \Ans=\Pi\=>\Goto0
 \IfEnd
 \Goto1
