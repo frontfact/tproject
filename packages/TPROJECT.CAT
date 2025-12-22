@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1308
+Capacity:849
 File Name:TPROJECT
 Group Name:
 Password:
@@ -26,54 +26,21 @@ Option4:
 \BG-None
 \FuncOff
 0\->A~Z
-\F-Line 8,35,20,40
-\F-Line 20,40,40,43
-\F-Line 40,43,60,45
-\F-Line 60,45,80,45
-\F-Line 20,42,21,20
-\F-Line 26,36,27,27
-\F-Line 26,36,34,24
-\F-Line 34,24,31,46
-\F-Line 36,35,39,37
-\F-Line 39,37,44,38
-\F-Line 39,37,40,24
-\F-Line 45,35,50,38
-\F-Line 50,38,57,39
-\F-Line 50,35,47,34
-\F-Line 47,34,46,32
-\F-Line 46,32,47,29
-\F-Line 47,29,49,25
-\F-Line 49,25,49,23
-\F-Line 49,23,46,20
-\F-Line 46,20,40,17
-\F-Line 52,32,54,34
-\F-Line 54,34,56,33
-\F-Line 56,33,57,29
-\F-Line 57,29,55,28
-\F-Line 55,28,53,28
-\F-Line 53,28,52,31
-\F-Line 68,40,63,39
-\F-Line 63,39,60,36
-\F-Line 60,36,59,34
-\F-Line 59,34,61,22
-\F-Line 59,27,63,29
-\F-Line 66,34,69,36
-\F-Line 69,36,75,37
-\F-Line 69,36,70,24
-\Orange \F-Line 93,38,103,38
-\Orange \F-Line 93,30,103,30
-\Text 28,93,"The"
-\Orange \F-Line 80,28,115,28
-\Orange \F-Line 80,20,115,20
-\Text 38,80,"T-Project"
-\Text 52,21,"NOUVELLE PARTIE"
-\Text 58,21,"CONTINUER"
+\Orange \F-Line 33,48,43,48
+\Orange \F-Line 33,40,43,40
+\Text 18,33,"The"
+\Orange \F-Line 20,38,55,38
+\Orange \F-Line 20,30,55,30
+\Text 28,20,"T-Project"
+\Green \Text 23,80,"\TeraN\TeraSoft"
+\Text 46,41,"Nouvelle partie"
+\Text 52,41,"Continuer"
 \Do
-\Text 52+6D,16,"-"
+\Text 46+6D,36,"-"
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>28\ And \theta\<>37\ And \theta\<>31
-\Text 52+6D,16," "
+\Text 46+6D,36," "
 \If \theta\<>31
 \Then \Isz D
 D>1\=>0\->D
