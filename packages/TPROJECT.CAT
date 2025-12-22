@@ -666,7 +666,7 @@ A=7\=>{M,7}
 \Then .3\->X
 \Prog "Z0"
 \Cls
-\RclPict 1
+\RclPict 2
 {M,2}
 \Prog "Z20"
 {M,1}
@@ -761,7 +761,7 @@ A\->\Mat Z[11,4
 \If A=8
 \Then \For 1\->A \To 3
 \Cls
-\RclPict 1
+\RclPict 2
 \Plot 0,0
 \Next 
 \Text 51,38,"pouvoir\->morsur       "
@@ -778,7 +778,7 @@ A\->\Mat Z[11,4
 .2\->X
 \Prog "Z0"
 \Cls
-\RclPict 1
+\RclPict 2
 \PlotOn 0,0
 \Next 
 \Text 51,38,"pouvoir\->griffe       "
@@ -816,7 +816,7 @@ A>24\=>\Orange \F-Line -A+90,38-A/2,-A+90,38+A/2
 \Prog "Z0"
 \For 4\->P \To 6
 \Cls
-\RclPict 1
+\RclPict 2
 \Plot 0,0
 \Next 
 6\->P
@@ -827,12 +827,12 @@ A>24\=>\Orange \F-Line -A+90,38-A/2,-A+90,38+A/2
 .2\->X
 \Prog "Z0"
 \Cls
-\RclPict 1
+\RclPict 2
 \Orange \F-Line 90,40,49,40
 .2\->X
 \Prog "Z0"
 \Cls
-\RclPict 1
+\RclPict 2
 \Orange \Text 22,45,":"
 \Text 51,38,"pouvoir\->vampyr       "
 .2\->X
@@ -909,7 +909,7 @@ J\<>\Mat Z[6,1\=>\Orange \Text 5,C,\Mat Z[6,1]-J
 0\->W
 0\->P~Q
 \Cls
-\RclPict 1
+\RclPict 2
 \Orange \Text 3,6,"   "
 \Orange \Text 3,6,\Mat Z[1,1
 \Mat Z[1,1\->I
@@ -1084,7 +1084,7 @@ C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
 41\->R
 \If C=7
 \Then \Cls
-\RclPict 1
+\RclPict 2
 {5}
 \Prog "Z05"
 320\->A
@@ -1119,7 +1119,7 @@ M\<>7\=>\Mat Z[6,1]-16-\Int 7\Ran#\->\Mat Z[6,1
 \IfEnd
 \If C>10\ And C<14\ And \Mat Z[3,1]>19
 \Then \Cls
-\RclPict 1
+\RclPict 2
 {8}
 \Prog "Z05"
 \S-Gph1 \DrawOff
@@ -1756,7 +1756,7 @@ P=9\=>Q+\Mat Z[6,3\->\Mat Z[6,3
 0\->P~Q
 \Lbl 1
 \Cls
-\RclPict 1
+\RclPict 2
 \Orange \Text 3,6,"   "
 \Orange \Text 3,6,\Mat Z[1,1
 \Green \Text 25,3,"-stats- "
@@ -1832,7 +1832,7 @@ Z=8\=>\Return
 \If \r=3
 \Then \Prog "Z09"
 \Cls
-\RclPict 1
+\RclPict 2
 \PlotOn 0,0
 \GotoD
 \IfEnd
@@ -1932,7 +1932,7 @@ Z=8\=>\Return
 .3\->X
 \Prog "Z0"
 \Cls
-\RclPict 1
+\RclPict 2
 \Plot 0,0
 .2\->X
 \Prog "Z0"
@@ -2073,7 +2073,7 @@ V=2\=>\Text 51,38,"attaque +1"
 \Do
 \LpWhile \Not \Getkey
 \Cls
-\RclPict 1
+\RclPict 2
 \Plot 0,0
 0\->P~Q
 \IfEnd
@@ -2096,7 +2096,7 @@ V=2\=>\Text 51,38,"attaque +1"
 \If V=8
 \Then \For 1\->A \To 3
 \Cls
-\RclPict 1
+\RclPict 2
 \Plot 0,0
 \Next 
 \Text 51,38,"attaque ennemi -1     "
@@ -2113,7 +2113,7 @@ V=2\=>\Text 51,38,"attaque +1"
 .2\->X
 \Prog "Z0"
 \Cls
-\RclPict 1
+\RclPict 2
 \PlotOn 0,0
 \Next 
 \Text 51,38,"defense ennemi -1     "
@@ -2150,7 +2150,7 @@ W>23\=>\Orange \F-Line W+65,38-.5W,W+65,38+.5W
 \Next 
 \For 1\->A \To 3
 \Cls
-\RclPict 1
+\RclPict 2
 \Plot 0,0
 \Next 
 1\->P
@@ -2161,12 +2161,12 @@ W>23\=>\Orange \F-Line W+65,38-.5W,W+65,38+.5W
 .2\->X
 \Prog "Z0"
 \Cls
-\RclPict 1
+\RclPict 2
 \Orange \F-Line 67,53,104,34
 .3\->X
 \Prog "Z0"
 \Cls
-\RclPict 1
+\RclPict 2
 \Orange \Text 25,104,":"
 .3\->X
 \Prog "Z0"
