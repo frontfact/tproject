@@ -2576,7 +2576,7 @@ Option4:
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>72\ And \theta\<>62\ And \theta\<>52\ And \theta\<>47
-Z<11\=>\theta<53\=>\Prog "Z04"
+Z<10\=>\theta<53\=>\Prog "Z04"
 \theta<53\=>\Return
 \If \theta=62
 \Then \If 25>\Mat Z[10,4
