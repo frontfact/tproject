@@ -2859,7 +2859,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1887
+Capacity:1875
 File Name:Z31
 Group Name:
 Password:
@@ -2894,7 +2894,7 @@ Option4:
 "~Oh... il va souvent au resto du Sud-Ouest"\Disp""
 \IfEnd
 \If W=3
-\Then \If Z<11
+\Then \If Z<7
 \Then "~ RESTO ~"
 "Z> Ou est Enzo ?"
 "~He la !"
@@ -2902,14 +2902,14 @@ Option4:
 "sera pas gratuit:"
 "Il t'en coutera..."
 "disons deux gemmes"\Disp""
-\If D
-\Then 32.107\->\Mat A[10,1
-\Int 8\Ran#+13\->\Mat Z[12,1
+\If Z=2
+\Then \Int 8\Ran#+13\->\Mat Z[12,1
 4\->Z
 \IfEnd
 \IfEnd
 \If Z=7
-\Then "~Merci beaucoup."\Disp\Isz Z
+\Then "~Merci beaucoup."\Disp\ClrText
+\Isz Z
 \IfEnd
 \If Z=7\ Or Z=8
 \Then "Enzo habite dans une maison a l'est."\Disp8\->Z
