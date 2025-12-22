@@ -1558,7 +1558,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5069
+Capacity:5073
 File Name:Z13
 Group Name:
 Password:
@@ -1722,7 +1722,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7303
+Capacity:7307
 File Name:Z14
 Group Name:
 Password:
@@ -1731,6 +1731,7 @@ Option2:
 Option3:
 Option4:
 %Data Record
+\StoPict 1
 \Prog "Z12"
 \Goto1
 \Lbl D
@@ -2861,7 +2862,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1875
+Capacity:1853
 File Name:Z31
 Group Name:
 Password:
