@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1213
+Capacity:1315
 File Name:TPROJECT
 Group Name:
 Password:
@@ -83,11 +83,18 @@ D>1\=>0\->D
 \ClrText
 \If D
 \Then \Locate 1,1,"CHARGEMENT..."
-\Mat Y*(1\ab/c\sqrt(\Mat Y[10,3\->\Mat Z
-\For 1\->A \To 12
-\For 1\->B \To 6
-\Int (\Mat Z[A,B]\<>\Mat Z[A,B\=>\Stop
-\Next 
+\For 1\->K \To 24
+\Mat Y[1,K\->X
+\Int (X/10^8\->A
+\Int ((X-A*10^8)/10^4)\->B
+X-A*10^8-B*10^4\->C
+3K-2\->P
+\Int ((P-1)/6)+1\->L
+A\->\Mat Z[L,P-6L+6
+\Int (P/6)+1\->L
+B\->\Mat Z[L,P+1-6L+6]
+\Int ((P+1)/6)+1\->L
+C\->\Mat Z[L,P+2-6L+6
 \Next 
 \Else \Identity 1\->\Mat Z
 [[13,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][67,19,.,38,.,.][.,.,.,230,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
@@ -2570,7 +2577,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:893
+Capacity:990
 File Name:Z17
 Group Name:
 Password:
@@ -2596,7 +2603,7 @@ Option4:
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>72\ And \theta\<>62\ And \theta\<>52\ And \theta\<>47
-Z=2\=>\theta<53\=>\Prog "Z04"
+Z<11\=>\theta<53\=>\Prog "Z04"
 \theta<53\=>\Return
 \If \theta=62
 \Then \If 25>\Mat Z[10,4
@@ -2642,12 +2649,19 @@ U\=>\Locate W,2,"z"
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>31\ And \theta\<>47
-.2\->X
-\Prog "Z0"
 \theta=47\=>\GotoA
-\Int (9999\Ran#*9999\Ran#\->\Mat Z[10,3
-\Mat Z*\Mat Z[10,3\->\Mat Y
 \ClrText
+{1,24}\->\Dim \Mat Y
+\For 1\->K \To 24
+3K-2\->P
+\Int ((P-1)/6)+1\->L
+\Mat Z[L,P-6L+6\->A
+\Int (P/6)+1\->L
+\Mat Z[L,P+1-6L+6\->B
+\Int ((P+1)/6)+1\->L
+\Mat Z[L,P+2-6L+6\->C
+A*10^8+B*10^4+C\->\Mat Y[1,K
+\Next 
 \Locate 7,4,"\aster Level \aster"
 \Locate 7,5,"\aster Saved \aster"
 1\->X
@@ -2906,7 +2920,7 @@ Option4:
 \If W=2\ And Z<11
 \Then "Z> Ou puis-je trouverEnzo ?"
 " "
-"~Oh... il va souvent au resto du Sud-Ouest"\Disp\Isz Z
+"~Oh... il va souvent au resto du Sud-Ouest"\Disp""
 \IfEnd
 \If W=3
 \Then \If Z<11
@@ -3038,7 +3052,7 @@ D\=>11\->Z
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1351
+Capacity:1328
 File Name:Z33
 Group Name:
 Password:
@@ -3111,8 +3125,9 @@ X>89\=>\Break
 "Vieille> Bon..."
 "Voici une Lune pour  te remercier."\Disp\ClrText
 "Les trois Lunes se   fondent en une"
-"pour former le prismeANGEL !!!"\Disp"Z> Allons montrer ca a Enzo a BOTMA !"
-"avec (He-He-He)."\Disp\Isz Z
+"pour former le prismeANGEL !!!"\Disp\ClrText
+"Z> Allons voir Enzo  a BOTMA !"
+\Isz Z
 0\->\Mat Z[6,6
 1\->\Mat Z[1,6
 \IfEnd
