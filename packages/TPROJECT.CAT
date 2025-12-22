@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1315
+Capacity:1308
 File Name:TPROJECT
 Group Name:
 Password:
@@ -543,14 +543,14 @@ E=3\=>\Prog "Z17"
 {W}
 \Prog "Z04"
 37=\Mat Z[12,6\=>\GotoW
-\Ans=\Pi\=>\GotoI
+\Ans=\Pi\=>\Goto0
 \Green \Text 31,10,\Mat Z[10,4
 \Goto1
 \IfEnd
 \IfEnd
 \If \Mat Z[12,1
 \Then \Prog "Z15"
-\Ans=\Pi\=>\GotoI
+\Ans=\Pi\=>\Goto0
 \IfEnd
 \Goto1
 \Lbl W
