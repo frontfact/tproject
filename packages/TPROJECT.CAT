@@ -1682,6 +1682,7 @@ V=7\=>\Text 21,58,"\theta"
 \Green \Horizontal 63
 \Green \F-Line 1,63,1,13
 \Green \F-Line 127,13,127,63
+\Orange \Text 55,42,"             "
 \StoPict 1
 \Prog "Z18"
 \If V=8
