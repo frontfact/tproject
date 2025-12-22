@@ -511,7 +511,7 @@ E=3\=>\Prog "Z17"
 \Prog "Z04"
 37=\Mat Z[12,6\=>\GotoW
 0\->\Mat Z[9,3
-\Ans=\Pi\=>\Goto0
+\Ans=\Pi\=>\GotoI
 \Green \Text 31,10,\Mat Z[10,4
 \Goto1
 \IfEnd
@@ -519,7 +519,7 @@ E=3\=>\Prog "Z17"
 \If \Mat Z[12,1
 \Then \Prog "Z15"
 0\->\Mat Z[9,3
-\Ans=\Pi\=>\Goto0
+\Ans=\Pi\=>\GotoI
 \IfEnd
 \Goto1
 \Lbl W
@@ -1557,7 +1557,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5060
+Capacity:5069
 File Name:Z13
 Group Name:
 Password:
@@ -1620,12 +1620,15 @@ Option4:
 1\->G
 5\->H
 \IfEnd
-\If \Pi\<>\List \Ans[1
-\Then G\->\Mat Z[12,4
-H\->\Mat Z[12,5
-\IfEnd
 0\->\Mat Z[9,3
 \Prog "Z16"
+\If \Pi=\List \Ans[1
+\Then \Cls
+\RclPict 1
+\Return
+\IfEnd
+G\->\Mat Z[12,4
+H\->\Mat Z[12,5
 \Green \Horizontal 13
 \Green \F-Line 47,13,47,63
 \Green \Horizontal 63
