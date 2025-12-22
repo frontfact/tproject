@@ -203,7 +203,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1801
+Capacity:1807
 File Name:Z02
 Group Name:
 Password:
@@ -1560,7 +1560,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5073
+Capacity:5028
 File Name:Z13
 Group Name:
 Password:
@@ -1632,11 +1632,6 @@ Option4:
 \IfEnd
 G\->\Mat Z[12,4
 H\->\Mat Z[12,5
-\Green \Horizontal 13
-\Green \F-Line 47,13,47,63
-\Green \Horizontal 63
-\Green \F-Line 1,63,1,13
-\Green \F-Line 127,13,127,63
 \For 0\->W \To 7
 \Green \F-Line 3+W,51,3+W,44
 \Next 
@@ -1682,7 +1677,11 @@ C=3\=>\PlotOff E+50,58-\r
 \Next 
 V=7\=>\Text 21,58,"\theta"
 \IfEnd
-\Orange \Text 55,42,"             "
+\Green \Horizontal 13
+\Green \F-Line 47,13,47,63
+\Green \Horizontal 63
+\Green \F-Line 1,63,1,13
+\Green \F-Line 127,13,127,63
 \StoPict 1
 \Prog "Z18"
 \If V=8
