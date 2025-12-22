@@ -12,10 +12,10 @@
 | 8 | Monster<br>Spell 1 | Monster<br>Spell 2 | Monster<br>Spell 3 | regular monster ➜ 0<br>persona monster ➜ 1 | Object 8<br>(tarte) | Object 18<br>(unused) |
 | 9 | X coordinate<br>in world map | Y coordinate<br>in world map | Last Getkey<br>code in city | Last Getkey<br>code in world | (unused) | (unused) |
 | 10 | Groseye found<br>in city around<br>progress 27? (0/1)  | Treasure found<br>in city around<br>progress 30 (0/1) | Counter to next fight<br>and also<br>Saving cipher key | $$$ | calculator<br>speed factor | Monster inertia<br>(raw) |
-| 11 | Current city ID | Z Level | Attak (1)<br>or<br>Spell (2) | Attak/Spell ID | Chosen scenario<br>1 or 2 | Z Experience |
+| 11 | Current city ID | Z Level | Attak (1)<br>or<br>Spell (2) | Attak/Spell ID | (unused) | Z Experience |
 | 12 | Step counter<br>in city | (unused) | Victories<br>count | X coordinate<br>in city | Y coordinate<br>in city | Progress<br>in game |
 
-## TNT12
+## Z12
 
 | id | Monster |  | Attak | Defense | Life | Inertia | A1 | A2 | A3 | S1 | S2 | S3 |
 |:-:|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -27,7 +27,7 @@
 |6 | goa geant | 6 | N+1 | 1+3N/4 | 20+16N+8NRan# | 8 |  |  |  |  |  |  |
 |7 | spectre | 7 | N+2 | 2+2N/3 | 40+15N+13NRan# | 8 |  |  |  |  |  |  |
 |8 | Enzo | 6 | 9 | 9 | 99 | 11 |  |  |  |  |  |  |
-|10,5 | Minautor | 5 | 4 | 4 | 120 | 11 |  |  |  |  |  |  |
+|11 | Minautor | 5 | 4 | 4 | 120 | 11 |  |  |  |  |  |  |
 |23 | mandivor | 3 | 7 | 6 | 400 | 7 |  |  |  |  |  |  |
 |28,5 | Vegetal | 2 | 7 | 5 | 250 | 8 |  |  |  |  |  |  |
 |29 | spectre | 7 | 10 | 9 | 650 | 7 |  |  |  |  |  |  |

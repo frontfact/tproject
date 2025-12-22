@@ -37,13 +37,19 @@ displays “hum?” if a tile has a script not matching current progress
 
 ## TNT5
 drawing routines
-
-monster drawing
-
-maybe the grass line of the scene drawn at the start of a battle
+sequence in List Ans
+0: Z
+1: epee levee 
+2: epee horizontale haute
+3: epee horizontale basse
+4: Xmeta
+5: efface epee 1
+6: efface epee 2
+7: efface epee 3
+8: efface Z + epee
 
 ## TNT6
-draw attacks and spells in battle
+Monsters fight round, att or spells
 
 ## TNT7
 increment an item counter in the inventory
@@ -65,7 +71,7 @@ not all powers from the manual are present (vision?)
 ## TNT9
 Display item menu
 
-Apply item : resotre heal, strength, magic, etc.
+Apply item : restore heal, strength, magic, etc.
 
 some animation drawings
 - groseye (C = 7)
@@ -78,11 +84,18 @@ Display user menu
 Shop menu + 1 dialogue in a shop
 
 ## TNT12
-Draw battle screen
-
-call TNT5 near the end
-
-monster name override after TNT5
+Draw battle screen, Z & monster, StoPict 1
+Init monster apts
+Z=8     => Enzo     (@ Botma)
+Z=11    => Minautor (Tara catacombs)
+Z=23    => mandivor (Elos bounty)
+Z=28.5  => Vegetal  (@ Helenia)
+Z=29    => spectre  (@ Winhill)
+Z=32    => Redox    (@ Plymout)
+Z=33    => Enzo     (@ Plymout)
+Z=43    => Redox    (@ Sanctua)
+Z=44    => Enzo     (@ Sanctua)
+Z=99    => lapranak (treasure)
 
 ## TNT13
 draw city

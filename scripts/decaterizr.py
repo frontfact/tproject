@@ -1,8 +1,9 @@
 import argparse
 import copy
-import sys
 import re
-import shutil, os
+import shutil
+import os
+import sys
 from pathlib import Path
 from typing import List, TypeVar
 
@@ -18,10 +19,10 @@ class Token:
 
     def __str__(self):
         return self.dst
-    
+
     def __eq__(self, other):
         return isinstance(other, Token) and self.src == other.src
-    
+
     def __hash__(self):
         return hash(self.src)
 
@@ -66,7 +67,9 @@ class ParserError(Exception):
 
 class AsciiParser:
     def __init__(self, known_tokens):
-        self.known_tokens = sorted(known_tokens, key=lambda t: len(t.src), reverse=True)
+        self.known_tokens = sorted(known_tokens,
+                                   key=lambda t: len(t.src),
+                                   reverse=True)
 
     def parse_line(self, line):
         tokens = []
@@ -74,7 +77,7 @@ class AsciiParser:
         while i < len(line):
             c = line[i]
             if c == '\\':
-                i += 1 # consume '\'
+                i += 1  # consume '\'
                 for token in self.known_tokens:
                     if line.startswith(token.src, i):
                         tokens.append(token)
@@ -104,11 +107,11 @@ class Program:
         self.data = data
         self.tokens = self.parse_tokens()
         self.ctype = ctype
-        
+
     def print_header(self):
-        for k,v in self.header.items():
+        for k, v in self.header.items():
             print(f'{k} = {v}')
-    
+
     @property
     def name(self) -> str:
         return self.header['File Name']
@@ -118,7 +121,7 @@ class Program:
         parser = AsciiParser(language_tokens)
         for i, line in enumerate(self.data):
             line_tokens = parser.parse_line(line)
-            if i<(len(self.data)-1):
+            if i < (len(self.data) - 1):
                 line_tokens.append(LineFeedToken)
             program_tokens.extend(line_tokens)
         return program_tokens
@@ -126,16 +129,16 @@ class Program:
     def write(self, fout):
         # write header
         if self.ctype == 'G100':
-            fout.write(f'%Header Record\n')
-            fout.write(f'Format:MCS1\n')
-            fout.write(f'Type Number:1\n')
+            fout.write('%Header Record\n')
+            fout.write('Format:MCS1\n')
+            fout.write('Type Number:1\n')
             fout.write(f'File Name:{self.name}\n')
-            fout.write(f'Option Name:\n')
-            fout.write(f'Communication SW:0\n')
+            fout.write('Option Name:\n')
+            fout.write('Communication SW:0\n')
             fout.write(f'Capacity:{self.capacity}\n')
-            fout.write(f'Data Type:PG\n')
+            fout.write('Data Type:PG\n')
         else:
-            fout.write(f'%Header Record\n')
+            fout.write('%Header Record\n')
             fout.write(f'Format:{self.header["Format"]}\n')
             fout.write(f'Communication SW:{self.header["Communication SW"]}\n')
             fout.write(f'Data Type:{self.header["Data Type"]}\n')
@@ -148,17 +151,17 @@ class Program:
             fout.write(f'Option3:{self.header["Option3"]}\n')
             fout.write(f'Option4:{self.header["Option4"]}\n')
         # write data
-        fout.write(f'%Data Record\n')
+        fout.write('%Data Record\n')
         if '100' in self.ctype:
-            fout.write(f'Password:\n')
-            fout.write(f'BaseN:0\n')
+            fout.write('Password:\n')
+            fout.write('BaseN:0\n')
         for token in self.tokens:
             # backslash in front of listed tokens
             if token.listed:
                 fout.write('\\')
             fout.write(token.src)
         fout.write('\n')
-        fout.write(f'%End\n')
+        fout.write('%End\n')
 
     def pretty_print(self, indent='  ') -> str:
         output: str = ''
@@ -188,7 +191,7 @@ class Program:
             first = False
             if t.dst in inc:
                 level += 1
-                if t.dst=='Then ':
+                if t.dst == 'Then ':
                     output += '\n'
                     first = True
             else:
@@ -196,7 +199,7 @@ class Program:
                     output += '\n'
                     first = True
         if level != 0:
-            raise Exception(f'Indentation level error in {self.name}')
+            print(f'Indentation level error in {self.name}', file=sys.stderr)
         return output
 
     @property
@@ -208,15 +211,16 @@ class Program:
 
     def simplify(self):
         subst = {
-            Token('@7FD1','z',2,True): Token('z','z',1, False),
-            Token('@7FD2','p',2,True): Token('p','p',1,False),
-            Token('(-)','-',1,True): Token('-','-',1,False),
-            Token('or','or',1,True): [Token('o','o',1,False), Token('r','r',1,False)],
-            Token('Re','e',2,True): Token('e','e',1,False),
-            Token('Ra','a',1,True): Token('a','a',1,False),
-            Token('E','E',1,True): Token('E','E',1,False),
-            Token('milli','m',1,True): Token('m','m',1,False),
-            Token('Cnt','n',1,True): Token('n','n',1,False),
+            Token('@7FD1', 'z', 2, True): Token('z', 'z', 1, False),
+            Token('@7FD2', 'p', 2, True): Token('p', 'p', 1, False),
+            Token('(-)', '-', 1, True): Token('-', '-', 1, False),
+            Token('or', 'or', 1, True): [Token('o', 'o', 1, False),
+                                         Token('r', 'r', 1, False)],
+            Token('Re', 'e', 2, True): Token('e', 'e', 1, False),
+            Token('Ra', 'a', 1, True): Token('a', 'a', 1, False),
+            Token('E', 'E', 1, True): Token('E', 'E', 1, False),
+            Token('milli', 'm', 1, True): Token('m', 'm', 1, False),
+            Token('Cnt', 'n', 1, True): Token('n', 'n', 1, False),
         }
         for i, token in enumerate(self.tokens):
             alt = subst.get(token)
@@ -226,7 +230,7 @@ class Program:
                     self.tokens[i:i] = alt
                 else:
                     self.tokens[i] = alt
-    
+
     def make_mono(self, ctype: str):
         color_token_removed = False
         for i in range(len(self.tokens)-1, -1, -1):
@@ -235,7 +239,7 @@ class Program:
                 del self.tokens[i]
                 color_token_removed = True
             else:
-                if color_token_removed and token.dst==',':
+                if color_token_removed and token.dst == ',':
                     del self.tokens[i]
                 color_token_removed = False
 
@@ -254,23 +258,23 @@ class Program:
                     self.tokens[i] = nRecrToken
 
     def find_used_vars(self):
-        operators = ['+', '-', '→', '⇒', '=', '≠', '≥', '≤', '>', '<', 'Not ', ' Or ', ' And ']
+        operators = ['+', '-', '→', '⇒', '=', '≠', '≥', '≤', '>', '<', 'Not ',
+                     ' Or ', ' And ']
         operands = list()
         for i, token in enumerate(self.tokens):
             if token.dst in operators:
-                if i>0:
+                if i > 0:
                     operands.append(self.tokens[i-1])
-                if i<len(self.tokens)-1:
+                if i < len(self.tokens)-1:
                     operands.append(self.tokens[i+1])
         vars = set()
         for operand in operands:
-            if len(operand.dst)>1:
+            if len(operand.dst) > 1:
                 continue
             if re.match('[A-Z]|r|θ', operand.dst):
                 vars.add(operand.dst)
         vars = sorted(list(vars))
         return vars
-
 
 
 class CatFile(object):
@@ -301,7 +305,7 @@ class CatFile(object):
             # read data
             if i < len(lines) and lines[i].startswith('%Data Record'):
                 if '100' in self.ctype:
-                    i+= 3
+                    i += 3
                 else:
                     i += 1
                 while i < len(lines) and not lines[i].startswith('%End'):
@@ -319,42 +323,17 @@ class CatFile(object):
         programs_tokens = set()
         for program in self.programs:
             programs_tokens.update(program.tokens)
-        with open("used.txt", 'w', encoding='utf-8') as f:
+        with open("used.txt", 'w', encoding='utf-8', newline='\n') as f:
             for token in language_tokens:
                 if token in programs_tokens:
                     f.write(f'{token.src};{token.dst};{token.size}\n')
-                    
-    def check_capacity(self):
-        for program in self.programs:
-            pcap = program.capacity
-            hcap = int(program.header["Capacity"])
-            print(f'{program.name:8} : {pcap} / {hcap} ({pcap-hcap})')
-            continue
-            if program.name == 'TNT17':
-                print(program.pretty_print())
-                cntrs = {}
-                sizes = {}
-                for t in program.tokens:
-                    # if not t.listed:
-                    #     continue
-                    # if t.size <= 1:
-                    #     continue
-                    if t.src in cntrs.keys():
-                        cntrs[t.src] += 1
-                    else:
-                        cntrs[t.src] = 1
-                        sizes[t.src] = t.size
-                for t, c in cntrs.items():
-                    if c==1:
-                        print(f'\t{t},{sizes[t]} : {c}')
-
 
     def dump_programs(self, outputpath: PathLike):
         if '100' in self.ctype:
             outputpath += "/G100"
         # create output directory
         CatFile.DumpPrograms(self, outputpath, False)
-    
+
     def sort_programs(self):
         # human couting
         def sort_key(program):
@@ -368,7 +347,7 @@ class CatFile(object):
 
     def find(self, progname: str):
         for program in self.programs:
-            if program.name==progname:
+            if program.name == progname:
                 return program
         return None
 
@@ -385,17 +364,17 @@ class CatFile(object):
         # T0(100+) = 190/s
         tnt2 = self.find('Z02')
         if '35+' in ctype:
-            tnt2.tokens[0] = Token('8','8',1,False)
-            tnt2.tokens[1] = Token('3','3',1,False)
-            tnt2.tokens[2] = Token('3','3',1,False)
+            tnt2.tokens[0] = Token('8', '8', 1, False)
+            tnt2.tokens[1] = Token('3', '3', 1, False)
+            tnt2.tokens[2] = Token('3', '3', 1, False)
         if '65' in ctype:
-            tnt2.tokens[0] = Token('3','3',1,False)
-            tnt2.tokens[1] = Token('0','0',1,False)
-            tnt2.tokens[2] = Token('0','0',1,False)
+            tnt2.tokens[0] = Token('3', '3', 1, False)
+            tnt2.tokens[1] = Token('0', '0', 1, False)
+            tnt2.tokens[2] = Token('0', '0', 1, False)
         if '100+' in ctype:
-            tnt2.tokens[0] = Token('1','1',1,False)
-            tnt2.tokens[1] = Token('9','9',1,False)
-            tnt2.tokens[2] = Token('0','0',1,False)
+            tnt2.tokens[0] = Token('1', '1', 1, False)
+            tnt2.tokens[1] = Token('9', '9', 1, False)
+            tnt2.tokens[2] = Token('0', '0', 1, False)
 
     @classmethod
     def DumpPrograms(cls, catfile, outputpath: PathLike, clean: bool):
@@ -406,29 +385,33 @@ class CatFile(object):
         os.makedirs(outputpath, exist_ok=True)
         for program in catfile.programs:
             filepath = outputpath / program.name
-            with open(str(filepath), mode='w', encoding='utf-8') as fout:
+            with open(str(filepath), mode='w', encoding='utf-8', newline='\n') as fout:
                 contents = program.pretty_print()
                 fout.write(contents)
 
     @classmethod
     def Write(cls, catfile, filepath: PathLike):
         with open(str(filepath), mode='w', encoding='utf-8') as fout:
+            totalsize = 0
             for program in catfile.programs:
                 program.write(fout)
+                totalsize += program.capacity
+            diff_to_pict = totalsize-47498
+            print(f'{Path(filepath).stem} : {totalsize} ({diff_to_pict}={-100.*diff_to_pict/4096.:3.1f}%)')
 
     def forge_token_programs(self):
         header_lines = [
-            f'Format:TXT\n',
-            f'Communication SW:0\n',
-            f'Data Type:PG\n',
-            f'Capacity:foobar\n',
-            f'File Name:foobar\n',
-            f'Group Name:\n',
-            f'Password:\n',
-            f'Option1:NL\n',
-            f'Option2:\n',
-            f'Option3:\n',
-            f'Option4:\n'
+            'Format:TXT\n',
+            'Communication SW:0\n',
+            'Data Type:PG\n',
+            'Capacity:foobar\n',
+            'File Name:foobar\n',
+            'Group Name:\n',
+            'Password:\n',
+            'Option1:NL\n',
+            'Option2:\n',
+            'Option3:\n',
+            'Option4:\n'
         ]
         for i, token in enumerate(language_tokens):
             h = list(header_lines)
@@ -478,11 +461,11 @@ def main():
         cat35 = copy.deepcopy(catfile)
         cat35.make_mono('35+')
         cat35.Write(cat35, '../packages/TPROJECT35.CAT')
-        #cat35.dump_programs('../src/mono35+')
+        #  cat35.dump_programs('../src/mono35+')
         cat100 = copy.deepcopy(catfile)
         cat100.make_mono('100+')
         cat100.Write(cat100, '../packages/TPROJECT100.CAT')
-        #cat100.dump_programs('../src/mono100+')
+        #  cat100.dump_programs('../src/mono100+')
 
     if args.forge:
         dummy = CatFile('non-existing.cat')
