@@ -2887,8 +2887,6 @@ Option4:
 "t'acheter soins,"
 "adrena et chlore,"
 "tu en auras besoin."\Disp\Isz Z
-5\->\Mat Z[12,4
-2\->\Mat Z[12,5
 \IfEnd
 \If W=2\ And Z<11
 \Then "Z> Ou puis-je trouverEnzo ?"
