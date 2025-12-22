@@ -1560,7 +1560,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5028
+Capacity:5054
 File Name:Z13
 Group Name:
 Password:
@@ -2552,7 +2552,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:990
+Capacity:993
 File Name:Z17
 Group Name:
 Password:
@@ -2630,11 +2630,11 @@ U\=>\Locate W,2,"z"
 \For 1\->K \To 24
 3K-2\->P
 \Int ((P-1)/6)+1\->L
-\Mat Z[L,P-6L+6\->A
+\Int \Mat Z[L,P-6L+6\->A
 \Int (P/6)+1\->L
-\Mat Z[L,P+1-6L+6\->B
+\Int \Mat Z[L,P+1-6L+6\->B
 \Int ((P+1)/6)+1\->L
-\Mat Z[L,P+2-6L+6\->C
+\Int \Mat Z[L,P+2-6L+6\->C
 A*10^8+B*10^4+C\->\Mat Y[1,K
 \Next 
 \Locate 7,4,"\aster Level \aster"
@@ -3179,7 +3179,7 @@ Z<24\=>"Enzo> Allons chercherce type !"\Disp\ClrText
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2627
+Capacity:2626
 File Name:Z35
 Group Name:
 Password:
