@@ -279,7 +279,8 @@ A\>=87\=>A\<=89\=>B\>=22\=>B\<=26\=>8\->V
 \Next 
 \Prog "Z14"
 \Int 6\Ran#+7\->\Mat Z[10,3
-\Goto1
+0\->\Mat Z[9,4
+\Goto0
 \IfEnd
 0\->H
 A=71\=>B=18\=>1\->H
@@ -303,7 +304,7 @@ H\=>\GotoH
 3+\Mat Z[7,5\->\Mat Z[7,5
 300+\Mat Z[10,4\->\Mat Z[10,4
 1\->\Mat Z[10,2
-\Goto1
+\Goto0
 \IfEnd
 \If \Not \Int 30\Ran#\ Or \theta=48
 \Then \If \theta=48
