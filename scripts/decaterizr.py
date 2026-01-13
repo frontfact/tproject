@@ -232,17 +232,6 @@ class Program:
                     self.tokens[i] = alt
 
     def make_mono(self, ctype: str):
-        color_token_removed = False
-        for i in range(len(self.tokens)-1, -1, -1):
-            token = self.tokens[i]
-            if token in [GreenToken, OrangeToken, BlueToken]:
-                del self.tokens[i]
-                color_token_removed = True
-            else:
-                if color_token_removed and token.dst == ',':
-                    del self.tokens[i]
-                color_token_removed = False
-
         Text_seen_since_last_linefeed = False
         for i, token in enumerate(self.tokens):
             # '¥' not rendered with `Text` on G35/G100, replace by 'Y'
