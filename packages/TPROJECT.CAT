@@ -404,7 +404,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1069
+Capacity:924
 File Name:Z03
 Group Name:
 Password:
@@ -438,20 +438,7 @@ Option4:
 \theta\->\Mat Z[9,3
 \Mat Z[12,6\->Z
 \If \theta=29
-\Then \If Z=28.5
-\Then \ClrText
-"Vegetal> STOP."
-"Aucun humain n'est"
-"autorise a sortir"
-"pour l'inst.."
-" "
-"Z> Je suis presse."
-2\->X
-\Prog "Z0"
-\Prog "Z14"
-29\->\Mat Z[12,6
-\IfEnd
-\If Z=36
+\Then \If Z=36
 \Then \ClrText
 "Les portes de la"
 "ville sont bloquees  par l'evacuation !"
@@ -1433,7 +1420,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1585
+Capacity:1564
 File Name:Z12
 Group Name:
 Password:
@@ -1455,7 +1442,6 @@ Option4:
 Z=8\=>{6,9,9,99,11}
 Z=11\=>{5,4,4,120,11}
 Z=23\=>{3,7,6,400,7}
-Z=28.5\=>{2,7,5,250,8}
 Z=29\=>{7,10,9,650,7}
 Z=32\=>{4,14,8,400,8}
 Z=33\=>{6,15,9,600,8}
@@ -3179,7 +3165,7 @@ Z<24\=>"Enzo> Allons chercherce type !"\Disp\ClrText
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2626
+Capacity:2625
 File Name:Z35
 Group Name:
 Password:
@@ -3199,9 +3185,10 @@ Option4:
 \IfEnd
 \If Z=28
 \Then "Wills> J'ai fait choublanc, et vous ?"\Disp\ClrText
-"Z> Moi j'ai rencontreun petit vieux qui"
-"m'a parle des prismeset d'une Arme Suprememais je n'ai rien"
-"trouve d'autre..."\Disp\ClrText
+"Z> J'ai rencontre"
+"un petit vieux qui"
+"m'a parle d'une Arme Supreme, on doit"
+"revenir le voir avec les trois prismes."\Disp\ClrText
 "Jessie> Moi j'ai recuun appel de WINHILL :des srilanes mettent la ville a sac,"
 "Il faut qu'on aille  aider les habitants!"\Disp\Isz Z
 \IfEnd
