@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:861
+Capacity:852
 File Name:TPROJECT
 Group Name:
 Password:
@@ -66,9 +66,7 @@ B\->\Mat Z[L,P+1-6L+6
 [[13,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][67,19,.,38,.,.][.,.,.,230,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
 \ClrText
 "Il est recommande de parcourir la notice  avant de jouer."\Disp\ClrText
-"TNTSOFT vous souhaiteun agreable voyage"
-1.3\->X
-\Prog "Z0"
+"TNTSOFT vous souhaiteun agreable voyage"\Disp\ClrText
 \IfEnd
 \Prog "Z02"
 %End
