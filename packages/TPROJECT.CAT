@@ -1707,7 +1707,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7307
+Capacity:7310
 File Name:Z14
 Group Name:
 Password:
@@ -1758,7 +1758,7 @@ P=9\=>Q+\Mat Z[6,3\->\Mat Z[6,3
 \Green \Text 6V+19,13U+1,\Mat Z[V,U
 \If \Not \Int (4\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
-Z=8\=>\Return
+Z=8\=>\GotoE
 \IfEnd
 \Next 
 \Next 
@@ -1769,7 +1769,7 @@ Z=8\=>\Return
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
-Z=8\=>\Return
+Z=8\=>\GotoE
 \Green \Text 43,14,\Mat Z[4,1
 \Green \Text 49,14,\Mat Z[5,1
 \StoPict 2
@@ -1790,7 +1790,7 @@ Z=8\=>\Return
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
-Z=8\=>\Return
+Z=8\=>\GotoE
 \IfEnd
 \Getkey\->\theta
 \theta=47\=>\Goto1
@@ -1829,7 +1829,7 @@ Z=8\=>\Return
 \For 1\->E \To 5
 \If \Not \Int (3\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
-Z=8\=>\Return
+Z=8\=>\GotoE
 \IfEnd
 \Mat Z[E,4\->C
 {1,C,6E+19,7}
@@ -1855,7 +1855,7 @@ V=8\=>9
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
-Z=8\=>\Return
+Z=8\=>\GotoE
 \IfEnd
 \Getkey\->\theta
 \theta=31\ And (\Not V\ Or O>\Mat Z[2,1\=>0\->\theta
@@ -1972,7 +1972,7 @@ Z=8\=>\Return
 \For 1\->E \To 5
 \If \Not \Int (3\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
-Z=8\=>\Return
+Z=8\=>\GotoE
 \IfEnd
 \Mat Z[E,3]\->C
 {2,C,6E+19,7}
@@ -2005,7 +2005,7 @@ B>9\=>O\<=9\=>\Orange \Text 19,28,"  "
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
-Z=8\=>\Return
+Z=8\=>\GotoE
 \IfEnd
 \Getkey\->\theta
 \theta=31\ And (\Not V\ Or O>\Mat Z[3,1\=>0\->\theta
@@ -2432,8 +2432,9 @@ T\->O
 \Orange \Text 17+6T,94,\Mat Z[T,1
 \Next 
 \Orange \Text 53,94,\Mat Z[1,1
-\Orange \Text 53,112,\Mat Z[1,2\Disp\ClrList
-\ClrText
+\Orange \Text 53,112,\Mat Z[1,2\Disp\ClrText
+\Lbl E
+\ClrList
 %End
 %Header Record
 Format:TXT
