@@ -2537,7 +2537,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:993
+Capacity:1014
 File Name:Z17
 Group Name:
 Password:
@@ -2611,6 +2611,7 @@ U\=>\Locate W,2,"z"
 \LpWhile \theta\<>31\ And \theta\<>47
 \theta=47\=>\GotoA
 \ClrText
+\Locate 7,4,"Saving..."
 {1,24}\->\Dim \Mat Y
 \For 1\->K \To 24
 3K-2\->P
@@ -2622,6 +2623,7 @@ U\=>\Locate W,2,"z"
 \Int \Mat Z[L,P+2-6L+6\->C
 A*10^8+B*10^4+C\->\Mat Y[1,K
 \Next 
+\ClrText
 \Locate 7,4,"\aster Level \aster"
 \Locate 7,5,"\aster Saved \aster"
 1\->X
