@@ -32,9 +32,7 @@ tntsoft@fastmail.com
 - [x] Enable F6 key (go to world) during city loading
 - [x] Shop : Enable [exit] key to exit shop
 - [x] Objects : allow to take several objects in a row, except during fight : Not r, TNT9
-- [ ] Check if we can use pict-2 to store last visited city. probably requires 4096 bytes saving elsewhere
-	- initial size : 47498 bytes
-	- current size : 44655 bytes
+- [x] Use pict-2 to store last visited city
 - [x] Port to graph35+/graph100+
     - [x] remove ':' separators
 	- [x] monochrome
