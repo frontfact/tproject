@@ -27,20 +27,20 @@ Option4:
 \FuncOff
 0\->A~Z
 \Green \Text 1,20,"\TeraN\TeraSoft@fastmail.com"
-\Orange \F-Line 59,48,69,48
-\Orange \F-Line 59,40,69,40
-\Text 18,59,"The"
-\Orange \F-Line 47,38,82,38
-\Orange \F-Line 47,30,82,30
-\Text 28,47,"T-Project"
-\Text 46,41,"Nouvelle partie"
-\Text 52,41,"Continuer"
+\Orange \F-Line 54,48,64,48
+\Orange \F-Line 54,40,64,40
+\Text 18,54,"The"
+\Orange \F-Line 42,38,77,38
+\Orange \F-Line 42,30,77,30
+\Text 28,42,"T-Project"
+\Text 46,36,"Nouvelle partie"
+\Text 52,36,"Continuer"
 \Do
-\Text 46+6D,36,"-"
+\Text 46+6D,31,"-"
 \Do
 \Getkey\->\theta
 \LpWhile \theta\<>28\ And \theta\<>37\ And \theta\<>31
-\Text 46+6D,36," "
+\Text 46+6D,31," "
 \If \theta\<>31
 \Then \Isz D
 D>1\=>0\->D
