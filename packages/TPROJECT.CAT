@@ -402,7 +402,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:924
+Capacity:922
 File Name:Z03
 Group Name:
 Password:
@@ -412,7 +412,7 @@ Option3:
 Option4:
 %Data Record
 \Lbl I
-{\Ans}
+\Ans
 \Prog "Z13"
 \theta=29\=>\GotoW
 {1}
@@ -1544,7 +1544,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5054
+Capacity:5045
 File Name:Z13
 Group Name:
 Password:
@@ -1554,9 +1554,9 @@ Option3:
 Option4:
 %Data Record
 \Cls
+\ClrList
 \BG-None
 \Orange \Text 55,42,"(CHARGEMENT)"
-\Identity 1\->\Mat A
 \Mat Z[12,6\->Z
 \Mat Z[11,1\->V
 \If V=1
@@ -1609,7 +1609,7 @@ Option4:
 \IfEnd
 0\->\Mat Z[9,3
 \Prog "Z16"
-\If \Pi=\List \Ans[1
+\If \Ans=\Pi
 \Then \Cls
 \RclPict 1
 \Return
@@ -3416,7 +3416,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1022
+Capacity:1020
 File Name:Z38
 Group Name:
 Password:
@@ -3438,7 +3438,7 @@ Option4:
 \Prog "Z14"
 44\->Z
 \Prog "Z14"
-{\Pi}
+\Pi
 \Prog "Z13"
 \ClrText
 "IMPRESSIONNANT..."
