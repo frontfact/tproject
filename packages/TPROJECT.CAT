@@ -201,7 +201,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1807
+Capacity:1828
 File Name:Z02
 Group Name:
 Password:
@@ -234,6 +234,7 @@ Option4:
 \PlotOn A,B
 0
 \Lbl 1
+\Mat Z[12,6\->Z
 \Do
 \Getkey\->\theta
 \LpWhile \Not \theta
@@ -277,6 +278,7 @@ A\>=87\=>A\<=89\=>B\>=22\=>B\<=26\=>8\->V
 \Next 
 \Cls
 \RclPict 1
+{Z}
 \Prog "Z14"
 7+\Int 6\Ran#\->\Mat Z[10,3
 0\->\Mat Z[9,4
@@ -288,13 +290,13 @@ A=124\=>B=11\=>2\->H
 A=65\=>B=44\=>3\->H
 A=86\=>B=34\=>4\->H
 H\=>\GotoH
-\If A=60\ And B=42\ And \Not \Mat Z[10,2
+\If Z>30\ And A=60\ And B=42\ And \Not \Mat Z[10,2
 \Then \ClrText
 "Z> Le tresor..."\Disp"Z> Ca semble trop"
 "facile pour etre vrai"\Disp"Voix> En effet..."
 2\->X
 \Prog "Z0"
-99\->Z
+{99}
 \Prog "Z14"
 "Tu m'as vaincu..."
 "le tresor est a toi."\Disp\Green "Z obtient :"
@@ -1418,7 +1420,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1563
+Capacity:1562
 File Name:Z12
 Group Name:
 Password:
@@ -1427,6 +1429,7 @@ Option2:
 Option3:
 Option4:
 %Data Record
+\List Ans[1\->Z
 \Identity 1\->\Mat A
 \For 4\->X \To 5
 \Mat Z[X,2\->\Mat Z[X,1
@@ -1435,18 +1438,17 @@ Option4:
 0\->\Mat Z[11,4
 0\->\Mat Z[8,4
 \Mat Z[11,2\->N
-\Mat Z[12,6\->Z
 {.}
 \If \Mat Z[12,2
 \Then Z=8\=>{6,9,9,99,11}
 Z=11\=>{5,4,4,120,11}
-Z=23\=>{3,7,6,400,7}
+Z=23\=>{3,7,6,333,7}
 Z=29\=>{2,10,9,100+100\Ran#,7}
 Z=32\=>{4,14,8,400,8}
 Z=33\=>{6,15,9,600,8}
 Z=43\=>{4,20,13,700,8}
 Z=44\=>{6,20,13,800,8}
-\Else Z=99\=>{1,15,12,800,7}
+\Else Z=99\=>{1,15,12,600,7}
 \IfEnd
 \If \Dim \List \Ans=1
 \Then \Do
@@ -2443,7 +2445,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:793
+Capacity:801
 File Name:Z15
 Group Name:
 Password:
@@ -2466,6 +2468,7 @@ Option4:
 \Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
 3\->X
 \Prog "Z0"
+{Z}
 \Prog "Z14"
 12\->\Mat Z[12,6
 \Pi
@@ -2476,6 +2479,7 @@ Option4:
 "Z> Le mandivor !"
 2\->X
 \Prog "Z0"
+{Z}
 \Prog "Z14"
 "Plutot coriace..."\Disp24\->\Mat Z[12,6
 \Pi
@@ -2853,7 +2857,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1853
+Capacity:1857
 File Name:Z31
 Group Name:
 Password:
@@ -2918,6 +2922,7 @@ Option4:
 "Enzo> Incarnation GOA"
 4\->X
 \Prog "Z0"
+{Z}
 \Prog "Z14"
 1\->X
 \Prog "Z0"
@@ -3283,7 +3288,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:925
+Capacity:929
 File Name:Z36
 Group Name:
 Password:
@@ -3304,6 +3309,7 @@ C=4\=>"Z> Montjoie !"\Disp""
 C=5\=>"Z> Haro !"\Disp""
 2\->X
 \Prog "Z0"
+{Z}
 \Prog "Z14"
 \If 31=\Mat Z[9,5
 \Then "Z> J'ai l'impression"
@@ -3346,7 +3352,7 @@ C=5\=>"Z> Haro !"\Disp""
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1210
+Capacity:1218
 File Name:Z37
 Group Name:
 Password:
@@ -3366,6 +3372,7 @@ Option4:
 "INCARNATION ARAKN !"
 4\->X
 \Prog "Z0"
+{Z}
 \Prog "Z14"
 "Enzo> Je vais"
 "t'aneantir, miserableinsecte !!!"
@@ -3373,6 +3380,7 @@ Option4:
 "INCARNATION GOA !"
 4\->X
 \Prog "Z0"
+{Z}
 \Prog "Z14"
 "...Nous mourrons......mais.....Tomberry.........est libre"\Disp\ClrText
 "Z> (je suis venge)"\Disp"(...)"\Disp"(mais trop tard...)"\Disp\ClrText
@@ -3412,7 +3420,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1020
+Capacity:1025
 File Name:Z38
 Group Name:
 Password:
@@ -3430,10 +3438,11 @@ Option4:
 "Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
 4\->X
 \Prog "Z0"
-43\->Z
+{43}
+\Prog "Z14"
+{44}
 \Prog "Z14"
 44\->Z
-\Prog "Z14"
 \Pi
 \Prog "Z13"
 \ClrText
