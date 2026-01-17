@@ -1217,7 +1217,7 @@ D\>=2\=>\Text K,L+31,D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1140
+Capacity:1003
 File Name:Z10
 Group Name:
 Password:
@@ -1283,11 +1283,6 @@ A=5\=>\Return
 \Text 45,96,\Mat Z[11,6
 \Text 51,51,"VICTOIRES:"
 \Text 51,90,\Mat Z[12,3
-\Text 57,51,"SCORE:"
-\Int (11\Mat Z[12,6]+5\Mat Z[12,3]+0.5\Mat Z[10,4]+1.5\Mat Z[1,2]+15\Mat Z[2,2]+15\Mat Z[3,2]+9\Mat Z[4,2]+9\Mat Z[5,2\->C
-\For 1\->D \To C \Step .1C
-\Text 57,74,D
-\Next 
 \Do
 \LpWhile \Not \Getkey
 \For 15\->C \To 57 \Step 6
