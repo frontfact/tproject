@@ -1420,7 +1420,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1562
+Capacity:1560
 File Name:Z12
 Group Name:
 Password:
@@ -1429,7 +1429,7 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\List Ans[1\->Z
+\List \Ans[1\->Z
 \Identity 1\->\Mat A
 \For 4\->X \To 5
 \Mat Z[X,2\->\Mat Z[X,1
@@ -3174,7 +3174,7 @@ Z<24\=>"Enzo> Allons chercherce type !"\Disp\ClrText
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2130
+Capacity:2176
 File Name:Z35
 Group Name:
 Password:
@@ -3238,13 +3238,14 @@ Option4:
 \IfEnd
 \IfEnd
 \If Z>30\ And 0=\Mat Z[8,5
-\Then \If 0=Mat Z[9,6
+\Then \If 0=\Mat Z[9,6
 \Then "Ancien> Z !"
 "Comment vas-tu mon"
 "garcon ?"\Disp\ClrText
 "Z> Bien, merci."\Disp"Ancien, vous m'aviez dit de revenir vous"
 "voir si je trouvais  les trois prismes de"
-"pouvoir. Vous m'aviezparle de..."
+"pouvoir."\Disp\ClrText
+"Z> Vous m'aviez parlede..."
 "Ancien> Oui..."
 "L'arme supreme..."\Disp\ClrText
 \If 3>\Mat Z[7,5
@@ -3254,22 +3255,24 @@ Option4:
 "forger l'arme supreme"\Disp\Return
 \IfEnd
 "Ancien> Tu as les 3  prismes ainsi que"
-"3 groseyes ? parfait !"\Disp\ClrText
+"3 groseyes ?"
+"Parfait !"\Disp\ClrText
 \Mat Z[7,5]-3\->\Mat Z[7,5
 1\->\Mat Z[9,6
-15\->\Mat Z[10,1
+15\->\Mat Z[12,1
 \IfEnd
 \If \Mat Z[9,6]
-\Then \If \Mat Z[10,1
+\Then \If \Mat Z[12,1
 \Then "Laisse-moi un peu de temps, j'ai quelques manipulations"
-"a effectuer"\Disp""
+"a effectuer..."\Disp""
 \Else "Ancien> La Tarte aux groseyes est prete !"\Disp\ClrText
 "Z> COMMENT ?!!!"\Disp\ClrText
 "Ancien> Oh, je ne te l'avais pas dit ?"\Disp\ClrText
 "Z> (une tarte...)"\Disp\ClrText
-"Z> Je te quitte,"
-"je serai digne de"
-"l'admiration de Gaia,que je jure de sauverdes griffes de..."
+"Z> Merci pour tout,"
+"l'ancien. Je m'en"
+"vais."\Disp\ClrText
+"Z> Je serai digne de l'admiration de Gaia,que je jure de sauverdes griffes de..."
 "Ancien> Oui-oui merciAdieu."\Disp1\->\Mat Z[8,5
 \IfEnd
 \IfEnd
