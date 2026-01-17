@@ -1001,7 +1001,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2627
+Capacity:2613
 File Name:Z09
 Group Name:
 Password:
@@ -1078,13 +1078,7 @@ C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
 \RclPict 2
 {5}
 \Prog "Z05"
-320\->A
-27\->C
-\For 57\->B \To 106
-\PlotOn B,16+\Abs (C\cos A
-A+10\->A
-C-.15\->C
-\Next 
+\Graph (X,Y)=(57+.54T,16+\Abs ((27-.0816T)\cos (320+5.44T)))
 \For 20\->C \To 180 \Step 20
 \Orange \F-Line 107+10\cos (C-20),16+7\sin (C-20),107+10\cos C,16+7\sin C
 \Next 
