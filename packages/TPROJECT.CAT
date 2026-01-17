@@ -278,7 +278,7 @@ A\>=87\=>A\<=89\=>B\>=22\=>B\<=26\=>8\->V
 \Cls
 \RclPict 1
 \Prog "Z14"
-\Int 6\Ran#+7\->\Mat Z[10,3
+7+\Int 6\Ran#\->\Mat Z[10,3
 0\->\Mat Z[9,4
 \Goto0
 \IfEnd
@@ -402,7 +402,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:922
+Capacity:933
 File Name:Z03
 Group Name:
 Password:
@@ -511,13 +511,14 @@ E=3\=>\Prog "Z17"
 \IfEnd
 \Goto1
 \Lbl W
-\Int 5\Ran#+6\->\Mat Z[10,3
+7+\Int 6\Ran#\->\Mat Z[10,3
+0\->\Mat Z[12,2
 %End
 %Header Record
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:147
+Capacity:148
 File Name:Z04
 Group Name:
 Password:
@@ -530,7 +531,7 @@ Option4:
 \Mat Z[11,1\->V
 \Mat Z[12,6\->Z
 0\->D
-W=Z\=>1\->D
+Z=\Int W\=>1\->D
 \ClrText
 V=1\=>\Prog "Z31"
 V=2\=>\Prog "Z32"
@@ -998,7 +999,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2629
+Capacity:2627
 File Name:Z09
 Group Name:
 Password:
@@ -1114,7 +1115,7 @@ M\<>7\=>\Mat Z[6,1]-16-\Int 7\Ran#\->\Mat Z[6,1
 \S-Gph2 \DrawOff
 \S-Gph3 \DrawOn
 \If C=11
-\Then \Text 51,38," \->ennemi plus lent ! "
+\Then \Text 51,38,"\->ennemi plus lent ! "
 \F-Line 55,56,65,38
 \F-Line 65,38,55,20
 \F-Line 55,20,45,38
@@ -1154,7 +1155,7 @@ G=2\=>0\->G
 3\Mat Z[10,5]+\Mat Z[6,4\->\Mat Z[6,4
 \IfEnd
 \If C=12
-\Then \Text 51,38," \->ennemi plus faible !"
+\Then \Text 51,38,"\->ennemi plus faible !"
 {42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}\->\List1
 {16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}\->\List3
 \DrawStat
@@ -1214,7 +1215,7 @@ D\>=2\=>\Text K,L+31,D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1156
+Capacity:1140
 File Name:Z10
 Group Name:
 Password:
@@ -1248,7 +1249,6 @@ Option4:
 \Orange \Text 15,9,"attaques"
 \Orange \Text 21,9,"stats"
 \Orange \Text 27,9,"objets"
-\Text 57,8,"Return"
 1\->A
 \Lbl Q
 \Text 6A+9,4,"-"
@@ -1418,7 +1418,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1564
+Capacity:1563
 File Name:Z12
 Group Name:
 Password:
@@ -1437,15 +1437,17 @@ Option4:
 \Mat Z[11,2\->N
 \Mat Z[12,6\->Z
 {.}
-Z=8\=>{6,9,9,99,11}
+\If \Mat Z[12,2
+\Then Z=8\=>{6,9,9,99,11}
 Z=11\=>{5,4,4,120,11}
 Z=23\=>{3,7,6,400,7}
-Z=29\=>{7,10,9,650,7}
+Z=29\=>{2,10,9,100+100\Ran#,7}
 Z=32\=>{4,14,8,400,8}
 Z=33\=>{6,15,9,600,8}
 Z=43\=>{4,20,13,700,8}
 Z=44\=>{6,20,13,800,8}
-Z=99\=>{1,15,12,800,7}
+\Else Z=99\=>{1,15,12,800,7}
+\IfEnd
 \If \Dim \List \Ans=1
 \Then \Do
 1+\Int ((2.5+.8N)\Ran#\->M
@@ -1525,11 +1527,10 @@ Z=8\=>15
 115\->R
 {M,1}
 \Prog "Z20"
-\If Z=43\ Or Z=44\ Or Z=32\ Or Z=33\ Or Z=8\ Or Z=11\ Or Z=99\ Or Z=28.5
+\If Z=43\ Or Z=44\ Or Z=32\ Or Z=33\ Or Z=8\ Or Z=11\ Or Z=99
 \Then Z=44\ Or Z=33\ Or Z=8\=>\Text 51,75,"Enzo   "
 Z=32\ Or Z=43\=>\Text 51,75,"Redox  "
 Z=11\=>\Text 51,75,"le Minautor"
-Z=28.5\=>\Text 51,75,"un Vegetal"
 Z=99\=>\Text 51,75,"le Gardien"
 \Else M=1\=>\Text 51,90,"lapranak"
 M=2\=>\Text 51,90,"srilane"
@@ -1545,7 +1546,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5045
+Capacity:5080
 File Name:Z13
 Group Name:
 Password:
@@ -1592,7 +1593,7 @@ Option4:
 \IfEnd
 \If V=6
 \Then \Orange \Text 5,3,"WINHILL"
-[[.,2,3,.,20.4,.8,20.8,.4,30,2,22,32,.,.5,20.5,23][30,22.129,22.2,.,20.4,.8,20.8,.4,20,2,23,.,.,.5,.,20][20,2,23,.,22.4,2.8,22.8,2.4,20,23,.,.,.,.,3,23][.,3,.,.,2,2,2.130,2,.,2,.,.4,.4,20.4,20,20][22,20,.4,.4,20.4,.8,20.8,.4,22,32,.,.4,.4,20.4,22,22][2.3,22,2.4,2.4,22.4,.8,20.8,20.4,2,23,.,.,.,.,2.5,20.5][.8,.8,.8,.8,.8,.8,20.8,20.4,23,.,2,.,.4,30,22,.4][2.8,2.8,2.8,2.8,2.8,2.8,22.8,.4,2,20,23,.4,.5,33,22,.5][2.4,2.4,.4,.4,.4,.4,.4,20.4,32,.,3,.4,20.5,22.131,.5,.5][2,32,2,2,2,2,2,2,2,22,22,.4,.4,.5,.5,.4]]\->\Mat A
+[[.,2,3,.,20.4,.8,20.8,.4,30,2,22,32,.,.5,20.5,23.1291][30,22.13,22.2,.,20.4,.8,20.8,.4,20,2,23,.,.,.5,.,20][20,2,23,.,22.4,2.8,22.8,2.4,20,23.1292,.,.,.,.,3,23][.,3,.,.,2,2,2.131,2,.,2,.,.4,.4,20.4,20,20][22,20,.4,.4,20.4,.8,20.8,.4,22,32,.,.4,.4,20.4,22,22][2.3,22,2.4,2.4,22.4,.8,20.8,20.4,2,23,.,.,.,.,2.5,20.5][.8,.8,.8,.8,.8,.8,20.8,20.4,23.1293,.,2,.,.4,30,22,.4][2.8,2.8,2.8,2.8,2.8,2.8,22.8,.4,2,20,23,.4,.5,33,22.1294,.5][2.4,2.4,.4,.4,.4,.4,.4,20.4,32,.,3,.4,20.5,22.131,.5,.5][2,32,2,2.1295,2,2,2,2,2,22,22,.4,.4,.5,.5,.4]]\->\Mat A
 2\->G
 4\->H
 \IfEnd
@@ -1609,6 +1610,7 @@ Option4:
 5\->H
 \IfEnd
 0\->\Mat Z[9,3
+1\->\Mat Z[12,2
 \Prog "Z16"
 \If \Ans=\Pi
 \Then \Cls
@@ -1708,7 +1710,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7310
+Capacity:7311
 File Name:Z14
 Group Name:
 Password:
@@ -2339,8 +2341,7 @@ A=2\=>B\->T
 \Mat Z[12,6\->Z
 \If \Mat Z[8,4
 \Then \If Z=29
-\Then 13\->S
-0\->T
+\Then .\->S~T
 \IfEnd
 \If Z=11
 \Then 2\->S
@@ -2433,9 +2434,10 @@ T\->O
 \Orange \Text 17+6T,94,\Mat Z[T,1
 \Next 
 \Orange \Text 53,94,\Mat Z[1,1
-\Orange \Text 53,112,\Mat Z[1,2\Disp\ClrText
+\Orange \Text 53,112,\Mat Z[1,2]\Disp""
 \Lbl E
 \ClrList
+\ClrText
 %End
 %Header Record
 Format:TXT
@@ -3167,7 +3169,7 @@ Z<24\=>"Enzo> Allons chercherce type !"\Disp\ClrText
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2625
+Capacity:2183
 File Name:Z35
 Group Name:
 Password:
@@ -3188,24 +3190,14 @@ Option4:
 \If Z=28
 \Then "Wills> J'ai fait choublanc, et vous ?"\Disp\ClrText
 "Z> J'ai rencontre"
-"un petit vieux qui"
-"m'a parle d'une Arme Supreme, on doit"
-"revenir le voir avec les trois prismes."\Disp\ClrText
-"Jessie> Moi j'ai recuun appel de WINHILL :des srilanes mettent la ville a sac,"
-"Il faut qu'on aille  aider les habitants!"\Disp\Isz Z
-\IfEnd
-\If Z=41.5
-\Then "Wills> Tu n'es pas"
-"avec Jessie ?"
-"Z> Non, je ne l'ai pas  vue."\Disp\ClrText
-"Elle n'est pas encorerevenue. Je vais"
-"partir a sa recherche"\Disp\ClrText
-"Z> Tu as eu des infos   sur Tomberry ?"\Disp\ClrText
-"W> Eh bien, j'ai appris qu'il etait capable  de detruire Gaia..."
-"Z> Ca, je le savais."
-"W> ...Et il se trouve ence moment a SANCTUA."\Disp\ClrText
-"Z> SANCTUA ?"\Disp"W> Son repaire sacre."\Disp"Z> Bien. J'y vais."\Disp\ClrText
-"W> J'espere que tu sais ce que tu fais."\Disp"Z> Moi aussi."\Disp42\->Z
+"un petit vieux un peuetrange qui semblait en connaitre un rayonsur les prismes qu'oncherche."\Disp\ClrText
+"Jessie> Il y a plus  urgent !"\Disp\ClrText
+"J'ai recu un appel"
+"de WINHILL : des"
+"srilanes attaquent"
+"la ville, il faut"
+"qu'on aille aider"
+"les habitants!"\Disp\Isz Z
 \IfEnd
 \IfEnd
 \If \Int W=27\ And Z<28
@@ -3289,7 +3281,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1085
+Capacity:925
 File Name:Z36
 Group Name:
 Password:
@@ -3298,53 +3290,54 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\If W=29\ And D
-\Then "Enzo \@26 Redox >"
-"Donne-nous le colis, il est indispensable au Projet T."\Disp\ClrText
-"Z> Le Projet T ?"
-"Mais de quoi s'agit- -il ?!"\Disp\ClrText
-"E\@26R> Nous t'offrons"
-"la verite en echange du colis..."\Disp\ClrText
-"Z> ...Bien. Le voila."\Disp\ClrText
-".............."
-"Le prisme PHOENIX !"
-"Enfin ! La troisieme inscription..."\Disp\ClrText
-"Le... Le prisme !"
-"Z> Il explose !!!"
+\If \Int W=29\ And D
+\Then 10\Frac W\->C
+\Mat Z[9,5\->N
+\If \Not (2\Frac (\Int (N/2^(C-1))/2))
+\Then N+2^(C-1)\->\Mat Z[9,5
+C=1\=>"Z> Sus a l'ennemi !"\Disp""
+C=2\=>"Z> A l'hallali !"\Disp""
+C=3\=>"Z> Pour la gloire !"\Disp""
+C=4\=>"Z> Montjoie !"\Disp""
+C=5\=>"Z> Haro !"\Disp""
 2\->X
 \Prog "Z0"
 \Prog "Z14"
-"Z> Ils sont partis...Mais que comptent-ilsfaire de ces 3"
-"inscriptions ?"\Disp31\->Z
+\If 31=\Mat Z[9,5
+\Then "Z> J'ai l'impression"
+"qu'on en est venus a bout..."
+"Ils ont mis la ville a sac !"
+30\->Z
+\IfEnd
 \Pi
 \IfEnd
+\IfEnd
 \If W=30
-\Then "Maire> On dit qu'a lasource du fleuve se  trouve un tresor..."\Disp" "
+\Then "~On dit qu'a la"
+"source du fleuve se  trouve un tresor..."\Disp" "
 \Mat Z[10,2\=>"Z> Ouais !"\Disp""
 \IfEnd
-\If W=31\ And D
-\Then "W> Z ! content de te revoir..."
-"Z> Dis-moi Wills, tu me connaissais avant que je perde la"
-"memoire ?"\Disp\ClrText
-"W> Oui, nous etions"
-"freres d'arme..."
-"On etait toujours"
-"ensemble en mission."\Disp\ClrText
-"W> Ton attaque"
-"preferee etait Xmeta,tu t'en souviens ?"
-"Z> ..."\Disp\ClrText
-"W> Je te l'apprends."\Disp\ClrText
-\For 1\->X \To 5
-\If 4>\Mat Z[X,4
-\Then 8\->\Mat Z[X,4
-6\->X
+\If W=31
+\Then \If Z<30
+\Then "Maire> A l'aide !"
+"Par pitie! Aidez-nousa combattre la horde de srilanes qui"
+"envahit la ville !"\Disp""
 \IfEnd
-\Next 
-"W> Voila,"
-"Tu peux choisir Xmetadans ATTAK pendant uncombat !"\Disp\ClrText
-"Maintenant allons"
-"retrouver Jessie a "
-"PLYMOUT: elle saura  comment contrecarrer les plans de Redox."\Disp\Isz Z
+\If Z=30
+\Then "Maire> Vous avez"
+"sauve WINHILL ! Les"
+"habitants aimeraient vous remercier en"
+"vous offrant cette"
+"relique sacree..."\Disp\ClrText
+"Z obtient :"
+"Le prisme PHOENIX !"\Disp\ClrText
+1\->\Mat Z[3,6
+"Wills> Eh! C'est Enzoqui va etre content !"\Disp""
+"Dans ses derniers"
+"messages il me disaitcontinuer les"
+"recherches a PLYMOUT.Allons lui montrer"
+"ce qu'on a trouve !"\Disp\Isz Z
+\IfEnd
 \IfEnd
 %End
 %Header Record
