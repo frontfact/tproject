@@ -3169,7 +3169,7 @@ Z<24\=>"Enzo> Allons chercherce type !"\Disp\ClrText
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2183
+Capacity:2130
 File Name:Z35
 Group Name:
 Password:
@@ -3232,39 +3232,41 @@ Option4:
 "3 groseyes."\Disp\Isz Z
 \IfEnd
 \IfEnd
-\If Z=39
+\If Z>30\ And 0=\Mat Z[8,5
+\Then \If 0=Mat Z[9,6
 \Then "Ancien> Z !"
-"Je craignais de ne"
-"jamais te revoir."\Disp\ClrText
-"Z> Le temps presse,  j'ai besoin de cette arme ultime qui peut sauver GAIA."\Disp\ClrText
-"Ancien> L'Arme Ultime..."\Disp\Isz Z
+"Comment vas-tu mon"
+"garcon ?"\Disp\ClrText
+"Z> Bien, merci."\Disp"Ancien, vous m'aviez dit de revenir vous"
+"voir si je trouvais  les trois prismes de"
+"pouvoir. Vous m'aviezparle de..."
+"Ancien> Oui..."
+"L'arme supreme..."\Disp\ClrText
+\If 3>\Mat Z[7,5
+\Then "Ancien> Je te l'ai"
+"dit : il me faut"
+"3 groseyes pour"
+"forger l'arme supreme"\Disp\Return
 \IfEnd
-\If Z=40
-\Then \If 3>\Mat Z[7,5
-\Then "Ancien> Il me faut 3 groseyes pour"
-"obtenir l'Arme Ultime"\Disp\Return
-\Else "Ancien> Tu as les 3  prismes ainsi que"
+"Ancien> Tu as les 3  prismes ainsi que"
 "3 groseyes ? parfait !"\Disp\ClrText
 \Mat Z[7,5]-3\->\Mat Z[7,5
+1\->\Mat Z[9,6
 15\->\Mat Z[10,1
-\Isz Z
 \IfEnd
-\IfEnd
-\If Z=41
-\Then \If 0<\Mat Z[10,1
+\If \Mat Z[9,6]
+\Then \If \Mat Z[10,1
 \Then "Laisse-moi un peu de temps, j'ai quelques manipulations"
 "a effectuer"\Disp""
-\Else "Ancien> La Tarte aux groseyes est prete."\Disp\ClrText
+\Else "Ancien> La Tarte aux groseyes est prete !"\Disp\ClrText
 "Z> COMMENT ?!!!"\Disp\ClrText
 "Ancien> Oh, je ne te l'avais pas dit ?"\Disp\ClrText
-"L'Arme Ultime est uneTarte aux groseyes,  faite des PRISMES et de 3 GROSEYES."\Disp"Z> (une tarte...)"\Disp\ClrText
-"Ancien> Utilise-la   contre Tomberry."
-"Compris ?"\Disp\ClrText
-"Z> Bien sur."\Disp"Je te laisse, Sage."
-"Je serai digne de"
+"Z> (une tarte...)"\Disp\ClrText
+"Z> Je te quitte,"
+"je serai digne de"
 "l'admiration de Gaia,que je jure de sauverdes griffes de..."
 "Ancien> Oui-oui merciAdieu."\Disp1\->\Mat Z[8,5
-41.5\->Z
+\IfEnd
 \IfEnd
 \IfEnd
 \IfEnd
