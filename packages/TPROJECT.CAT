@@ -201,7 +201,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1828
+Capacity:1808
 File Name:Z02
 Group Name:
 Password:
@@ -367,26 +367,13 @@ W=\r\=>\Goto0
 \GotoV
 \IfEnd
 (W-1)/6\->V
-\If V=0\ Or V=1\ Or V=3
-\Then 71\->U
-18\->V
-27\->\theta
-\IfEnd
-\If V=5
-\Then 65\->U
-44\->V
-28\->\theta
-\IfEnd
-\If V=2\ Or V=6
-\Then 124\->U
-11\->V
-28\->\theta
-\IfEnd
-\If V=4\ Or V=7
-\Then 86\->U
-34\->V
-38\->\theta
-\IfEnd
+V=0\ Or V=1\ Or V=3\=>{71,18,27}
+V=5\=>{65,44,28}
+V=2\ Or V=6\=>{124,11,28}
+V=4\ Or V=7\=>{86,34,38}
+\List \Ans[1\->U
+\List \Ans[1\->V
+\List \Ans[1\->\theta
 180\Mat Z[10,5\->\Tmax
 \RclPict 1
 (V-B)/(U-A)\->E
