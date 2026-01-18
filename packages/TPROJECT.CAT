@@ -91,7 +91,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1458
+Capacity:1454
 File Name:Z01
 Group Name:
 Password:
@@ -195,13 +195,12 @@ Option4:
 {37,46,48,44,48,52,52,36,36,127,127,121,115,110,105,103,105,110,112,116,117,127}\->\List1
 {17,20,18,13,11,9,7,8,2,2,18,10,8,9,12,6,4,4,6,5,4,8}\->\List2
 \DrawStat
-\StoPict 1
 %End
 %Header Record
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1808
+Capacity:1917
 File Name:Z02
 Group Name:
 Password:
@@ -211,13 +210,12 @@ Option3:
 Option4:
 %Data Record
 300/300\->\Mat Z[10,5
+0\->\Mat Z[11,5
 \Prog "Z03"
 \Lbl I
 \Prog "Z01"
 \Lbl 0
 \Deg
-\Cls
-\RclPict 1
 \Mat Z[9,1\->A
 \Mat Z[9,2\->B
 \Mat Z[9,4\->\theta
@@ -232,7 +230,6 @@ Option4:
 \Prog "Z0"
 \Next 
 \PlotOn A,B
-0
 \Lbl 1
 \Mat Z[12,6\->Z
 \Do
@@ -263,7 +260,8 @@ A\>=47\=>A\<=49\=>B\>=36\=>B\<=38\=>6\->V
 A\>=42\=>A\<=44\=>B\>=12\=>B\<=14\=>7\->V
 A\>=87\=>A\<=89\=>B\>=22\=>B\<=26\=>8\->V
 \If V
-\Then V\->\Mat Z[11,1
+\Then V\<>\Mat Z[11,1\=>0\->\Mat Z[11,5
+V\->\Mat Z[11,1
 \Prog "Z03"
 \GotoI
 \IfEnd
@@ -273,7 +271,9 @@ A\>=87\=>A\<=89\=>B\>=22\=>B\<=26\=>8\->V
 \Then \Mat Z[10,3]-1\->\Mat Z[10,3
 \IfEnd
 \If 1>\Mat Z[10,3
-\Then \For 0\->W \To 336 \Step 24
+\Then \StoPict 1
+0\->\Mat Z[11,5
+\For 0\->W \To 336 \Step 24
 \Orange \F-Line A,B,A+12\cos W,B+9\sin W
 \Next 
 \Cls
@@ -282,6 +282,8 @@ A\>=87\=>A\<=89\=>B\>=22\=>B\<=26\=>8\->V
 \Prog "Z14"
 7+\Int 6\Ran#\->\Mat Z[10,3
 0\->\Mat Z[9,4
+\Cls
+\RclPict 1
 \Goto0
 \IfEnd
 0\->H
@@ -296,6 +298,8 @@ H\=>\GotoH
 "facile pour etre vrai"\Disp"Voix> En effet..."
 2\->X
 \Prog "Z0"
+\StoPict 1
+0\->\Mat Z[11,5
 {99}
 \Prog "Z14"
 "Tu m'as vaincu..."
@@ -306,10 +310,14 @@ H\=>\GotoH
 3+\Mat Z[7,5\->\Mat Z[7,5
 300+\Mat Z[10,4\->\Mat Z[10,4
 1\->\Mat Z[10,2
+\Cls
+\RclPict 1
 \Goto0
 \IfEnd
 \If \Not \Int 30\Ran#\ Or \theta=48
-\Then \If \theta=48
+\Then \StoPict 1
+0\->\Mat Z[11,5
+\If \theta=48
 \Then \Prog "Z10"
 \Else \ClrText
 \Locate 1,1,"~ MARCHAND AMBULANT ~"
@@ -325,10 +333,14 @@ H\=>\GotoH
 \IfEnd
 \IfEnd
 0\->\Mat Z[9,4
+\Cls
+\RclPict 1
 \Goto0
 \IfEnd
 \Goto1
 \Lbl H
+\StoPict 1
+0\->\Mat Z[11,5
 \If H=1
 \Then \Text 1,4,"      "
 \Text 7,4,"    "
@@ -372,8 +384,8 @@ V=5\=>{65,44,28}
 V=2\ Or V=6\=>{124,11,28}
 V=4\ Or V=7\=>{86,34,38}
 \List \Ans[1\->U
-\List \Ans[1\->V
-\List \Ans[1\->\theta
+\List \Ans[2\->V
+\List \Ans[3\->\theta
 180\Mat Z[10,5\->\Tmax
 \RclPict 1
 (V-B)/(U-A)\->E
@@ -385,6 +397,8 @@ V\->\Mat Z[9,2
 \theta\->\Mat Z[9,4
 1\->X
 \Prog "Z0"
+\Cls
+\RclPict 1
 \Goto0
 %End
 %Header Record
@@ -401,7 +415,6 @@ Option3:
 Option4:
 %Data Record
 \Lbl I
-\Ans
 \Prog "Z13"
 \theta=29\=>\GotoW
 {1}
@@ -502,6 +515,7 @@ E=3\=>\Prog "Z17"
 \Lbl W
 7+\Int 6\Ran#\->\Mat Z[10,3
 0\->\Mat Z[12,2
+0
 %End
 %Header Record
 Format:TXT
@@ -1524,7 +1538,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5005
+Capacity:5032
 File Name:Z13
 Group Name:
 Password:
@@ -1590,13 +1604,15 @@ Option4:
 0\->\Mat Z[9,3
 1\->\Mat Z[12,2
 \Prog "Z16"
-\If \Ans=\Pi
+\If \Ans\<>\Pi
+\Then G\->\Mat Z[12,4
+H\->\Mat Z[12,5
+\IfEnd
+\If \Mat Z[11,5
 \Then \Cls
 \RclPict 1
 \Return
 \IfEnd
-G\->\Mat Z[12,4
-H\->\Mat Z[12,5
 \For 0\->W \To 7
 \Green \F-Line 3+W,51,3+W,44
 \Next 
@@ -1649,6 +1665,7 @@ V=7\=>\Text 21,58,"\theta"
 \Green \F-Line 127,13,127,63
 \Orange \Text 55,42,"             "
 \StoPict 1
+1\->\Mat Z[11,5
 \Prog "Z18"
 \If V=8
 \Then 87\->A
@@ -3398,7 +3415,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1025
+Capacity:1023
 File Name:Z38
 Group Name:
 Password:
@@ -3421,7 +3438,6 @@ Option4:
 {44}
 \Prog "Z14"
 44\->Z
-\Pi
 \Prog "Z13"
 \ClrText
 "IMPRESSIONNANT..."
