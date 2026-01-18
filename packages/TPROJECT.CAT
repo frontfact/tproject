@@ -1701,7 +1701,7 @@ C=2\=>86\->A
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7311
+Capacity:7295
 File Name:Z14
 Group Name:
 Password:
@@ -1774,7 +1774,7 @@ Z=8\=>\GotoE
 \Green \Text 25,3," attak  "
 \Green \Text 31,3," pouvoir"
 \Green \Text 37,3," objet  "
-\Green \Text 43,3," aprend"
+\Green \Text 43,3," aprend "
 \Green \Text 49,3," fuite  "
 1\->\r
 \Text 57,3,"[EXE]\->choisir une action      "
@@ -2230,7 +2230,7 @@ C=\Mat Z[K,5-O\=>1\->L
 \Next 
 \If L
 \Then \Text 57,3,"tu connais deja cela."
-.7\->X
+1\->X
 \Prog "Z0"
 0\->P~Q
 \GotoD
@@ -2291,7 +2291,6 @@ C\->W
 \Not Q\=>5\->Q
 Q=6\=>1\->Q
 \LpWhile \theta\<>31
-\Green \Text 19+6Q,3,"-"
 \Mat Z[Q,5-O\->C
 \Text 51,38,"Z oublie            "
 {O,C,51,73}
