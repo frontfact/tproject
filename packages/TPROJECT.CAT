@@ -1213,7 +1213,7 @@ D\>=2\=>\Text K,L+31,D
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1003
+Capacity:1019
 File Name:Z10
 Group Name:
 Password:
@@ -1247,6 +1247,7 @@ Option4:
 \Orange \Text 15,9,"attaques"
 \Orange \Text 21,9,"stats"
 \Orange \Text 27,9,"objets"
+\Text 39,5,"[EXIT]"
 1\->A
 \Lbl Q
 \Text 6A+9,4,"-"
