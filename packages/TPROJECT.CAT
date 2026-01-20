@@ -164,11 +164,11 @@ Option4:
 \Then \Text 31,4,"Winhill"
 48\->\List 1[6
 \IfEnd
-\If Z>30\ And Z<38
+\If Z>30\ And Z<37
 \Then \Text 37,4,"Plymout"
 43\->\List 1[7
 \IfEnd
-\If Z>41
+\If Z>36
 \Then \Text 43,4,"Sanctua"
 \PlotOn 4,21
 88\->\List 1[8
@@ -223,7 +223,7 @@ Option4:
 \theta=38\=>\Isz A
 \theta=28\=>\Dsz B
 \theta=37\=>\Isz B
-38=\Mat Z[12,6\=>\Prog "Z15"
+37=\Mat Z[12,6\=>\Prog "Z15"
 \For 1\->C \To 6
 \PlotChg A,B
 .1\->X
@@ -405,7 +405,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:933
+Capacity:912
 File Name:Z03
 Group Name:
 Password:
@@ -438,11 +438,10 @@ Option4:
 \theta\->\Mat Z[9,3
 \Mat Z[12,6\->Z
 \If \theta=29
-\Then \If Z=36
+\Then \If Z=33
 \Then \ClrText
 "Les portes de la"
-"ville sont bloquees  par l'evacuation !"
-"Passons par le port !"\Disp\Goto1
+"ville sont bloquees !Passons par le port !"\Disp\Goto1
 \IfEnd
 \GotoW
 \IfEnd
@@ -1412,7 +1411,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1557
+Capacity:1413
 File Name:Z12
 Group Name:
 Password:
@@ -1422,28 +1421,25 @@ Option3:
 Option4:
 %Data Record
 \List \Ans[1\->Z
+\List \Ans[2\->M
 \Identity 1\->\Mat A
 \For 4\->X \To 5
 \Mat Z[X,2\->\Mat Z[X,1
 \Next 
 0\->\Mat Z[11,3
 0\->\Mat Z[11,4
-0\->\Mat Z[8,4
 \Mat Z[11,2\->N
 {.}
-\If \List \Ans[2
+\If M
 \Then Z=8\=>{6,9,9,99,11}
 Z=11\=>{5,4,4,120,11}
 Z=23\=>{3,7,6,333,7}
-Z=29\=>{2,10,9,100+100\Ran#,7}
-Z=32\=>{4,14,8,400,8}
-Z=33\=>{6,15,9,600,8}
-Z=43\=>{4,20,13,700,8}
-Z=44\=>{6,20,13,800,8}
+Z=29\=>{2,10,9,150+50\Ran#,7}
 \Else Z=99\=>{1,15,12,600,7}
 \IfEnd
 \If \Dim \List \Ans=1
-\Then \Do
+\Then 0\->\Mat Z[8,4
+\Do
 1+\Int ((2.5+.8N)\Ran#\->M
 \LpWhile M>7
 M=1\=>{1,2+N/2,2+N/2,18+10N+8N\Ran#,10}
@@ -1521,9 +1517,8 @@ Z=8\=>15
 115\->R
 {M,1}
 \Prog "Z20"
-\If Z=43\ Or Z=44\ Or Z=32\ Or Z=33\ Or Z=8\ Or Z=11\ Or Z=99
-\Then Z=44\ Or Z=33\ Or Z=8\=>\Text 51,75,"Enzo   "
-Z=32\ Or Z=43\=>\Text 51,75,"Redox  "
+\If Z=8\ Or Z=11\ Or Z=99
+\Then Z=8\=>\Text 51,75,"Enzo   "
 Z=11\=>\Text 51,75,"le Minautor"
 Z=99\=>\Text 51,75,"le Gardien"
 \Else M=1\=>\Text 51,90,"lapranak"
@@ -1540,7 +1535,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5028
+Capacity:5049
 File Name:Z13
 Group Name:
 Password:
@@ -1593,13 +1588,41 @@ Option4:
 \IfEnd
 \If V=7
 \Then \Orange \Text 5,3,"PLYMOUT"
-[[.8,.8,.8,.8,22.8,20,.,20,.5,20.5,30,20,23,30,20,.5][.8,.8,.8,20.8,2,23,.,22,.,20.5,30,3,3,33,20,.5][.8,.8,.8,.8,.7,.,30,32,.,20.5,2,2,2,3,22,.5][.8,.8,.8,.8,.7,.7,.,20,.,.,.,.,20,23,.5,2.5][.8,.8,2.8,.7,.7,.7,.,20,2.5,2.5,2.5,2.5,2,2,22,.4][.8,22.8,32.131,.,.,.,.,.,.,3,.,.,.,.,2.4,2.4][22.8,2,23,.,.4,.4,.,.4,20.4,22,3,3,.,20,23.2,3.3][2,32,.,.,.4,2,3,2,20.4,30,22,23,3,2,.,.][3,3,2,3,20.4,20,23,23,20.4,32,22,20,22,32,3,3][20,.,20,20,20.4,30,.,20,.4,.4,.4,.,30,20,20,.]]\->\Mat A
+[[.8,.8,.8,.8,22.8,20.136,.,20,.5,20.5,30,20,23.135,30,20,.5][.8,.8,.8,20.8,2,23,.,22,.,20.5,30,3,3,33,20,.5][.8,.8,.8,.8,.7,.,30,32.132,.,20.5,2,2,2,3,22,.5][.8,.8,.8,.8,.7,.7,.,20,.,.,.,.,20,23.133,.5,2.5][.8,.8,2.8,.7,.7,.7,.,20,2.5,2.5,2.5,2.5,2,2,22,.4][.8,22.8,32.131,.,.,.,.,.,.,3,.,.,.,.,2.4,2.4][22.8,2,23,.,.4,.4,.,.4,20.4,22,3,3,.,20,23.2,3.3][2,32,.,.,.4,2,3,2,20.4,30,22,23,3,2,.,.][3,3,2,3,20.4,20,23,23.138,20.4,32,22.134,20,22,32.137,3,3][20,.,20,20,20.4,30,.,20,.4,.4,.4,.,30,20,20,.]]\->\Mat A
 16\->G
 8\->H
 \IfEnd
 \If V=8
 \Then \Orange \Text 5,3,"SANCTUA"
 {10,16}\->\Dim \Mat A
+87\->A
+32\->B
+1\->D
+\For 1\->C \To 2
+C=2\=>-1\->D
+C=2\=>86\->A
+\F-Line A-6D,B+9,A-6D,B+7
+\F-Line A-5D,B+11,A-5D,B+5
+\PlotOn A-5D,B+1
+\F-Line A-4D,B+12,A-4D,B+9
+\F-Line A-4D,B+6,A-4D,B+3
+\PlotOn A-4D,B
+\F-Line A-3D,B+12,A-3D,B+8
+\F-Line A-3D,B+6,A-3D,B+4
+\F-Line A-3D,B+1,A-3D,B
+\F-Line A-2D,B+12,A-2D,B+11
+\F-Line A-2D,B+9,A-2D,B+5
+\F-Line A-2D,B+2,A-2D,B
+\PlotOn A-D,B+12
+\F-Line A-D,B+8,A-D,B+7
+\F-Line A-D,B+5,A-D,B+4
+\PlotOn A-D,B
+\Next 
+\For 4\->A \To 6
+\For 7\->B \To 9
+.139\->\Mat A[A,B
+\Next 
+\Next 
 1\->G
 5\->H
 \IfEnd
@@ -1633,7 +1656,7 @@ H\->\Mat Z[12,5
 \Green \Text 31,10,\Mat Z[10,4
 \Green \Text 38,3,"[MENU]"
 \Green \Text 45,3,"[F6] Monde"
-\If V\<>9
+\If V\<>8
 \Then \For 1\->U \To 10
 5(U-1\->\r
 \For 1\->W \To 16
@@ -1670,37 +1693,9 @@ V=7\=>\Text 21,58,"\theta"
 1\->\Mat Z[11,5
 \Prog "Z18"
 \If V=8
-\Then 87\->A
-32\->B
-1\->D
-\For 1\->C \To 2
-C=2\=>-1\->D
-C=2\=>86\->A
-\F-Line A-6D,B+9,A-6D,B+7
-\F-Line A-5D,B+11,A-5D,B+5
-\PlotOn A-5D,B+1
-\F-Line A-4D,B+12,A-4D,B+9
-\F-Line A-4D,B+6,A-4D,B+3
-\PlotOn A-4D,B
-\F-Line A-3D,B+12,A-3D,B+8
-\F-Line A-3D,B+6,A-3D,B+4
-\F-Line A-3D,B+1,A-3D,B
-\F-Line A-2D,B+12,A-2D,B+11
-\F-Line A-2D,B+9,A-2D,B+5
-\F-Line A-2D,B+2,A-2D,B
-\PlotOn A-D,B+12
-\F-Line A-D,B+8,A-D,B+7
-\F-Line A-D,B+5,A-D,B+4
-\PlotOn A-D,B
-\Next 
-\If Z<50
-\Then \For 4\->A \To 6
-\For 7\->B \To 9
-.142\->\Mat A[A,B
-\Next 
-\Next 
-"TOMBERRY :"
-"JE T'ATTENDAIS."\Disp\IfEnd
+\Then \ClrText
+"Tomberry>"
+"JE T'ATTENDAIS."\Disp""
 \IfEnd
 %End
 %Header Record
@@ -2439,7 +2434,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:805
+Capacity:602
 File Name:Z15
 Group Name:
 Password:
@@ -2479,42 +2474,31 @@ Option4:
 \Pi
 \Return
 \IfEnd
-\If Z=36
-\Then "Trop tard !..."
-"TOMBERRY.... NON !!!!"
+\If Z=31\ Or Z=32
+\Then 1\->\Mat Z[12,2
+\IfEnd
+\If Z=33
+\Then "Z> Trop tard !..."
+"Tomberry !!  NOOON !!"\Disp\ClrText
 .\->\Mat Z[1,1
 \Prog "Z21"
 \IfEnd
 \IfEnd
-\If Z=38
-\Then 16\->B
-\For 47\->A \To 73
-\Isz B
+\If Z=37
+\Then \StoPict 1
+\For 1\->I \To 18
+45+I\->A
+13+\Int (I/6\->B
 \PlotOn A,B
-.1\->X
+.2\->X
 \Prog "Z0"
-\PlotOff A,B
 \Next 
 "Z> On debarque ici !"\Disp\ClrText
-"Z> Je vais a HELENIA voir l'Ancien,"
-"faites evacuer les"
-"villes et mettez"
-"les habitants aux"
-"abris !"\Disp\ClrText
-"Z> On se retrouve"
-"chez Wills !"
-" "
-"W\@26J> D'accord !"
-"Tiens, prends de quoicombattre :"
-"+5 soin+"
-"+5 adrena"
-"+5 chlore"
-"Et... bonne chance !"\Disp""
-\For 2\->O \To 4
-5+\Mat Z[O,5\->\Mat Z[O,5
-\Next 
+"Z> C'est dingue !"
+"On l'a echappe belle!"\Disp\ClrText
 9\->\Mat Z[10,3
 39\->\Mat Z[12,6
+\Cls
 \RclPict 1
 \IfEnd
 %End
@@ -2555,7 +2539,7 @@ Option4:
 \ClrText
 \Mat Z[12,6\->Z
 {Z}
-\If Z=36
+\If Z=33
 \Then "Fuyez, fuyez vite !"\Disp\Return
 \IfEnd
 \ClrText
@@ -2873,7 +2857,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:50
+Capacity:62
 File Name:Z24
 Group Name:
 Password:
@@ -2882,6 +2866,8 @@ Option2:
 Option3:
 Option4:
 %Data Record
+\Prog "Z23"
+\Ans\=>\Return
 \List \Ans[1\->C
 \List \Ans[2\->X
 \List \Ans[3\->Y
@@ -3390,7 +3376,7 @@ C=5\=>"Z> Haro !"\Disp""
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:533
+Capacity:1847
 File Name:Z37
 Group Name:
 Password:
@@ -3400,34 +3386,124 @@ Option3:
 Option4:
 %Data Record
 \If W=31
-\Then Z<36\=>"~C'est mon bateau de peche"
-\If Z=36
+\Then Z<33\=>"~C'est mon bateau de peche"\Disp\ClrText
+\If Z=33
 \Then 0\->\Mat Z[12,1
-\Text 52,2,"Z> MONTEZ, VITE !!!"\Disp\PlotOff I,J
+\Text 53,2,"Z> MONTEZ, VITE !!!"
+4\->X
+\Prog "Z0"
+\PlotOff I,J
 \For 21\->A \To 11 \Step -5
 \Text A,A+37,"\theta"
 .6\->X
 \Prog "Z0"
 \Text A,A+37,"~"
 \Next 
-\Isz Z
+37\->Z
 \Prog "Z21"
 \IfEnd
 \IfEnd
-\If W=35\ And D
-\Then "Z> Jessie ! Il n'y a pas de temps a perdreRedox et Enzo disent avoir reveille..."
-"Jessie> TOMBERRY ?!!"\Disp\ClrText
-"Alors ils avaient lestrois inscriptions desagesse..."\Disp\ClrText
-"Nous devons trouver  un moyen de detruire ce demon !"\Disp\ClrText
-"Mais pour l'instant  il faut fuir la villeau plus vite ! DANS  QUELQUES SECONDES    ELLE SERA ANEANTIE !"\Disp17\->\Mat Z[12,1
+2\->\r
+\If W=32\ And Z<33\ And 0=\Mat Z[12,1
+\Then "Garde> Halte-la !"
+"On ne passe pas !"\Disp\ClrText
+\PlotOff I,J
+\If 3=\Mat Z[12,2
+\Then "Z> Hey ! Je crois quevotre femme est sur"
+"le point d'acoucher !"\Disp\ClrText
+"Garde> Oh la la"
+"il faut que j'aille  l'aider !"\Disp9\->G
+35\->\Mat Z[12,1
+\Else 7\->G
+\IfEnd
+\IfEnd
+2\->\theta
+\If W=33
+\Then \If Z>31
+\Then "Garde> zzzZZZzzz..."
+1\->X
+\Prog "Z0"
+\IfEnd
+\If Z=31
+\Then "Garde> Halte-la !"
+"On ne passe pas !"\Disp\ClrText
+\PlotOff I,J
+\If 0<\Mat Z[7,6
+\Then "Z> Et qu'est-ce que  que vous diriez d'un petit remontant ?"\Disp\ClrText
+"Garde> Ah un p'tit"
+"rhum j'dis pas non !"\Disp\Isz Z
+\Mat Z[7,6]-1\->\Mat Z[7,6
+3\->H
+\Else 5\->H
+\IfEnd
+\IfEnd
+\IfEnd
+2\->P
+\If W=34
+\Then "Femme> Aie-ouille !!!Des contractions !"\Disp\ClrText
+"Le bebe ne devrait"
+"plus tarder..."\Disp\ClrText
+{2,12,2}
+\Prog "Z24"
+\IfEnd
+2\->A~B
+\If W=36
+\Then "~Le garde en face,"
+"c'est un gars d'ici !Il va bientot etre"
+"papa !"\Disp{1,12,2}
+\Prog "Z24"
+\IfEnd
+\10^xA\sqrtP\r\theta\In B
+\If W=37\ And Z<33
+\Then "Enzo> Z ! Vous avez  retrouve les prismes de pouvoir !"\Disp\ClrText
+"Enzo> Il faut les"
+"amener a l'autel"
+"du temple et reciter la formule de"
+"sagesse !"\Disp\ClrText
+\IfEnd
+\If W=38
+\Then "~Je suis negociant"
+"a PLYMOUT, je fais"
+"dans l'import-export d'alcools et de"
+"spiritueux. Vous en  trouverez en ville."\Disp\ClrText
+\IfEnd
+\If W=35\ And Z=32
+\Then "Z> L'autel !"\Disp\ClrText
+"Maintenant la formulede sagesse,"
+"c'est..."?\->R
+\ClrText
+\If R\<>\Ans
+\Then "Z> ..."\Disp\ClrText
+"Z> Il ne se passe rien..."\Disp\ClrText
+\Else "Tomberry> ... HAAHH"
+"QUEL BONHEUR"
+"D'ETRE LIBRE !!!"\Disp\ClrText
+"Enzo> Tomberry !"
+"Soumets-toi au"
+"porteur des prismes !"
+"Obeis-moi !"\Disp\ClrText
+"E> Je t'ai libere,"
+"je t'ordonne de fairede moi un DIEU"
+"maintenant !"\Disp\ClrText
+"T> TU N'ORDONNES RIENMISERABLE INSECTE..."\Disp\ClrText
+"T> S'KLAH NYOGTH !"\Disp\ClrText
+"Un eclair noir"
+"transperce Enzo !"\Disp\ClrText
+"T> JE VAIS TOUT"
+"ANEANTIR..."\Disp\ClrText
+"T> ET DANSER SUR LES RUINES DE GAIA !!"\Disp\ClrText
+"Z> Vite !"
+"Fuyons la ville !"\Disp\ClrText
 \Isz Z
+40\->\Mat Z[12,1
+\IfEnd
 \IfEnd
 %End
 %Header Record
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1027
+Capacity:836
 File Name:Z38
 Group Name:
 Password:
@@ -3436,23 +3512,13 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\If W=42\ And D
+\If W=39
 \Then \ClrText
-"TU ME DEFIES, ETRANGEMORTEL ?"\Disp"Je viens mettre fin aton regne."\Disp"AH AH AH..."\Disp\ClrText
-"TU DEVRAS D'ABORD"
-"VAINCRE MES DISCIPLES"\Disp\ClrText
-"Redox ? Enzo ?"
-"Je les croyais morts?"\Disp"EN ME LIBERANT ILS M'ONT LIVRE LEURS AMES.MEURS !!!"
-4\->X
-\Prog "Z0"
-{43,1}
-\Prog "Z14"
-{44,1}
-\Prog "Z14"
-44\->Z
-\Prog "Z13"
-\ClrText
-"IMPRESSIONNANT..."
+"T> TU ME DEFIES,"
+"INSIGNIFIANT MORTEL ?"\Disp\ClrText
+"Z> Je viens mettre"
+"fin a ton regne !"\Disp\ClrText
+"T> AH AH AH..."\Disp\ClrText
 "MAIS QUE PEUX-TU"
 "CONTRE MOI ?"\Disp\If \Not \Mat Z[8,5
 \Then "SANS L'ARME SUPREME  TU N'ES RIEN !"
