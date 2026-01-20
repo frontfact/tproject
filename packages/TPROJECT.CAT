@@ -1003,7 +1003,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2613
+Capacity:2642
 File Name:Z09
 Group Name:
 Password:
@@ -1063,9 +1063,10 @@ U=51\=>3\->U
 G\->C
 H=6\=>G+10\->C
 ((C=14\ Or C=7\ Or C=11\ Or C=12\ Or C=13)\ And \Not \r)\ Or C=9\ Or C=8\ Or C=15\ Or \Not D\=>\Goto1
-C<8\=>D-1\->\Mat Z[G,H
+C<8\ Or C=17\=>D-1\->\Mat Z[G,H
 C=1\ Or C=2\=>80C+\Mat Z[1,1\->\Mat Z[1,1
 C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
+C=17\=>.5\Mat Z[6,4\->\Mat Z[6,4
 \If C=5\ Or C=6
 \Then \For 1\->X \To 2
 1+\Mat Z[10-C,X\->\Mat Z[10-C,X
