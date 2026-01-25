@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Casio Basic",
+  "patterns": [
+    {
+      "name": "comment.line.apostrophe.casiobasic",
+      "begin": "'",
+      "end": "$"
+    },
+    {
+      "name": "string.quoted.double.casiobasic",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.casiobasic",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "support.function.special.casiobasic",
+      "match": "\\\\?\\bGraph (Y=|Y<|Y>|\\(X,Y\\)=)"
+    },
+    {
+      "name": "keyword.control.casiobasic",
+      "match": "\\\\?\\b(If|Then|Else|IfEnd|Do|LpWhile|While|WhileEnd|For|To|Next|Step|Break|Lbl|Goto|Prog|Return)\\b"
+    },
+    {
+      "name": "support.function.casiobasic",
+      "match": "\\\\?\\b(Locate|\\?|Getkey|Isz|Dsz|Abs|Int|Frac|sin|cos|Cls|ClrText|ClrList|Identity|Dim|PlotOn|PlotOff|PlotChg|PxlTest|F-Line|Text|Horizontal|Vertical|Circle|StoPict|RclPict|BG-None|BG-Pict|DrawOn|DrawOff|DrawStat|Deg|Ran|S-WindMan|ViewWindow|CoordOff|AxesOff|LabelOff|Norm|FuncOff|GridOff|S-Gph1|S-Gph2|S-Gph3|Orange|Green|Blue|Dot|xyLine|Scatter)\\b"
+    },
+    {
+      "name": "keyword.operator.casiobasic",
+      "match": "(\\+|\\-|\\*|\\/|→|⇒|~)"
+    },
+    {
+      "name": "keyword.operator.comparison.casiobasic",
+      "match": "(=|≠|≥|≤|<|>)"
+    },
+    {
+      "name": "keyword.operator.logical.casiobasic",
+      "match": "\\\\?\\b(And|Or|Not)\\b"
+    },
+    {
+      "name": "punctuation.section.parens.casiobasic",
+      "match": "[\\(\\)\\[\\]\\{\\}]"
+    },
+    {
+      "name": "variable.language.casiobasic",
+      "match": "\\\\?\\b([A-Z]|Ans|Tθ?max|θ|theta|r|List1|List2|List3|List4)\\b"
+    },
+    {
+      "name": "constant.language.casiobasic",
+      "match": "\\\\?\\b(Mat|List|π|Pi|⎷|sqrt)\\b"
+    },
+    {
+      "name": "constant.numeric.casiobasic",
+      "match": "\\d+(\\.\\d+)?"
+    }
+  ],
+  "scopeName": "source.casiobasic"
+}

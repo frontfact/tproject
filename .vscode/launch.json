@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Restart with custom syntax support",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "code",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}/.vscode/casio-basic-syntax",
+                "${workspaceFolder}"
+            ]
+        }
+    ]
+}

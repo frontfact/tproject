@@ -1,0 +1,21 @@
+{
+  "name": "casio-basic",
+  "displayName": "Casio Basic",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "contributes": {
+    "languages": [{
+      "id": "casiobasic",
+      "aliases": ["Casio Basic", "casiobasic"],
+      "extensions": [".cbas", ".CAT"], 
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "casiobasic",
+      "scopeName": "source.casiobasic",
+      "path": "./syntaxes/casiobasic.tmLanguage.json"
+    }]
+  }
+}
