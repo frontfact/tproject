@@ -200,7 +200,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1921
+Capacity:1917
 File Name:Z02
 Group Name:
 Password:
@@ -278,7 +278,7 @@ V\->\Mat Z[11,1
 \Next 
 \Cls
 \RclPict 1
-{Z,0}
+{Z}
 \Prog "Z14"
 7+\Int 6\Ran#\->\Mat Z[10,3
 0\->\Mat Z[9,4
@@ -300,7 +300,7 @@ H\=>\GotoH
 \Prog "Z0"
 \StoPict 1
 0\->\Mat Z[11,5
-{99,0}
+{99}
 \Prog "Z14"
 "Tu m'as vaincu..."
 "le tresor est a toi."\Disp\Green "Z obtient :"
@@ -405,7 +405,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:912
+Capacity:911
 File Name:Z03
 Group Name:
 Password:
@@ -513,7 +513,7 @@ E=3\=>\Prog "Z17"
 \Goto1
 \Lbl W
 7+\Int 6\Ran#\->\Mat Z[10,3
-0\->\Mat Z[12,2
+0\->\Mat Z[8,6
 0
 %End
 %Header Record
@@ -549,7 +549,7 @@ Z\->\Mat Z[12,6
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:814
+Capacity:812
 File Name:Z05
 Group Name:
 Password:
@@ -560,50 +560,50 @@ Option4:
 %Data Record
 \Dim \List \Ans\->B
 \For 1\->A \To B
-\List \Ans[A\->\r
-\If \r=0
+\List \Ans[A
+\If \Ans=0
 \Then \S-Gph1 \DrawOn
 \S-Gph2 \DrawOff
 R+2\<>\List 1[8\=>{R+7,R+4,R+6,R+5,R,R+4,R+3,R+2,R+2,R+3,R+6,R+8,R+6,R+5,R+5,R+9,R+6,R+5,R+6,R+7,R+6,R+5,R+6,R+5,R+6,R+10,R+11,R+12,R+15,R+13,R+12,R+11,R+6,R+8,R+6,R+8,R+5,R+5,R+4,R+4,R+8,R+8,R+13,R+16,R+13,R+8,R+10,R+11,R+14,R+16,R+12,R+9}\->\List1
 \PlotOn R+5,50
 \DrawStat
 \IfEnd
-\If \r=1
+\If \Ans=1
 \Then \Green \F-Line R+15,36,R+26,53
 \Green \F-Line R+16,35,R+26,53
 \Green \F-Line R+16,40,R+19,37
 \IfEnd
-\If \r=2
+\If \Ans=2
 \Then \Green \F-Line R+14,37,R+34,39
 \Green \F-Line R+14,36,R+29,38
 \Green \F-Line R+18,34,R+17,39
 \IfEnd
-\If \r=3
+\If \Ans=3
 \Then \Green \F-Line R+14,37,R+33,34
 \Green \F-Line R+14,36,R+29,34
 \Green \F-Line R+18,38,R+17,34
 \IfEnd
-\If \r=4
+\If \Ans=4
 \Then \Green \F-Line R+18,39,R+18,35
 \For 60\->U \To 110 \Step 3
 \Green \F-Line U-3,38,U,37
 \Green \F-Line U-3,36,U,37
 \Next 
 \IfEnd
-\If \r=5
+\If \Ans=5
 \Then \Green \Text 11,R+23," "
 \Green \Text 17,R+20," "
 \Green \Text 22,R+16," "
 \Green \Text 24,R+16," "
 \IfEnd
-\If \r=6
+\If \Ans=6
 \Then \Green \Text 25,R+17,"     "
 \IfEnd
-\If \r=7
+\If \Ans=7
 \Then \Green \Text 26,R+17," "
 \Green \Text 28,R+21,"    "
 \IfEnd
-\If \r=8
+\If \Ans=8
 \Then \For 11\->U \To 41 \Step 6
 \Text U,R,"     "
 U<30\=>\Green \Text U-1,R+14,"      "
@@ -1002,7 +1002,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:2642
+Capacity:3286
 File Name:Z09
 Group Name:
 Password:
@@ -1061,7 +1061,7 @@ U=51\=>3\->U
 \Mat Z[G,H\->D
 G\->C
 H=6\=>G+10\->C
-((C=14\ Or C=7\ Or C=11\ Or C=12\ Or C=13)\ And \Not \r)\ Or C=9\ Or C=8\ Or C=15\ Or \Not D\=>\Goto1
+((C=14\ Or C=7\ Or C=11\ Or C=12\ Or C=13)\ And \Not \r)\ Or C=9\ Or C=15\ Or \Not D\=>\Goto1
 C<8\ Or C=17\=>D-1\->\Mat Z[G,H
 C=1\ Or C=2\=>80C+\Mat Z[1,1\->\Mat Z[1,1
 C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
@@ -1099,6 +1099,63 @@ C=17\=>.5\Mat Z[6,4\->\Mat Z[6,4
 \Int (\Mat Z[6,1]-130-41\Ran#\->\Mat Z[6,1
 1.3\->X
 \Prog "Z0"
+\IfEnd
+\If C=8
+\Then \Cls
+\RclPict 2
+{5}
+\Prog "Z05"
+\Graph (X,Y)=(57+.54T,16+\Abs ((27-.0816T)\cos (320+5.44T)))
+87\->A
+38\->B
+5\->C
+\For 1\->D \To 1800 \Step 50
+\F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
+\Isz C
+.1\->X
+\Prog "Z0"
+\Next 
+3\->C
+\For 1800\->D \To 1 \Step -40
+\F-Line A+C\sin D,B+C\cos D,A+C\sin (D-40),B+C\cos (D-40
+\F-Line A,B,A+60\Ran#-30,B+60\Ran#-30
+C+.6\->C
+.1\->X
+\Prog "Z0"
+\Next 
+\Mat Z[12,6]=39\ And \Mat Z[8,6]\ And 8=\Mat Z[11,1]\=>1\->W
+\Not W\=>.\->\Mat Z[1,1
+\Prog "Z21"
+\If W
+\Then \Cls
+\Plot 0,0
+5\->X
+\Prog "Z0"
+\ClrText
+"Z ?...      Z ?!"\Disp\ClrText
+"Z> ... que ?"
+"Oh, ma tete..."\Disp\ClrText
+"Wills> Il est vivant."\Disp\ClrText
+"Jessie> Ton dernier"
+"combat a bien failli t'etre fatal..."\Disp\ClrText
+"Z> Et...et Tomberry ?"\Disp\ClrText
+"Jessie> Detruit."
+"A jamais."\Disp\ClrText
+2\->X
+\Prog "Z0"
+{6}
+\Prog "Z22"
+117\->R
+{6,1}
+\Prog "Z20"
+\StoPict 2
+\ViewWindow 127,-1,0,63,1,0
+\RclPict 2
+\Prog "Z20"
+\Text 30,49,"THE END"\Disp\Cls
+\ClrText
+\Stop
+\IfEnd
 \IfEnd
 \If C=14\ And \Mat Z[5,6
 \Then \Mat Z[5,6]-1\->\Mat Z[5,6
@@ -1411,7 +1468,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1413
+Capacity:1483
 File Name:Z12
 Group Name:
 Password:
@@ -1421,20 +1478,22 @@ Option3:
 Option4:
 %Data Record
 \List \Ans[1\->Z
-\List \Ans[2\->M
 \Identity 1\->\Mat A
 \For 4\->X \To 5
 \Mat Z[X,2\->\Mat Z[X,1
 \Next 
 0\->\Mat Z[11,3
 0\->\Mat Z[11,4
+\Mat Z[4,2\->A
+\Mat Z[5,2\->D
 \Mat Z[11,2\->N
 {.}
-\If M
+\If \Mat Z[8,6
 \Then Z=8\=>{6,9,9,99,11}
 Z=11\=>{5,4,4,120,11}
 Z=23\=>{3,7,6,333,7}
 Z=29\=>{2,10,9,150+50\Ran#,7}
+Z=39\=>{8,A+9,D+9,987,8}
 \Else Z=99\=>{1,15,12,600,7}
 \IfEnd
 \If \Dim \List \Ans=1
@@ -1454,11 +1513,10 @@ M=7\=>{7,N+2,2+2N/3,40+15N+13N\Ran#,8}
 \List \Ans[1\->M
 \List \Ans[2\->A
 \List \Ans[3\->D
-\Int \List \Ans[4\->P
-\List \Ans[5\->V
+\Int \List \Ans[4\->L
+\List \Ans[5\->S
 {M}
 \Prog "Z22"
-Z=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
 \Cls
 \Horizontal 1
 \Vertical 127
@@ -1478,27 +1536,23 @@ Z=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
 \Orange \Text 11,3,"NIVEAU"
 \Orange \Text 11,30,N
 \Graph (X,Y)=(37+T,16+\Ran#
-41\->R
-{0,1}
-\Prog "Z05"
-\Text 51,38,"Z combat un ..."
-\Getkey=65\=>1\->P
-P\->\Mat Z[6,1
-P\->\Mat Z[7,4
+\Getkey=65\=>1\->L
+L\->\Mat Z[6,1
+L\->\Mat Z[7,4
 \Int A+\Int 2\Ran#\->\Mat Z[6,2
 \Int D+\Int 2\Ran#\->\Mat Z[6,3
-V+2\Ran#-(N/3)\->V
-\Int V\->\Mat Z[10,6
-V\Mat Z[10,5\->\Mat Z[6,4
+S+2\Ran#-(N/3)\->S
+\Int S\->\Mat Z[10,6
+S\Mat Z[10,5\->\Mat Z[6,4
 8
 N<6\=>4
 N<2\=>1
-Z=8\=>8
+Z=8\ Or Z=39\=>8
 Z=11\=>6
 \Ans\->\Mat Z[7,1
 \For 2\->B \To 3
 1+\Int N\Ran#
-Z=8\=>8
+Z=8\ Or Z=39\=>8
 \Ans>8\=>8
 \Ans\->\Mat Z[7,B
 \Next 
@@ -1514,10 +1568,14 @@ Z=8\=>15
 \Ans>17\=>17
 \Ans\->\Mat Z[8,B
 \Next 
+41\->R
+{0,1}
+\Prog "Z05"
+\Text 51,38,"Z combat un ..."
 115\->R
 {M,1}
 \Prog "Z20"
-\If Z=8\ Or Z=11\ Or Z=99
+\If (Z=8\ Or Z=11\ Or Z=99)\ And \Mat Z[8,4
 \Then Z=8\=>\Text 51,75,"Enzo   "
 Z=11\=>\Text 51,75,"le Minautor"
 Z=99\=>\Text 51,75,"le Gardien"
@@ -1528,6 +1586,7 @@ M=4\=>\Text 51,90,"arakn'"
 M=5\=>\Text 51,90,"orinaphe"
 M=6\=>\Text 51,88,"goa geant"
 M=7\=>\Text 51,90,"spectre"
+M=8\=>\Text 51,75,"Tomberry"
 \IfEnd
 \StoPict 2
 %End
@@ -1535,7 +1594,7 @@ M=7\=>\Text 51,90,"spectre"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:5049
+Capacity:4763
 File Name:Z13
 Group Name:
 Password:
@@ -1595,29 +1654,10 @@ Option4:
 \If V=8
 \Then \Orange \Text 5,3,"SANCTUA"
 {10,16}\->\Dim \Mat A
-87\->A
-32\->B
-1\->D
-\For 1\->C \To 2
-C=2\=>-1\->D
-C=2\=>86\->A
-\F-Line A-6D,B+9,A-6D,B+7
-\F-Line A-5D,B+11,A-5D,B+5
-\PlotOn A-5D,B+1
-\F-Line A-4D,B+12,A-4D,B+9
-\F-Line A-4D,B+6,A-4D,B+3
-\PlotOn A-4D,B
-\F-Line A-3D,B+12,A-3D,B+8
-\F-Line A-3D,B+6,A-3D,B+4
-\F-Line A-3D,B+1,A-3D,B
-\F-Line A-2D,B+12,A-2D,B+11
-\F-Line A-2D,B+9,A-2D,B+5
-\F-Line A-2D,B+2,A-2D,B
-\PlotOn A-D,B+12
-\F-Line A-D,B+8,A-D,B+7
-\F-Line A-D,B+5,A-D,B+4
-\PlotOn A-D,B
-\Next 
+{87,32,1}
+\Prog "Z25"
+{86,32,-1}
+\Prog "Z25"
 \For 4\->A \To 6
 \For 7\->B \To 9
 .139\->\Mat A[A,B
@@ -1627,7 +1667,7 @@ C=2\=>86\->A
 5\->H
 \IfEnd
 0\->\Mat Z[9,3
-1\->\Mat Z[12,2
+1\->\Mat Z[8,6
 \Prog "Z16"
 \If \Ans\<>\Pi
 \Then G\->\Mat Z[12,4
@@ -1775,8 +1815,8 @@ Z=8\=>\GotoE
 \Green \Text 25,3," attak  "
 \Green \Text 31,3," pouvoir"
 \Green \Text 37,3," objet  "
-\Green \Text 43,3," aprend "
-\Green \Text 49,3," fuite  "
+\Green \Text 43,3," aprend"
+\Green \Text 49,3," fuite   "
 1\->\r
 \Text 57,3,"[EXE]\->choisir une action      "
 \StoPict 2
@@ -2434,7 +2474,7 @@ T\->O
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:602
+Capacity:598
 File Name:Z15
 Group Name:
 Password:
@@ -2457,7 +2497,7 @@ Option4:
 \Then "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
 3\->X
 \Prog "Z0"
-{Z,1}
+{Z}
 \Prog "Z14"
 12\->\Mat Z[12,6
 \Pi
@@ -2468,7 +2508,7 @@ Option4:
 "Z> Le mandivor !"
 2\->X
 \Prog "Z0"
-{Z,1}
+{Z}
 \Prog "Z14"
 "Plutot coriace..."\Disp24\->\Mat Z[12,6
 \Pi
@@ -2667,7 +2707,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1826
+Capacity:1879
 File Name:Z20
 Group Name:
 Password:
@@ -2774,6 +2814,12 @@ G\->H
 \Orange \F-Line 50,39,48,39
 \IfEnd
 \IfEnd
+\If M=8\ And C
+\Then {R-16,29,1}
+\Prog "Z25"
+{R-17,29,-1}
+\Prog "Z25"
+\IfEnd
 \If C=7
 \Then \For 1\->D \To 20
 \Orange \F-Line 52,42,24\Ran#+40,24\Ran#+30
@@ -2802,9 +2848,9 @@ Option4:
 \Plot 0,0
 \BG-None
 \For 1\->W \To 32
-\Text \Int 33\Ran#+7,\Int 53\Ran#+53,"  \aster "
-\Green \Text \Int 33\Ran#+7,\Int 53\Ran#+53,"    "
-\Orange \Text \Int 33\Ran#+7,\Int 53\Ran#+53," \aster  "
+\Text \Int 33\Ran#+7,40+\Int 82\Ran#,"  \aster "
+\Green \Text \Int 33\Ran#+7,40+\Int 82\Ran#,"    "
+\Orange \Text \Int 33\Ran#+7,40+\Int 82\Ran#," \aster  "
 \Next 
 \Prog "Z19"
 %End
@@ -2812,7 +2858,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:816
+Capacity:845
 File Name:Z22
 Group Name:
 Password:
@@ -2822,7 +2868,8 @@ Option3:
 Option4:
 %Data Record
 \S-Gph1 \DrawOff,\xyLine,\List1,\List2,1,\Dot
-\S-Gph2 \DrawOff,\xyLine,\List3,\List4,1,\Dot
+Z\<>99\=>\S-Gph2 \DrawOff,\xyLine,\List3,\List4,1,\Dot
+Z=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
 \S-Gph3 \DrawOff,\xyLine,\List1,\List3,1,\Dot
 8\->\Dim \List1
 \List 1\->\List3
@@ -2877,7 +2924,40 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1859
+Capacity:302
+File Name:Z25
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\List \Ans[1\->A
+\List \Ans[2\->B
+\List \Ans[3\->D
+\F-Line A-6D,B+9,A-6D,B+7
+\F-Line A-5D,B+11,A-5D,B+5
+\PlotOn A-5D,B+1
+\F-Line A-4D,B+12,A-4D,B+9
+\F-Line A-4D,B+6,A-4D,B+3
+\PlotOn A-4D,B
+\F-Line A-3D,B+12,A-3D,B+8
+\F-Line A-3D,B+6,A-3D,B+4
+\F-Line A-3D,B+1,A-3D,B
+\F-Line A-2D,B+12,A-2D,B+11
+\F-Line A-2D,B+9,A-2D,B+5
+\F-Line A-2D,B+2,A-2D,B
+\PlotOn A-D,B+12
+\F-Line A-D,B+8,A-D,B+7
+\F-Line A-D,B+5,A-D,B+4
+\PlotOn A-D,B
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:1857
 File Name:Z31
 Group Name:
 Password:
@@ -2942,7 +3022,7 @@ Option4:
 "Enzo> Incarnation GOA"
 4\->X
 \Prog "Z0"
-{Z,1}
+{Z}
 \Prog "Z14"
 1\->X
 \Prog "Z0"
@@ -3311,7 +3391,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:906
+Capacity:904
 File Name:Z36
 Group Name:
 Password:
@@ -3333,7 +3413,7 @@ C=4\=>"Z> Montjoie !"\Disp""
 C=5\=>"Z> Haro !"\Disp""
 2\->X
 \Prog "Z0"
-{Z,1}
+{Z}
 \Prog "Z14"
 \If 31=\Mat Z[9,5
 \Then "Z> J'ai l'impression"
@@ -3503,7 +3583,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:836
+Capacity:195
 File Name:Z38
 Group Name:
 Password:
@@ -3514,69 +3594,15 @@ Option4:
 %Data Record
 \If W=39
 \Then \ClrText
-"T> TU ME DEFIES,"
+"Tomberry>"
+"TU ME DEFIES,"
 "INSIGNIFIANT MORTEL ?"\Disp\ClrText
-"Z> Je viens mettre"
-"fin a ton regne !"\Disp\ClrText
-"T> AH AH AH..."\Disp\ClrText
+"Z> Je ne te"
+"laisserai pas"
+"detruire Gaia !"\Disp\ClrText
+"Tomberry> AH AH AH !!"\Disp\ClrText
 "MAIS QUE PEUX-TU"
-"CONTRE MOI ?"\Disp\If \Not \Mat Z[8,5
-\Then "SANS L'ARME SUPREME  TU N'ES RIEN !"
-1\->X
-\Prog "Z0"
-\For 31\->A \To 19 \Step -6
-\Text A,81,"   "
-\Next 
-.\->\Mat Z[1,1
-\Prog "Z21"
-\IfEnd
-"Je peux...  CA."\Disp"Z envoie :"
-"Tarte aux groseyes !"
-2\->X
-\Prog "Z0"
-\StoPict 1
-\BG-Pict 1
-\For 0\->D \To 9
-\Cls
-\Plot 0,0
-\Next 
-\BG-None
-87\->A
-38\->B
-5\->C
-\For 1\->D \To 1800 \Step 50
-\F-Line A+C\sin D,B+C\cos D,A+(C-10)\sin D,B+(C-10)\cos D
-\Isz C
-.1\->X
-\Prog "Z0"
-\Next 
-3\->C
-\For 1800\->D \To 1 \Step -40
-\F-Line A+C\sin D,B+C\cos D,A+C\sin (D-40),B+C\cos (D-40
-\F-Line A,B,A+60\Ran#-30,B+60\Ran#-30
-C+.6\->C
-.1\->X
-\Prog "Z0"
-\Next 
-\Cls
-\Plot 0,0
-5\->X
-\Prog "Z0"
-\ClrText
-"Z ?...      Z ?!"\Disp"Que ? Oh, ma tete..."\Disp"Wills:Il est vivant."\Disp\ClrText
-"Jessie: Ton dernier"
-"combat a bien failli t'etre fatal..."\Disp"Et...et Tomberry ?"\Disp"Detruit. A jamais."
-2\->X
-\Prog "Z0"
-{6}
-\Prog "Z22"
-117\->R
-{6,1}
-\Prog "Z20"
-\StoPict 1
-\ViewWindow 127,-1,0,63,1,0
-\RclPict 1
-\Prog "Z20"
-\Text 30,51,"THE END"\Disp\Stop
+"CONTRE MOI ?"\Disp{Z}
+\Prog "Z14"
 \IfEnd
 %End
