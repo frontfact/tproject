@@ -8,12 +8,12 @@
 | 4 | Att | Att max | Spell 4 | Attak 4 | Object 4<br>(chlore) | Object 14<br>(fusil) |
 | 5 | Def | Def max | Spell 5 | Attak 5 | Object 5<br>(protec) | Object 15<br>(balles) |
 | 6 | Monster life | Monster att | Monster def | Monster inertia<br>(adjusted) | Object 6<br>(power+) | Object 16<br>(LUNE) |
-| 7 | Monster<br>Attak 1 | Monster<br>Attak 2 | Monster<br>Attak 3 | Monster<br>Life max | Object 7<br>(groseye) | Object 17<br>(unused) |
-| 8 | Monster<br>Spell 1 | Monster<br>Spell 2 | Monster<br>Spell 3 | regular monster ➜ 0<br>persona monster ➜ 1 | Object 8<br>(tarte) | Object 18<br>(unused) |
-| 9 | X coordinate<br>in world map | Y coordinate<br>in world map | Last Getkey<br>code in city | Last Getkey<br>code in world | (unused) | (unused) |
-| 10 | Groseye found<br>in city around<br>progress 27? (0/1)  | Treasure found<br>in city around<br>progress 30 (0/1) | Counter to next fight<br>and also<br>Saving cipher key | $$$ | calculator<br>speed factor | Monster inertia<br>(raw) |
-| 11 | Current city ID | Z Level | Attak (1)<br>or<br>Spell (2) | Attak/Spell ID | (unused) | Z Experience |
-| 12 | Step counter<br>in city | (unused) | Victories<br>count | X coordinate<br>in city | Y coordinate<br>in city | Progress<br>in game |
+| 7 | Monster<br>Attak 1 | Monster<br>Attak 2 | Monster<br>Attak 3 | Monster<br>Life max | Object 7<br>(groseye) | Object 17<br>(rhum) |
+| 8 | Monster<br>Spell 1 | Monster<br>Spell 2 | Monster<br>Spell 3 | regular monster ➜ 0<br>persona monster ➜ 1 | Object 8<br>(tarte) | In city (1)<br>or world (0) |
+| 9 | X coordinate<br>in world map | Y coordinate<br>in world map | Last Getkey<br>code in city | Last Getkey<br>code in world | Winhill<br>fights | Old man<br>cooking |
+| 10 | Groseye found<br>in Helenia  | Treasure found<br>in WorldMap | Countdown<br>in WorldMap | $$$ | calculator<br>speed factor | Monster inertia<br>(raw) |
+| 11 | Current city ID | Z Level | Attak (1)<br>or<br>Spell (2) | Attak/Spell ID | City is<br>cached | Z Experience |
+| 12 | Countdown<br>in city | Plymout<br>quest | Victories<br>count | X coordinate<br>in city | Y coordinate<br>in city | Progress<br>in game |
 
 ## Z12
 
@@ -29,10 +29,5 @@
 |8 | Enzo | 6 | 9 | 9 | 99 | 11 |  |  |  |  |  |  |
 |11 | Minautor | 5 | 4 | 4 | 120 | 11 |  |  |  |  |  |  |
 |23 | mandivor | 3 | 7 | 6 | 400 | 7 |  |  |  |  |  |  |
-|28,5 | Vegetal | 2 | 7 | 5 | 250 | 8 |  |  |  |  |  |  |
-|29 | spectre | 7 | 10 | 9 | 650 | 7 |  |  |  |  |  |  |
-|32 | Redox | 4 | 14 | 8 | 400 | 8 |  |  |  |  |  |  |
-|33 | Enzo | 6 | 15 | 9 | 600 | 8 |  |  |  |  |  |  |
-|43 | Redox | 4 | 20 | 13 | 700 | 8 |  |  |  |  |  |  |
-|44 | Enzo | 6 | 20 | 13 | 800 | 8 |  |  |  |  |  |  |
+|29 | srilanes | 2 | 10 | 9 | 150~200 | 7 |  |  |  |  |  |  |
 |99 | lapranak | 1 | 15 | 12 | 800 | 7 |  |  |  |  |  |  |

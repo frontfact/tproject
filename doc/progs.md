@@ -2,118 +2,165 @@
 Start screen
 - new game
 - continue
-Decrypt the save matrix, then call TNT2
 
-## TNT1
-Draw the world map
+## Z0
+Sleep function
 
-## TNT2
-At game launch: retrieve city and position, then call TNT3. This where we see that we always start the game in a city. That could change if needed.
+Reads seconds in `$X` 
 
-When exiting city : call TNT1 (draw world)
+## Z01
+Draw world map
+
+## Z02
+Game main routine
+
+Always start in last city
 
 Then, world exploration loop with
 
-- Check number of moves before battle → if = 0 → battle → TNT14
-- Random traveling merchant → TNT15 + TNT11
-- Check city collision → TNT3
+- Check city collision → Z03
+- Check number of moves before battle → Z14
 - Heliport travel
+- Random traveling merchant → Z16 + Z11
+- User menu
 
-## TNT3
-City logic entry point
+## Z03
+City main routine
 
-Starts by calling TNT13 (draw city) : a city is a 10x16 matrix.
+Starts by calling Z13 (load +draw city, a 10x16 matrix)
 
-I, J → starting coordinates in the city (viewwindow 127×63)
+`H, G` → coordinates in the city matrix
 
-H, G → coordinates in the city matrix
+- `F6` : exit to worldmap
+- Collision with boundaries, wall, or decorative element
+- User menu (Z10)
+- Inn (Z17)
+- Shop (Z11)
+- Scenario (static, Z04)
+- Scenario (dynamic, Z15)
 
-City movement loop
+## Z04
+Game scenario/dialogues (static)
+- dispatch to Z31~Z38
+- `D` ≡ `Int(W)=Z`
+- save output `Z` to `Mat Z`
 
-## TNT4
-Game dialogues
+## Z05
+Z drawing routines
+- X position in `$R`
+- sequence in `List Ans`
+    - `0`: Z
+    - `1`: sword up
+    - `2`: sword horizontal high
+    - `3`: sword horizontal down
+    - `4`: Xmeta
+    - `5`: clear <1>
+    - `6`: clear <2>
+    - `7`: clear <3>
+    - `8`: clear Z & sword
 
-displays “hum?” if a tile has a script not matching current progress
-
-## TNT5
-drawing routines
-sequence in List Ans
-0: Z
-1: epee levee 
-2: epee horizontale haute
-3: epee horizontale basse
-4: Xmeta
-5: efface epee 1
-6: efface epee 2
-7: efface epee 3
-8: efface Z + epee
-
-## TNT6
+## Z06
 Monsters fight round, att or spells
 
-## TNT7
-increment an item counter in the inventory
+@see notice for IDs
+
+## Z07
+Increment an item counter in the inventory
 
 special case for item 14 (rifle)
 
-## TNT8
-Display attack, power, and item lists
+## Z08
+Display attack, power, or item name
+- `argv[1]`: category
+    - `1`: attack
+    - `2`: power
+    - `3`: item
+- `argv[2]`: item
+- `argv[3]`: Y coordinate
+- `argv[4]`: X coordinate
 
-K, L → display coordinates
-
-O → category
-
-1. attacks
-2. powers
-3. items
-not all powers from the manual are present (vision?)
-
-## TNT9
-Display item menu
+## Z09
+Item menu
 
 Apply item : restore heal, strength, magic, etc.
 
-some animation drawings
-- groseye (C = 7)
-- summonings (prisms C = 11,12,13)
+Some animations
+- groseye (7)
+- pie (8)
+- prisms (11,12,13)
 
-## TNT10
-Display user menu
+## Z10
+User menu : stats, objects
 
-## TNT11
+## Z11
 Shop menu + 1 dialogue in a shop
 
-## TNT12
-Draw battle screen, Z & monster, StoPict 1
-Init monster apts
-Z=8     => Enzo     (@ Botma)
-Z=11    => Minautor (Tara catacombs)
-Z=23    => mandivor (Elos bounty)
-Z=28.5  => Vegetal  (@ Helenia)
-Z=29    => spectre  (@ Winhill)
-Z=32    => Redox    (@ Plymout)
-Z=33    => Enzo     (@ Plymout)
-Z=43    => Redox    (@ Sanctua)
-Z=44    => Enzo     (@ Sanctua)
-Z=99    => lapranak (treasure)
+## Z12
+Load battle data, draw battle screen
 
-## TNT13
-draw city
+Init monster stats
 
-dialogue when progress = 41
+## Z13
+Load & draw city
 
-## TNT14
-Battle loop
+## Z14
+Battle main routine
 
-Program reads monster ID in W
+## Z15
+Game dialogues (dynamic)
 
-## TNT15
-Game dialogues (in cities ?)
+## Z16
+Init shop prices
 
-Also draw final screen
-
-## TNT16
-Init merchant prices
-
-## TNT17
+## Z17
 Inn menu
+
+## Z18
+Draw life gauge
+
+## Z19
+Game Over routine
+
+## Z20
+Monsters drawing routines
+
+- `argv[1]`: Monster ID
+- `argv[2]`: What to draw :
+    - `0`: monster's ranged attack
+    - `2`: clear monster
+    -`!0`: draw monster
+    - `7`: furie
+
+## Z21
+Draw explosion
+
+Used for PLYMOUT destruction and for pie explosion
+
+## Z22
+Load monsters coordinates lists & drawstat configs
+
+## Z23
+Bit getter, result in `Ans`
+- `argv[1]`: bit
+- `argv[2]`: Mat Z cell row 
+- `argv[3]`: Mat Z cell col
+
+## Z24
+Bit setter
+- `argv[1]`: bit
+- `argv[2]`: Mat Z cell row 
+- `argv[3]`: Mat Z cell col
+
+## Z25
+Tomberry drawing routine
+
+## Z31~Z38
+Cities dialogues
+- `31`: Botma
+- `32`: Tara
+- `33`: Atlantis
+- `34`: Elos
+- `35`: Helenia
+- `36`: Winhill
+- `37`: Plymout
+- `38`: Sanctua
