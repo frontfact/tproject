@@ -1,0 +1,53 @@
+If W=10 And Z>9 And Z<13
+Then 
+  "L'hermite ? oui, il  doit etre au fond."
+  "Mais attention, il"
+  "parait qu'une Bete"
+  "rode dans les parages..."◢
+  Not Mat Z[12,1⇒39+Int 20Ran#→Mat Z[12,1
+  D⇒11→Z
+IfEnd
+If W=12 And D
+Then 
+  "Z> Bonjour Sage."
+  "Je suis Z. Je..."
+  "Sage> Je sais."◢
+  ClrText
+  4→M~P
+  "Sage> Cela fait"
+  "bien longtemps que jen'avais vu quelqu'un."◢
+  ClrText
+  7→E
+  "Alors ecoute bien :"
+  "Cette chose toutes"
+  "choses devore."◢
+  ClrText
+  "Elle ronge le fer,"
+  "Mord l'acier."◢
+  ClrText
+  "Met a mort les rois,"
+  "detruit les villes,"
+  "et rabat les hautes"
+  "montagnes..."◢
+  π→S~T
+  "C'EST LE..."?→R
+  ClrText
+  If R=TEMPS
+  Then 
+    "Tu me plais."
+    "Je t'offre une"
+    "groseye et une Lune."
+    "Les deux autres sont"
+    "a ATLANTIS."◢
+    7→O
+    Prog "Z07"
+    16→O
+    Prog "Z07"
+    Isz Z
+  Else 
+    "Je te laisse un peu"
+    "de temps pour y"
+    "reflechir."◢
+    Return
+  IfEnd
+IfEnd

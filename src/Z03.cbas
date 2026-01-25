@@ -1,5 +1,4 @@
 Lbl I
-{Ans}
 Prog "Z13"
 θ=29⇒Goto W
 {1}
@@ -8,35 +7,32 @@ Prog "Z04"
 Lbl 0
 Mat Z[12,4→G
 Mat Z[12,5→H
-'backstep
 Mat Z[9,3→θ
 θ=27⇒Dsz G
 θ=38⇒Isz G
 θ=37⇒Dsz H
 θ=28⇒Isz H
 Lbl 1
-'plot Z
 5G+45→I
 65-5H→J
 Green PlotOn I,J
-'getkey
 Do
   Getkey→θ
 LpWhile Not θ
 θ→Mat Z[9,3
-'f6
+Mat Z[12,6→Z
 If θ=29
 Then 
-  If 36=Mat Z[12,6
+  If Z=33
   Then 
-    Prog "Z15"
-  Else 
-    Goto W
+    ClrText
+    "Les portes de la"
+    "ville sont bloquees !Passons par le port !"◢
+    Goto 1
   IfEnd
+  Goto W
 IfEnd
-'move
 2→N
-4→O
 If θ=27 And G<16
 Then 
   Int .1Mat A[H,G→N
@@ -59,62 +55,58 @@ Then
   Int (10Frac .1Mat A[H,G→N
   Int 10Frac Mat A[H+1,G→O
 IfEnd
-'wall
 θ≠48⇒N=2 Or O>3⇒Goto 1
-'
 PlotOff I,J
 θ=27⇒Isz G
 θ=38⇒Dsz G
 θ=37⇒Isz H
 θ=28⇒Dsz H
+5G+45→I
+65-5H→J
+Green PlotOn I,J
 G→Mat Z[12,4
 H→Mat Z[12,5
-'current
-Frac Mat A[H,G→b₀
-Int (10b₀→b₂
-'menu,shop,inn
-If θ=48 Or b₂=2 Or b₂=3
+Frac Mat A[H,G→F
+Int (10F→E
+If θ=48 Or E=2 Or E=3
 Then 
   Green Text 31,10,"       "
   Orange Text 23,2,"         "
   StoPict 1
   θ=48⇒Prog "Z10"
-  b₂=2⇒Prog "Z11"
-  b₂=3⇒Prog "Z17"
+  E=2⇒Prog "Z11"
+  E=3⇒Prog "Z17"
   Cls
   RclPict 1
   Green Text 31,10,Mat Z[10,4
   Prog "Z18"
   θ=48⇒Goto 1
+  PlotOff I,J
   Goto 0
 IfEnd
-'countdowns
-V=3⇒Not Mat Z[10,1⇒Prog "Z15"
-Mat Z[12,1⇒Prog "Z15"
-Ans=π⇒Goto I
-'scenario
-If b₂=1
+If E=1
 Then 
-  100Frac 10b₀→W
-  If W=Mat Z[12,6
+  100Frac 10F→W
+  If W
   Then 
     Green Text 31,10,"       "
     {W}
     Prog "Z04"
-    If 37=Mat Z[12,6
-    Then 
-      Prog "Z15"
-      Return
-    IfEnd
+    37=Mat Z[12,6⇒Goto W
+    0→Mat Z[9,3
     Ans=π⇒Goto I
     Green Text 31,10,Mat Z[10,4
-  Else 
-    Text 54,60,"HUM ?"
-    .2→X
-    Prog "Z0"
-    Text 54,60,"      "
+    Goto 1
   IfEnd
+IfEnd
+If Mat Z[12,1
+Then 
+  Prog "Z15"
+  0→Mat Z[9,3
+  Ans=π⇒Goto I
 IfEnd
 Goto 1
 Lbl W
-Int 5Ran#+6→Mat Z[10,3
+7+Int 6Ran#→Mat Z[10,3
+0→Mat Z[12,2
+0

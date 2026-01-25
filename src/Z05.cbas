@@ -1,7 +1,7 @@
 Dim List Ans→B
 For 1→A To B
-  List Ans[A→r
-  If r=0
+  List Ans[A
+  If Ans=0
   Then 
     S-Gph1 DrawOn
     S-Gph2 DrawOff
@@ -9,25 +9,25 @@ For 1→A To B
     PlotOn R+5,50
     DrawStat
   IfEnd
-  If r=1
+  If Ans=1
   Then 
     Green F-Line R+15,36,R+26,53
     Green F-Line R+16,35,R+26,53
     Green F-Line R+16,40,R+19,37
   IfEnd
-  If r=2
+  If Ans=2
   Then 
     Green F-Line R+14,37,R+34,39
     Green F-Line R+14,36,R+29,38
     Green F-Line R+18,34,R+17,39
   IfEnd
-  If r=3
+  If Ans=3
   Then 
     Green F-Line R+14,37,R+33,34
     Green F-Line R+14,36,R+29,34
     Green F-Line R+18,38,R+17,34
   IfEnd
-  If r=4
+  If Ans=4
   Then 
     Green F-Line R+18,39,R+18,35
     For 60→U To 110 Step 3
@@ -35,23 +35,23 @@ For 1→A To B
       Green F-Line U-3,36,U,37
     Next
   IfEnd
-  If r=5
+  If Ans=5
   Then 
     Green Text 11,R+23," "
     Green Text 17,R+20," "
     Green Text 22,R+16," "
     Green Text 24,R+16," "
   IfEnd
-  If r=6
+  If Ans=6
   Then 
     Green Text 25,R+17,"     "
   IfEnd
-  If r=7
+  If Ans=7
   Then 
     Green Text 26,R+17," "
     Green Text 28,R+21,"    "
   IfEnd
-  If r=8
+  If Ans=8
   Then 
     For 11→U To 41 Step 6
       Text U,R,"     "

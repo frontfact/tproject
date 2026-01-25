@@ -115,6 +115,13 @@ Then
     Orange F-Line 50,39,48,39
   IfEnd
 IfEnd
+If M=8 And C
+Then 
+  {R-16,29,1}
+  Prog "Z25"
+  {R-17,29,-1}
+  Prog "Z25"
+IfEnd
 If C=7
 Then 
   For 1→D To 20

@@ -1,6 +1,8 @@
 Lbl A
 ClrText
-If 36=Mat Z[12,6
+Mat Z[12,6→Z
+{Z}
+If Z=33
 Then 
   "Fuyez, fuyez vite !"◢
   Return
@@ -15,6 +17,7 @@ Locate 3,7,"3.Sortir"
 Do
   Getkey→θ
 LpWhile θ≠72 And θ≠62 And θ≠52 And θ≠47
+Z<10⇒θ<53⇒Prog "Z04"
 θ<53⇒Return
 If θ=62
 Then 
@@ -64,11 +67,20 @@ Then
   Do
     Getkey→θ
   LpWhile θ≠31 And θ≠47
-  .2→X
-  Prog "Z0"
   θ=47⇒Goto A
-  Int (9999Ran#*9999Ran#→Mat Z[10,3
-  Mat Z*Mat Z[10,3→Mat Y
+  ClrText
+  Locate 7,4,"Saving..."
+  {1,24}→Dim Mat Y
+  For 1→K To 24
+    3K-2→P
+    Int ((P-1)/6)+1→L
+    Int Mat Z[L,P-6L+6→A
+    Int (P/6)+1→L
+    Int Mat Z[L,P+1-6L+6→B
+    Int ((P+1)/6)+1→L
+    Int Mat Z[L,P+2-6L+6→C
+    A*10^8+B*10^4+C→Mat Y[1,K
+  Next
   ClrText
   Locate 7,4,"* Level *"
   Locate 7,5,"* Saved *"

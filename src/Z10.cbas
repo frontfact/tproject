@@ -1,31 +1,29 @@
 Lbl 0
 Cls
-Green Horizontal 1
-Green Vertical 127
-Green Horizontal 63
-Green Vertical 1
-Vertical 126
-Horizontal 62
+Vertical 1
 Vertical 2
+Horizontal 1
+Vertical 126
+Vertical 127
+Horizontal 62
+Horizontal 63
+Green Vertical 48
+Green Vertical 49
 Green Horizontal 51
 Green Horizontal 52
-Text 5,5,"skulls:"
-Text 5,34,Mat Z[10,4
-Green F-Line 59,62,59,51
-Green F-Line 58,62,58,51
-Orange Text 5,63,"Z"
-Green F-Line 69,62,69,51
-Green F-Line 70,62,70,51
+Text 5,5,"$"
+Text 5,11,Mat Z[10,4
+Orange Text 5,51,"Z"
+Text 5,55,Mat Z[12,6
+F-Line 70,51,70,62
+F-Line 71,51,71,62
 Text 5,73,"sante:   /"
 Text 5,97,Mat Z[1,1
 Text 5,113,Mat Z[1,2
 Orange Text 15,9,"attaques"
 Orange Text 21,9,"stats"
 Orange Text 27,9,"objets"
-Text 51,4,"[EXIT]"
-Text 57,8,"Return"
-Green F-Line 48,1,48,52
-Green F-Line 49,1,49,52
+Text 39,5,"[EXIT]"
 1→A
 Lbl Q
 Text 6A+9,4,"-"
@@ -45,7 +43,7 @@ Then
   Text 15,55,"statistiques"
   Text 21,51,"ATTAK:   DEFNS:"
   Text 21,75,Mat Z[4,2
-  Text 21,111,Mat Z[5,2
+  Text 21,112,Mat Z[5,2
   Text 27,53,"FORCE:  /"
   Text 33,51,"MAGIE:  /"
   For 2→T To 3
@@ -56,14 +54,9 @@ Then
   Text 39,51,"NIVEAU"
   Text 39,79,Mat Z[11,2
   Text 45,51,"EXPERIENCE:"
-  Text 45,95,Mat Z[11,6
+  Text 45,96,Mat Z[11,6
   Text 51,51,"VICTOIRES:"
   Text 51,90,Mat Z[12,3
-  Text 57,51,"SCORE:"
-  Int (11Mat Z[12,6]+5Mat Z[12,3]+0.5Mat Z[10,4]+1.5Mat Z[1,2]+15Mat Z[2,2]+15Mat Z[3,2]+9Mat Z[4,2]+9Mat Z[5,2→C
-  For 1→D To C Step .1C
-    Text 57,74,D
-  Next
   Do
   LpWhile Not Getkey
   For 15→C To 57 Step 6

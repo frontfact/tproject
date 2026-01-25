@@ -1,0 +1,62 @@
+If W=19
+Then 
+  If Z<25
+  Then 
+    "~Un etranger se vanted'avoir le prisme"
+    "MAGMA, mais il en"
+    "demande un prix"
+    "exorbitant !"◢
+    " "
+    Z<24⇒"Enzo> Allons chercherce type !"◢
+    ClrText
+  IfEnd
+  If Z=25
+  Then 
+    "~Enzo est parti,"
+    "mais il a laisse des instructions a Jessie "
+    "Tu pourras la"
+    "trouver chez elle."◢
+    ClrText
+  IfEnd
+IfEnd
+If W=21 And Z>18 And Z<25
+Then 
+  If Mat Z[10,4]<5000
+  Then 
+    "~Je suis pret a cederle prisme MAGMA pour la modique somme"
+    "de 5000$ !"◢
+    20→Z
+  Else 
+    "~Dur de m'en separer,mais j'ai vraiment"
+    "besoin d'argent en cemoment."
+    "Voici le primse."◢
+    " "
+    "Z obtient MAGMA !"◢
+    Mat Z[10,4]-5000→Mat Z[10,4
+    1→Mat Z[2,6
+    25→Z
+  IfEnd
+IfEnd
+If W=22 And Z>19 And Z<23
+Then 
+  "Maire d'ELOS>"
+  "Chasseur de prime ?"
+  "J'ai un job pour toi."◢
+  ClrText
+  "Tue le mandivor qui"
+  "erre dans les rues etterrorise ma ville,  et gagne 4000$."◢
+  "Z> ...Non, 5000."◢
+  "Hum...soit."◢
+  15+Int 5Ran#→Mat Z[12,1
+  23→Z
+IfEnd
+If W=20 And Z=25
+Then 
+  "Jessie> Z!"
+  "Enzo a du partir,"
+  "il nous demande de"
+  "chercher le dernier"
+  "prisme a HELENIA."
+  "Allons-y !"◢
+  Isz Z
+IfEnd

@@ -1,0 +1,70 @@
+Mat Z[12,6→Z
+If Mat Z[12,1
+Then 
+  Mat Z[12,1]-1→Mat Z[12,1
+  Mat Z[12,1⇒Return
+  ClrText
+  If Z=4
+  Then 
+    ClrText
+    "Z> Une gemme !"
+    "Encore une a trouver."◢
+    6→Mat Z[12,6
+  IfEnd
+  If Z=11
+  Then 
+    "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
+    3→X
+    Prog "Z0"
+    {Z,1}
+    Prog "Z14"
+    12→Mat Z[12,6
+    π
+    Return
+  IfEnd
+  If Z=23
+  Then 
+    ClrText
+    "Z> Le mandivor !"
+    2→X
+    Prog "Z0"
+    {Z,1}
+    Prog "Z14"
+    "Plutot coriace..."◢
+    24→Mat Z[12,6
+    π
+    Return
+  IfEnd
+  If Z=31 Or Z=32
+  Then 
+    1→Mat Z[12,2
+  IfEnd
+  If Z=33
+  Then 
+    "Z> Trop tard !..."
+    "Tomberry !!  NOOON !!"◢
+    ClrText
+    .→Mat Z[1,1
+    Prog "Z21"
+  IfEnd
+IfEnd
+If Z=37
+Then 
+  StoPict 1
+  For 1→I To 18
+    45+I→A
+    13+Int (I/6→B
+    PlotOn A,B
+    .2→X
+    Prog "Z0"
+  Next
+  "Z> On debarque ici !"◢
+  ClrText
+  "Z> C'est dingue !"
+  "On l'a echappe belle!"◢
+  ClrText
+  9→Mat Z[10,3
+  39→Mat Z[12,6
+  Cls
+  RclPict 1
+IfEnd

@@ -1,0 +1,103 @@
+If W=13 And D
+Then 
+  "Troll> Si tu me bats"
+  "au bras de fer, ma"
+  "Lune est a toi."
+  "L'essai coute 10$."
+  "Partant ?"
+  Locate 1,7,"[EXE]→Oui [EXIT]→Non"
+  Do
+    Getkey
+  LpWhile Not Ans
+  Ans≠31⇒Return
+  ClrText
+  If 10>Mat Z[10,4
+  Then 
+    "Troll> Reviens quand"
+    "tu auras 10$ a perdre"◢
+    Return
+  IfEnd
+  Mat Z[10,4]-10→Mat Z[10,4
+  Locate 1,1,"!DEFI AU BRAS DE FER!"
+  Locate 1,2,"Appuyer n'importe ou"
+  Locate 1,3,"fait monter ton score"
+  Locate 11,4,"--"
+  Locate 4,5,"Press  50  a key"
+  Locate 11,6,"--"
+  Locate 2,7,"10→Perdu / 90→Gagne"
+  .5→X
+  Prog "Z0"
+  Do
+  LpWhile Not Getkey
+  Locate 4,5,"     "
+  Locate 15,5,"     "
+  For 50→X To 10 Step -1
+    Getkey
+    If Ans≠Y And Ans
+    Then 
+      Ans→Y
+      X+4→X
+    IfEnd
+    Locate 11,5,Int X
+    X>89⇒Break
+  Next
+  ClrText
+  If X<11
+  Then 
+    "Perdu..."◢
+    Return
+  IfEnd
+  "Troll> Hmmf."
+  "Voila ta Lune."◢
+  16→O
+  Prog "Z07"
+  Isz Z
+IfEnd
+If W=14
+Then 
+  If Z>13 And Z<17
+  Then 
+    "Vieille> Au voleur !"
+    "Mes bijoux,"
+    "Mon argent !!!"
+    "Une recompense a qui"
+    "les retrouvera !"◢
+    Isz Z
+  IfEnd
+  If Z=17
+  Then 
+    "Z> J'ai retrouve vos bijoux."
+    "Vieille> Ah ! Merci !Et mon argent ?"
+    "Z> Il s'est enfui"
+    "avec (He-He-He)."◢
+    ClrText
+    "Vieille> Bon..."
+    "Voici une Lune pour  te remercier."◢
+    ClrText
+    "Les trois Lunes se   fondent en une"
+    "pour former le prismeANGEL !!!"◢
+    ClrText
+    "Z> Allons voir Enzo  a BOTMA !"◢
+    Isz Z
+    0→Mat Z[6,6
+    1→Mat Z[1,6
+  IfEnd
+IfEnd
+If W=15 And Z>13 And Z<17
+Then 
+  "~Il se passe"
+  "des trucs louches"
+  "au sud..."◢
+  ""
+IfEnd
+If W=16 And Z>14 And Z<17
+Then 
+  "~J'heberge quelqu'un.Vous voulez le voir ?"◢
+  ClrText
+  "Voleur> Ne me faites pas de mal !"
+  "Voila les bijoux de  la vieille et son"
+  "argent..."
+  "Oubliez-moi !"◢
+  80+Mat Z[10,4→Mat Z[10,4
+  17→Z
+IfEnd

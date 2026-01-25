@@ -1,0 +1,81 @@
+If W=39
+Then 
+  ClrText
+  "T> TU ME DEFIES,"
+  "INSIGNIFIANT MORTEL ?"◢
+  ClrText
+  "Z> Je viens mettre"
+  "fin a ton regne !"◢
+  ClrText
+  "T> AH AH AH..."◢
+  ClrText
+  "MAIS QUE PEUX-TU"
+  "CONTRE MOI ?"◢
+  ""
+  If Not Mat Z[8,5
+  Then 
+    "SANS L'ARME SUPREME  TU N'ES RIEN !"
+    1→X
+    Prog "Z0"
+    For 31→A To 19 Step -6
+      Text A,81,"   "
+    Next
+    .→Mat Z[1,1
+    Prog "Z21"
+  IfEnd
+  "Je peux...  CA."◢
+  "Z envoie :"
+  "Tarte aux groseyes !"
+  2→X
+  Prog "Z0"
+  StoPict 1
+  BG-Pict 1
+  For 0→D To 9
+    Cls
+    Plot 0,0
+  Next
+  BG-None
+  87→A
+  38→B
+  5→C
+  For 1→D To 1800 Step 50
+    F-Line A+Csin D,B+Ccos D,A+(C-10)sin D,B+(C-10)cos D
+    Isz C
+    .1→X
+    Prog "Z0"
+  Next
+  3→C
+  For 1800→D To 1 Step -40
+    F-Line A+Csin D,B+Ccos D,A+Csin (D-40),B+Ccos (D-40
+    F-Line A,B,A+60Ran#-30,B+60Ran#-30
+    C+.6→C
+    .1→X
+    Prog "Z0"
+  Next
+  Cls
+  Plot 0,0
+  5→X
+  Prog "Z0"
+  ClrText
+  "Z ?...      Z ?!"◢
+  "Que ? Oh, ma tete..."◢
+  "Wills:Il est vivant."◢
+  ClrText
+  "Jessie: Ton dernier"
+  "combat a bien failli t'etre fatal..."◢
+  "Et...et Tomberry ?"◢
+  "Detruit. A jamais."
+  2→X
+  Prog "Z0"
+  {6}
+  Prog "Z22"
+  117→R
+  {6,1}
+  Prog "Z20"
+  StoPict 1
+  ViewWindow 127,-1,0,63,1,0
+  RclPict 1
+  Prog "Z20"
+  Text 30,51,"THE END"◢
+  Stop
+IfEnd

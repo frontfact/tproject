@@ -17,7 +17,6 @@ For 1→Q To 8
   {3,C,6Q-3,7}
   Prog "Z08"
 Next
-Text 51,7,"-rien-"
 Text 57,7,"[EXIT]"
 Green Text 3,42,"$"
 Green Text 3,49,Mat Z[10,4
@@ -37,18 +36,7 @@ Do
   Not A⇒3→A
   A=4⇒1→A
 LpWhile θ≠31 And θ≠47
-If A=2 Or θ=47
-Then 
-  If 2=Mat Z[12,6
-  Then 
-    ClrText
-    Orange "Ou puis-je trouver"
-    Orange "Enzo ?"
-    "Oh... il va souvent  au resto du Sud-Ouest"◢
-    3→Mat Z[12,6
-  IfEnd
-  Return
-IfEnd
+A=2 Or θ=47⇒Return
 If A=3
 Then 
   0→r
@@ -70,8 +58,8 @@ Do
   Green Text 6U-3,3," "
   θ=28⇒Dsz U
   θ=37⇒Isz U
-  U=0⇒9→U
-  U>9⇒1→U
+  U=0⇒8→U
+  U>8⇒1→U
 LpWhile θ≠31
 U=9⇒Goto V
 List 1[U→O

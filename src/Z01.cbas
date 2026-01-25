@@ -67,12 +67,12 @@ Then
   Text 31,4,"Winhill"
   48→List 1[6
 IfEnd
-If Z>30 And Z<38
+If Z>30 And Z<37
 Then 
   Text 37,4,"Plymout"
   43→List 1[7
 IfEnd
-If Z>41
+If Z>36
 Then 
   Text 43,4,"Sanctua"
   PlotOn 4,21
@@ -100,4 +100,3 @@ DrawStat
 {37,46,48,44,48,52,52,36,36,127,127,121,115,110,105,103,105,110,112,116,117,127}→List1
 {17,20,18,13,11,9,7,8,2,2,18,10,8,9,12,6,4,4,6,5,4,8}→List2
 DrawStat
-StoPict 1

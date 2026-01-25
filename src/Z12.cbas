@@ -1,25 +1,28 @@
+List Ans[1→Z
+List Ans[2→C
 Identity 1→Mat A
 For 4→X To 5
   Mat Z[X,2→Mat Z[X,1
 Next
 0→Mat Z[11,3
 0→Mat Z[11,4
-0→Mat Z[8,4
+Mat Z[4,2→A
+Mat Z[5,2→D
 Mat Z[11,2→N
-Mat Z[12,6→Z
 {.}
-Z=8⇒{6,9,9,99,11}
-Z=10.5⇒{5,4,4,120,11}
-Z=23⇒{3,7,6,400,7}
-Z=28.5⇒{2,7,5,250,8}
-Z=29⇒{7,10,9,650,7}
-Z=32⇒{4,14,8,400,8}
-Z=33⇒{6,15,9,600,8}
-Z=43⇒{4,20,13,700,8}
-Z=44⇒{6,20,13,800,8}
-Z=99⇒{1,15,12,800,7}
+If C
+Then 
+  Z=8⇒{6,9,9,99,11}
+  Z=11⇒{5,4,4,120,11}
+  Z=23⇒{3,7,6,333,7}
+  Z=29⇒{2,10,9,150+50Ran#,7}
+  Z=39⇒{8,A+9,D+9,987,8}
+Else 
+  Z=99⇒{1,15,12,600,7}
+IfEnd
 If Dim List Ans=1
 Then 
+  0→Mat Z[8,4
   Do
     1+Int ((2.5+.8N)Ran#→M
   LpWhile M>7
@@ -30,15 +33,16 @@ Then
   M=5⇒{5,N+2,N+2,25+20N+8NRan#,14}
   M=6⇒{6,N+1,1+3N/4,20+16N+8NRan#,8}
   M=7⇒{7,N+2,2+2N/3,40+15N+13NRan#,8}
+Else 
+  1→Mat Z[8,4
 IfEnd
 List Ans[1→M
 List Ans[2→A
 List Ans[3→D
-Int List Ans[4→P
-List Ans[5→V
+Int List Ans[4→L
+List Ans[5→S
 {M}
 Prog "Z22"
-Z=99⇒S-Gph2 DrawOn,xyLine,List3,List4,1,Square
 Cls
 Horizontal 1
 Vertical 127
@@ -58,27 +62,23 @@ F-Line 37,62,37,16
 Orange Text 11,3,"NIVEAU"
 Orange Text 11,30,N
 Graph (X,Y)=(37+T,16+Ran#
-41→R
-{0,1}
-Prog "Z05"
-Text 51,38,"Z combat un ..."
-Getkey=65⇒1→P
-P→Mat Z[6,1
-P→Mat Z[7,4
+Getkey=65⇒1→L
+L→Mat Z[6,1
+L→Mat Z[7,4
 Int A+Int 2Ran#→Mat Z[6,2
 Int D+Int 2Ran#→Mat Z[6,3
-V+2Ran#-(N/3)→V
-Int V→Mat Z[10,6
-VMat Z[10,5→Mat Z[6,4
+S+2Ran#-(N/3)→S
+Int S→Mat Z[10,6
+SMat Z[10,5→Mat Z[6,4
 8
 N<6⇒4
 N<2⇒1
-Z=8⇒8
-Z=10.5⇒6
+Z=8 Or Z=39⇒8
+Z=11⇒6
 Ans→Mat Z[7,1
 For 2→B To 3
   1+Int NRan#
-  Z=8⇒8
+  Z=8 Or Z=39⇒8
   Ans>8⇒8
   Ans→Mat Z[7,B
 Next
@@ -94,15 +94,18 @@ For 1→B To 3
   Ans>17⇒17
   Ans→Mat Z[8,B
 Next
+41→R
+{0,1}
+Prog "Z05"
+Text 51,38,"Z combat un ..."
 115→R
 {M,1}
 Prog "Z20"
-If Z=43 Or Z=44 Or Z=32 Or Z=33 Or Z=8 Or Z=10.5 Or Z=99 Or Z=28.5
+If (Z=8 Or Z=11 Or Z=39 Or Z=99) And Mat Z[8,4
 Then 
-  Z=44 Or Z=33 Or Z=8⇒Text 51,75,"Enzo   "
-  Z=32 Or Z=43⇒Text 51,75,"Redox  "
-  Z=10.5⇒Text 51,75,"le Minautor"
-  Z=28.5⇒Text 51,75,"un Vegetal"
+  Z=8⇒Text 51,75,"Enzo   "
+  Z=11⇒Text 51,75,"le Minautor"
+  Z=39⇒Text 51,75,"Tomberry"
   Z=99⇒Text 51,75,"le Gardien"
 Else 
   M=1⇒Text 51,90,"lapranak"
@@ -113,4 +116,4 @@ Else
   M=6⇒Text 51,88,"goa geant"
   M=7⇒Text 51,90,"spectre"
 IfEnd
-StoPict 1
+StoPict 2

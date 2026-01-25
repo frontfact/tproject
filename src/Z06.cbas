@@ -1,4 +1,4 @@
-StoPict 1
+StoPict 2
 Mat Z[1,1→I
 Mat Z[6,1→J
 Text 51,38,"                      "
@@ -36,7 +36,7 @@ Then
       .3→X
       Prog "Z0"
       Cls
-      RclPict 1
+      RclPict 2
       {M,2}
       Prog "Z20"
       {M,1}
@@ -148,10 +148,11 @@ Else
   Then 
     For 1→A To 3
       Cls
-      RclPict 1
+      RclPict 2
+      Plot 0,0
     Next
     Text 51,38,"pouvoir→morsur       "
-    For 1→A To 6
+    For 1→A To 7
       Orange Text Int 20Ran#+10,Int 20Ran#+40,"#"
     Next
     Mat Z[4,1]-1→Mat Z[4,1
@@ -165,15 +166,16 @@ Else
       .2→X
       Prog "Z0"
       Cls
-      RclPict 1
+      RclPict 2
+      PlotOn 0,0
     Next
     Text 51,38,"pouvoir→griffe       "
     For 0→A To 6
       Orange F-Line 15Ran#+40,30Ran#+25,15Ran#+40,30Ran#+25
     Next
+    Mat Z[5,1]-1→Mat Z[5,1
     6→P
     14→Q
-    Mat Z[5,1]-1→Mat Z[5,1
   IfEnd
   If A=10
   Then 
@@ -181,9 +183,9 @@ Else
     For 1→A To 25
       Orange F-Line 76,37,Int 87Ran#+38,Int 48Ran#+13
     Next
+    Int (Mat Z[6,1]-9-6Ran#→Mat Z[6,1
     6→P
     24→Q
-    Int (Mat Z[6,1]-9-6Ran#→Mat Z[6,1
   IfEnd
   If A=11
   Then 
@@ -205,8 +207,7 @@ Else
     Prog "Z0"
     For 4→P To 6
       Cls
-      Plot 0,0
-      RclPict 1
+      RclPict 2
       Plot 0,0
     Next
     6→P
@@ -218,12 +219,12 @@ Else
     .2→X
     Prog "Z0"
     Cls
-    RclPict 1
+    RclPict 2
     Orange F-Line 90,40,49,40
     .2→X
     Prog "Z0"
     Cls
-    RclPict 1
+    RclPict 2
     Orange Text 22,45,":"
     Text 51,38,"pouvoir→vampyr       "
     .2→X
@@ -295,7 +296,7 @@ P>6⇒P<10⇒Q+Mat Z[6,P-6→Mat Z[6,P-6
 Mat Z[6,1]>Mat Z[7,4⇒Mat Z[7,4→Mat Z[6,1
 110→C
 1=Mat Z[11,3⇒6=Mat Z[11,4⇒80→C
-S=8⇒1+Int 3Ran#→Mat Z[1,1
+Z=8⇒1+Int 3Ran#→Mat Z[1,1
 I≠Mat Z[1,1⇒Orange Text 5,60,Mat Z[1,1]-I
 J≠Mat Z[6,1⇒Orange Text 5,C,Mat Z[6,1]-J
 .7→X
@@ -304,7 +305,7 @@ Prog "Z19"
 0→W
 0→P~Q
 Cls
-RclPict 1
+RclPict 2
 Orange Text 3,6,"   "
 Orange Text 3,6,Mat Z[1,1
 Mat Z[1,1→I

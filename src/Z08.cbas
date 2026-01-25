@@ -52,4 +52,5 @@ Then
   θ=14⇒Text Y,X,"fusil"
   θ=15⇒Text Y,X,"balles"
   θ=16⇒Text Y,X,"LUNE"
+  θ=17⇒Text Y,X,"rhum"
 IfEnd

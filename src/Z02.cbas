@@ -1,11 +1,10 @@
 300/300→Mat Z[10,5
+0→Mat Z[11,5
 Prog "Z03"
 Lbl I
 Prog "Z01"
 Lbl 0
 Deg
-Cls
-RclPict 1
 Mat Z[9,1→A
 Mat Z[9,2→B
 Mat Z[9,4→θ
@@ -13,15 +12,15 @@ Mat Z[9,4→θ
 θ=38⇒Isz A
 θ=28⇒Dsz B
 θ=37⇒Isz B
-38=Mat Z[12,6⇒Prog "Z15"
+37=Mat Z[12,6⇒Prog "Z15"
 For 1→C To 6
   PlotChg A,B
   .1→X
   Prog "Z0"
 Next
 PlotOn A,B
-0
 Lbl 1
+Mat Z[12,6→Z
 Do
   Getkey→θ
 LpWhile Not θ
@@ -43,15 +42,16 @@ If Ans
 Then 
   0→V
   A≥64⇒A≤66⇒B≥18⇒B≤20⇒1→V
-  A≥70⇒A≤72⇒B≥22⇒B≤24⇒2→V
-  A≥104⇒A≤106⇒B≥40⇒B≤42⇒3→V
-  A≥47⇒A≤49⇒B≥36⇒B≤38⇒4→V
-  A≥42⇒A≤44⇒B≥12⇒B≤14⇒5→V
-  A≥67⇒A≤69⇒B≥9⇒B≤11⇒6→V
-  A≥87⇒A≤89⇒B≥22⇒B≤26⇒9→V
-  A≥105⇒A≤107⇒B≥5⇒B≤7⇒10→V
+  A≥67⇒A≤69⇒B≥9⇒B≤11⇒2→V
+  A≥105⇒A≤107⇒B≥5⇒B≤7⇒3→V
+  A≥70⇒A≤72⇒B≥22⇒B≤24⇒4→V
+  A≥104⇒A≤106⇒B≥40⇒B≤42⇒5→V
+  A≥47⇒A≤49⇒B≥36⇒B≤38⇒6→V
+  A≥42⇒A≤44⇒B≥12⇒B≤14⇒7→V
+  A≥87⇒A≤89⇒B≥22⇒B≤26⇒8→V
   If V
   Then 
+    V≠Mat Z[11,1⇒0→Mat Z[11,5
     V→Mat Z[11,1
     Prog "Z03"
     Goto I
@@ -64,12 +64,20 @@ Then
 IfEnd
 If 1>Mat Z[10,3
 Then 
+  StoPict 1
+  0→Mat Z[11,5
   For 0→W To 336 Step 24
     Orange F-Line A,B,A+12cos W,B+9sin W
   Next
+  Cls
+  RclPict 1
+  {Z,0}
   Prog "Z14"
-  Int 6Ran#+7→Mat Z[10,3
-  Goto I
+  7+Int 6Ran#→Mat Z[10,3
+  0→Mat Z[9,4
+  Cls
+  RclPict 1
+  Goto 0
 IfEnd
 0→H
 A=71⇒B=18⇒1→H
@@ -77,13 +85,37 @@ A=124⇒B=11⇒2→H
 A=65⇒B=44⇒3→H
 A=86⇒B=34⇒4→H
 H⇒Goto H
-If A=60 And B=42 And Not Mat Z[10,2
+If Z>30 And A=60 And B=42 And Not Mat Z[10,2
 Then 
-  Prog "Z15"
-  Goto I
+  ClrText
+  "Z> Le tresor..."◢
+  "Z> Ca semble trop"
+  "facile pour etre vrai"◢
+  "Voix> En effet..."
+  2→X
+  Prog "Z0"
+  StoPict 1
+  0→Mat Z[11,5
+  {99,0}
+  Prog "Z14"
+  "Tu m'as vaincu..."
+  "le tresor est a toi."◢
+  Green "Z obtient :"
+  Green "-3 soin+"
+  Green "-3 groseyes"
+  Green "-300 skulls"◢
+  3+Mat Z[2,5→Mat Z[2,5
+  3+Mat Z[7,5→Mat Z[7,5
+  300+Mat Z[10,4→Mat Z[10,4
+  1→Mat Z[10,2
+  Cls
+  RclPict 1
+  Goto 0
 IfEnd
 If Not Int 30Ran# Or θ=48
 Then 
+  StoPict 1
+  0→Mat Z[11,5
   If θ=48
   Then 
     Prog "Z10"
@@ -103,10 +135,14 @@ Then
     IfEnd
   IfEnd
   0→Mat Z[9,4
+  Cls
+  RclPict 1
   Goto 0
 IfEnd
 Goto 1
 Lbl H
+StoPict 1
+0→Mat Z[11,5
 If H=1
 Then 
   Text 1,4,"      "
@@ -149,30 +185,13 @@ Then
   Goto V
 IfEnd
 (W-1)/6→V
-If V=0 Or V=1 Or V=3
-Then 
-  71→U
-  18→V
-  27→θ
-IfEnd
-If V=5
-Then 
-  65→U
-  44→V
-  28→θ
-IfEnd
-If V=2 Or V=6
-Then 
-  124→U
-  11→V
-  28→θ
-IfEnd
-If V=4 Or V=7
-Then 
-  86→U
-  34→V
-  38→θ
-IfEnd
+V=0 Or V=1 Or V=3⇒{71,18,27}
+V=5⇒{65,44,28}
+V=2 Or V=6⇒{124,11,28}
+V=4 Or V=7⇒{86,34,38}
+List Ans[1→U
+List Ans[2→V
+List Ans[3→θ
 180Mat Z[10,5→Tθmax
 RclPict 1
 (V-B)/(U-A)→E
@@ -184,4 +203,6 @@ V→Mat Z[9,2
 θ→Mat Z[9,4
 1→X
 Prog "Z0"
+Cls
+RclPict 1
 Goto 0

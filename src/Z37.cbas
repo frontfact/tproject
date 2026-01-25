@@ -1,0 +1,155 @@
+If W=31
+Then 
+  Z<33⇒"~C'est mon bateau de peche"◢
+  ClrText
+  If Z=33
+  Then 
+    0→Mat Z[12,1
+    Text 53,2,"Z> MONTEZ, VITE !!!"
+    4→X
+    Prog "Z0"
+    PlotOff I,J
+    For 21→A To 11 Step -5
+      Text A,A+37,"θ"
+      .6→X
+      Prog "Z0"
+      Text A,A+37,"~"
+    Next
+    37→Z
+    Prog "Z21"
+  IfEnd
+IfEnd
+2→r
+If W=32 And Z<33 And 0=Mat Z[12,1
+Then 
+  "Garde> Halte-la !"
+  "On ne passe pas !"◢
+  ClrText
+  PlotOff I,J
+  If 3=Mat Z[12,2
+  Then 
+    "Z> Hey ! Je crois quevotre femme est sur"
+    "le point d'acoucher !"◢
+    ClrText
+    "Garde> Oh la la"
+    "il faut que j'aille  l'aider !"◢
+    9→G
+    35→Mat Z[12,1
+  Else 
+    7→G
+  IfEnd
+IfEnd
+2→θ
+If W=33
+Then 
+  If Z>31
+  Then 
+    "Garde> zzzZZZzzz..."
+    1→X
+    Prog "Z0"
+  IfEnd
+  If Z=31
+  Then 
+    "Garde> Halte-la !"
+    "On ne passe pas !"◢
+    ClrText
+    PlotOff I,J
+    If 0<Mat Z[7,6
+    Then 
+      "Z> Et qu'est-ce que  que vous diriez d'un petit remontant ?"◢
+      ClrText
+      "Garde> Ah un p'tit"
+      "rhum j'dis pas non !"◢
+      Isz Z
+      Mat Z[7,6]-1→Mat Z[7,6
+      3→H
+    Else 
+      5→H
+    IfEnd
+  IfEnd
+IfEnd
+2→P
+If W=34
+Then 
+  "Femme> Aie-ouille !!!Des contractions !"◢
+  ClrText
+  "Le bebe ne devrait"
+  "plus tarder..."◢
+  ClrText
+  {2,12,2}
+  Prog "Z24"
+IfEnd
+2→A~B
+If W=36
+Then 
+  "~Le garde en face,"
+  "c'est un gars d'ici !Il va bientot etre"
+  "papa !"◢
+  {1,12,2}
+  Prog "Z24"
+IfEnd
+₁₀A√Prθln B
+If W=37 And Z<33
+Then 
+  "Enzo> Z ! Vous avez  retrouve les prismes de pouvoir !"◢
+  ClrText
+  "Enzo> Il faut les"
+  "amener a l'autel"
+  "du temple et reciter la formule de"
+  "sagesse !"◢
+  ClrText
+IfEnd
+If W=38
+Then 
+  "~Je suis negociant"
+  "a PLYMOUT, je fais"
+  "dans l'import-export d'alcools et de"
+  "spiritueux. Vous en  trouverez en ville."◢
+  ClrText
+IfEnd
+If W=35 And Z=32
+Then 
+  "Z> L'autel !"◢
+  ClrText
+  "Maintenant la formulede sagesse,"
+  "c'est..."?→R
+  ClrText
+  If R≠Ans
+  Then 
+    "Z> ..."◢
+    ClrText
+    "Z> Il ne se passe rien..."◢
+    ClrText
+  Else 
+    "Tomberry> ... HAAHH"
+    "QUEL BONHEUR"
+    "D'ETRE LIBRE !!!"◢
+    ClrText
+    "Enzo> Tomberry !"
+    "Soumets-toi au"
+    "porteur des prismes !"
+    "Obeis-moi !"◢
+    ClrText
+    "E> Je t'ai libere,"
+    "je t'ordonne de fairede moi un DIEU"
+    "maintenant !"◢
+    ClrText
+    "T> TU N'ORDONNES RIENMISERABLE INSECTE..."◢
+    ClrText
+    "T> S'KLAH NYOGTH !"◢
+    ClrText
+    "Un eclair noir"
+    "transperce Enzo !"◢
+    ClrText
+    "T> JE VAIS TOUT"
+    "ANEANTIR..."◢
+    ClrText
+    "T> ET DANSER SUR LES RUINES DE GAIA !!"◢
+    ClrText
+    "Z> Vite !"
+    "Fuyons la ville !"◢
+    ClrText
+    Isz Z
+    40→Mat Z[12,1
+  IfEnd
+IfEnd

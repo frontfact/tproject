@@ -50,9 +50,10 @@ Mat Z[G,H→D
 G→C
 H=6⇒G+10→C
 ((C=14 Or C=7 Or C=11 Or C=12 Or C=13) And Not r) Or C=9 Or C=8 Or C=15 Or Not D⇒Goto 1
-C<8⇒D-1→Mat Z[G,H
+C<8 Or C=17⇒D-1→Mat Z[G,H
 C=1 Or C=2⇒80C+Mat Z[1,1→Mat Z[1,1
 C=3 Or C=4⇒40+Mat Z[C-1,1→Mat Z[C-1,1
+C=17⇒.5Mat Z[6,4→Mat Z[6,4
 If C=5 Or C=6
 Then 
   For 1→X To 2
@@ -66,16 +67,10 @@ Next
 If C=7
 Then 
   Cls
-  RclPict 1
+  RclPict 2
   {5}
   Prog "Z05"
-  320→A
-  27→C
-  For 57→B To 106
-    PlotOn B,16+Abs (Ccos A
-    A+10→A
-    C-.15→C
-  Next
+  Graph (X,Y)=(57+.54T,16+Abs ((27-.0816T)cos (320+5.44T)))
   For 20→C To 180 Step 20
     Orange F-Line 107+10cos (C-20),16+7sin (C-20),107+10cos C,16+7sin C
   Next
@@ -103,7 +98,7 @@ IfEnd
 If C>10 And C<14 And Mat Z[3,1]>19
 Then 
   Cls
-  RclPict 1
+  RclPict 2
   {8}
   Prog "Z05"
   S-Gph1 DrawOff
@@ -111,7 +106,7 @@ Then
   S-Gph3 DrawOn
   If C=11
   Then 
-    Text 51,38," →ennemi plus lent !"
+    Text 51,38,"→ennemi plus lent ! "
     F-Line 55,56,65,38
     F-Line 65,38,55,20
     F-Line 55,20,45,38
@@ -154,7 +149,7 @@ Then
   IfEnd
   If C=12
   Then 
-    Text 51,38," →ennemi plus faible !"
+    Text 51,38,"→ennemi plus faible !"
     {42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}→List1
     {16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}→List3
     DrawStat

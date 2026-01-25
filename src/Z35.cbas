@@ -1,0 +1,151 @@
+If W=26
+Then 
+  If D
+  Then 
+    "Z ! Jessie !"
+    "Je suis Wills, Enzo"
+    "m'a demande de venir vous aider ici."◢
+    ClrText
+    "Wills> Je vous"
+    "propose qu'on fouillela ville et on"
+    "se retrouve ici, OK?"◢
+    Isz Z
+  IfEnd
+  If Z=28
+  Then 
+    "Wills> J'ai fait choublanc, et vous ?"◢
+    ClrText
+    "Z> J'ai rencontre"
+    "un petit vieux un peuetrange qui semblait en connaitre un rayonsur les prismes qu'oncherche."◢
+    ClrText
+    "Jessie> Il y a plus  urgent !"◢
+    ClrText
+    "J'ai recu un appel"
+    "de WINHILL : des"
+    "srilanes attaquent"
+    "la ville, il faut"
+    "qu'on aille aider"
+    "les habitants!"◢
+    Isz Z
+  IfEnd
+IfEnd
+If Int W=27 And Z<28
+Then 
+  W=27.1⇒"~M"◢
+  W=27.2⇒"~o"◢
+  W=27.3⇒"~r"◢
+  W=27.4⇒"~k"◢
+  ""
+IfEnd
+If W=27
+Then 
+  If D
+  Then 
+    "Ancien> As-tu ecoute la foret ?"
+    "Quel est mon nom ?"
+    " "
+    π→M
+    3→O
+    8→R
+    9→K
+    "Z> FACILE, C'EST..."?→Q
+    ClrText
+    If Q≠MORK
+    Then 
+      "Ancien> Ben voyons..."◢
+    Else 
+      "Ancien> Exact."◢
+      ClrText
+      "Ecoute bien."◢
+      ClrText
+      "Les prismes ont troisfonctions."◢
+      ClrText
+      "D'abord, tu peux les"
+      "invoquer lors d'un"
+      "combat."◢
+      ClrText
+      "Ensuite, les 3 reunisforment..."
+      "l'ARME SUPREME !"◢
+      ClrText
+      "Enfin, il parait"
+      "que les inscriptions de sagesse qu'ils"
+      "arborent recelent un secret."
+      "J'ignore lequel."◢
+      ClrText
+      "Ancien> Reviens me"
+      "voir quand tu auras  les 3 prismes et"
+      "3 groseyes."◢
+      Isz Z
+    IfEnd
+  IfEnd
+  If Z>30 And 0=Mat Z[8,5
+  Then 
+    If 0=Mat Z[9,6
+    Then 
+      "Ancien> Z !"
+      "Comment vas-tu mon"
+      "garcon ?"◢
+      ClrText
+      "Z> Bien, merci."◢
+      "Ancien, vous m'aviez dit de revenir vous"
+      "voir si je trouvais  les trois prismes de"
+      "pouvoir."◢
+      ClrText
+      "Z> Vous m'aviez parlede..."
+      "Ancien> Oui..."
+      "L'arme supreme..."◢
+      ClrText
+      If 3>Mat Z[7,5
+      Then 
+        "Ancien> Je te l'ai"
+        "dit : il me faut"
+        "3 groseyes pour"
+        "forger l'arme supreme"◢
+        Return
+      IfEnd
+      "Ancien> Tu as les 3  prismes ainsi que"
+      "3 groseyes ?"
+      "Parfait !"◢
+      ClrText
+      Mat Z[7,5]-3→Mat Z[7,5
+      1→Mat Z[9,6
+      15→Mat Z[12,1
+    IfEnd
+    If Mat Z[9,6]
+    Then 
+      If Mat Z[12,1
+      Then 
+        "Laisse-moi un peu de temps, j'ai quelques manipulations"
+        "a effectuer..."◢
+        ""
+      Else 
+        "Ancien> La Tarte aux groseyes est prete !"◢
+        ClrText
+        "Z> COMMENT ?!!!"◢
+        ClrText
+        "Ancien> Oh, je ne te l'avais pas dit ?"◢
+        ClrText
+        "Z> (une tarte...)"◢
+        ClrText
+        "Z> Merci pour tout,"
+        "l'ancien. Je m'en"
+        "vais."◢
+        ClrText
+        "Z> Je serai digne de l'admiration de Gaia,que je jure de sauverdes griffes de..."
+        "Ancien> Oui-oui merciAdieu."◢
+        1→Mat Z[8,5
+      IfEnd
+    IfEnd
+  IfEnd
+IfEnd
+If W=28 And Not Mat Z[10,1
+Then 
+  "~Mais nous avons le"
+  "soleil...  qui fa"
+  "pousser not'groseye"◢
+  " "
+  "Z obtient 1 groseye."◢
+  7→O
+  Prog "Z07"
+  1→Mat Z[10,1
+IfEnd

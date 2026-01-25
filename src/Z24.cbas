@@ -1,0 +1,6 @@
+Prog "Z23"
+Ans⇒Return
+List Ans[1→C
+List Ans[2→X
+List Ans[3→Y
+2^(C-1)+Mat Z[X,Y→Mat Z[X,Y

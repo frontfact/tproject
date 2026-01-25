@@ -1,5 +1,6 @@
 S-Gph1 DrawOff,xyLine,List1,List2,1,Dot
-S-Gph2 DrawOff,xyLine,List3,List4,1,Dot
+Z≠99⇒S-Gph2 DrawOff,xyLine,List3,List4,1,Dot
+Z=99⇒S-Gph2 DrawOn,xyLine,List3,List4,1,Square
 S-Gph3 DrawOff,xyLine,List1,List3,1,Dot
 8→Dim List1
 List 1→List3

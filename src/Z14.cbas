@@ -1,3 +1,4 @@
+StoPict 1
 Prog "Z12"
 Goto 1
 Lbl D
@@ -26,7 +27,7 @@ IfEnd
 0→P~Q
 Lbl 1
 Cls
-RclPict 1
+RclPict 2
 Orange Text 3,6,"   "
 Orange Text 3,6,Mat Z[1,1
 Green Text 25,3,"-stats- "
@@ -41,22 +42,22 @@ For 2→V To 5
     If Not Int (4Ran#Mat Z[6,4
     Then 
       Prog "Z06"
-      Z=8⇒Return
+      Z=8⇒Goto E
     IfEnd
   Next
 Next
 Mat Z[1,1→I
 Mat Z[6,1→J
 Text 57,3,"[EXE]→menu action             "
-StoPict 1
+StoPict 2
 Do
   If Not Int (5Ran#Mat Z[6,4
   Then 
     Prog "Z06"
-    Z=8⇒Return
+    Z=8⇒Goto E
     Green Text 43,14,Mat Z[4,1
     Green Text 49,14,Mat Z[5,1
-    StoPict 1
+    StoPict 2
   IfEnd
   Getkey
 LpWhile Not Ans
@@ -65,17 +66,17 @@ Green Text 25,3," attak  "
 Green Text 31,3," pouvoir"
 Green Text 37,3," objet  "
 Green Text 43,3," aprend"
-Green Text 49,3," fuite  "
+Green Text 49,3," fuite   "
 1→r
 Text 57,3,"[EXE]→choisir une action      "
-StoPict 1
+StoPict 2
 Do
   Green F-Line 3,-6r+43,5,-6r+43
   Do
     If Not Int (5Ran#Mat Z[6,4
     Then 
       Prog "Z06"
-      Z=8⇒Return
+      Z=8⇒Goto E
     IfEnd
     Getkey→θ
     θ=47⇒Goto 1
@@ -88,12 +89,13 @@ Do
   1
   θ=31 And (r=1 Or r=2 Or (r=4 And Mat Z[11,3] And Mat Z[11,4]) Or r=3 Or (r=5 And Not Mat Z[8,4⇒0
 LpWhile Ans
+Text 51,38,"                      "
 If r=5
 Then 
   If Not Int 2Ran#
   Then 
     Text 57,3,"Z prend la fuite...           "
-    .6→X
+    2→X
     Prog "Z0"
     Return
   Else 
@@ -108,7 +110,7 @@ If r=3
 Then 
   Prog "Z09"
   Cls
-  RclPict 1
+  RclPict 2
   PlotOn 0,0
   Goto D
 IfEnd
@@ -119,7 +121,7 @@ Then
     If Not Int (3Ran#Mat Z[6,4
     Then 
       Prog "Z06"
-      Z=8⇒Return
+      Z=8⇒Goto E
     IfEnd
     Mat Z[E,4→C
     {1,C,6E+19,7}
@@ -143,12 +145,12 @@ Then
     Else 
       Orange Text 19,28,O
     IfEnd
-    StoPict 1
+    StoPict 2
     Do
       If Not Int (5Ran#Mat Z[6,4
       Then 
         Prog "Z06"
-        Z=8⇒Return
+        Z=8⇒Goto E
       IfEnd
       Getkey→θ
       θ=31 And (Not V Or O>Mat Z[2,1⇒0→θ
@@ -164,7 +166,6 @@ Then
       Goto I
     IfEnd
   LpWhile θ≠31
-  Text 51,38,"                      "
   Mat Z[2,1]-O→Mat Z[2,1
   41→R
   If V=1
@@ -180,14 +181,14 @@ Then
   If V=2
   Then 
     Text 51,38,"defense +1"
-    {5,3}
+    {5,3,7,1}
     Prog "Z05"
     4→P
     1→Q
   IfEnd
   If V=3
   Then 
-    Text 51,38,"defense ennemi -1     "
+    Text 51,38,"defense ennemi -1"
     {8}
     Prog "Z05"
     65→R
@@ -220,7 +221,7 @@ Then
     .3→X
     Prog "Z0"
     Cls
-    RclPict 1
+    RclPict 2
     Plot 0,0
     .2→X
     Prog "Z0"
@@ -277,7 +278,7 @@ Then
     If Not Int (3Ran#Mat Z[6,4
     Then 
       Prog "Z06"
-      Z=8⇒Return
+      Z=8⇒Goto E
     IfEnd
     Mat Z[E,3]→C
     {2,C,6E+19,7}
@@ -308,12 +309,12 @@ Then
     Else 
       Orange Text 19,28,O
     IfEnd
-    StoPict 1
+    StoPict 2
     Do
       If Not Int (5Ran#Mat Z[6,4
       Then 
         Prog "Z06"
-        Z=8⇒Return
+        Z=8⇒Goto E
       IfEnd
       Getkey→θ
       θ=31 And (Not V Or O>Mat Z[3,1⇒0→θ
@@ -330,7 +331,6 @@ Then
     IfEnd
   LpWhile θ≠31
   Mat Z[3,1]-O→Mat Z[3,1
-  Text 51,38,"                      "
   If V=1 Or V=2
   Then 
     V=1⇒Text 51,38,"defense +1"
@@ -375,13 +375,13 @@ Then
     Do
     LpWhile Not Getkey
     Cls
-    RclPict 1
+    RclPict 2
     Plot 0,0
     0→P~Q
   IfEnd
   If V=6
   Then 
-    Text 51,38,"attaque+1 / defense+1"
+    Text 51,38,"att+1 / def+1"
     Orange Circle 49,37,10
     For 0→A To 9
       Orange F-Line 49,37,Int 50Ran#+24,Int 50Ran#+12
@@ -401,16 +401,16 @@ Then
   Then 
     For 1→A To 3
       Cls
-      RclPict 1
+      RclPict 2
       Plot 0,0
     Next
-    Text 51,38,"attaque ennemi -1"
+    Text 51,38,"attaque ennemi -1     "
     For 1→A To 7
       Orange Text Int 20Ran#+20,Int 20Ran#+96,"#"
     Next
+    Mat Z[6,2]-1→Mat Z[6,2
     1→P
     14→Q
-    Mat Z[6,2]-1→Mat Z[6,2
   IfEnd
   If V=9
   Then 
@@ -419,9 +419,10 @@ Then
       .2→X
       Prog "Z0"
       Cls
-      RclPict 1
+      RclPict 2
+      PlotOn 0,0
     Next
-    Text 51,38,"defense ennemi -1"
+    Text 51,38,"defense ennemi -1     "
     For 0→A To 5
       Orange F-Line 11Ran#+99,25Ran#+20,11Ran#+99,25Ran#+20
     Next
@@ -458,8 +459,7 @@ Then
     Next
     For 1→A To 3
       Cls
-      Plot 0,0
-      RclPict 1
+      RclPict 2
       Plot 0,0
     Next
     1→P
@@ -471,16 +471,16 @@ Then
     .2→X
     Prog "Z0"
     Cls
-    RclPict 1
+    RclPict 2
     Orange F-Line 67,53,104,34
     .3→X
     Prog "Z0"
     Cls
-    RclPict 1
+    RclPict 2
     Orange Text 25,104,":"
     .3→X
     Prog "Z0"
-    Text 51,38,"absorbe vie ennemi !"
+    Text 51,38,"absorbe vie ennemi !  "
     For 103→A To 47 Step -2
       Orange F-Line A,36+3Ran#,A-1,36+3Ran#
     Next
@@ -565,8 +565,8 @@ Then
   Next
   If L
   Then 
-    Text 57,3,"tu connais deja cela.         "
-    .7→X
+    Text 57,3,"tu connais deja cela."
+    1→X
     Prog "Z0"
     0→P~Q
     Goto D
@@ -615,7 +615,7 @@ Then
     Next
     1→Q
     Do
-      Green Text 19+6Q,3,"-"
+      Green Text 19+6Q,2,"-"
       Do
         Getkey→θ
         If θ=47
@@ -625,13 +625,12 @@ Then
           Goto D
         IfEnd
       LpWhile Not θ
-      Green Text 19+6Q,3," "
+      Green Text 19+6Q,2," "
       θ=28⇒Dsz Q
       θ=37⇒Isz Q
       Not Q⇒5→Q
       Q=6⇒1→Q
     LpWhile θ≠31
-    Green Text 19+6Q,3,"-"
     Mat Z[Q,5-O→C
     Text 51,38,"Z oublie            "
     {O,C,51,73}
@@ -641,7 +640,7 @@ Then
     Text 57,3," et il apprend                "
     {O,C,57,64}
     Prog "Z08"
-    .7→X
+    1.5→X
     Prog "Z0"
     0→P~Q
     0→Mat Z[11,3
@@ -669,14 +668,14 @@ For 1→A To 2
   A=1⇒B→S
   A=2⇒B→T
 Next
+Mat Z[12,6→Z
 If Mat Z[8,4
 Then 
-  If 29=Mat Z[12,6
+  If Z=29
   Then 
-    13→S
-    0→T
+    .→S~T
   IfEnd
-  If 10.5=Mat Z[12,6
+  If Z=11
   Then 
     2→S
     4→T
@@ -715,7 +714,7 @@ E+A→Mat Z[11,6
 Green Text 10,80,"Recompense:"
 Green Text 16,84,"$"
 Not Mat Z[8,4⇒Int (25+8M+9Ran#+0.4Mat Z[11,2→A
-23=Mat Z[12,6⇒5000→A
+Z=23⇒5000→A
 If A
 Then 
   A+Mat Z[10,4→Mat Z[10,4
@@ -773,6 +772,8 @@ For 4→T To 5
   Orange Text 17+6T,94,Mat Z[T,1
 Next
 Orange Text 53,94,Mat Z[1,1
-Orange Text 53,112,Mat Z[1,2◢
+Orange Text 53,112,Mat Z[1,2]◢
+""
+Lbl E
 ClrList
 ClrText

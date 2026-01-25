@@ -1,0 +1,129 @@
+If W=1 And D
+Then 
+  "Il se reveille."
+  "Laissez-moi seul"
+  "avec lui."◢
+  ClrText
+  "ZZZZ...    zzzz...    ZZZZ... uhn?!"◢
+  ClrText
+  "Redox> Z! Ca va? J'aibien cru que tu ne"
+  "reprendrais jamais"
+  "conscience!"◢
+  ClrText
+  "R> Enzo est sur le"
+  "point de trouver"
+  "les Lunes, il faut"
+  "l'en empecher!"◢
+  ClrText
+  "R> Bute-le et reviensme voir."◢
+  ClrText
+  "R> Va au magasin"
+  "t'acheter soins,"
+  "adrena et chlore,"
+  "tu en auras besoin."◢
+  Isz Z
+IfEnd
+If W=2 And Z<11
+Then 
+  "Z> Ou puis-je trouverEnzo ?"
+  " "
+  "~Oh... il va souvent au resto du Sud-Ouest"◢
+  ""
+IfEnd
+If W=3
+Then 
+  If Z<7
+  Then 
+    "~ RESTO ~"
+    "Z> Ou est Enzo ?"
+    "~He la !"
+    "Ce renseignement ne"
+    "sera pas gratuit:"
+    "Il t'en coutera..."
+    "disons deux gemmes"◢
+    ""
+    If Z=2
+    Then 
+      Int 8Ran#+13→Mat Z[12,1
+      4→Z
+    IfEnd
+  IfEnd
+  If Z=7
+  Then 
+    "~Merci beaucoup."◢
+    ClrText
+    Isz Z
+  IfEnd
+  If Z=7 Or Z=8
+  Then 
+    "Enzo habite dans une maison a l'est."◢
+    8→Z
+  IfEnd
+IfEnd
+If W=6 And D
+Then 
+  "Z> Il y a quelqu'un ? "◢
+  "~NON"◢
+  " "
+  "Z> Je m'autorise"
+  "donc a prendre cette gemme."◢
+  Isz Z
+IfEnd
+If W=8
+Then 
+  If D
+  Then 
+    "Z> Enzo, tu es mort !Prepare-toi au combat "
+    "Enzo> Incarnation GOA"
+    4→X
+    Prog "Z0"
+    {Z,1}
+    Prog "Z14"
+    1→X
+    Prog "Z0"
+    ClrText
+    "E> Mais c'est toi, Z?Z> Il parait, oui."◢
+    " "
+    "E> C'est Redox qui"
+    "t'envoie!"◢
+    ClrText
+    "Ne lui fais pas"
+    "confiance, il veut"
+    "recuperer les prismesde pouvoir pour"
+    "prendre le controle  de la FFC."◢
+    ClrText
+    "Faisons plutot"
+    "equipe tous les deux.Prends ces skulls et repose-toi a"
+    "l'auberge."◢
+    ClrText
+    "Ensuite, va aux"
+    "catacombes de TARA,  l'hermite qui s'y"
+    "trouve pourrait bien nous aider..."◢
+    ClrText
+    "Moi je vais creuser  une piste au nord,"
+    "on se retrouve ici"
+    "des que possible !"◢
+    60+Mat Z[10,4→Mat Z[10,4
+    10→Z
+    π
+  IfEnd
+  If Z=18
+  Then 
+    "Enzo> Tu as reussi a recuperer le prisme ?Parfait !"◢
+    ClrText
+    "E> Il existe trois   prismes. Chacun"
+    "possede des pouvoirs terribles et une"
+    "inscription de"
+    "sagesse."◢
+    ClrText
+    "C'est l'inscription"
+    "qui m'interesse, tu"
+    "peux garder le prisme"◢
+    "Z> (mais que me"
+    "cache-t-il ?)"◢
+    ClrText
+    "E> Un ami m'a donne  rendez-vous a ELOS,"
+    "pres du magasin. Tu  m'accompagnes ?"◢
+    Isz Z
+  IfEnd
+IfEnd
