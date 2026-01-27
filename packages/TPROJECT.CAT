@@ -1766,7 +1766,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7296
+Capacity:7209
 File Name:Z14
 Group Name:
 Password:
@@ -2425,11 +2425,13 @@ W+\Mat Z[1,X\->\Mat Z[1,X
 \Orange \Text 22,22,"="
 \Orange \Text 22,27,E+A
 E+A\->\Mat Z[11,6
-0\->A
 \Green \Text 10,80,"Recompense:"
 \Green \Text 16,84,"\@24"
-\Not \Mat Z[8,4\=>\Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
-Z=23\=>5000\->A
+.\->A
+\If \Mat Z[8,4
+\Then Z=23\=>5000\->A
+\Else \Int (25+8M+9\Ran#+0.4\Mat Z[11,2\->A
+\IfEnd
 \If A
 \Then A+\Mat Z[10,4\->\Mat Z[10,4
 \For 0\->B \To A \Step A/5
@@ -2450,28 +2452,21 @@ T\->O
 \Prog "Z07"
 \IfEnd
 \If \theta<\Mat Z[11,2
-\Then 5-\Int 2\Ran#\->K
-\If \Int 2\Ran#
-\Then \Mat Z[4,2]<\Mat Z[5,2\=>4\->K
-\Mat Z[5,2]<\Mat Z[4,2\=>5\->K
+\Then \If \Mat Z[5,2]<\Mat Z[4,2
+\Then 5
+\Else 4
 \IfEnd
-1+\Mat Z[K,2\->\Mat Z[K,2
-\For 1\->Y \To 2
-\Int (18+3\theta+\Mat Z[1,Y\->\Mat Z[1,Y
-\Next 
+1+\Mat Z[\Ans,2\->\Mat Z[\Ans,2
+\Int (18+3\theta+\Mat Z[1,2\->\Mat Z[1,2 
 \For 2\->X \To 3
-\For 1\->Y \To 2
-\Int (7+X+\Mat Z[X,Y\->\Mat Z[X,Y
-\Next 
+\Int (7+X+\Mat Z[X,2\->\Mat Z[X,2
 \Next 
 \IfEnd
 \For 4\->X \To 5
 \Mat Z[X,2\->\Mat Z[X,1
 \Next 
 \For 2\->X \To 5
-\For 1\->Y \To 2
-99<\Mat Z[X,Y\=>99\->\Mat Z[X,Y
-\Next 
+99<\Mat Z[X,2\=>99\->\Mat Z[X,2
 \Next 
 \Orange \Text 35,83,"niveau:"
 \Orange \Text 35,114,\Mat Z[11,2
