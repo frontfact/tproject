@@ -2415,14 +2415,7 @@ W+\Mat Z[1,X\->\Mat Z[1,X
 1+\Mat Z[12,3\->\Mat Z[12,3
 \Mat Z[12,3\->A
 \Mat Z[11,2\->\theta
-1
-A>1\=>2
-A>5\=>3
-A>9\=>4
-A>14\=>5
-A>19\=>6
-A>25\=>7
-\Ans\->\Mat Z[11,2
+\Int (.1875A+2.125\->\Mat Z[11,2
 \Orange \Text 10,1,"Experience:"
 \Mat Z[11,6\->E
 \Int 100\Ran#+2\Mat Z[7,4]+40\Mat Z[6,2]+40\Mat Z[6,3]+200-20\Mat Z[10,6\->A
