@@ -1002,7 +1002,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3602
+Capacity:3600
 File Name:Z09
 Group Name:
 Password:
@@ -1174,8 +1174,8 @@ C+.6\->C
 \ViewWindow 127,-1,0,63,1,0
 \RclPict 2
 \Prog "Z20"
-\Text 30,49,"THE END"\Disp\Cls
 \ClrText
+\Text 30,49,"THE END"
 \Stop
 \IfEnd
 \IfEnd
@@ -1492,7 +1492,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1476
+Capacity:1529
 File Name:Z12
 Group Name:
 Password:
@@ -1516,9 +1516,9 @@ Option4:
 \Then Z=8\=>{6,9,9,99,11}
 Z=11\=>{5,4,4,120,11}
 Z=23\=>{3,7,6,333,7}
-Z=29\=>{2,10,9,150+50\Ran#,7}
+Z=29\=>{2,A-1,D-2,150+50\Ran#,7}
 Z=39\=>{8,A+9,D+9,987,8}
-\Else Z=99\=>{1,15,12,600,7}
+\Else Z=99\=>{1,15,12,589,7}
 \IfEnd
 \If \Dim \List \Ans=1
 \Then 0\->\Mat Z[8,4
@@ -1539,8 +1539,6 @@ M=7\=>{7,N+2,2+2N/3,40+15N+13N\Ran#,8}
 \List \Ans[3\->D
 \Int \List \Ans[4\->L
 \List \Ans[5\->S
-{M}
-\Prog "Z22"
 \Cls
 \Horizontal 1
 \Vertical 127
@@ -1563,35 +1561,35 @@ M=7\=>{7,N+2,2+2N/3,40+15N+13N\Ran#,8}
 \Getkey=65\=>1\->L
 L\->\Mat Z[6,1
 L\->\Mat Z[7,4
-\Int A+\Int 2\Ran#\->\Mat Z[6,2
-\Int D+\Int 2\Ran#\->\Mat Z[6,3
+\Int (A+2\Ran#\->\Mat Z[6,2
+\Int (D+2\Ran#\->\Mat Z[6,3
 S+2\Ran#-(N/3)\->S
 \Int S\->\Mat Z[10,6
 S\Mat Z[10,5\->\Mat Z[6,4
-8
-N<6\=>4
-N<2\=>1
-Z=8\ Or Z=39\=>8
-Z=11\=>6
-\Ans\->\Mat Z[7,1
-\For 2\->B \To 3
-1+\Int N\Ran#
-Z=8\ Or Z=39\=>8
-\Ans>8\=>8
-\Ans\->\Mat Z[7,B
+N+2\->S
+S>8\=>8\->S
+S-4\->L
+S<1\=>1\->L
+\Seq(X,X,L,S,1)\->\List1
+\Seq(\Ran#,X,1,S-L+1,1)\->\List2
+\SortD(\List 2,\List 1)
+Z=8\ Or Z=39\=>{8,8,8}\->\List1
+\For 1\->S \To 3
+\List 1[S\->\Mat Z[7,S
 \Next 
-\For 1\->B \To 3
-N=1\=>\Int 4\Ran#+1
-N=2\=>\Int 5\Ran#+3
-N=3\=>\Int 4\Ran#+6
-N=4\=>\Int 5\Ran#+6
-N=5\=>\Int 6\Ran#+8
-N=6\=>\Int 6\Ran#+10
-N=7\=>\Int 8\Ran#+10
-Z=8\=>15
-\Ans>17\=>17
-\Ans\->\Mat Z[8,B
+3N\->S
+S>17\=>17\->S
+S-6\->L
+S<1\=>1\->L
+\Seq(X,X,L,S,1)\->\List1
+\Seq(\Ran#,X,1,S-L+1,1)\->\List2
+\SortD(\List 2,\List 1)
+Z=8\ Or Z=39\=>{15,15,15}\->\List1
+\For 1\->S \To 3
+\List 1[S\->\Mat Z[8,S
 \Next 
+{M}
+\Prog "Z22"
 41\->R
 {0,1}
 \Prog "Z05"
@@ -2867,7 +2865,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:845
+Capacity:861
 File Name:Z22
 Group Name:
 Password:
@@ -2877,8 +2875,10 @@ Option3:
 Option4:
 %Data Record
 \S-Gph1 \DrawOff,\xyLine,\List1,\List2,1,\Dot
-Z\<>99\=>\S-Gph2 \DrawOff,\xyLine,\List3,\List4,1,\Dot
-Z=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
+\S-Gph2 \DrawOff,\xyLine,\List3,\List4,1,\Dot
+\If \Mat Z[8,4
+\Then Z=11\ Or Z=99\=>\S-Gph2 \DrawOn,\xyLine,\List3,\List4,1,\Square
+\IfEnd
 \S-Gph3 \DrawOff,\xyLine,\List1,\List3,1,\Dot
 8\->\Dim \List1
 \List 1\->\List3
