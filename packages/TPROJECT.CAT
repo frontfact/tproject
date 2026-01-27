@@ -1766,7 +1766,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7209
+Capacity:7175
 File Name:Z14
 Group Name:
 Password:
@@ -2464,9 +2464,6 @@ T\->O
 \IfEnd
 \For 4\->X \To 5
 \Mat Z[X,2\->\Mat Z[X,1
-\Next 
-\For 2\->X \To 5
-99<\Mat Z[X,2\=>99\->\Mat Z[X,2
 \Next 
 \Orange \Text 35,83,"niveau:"
 \Orange \Text 35,114,\Mat Z[11,2
