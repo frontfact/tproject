@@ -627,12 +627,12 @@ Option4:
 \StoPict 2
 \Mat Z[1,1\->I
 \Mat Z[6,1\->J
-\Text 51,38,"                      "
+\Text 51,39,"                      "
 \Int 2\Ran#
 \If \Ans
 \Then \Mat Z[7,1+\Int 3\Ran#\->A
 3>\Mat Z[6,3\=>\Not \Int (\Ran#\Mat Z[6,3\=>2\->A
-\Text 51,38,"attak\->"
+\Text 51,39,"attak\->"
 {1,A,51,64}
 \Prog "Z08"
 1\->\Mat Z[11,3
@@ -703,7 +703,7 @@ A=7\=>{M,7}
 \Else \Mat Z[8,1+\Int 3\Ran#\->A
 2\->\Mat Z[11,3
 A\->\Mat Z[11,4
-\Text 51,38,"pouvoir\->"
+\Text 51,39,"pouvoir\->"
 {2,A,51,73}
 \Prog "Z08"
 \If A=1\ Or A=2
@@ -753,7 +753,7 @@ A\->\Mat Z[11,4
 \RclPict 2
 \Plot 0,0
 \Next 
-\Text 51,38,"pouvoir\->morsur       "
+\Text 51,39,"pouvoir\->morsur       "
 \For 1\->A \To 7
 \Orange \Text \Int 20\Ran#+10,\Int 20\Ran#+40,"#"
 \Next 
@@ -770,7 +770,7 @@ A\->\Mat Z[11,4
 \RclPict 2
 \PlotOn 0,0
 \Next 
-\Text 51,38,"pouvoir\->griffe       "
+\Text 51,39,"pouvoir\->griffe       "
 \For 0\->A \To 6
 \Orange \F-Line 15\Ran#+40,30\Ran#+25,15\Ran#+40,30\Ran#+25
 \Next 
@@ -823,7 +823,7 @@ A>24\=>\Orange \F-Line -A+90,38-A/2,-A+90,38+A/2
 \Cls
 \RclPict 2
 \Orange \Text 22,45,":"
-\Text 51,38,"pouvoir\->vampyr       "
+\Text 51,39,"pouvoir\->vampyr       "
 .2\->X
 \Prog "Z0"
 \For 47\->A \To 99 \Step 2
@@ -908,7 +908,7 @@ J\<>\Mat Z[6,1\=>\Orange \Text 5,C,\Mat Z[6,1]-J
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:68
+Capacity:77
 File Name:Z07
 Group Name:
 Password:
@@ -919,11 +919,13 @@ Option4:
 %Data Record
 \Dim \List \Ans\->Y
 \For 1\->X \To Y
-5\->Q
 \List \Ans[X
+\If \Ans
+\Then 5\->Q
 \Ans>10\=>6\->Q
 10\Frac .1\Ans\->P
 1+\Mat Z[P,Q\->\Mat Z[P,Q
+\IfEnd
 \Next 
 %End
 %Header Record
@@ -1195,7 +1197,7 @@ C=13\=>\Locate 8,4,"\In B"
 \S-Gph2 \DrawOff
 \S-Gph3 \DrawOn
 \If C=11
-\Then \Text 51,38,"\->ennemi plus lent ! "
+\Then \Text 51,39,"\->ennemi plus lent ! "
 \F-Line 55,56,65,38
 \F-Line 65,38,55,20
 \F-Line 55,20,45,38
@@ -1235,7 +1237,7 @@ G=2\=>0\->G
 3\Mat Z[10,5]+\Mat Z[6,4\->\Mat Z[6,4
 \IfEnd
 \If C=12
-\Then \Text 51,38,"\->ennemi plus faible !"
+\Then \Text 51,39,"\->ennemi plus faible !"
 {42,47,45,48,55,65,66,71,71,65,65,70,62,58,59,59,56}\->\List1
 {16,31,45,48,55,55,52,49,47,46,44,40,40,43,33,28,16}\->\List3
 \DrawStat
@@ -1253,7 +1255,7 @@ G=2\=>0\->G
 \Next 
 \IfEnd
 \If C=13
-\Then \Text 51,38," \->Z absorbe la vie ! "
+\Then \Text 51,39," \->Z absorbe la vie ! "
 {59,45,39,59,62,57,53,54,55,56,61,65,70,68,69,75,72,68,65,64,65,59}\->\List1
 {55,50,40,46,44,37,36,34,32,30,33,34,44,47,49,48,53,55,60,54,47,55}\->\List3
 \DrawStat
@@ -1395,7 +1397,7 @@ A=5\=>\Return
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:822
+Capacity:823
 File Name:Z11
 Group Name:
 Password:
@@ -1474,7 +1476,8 @@ U>8\=>1\->U
 \Green \Text 19,91,\Ans-\Mat Z[10,4
 .6\->X
 \Prog "Z0"
-\Else {\List 1[U]}
+\Else \List 1[U
+{\Ans}
 \Prog "Z07"
 \Mat Z[10,4]-\List 2[U\->\Mat Z[10,4
 \Green \Text 3,49,"    "
@@ -1486,7 +1489,7 @@ U>8\=>1\->U
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1519
+Capacity:1506
 File Name:Z12
 Group Name:
 Password:
@@ -1538,17 +1541,16 @@ M=7\=>{7,N+2,2+2N/3,40+15N+13N\Ran#,8}
 \Vertical 127
 \Horizontal 63
 \Vertical 1
-\F-Line 1,9,36,9
-\F-Line 36,9,36,63
-\F-Line 1,55,36,55
+\F-Line 1,9,37,9
+\F-Line 37,9,37,63
+\F-Line 1,55,37,55
 \Orange \Text 3,6,\Mat Z[1,1
 \Orange \Text 3,18,"\slash"
 \Orange \Text 3,22,\Mat Z[1,2
 \F-Line 37,15,127,15
-\Green \F-Line 36,16,127,16
+\Green \F-Line 37,16,127,16
 \Green \F-Line 126,16,126,62
 \F-Line 126,62,37,62
-\F-Line 37,62,37,16
 \Orange \Text 11,3,"NIVEAU"
 \Orange \Text 11,30,N
 \Graph (X,Y)=(37+T,16+\Ran#
@@ -1562,7 +1564,7 @@ S\Mat Z[10,5\->\Mat Z[6,4
 N+2\->S
 S>8\=>8\->S
 S-4\->L
-S<1\=>1\->L
+L<1\=>1\->L
 \Seq(X,X,L,S,1)\->\List1
 \Seq(\Ran#,X,1,S-L+1,1)\->\List2
 \SortD(\List 2,\List 1)
@@ -1572,8 +1574,8 @@ Z=8\ Or Z=39\=>{8,8,8}\->\List1
 \Next 
 3N\->S
 S>17\=>17\->S
-S-6\->L
-S<1\=>1\->L
+S-10\->L
+L<1\=>1\->L
 \Seq(X,X,L,S,1)\->\List1
 \Seq(\Ran#,X,1,S-L+1,1)\->\List2
 \SortD(\List 2,\List 1)
@@ -1586,7 +1588,7 @@ Z=8\ Or Z=39\=>{15,15,15}\->\List1
 41\->R
 {0,1}
 \Prog "Z05"
-\Text 51,38,"Z combat un ..."
+\Text 51,39,"Z combat un ..."
 115\->R
 {M,1}
 \Prog "Z20"
@@ -1757,7 +1759,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7166
+Capacity:7165
 File Name:Z14
 Group Name:
 Password:
@@ -1830,7 +1832,7 @@ Z=8\=>\GotoE
 \Green \Text 25,3," attak  "
 \Green \Text 31,3," pouvoir"
 \Green \Text 37,3," objet  "
-\Green \Text 43,3," aprend."
+\Green \Text 43,3," aprend "
 \Green \Text 49,3," fuite   "
 1\->\r
 \Text 57,3,"[EXE]\->choisir une action      "
@@ -1853,7 +1855,7 @@ Z=8\=>\GotoE
 1
 \theta=31\ And (\r=1\ Or \r=2\ Or (\r=4\ And \Mat Z[11,3]\ And \Mat Z[11,4])\ Or \r=3\ Or (\r=5\ And \Not \Mat Z[8,4\=>0
 \LpWhile \Ans
-\Text 51,38,"                      "
+\Text 51,39,"                      "
 \If \r=5
 \Then \If \Not \Int 2\Ran#
 \Then \Text 57,3,"Z prend la fuite...           "
@@ -1932,14 +1934,14 @@ Z=8\=>\GotoE
 6\->Q
 \IfEnd
 \If V=2
-\Then \Text 51,38,"defense +1"
+\Then \Text 51,39,"defense +1"
 {5,3,7,1}
 \Prog "Z05"
 4\->P
 1\->Q
 \IfEnd
 \If V=3
-\Then \Text 51,38,"defense ennemi -1"
+\Then \Text 51,39,"defense ennemi -1"
 {8}
 \Prog "Z05"
 65\->R
@@ -2072,8 +2074,8 @@ Z=8\=>\GotoE
 \LpWhile \theta\<>31
 \Mat Z[3,1]-O\->\Mat Z[3,1
 \If V=1\ Or V=2
-\Then V=1\=>\Text 51,38,"defense +1"
-V=2\=>\Text 51,38,"attaque +1"
+\Then V=1\=>\Text 51,39,"defense +1"
+V=2\=>\Text 51,39,"attaque +1"
 \Circle 49,37,10
 5-V\->P
 1\->Q
@@ -2116,7 +2118,7 @@ V=2\=>\Text 51,38,"attaque +1"
 0\->P~Q
 \IfEnd
 \If V=6
-\Then \Text 51,38,"att+1 \slash def+1"
+\Then \Text 51,39,"att+1 \slash def+1"
 \Orange \Circle 49,37,10
 \For 0\->A \To 9
 \Orange \F-Line 49,37,\Int 50\Ran#+24,\Int 50\Ran#+12
@@ -2137,7 +2139,7 @@ V=2\=>\Text 51,38,"attaque +1"
 \RclPict 2
 \Plot 0,0
 \Next 
-\Text 51,38,"attaque ennemi -1     "
+\Text 51,39,"attaque ennemi -1     "
 \For 1\->A \To 7
 \Orange \Text \Int 20\Ran#+20,\Int 20\Ran#+96,"#"
 \Next 
@@ -2154,7 +2156,7 @@ V=2\=>\Text 51,38,"attaque +1"
 \RclPict 2
 \PlotOn 0,0
 \Next 
-\Text 51,38,"defense ennemi -1     "
+\Text 51,39,"defense ennemi -1     "
 \For 0\->A \To 5
 \Orange \F-Line 11\Ran#+99,25\Ran#+20,11\Ran#+99,25\Ran#+20
 \Next 
@@ -2172,7 +2174,7 @@ V=2\=>\Text 51,38,"attaque +1"
 24\->Q
 \IfEnd
 \If V=11
-\Then \Text 51,38,"regenere..."
+\Then \Text 51,39,"regenere..."
 \Green \Circle 49,37,10
 \For 0\->A \To 9
 \Green \F-Line 49,37,40\Ran#+29,40\Ran#+17
@@ -2208,7 +2210,7 @@ W>23\=>\Orange \F-Line W+65,38-.5W,W+65,38+.5W
 \Orange \Text 25,104,":"
 .3\->X
 \Prog "Z0"
-\Text 51,38,"absorbe vie ennemi !  "
+\Text 51,39,"absorbe vie ennemi !  "
 \For 103\->A \To 47 \Step -2
 \Orange \F-Line A,36+3\Ran#,A-1,36+3\Ran#
 \Next 
@@ -2274,7 +2276,7 @@ V=13\=>28\->Q
 \GotoD
 \IfEnd
 \If \r=4
-\Then \Text 51,38,"apprendre        ?    "
+\Then \Text 51,39,"apprendre        ?    "
 \Mat Z[11,3\->O
 \Mat Z[11,4\->C
 {O,C,51,81}
@@ -2319,7 +2321,7 @@ L\=>\Break
 .7\->X
 \Prog "Z0"
 \Green \Text 51,81,"       "
-\Text 51,38,"supprimer quoi ?     "
+\Text 51,39,"supprimer quoi ?     "
 \Text 57,3,"[EXE]\->choisir   [EXIT]\->quitter"
 \For 25\->W \To 49 \Step 6
 \Green \Text W,3,"        "
@@ -2348,8 +2350,8 @@ C\->W
 Q=6\=>1\->Q
 \LpWhile \theta\<>31
 \Mat Z[Q,5-O\->C
-\Text 51,38,"Z oublie            "
-{O,C,51,73}
+\Text 51,39,"Z oublie            "
+{O,C,51,74}
 \Prog "Z08"
 \Mat Z[11,4\->C
 C\->\Mat Z[Q,5-O
@@ -2446,7 +2448,7 @@ E+A\->\Mat Z[11,6
 \Else 4
 \IfEnd
 1+\Mat Z[\Ans,2\->\Mat Z[\Ans,2
-\Int (18+3\theta+\Mat Z[1,2\->\Mat Z[1,2 
+\Int (18+3\theta+\Mat Z[1,2\->\Mat Z[1,2
 \For 2\->X \To 3
 \Int (7+X+\Mat Z[X,2\->\Mat Z[X,2
 \Next 
