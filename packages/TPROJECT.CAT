@@ -908,7 +908,7 @@ J\<>\Mat Z[6,1\=>\Orange \Text 5,C,\Mat Z[6,1]-J
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:87
+Capacity:68
 File Name:Z07
 Group Name:
 Password:
@@ -917,17 +917,14 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\If O
-\Then 5\->Q
-O\->P
-P>10\=>\Isz Q
-Q=6\=>P-10\->P
-0\->X
-\If O=14\ And \Mat Z[P,Q
-\Then 2\->X
-\Else 1+\Mat Z[P,Q\->\Mat Z[P,Q
-\IfEnd
-\IfEnd
+\Dim \List \Ans\->Y
+\For 1\->X \To Y
+5\->Q
+\List \Ans[X
+\Ans>10\=>6\->Q
+10\Frac .1\Ans\->P
+1+\Mat Z[P,Q\->\Mat Z[P,Q
+\Next 
 %End
 %Header Record
 Format:TXT
@@ -1398,7 +1395,7 @@ A=5\=>\Return
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:841
+Capacity:822
 File Name:Z11
 Group Name:
 Password:
@@ -1458,32 +1455,31 @@ A=2\ Or \theta=47\=>\Return
 \Do
 \Green \Text 6U-3,3,"-"
 \Green \Text 13,91,"   "
-U\<>9\=>\Green \Text 13,91,\List 2[U
+\Green \Text 13,91,\List 2[U
 \Do
 \Getkey\->\theta
-\theta=47\=>\GotoV
 \LpWhile \Not \theta
 \Green \Text 6U-3,3," "
 \theta=28\=>\Dsz U
 \theta=37\=>\Isz U
+\theta=47\=>\GotoV
 U=0\=>8\->U
 U>8\=>1\->U
 \LpWhile \theta\<>31
-U=9\=>\GotoV
-\List 1[U\->O
-\If \List 2[U]>\Mat Z[10,4
+\List 2[U
+\If \Ans>\Mat Z[10,4
 \Then \Green \Text 7,91,"il vous "
 \Green \Text 13,91,"manque "
 \Green \Text 19,91,"   \@24    "
-\Green \Text 19,91,\List 2[U]-\Mat Z[10,4
+\Green \Text 19,91,\Ans-\Mat Z[10,4
 .6\->X
 \Prog "Z0"
-\GotoC
-\IfEnd
+\Else {\List 1[U]}
 \Prog "Z07"
-\Not X\=>\Mat Z[10,4]-\List 2[U\->\Mat Z[10,4
+\Mat Z[10,4]-\List 2[U\->\Mat Z[10,4
 \Green \Text 3,49,"    "
 \Green \Text 3,49,\Mat Z[10,4
+\IfEnd
 \GotoC
 %End
 %Header Record
@@ -1761,7 +1757,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7175
+Capacity:7166
 File Name:Z14
 Group Name:
 Password:
@@ -2441,9 +2437,7 @@ E+A\->\Mat Z[11,6
 \Prog "Z08"
 {3,T,49,10}
 \Prog "Z08"
-S\->O
-\Prog "Z07"
-T\->O
+{S,T}
 \Prog "Z07"
 \IfEnd
 \If \theta<\Mat Z[11,2
@@ -3071,7 +3065,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:722
+Capacity:713
 File Name:Z32
 Group Name:
 Password:
@@ -3111,9 +3105,7 @@ D\=>11\->Z
 "Je t'offre une"
 "groseye et une Lune."
 "Les deux autres sont"
-"a ATLANTIS."\Disp7\->O
-\Prog "Z07"
-16\->O
+"a ATLANTIS."\Disp{7,16}
 \Prog "Z07"
 \Isz Z
 \Else "Je te laisse un peu"
@@ -3179,7 +3171,7 @@ X>89\=>\Break
 \Then "Perdu..."\Disp\Return
 \IfEnd
 "Troll> Hmmf."
-"Voila ta Lune."\Disp16\->O
+"Voila ta Lune."\Disp{16}
 \Prog "Z07"
 \Isz Z
 \IfEnd
@@ -3388,7 +3380,7 @@ Option4:
 \Then "~Mais nous avons le"
 "soleil...  qui fa"
 "pousser not'groseye"\Disp" "
-"Z obtient 1 groseye."\Disp7\->O
+"Z obtient 1 groseye."\Disp{7}
 \Prog "Z07"
 1\->\Mat Z[10,1
 \IfEnd
