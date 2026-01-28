@@ -999,7 +999,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3600
+Capacity:3766
 File Name:Z09
 Group Name:
 Password:
@@ -1040,6 +1040,9 @@ A+10(B-5\->C
 \Next 
 \Next 
 1\->U~V
+\While U<8\ And \Not \Mat Z[U,V+4
+\Isz U
+\WhileEnd
 \Lbl 1
 40\->A
 55\->B
@@ -1069,12 +1072,27 @@ C=15\=>\Text B,A,"munitions"
 \PlotOff A,B
 \PlotOff A+1,B
 \theta=47\=>\Return
+U\->K
+V\->L
+\If \theta=28\ Or \theta=37
+\Then \Do
 \theta=28\=>\Dsz U
 \theta=37\=>\Isz U
-\theta=38\=>1\->V
+U=0\=>9-V\->U
+U=10-V\=>1\->U
+\LpWhile \Not \Mat Z[U,4+V]\ And (U\<>K\ Or V\<>L)
+\IfEnd
+\If \theta=38\ Or \theta=27
+\Then \theta=38\=>1\->V
 \theta=27\=>2\->V
-U=0\=>8\->U
-U=9\=>1\->U
+\Do
+\Mat Z[U,4+V\=>\Break
+\Isz U
+U=0\=>9-V\->U
+U=10-V\=>1\->U
+\LpWhile U\<>K
+\Not \Mat Z[U,4+V\=>L\->V
+\IfEnd
 \theta\<>31\=>\Goto1
 ((C=7\ Or C=8\ Or C=14)\ And \Not \r)\ Or C=15\ Or \Not D\=>\Goto1
 C<9\ Or C=17\=>D-1\->D

@@ -68,6 +68,8 @@ Lbl ;Lbl ;1
 List ;List ;2
 Locate ;Locate ;2
 LpWhile ;LpWhile ;2
+While ;While ;2
+WhileEnd;WhileEnd;2
 Mat ;Mat ;2
 Next ;Next;2
 Norm;Norm;1
@@ -92,6 +94,8 @@ sin ;sin ;1
 sqrt;√;1
 Square;Square;2
 Cross;Cross;2
+Seq(;Seq(;2
+SortD(;SortD(;2
 Step ;Step ;1
 Stop;Stop;2
 StoPict ;StoPict ;2
@@ -110,5 +114,7 @@ List3;List3;2
 List4;List4;2
 Horizontal ;Horizontal ;2
 Vertical ;Vertical ;2
+10^x;₁₀;1
+In ;ln ;1
 #G100
 R n;n;2
