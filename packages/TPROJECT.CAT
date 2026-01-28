@@ -1490,7 +1490,7 @@ U=9\=>\GotoV
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1529
+Capacity:1519
 File Name:Z12
 Group Name:
 Password:
@@ -1556,7 +1556,6 @@ M=7\=>{7,N+2,2+2N/3,40+15N+13N\Ran#,8}
 \Orange \Text 11,3,"NIVEAU"
 \Orange \Text 11,30,N
 \Graph (X,Y)=(37+T,16+\Ran#
-\Getkey=65\=>1\->L
 L\->\Mat Z[6,1
 L\->\Mat Z[7,4
 \Int (A+2\Ran#\->\Mat Z[6,2
