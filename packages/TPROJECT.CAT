@@ -1777,7 +1777,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:7165
+Capacity:7137
 File Name:Z14
 Group Name:
 Password:
@@ -1847,6 +1847,7 @@ Z=8\=>\GotoE
 \Getkey
 \LpWhile \Not \Ans
 \Lbl I
+\Orange \Text 19,3,"        "
 \Green \Text 25,3," attak  "
 \Green \Text 31,3," pouvoir"
 \Green \Text 37,3," objet  "
@@ -1856,23 +1857,21 @@ Z=8\=>\GotoE
 \Text 57,3,"[EXE]\->choisir une action      "
 \StoPict 2
 \Do
-\Green \F-Line 3,-6\r+43,5,-6\r+43
+\Green \F-Line 3,43-6\r,5,43-6\r
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
 \Then \Prog "Z06"
 Z=8\=>\GotoE
 \IfEnd
 \Getkey\->\theta
-\theta=47\=>\Goto1
 \LpWhile \Not \theta
 \Green \Text 6\r+19,3," "
+\theta=31\=>\r=1\ Or \r=2\ Or \r=3\ Or (\r=4\ And \Mat Z[11,3]\ And \Mat Z[11,4])\ Or (\r=5\ And \Not \Mat Z[8,4])\=>\Break
 \theta=28\=>\Dsz \r
 \theta=37\=>\Isz \r
 \Not \r\=>5\->\r
 \r=6\=>1\->\r
-1
-\theta=31\ And (\r=1\ Or \r=2\ Or (\r=4\ And \Mat Z[11,3]\ And \Mat Z[11,4])\ Or \r=3\ Or (\r=5\ And \Not \Mat Z[8,4\=>0
-\LpWhile \Ans
+\LpWhile 1
 \Text 51,39,"                      "
 \If \r=5
 \Then \If \Not \Int 2\Ran#
@@ -1891,7 +1890,6 @@ Z=8\=>\GotoE
 \Then \Prog "Z09"
 \Cls
 \RclPict 2
-\PlotOn 0,0
 \GotoD
 \IfEnd
 \If \r=1
@@ -1908,7 +1906,7 @@ Z=8\=>\GotoE
 1\->\r
 \Text 57,3,"[EXE]\->choisir une attak       "
 \Do
-\Green \F-Line 3,-6\r+43,5,-6\r+43
+\Green \F-Line 3,43-6\r,5,43-6\r
 \Mat Z[\r,4\->V
 V<4\=>1
 V=4\=>2
@@ -1917,10 +1915,8 @@ V=6\=>5
 V=7\=>6
 V=8\=>9
 \Ans\->O
-\If \Not V
-\Then \Orange \Text 19,28,"-"
-\Else \Orange \Text 19,28,O
-\IfEnd
+\Not V\=>\Orange \Text 19,28,"-"
+V\=>\Orange \Text 19,28,O
 \StoPict 2
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
@@ -1928,17 +1924,16 @@ V=8\=>9
 Z=8\=>\GotoE
 \IfEnd
 \Getkey\->\theta
-\theta=31\ And (\Not V\ Or O>\Mat Z[2,1\=>0\->\theta
-\LpWhile \Not \theta
+\LpWhile \Not \theta\ Or (\theta=31\ And (\Not V\ Or O>\Mat Z[2,1]))
 \Green \Text 6\r+19,3," "
+\theta=47\=>\GotoI
+\r
+\Do
 \theta=28\=>\Dsz \r
 \theta=37\=>\Isz \r
 \Not \r\=>5\->\r
 \r=6\=>1\->\r
-\If \theta=47
-\Then \Orange \Text 19,3,"        "
-\GotoI
-\IfEnd
+\LpWhile \Not \Mat Z[\r,4]\ And \r\<>\Ans
 \LpWhile \theta\<>31
 \Mat Z[2,1]-O\->\Mat Z[2,1
 41\->R
@@ -2052,7 +2047,7 @@ Z=8\=>\GotoE
 \Text 57,3,"[EXE]\->choisir un pouvoir      "
 0\->O
 \Do
-\Green \F-Line 3,-6\r+43,5,-6\r+43
+\Green \F-Line 3,43-6\r,5,43-6\r
 O\->B
 \Mat Z[\r,3\->V
 V<6\=>1
@@ -2067,10 +2062,8 @@ V=16\=>10
 V=17\=>12
 \Ans\->O
 B>9\=>O\<=9\=>\Orange \Text 19,28,"  "
-\If \Not V
-\Then \Orange \Text 19,28,"-"
-\Else \Orange \Text 19,28,O
-\IfEnd
+\Not V\=>\Orange \Text 19,28,"-"
+V\=>\Orange \Text 19,28,O
 \StoPict 2
 \Do
 \If \Not \Int (5\Ran#\Mat Z[6,4
@@ -2078,17 +2071,16 @@ B>9\=>O\<=9\=>\Orange \Text 19,28,"  "
 Z=8\=>\GotoE
 \IfEnd
 \Getkey\->\theta
-\theta=31\ And (\Not V\ Or O>\Mat Z[3,1\=>0\->\theta
-\LpWhile \Not \theta
+\LpWhile \Not \theta\ Or (\theta=31\ And (\Not V\ Or O>\Mat Z[3,1]))
 \Green \Text 6\r+19,3," "
+\theta=47\=>\GotoI
+\r
+\Do
 \theta=28\=>\Dsz \r
 \theta=37\=>\Isz \r
 \Not \r\=>5\->\r
 \r=6\=>1\->\r
-\If \theta=47
-\Then \Orange \Text 19,3,"        "
-\GotoI
-\IfEnd
+\LpWhile \Not \Mat Z[\r,3]\ And \r\<>\Ans
 \LpWhile \theta\<>31
 \Mat Z[3,1]-O\->\Mat Z[3,1
 \If V=1\ Or V=2
@@ -2423,8 +2415,8 @@ A=2\=>B\->T
 W+\Mat Z[1,X\->\Mat Z[1,X
 1+\Mat Z[K,X\->\Mat Z[K,X
 \Next 
-1+\Mat Z[12,3\->\Mat Z[12,3
 \Mat Z[12,3\->A
+A+1\->\Mat Z[12,3
 \Mat Z[11,2\->\theta
 \Int (.1875A+2.125\->\Mat Z[11,2
 \Orange \Text 10,1,"Experience:"
