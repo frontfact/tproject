@@ -509,7 +509,7 @@ E=3\=>\Prog "Z17"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:148
+Capacity:147
 File Name:Z04
 Group Name:
 Password:
@@ -518,7 +518,7 @@ Option2:
 Option3:
 Option4:
 %Data Record
-\List \Ans[1]\->W
+\List \Ans[1\->W
 \Mat Z[11,1\->V
 \Mat Z[12,6\->Z
 0\->D
