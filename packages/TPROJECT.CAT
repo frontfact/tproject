@@ -394,7 +394,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:911
+Capacity:903
 File Name:Z03
 Group Name:
 Password:
@@ -435,24 +435,24 @@ Option4:
 \GotoW
 \IfEnd
 2\->N
+.4\->O
 \If \theta=27\ And G<16
 \Then \Int .1\Mat A[H,G\->N
-\Int 10\Frac \Mat A[H,G+1\->O
+\Mat A[H,G+1\->O
 \IfEnd
 \If \theta=38\ And G>1
-\Then \Mat A[H,G-1\->N
-\Int 10\Frac N\->O
+\Then \Mat A[H,G-1\->N~O
 \Int .1N\->N
 \IfEnd
 \If \theta=28\ And H>1
-\Then \Mat A[H-1,G\->N
-\Int 10\Frac N\->O
+\Then \Mat A[H-1,G\->N~O
 \Int (10\Frac .1N\->N
 \IfEnd
 \If \theta=37\ And H<10
 \Then \Int (10\Frac .1\Mat A[H,G\->N
-\Int 10\Frac \Mat A[H+1,G\->O
+\Mat A[H+1,G\->O
 \IfEnd
+\Int 10\Frac O\->O
 \theta\<>48\=>N=2\ Or O>3\=>\Goto1
 \PlotOff I,J
 \theta=27\=>\Isz G
@@ -465,10 +465,11 @@ Option4:
 G\->\Mat Z[12,4
 H\->\Mat Z[12,5
 \Frac \Mat A[H,G\->F
-\Int (10F\->E
+\Int 10F\->E
 \If \theta=48\ Or E=2\ Or E=3
 \Then \Green \Text 31,10,"       "
 \Orange \Text 23,2,"         "
+\PlotOff I,J
 \StoPict 1
 \theta=48\=>\Prog "Z10"
 E=2\=>\Prog "Z11"
@@ -478,7 +479,6 @@ E=3\=>\Prog "Z17"
 \Green \Text 31,10,\Mat Z[10,4
 \Prog "Z18"
 \theta=48\=>\Goto1
-\PlotOff I,J
 \Goto0
 \IfEnd
 \If E=1
