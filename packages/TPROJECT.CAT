@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:852
+Capacity:827
 File Name:TPROJECT
 Group Name:
 Password:
@@ -39,13 +39,11 @@ Option4:
 \Text 46+6D,31,"-"
 \Do
 \Getkey\->\theta
-\LpWhile \theta\<>28\ And \theta\<>37\ And \theta\<>31
+\LpWhile \Not \theta
+\theta=31\=>\Break
 \Text 46+6D,31," "
-\If \theta\<>31
-\Then \Isz D
-D>1\=>0\->D
-\IfEnd
-\LpWhile \theta\<>31
+1-D\->D
+\LpWhile 1
 \Cls
 \ClrText
 \If D
