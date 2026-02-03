@@ -2978,7 +2978,7 @@ Option4:
 "Ensuite, va aux"
 "catacombes de TARA,  l'hermite qui s'y"
 "trouve pourrait bien nous aider..."\Disp\ClrText
-"Moi je vais creuser  une piste au nord,"
+"Moi je vais creuser  une piste au Nord,"
 "on se retrouve ici"
 "des que possible !"\Disp60+\Mat Z[10,4\->\Mat Z[10,4
 10\->Z
@@ -3138,7 +3138,7 @@ X>89\=>\Break
 \If W=15\ And Z>13\ And Z<17
 \Then "~Il se passe"
 "des trucs louches"
-"au sud..."\Disp""
+"au Sud..."\Disp""
 \IfEnd
 \If W=16\ And Z>14\ And Z<17
 \Then "~J'heberge quelqu'un.Vous voulez le voir ?"\Disp\ClrText
