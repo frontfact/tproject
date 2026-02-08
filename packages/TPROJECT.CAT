@@ -1437,7 +1437,7 @@ U>8\=>1\->U
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1451
+Capacity:1448
 File Name:Z12
 Group Name:
 Password:
@@ -1466,9 +1466,10 @@ Z=39\=>{8,A+9,D+9,987,8}
 \IfEnd
 \If \Dim \List \Ans=1
 \Then 0\->\Mat Z[8,4
-\Do
-1+\Int ((2.5+.8N)\Ran#\->M
-\LpWhile M>7
+2+\Int N\Ran#\->M
+\While M>7
+M-3\->M
+\WhileEnd
 M=1\=>{1,2+N/2,2+N/2,18+10N+8N\Ran#,10}
 M=2\=>{2,2+N/3,2+3N/4,20+11N+8N\Ran#,12}
 M=3\=>{3,N+1,1+2N/3,16+12N+6N\Ran#,9}
