@@ -861,7 +861,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:984
+Capacity:985
 File Name:Z08
 Group Name:
 Password:
@@ -882,7 +882,7 @@ Option4:
 \theta=4\=>\Green \Text Y,X,"tranch "
 \theta=5\=>\Green \Text Y,X,"double  "
 \theta=6\=>\Green \Text Y,X,"charge "
-\theta=7\=>\Green \Text Y,X,"furie  "
+\theta=7\=>\Green \Text Y,X,"furie   "
 \theta=8\=>\Green \Text Y,X,"Xmeta  "
 \IfEnd
 \If O=2
@@ -1778,7 +1778,7 @@ Z=8\=>\Return
 \Not \r\=>5\->\r
 \r=6\=>1\->\r
 \LpWhile 1
-\Text 51,40,"                      "
+\Text 51,39,"                      "
 \If \r=5
 \Then \If \Not \Int 2\Ran#
 \Then \Text 57,3,"Z prend la fuite...           "
