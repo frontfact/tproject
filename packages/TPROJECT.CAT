@@ -1238,7 +1238,7 @@ G=2\=>0\->G
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1011
+Capacity:1017
 File Name:Z10
 Group Name:
 Password:
@@ -1256,10 +1256,10 @@ Option4:
 \Vertical 127
 \Horizontal 62
 \Horizontal 63
-\Green \Vertical 48
-\Green \Vertical 49
-\Green \Horizontal 51
-\Green \Horizontal 52
+\Vertical 48
+\Vertical 49
+\Horizontal 51
+\Horizontal 52
 \Text 5,5,"\@24"
 \Text 5,11,\Mat Z[10,4
 \Orange \Text 5,51,"Z"
@@ -1289,22 +1289,22 @@ A=4\=>1\->A
 A=5\=>\Return
 \If A=2
 \Then \Text 15,55,"statistiques"
-\Text 21,51,"ATTAK:"
+\Green \Text 21,51,"ATTAK:"
 \Text 21,79,\Mat Z[4,2
-\Text 27,51,"DEFNS:"
+\Green \Text 27,51,"DEFNS:"
 \Text 27,79,\Mat Z[5,2
-\Text 33,53,"FORCE:    \slash"
-\Text 39,51,"MAGIE:    \slash"
+\Green \Text 33,53,"FORCE:    \slash"
+\Green \Text 39,51,"MAGIE:    \slash"
 \For 2\->T \To 3
 \For 1\->U \To 2
 \Text 21+6T,61+18U,\Mat Z[T,U
 \Next 
 \Next 
-\Text 45,51,"NIVEAU"
+\Green \Text 45,51,"NIVEAU"
 \Text 45,79,\Mat Z[11,2
-\Text 51,51,"EXPERIENCE:"
+\Green \Text 51,51,"EXPERIENCE:"
 \Text 51,98,\Mat Z[11,6
-\Text 57,51,"VICTOIRES:"
+\Green \Text 57,51,"VICTOIRES:"
 \Text 57,93,\Mat Z[12,3
 \Do
 \LpWhile \Not \Getkey
