@@ -1709,7 +1709,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:6832
+Capacity:6844
 File Name:Z14
 Group Name:
 Password:
@@ -1856,7 +1856,7 @@ Z=8\=>\Return
 {8}
 \Prog "Z05"
 65\->R
-{0,1}
+{0,2,6,1}
 \Prog "Z05"
 \IfEnd
 \If V=4
@@ -1906,7 +1906,7 @@ Z=8\=>\Return
 75\->R
 {0,2}
 \Prog "Z05"
-{6,3,7,2,6,3}
+{6,3,7,2,6,3,7,2,6,3}
 \Prog "Z05"
 \IfEnd
 \If V=8
