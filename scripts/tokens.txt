@@ -46,6 +46,7 @@ DrawOff;DrawOff;2
 DrawStat;DrawStat;2
 Dsz ;Dsz ;1
 Else ;Else ;2
+Line;Line;1
 F-Line ;F-Line ;2
 For ;For ;2
 Frac ;Frac ;1
@@ -95,7 +96,9 @@ sqrt;√;1
 Square;Square;2
 Cross;Cross;2
 Seq(;Seq(;2
+SortA(;SortA(;2
 SortD(;SortD(;2
+Sum ;Sum ;2
 Step ;Step ;1
 Stop;Stop;2
 StoPict ;StoPict ;2

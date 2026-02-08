@@ -84,7 +84,7 @@ class AsciiParser:
                         i += len(token.src)
                         break
                 else:
-                    raise ParserError(f"Unknown token : '{line[i:]}'")
+                    raise ParserError(f"Unknown token : '{line[i:]}' @ line \"{line}\"")
             elif not c.isspace():
                 tokens.append(Token(str(c), str(c), 1, False))
                 i += 1
@@ -169,6 +169,7 @@ class Program:
         dec = {'Next', 'IfEnd', 'WhileEnd', 'LpWhile '}
         level = 0
         first = True
+        ntokens = len(self.tokens)
         for i, t in enumerate(self.tokens):
             if t == LineFeedToken:
                 output += str(t)
@@ -195,7 +196,7 @@ class Program:
                     output += '\n'
                     first = True
             else:
-                if (t.dst == ']') and (self.tokens[i+1].dst == '['):
+                if (t.dst == ']') and (i+1 < ntokens) and (self.tokens[i+1].dst == '['):
                     output += '\n'
                     first = True
         if level != 0:
@@ -373,7 +374,7 @@ class CatFile(object):
         # dump programs
         os.makedirs(outputpath, exist_ok=True)
         for program in catfile.programs:
-            filepath = outputpath / program.name
+            filepath = outputpath / f'{program.name}.cbas'
             with open(str(filepath), mode='w', encoding='utf-8', newline='\n') as fout:
                 contents = program.pretty_print()
                 fout.write(contents)
