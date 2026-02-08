@@ -1,14 +1,11 @@
-If O
-Then 
-  5→Q
-  O→P
-  P>10⇒Isz Q
-  Q=6⇒P-10→P
-  0→X
-  If O=14 And Mat Z[P,Q
+Dim List Ans→Y
+For 1→X To Y
+  List Ans[X
+  If Ans
   Then 
-    2→X
-  Else 
+    5→Q
+    Ans>10⇒6→Q
+    10Frac .1Ans→P
     1+Mat Z[P,Q→Mat Z[P,Q
   IfEnd
-IfEnd
+Next

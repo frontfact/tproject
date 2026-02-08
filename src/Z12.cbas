@@ -1,31 +1,30 @@
 List Ans[1→Z
-List Ans[2→C
 Identity 1→Mat A
 For 4→X To 5
   Mat Z[X,2→Mat Z[X,1
+  0→Mat Z[11,X-1
 Next
-0→Mat Z[11,3
-0→Mat Z[11,4
 Mat Z[4,2→A
 Mat Z[5,2→D
 Mat Z[11,2→N
 {.}
-If C
+If Mat Z[8,6
 Then 
   Z=8⇒{6,9,9,99,11}
   Z=11⇒{5,4,4,120,11}
   Z=23⇒{3,7,6,333,7}
-  Z=29⇒{2,10,9,150+50Ran#,7}
+  Z=29⇒{2,A-1,D-2,150+50Ran#,7}
   Z=39⇒{8,A+9,D+9,987,8}
 Else 
-  Z=99⇒{1,15,12,600,7}
+  Z=99⇒{1,15,12,589,7}
 IfEnd
 If Dim List Ans=1
 Then 
   0→Mat Z[8,4
-  Do
-    1+Int ((2.5+.8N)Ran#→M
-  LpWhile M>7
+  2+Int NRan#→M
+  While M>7
+    M-3→M
+  WhileEnd
   M=1⇒{1,2+N/2,2+N/2,18+10N+8NRan#,10}
   M=2⇒{2,2+N/3,2+3N/4,20+11N+8NRan#,12}
   M=3⇒{3,N+1,1+2N/3,16+12N+6NRan#,9}
@@ -41,71 +40,64 @@ List Ans[2→A
 List Ans[3→D
 Int List Ans[4→L
 List Ans[5→S
+L→Mat Z[6,1
+L→Mat Z[7,4
+Int (A+2Ran#→Mat Z[6,2
+Int (D+2Ran#→Mat Z[6,3
+S+2Ran#-(N/3)→S
+Int S→Mat Z[10,6
+SMat Z[10,5→Mat Z[6,4
+N+2→S
+S>8⇒8→S
+S-4→L
+L<1⇒1→L
+Seq(X,X,L,S,1)→List1
+Seq(Ran#,X,1,S-L+1,1)→List2
+SortD(List 2,List 1)
+Z=8 Or Z=39⇒{8,8,8}→List1
+For 1→S To 3
+  List 1[S→Mat Z[7,S
+Next
+3N→S
+S>17⇒17→S
+S-10→L
+L<1⇒1→L
+Seq(X,X,L,S,1)→List1
+Seq(Ran#,X,1,S-L+1,1)→List2
+SortD(List 2,List 1)
+Z=8 Or Z=39⇒{15,15,15}→List1
+For 1→S To 3
+  List 1[S→Mat Z[8,S
+Next
 {M}
 Prog "Z22"
+ClrText
 Cls
 Horizontal 1
 Vertical 127
 Horizontal 63
 Vertical 1
-F-Line 1,9,36,9
-F-Line 36,9,36,63
-F-Line 1,55,36,55
+F-Line 1,9,38,9
+F-Line 38,9,38,63
+F-Line 1,55,38,55
 Orange Text 3,6,Mat Z[1,1
 Orange Text 3,18,"/"
 Orange Text 3,22,Mat Z[1,2
-F-Line 37,15,127,15
-Green F-Line 36,16,127,16
-Green F-Line 126,16,126,62
-F-Line 126,62,37,62
-F-Line 37,62,37,16
+F-Line 38,15,127,15
 Orange Text 11,3,"NIVEAU"
 Orange Text 11,30,N
-Graph (X,Y)=(37+T,16+Ran#
-Getkey=65⇒1→L
-L→Mat Z[6,1
-L→Mat Z[7,4
-Int A+Int 2Ran#→Mat Z[6,2
-Int D+Int 2Ran#→Mat Z[6,3
-S+2Ran#-(N/3)→S
-Int S→Mat Z[10,6
-SMat Z[10,5→Mat Z[6,4
-8
-N<6⇒4
-N<2⇒1
-Z=8 Or Z=39⇒8
-Z=11⇒6
-Ans→Mat Z[7,1
-For 2→B To 3
-  1+Int NRan#
-  Z=8 Or Z=39⇒8
-  Ans>8⇒8
-  Ans→Mat Z[7,B
-Next
-For 1→B To 3
-  N=1⇒Int 4Ran#+1
-  N=2⇒Int 5Ran#+3
-  N=3⇒Int 4Ran#+6
-  N=4⇒Int 5Ran#+6
-  N=5⇒Int 6Ran#+8
-  N=6⇒Int 6Ran#+10
-  N=7⇒Int 8Ran#+10
-  Z=8⇒15
-  Ans>17⇒17
-  Ans→Mat Z[8,B
-Next
+Graph (X,Y)=(38+T,15+2Ran#
 41→R
 {0,1}
 Prog "Z05"
-Text 51,38,"Z combat un ..."
+Text 51,40,"Z combat un ..."
 115→R
 {M,1}
 Prog "Z20"
-If (Z=8 Or Z=11 Or Z=39 Or Z=99) And Mat Z[8,4
+If (Z=8 Or Z=11 Or Z=99) And Mat Z[8,4
 Then 
   Z=8⇒Text 51,75,"Enzo   "
   Z=11⇒Text 51,75,"le Minautor"
-  Z=39⇒Text 51,75,"Tomberry"
   Z=99⇒Text 51,75,"le Gardien"
 Else 
   M=1⇒Text 51,90,"lapranak"
@@ -115,5 +107,6 @@ Else
   M=5⇒Text 51,90,"orinaphe"
   M=6⇒Text 51,88,"goa geant"
   M=7⇒Text 51,90,"spectre"
+  M=8⇒Text 51,75,"Tomberry"
 IfEnd
 StoPict 2

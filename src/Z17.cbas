@@ -17,7 +17,7 @@ Locate 3,7,"3.Sortir"
 Do
   Getkey→θ
 LpWhile θ≠72 And θ≠62 And θ≠52 And θ≠47
-Z<10⇒θ<53⇒Prog "Z04"
+Z<8⇒θ<53⇒Prog "Z04"
 θ<53⇒Return
 If θ=62
 Then 

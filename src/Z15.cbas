@@ -14,9 +14,9 @@ Then
   If Z=11
   Then 
     "QUI OSE SOUILLER DE  SES PAS LE LABYRINTHESACRE ?!!"
-    3→X
+    2→X
     Prog "Z0"
-    {Z,1}
+    {Z}
     Prog "Z14"
     12→Mat Z[12,6
     π
@@ -26,9 +26,9 @@ Then
   Then 
     ClrText
     "Z> Le mandivor !"
-    2→X
+    1→X
     Prog "Z0"
-    {Z,1}
+    {Z}
     Prog "Z14"
     "Plutot coriace..."◢
     24→Mat Z[12,6

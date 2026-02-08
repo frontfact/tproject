@@ -145,7 +145,7 @@ Then
   "pousser not'groseye"◢
   " "
   "Z obtient 1 groseye."◢
-  7→O
+  {7}
   Prog "Z07"
   1→Mat Z[10,1
 IfEnd

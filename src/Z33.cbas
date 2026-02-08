@@ -49,7 +49,7 @@ Then
   IfEnd
   "Troll> Hmmf."
   "Voila ta Lune."◢
-  16→O
+  {16}
   Prog "Z07"
   Isz Z
 IfEnd
@@ -87,7 +87,7 @@ If W=15 And Z>13 And Z<17
 Then 
   "~Il se passe"
   "des trucs louches"
-  "au sud..."◢
+  "au Sud..."◢
   ""
 IfEnd
 If W=16 And Z>14 And Z<17

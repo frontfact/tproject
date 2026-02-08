@@ -35,12 +35,13 @@ Then
   If Z<7
   Then 
     "~ RESTO ~"
-    "Z> Ou est Enzo ?"
+    "Z> Ou est Enzo ?"◢
+    ClrText
     "~He la !"
     "Ce renseignement ne"
     "sera pas gratuit:"
     "Il t'en coutera..."
-    "disons deux gemmes"◢
+    "disons deux gemmes."◢
     ""
     If Z=2
     Then 
@@ -56,8 +57,8 @@ Then
   IfEnd
   If Z=7 Or Z=8
   Then 
-    "Enzo habite dans une maison a l'est."◢
-    8→Z
+    "Enzo habite dans une maison a l'Est."◢
+    ""
   IfEnd
 IfEnd
 If W=6 And D
@@ -75,9 +76,9 @@ Then
   Then 
     "Z> Enzo, tu es mort !Prepare-toi au combat "
     "Enzo> Incarnation GOA"
-    4→X
+    3→X
     Prog "Z0"
-    {Z,1}
+    {Z}
     Prog "Z14"
     1→X
     Prog "Z0"
@@ -100,7 +101,7 @@ Then
     "catacombes de TARA,  l'hermite qui s'y"
     "trouve pourrait bien nous aider..."◢
     ClrText
-    "Moi je vais creuser  une piste au nord,"
+    "Moi je vais creuser  une piste au Nord,"
     "on se retrouve ici"
     "des que possible !"◢
     60+Mat Z[10,4→Mat Z[10,4

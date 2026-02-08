@@ -50,31 +50,32 @@ Green Text 19,91,"skulls. "
 Do
   Green Text 6U-3,3,"-"
   Green Text 13,91,"   "
-  U≠9⇒Green Text 13,91,List 2[U
+  Green Text 13,91,List 2[U
   Do
     Getkey→θ
-    θ=47⇒Goto V
   LpWhile Not θ
   Green Text 6U-3,3," "
   θ=28⇒Dsz U
   θ=37⇒Isz U
+  θ=47⇒Goto V
   U=0⇒8→U
   U>8⇒1→U
 LpWhile θ≠31
-U=9⇒Goto V
-List 1[U→O
-If List 2[U]>Mat Z[10,4
+List 2[U
+If Ans>Mat Z[10,4
 Then 
   Green Text 7,91,"il vous "
   Green Text 13,91,"manque "
   Green Text 19,91,"   $    "
-  Green Text 19,91,List 2[U]-Mat Z[10,4
+  Green Text 19,91,Ans-Mat Z[10,4
   .6→X
   Prog "Z0"
-  Goto C
+Else 
+  List 1[U
+  {Ans}
+  Prog "Z07"
+  Mat Z[10,4]-List 2[U→Mat Z[10,4
+  Green Text 3,49,"    "
+  Green Text 3,49,Mat Z[10,4
 IfEnd
-Prog "Z07"
-Not X⇒Mat Z[10,4]-List 2[U→Mat Z[10,4
-Green Text 3,49,"    "
-Green Text 3,49,Mat Z[10,4
 Goto C

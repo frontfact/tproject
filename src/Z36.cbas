@@ -16,9 +16,9 @@ Then
     ""
     C=5⇒"Z> Haro !"◢
     ""
-    2→X
+    1→X
     Prog "Z0"
-    {Z,1}
+    {Z}
     Prog "Z14"
     If 31=Mat Z[9,5
     Then 

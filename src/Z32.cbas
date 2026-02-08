@@ -39,9 +39,7 @@ Then
     "groseye et une Lune."
     "Les deux autres sont"
     "a ATLANTIS."◢
-    7→O
-    Prog "Z07"
-    16→O
+    {7,16}
     Prog "Z07"
     Isz Z
   Else 

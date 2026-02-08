@@ -33,28 +33,28 @@ Then
   Goto W
 IfEnd
 2→N
+.4→O
 If θ=27 And G<16
 Then 
   Int .1Mat A[H,G→N
-  Int 10Frac Mat A[H,G+1→O
+  Mat A[H,G+1→O
 IfEnd
 If θ=38 And G>1
 Then 
-  Mat A[H,G-1→N
-  Int 10Frac N→O
+  Mat A[H,G-1→N~O
   Int .1N→N
 IfEnd
 If θ=28 And H>1
 Then 
-  Mat A[H-1,G→N
-  Int 10Frac N→O
+  Mat A[H-1,G→N~O
   Int (10Frac .1N→N
 IfEnd
 If θ=37 And H<10
 Then 
   Int (10Frac .1Mat A[H,G→N
-  Int 10Frac Mat A[H+1,G→O
+  Mat A[H+1,G→O
 IfEnd
+Int 10Frac O→O
 θ≠48⇒N=2 Or O>3⇒Goto 1
 PlotOff I,J
 θ=27⇒Isz G
@@ -67,11 +67,12 @@ Green PlotOn I,J
 G→Mat Z[12,4
 H→Mat Z[12,5
 Frac Mat A[H,G→F
-Int (10F→E
+Int 10F→E
 If θ=48 Or E=2 Or E=3
 Then 
   Green Text 31,10,"       "
   Orange Text 23,2,"         "
+  PlotOff I,J
   StoPict 1
   θ=48⇒Prog "Z10"
   E=2⇒Prog "Z11"
@@ -81,7 +82,6 @@ Then
   Green Text 31,10,Mat Z[10,4
   Prog "Z18"
   θ=48⇒Goto 1
-  PlotOff I,J
   Goto 0
 IfEnd
 If E=1
@@ -108,5 +108,5 @@ IfEnd
 Goto 1
 Lbl W
 7+Int 6Ran#→Mat Z[10,3
-0→Mat Z[12,2
+0→Mat Z[8,6
 0

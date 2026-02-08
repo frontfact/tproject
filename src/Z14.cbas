@@ -1,48 +1,22 @@
-StoPict 1
 Prog "Z12"
-Goto 1
-Lbl D
-1>Mat Z[6,3⇒1→Mat Z[6,3
-P=1⇒Mat Z[6,1]-Int (2Ran#+1⌟3Q+2⌟3Q(Mat Z[4,1]/Mat Z[6,3→Mat Z[6,1
-P=2⇒Q+Mat Z[1,1→Mat Z[1,1
-Mat Z[1,1]>Mat Z[1,2⇒Mat Z[1,2→Mat Z[1,1
-I≠Mat Z[1,1⇒Orange Text 5,60,Mat Z[1,1]-I
-J≠Mat Z[6,1⇒Orange Text 5,110,Mat Z[6,1]-J
-P=3⇒Q+Mat Z[4,1→Mat Z[4,1
-P=4⇒Q+Mat Z[5,1→Mat Z[5,1
-For 2→T To 3
-  Mat Z[T,1]>Mat Z[T,2⇒Mat Z[T,2→Mat Z[T,1
-Next
-P=8⇒Q+Mat Z[6,2→Mat Z[6,2
-P=9⇒Q+Mat Z[6,3→Mat Z[6,3
-1>Mat Z[6,2⇒1→Mat Z[6,2
-1>Mat Z[6,3⇒1→Mat Z[6,3
-.7→X
-Prog "Z0"
-If I≠Mat Z[1,1] Or J≠Mat Z[6,1
-Then 
-  Prog "Z19"
-  1>Mat Z[6,1⇒Goto 2
-IfEnd
-0→P~Q
 Lbl 1
 Cls
 RclPict 2
 Orange Text 3,6,"   "
 Orange Text 3,6,Mat Z[1,1
-Green Text 25,3,"-stats- "
-Green Text 31,3,"fo   /  "
-Green Text 37,3,"ma     "
-Green Text 37,23,"/"
-Green Text 43,3,"at   /  "
-Green Text 49,3,"de   /  "
+Green Text 25,2,"-stats-  "
+Green Text 31,2,"F        "
+Green Text 37,2,"M       "
+Green Text 43,2,"A        "
+Green Text 49,2,"D        "
 For 2→V To 5
   For 1→U To 2
-    Green Text 6V+19,13U+1,Mat Z[V,U
-    If Not Int (4Ran#Mat Z[6,4
+    Green Text 6V+19,16U-6,Mat Z[V,U
+    U=1⇒Green Text 6V+19,22,"/"
+    If Not Int 4Ran#Mat Z[6,4
     Then 
       Prog "Z06"
-      Z=8⇒Goto E
+      Z=8⇒Return
     IfEnd
   Next
 Next
@@ -51,45 +25,44 @@ Mat Z[6,1→J
 Text 57,3,"[EXE]→menu action             "
 StoPict 2
 Do
-  If Not Int (5Ran#Mat Z[6,4
+  If Not Int 5Ran#Mat Z[6,4
   Then 
     Prog "Z06"
-    Z=8⇒Goto E
-    Green Text 43,14,Mat Z[4,1
-    Green Text 49,14,Mat Z[5,1
+    Z=8⇒Return
+    Green Text 43,10,Mat Z[4,1
+    Green Text 49,10,Mat Z[5,1
     StoPict 2
   IfEnd
   Getkey
 LpWhile Not Ans
 Lbl I
-Green Text 25,3," attak  "
-Green Text 31,3," pouvoir"
-Green Text 37,3," objet  "
-Green Text 43,3," aprend"
-Green Text 49,3," fuite   "
+Orange Text 19,3,"        "
+Green Text 25,2," attak   "
+Green Text 31,2," pouvoir "
+Green Text 37,2," objet   "
+Green Text 43,2," apprend"
+Green Text 49,2," fuite   "
 1→r
 Text 57,3,"[EXE]→choisir une action      "
 StoPict 2
 Do
-  Green F-Line 3,-6r+43,5,-6r+43
+  Green F-Line 3,43-6r,4,43-6r
   Do
-    If Not Int (5Ran#Mat Z[6,4
+    If Not Int 5Ran#Mat Z[6,4
     Then 
       Prog "Z06"
-      Z=8⇒Goto E
+      Z=8⇒Return
     IfEnd
     Getkey→θ
-    θ=47⇒Goto 1
   LpWhile Not θ
-  Green Text 6r+19,3," "
+  Green Text 6r+19,2," "
+  θ=31⇒r=1 Or r=2 Or r=3 Or (r=4 And Mat Z[11,3] And Mat Z[11,4]) Or (r=5 And Not Mat Z[8,4])⇒Break
   θ=28⇒Dsz r
   θ=37⇒Isz r
   Not r⇒5→r
   r=6⇒1→r
-  1
-  θ=31 And (r=1 Or r=2 Or (r=4 And Mat Z[11,3] And Mat Z[11,4]) Or r=3 Or (r=5 And Not Mat Z[8,4⇒0
-LpWhile Ans
-Text 51,38,"                      "
+LpWhile 1
+Text 51,39,"                      "
 If r=5
 Then 
   If Not Int 2Ran#
@@ -102,8 +75,6 @@ Then
     Text 57,3,"Le monstre rattrape Z !       "
     .6→X
     Prog "Z0"
-    0→P~Q
-    Goto D
   IfEnd
 IfEnd
 If r=3
@@ -111,60 +82,50 @@ Then
   Prog "Z09"
   Cls
   RclPict 2
-  PlotOn 0,0
+  1→V
+  {0,0}
   Goto D
 IfEnd
 If r=1
 Then 
   Orange Text 19,3,"force:  "
   For 1→E To 5
-    If Not Int (3Ran#Mat Z[6,4
+    If Not Int 3Ran#Mat Z[6,4
     Then 
       Prog "Z06"
-      Z=8⇒Goto E
+      Z=8⇒Return
     IfEnd
     Mat Z[E,4→C
-    {1,C,6E+19,7}
+    {1,C,6E+19,6}
     Prog "Z08"
   Next
   1→r
   Text 57,3,"[EXE]→choisir une attak       "
   Do
-    Green F-Line 3,-6r+43,5,-6r+43
+    Green F-Line 3,43-6r,4,43-6r
     Mat Z[r,4→V
-    V<4⇒1
-    V=4⇒2
-    V=5⇒3
-    V=6⇒5
-    V=7⇒6
-    V=8⇒9
-    Ans→O
-    If Not V
-    Then 
-      Orange Text 19,28,"-"
-    Else 
-      Orange Text 19,28,O
-    IfEnd
+    {1,1,1,2,3,5,6,9}
+    List Ans[V→O
+    Not V⇒Orange Text 19,28,"-"
+    V⇒Orange Text 19,28,O
     StoPict 2
     Do
-      If Not Int (5Ran#Mat Z[6,4
+      If Not Int 5Ran#Mat Z[6,4
       Then 
         Prog "Z06"
-        Z=8⇒Goto E
+        Z=8⇒Return
       IfEnd
       Getkey→θ
-      θ=31 And (Not V Or O>Mat Z[2,1⇒0→θ
-    LpWhile Not θ
-    Green Text 6r+19,3," "
-    θ=28⇒Dsz r
-    θ=37⇒Isz r
-    Not r⇒5→r
-    r=6⇒1→r
-    If θ=47
-    Then 
-      Orange Text 19,3,"        "
-      Goto I
-    IfEnd
+    LpWhile Not θ Or (θ=31 And (Not V Or O>Mat Z[2,1]))
+    Green Text 6r+19,2," "
+    θ=47⇒Goto I
+    r
+    Do
+      θ=28⇒Dsz r
+      θ=37⇒Isz r
+      Not r⇒5→r
+      r=6⇒1→r
+    LpWhile r≠Ans And Not Mat Z[r,4
   LpWhile θ≠31
   Mat Z[2,1]-O→Mat Z[2,1
   41→R
@@ -175,27 +136,21 @@ Then
     75→R
     {0,2}
     Prog "Z05"
-    1→P
-    6→Q
   IfEnd
   If V=2
   Then 
-    Text 51,38,"defense +1"
+    Text 51,40,"defense +1"
     {5,3,7,1}
     Prog "Z05"
-    4→P
-    1→Q
   IfEnd
   If V=3
   Then 
-    Text 51,38,"defense ennemi -1"
+    Text 51,40,"defense ennemi -1"
     {8}
     Prog "Z05"
     65→R
-    {0,1}
+    {0,2,6,1}
     Prog "Z05"
-    9→P
-    -1→Q
   IfEnd
   If V=4
   Then 
@@ -208,8 +163,6 @@ Then
     Prog "Z0"
     {5,3}
     Prog "Z05"
-    1→P
-    10→Q
   IfEnd
   If V=5
   Then 
@@ -231,8 +184,6 @@ Then
     75→R
     {0,2}
     Prog "Z05"
-    1→P
-    15→Q
   IfEnd
   If V=6
   Then 
@@ -243,9 +194,7 @@ Then
     85→R
     {0,2}
     Prog "Z05"
-    1→P
-    24→Q
-    Int (Mat Z[1,1]-6-6Ran#→Mat Z[1,1
+    Mat Z[1,1]-6-Int 6Ran#→Mat Z[1,1
   IfEnd
   If V=7
   Then 
@@ -254,10 +203,8 @@ Then
     75→R
     {0,2}
     Prog "Z05"
-    {6,3,7,2,6,3}
+    {6,3,7,2,6,3,7,2,6,3}
     Prog "Z05"
-    1→P
-    26→Q
   IfEnd
   If V=8
   Then 
@@ -266,86 +213,66 @@ Then
     For 1→A To 12
       Orange F-Line 108,37,Int 20Ran#+98,Int 20Ran#+27
     Next
-    1→P
-    32→Q
   IfEnd
+  {1,6,4,1,9,-1,1,10,1,15,1,24,1,26,1,32}
   Goto D
 IfEnd
 If r=2
 Then 
   Orange Text 19,3,"magie:  "
   For 1→E To 5
-    If Not Int (3Ran#Mat Z[6,4
+    If Not Int 3Ran#Mat Z[6,4
     Then 
       Prog "Z06"
-      Z=8⇒Goto E
+      Z=8⇒Return
     IfEnd
     Mat Z[E,3]→C
-    {2,C,6E+19,7}
+    {2,C,6E+19,6}
     Prog "Z08"
   Next
   1→r
   Text 57,3,"[EXE]→choisir un pouvoir      "
   0→O
   Do
-    Green F-Line 3,-6r+43,5,-6r+43
+    Green F-Line 3,43-6r,4,43-6r
     O→B
     Mat Z[r,3→V
-    V<6⇒1
-    V=4⇒2
-    V>5⇒4
-    V>7⇒5
-    V>10⇒6
-    V=13⇒7
-    V=14⇒8
-    V=15⇒9
-    V=16⇒10
-    V=17⇒12
-    Ans→O
+    {1,1,1,2,1,4,4,5,5,5,6,6,7,8,9,10,12}
+    List Ans[V→O
     B>9⇒O≤9⇒Orange Text 19,28,"  "
-    If Not V
-    Then 
-      Orange Text 19,28,"-"
-    Else 
-      Orange Text 19,28,O
-    IfEnd
+    Not V⇒Orange Text 19,28,"-"
+    V⇒Orange Text 19,28,O
     StoPict 2
     Do
-      If Not Int (5Ran#Mat Z[6,4
+      If Not Int 5Ran#Mat Z[6,4
       Then 
         Prog "Z06"
-        Z=8⇒Goto E
+        Z=8⇒Return
       IfEnd
       Getkey→θ
-      θ=31 And (Not V Or O>Mat Z[3,1⇒0→θ
-    LpWhile Not θ
-    Green Text 6r+19,3," "
-    θ=28⇒Dsz r
-    θ=37⇒Isz r
-    Not r⇒5→r
-    r=6⇒1→r
-    If θ=47
-    Then 
-      Orange Text 19,3,"        "
-      Goto I
-    IfEnd
+    LpWhile Not θ Or (θ=31 And (Not V Or O>Mat Z[3,1]))
+    Green Text 6r+19,2," "
+    θ=47⇒Goto I
+    r
+    Do
+      θ=28⇒Dsz r
+      θ=37⇒Isz r
+      Not r⇒5→r
+      r=6⇒1→r
+    LpWhile Not Mat Z[r,3] And r≠Ans
   LpWhile θ≠31
   Mat Z[3,1]-O→Mat Z[3,1
   If V=1 Or V=2
   Then 
-    V=1⇒Text 51,38,"defense +1"
-    V=2⇒Text 51,38,"attaque +1"
+    V=1⇒Text 51,40,"defense +1"
+    V=2⇒Text 51,40,"attaque +1"
     Circle 49,37,10
-    5-V→P
-    1→Q
   IfEnd
   If V=3
   Then 
     For 1→W To 40 Step 2
       F-Line W+65,38-W/2,W+65,38+W/2
     Next
-    1→P
-    7→Q
   IfEnd
   If V=4
   Then 
@@ -355,8 +282,6 @@ Then
     Orange F-Line 107,61,100,45
     Orange F-Line 104,53,108,38
     Orange F-Line 106,45,101,30
-    1→P
-    10→Q
   IfEnd
   If V=5
   Then 
@@ -377,25 +302,20 @@ Then
     Cls
     RclPict 2
     Plot 0,0
-    0→P~Q
   IfEnd
   If V=6
   Then 
-    Text 51,38,"att+1 / def+1"
+    Text 51,40,"att+1 / def+1"
     Orange Circle 49,37,10
     For 0→A To 9
       Orange F-Line 49,37,Int 50Ran#+24,Int 50Ran#+12
     Next
     1+Mat Z[4,1→Mat Z[4,1
-    4→P
-    1→Q
   IfEnd
   If V=7
   Then 
     Graph Y<64
     Graph Y>64
-    1→P
-    16→Q
   IfEnd
   If V=8
   Then 
@@ -404,13 +324,11 @@ Then
       RclPict 2
       Plot 0,0
     Next
-    Text 51,38,"attaque ennemi -1     "
+    Text 51,40,"attaque ennemi -1    "
     For 1→A To 7
       Orange Text Int 20Ran#+20,Int 20Ran#+96,"#"
     Next
     Mat Z[6,2]-1→Mat Z[6,2
-    1→P
-    14→Q
   IfEnd
   If V=9
   Then 
@@ -422,13 +340,11 @@ Then
       RclPict 2
       PlotOn 0,0
     Next
-    Text 51,38,"defense ennemi -1     "
+    Text 51,40,"defense ennemi -1    "
     For 0→A To 5
       Orange F-Line 11Ran#+99,25Ran#+20,11Ran#+99,25Ran#+20
     Next
     Mat Z[6,3]-1→Mat Z[6,3
-    1→P
-    14→Q
   IfEnd
   If V=10
   Then 
@@ -436,19 +352,15 @@ Then
     For 1→A To 35
       Orange F-Line 76,37,Int 75Ran#+50,Int 50Ran#+14
     Next
-    Int (Mat Z[1,1]-9-6Ran#→Mat Z[1,1
-    1→P
-    24→Q
+    Mat Z[1,1]-9-Int 6Ran#→Mat Z[1,1
   IfEnd
   If V=11
   Then 
-    Text 51,38,"regenere..."
+    Text 51,40,"regenere..."
     Green Circle 49,37,10
     For 0→A To 9
       Green F-Line 49,37,40Ran#+29,40Ran#+17
     Next
-    2→P
-    Int (60+20Ran#→Q
   IfEnd
   If V=12
   Then 
@@ -462,8 +374,6 @@ Then
       RclPict 2
       Plot 0,0
     Next
-    1→P
-    20→Q
   IfEnd
   If V=14
   Then 
@@ -480,13 +390,11 @@ Then
     Orange Text 25,104,":"
     .3→X
     Prog "Z0"
-    Text 51,38,"absorbe vie ennemi !  "
+    Text 51,40,"absorbe vie ennemi ! "
     For 103→A To 47 Step -2
       Orange F-Line A,36+3Ran#,A-1,36+3Ran#
     Next
-    Int (20+10Ran#)+Mat Z[1,1→Mat Z[1,1
-    1→P
-    22→Q
+    20+Int 10Ran#+Mat Z[1,1→Mat Z[1,1
   IfEnd
   If V=15
   Then 
@@ -495,8 +403,6 @@ Then
       Orange F-Line A-6,17,A-3,17+Ans
       Orange F-Line A-3,17+Ans,A,17
     Next
-    1→P
-    34→Q
   IfEnd
   If V=16 Or V=13
   Then 
@@ -534,9 +440,6 @@ Then
     Orange F-Line 108,45,102,30
     .3→X
     Prog "Z0"
-    1→P
-    40→Q
-    V=13⇒28→Q
   IfEnd
   If V=17
   Then 
@@ -546,17 +449,16 @@ Then
       Orange F-Line A-3,23+Ans,A,17
     Next
     Mat Z[1,1]-20-Int 9Ran#→Mat Z[1,1
-    1→P
-    50→Q
   IfEnd
+  {4,1,3,1,1,7,1,10,0,0,4,1,1,16,1,14,1,14,1,24,2,60+Int 20Ran#,1,20,1,28,1,22,1,34,1,40,1,50}
   Goto D
 IfEnd
 If r=4
 Then 
-  Text 51,38,"apprendre        ?    "
+  Text 51,40,"apprendre        ?   "
   Mat Z[11,3→O
   Mat Z[11,4→C
-  {O,C,51,81}
+  {O,C,51,83}
   Prog "Z08"
   Text 57,3,"                              "
   0→L
@@ -568,18 +470,13 @@ Then
     Text 57,3,"tu connais deja cela."
     1→X
     Prog "Z0"
-    0→P~Q
     Goto D
   IfEnd
   Text 57,3,"[EXE]→oui       [EXIT]→retour "
   Do
     Getkey→θ
   LpWhile θ≠31 And θ≠47
-  If θ=47
-  Then 
-    0→P~Q
-    Goto D
-  IfEnd
+  θ=47⇒Goto 1
   Text 51,106,"  "
   0→L
   For 1→K To 5
@@ -594,23 +491,20 @@ Then
     Prog "Z08"
     .7→X
     Prog "Z0"
-    0→P~Q
-    0→Mat Z[11,3
-    Goto D
   Else 
     Text 57,3,"  ...tu n'as plus de place... "
     .7→X
     Prog "Z0"
     Green Text 51,81,"       "
-    Text 51,38,"supprimer quoi ?     "
+    Text 51,40,"supprimer quoi ?"
     Text 57,3,"[EXE]→choisir   [EXIT]→quitter"
     For 25→W To 49 Step 6
-      Green Text W,3,"        "
+      Green Text W,2,"         "
     Next
     C→W
     For 1→Q To 5
       Mat Z[Q,5-O→C
-      {O,C,19+6Q,7}
+      {O,C,19+6Q,6}
       Prog "Z08"
     Next
     1→Q
@@ -618,13 +512,8 @@ Then
       Green Text 19+6Q,2,"-"
       Do
         Getkey→θ
-        If θ=47
-        Then 
-          0→P~Q
-          0→Mat Z[11,3
-          Goto D
-        IfEnd
       LpWhile Not θ
+      θ=47⇒Goto 1
       Green Text 19+6Q,2," "
       θ=28⇒Dsz Q
       θ=37⇒Isz Q
@@ -632,8 +521,8 @@ Then
       Q=6⇒1→Q
     LpWhile θ≠31
     Mat Z[Q,5-O→C
-    Text 51,38,"Z oublie            "
-    {O,C,51,73}
+    Text 51,40,"Z oublie        "
+    {O,C,51,75}
     Prog "Z08"
     Mat Z[11,4→C
     C→Mat Z[Q,5-O
@@ -642,21 +531,41 @@ Then
     Prog "Z08"
     1.5→X
     Prog "Z0"
-    0→P~Q
-    0→Mat Z[11,3
-    Goto D
   IfEnd
 IfEnd
-Goto D
+Goto 1
+Lbl D
+List Ans[2V-1→P
+List Ans[2V→Q
+1>Mat Z[6,3⇒1→Mat Z[6,3
+P=1⇒Mat Z[6,1]-Int (2Ran#+1⌟3Q+2⌟3Q(Mat Z[4,1]/Mat Z[6,3→Mat Z[6,1
+P=2⇒Q+Mat Z[1,1→Mat Z[1,1
+For 1→T To 3
+  Mat Z[T,1]>Mat Z[T,2⇒Mat Z[T,2→Mat Z[T,1
+Next
+I≠Mat Z[1,1⇒Orange Text 5,60,Mat Z[1,1]-I
+J≠Mat Z[6,1⇒Orange Text 5,110,Mat Z[6,1]-J
+P=3⇒Q+Mat Z[4,1→Mat Z[4,1
+P=4⇒Q+Mat Z[5,1→Mat Z[5,1
+P=8⇒Q+Mat Z[6,2→Mat Z[6,2
+P=9⇒Q+Mat Z[6,3→Mat Z[6,3
+For 2→T To 3
+  1>Mat Z[6,T⇒1→Mat Z[6,T
+Next
+.7→X
+Prog "Z0"
+If I≠Mat Z[1,1] Or J≠Mat Z[6,1
+Then 
+  Prog "Z19"
+  1>Mat Z[6,1⇒Goto 2
+IfEnd
+Goto 1
 Lbl 2
 Cls
-Int (175-5M)Ran#→Q
-Int (180-5M)Ran#→R
 0→S~T
 For 1→A To 2
   0→B
-  A=1⇒Q→X
-  A=2⇒R→X
+  175Ran#→X
   X>69⇒X<95⇒15→B
   X<70⇒7→B
   X<60⇒Dsz B
@@ -671,10 +580,7 @@ Next
 Mat Z[12,6→Z
 If Mat Z[8,4
 Then 
-  If Z=29
-  Then 
-    .→S~T
-  IfEnd
+  .→S~T
   If Z=11
   Then 
     2→S
@@ -684,23 +590,16 @@ IfEnd
 Cls
 Text 1,1,"-------FIN DU COMBAT-------"
 Text 58,1,"--------------------------"
-Int 3Ran#+2→W
+2+Int 3Ran#→W
 3-Int 2Ran#→K
 For 1→X To 2
   W+Mat Z[1,X→Mat Z[1,X
   1+Mat Z[K,X→Mat Z[K,X
 Next
-1+Mat Z[12,3→Mat Z[12,3
 Mat Z[12,3→A
+A+1→Mat Z[12,3
 Mat Z[11,2→θ
-1
-A>1⇒2
-A>5⇒3
-A>9⇒4
-A>14⇒5
-A>19⇒6
-A>25⇒7
-Ans→Mat Z[11,2
+Int (.1875A+2.125→Mat Z[11,2
 Orange Text 10,1,"Experience:"
 Mat Z[11,6→E
 Int 100Ran#+2Mat Z[7,4]+40Mat Z[6,2]+40Mat Z[6,3]+200-20Mat Z[10,6→A
@@ -710,11 +609,15 @@ Orange Text 16,27,A
 Orange Text 22,22,"="
 Orange Text 22,27,E+A
 E+A→Mat Z[11,6
-0→A
 Green Text 10,80,"Recompense:"
 Green Text 16,84,"$"
-Not Mat Z[8,4⇒Int (25+8M+9Ran#+0.4Mat Z[11,2→A
-Z=23⇒5000→A
+.→A
+If Mat Z[8,4
+Then 
+  Z=23⇒5000→A
+Else 
+  Int (25+8M+9Ran#+0.4Mat Z[11,2→A
+IfEnd
 If A
 Then 
   A+Mat Z[10,4→Mat Z[10,4
@@ -732,36 +635,25 @@ Else
   Prog "Z08"
   {3,T,49,10}
   Prog "Z08"
-  S→O
-  Prog "Z07"
-  T→O
+  {S,T}
   Prog "Z07"
 IfEnd
 If θ<Mat Z[11,2
 Then 
-  5-Int 2Ran#→K
-  If Int 2Ran#
+  If Mat Z[5,2]<Mat Z[4,2
   Then 
-    Mat Z[4,2]<Mat Z[5,2⇒4→K
-    Mat Z[5,2]<Mat Z[4,2⇒5→K
+    5
+  Else 
+    4
   IfEnd
-  1+Mat Z[K,2→Mat Z[K,2
-  For 1→Y To 2
-    Int (18+3θ+Mat Z[1,Y→Mat Z[1,Y
-  Next
+  1+Mat Z[Ans,2→Mat Z[Ans,2
+  Int (18+3θ+Mat Z[1,2→Mat Z[1,2
   For 2→X To 3
-    For 1→Y To 2
-      Int (7+X+Mat Z[X,Y→Mat Z[X,Y
-    Next
+    Int (7+X+Mat Z[X,2→Mat Z[X,2
   Next
 IfEnd
 For 4→X To 5
   Mat Z[X,2→Mat Z[X,1
-Next
-For 2→X To 5
-  For 1→Y To 2
-    99<Mat Z[X,Y⇒99→Mat Z[X,Y
-  Next
 Next
 Orange Text 35,83,"niveau:"
 Orange Text 35,114,Mat Z[11,2
@@ -773,7 +665,5 @@ For 4→T To 5
 Next
 Orange Text 53,94,Mat Z[1,1
 Orange Text 53,112,Mat Z[1,2]◢
-""
-Lbl E
 ClrList
 ClrText

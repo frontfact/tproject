@@ -7,8 +7,8 @@ Next
 Plot 0,0
 BG-None
 For 1→W To 32
-  Text Int 33Ran#+7,Int 53Ran#+53,"  * "
-  Green Text Int 33Ran#+7,Int 53Ran#+53,"    "
-  Orange Text Int 33Ran#+7,Int 53Ran#+53," *  "
+  Text Int 33Ran#+7,40+Int 82Ran#,"  * "
+  Green Text Int 33Ran#+7,40+Int 82Ran#,"    "
+  Orange Text Int 33Ran#+7,40+Int 82Ran#," *  "
 Next
 Prog "Z19"

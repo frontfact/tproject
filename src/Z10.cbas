@@ -7,10 +7,10 @@ Vertical 126
 Vertical 127
 Horizontal 62
 Horizontal 63
-Green Vertical 48
-Green Vertical 49
-Green Horizontal 51
-Green Horizontal 52
+Vertical 48
+Vertical 49
+Horizontal 51
+Horizontal 52
 Text 5,5,"$"
 Text 5,11,Mat Z[10,4
 Orange Text 5,51,"Z"
@@ -29,7 +29,7 @@ Lbl Q
 Text 6A+9,4,"-"
 Do
   Getkey→θ
-LpWhile θ≠28 And θ≠37 And θ≠31 And θ≠47
+LpWhile Not θ
 θ=47⇒Return
 Text 6A+9,4," "
 θ=28⇒Dsz A
@@ -41,22 +41,23 @@ A=5⇒Return
 If A=2
 Then 
   Text 15,55,"statistiques"
-  Text 21,51,"ATTAK:   DEFNS:"
-  Text 21,75,Mat Z[4,2
-  Text 21,112,Mat Z[5,2
-  Text 27,53,"FORCE:  /"
-  Text 33,51,"MAGIE:  /"
+  Green Text 21,51,"ATTAK:"
+  Text 21,79,Mat Z[4,2
+  Green Text 27,51,"DEFNS:"
+  Text 27,79,Mat Z[5,2
+  Green Text 33,53,"FORCE:    /"
+  Green Text 39,51,"MAGIE:    /"
   For 2→T To 3
     For 1→U To 2
-      Text 15+6T,64+12U,Mat Z[T,U
+      Text 21+6T,61+18U,Mat Z[T,U
     Next
   Next
-  Text 39,51,"NIVEAU"
-  Text 39,79,Mat Z[11,2
-  Text 45,51,"EXPERIENCE:"
-  Text 45,96,Mat Z[11,6
-  Text 51,51,"VICTOIRES:"
-  Text 51,90,Mat Z[12,3
+  Green Text 45,51,"NIVEAU"
+  Text 45,79,Mat Z[11,2
+  Green Text 51,51,"EXPERIENCE:"
+  Text 51,98,Mat Z[11,6
+  Green Text 57,51,"VICTOIRES:"
+  Text 57,93,Mat Z[12,3
   Do
   LpWhile Not Getkey
   For 15→C To 57 Step 6
