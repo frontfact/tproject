@@ -1709,7 +1709,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:6879
+Capacity:6832
 File Name:Z14
 Group Name:
 Password:
@@ -2238,13 +2238,10 @@ P=9\=>Q+\Mat Z[6,3\->\Mat Z[6,3
 \Goto1
 \Lbl 2
 \Cls
-\Int (175-5M)\Ran#\->Q
-\Int (180-5M)\Ran#\->R
 0\->S~T
 \For 1\->A \To 2
 0\->B
-A=1\=>Q\->X
-A=2\=>R\->X
+175\Ran#\->X
 X>69\=>X<95\=>15\->B
 X<70\=>7\->B
 X<60\=>\Dsz B
@@ -2258,9 +2255,7 @@ A=2\=>B\->T
 \Next 
 \Mat Z[12,6\->Z
 \If \Mat Z[8,4
-\Then \If Z=29
 \Then .\->S~T
-\IfEnd
 \If Z=11
 \Then 2\->S
 4\->T
