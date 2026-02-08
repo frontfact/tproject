@@ -65,9 +65,7 @@ Monsters fight round, att or spells
 @see notice for IDs
 
 ## Z07
-Increment an item counter in the inventory
-
-special case for item 14 (rifle)
+Increment item counter in the inventory
 
 ## Z08
 Display attack, power, or item name

@@ -28,7 +28,7 @@
     },
     {
       "name": "support.function.casiobasic",
-      "match": "\\\\?\\b(Locate|\\?|Getkey|Isz|Dsz|Abs|Int|Frac|sin|cos|Cls|ClrText|ClrList|Identity|Dim|PlotOn|PlotOff|PlotChg|PxlTest|F-Line|Text|Horizontal|Vertical|Circle|StoPict|RclPict|BG-None|BG-Pict|DrawOn|DrawOff|DrawStat|Deg|Ran|S-WindMan|ViewWindow|CoordOff|AxesOff|LabelOff|Norm|FuncOff|GridOff|S-Gph1|S-Gph2|S-Gph3|Orange|Green|Blue|Dot|xyLine|Scatter)\\b"
+      "match": "\\\\?\\b(Locate|\\?|Getkey|Isz|Dsz|Abs|Int|Frac|sin|cos|Cls|ClrText|ClrList|Identity|Dim|Plot|PlotOn|PlotOff|PlotChg|PxlTest|Line|F-Line|Text|Horizontal|Vertical|Circle|StoPict|RclPict|BG-None|BG-Pict|DrawOn|DrawOff|DrawStat|Deg|Ran|S-WindMan|ViewWindow|CoordOff|AxesOff|LabelOff|Norm|FuncOff|GridOff|S-Gph1|S-Gph2|S-Gph3|Orange|Green|Blue|Dot|xyLine|Scatter)\\b"
     },
     {
       "name": "keyword.operator.casiobasic",

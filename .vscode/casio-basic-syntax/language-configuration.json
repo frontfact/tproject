@@ -3,20 +3,15 @@
         "lineComment": "'"
     },
     "brackets": [
-        ["[", "]"],
-        ["{", "}"]
-    ],
-    "autoClosingPairs": [
-        { "open": "{", "close": "}" },
-        { "open": "[", "close": "]" },
-        { "open": "(", "close": ")" },
-        { "open": "\"", "close": "\"", "notIn": ["string"] }
-    ],
-    "surroundingPairs": [
-        ["{", "}"],
-        ["[", "]"],
         ["(", ")"],
-        ["\"", "\""],
-        ["'", "'"]
+        ["[", "]"],
+        ["If", "IfEnd"],
+        ["Do", "LpWhile"],
+        ["While", "WhileEnd"],
+        ["For", "Next"],
+        ["\\If", "\\IfEnd"],
+        ["\\Do", "\\LpWhile"],
+        ["\\While", "\\WhileEnd"],
+        ["\\For", "\\Next"]
     ]
 }

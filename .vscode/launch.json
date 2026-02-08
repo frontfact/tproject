@@ -8,7 +8,8 @@
             "runtimeExecutable": "code",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}/.vscode/casio-basic-syntax",
-                "${workspaceFolder}"
+                "${workspaceFolder}",
+                "${workspaceFolder}/packages/TPROJECT.CAT"
             ]
         }
     ]
