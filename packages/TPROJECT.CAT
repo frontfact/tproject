@@ -2431,7 +2431,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1013
+Capacity:933
 File Name:Z17
 Group Name:
 Password:
@@ -2448,25 +2448,22 @@ Option4:
 \Then "Fuyez, fuyez vite !"\Disp\Return
 \IfEnd
 \ClrText
-\Locate 1,1,"~~~~~~ AUBERGE ~~~~~~"
-\Locate 1,2,"Bonjour etranger,"
-\Locate 1,3,"Que desires-tu ?"
-\Locate 3,5,"1.Sauvegarder"
-\Locate 3,6,"2.Me reposer (25\@24)"
-\Locate 3,7,"3.Sortir"
+"~~~~~~ AUBERGE ~~~~~~Bonjour etranger,"
+"Que desires-tu ?"
+"1.Sauvegarder"
+"2.Me reposer (25\@24)"
+"3.Sortir"
 \Do
 \Getkey\->\theta
-\LpWhile \theta\<>72\ And \theta\<>62\ And \theta\<>52\ And \theta\<>47
+\LpWhile \Not \theta
+\ClrText
 Z<8\=>\theta<53\=>\Prog "Z04"
 \theta<53\=>\Return
 \If \theta=62
 \Then \If 25>\Mat Z[10,4
-\Then \ClrText
-\Green "Tu comptes me payer"
-\Green "avec quoi ?"\Disp\GotoA
+\Then "~Tu comptes me payer avec quoi ?"\Disp\GotoA
 \IfEnd
 \Mat Z[10,4]-25\->\Mat Z[10,4
-\ClrText
 \Locate 2,1," ----- "
 \Locate 2,2,"\@7CZZZZZ\@7C"
 \Locate 2,3," -v--- "
@@ -2485,8 +2482,7 @@ Z<8\=>\theta<53\=>\Prog "Z04"
 \Next 
 0\->U
 \For 0\->V \To 8
-\Isz U
-U=2\=>0\->U
+1-U\->U
 \For 3\->W \To 7
 \Not U\=>\Locate W,2,"Z"
 U\=>\Locate W,2,"z"
@@ -2501,9 +2497,9 @@ U\=>\Locate W,2,"z"
 \Locate 1,3,"Confirmer ?"
 \Locate 1,7,"[EXE]\->Oui  [EXIT]\->Non"
 \Do
-\Getkey\->\theta
-\LpWhile \theta\<>31\ And \theta\<>47
-\theta=47\=>\GotoA
+\Getkey
+\LpWhile \Not \Ans
+\Ans\<>31\=>\GotoA
 \ClrText
 \Locate 7,4,"Saving..."
 {1,24}\->\Dim \Mat Y
