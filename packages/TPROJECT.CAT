@@ -2337,7 +2337,7 @@ E+A\->\Mat Z[11,6
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:598
+Capacity:587
 File Name:Z15
 Group Name:
 Password:
@@ -2347,9 +2347,11 @@ Option3:
 Option4:
 %Data Record
 \Mat Z[12,6\->Z
-\If \Mat Z[12,1
-\Then \Mat Z[12,1]-1\->\Mat Z[12,1
-\Mat Z[12,1\=>\Return
+\Mat Z[12,1
+\If \Ans
+\Then \Ans-1
+\Ans\->\Mat Z[12,1
+\Ans\=>\Return
 \ClrText
 \If Z=4
 \Then \ClrText
