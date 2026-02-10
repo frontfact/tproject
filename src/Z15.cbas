@@ -1,8 +1,10 @@
 Mat Z[12,6→Z
-If Mat Z[12,1
+Mat Z[12,1
+If Ans
 Then 
-  Mat Z[12,1]-1→Mat Z[12,1
-  Mat Z[12,1⇒Return
+  Ans-1
+  Ans→Mat Z[12,1
+  Ans⇒Return
   ClrText
   If Z=4
   Then 

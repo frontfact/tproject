@@ -1,0 +1,10 @@
+22.4→M~P
+G<16⇒Mat A[H,G+1→M
+H>1⇒Mat A[H-1,G→N
+G>1⇒Mat A[H,G-1→O
+H<10⇒Mat A[H+1,G→P
+Mat A[H,G
+Int .1Ans→Q
+Int (10Frac .1N→R
+Int .1O→S
+Int (10Frac .1Ans→T

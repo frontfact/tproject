@@ -1,0 +1,32 @@
+Int 35Ran#
+Ans>26⇒Return
+53→U
+49→T
+Ans=1⇒Text U,T,"Bonjour!"
+Ans=2⇒Text U,T,"Que faites-vous ?"
+Ans=3⇒Text U,T,"Vous desirez?"
+Ans=4⇒Text U,T,"J'ai deja donne"
+Ans=5⇒Text U,T,"Pompom pompodom"
+Ans=6⇒Text U,T,"Hello!"
+Ans=7⇒Text U,T,"C'est pour ?"
+Ans=8⇒Text U,T,"Allez ouste !"
+Ans=9⇒Text U,T,"Non mais oh !"
+Ans=10⇒Text U,T,"He he he he..."
+Ans=11⇒Text U,T,"Entrez !"
+Ans=12⇒Text U,T,"Qui va la ?"
+Ans=13⇒Text U,T,"Il pleut..."
+Ans=14⇒Text U,T,"Quel temps !"
+Ans=15⇒Text U,T,"J'ai faim."
+Ans=16⇒Text U,T,"Sortez d'ici !"
+Ans=17⇒Text U,T,"Un visiteur ?"
+Ans=18⇒Text U,T,"C'est ferme"
+Ans=19⇒Text U,T,"Bienvenue"
+Ans=20⇒Text U,T,"C'est prive !"
+Ans=21⇒Text U,T,"Enchante"
+Ans=22⇒Text U,T,"Vous m'aidez ?"
+Ans=24⇒Text U,T,"Chut !"
+Ans=25⇒Text U,T,"C'est a moi !"
+Ans=26⇒Text U,T,"Partez svp"
+.6→X
+Prog "Z0"
+Text U,T,"                  "

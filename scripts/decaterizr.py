@@ -393,7 +393,7 @@ class CatFile(object):
             to_save -= mat_y_savings
             diff = initial_size - current_size
             progress = 100. * diff / to_save
-            print(f'{Path(filepath).stem} : {current_size} (target: {progress:3.1f}%)')
+            print(f'{Path(filepath).stem} : {current_size} (target: {progress:3.1f}%, {diff-to_save} extra bytes)')
 
     def forge_token_programs(self):
         header_lines = [

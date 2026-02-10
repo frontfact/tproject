@@ -32,30 +32,18 @@ Then
   IfEnd
   Goto W
 IfEnd
-2→N
-.4→O
-If θ=27 And G<16
-Then 
-  Int .1Mat A[H,G→N
-  Mat A[H,G+1→O
-IfEnd
-If θ=38 And G>1
-Then 
-  Mat A[H,G-1→N~O
-  Int .1N→N
-IfEnd
-If θ=28 And H>1
-Then 
-  Mat A[H-1,G→N~O
-  Int (10Frac .1N→N
-IfEnd
-If θ=37 And H<10
-Then 
-  Int (10Frac .1Mat A[H,G→N
-  Mat A[H+1,G→O
-IfEnd
-Int 10Frac O→O
-θ≠48⇒N=2 Or O>3⇒Goto 1
+Prog "Z27"
+θ=27⇒M
+θ=28⇒N
+θ=38⇒O
+θ=37⇒P
+Int 10Frac Ans→U
+2
+θ=27⇒Q
+θ=28⇒R
+θ=38⇒S
+θ=37⇒T
+θ≠48⇒Ans=2 Or U>3⇒Goto 1
 PlotOff I,J
 θ=27⇒Isz G
 θ=38⇒Dsz G
@@ -104,7 +92,10 @@ Then
   Prog "Z15"
   0→Mat Z[9,3
   Ans=π⇒Goto I
+  Goto 1
 IfEnd
+Prog "Z27"
+QRST=24⇒Prog "Z26"
 Goto 1
 Lbl W
 7+Int 6Ran#→Mat Z[10,3

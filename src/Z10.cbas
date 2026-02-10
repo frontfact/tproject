@@ -41,27 +41,27 @@ A=5⇒Return
 If A=2
 Then 
   Text 15,55,"statistiques"
-  Green Text 21,51,"ATTAK:"
+  Text 21,51,"ATTAK:"
   Text 21,79,Mat Z[4,2
-  Green Text 27,51,"DEFNS:"
+  Text 27,51,"DEFNS:"
   Text 27,79,Mat Z[5,2
-  Green Text 33,53,"FORCE:    /"
-  Green Text 39,51,"MAGIE:    /"
+  Text 33,53,"FORCE:    /"
+  Text 39,51,"MAGIE:    /"
   For 2→T To 3
     For 1→U To 2
       Text 21+6T,61+18U,Mat Z[T,U
     Next
   Next
-  Green Text 45,51,"NIVEAU"
+  Text 45,51,"NIVEAU"
   Text 45,79,Mat Z[11,2
-  Green Text 51,51,"EXPERIENCE:"
+  Text 51,51,"EXPERIENCE:"
   Text 51,98,Mat Z[11,6
-  Green Text 57,51,"VICTOIRES:"
+  Text 57,51,"VICTOIRES:"
   Text 57,93,Mat Z[12,3
   Do
   LpWhile Not Getkey
   For 15→C To 57 Step 6
-    Text C,51,"                 "
+    Text C,51,"                  "
   Next
 IfEnd
 If A=1

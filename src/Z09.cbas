@@ -245,16 +245,9 @@ Then
         Green F-Line 55,56,88,58
         Green F-Line 65,38,88,58
         Green F-Line 55,20,88,58
-        1→G
-        For 88→W To 110
-          Isz G
-          G=2⇒0→G
-          If G
-          Then 
-            Orange PlotOn W,58
-          Else 
-            Green PlotOn W,58
-          IfEnd
+        For 0→W To 11
+          Orange PlotOn 88+2W,58
+          Green PlotOn 89+2W,58
         Next
         Orange Circle 110,58,4
         For 0→W To 7
