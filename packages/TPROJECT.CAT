@@ -392,7 +392,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:903
+Capacity:814
 File Name:Z03
 Group Name:
 Password:
@@ -432,26 +432,18 @@ Option4:
 \IfEnd
 \GotoW
 \IfEnd
-2\->N
-.4\->O
-\If \theta=27\ And G<16
-\Then \Int .1\Mat A[H,G\->N
-\Mat A[H,G+1\->O
-\IfEnd
-\If \theta=38\ And G>1
-\Then \Mat A[H,G-1\->N~O
-\Int .1N\->N
-\IfEnd
-\If \theta=28\ And H>1
-\Then \Mat A[H-1,G\->N~O
-\Int (10\Frac .1N\->N
-\IfEnd
-\If \theta=37\ And H<10
-\Then \Int (10\Frac .1\Mat A[H,G\->N
-\Mat A[H+1,G\->O
-\IfEnd
-\Int 10\Frac O\->O
-\theta\<>48\=>N=2\ Or O>3\=>\Goto1
+\Prog "Z27"
+\theta=27\=>M
+\theta=28\=>N
+\theta=38\=>O
+\theta=37\=>P
+\Int 10\Frac \Ans\->U
+2
+\theta=27\=>Q
+\theta=28\=>R
+\theta=38\=>S
+\theta=37\=>T
+\theta\<>48\=>\Ans=2\ Or U>3\=>\Goto1
 \PlotOff I,J
 \theta=27\=>\Isz G
 \theta=38\=>\Dsz G
@@ -496,7 +488,10 @@ E=3\=>\Prog "Z17"
 \Then \Prog "Z15"
 0\->\Mat Z[9,3
 \Ans=\Pi\=>\GotoI
+\Goto1
 \IfEnd
+\Prog "Z27"
+QRST=24\=>\Prog "Z26"
 \Goto1
 \Lbl W
 7+\Int 6\Ran#\->\Mat Z[10,3
@@ -1552,7 +1547,7 @@ M=8\=>\Text 51,75,"Tomberry"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:4784
+Capacity:4780
 File Name:Z13
 Group Name:
 Password:
@@ -1569,7 +1564,7 @@ Option4:
 \Mat Z[11,1\->V
 \If V=1
 \Then \Orange \Text 5,3,"BOTMA"
-[[.,.,.,.,2,.,2,.,.,32,22,.,.4,.4,30,2][.,.7,.7,20.7,20.101,30,22,2,30,22,23.106,.,.,.,.,0][.,.7,.7,20.7,32,20,23,32,.,3,3,.,.7,.7,.,0][.,2,.,.,3,3,30,22,20,22,22,.,.7,.7,.,2][30,22,.7,20.7,22.2,22.3,2,3,30,22,.,.7,.7,2.7,30,0][.,.,.7,.7,.7,20.7,23,22,20,23,.7,.7,20.7,32.141,20,2][.,.4,.7,.7,.7,.,3,.,.,.,.7,.7,.7,.4,.4,.4][3,.,.,.4,.7,20,22,.4,.4,2,.,.,.,.,3,.4][22,.4,.,.,.,2,.4,.4,20.4,32,.,.,2.4,20.4,22.108,.4][30.103,.,.,.,30,20,.4,.4,.4,.4,.,30,20,.4,.4,.4]]\->\Mat A
+[[.,.,.,.,2,.,2,.,.,32,22,.,.4,.4,30,2][.,.7,.7,20.7,20.101,30,22,2,30,22,23.106,.,.,.,.,0][.,.7,.7,20.7,32,20,23,32,.,3,3,.,.7,.7,.,0][.,2,.,.,3,3,30,22,20,22,22,.,.7,.7,.,2][30,22,.7,20.7,22.2,22.3,2,3,30,22,.,.7,.7,2.7,30,0][.,.,.7,.7,.7,20.7,23,22,20,23,.7,.7,20.7,32,20,2][.,.4,.7,.7,.7,.,3,.,.,.,.7,.7,.7,.4,.4,.4][3,.,.,.4,.7,20,22,.4,.4,2,.,.,.,.,3,.4][22,.4,.,.,.,2,.4,.4,20.4,32,.,.,2.4,20.4,22.108,.4][30.103,.,.,.,30,20,.4,.4,.4,.4,.,30,20,.4,.4,.4]]\->\Mat A
 \If Z>1
 \Then 6\->G
 4\->H
@@ -2805,6 +2800,76 @@ Option4:
 \F-Line A-D,B+8,A-D,B+7
 \F-Line A-D,B+5,A-D,B+4
 \PlotOn A-D,B
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:693
+File Name:Z26
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+\Int 35\Ran#
+\Ans>26\=>\Return
+53\->U
+49\->T
+\Ans=1\=>\Text U,T,"Bonjour!"
+\Ans=2\=>\Text U,T,"Que faites-vous ?"
+\Ans=3\=>\Text U,T,"Vous desirez?"
+\Ans=4\=>\Text U,T,"J'ai deja donne"
+\Ans=5\=>\Text U,T,"Pompom pompodom"
+\Ans=6\=>\Text U,T,"Hello!"
+\Ans=7\=>\Text U,T,"C'est pour ?"
+\Ans=8\=>\Text U,T,"Allez ouste !"
+\Ans=9\=>\Text U,T,"Non mais oh !"
+\Ans=10\=>\Text U,T,"He he he he..."
+\Ans=11\=>\Text U,T,"Entrez !"
+\Ans=12\=>\Text U,T,"Qui va la ?"
+\Ans=13\=>\Text U,T,"Il pleut..."
+\Ans=14\=>\Text U,T,"Quel temps !"
+\Ans=15\=>\Text U,T,"J'ai faim."
+\Ans=16\=>\Text U,T,"Sortez d'ici !"
+\Ans=17\=>\Text U,T,"Un visiteur ?"
+\Ans=18\=>\Text U,T,"C'est ferme"
+\Ans=19\=>\Text U,T,"Bienvenue"
+\Ans=20\=>\Text U,T,"C'est prive !"
+\Ans=21\=>\Text U,T,"Enchante"
+\Ans=22\=>\Text U,T,"Vous m'aidez ?"
+\Ans=24\=>\Text U,T,"Chut !"
+\Ans=25\=>\Text U,T,"C'est a moi !"
+\Ans=26\=>\Text U,T,"Partez svp"
+.6\->X
+\Prog "Z0"
+\Text U,T,"                  "
+%End
+%Header Record
+Format:TXT
+Communication SW:0
+Data Type:PG
+Capacity:121
+File Name:Z27
+Group Name:
+Password:
+Option1:NL
+Option2:
+Option3:
+Option4:
+%Data Record
+22.4\->M~P
+G<16\=>\Mat A[H,G+1\->M
+H>1\=>\Mat A[H-1,G\->N
+G>1\=>\Mat A[H,G-1\->O
+H<10\=>\Mat A[H+1,G\->P
+\Mat A[H,G
+\Int .1\Ans\->Q
+\Int (10\Frac .1N\->R
+\Int .1O\->S
+\Int (10\Frac .1\Ans\->T
 %End
 %Header Record
 Format:TXT
