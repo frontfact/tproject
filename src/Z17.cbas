@@ -62,8 +62,8 @@ Then
   Locate 1,7,"[EXE]→Oui  [EXIT]→Non"
   Do
     Getkey
-  LpWhile Not Ans
-  Ans≠31⇒Goto A
+  LpWhile Ans≠31 And Ans≠47
+  Ans=47⇒Goto A
   ClrText
   Locate 7,4,"Saving..."
   {1,24}→Dim Mat Y

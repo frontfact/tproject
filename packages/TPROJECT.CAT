@@ -2421,7 +2421,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:933
+Capacity:940
 File Name:Z17
 Group Name:
 Password:
@@ -2488,8 +2488,8 @@ U\=>\Locate W,2,"z"
 \Locate 1,7,"[EXE]\->Oui  [EXIT]\->Non"
 \Do
 \Getkey
-\LpWhile \Not \Ans
-\Ans\<>31\=>\GotoA
+\LpWhile \Ans\<>31\ And \Ans\<>47
+\Ans=47\=>\GotoA
 \ClrText
 \Locate 7,4,"Saving..."
 {1,24}\->\Dim \Mat Y
