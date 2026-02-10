@@ -95,7 +95,7 @@ Then
   Goto 1
 IfEnd
 Prog "Z27"
-QRST=24⇒Prog "Z26"
+QRST=24⇒2≠Mat Z[11,1⇒Prog "Z26"
 Goto 1
 Lbl W
 7+Int 6Ran#→Mat Z[10,3
