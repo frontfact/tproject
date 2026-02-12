@@ -198,7 +198,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1808
+Capacity:1790
 File Name:Z02
 Group Name:
 Password:
@@ -276,9 +276,7 @@ A\<>G\ Or B\<>H\=>\Mat Z[10,3]-1\->\Mat Z[10,3
 \Prog "Z14"
 7+\Int 6\Ran#\->\Mat Z[10,3
 0\->\Mat Z[9,4
-\Cls
-\RclPict 1
-\Goto0
+\Goto7
 \IfEnd
 0\->H
 A=71\=>B=18\=>1\->H
@@ -302,9 +300,7 @@ H\=>\GotoH
 3+\Mat Z[7,5\->\Mat Z[7,5
 300+\Mat Z[10,4\->\Mat Z[10,4
 1\->\Mat Z[10,2
-\Cls
-\RclPict 1
-\Goto0
+\Goto7
 \IfEnd
 \If \Not \Int 30\Ran#\ Or \theta=48
 \Then \StoPict 1
@@ -325,9 +321,7 @@ H\=>\GotoH
 \IfEnd
 \IfEnd
 0\->\Mat Z[9,4
-\Cls
-\RclPict 1
-\Goto0
+\Goto7
 \IfEnd
 \Goto1
 \Lbl H
