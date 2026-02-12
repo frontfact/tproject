@@ -198,7 +198,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1805
+Capacity:1808
 File Name:Z02
 Group Name:
 Password:
@@ -384,6 +384,7 @@ V\->\Mat Z[9,2
 \theta\->\Mat Z[9,4
 1\->X
 \Prog "Z0"
+\Lbl 7
 \Cls
 \RclPict 1
 \Goto0
