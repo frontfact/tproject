@@ -1,3 +1,4 @@
 scripts/tmp/*
 src/mono*/*
 .venv/*
+doc/images/gif/*

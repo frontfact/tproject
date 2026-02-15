@@ -16,10 +16,10 @@ class Frame:
 def create_gif(frames, output_path, scale_factor=3):
 
     mapping = {
-        (255, 255, 255): (243, 248, 208),   # background
-        (255, 0, 0):     (243, 136, 84),     # red
-        (0, 128, 0):     (143, 185, 85),      # green
-        (0, 0, 255):     (154, 123, 155),      # blue
+        (255, 255, 255): (187, 215, 167),   # background
+        (255, 0, 0):     (244,  94,  19),   # red
+        (0, 128, 0):     ( 27, 175,  91),   # green
+        (0, 0, 255):     ( 35,  75, 166),   # blue
     }
     palette_list = []
     for color in mapping.values():
