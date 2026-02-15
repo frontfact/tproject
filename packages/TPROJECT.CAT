@@ -2545,8 +2545,7 @@ Option4:
 \Then 2\->X
 \Prog "Z0"
 \Cls
-\Text 30,41,"GAME OVER..."
-\Stop
+\Text 30,41,"GAME OVER..."\Disp\Stop
 \IfEnd
 %End
 %Header Record
