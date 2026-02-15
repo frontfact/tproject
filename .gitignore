@@ -1,2 +1,3 @@
 scripts/tmp/*
 src/mono*/*
+.venv/*
