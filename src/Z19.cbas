@@ -2,6 +2,7 @@ If 1>Mat Z[1,1
 Then 
   2→X
   Prog "Z0"
+  BG-None
   Cls
   Text 30,41,"GAME OVER..."◢
   Stop

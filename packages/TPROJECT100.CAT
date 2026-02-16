@@ -2527,7 +2527,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:57
+Capacity:60
 File Name:Z19
 Group Name:
 Password:
@@ -2539,6 +2539,7 @@ Option4:
 \If 1>\Mat Z[1,1
 \Then 2\->X
 \Prog "Z0"
+\BG-None
 \Cls
 \Text 30,41,"GAME OVER..."\Disp\Stop
 \IfEnd
