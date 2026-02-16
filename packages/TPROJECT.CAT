@@ -198,7 +198,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1790
+Capacity:1797
 File Name:Z02
 Group Name:
 Password:
@@ -213,7 +213,6 @@ Option4:
 \Lbl I
 \Prog "Z01"
 \Lbl 0
-\Deg
 \Mat Z[9,1\->A
 \Mat Z[9,2\->B
 \Mat Z[9,4\->\theta
@@ -268,10 +267,13 @@ V\->\Mat Z[11,1
 A\<>G\ Or B\<>H\=>\Mat Z[10,3]-1\->\Mat Z[10,3
 \If 1>\Mat Z[10,3
 \Then \StoPict 1
+\BG-Pict 1
+\Deg
 0\->\Mat Z[11,5
-\For 0\->W \To 336 \Step 24
+\For 0\->W \To 360 \Step 25
 \Orange \F-Line A,B,A+12\cos W,B+9\sin W
 \Next 
+\BG-None
 {Z}
 \Prog "Z14"
 7+\Int 6\Ran#\->\Mat Z[10,3
@@ -918,7 +920,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3739
+Capacity:3747
 File Name:Z09
 Group Name:
 Password:
@@ -1024,16 +1026,19 @@ D\>=2\=>\Text K,L+31,D
 \IfEnd
 C=1\ Or C=2\=>80C+\Mat Z[1,1\->\Mat Z[1,1
 C=3\ Or C=4\=>40+\Mat Z[C-1,1\->\Mat Z[C-1,1
-C=17\=>.5\Mat Z[6,4\->\Mat Z[6,4
+C=17\=>\Int .5\Mat Z[6,4\->\Mat Z[6,4
 C=5\ Or C=6\=>1+\Mat Z[10-C,2\->\Mat Z[10-C,2
 \For 1\->X \To 3
 \Mat Z[X,1]>\Mat Z[X,2\=>\Mat Z[X,2\->\Mat Z[X,1
 \Next 
 41\->R
+\If \r
+\Then \BG-Pict 2
+\Cls
+\Deg
+\IfEnd
 \If C=7
-\Then \Cls
-\RclPict 2
-{5}
+\Then {5}
 \Prog "Z05"
 \Graph (X,Y)=(57+.54T,16+\Abs ((27-.0816T)\cos (320+5.44T)))
 \For 20\->C \To 180 \Step 20
@@ -1056,9 +1061,7 @@ C=5\ Or C=6\=>1+\Mat Z[10-C,2\->\Mat Z[10-C,2
 \Prog "Z0"
 \IfEnd
 \If C=8
-\Then \Cls
-\RclPict 2
-{5}
+\Then {5}
 \Prog "Z05"
 \Graph (X,Y)=(57+.54T,16+\Abs ((27-.0816T)\cos (320+5.44T)))
 87\->A
@@ -1082,6 +1085,7 @@ C+.6\->C
 \Mat Z[12,6]=39\ And \Mat Z[8,6]\ And 8=\Mat Z[11,1\=>1
 \Ans\->\Mat Z[1,1
 \Prog "Z21"
+\BG-None
 \Cls
 \Plot 0,0
 5\->X
@@ -1126,9 +1130,7 @@ C=13\=>\Locate 8,4,"\In B"
 3\->X
 \Prog "Z0"
 \Else \If \Mat Z[3,1]>19
-\Then \Cls
-\RclPict 2
-{8}
+\Then {8}
 \Prog "Z05"
 \S-Gph1 \DrawOff
 \S-Gph2 \DrawOff
@@ -1217,6 +1219,7 @@ C=13\=>\Locate 8,4,"\In B"
 \IfEnd
 \IfEnd
 \IfEnd
+\r\=>\BG-None
 \Not \r\=>\Goto1
 %End
 %Header Record
@@ -1542,7 +1545,7 @@ M=8\=>\Text 51,75,"Tomberry"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:4780
+Capacity:4778
 File Name:Z13
 Group Name:
 Password:
@@ -1553,7 +1556,6 @@ Option4:
 %Data Record
 \Cls
 \ClrList
-\BG-None
 \Orange \Text 55,42,"(CHARGEMENT)"
 \Mat Z[12,6\->Z
 \Mat Z[11,1\->V
@@ -1680,7 +1682,7 @@ V=7\=>\Text 21,58,"\theta"
 \Green \Horizontal 63
 \Green \F-Line 1,63,1,13
 \Green \F-Line 127,13,127,63
-\Orange \Text 55,42,"             "
+\Orange \Text 55,42,"              "
 \StoPict 1
 1\->\Mat Z[11,5
 \Prog "Z18"
@@ -2674,7 +2676,7 @@ G\->H
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:133
+Capacity:125
 File Name:Z21
 Group Name:
 Password:
@@ -2684,13 +2686,11 @@ Option3:
 Option4:
 %Data Record
 \StoPict 1
-\BG-Pict 1
 \For 1\->W \To 9
-\Plot 0,0
 \Cls
-\Next 
+\RclPict 1
 \Plot 0,0
-\BG-None
+\Next 
 \For 1\->W \To 32
 \Text \Int 33\Ran#+7,40+\Int 82\Ran#,"  \aster "
 \Green \Text \Int 33\Ran#+7,40+\Int 82\Ran#,"    "
