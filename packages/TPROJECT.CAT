@@ -389,7 +389,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:825
+Capacity:730
 File Name:Z03
 Group Name:
 Password:
@@ -403,6 +403,7 @@ Option4:
 \theta=29\=>\GotoW
 {1}
 \Prog "Z04"
+\Prog "Z18"
 0
 \Lbl 0
 \Mat Z[12,4\->G
@@ -454,16 +455,11 @@ H\->\Mat Z[12,5
 \Frac \Mat A[H,G\->F
 \Int 10F\->E
 \If \theta=48\ Or E=2\ Or E=3
-\Then \Green \Text 31,10,"       "
-\Orange \Text 23,2,"         "
-\PlotOff I,J
-\StoPict 1
-\theta=48\=>\Prog "Z10"
+\Then \theta=48\=>\Prog "Z10"
 E=2\=>\Prog "Z11"
 E=3\=>\Prog "Z17"
 \Cls
 \RclPict 1
-\Green \Text 31,10,\Mat Z[10,4
 \Prog "Z18"
 \theta=48\=>\Goto1
 \Goto0
@@ -471,13 +467,12 @@ E=3\=>\Prog "Z17"
 \If E=1
 \Then 100\Frac 10F\->W
 \If W
-\Then \Green \Text 31,10,"       "
-{W}
+\Then {W}
 \Prog "Z04"
 37=\Mat Z[12,6\=>\GotoW
 0\->\Mat Z[9,3
 \Ans=\Pi\=>\GotoI
-\Green \Text 31,10,\Mat Z[10,4
+\Prog "Z18"
 \Goto1
 \IfEnd
 \IfEnd
@@ -1545,7 +1540,7 @@ M=8\=>\Text 51,75,"Tomberry"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:4778
+Capacity:4750
 File Name:Z13
 Group Name:
 Password:
@@ -1628,8 +1623,7 @@ Option4:
 H\->\Mat Z[12,5
 \IfEnd
 \If \Mat Z[11,5
-\Then \Cls
-\RclPict 1
+\Then \RclPict 1
 \Return
 \IfEnd
 \For 0\->W \To 7
@@ -1647,7 +1641,6 @@ H\->\Mat Z[12,5
 \Orange \F-Line 7,45,29,45
 \Text 13,13,"\TeraN\Tera"
 \Green \Text 31,3,"\@24"
-\Green \Text 31,10,\Mat Z[10,4
 \Green \Text 38,3,"[MENU]"
 \Green \Text 45,3,"[F6] Monde"
 \If V\<>8
@@ -1685,7 +1678,6 @@ V=7\=>\Text 21,58,"\theta"
 \Orange \Text 55,42,"              "
 \StoPict 1
 1\->\Mat Z[11,5
-\Prog "Z18"
 \If V=8
 \Then \ClrText
 "Tomberry>"
@@ -2512,7 +2504,7 @@ A*10^8+B*10^4+C\->\Mat Y[1,K
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:112
+Capacity:131
 File Name:Z18
 Group Name:
 Password:
@@ -2529,6 +2521,7 @@ Option4:
 \For 38\->Y \To 40
 \Orange \F-Line 5,Y,D,Y
 \Next 
+\Green \Text 31,10,\Mat Z[10,4
 %End
 %Header Record
 Format:TXT
