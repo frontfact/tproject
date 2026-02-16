@@ -2128,7 +2128,7 @@ C=\Mat Z[K,5-O\=>1\->L
 \Then \Text 57,3,"tu connais deja cela."
 1\->X
 \Prog "Z0"
-\GotoD
+\Goto1
 \IfEnd
 \Text 57,3,"[EXE]\->oui       [EXIT]\->retour "
 \Do
