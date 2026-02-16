@@ -100,16 +100,20 @@ Then
 IfEnd
 C=1 Or C=2⇒80C+Mat Z[1,1→Mat Z[1,1
 C=3 Or C=4⇒40+Mat Z[C-1,1→Mat Z[C-1,1
-C=17⇒.5Mat Z[6,4→Mat Z[6,4
+C=17⇒Int .5Mat Z[6,4→Mat Z[6,4
 C=5 Or C=6⇒1+Mat Z[10-C,2→Mat Z[10-C,2
 For 1→X To 3
   Mat Z[X,1]>Mat Z[X,2⇒Mat Z[X,2→Mat Z[X,1
 Next
 41→R
+If r
+Then 
+  BG-Pict 2
+  Cls
+  Deg
+IfEnd
 If C=7
 Then 
-  Cls
-  RclPict 2
   {5}
   Prog "Z05"
   Graph (X,Y)=(57+.54T,16+Abs ((27-.0816T)cos (320+5.44T)))
@@ -134,8 +138,6 @@ Then
 IfEnd
 If C=8
 Then 
-  Cls
-  RclPict 2
   {5}
   Prog "Z05"
   Graph (X,Y)=(57+.54T,16+Abs ((27-.0816T)cos (320+5.44T)))
@@ -160,6 +162,7 @@ Then
   Mat Z[12,6]=39 And Mat Z[8,6] And 8=Mat Z[11,1⇒1
   Ans→Mat Z[1,1
   Prog "Z21"
+  BG-None
   Cls
   Plot 0,0
   5→X
@@ -215,8 +218,6 @@ Then
   Else 
     If Mat Z[3,1]>19
     Then 
-      Cls
-      RclPict 2
       {8}
       Prog "Z05"
       S-Gph1 DrawOff
@@ -309,4 +310,5 @@ Then
     IfEnd
   IfEnd
 IfEnd
+r⇒BG-None
 Not r⇒Goto 1

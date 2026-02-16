@@ -4,7 +4,6 @@ Prog "Z03"
 Lbl I
 Prog "Z01"
 Lbl 0
-Deg
 Mat Z[9,1→A
 Mat Z[9,2→B
 Mat Z[9,4→θ
@@ -62,10 +61,13 @@ A≠G Or B≠H⇒Mat Z[10,3]-1→Mat Z[10,3
 If 1>Mat Z[10,3
 Then 
   StoPict 1
+  BG-Pict 1
+  Deg
   0→Mat Z[11,5
-  For 0→W To 336 Step 24
+  For 0→W To 360 Step 25
     Orange F-Line A,B,A+12cos W,B+9sin W
   Next
+  BG-None
   {Z}
   Prog "Z14"
   7+Int 6Ran#→Mat Z[10,3

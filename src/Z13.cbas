@@ -1,6 +1,5 @@
 Cls
 ClrList
-BG-None
 Orange Text 55,42,"(CHARGEMENT)"
 Mat Z[12,6→Z
 Mat Z[11,1→V
@@ -148,7 +147,6 @@ Then
 IfEnd
 If Mat Z[11,5
 Then 
-  Cls
   RclPict 1
   Return
 IfEnd
@@ -167,7 +165,6 @@ Next
 Orange F-Line 7,45,29,45
 Text 13,13,"𝐓N𝐓"
 Green Text 31,3,"$"
-Green Text 31,10,Mat Z[10,4
 Green Text 38,3,"[MENU]"
 Green Text 45,3,"[F6] Monde"
 If V≠8
@@ -204,10 +201,9 @@ Green F-Line 47,13,47,63
 Green Horizontal 63
 Green F-Line 1,63,1,13
 Green F-Line 127,13,127,63
-Orange Text 55,42,"             "
+Orange Text 55,42,"              "
 StoPict 1
 1→Mat Z[11,5
-Prog "Z18"
 If V=8
 Then 
   ClrText

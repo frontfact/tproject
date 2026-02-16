@@ -61,7 +61,7 @@ Next
 3N→S
 S>17⇒17→S
 S-10→L
-L<1⇒1→L
+L<3⇒3→L
 Seq(X,X,L,S,1)→List1
 Seq(Ran#,X,1,S-L+1,1)→List2
 SortD(List 2,List 1)

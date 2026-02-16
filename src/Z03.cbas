@@ -3,6 +3,7 @@ Prog "Z13"
 θ=29⇒Goto W
 {1}
 Prog "Z04"
+Prog "Z18"
 0
 Lbl 0
 Mat Z[12,4→G
@@ -58,16 +59,11 @@ Frac Mat A[H,G→F
 Int 10F→E
 If θ=48 Or E=2 Or E=3
 Then 
-  Green Text 31,10,"       "
-  Orange Text 23,2,"         "
-  PlotOff I,J
-  StoPict 1
   θ=48⇒Prog "Z10"
   E=2⇒Prog "Z11"
   E=3⇒Prog "Z17"
   Cls
   RclPict 1
-  Green Text 31,10,Mat Z[10,4
   Prog "Z18"
   θ=48⇒Goto 1
   Goto 0
@@ -77,13 +73,12 @@ Then
   100Frac 10F→W
   If W
   Then 
-    Green Text 31,10,"       "
     {W}
     Prog "Z04"
     37=Mat Z[12,6⇒Goto W
     0→Mat Z[9,3
     Ans=π⇒Goto I
-    Green Text 31,10,Mat Z[10,4
+    Prog "Z18"
     Goto 1
   IfEnd
 IfEnd

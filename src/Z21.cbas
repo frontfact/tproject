@@ -1,11 +1,9 @@
 StoPict 1
-BG-Pict 1
 For 1→W To 9
-  Plot 0,0
   Cls
+  RclPict 1
+  Plot 0,0
 Next
-Plot 0,0
-BG-None
 For 1→W To 32
   Text Int 33Ran#+7,40+Int 82Ran#,"  * "
   Green Text Int 33Ran#+7,40+Int 82Ran#,"    "
