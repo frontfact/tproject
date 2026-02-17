@@ -7,7 +7,11 @@ import sys
 from pathlib import Path
 from typing import List, TypeVar
 
+
 PathLike = TypeVar("PathLike", str, Path, None)
+GRAPH35 = 'G35'
+GRAPH65 = 'G65'
+GRAPH100 = 'G100'
 
 
 class Token:
@@ -95,7 +99,7 @@ class AsciiParser:
 
 
 class Program:
-    def __init__(self, header_lines, data, ctype='G65'):
+    def __init__(self, header_lines, data, ctype):
         self.header = {}
         for line in header_lines:
             line = line.rstrip()
@@ -128,33 +132,20 @@ class Program:
 
     def write(self, fout):
         # write header
-        if self.ctype == 'G100':
-            fout.write('%Header Record\n')
-            fout.write('Format:MCS1\n')
-            fout.write('Type Number:1\n')
-            fout.write(f'File Name:{self.name}\n')
-            fout.write('Option Name:\n')
-            fout.write('Communication SW:0\n')
-            fout.write(f'Capacity:{self.capacity}\n')
-            fout.write('Data Type:PG\n')
-        else:
-            fout.write('%Header Record\n')
-            fout.write(f'Format:{self.header["Format"]}\n')
-            fout.write(f'Communication SW:{self.header["Communication SW"]}\n')
-            fout.write(f'Data Type:{self.header["Data Type"]}\n')
-            fout.write(f'Capacity:{self.capacity}\n')
-            fout.write(f'File Name:{self.name}\n')
-            fout.write(f'Group Name:{self.header["Group Name"]}\n')
-            fout.write(f'Password:{self.header["Password"]}\n')
-            fout.write(f'Option1:{self.header["Option1"]}\n')
-            fout.write(f'Option2:{self.header["Option2"]}\n')
-            fout.write(f'Option3:{self.header["Option3"]}\n')
-            fout.write(f'Option4:{self.header["Option4"]}\n')
+        fout.write('%Header Record\n')
+        fout.write(f'Format:{self.header["Format"]}\n')
+        fout.write(f'Communication SW:{self.header["Communication SW"]}\n')
+        fout.write(f'Data Type:{self.header["Data Type"]}\n')
+        fout.write(f'Capacity:{self.capacity}\n')
+        fout.write(f'File Name:{self.name}\n')
+        fout.write(f'Group Name:{self.header["Group Name"]}\n')
+        fout.write(f'Password:{self.header["Password"]}\n')
+        fout.write(f'Option1:{self.header["Option1"]}\n')
+        fout.write(f'Option2:{self.header["Option2"]}\n')
+        fout.write(f'Option3:{self.header["Option3"]}\n')
+        fout.write(f'Option4:{self.header["Option4"]}\n')
         # write data
         fout.write('%Data Record\n')
-        if '100' in self.ctype:
-            fout.write('Password:\n')
-            fout.write('BaseN:0\n')
         for token in self.tokens:
             # backslash in front of listed tokens
             if token.listed:
@@ -233,12 +224,13 @@ class Program:
                     self.tokens[i] = alt
 
     def make_mono(self, ctype: str):
+        self.ctype = ctype
         Text_seen_since_last_linefeed = False
         for i, token in enumerate(self.tokens):
             # '¥' not rendered with `Text` on G35/G100, replace by 'Y'
             if token == YenToken:
                 self.tokens[i] = YToken
-            if '100' in ctype:
+            if ctype == GRAPH100:
                 if token == LineFeedToken:
                     Text_seen_since_last_linefeed = False
                 if token == TextToken:
@@ -268,14 +260,10 @@ class Program:
 
 
 class CatFile(object):
-    def __init__(self, filepath, ctype=None):
+    def __init__(self, filepath, ctype):
         self.programs: List[Program] = []
         self.filepath: Path = Path(filepath)
-        self.ctype = 'G65'
-        if 'G100' in filepath:
-            self.ctype = 'G100'
-        if ctype is not None:
-            self.ctype = ctype
+        self.ctype = ctype
         if Path(filepath).exists():
             self.parse(Path(filepath).read_text(encoding='utf-8'))
 
@@ -294,7 +282,7 @@ class CatFile(object):
                     i += 1
             # read data
             if i < len(lines) and lines[i].startswith('%Data Record'):
-                if '100' in self.ctype:
+                if self.ctype == GRAPH100:
                     i += 3
                 else:
                     i += 1
@@ -319,9 +307,6 @@ class CatFile(object):
                     f.write(f'{token.src};{token.dst};{token.size}\n')
 
     def dump_programs(self, outputpath: PathLike):
-        if '100' in self.ctype:
-            outputpath += "/G100"
-        # create output directory
         CatFile.DumpPrograms(self, outputpath, False)
 
     def sort_programs(self):
@@ -347,21 +332,22 @@ class CatFile(object):
         self.useless_tokens()
 
     def make_mono(self, ctype: str):
+        self.ctype = ctype
         for program in self.programs:
             program.make_mono(ctype)
         # T0(65) = 300/s
         # T0(35+) = 833/s
         # T0(100+) = 190/s
         tnt2 = self.find('Z02')
-        if '35+' in ctype:
+        if ctype == GRAPH35:
             tnt2.tokens[0] = Token('8', '8', 1, False)
             tnt2.tokens[1] = Token('3', '3', 1, False)
             tnt2.tokens[2] = Token('3', '3', 1, False)
-        if '65' in ctype:
+        if ctype == GRAPH65:
             tnt2.tokens[0] = Token('3', '3', 1, False)
             tnt2.tokens[1] = Token('0', '0', 1, False)
             tnt2.tokens[2] = Token('0', '0', 1, False)
-        if '100+' in ctype:
+        if ctype == GRAPH100:
             tnt2.tokens[0] = Token('1', '1', 1, False)
             tnt2.tokens[1] = Token('9', '9', 1, False)
             tnt2.tokens[2] = Token('0', '0', 1, False)
@@ -439,7 +425,7 @@ def main():
     p.add_argument('--analyze', action='store_true')
     args = p.parse_args()
 
-    catfile = CatFile(args.filepath)
+    catfile = CatFile(args.filepath, GRAPH65)
 
     if args.simplify:
         catfile.simplify()
@@ -455,16 +441,16 @@ def main():
 
     if args.make_mono:
         cat35 = copy.deepcopy(catfile)
-        cat35.make_mono('35+')
+        cat35.make_mono(GRAPH35)
         cat35.Write(cat35, '../packages/TPROJECT35.CAT')
         #  cat35.dump_programs('../src/mono35+')
         cat100 = copy.deepcopy(catfile)
-        cat100.make_mono('100+')
+        cat100.make_mono(GRAPH100)
         cat100.Write(cat100, '../packages/TPROJECT100.CAT')
         #  cat100.dump_programs('../src/mono100+')
 
     if args.forge:
-        dummy = CatFile('non-existing.cat')
+        dummy = CatFile('non-existing.cat', GRAPH65)
         dummy.forge_token_programs()
 
     if args.analyze:
