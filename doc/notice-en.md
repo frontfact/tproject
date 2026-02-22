@@ -140,14 +140,20 @@ Here are the different items you can find, after a fight or in a shop:
 | 2 | soin+ | 21~28$ | life +160 | |
 | 3 | adrena | 40~50$ | force +40 | |
 | 4 | chlore | 45~55$ | magic +40 | |
-| 5 | protec | 90~140$ | def +1 permanently | |
-| 6 | power+ | 100~150$ | att +1 permanently | |
+| 5 | protec | 150~200$ | def +1 permanently | |
+| 6 | power+ | 150~200$ | att +1 permanently | |
 | 7 | groseye | - | Particularly magical item endowed with monstrous power<br>(130~170 PV) | ![groseye](./images/object-07-groseye.bmp) |
 | 11 | ANGEL<br>ice prism<br>requires 20pts magic | 0→magic | +3 enemy inertia, enemy damage proportional to magic | ![ANGEL](./images/object-11-ANGEL.bmp) |
 | 12 | MAGMA<br>fire prism<br>requires 20pts magic | 0→magic | att -2, def -2, enemy damage proportional to magic | ![MAGMA](./images/object-12-MAGMA.bmp) |
 | 13 | PHOENIX<br>life prism<br>requires 20pts magic | 0→magic | Z life +2*magic, enemy damage proportional to magic | ![PHOENIX](./images/object-13-PHOENIX.bmp) |
 | 14 | fusil | 160~200$ | Inflicts damage to the enemy in combat (life -16~23)<br>⚠️ no effect on spectres | ![balles](./images/object-15-balles.bmp) |
 | 15 | balles | 3~6$ | Rifle ammunition |  |
+
+## Tips
+- Explore the cities thoroughly to progress in the game;
+- In combat, it can be useful to reduce the opponent's speed or defense. It becomes easier to defeat them;
+- At the start of the game, it can be useful to level up by fighting a bit before going to TARA;
+- Upon arriving in a new city, stop by the inn to rest and save;
 
 <br>
 For any questions, contact TNTsoft@fastmail.com

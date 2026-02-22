@@ -146,14 +146,20 @@ Voici les différents objets que vous pourrez trouver, après un combat ou dans 
 | 2 | soin+ | 21~28$ | vie +160 | |
 | 3 | adrena | 40~50$ | force +40 | |
 | 4 | chlore | 45~55$ | magie +40 | |
-| 5 | protec | 90~140$ | def +1 de façon permanente | |
-| 6 | power+ | 100~150$ | att +1 de façon permanente | |
+| 5 | protec | 150~200$ | def +1 de façon permanente | |
+| 6 | power+ | 150~200$ | att +1 de façon permanente | |
 | 7 | groseye | - | Objet particulièrement magique et doté d'une puissance monstrueuse<br>(130~170 PV) | ![groseye](./images/object-07-groseye.bmp) |
 | 11 | ANGEL<br>prisme de glace<br>requiert 20pts de magie | 0→magie | +3 inertie ennemi, dommages ennemi proportionnels à magie | ![ANGEL](./images/object-11-ANGEL.bmp) |
 | 12 | MAGMA<br>prisme de feu<br>requiert 20pts de magie | 0→magie | att -2, def -2, dommages ennemi proportionnels à magie | ![MAGMA](./images/object-12-MAGMA.bmp) |
 | 13 | PHOENIX<br>prisme de vie<br>requiert 20pts de magie | 0→magie | vie Z +2*magie, dommages ennemi proportionnels à magie | ![PHOENIX](./images/object-13-PHOENIX.bmp) |
 | 14 | fusil | 160~200$ | Inflige des dommages à l'ennemi en combat (vie -16~23)<br>⚠️ pas d'effet sur les spectres | ![balles](./images/object-15-balles.bmp) |
 | 15 | balles | 3~6$ | Munitions du fusil |  |
+
+## Conseils
+- Explorez bien les villes pour avancer dans le jeu;
+- En combat, il peut être utile de réduire la célérité de l'adversaire, ou sa défense. Il devient plus facile de le vaincre;
+- Au début du jeu, il peut être utile de monter son niveau en combattant un peu avant d'aller à TARA;
+- En arrivant dans une nouvelle ville, passez à l'auberge vous reposer et sauvegarder;
 
 <br>
 Pour toute question, contactez TNTsoft@fastmail.com
