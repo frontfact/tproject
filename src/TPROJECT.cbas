@@ -48,6 +48,7 @@ Then
     Int ((P+1)/6)+1→L
     Ans-A*10^8-B*10^4→Mat Z[L,P+2-6L+6
   Next
+  0→Mat Z[11,5
 Else 
   Identity 1→Mat Z
   [[13,40,3,1,.,.]

@@ -2,7 +2,7 @@
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:827
+Capacity:838
 File Name:TPROJECT
 Group Name:
 Password:
@@ -60,6 +60,7 @@ B\->\Mat Z[L,P+1-6L+6
 \Int ((P+1)/6)+1\->L
 \Ans-A*10^8-B*10^4\->\Mat Z[L,P+2-6L+6
 \Next 
+0\->\Mat Z[11,5
 \Else \Identity 1\->\Mat Z
 [[13,40,3,1,.,.][12,12,2,3,.,.][12,12,1,2,.,.][3,3,.,.,.,.][3,3,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][.,.,.,.,.,.][67,19,.,38,.,.][.,.,.,230,.,.][1,1,.,.,.,.][.,.,.,.,.,1]]\->\Mat Z
 \ClrText
@@ -198,7 +199,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1797
+Capacity:1786
 File Name:Z02
 Group Name:
 Password:
@@ -208,7 +209,6 @@ Option3:
 Option4:
 %Data Record
 300/300\->\Mat Z[10,5
-0\->\Mat Z[11,5
 \Prog "Z03"
 \Lbl I
 \Prog "Z01"
