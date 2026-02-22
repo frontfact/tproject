@@ -2794,7 +2794,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:693
+Capacity:692
 File Name:Z26
 Group Name:
 Password:
@@ -2811,7 +2811,7 @@ Option4:
 \Ans=2\=>\Text U,T,"Que faites-vous ?"
 \Ans=3\=>\Text U,T,"Vous desirez?"
 \Ans=4\=>\Text U,T,"J'ai deja donne"
-\Ans=5\=>\Text U,T,"Pompom pompodom"
+\Ans=5\=>\Text U,T,"Pom pom podom"
 \Ans=6\=>\Text U,T,"Hello!"
 \Ans=7\=>\Text U,T,"C'est pour ?"
 \Ans=8\=>\Text U,T,"Allez ouste !"
@@ -2834,7 +2834,7 @@ Option4:
 \Ans=26\=>\Text U,T,"Partez svp"
 .6\->X
 \Prog "Z0"
-\Text U,T,"                  "
+\Text U,T,"                   "
 %End
 %Header Record
 Format:TXT
