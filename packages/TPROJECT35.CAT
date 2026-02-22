@@ -2504,7 +2504,7 @@ A*10^8+B*10^4+C\->\Mat Y[1,K
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:131
+Capacity:148
 File Name:Z18
 Group Name:
 Password:
@@ -2521,6 +2521,7 @@ Option4:
 \For 38\->Y \To 40
 \Orange \F-Line 5,Y,D,Y
 \Next 
+\Green \Text 31,10,"    "
 \Green \Text 31,10,\Mat Z[10,4
 %End
 %Header Record
