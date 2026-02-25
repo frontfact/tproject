@@ -348,8 +348,8 @@ class CatFile(object):
             tnt2.tokens[1] = Token('0', '0', 1, False)
             tnt2.tokens[2] = Token('0', '0', 1, False)
         if ctype == GRAPH100:
-            tnt2.tokens[0] = Token('1', '1', 1, False)
-            tnt2.tokens[1] = Token('9', '9', 1, False)
+            tnt2.tokens[0] = Token('2', '2', 1, False)
+            tnt2.tokens[1] = Token('4', '4', 1, False)
             tnt2.tokens[2] = Token('0', '0', 1, False)
 
     @classmethod
