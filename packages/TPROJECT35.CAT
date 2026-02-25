@@ -3294,7 +3294,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:904
+Capacity:889
 File Name:Z36
 Group Name:
 Password:
@@ -3309,12 +3309,7 @@ Option4:
 \Prog "Z23"
 \If \Not \Ans
 \Then \Prog "Z24"
-C=1\=>"Z> Sus a l'ennemi !"\Disp""
-C=2\=>"Z> A l'hallali !"\Disp""
-C=3\=>"Z> Pour la gloire !"\Disp""
-C=4\=>"Z> Montjoie !"\Disp""
-C=5\=>"Z> Haro !"\Disp""
-1\->X
+C=1\=>"Z> Sus a l'ennemi !"\DispC=2\=>"Z> A l'hallali !"\DispC=3\=>"Z> Pour la gloire !"\DispC=4\=>"Z> Montjoie !"\DispC=5\=>"Z> Haro !"\Disp1\->X
 \Prog "Z0"
 {Z}
 \Prog "Z14"

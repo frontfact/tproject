@@ -7,15 +7,10 @@ Then
   Then 
     Prog "Z24"
     C=1⇒"Z> Sus a l'ennemi !"◢
-    ""
     C=2⇒"Z> A l'hallali !"◢
-    ""
     C=3⇒"Z> Pour la gloire !"◢
-    ""
     C=4⇒"Z> Montjoie !"◢
-    ""
     C=5⇒"Z> Haro !"◢
-    ""
     1→X
     Prog "Z0"
     {Z}
