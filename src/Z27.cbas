@@ -4,7 +4,8 @@ H>1⇒Mat A[H-1,G→N
 G>1⇒Mat A[H,G-1→O
 H<10⇒Mat A[H+1,G→P
 Mat A[H,G
-Int .1Ans→Q
-Int (10Frac .1N→R
-Int .1O→S
-Int (10Frac .1Ans→T
+2→Q~T
+G<16⇒Int .1Ans→Q
+H>1⇒Int (10Frac .1N→R
+G>1⇒Int .1O→S
+H<10⇒Int (10Frac .1Ans→T

@@ -2841,7 +2841,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:121
+Capacity:145
 File Name:Z27
 Group Name:
 Password:
@@ -2856,10 +2856,11 @@ H>1\=>\Mat A[H-1,G\->N
 G>1\=>\Mat A[H,G-1\->O
 H<10\=>\Mat A[H+1,G\->P
 \Mat A[H,G
-\Int .1\Ans\->Q
-\Int (10\Frac .1N\->R
-\Int .1O\->S
-\Int (10\Frac .1\Ans\->T
+2\->Q~T
+G<16\=>\Int .1\Ans\->Q
+H>1\=>\Int (10\Frac .1N\->R
+G>1\=>\Int .1O\->S
+H<10\=>\Int (10\Frac .1\Ans\->T
 %End
 %Header Record
 Format:TXT
