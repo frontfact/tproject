@@ -3316,8 +3316,7 @@ C=1\=>"Z> Sus a l'ennemi !"\DispC=2\=>"Z> A l'hallali !"\DispC=3\=>"Z> Pour la g
 \If 31=\Mat Z[9,5
 \Then "Z> J'ai l'impression"
 "qu'on en est venus a bout..."
-"Ils ont mis la ville a sac !"
-30\->Z
+"Ils ont mis la ville a sac !"\Disp30\->Z
 \IfEnd
 \Pi
 \IfEnd

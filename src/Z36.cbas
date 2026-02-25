@@ -19,7 +19,7 @@ Then
     Then 
       "Z> J'ai l'impression"
       "qu'on en est venus a bout..."
-      "Ils ont mis la ville a sac !"
+      "Ils ont mis la ville a sac !"◢
       30→Z
     IfEnd
     π
