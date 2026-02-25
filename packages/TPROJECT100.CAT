@@ -90,7 +90,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1455
+Capacity:1441
 File Name:Z01
 Group Name:
 Password:
@@ -148,7 +148,6 @@ Option4:
 \IfEnd
 \If Z>12
 \Then \Text 13,4,"Atla\R ntis"
-\PlotOn 4,51
 106\->\List 1[3
 \IfEnd
 \If Z>18
@@ -169,7 +168,6 @@ Option4:
 \IfEnd
 \If Z>36
 \Then \Text 43,4,"Sa\R nctua"
-\PlotOn 4,21
 88\->\List 1[8
 \IfEnd
 \S-Gph2 \DrawOff
@@ -199,7 +197,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1786
+Capacity:1798
 File Name:Z02
 Group Name:
 Password:
@@ -345,7 +343,7 @@ H=4\=>{4,7}
 \Getkey\->\theta
 \LpWhile \Not \theta
 \theta=47\=>\Goto7
-\PxlTest W,4
+\PxlTest W,4+\PxlTest W,5
 \If \theta\<>31\ Or \Not \Ans
 \Then \PlotOff 1,62-W
 \PlotOff 2,62-W
@@ -357,7 +355,7 @@ W+V\->W
 W=-5\=>43\->W
 W=49\=>1\->W
 W=\r\=>\Goto0
-\PxlTest W,4
+\PxlTest W,4+\PxlTest W,5
 \LpWhile \Not \Ans
 \GotoV
 \IfEnd

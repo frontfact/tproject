@@ -49,7 +49,6 @@ IfEnd
 If Z>12
 Then 
   Text 13,4,"Atlantis"
-  PlotOn 4,51
   106→List 1[3
 IfEnd
 If Z>18
@@ -75,7 +74,6 @@ IfEnd
 If Z>36
 Then 
   Text 43,4,"Sanctua"
-  PlotOn 4,21
   88→List 1[8
 IfEnd
 S-Gph2 DrawOff
