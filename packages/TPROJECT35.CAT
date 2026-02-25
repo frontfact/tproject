@@ -1418,7 +1418,7 @@ U>8\=>1\->U
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1448
+Capacity:1464
 File Name:Z12
 Group Name:
 Password:
@@ -1479,7 +1479,7 @@ L<1\=>1\->L
 \Seq(X,X,L,S,1)\->\List1
 \Seq(\Ran#,X,1,S-L+1,1)\->\List2
 \SortD(\List 2,\List 1)
-Z=8\ Or Z=39\=>{8,8,8}\->\List1
+Z=8\ Or Z=39\=>\Mat Z[8,4\=>{8,8,8}\->\List1
 \For 1\->S \To 3
 \List 1[S\->\Mat Z[7,S
 \Next 
@@ -1490,7 +1490,7 @@ L<3\=>3\->L
 \Seq(X,X,L,S,1)\->\List1
 \Seq(\Ran#,X,1,S-L+1,1)\->\List2
 \SortD(\List 2,\List 1)
-Z=8\ Or Z=39\=>{15,15,15}\->\List1
+Z=8\ Or Z=39\=>\Mat Z[8,4\=>{17,17,17}\->\List1
 \For 1\->S \To 3
 \List 1[S\->\Mat Z[8,S
 \Next 
