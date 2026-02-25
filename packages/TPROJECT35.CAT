@@ -197,7 +197,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1798
+Capacity:1795
 File Name:Z02
 Group Name:
 Password:
@@ -286,7 +286,7 @@ A=86\=>B=34\=>4\->H
 H\=>\GotoH
 \If Z>30\ And A=60\ And B=42\ And \Not \Mat Z[10,2
 \Then \ClrText
-"Z> Le tresor..."\Disp"Z> Ca semble trop"
+"Z> Le tresor..."\Disp"Ca semble trop"
 "facile pour etre vrai"\Disp"Voix> En effet..."
 1\->X
 \Prog "Z0"

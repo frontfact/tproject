@@ -83,7 +83,7 @@ If Z>30 And A=60 And B=42 And Not Mat Z[10,2
 Then 
   ClrText
   "Z> Le tresor..."◢
-  "Z> Ca semble trop"
+  "Ca semble trop"
   "facile pour etre vrai"◢
   "Voix> En effet..."
   1→X
