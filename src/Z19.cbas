@@ -4,6 +4,8 @@ Then
   Prog "Z0"
   BG-None
   Cls
-  Text 30,41,"GAME OVER..."◢
+  Text 30,41,"GAME OVER..."
+  5→X
+  Prog "Z0"
   Stop
 IfEnd

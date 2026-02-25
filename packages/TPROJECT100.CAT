@@ -2526,7 +2526,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:60
+Capacity:70
 File Name:Z19
 Group Name:
 Password:
@@ -2540,7 +2540,10 @@ Option4:
 \Prog "Z0"
 \BG-None
 \Cls
-\Text 30,41,"GAME OVER..."\Disp\Stop
+\Text 30,41,"GAME OVER..."
+5\->X
+\Prog "Z0"
+\Stop
 \IfEnd
 %End
 %Header Record
