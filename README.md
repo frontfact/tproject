@@ -23,7 +23,7 @@ The game itself is only available in french.
 # Packages
 
 - [TPROJECT.CAT](./packages/TPROJECT.CAT) for Graph 65
-- [TPROJECT35.CAT](./packages/TPROJECT35.CAT) for Graph 35+ (monochrome)
+- [TPROJECT35.g2r](./packages/TPROJ35.g2r) for Graph 35+ (monochrome)
 - [TPROJECT100.CAT](./packages/TPROJECT100.CAT) for Graph 100+ (monochrome)
 
 # Contact
