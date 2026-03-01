@@ -1415,7 +1415,7 @@ U>8\=>1\->U
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1464
+Capacity:1466
 File Name:Z12
 Group Name:
 Password:
@@ -1480,7 +1480,7 @@ Z=8\ Or Z=39\=>\Mat Z[8,4\=>{8,8,8}\->\List1
 \For 1\->S \To 3
 \List 1[S\->\Mat Z[7,S
 \Next 
-3N\->S
+2+3N\->S
 S>17\=>17\->S
 S-10\->L
 L<3\=>3\->L
