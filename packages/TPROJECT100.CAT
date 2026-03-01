@@ -206,7 +206,7 @@ Option2:
 Option3:
 Option4:
 %Data Record
-190/300\->\Mat Z[10,5
+240/300\->\Mat Z[10,5
 \Prog "Z03"
 \Lbl I
 \Prog "Z01"
@@ -913,7 +913,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:3762
+Capacity:3771
 File Name:Z09
 Group Name:
 Password:
@@ -1092,23 +1092,21 @@ C+.6\->C
 "combat a bien failli t'etre fatal..."\Disp\ClrText
 "Z> Et...et Tomberry ?"\Disp\ClrText
 "Jessie> Detruit."
-"A jamais."\Disp\ClrText
-2\->X
-\Prog "Z0"
+"A jamais."\Disp\ViewWindow 45,109,0,16,48,0
+{2}
+\Prog "Z22"
+70\->R
+{2,1}
+\Prog "Z20"
+\StoPict 2
+\ViewWindow 55,119,0,24,56,0
+\RclPict 2
 {6}
 \Prog "Z22"
 117\->R
 {6,1}
 \Prog "Z20"
-\StoPict 2
-\ViewWindow 127,-1,0,63,1,0
-\RclPict 2
-\Prog "Z20"
-\ClrText
-\Text 30,49,"THE END"
-\Text 40,59,";)"
-\StoPict 1
-\Stop
+\Text 33,47,"THE END!"\Disp\Stop
 \IfEnd
 \If C=14\ And \Mat Z[5,6
 \Then \Mat Z[5,6]-1\->\Mat Z[5,6
