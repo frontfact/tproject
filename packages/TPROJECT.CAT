@@ -387,7 +387,7 @@ V\->\Mat Z[9,2
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:730
+Capacity:727
 File Name:Z03
 Group Name:
 Password:
@@ -478,7 +478,6 @@ E=3\=>\Prog "Z17"
 \Then \Prog "Z15"
 0\->\Mat Z[9,3
 \Ans=\Pi\=>\GotoI
-\Goto1
 \IfEnd
 \Prog "Z27"
 QRST=24\=>2\<>\Mat Z[11,1\=>\Prog "Z26"

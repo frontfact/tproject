@@ -87,7 +87,6 @@ Then
   Prog "Z15"
   0→Mat Z[9,3
   Ans=π⇒Goto I
-  Goto 1
 IfEnd
 Prog "Z27"
 QRST=24⇒2≠Mat Z[11,1⇒Prog "Z26"
