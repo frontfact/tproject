@@ -1547,7 +1547,6 @@ Option4:
 %Data Record
 \Cls
 \ClrList
-\Orange \Text 55,42,"(CHARGEMENT)"
 \Mat Z[12,6\->Z
 \Mat Z[11,1\->V
 \If V=1
@@ -1622,6 +1621,7 @@ H\->\Mat Z[12,5
 \Then \RclPict 1
 \Return
 \IfEnd
+\Orange \Text 55,42,"(CHARGEMENT)"
 \For 0\->W \To 7
 \Green \F-Line 3+W,51,3+W,44
 \Next 
