@@ -6,15 +6,16 @@ Then
   If Not Ans
   Then 
     Prog "Z24"
-    C=1⇒"Z> Sus a l'ennemi !"◢
-    C=2⇒"Z> A l'hallali !"◢
-    C=3⇒"Z> Pour la gloire !"◢
-    C=4⇒"Z> Montjoie !"◢
-    C=5⇒"Z> Haro !"◢
-    1→X
+    C=1⇒"Z> Sus a l'ennemi !"
+    C=2⇒"Z> A l'hallali !"
+    C=3⇒"Z> Pour la gloire !"
+    C=4⇒"Z> Montjoie !"
+    C=5⇒"Z> Haro !"
+    4→X
     Prog "Z0"
     {Z}
     Prog "Z14"
+    π
     If 31=Mat Z[9,5
     Then 
       "Z> J'ai l'impression"
@@ -22,7 +23,6 @@ Then
       "Ils ont mis la ville a sac !"◢
       30→Z
     IfEnd
-    π
   IfEnd
 IfEnd
 If W=30

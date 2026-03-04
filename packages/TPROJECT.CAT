@@ -3312,16 +3312,21 @@ Option4:
 \Prog "Z23"
 \If \Not \Ans
 \Then \Prog "Z24"
-C=1\=>"Z> Sus a l'ennemi !"\DispC=2\=>"Z> A l'hallali !"\DispC=3\=>"Z> Pour la gloire !"\DispC=4\=>"Z> Montjoie !"\DispC=5\=>"Z> Haro !"\Disp1\->X
+C=1\=>"Z> Sus a l'ennemi !"
+C=2\=>"Z> A l'hallali !"
+C=3\=>"Z> Pour la gloire !"
+C=4\=>"Z> Montjoie !"
+C=5\=>"Z> Haro !"
+4\->X
 \Prog "Z0"
 {Z}
 \Prog "Z14"
+\Pi
 \If 31=\Mat Z[9,5
 \Then "Z> J'ai l'impression"
 "qu'on en est venus a bout..."
 "Ils ont mis la ville a sac !"\Disp30\->Z
 \IfEnd
-\Pi
 \IfEnd
 \IfEnd
 \If W=30
