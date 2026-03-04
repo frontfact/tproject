@@ -147,7 +147,8 @@ Do
   Getkey→θ
 LpWhile Not θ
 θ=47⇒Goto 7
-PxlTest W,4+PxlTest W,5
+PxlTest W,4
+Ans+PxlTest W,5
 If θ≠31 Or Not Ans
 Then 
   PlotOff 1,62-W
@@ -160,7 +161,8 @@ Then
     W=-5⇒43→W
     W=49⇒1→W
     W=r⇒Goto 0
-    PxlTest W,4+PxlTest W,5
+    PxlTest W,4
+    Ans+PxlTest W,5
   LpWhile Not Ans
   Goto V
 IfEnd
