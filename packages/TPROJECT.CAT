@@ -1541,7 +1541,7 @@ M=8\=>\Text 51,75,"Tomberry"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:4746
+Capacity:4750
 File Name:Z13
 Group Name:
 Password:
@@ -1551,6 +1551,7 @@ Option3:
 Option4:
 %Data Record
 \Cls
+{.}
 \ClrList
 \Mat Z[12,6\->Z
 \Mat Z[11,1\->V
@@ -1689,7 +1690,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:6844
+Capacity:6845
 File Name:Z14
 Group Name:
 Password:
@@ -2310,8 +2311,8 @@ E+A\->\Mat Z[11,6
 \Orange \Text 17+6T,94,\Mat Z[T,1
 \Next 
 \Orange \Text 53,94,\Mat Z[1,1
-\Orange \Text 53,112,\Mat Z[1,2]\Disp\ClrList
-\ClrText
+\Orange \Text 53,112,\Mat Z[1,2]\Disp{.}
+\ClrList
 %End
 %Header Record
 Format:TXT
