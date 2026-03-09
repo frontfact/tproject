@@ -197,7 +197,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1799
+Capacity:1811
 File Name:Z02
 Group Name:
 Password:
@@ -344,7 +344,9 @@ H=4\=>{4,7}
 \LpWhile \Not \theta
 \theta=47\=>\Goto7
 \PxlTest W,4
-\Ans+\PxlTest W,5
+\Ans\->U
+\PxlTest W,5
+\Ans+U
 \If \theta\<>31\ Or \Not \Ans
 \Then \PlotOff 1,62-W
 \PlotOff 2,62-W
@@ -357,7 +359,9 @@ W=-5\=>43\->W
 W=49\=>1\->W
 W=\r\=>\Goto0
 \PxlTest W,4
-\Ans+\PxlTest W,5
+\Ans\->U
+\PxlTest W,5
+\Ans+U
 \LpWhile \Not \Ans
 \GotoV
 \IfEnd
@@ -1537,7 +1541,7 @@ M=8\=>\Text 51,75,"Tomberry"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:4747
+Capacity:4751
 File Name:Z13
 Group Name:
 Password:
@@ -1547,6 +1551,7 @@ Option3:
 Option4:
 %Data Record
 \Cls
+{.}
 \ClrList
 \Mat Z[12,6\->Z
 \Mat Z[11,1\->V
@@ -1685,7 +1690,7 @@ V=7\=>\Text 21,58,"\theta"
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:6875
+Capacity:6876
 File Name:Z14
 Group Name:
 Password:
@@ -2306,8 +2311,8 @@ E+A\->\Mat Z[11,6
 \Orange \Text 17+6T,94,\Mat Z[T,1
 \Next 
 \Orange \Text 53,94,\Mat Z[1,1
-\Orange \Text 53,112,\Mat Z[1,2]\Disp\ClrList
-\ClrText
+\Orange \Text 53,112,\Mat Z[1,2]\Disp{.}
+\ClrList
 %End
 %Header Record
 Format:TXT
