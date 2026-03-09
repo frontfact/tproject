@@ -197,7 +197,7 @@ Option4:
 Format:TXT
 Communication SW:0
 Data Type:PG
-Capacity:1799
+Capacity:1811
 File Name:Z02
 Group Name:
 Password:
@@ -344,7 +344,9 @@ H=4\=>{4,7}
 \LpWhile \Not \theta
 \theta=47\=>\Goto7
 \PxlTest W,4
-\Ans+\PxlTest W,5
+\Ans\->U
+\PxlTest W,5
+\Ans+U
 \If \theta\<>31\ Or \Not \Ans
 \Then \PlotOff 1,62-W
 \PlotOff 2,62-W
@@ -357,7 +359,9 @@ W=-5\=>43\->W
 W=49\=>1\->W
 W=\r\=>\Goto0
 \PxlTest W,4
-\Ans+\PxlTest W,5
+\Ans\->U
+\PxlTest W,5
+\Ans+U
 \LpWhile \Not \Ans
 \GotoV
 \IfEnd

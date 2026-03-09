@@ -148,7 +148,9 @@ Do
 LpWhile Not θ
 θ=47⇒Goto 7
 PxlTest W,4
-Ans+PxlTest W,5
+Ans→U
+PxlTest W,5
+Ans+U
 If θ≠31 Or Not Ans
 Then 
   PlotOff 1,62-W
@@ -162,7 +164,9 @@ Then
     W=49⇒1→W
     W=r⇒Goto 0
     PxlTest W,4
-    Ans+PxlTest W,5
+    Ans→U
+    PxlTest W,5
+    Ans+U
   LpWhile Not Ans
   Goto V
 IfEnd
